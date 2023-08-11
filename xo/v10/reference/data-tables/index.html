@@ -2100,54 +2100,68 @@
 
 
 
-<h1 id="data-tables">Data tables</h1>
+<h1 id="data-tables">Data tables<a class="headerlink" href="#data-tables" title="Permanent link">&para;</a></h1>
 <p>Material for MkDocs defines default styles for data tables – an excellent way
 of rendering tabular data in project documentation. Furthermore, customizations
 like <a href="#sortable-tables">sortable tables</a> can be achieved with a third-party library and some
 <a href="../../customization/#additional-javascript">additional JavaScript</a>.</p>
-<h2 id="configuration">Configuration</h2>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>This configuration enables Markdown table support, which should normally be
 enabled by default, but to be sure, add the following lines to <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tables</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tables</span>
+</span></code></pre></div>
 <p>See additional configuration options:</p>
 <ul>
 <li><a href="../../setup/extensions/python-markdown/#tables">Tables</a></li>
 </ul>
-<h2 id="usage">Usage</h2>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>Data tables can be used at any position in your project documentation and can
 contain arbitrary Markdown, including inline code blocks, as well as <a href="../icons-emojis/">icons and
 emojis</a>:</p>
-<div class="highlight"><span class="filename">Data table</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>| Method      | Description                          |
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>| ----------- | ------------------------------------ |
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>| <span class="sb">`GET`</span>       | :material-check:     Fetch resource  |
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>| <span class="sb">`PUT`</span>       | :material-check-all: Update resource |
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>| <span class="sb">`DELETE`</span>    | :material-close:     Delete resource |
-</code></pre></div>
-<div class="result" markdown>
-
-| Method      | Description                          |
-| ----------- | ------------------------------------ |
-| `GET`       | :material-check:     Fetch resource  |
-| `PUT`       | :material-check-all: Update resource |
-| `DELETE`    | :material-close:     Delete resource |
-
+<div class="language-markdown highlight"><span class="filename">Data table</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>| Method      | Description                          |
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>| ----------- | ------------------------------------ |
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>| <span class="sb">`GET`</span>       | :material-check:     Fetch resource  |
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>| <span class="sb">`PUT`</span>       | :material-check-all: Update resource |
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>| <span class="sb">`DELETE`</span>    | :material-close:     Delete resource |
+</span></code></pre></div>
+<div class="result">
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span>     Fetch resource</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span> Update resource</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span>     Delete resource</td>
+</tr>
+</tbody>
+</table>
 </div>
-
-<h3 id="column-alignment">Column alignment</h3>
+<h3 id="column-alignment">Column alignment<a class="headerlink" href="#column-alignment" title="Permanent link">&para;</a></h3>
 <p>If you want to align a specific column to the <code>left</code>, <code>center</code> or <code>right</code>, you
 can use the <a href="https://www.markdownguide.org/extended-syntax/#tables">regular Markdown syntax</a> placing <code>:</code> characters at the beginning
 and/or end of the divider.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Left</label><label for="__tabbed_1_2">Center</label><label for="__tabbed_1_3">Right</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Data table, columns aligned to left</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>| Method      | Description                          |
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="hll">| :---------- | :----------------------------------- |
-</span><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>| <span class="sb">`GET`</span>       | :material-check:     Fetch resource  |
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>| <span class="sb">`PUT`</span>       | :material-check-all: Update resource |
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>| <span class="sb">`DELETE`</span>    | :material-close:     Delete resource |
-</code></pre></div>
+<div class="language-markdown highlight"><span class="filename">Data table, columns aligned to left</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>| Method      | Description                          |
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="hll">| :---------- | :----------------------------------- |
+</span></span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>| <span class="sb">`GET`</span>       | :material-check:     Fetch resource  |
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>| <span class="sb">`PUT`</span>       | :material-check-all: Update resource |
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>| <span class="sb">`DELETE`</span>    | :material-close:     Delete resource |
+</span></code></pre></div>
 <div class="result" markdown>
 <table>
 <thead>
@@ -2159,27 +2173,27 @@ and/or end of the divider.</p>
 <tbody>
 <tr>
 <td align="left"><code>GET</code></td>
-<td align="left">:material-check:     Fetch resource</td>
+<td align="left"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span>     Fetch resource</td>
 </tr>
 <tr>
 <td align="left"><code>PUT</code></td>
-<td align="left">:material-check-all: Update resource</td>
+<td align="left"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span> Update resource</td>
 </tr>
 <tr>
 <td align="left"><code>DELETE</code></td>
-<td align="left">:material-close:     Delete resource</td>
+<td align="left"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span>     Delete resource</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Data table, columns centered</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>| Method      | Description                          |
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="hll">| :---------: | :----------------------------------: |
-</span><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>| <span class="sb">`GET`</span>       | :material-check:     Fetch resource  |
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>| <span class="sb">`PUT`</span>       | :material-check-all: Update resource |
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>| <span class="sb">`DELETE`</span>    | :material-close:     Delete resource |
-</code></pre></div>
+<div class="language-markdown highlight"><span class="filename">Data table, columns centered</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>| Method      | Description                          |
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="hll">| :---------: | :----------------------------------: |
+</span></span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>| <span class="sb">`GET`</span>       | :material-check:     Fetch resource  |
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>| <span class="sb">`PUT`</span>       | :material-check-all: Update resource |
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>| <span class="sb">`DELETE`</span>    | :material-close:     Delete resource |
+</span></code></pre></div>
 <div class="result" markdown>
 <table>
 <thead>
@@ -2191,27 +2205,27 @@ and/or end of the divider.</p>
 <tbody>
 <tr>
 <td align="center"><code>GET</code></td>
-<td align="center">:material-check:     Fetch resource</td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span>     Fetch resource</td>
 </tr>
 <tr>
 <td align="center"><code>PUT</code></td>
-<td align="center">:material-check-all: Update resource</td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span> Update resource</td>
 </tr>
 <tr>
 <td align="center"><code>DELETE</code></td>
-<td align="center">:material-close:     Delete resource</td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span>     Delete resource</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Data table, columns aligned to right</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>| Method      | Description                          |
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="hll">| ----------: | -----------------------------------: |
-</span><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>| <span class="sb">`GET`</span>       | :material-check:     Fetch resource  |
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>| <span class="sb">`PUT`</span>       | :material-check-all: Update resource |
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>| <span class="sb">`DELETE`</span>    | :material-close:     Delete resource |
-</code></pre></div>
+<div class="language-markdown highlight"><span class="filename">Data table, columns aligned to right</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>| Method      | Description                          |
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="hll">| ----------: | -----------------------------------: |
+</span></span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>| <span class="sb">`GET`</span>       | :material-check:     Fetch resource  |
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>| <span class="sb">`PUT`</span>       | :material-check-all: Update resource |
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>| <span class="sb">`DELETE`</span>    | :material-close:     Delete resource |
+</span></code></pre></div>
 <div class="result" markdown>
 <table>
 <thead>
@@ -2223,15 +2237,15 @@ and/or end of the divider.</p>
 <tbody>
 <tr>
 <td align="right"><code>GET</code></td>
-<td align="right">:material-check:     Fetch resource</td>
+<td align="right"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span>     Fetch resource</td>
 </tr>
 <tr>
 <td align="right"><code>PUT</code></td>
-<td align="right">:material-check-all: Update resource</td>
+<td align="right"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span> Update resource</td>
 </tr>
 <tr>
 <td align="right"><code>DELETE</code></td>
-<td align="right">:material-close:     Delete resource</td>
+<td align="right"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span>     Delete resource</td>
 </tr>
 </tbody>
 </table>
@@ -2239,48 +2253,62 @@ and/or end of the divider.</p>
 </div>
 </div>
 </div>
-<h2 id="customization">Customization</h2>
-<h3 id="sortable-tables">Sortable tables</h3>
+<h2 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h2>
+<h3 id="sortable-tables">Sortable tables<a class="headerlink" href="#sortable-tables" title="Permanent link">&para;</a></h3>
 <p>If you want to make data tables sortable, you can add <a href="http://tristen.ca/tablesort/demo/">tablesort</a>, which is
 natively integrated with Material for MkDocs and will also work with <a href="../../setup/setting-up-navigation/#instant-loading">instant
 loading</a> via <a href="../../customization/#additional-javascript">additional JavaScript</a>:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">:octicons-file-code-16: <code>docs/javascripts/tablesort.js</code></label><label for="__tabbed_2_2">:octicons-file-code-16: <code>mkdocs.yml</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"/></svg></span> <code>docs/javascripts/tablesort.js</code></label><label for="__tabbed_2_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"/></svg></span> <code>mkdocs.yml</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">tables</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;article table:not([class])&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nx">tables</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">table</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">Tablesort</span><span class="p">(</span><span class="nx">table</span><span class="p">)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="p">})</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">})</span>
-</code></pre></div>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">tables</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;article table:not([class])&quot;</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nx">tables</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">table</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">Tablesort</span><span class="p">(</span><span class="nx">table</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="p">})</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">})</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">extra_javascript</span><span class="p">:</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">javascripts/tablesort.js</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">extra_javascript</span><span class="p">:</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">javascripts/tablesort.js</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>After applying the customization, data tables can be sorted by clicking on a
 column:</p>
-<div class="highlight"><span class="filename">Data table, columns sortable</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>| Method      | Description                          |
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>| ----------- | ------------------------------------ |
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>| <span class="sb">`GET`</span>       | :material-check:     Fetch resource  |
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>| <span class="sb">`PUT`</span>       | :material-check-all: Update resource |
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>| <span class="sb">`DELETE`</span>    | :material-close:     Delete resource |
-</code></pre></div>
-<div class="result" markdown>
-
-| Method      | Description                          |
-| ----------- | ------------------------------------ |
-| `GET`       | :material-check:     Fetch resource  |
-| `PUT`       | :material-check-all: Update resource |
-| `DELETE`    | :material-close:     Delete resource |
-
+<div class="language-markdown highlight"><span class="filename">Data table, columns sortable</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>| Method      | Description                          |
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>| ----------- | ------------------------------------ |
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>| <span class="sb">`GET`</span>       | :material-check:     Fetch resource  |
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>| <span class="sb">`PUT`</span>       | :material-check-all: Update resource |
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>| <span class="sb">`DELETE`</span>    | :material-close:     Delete resource |
+</span></code></pre></div>
+<div class="result">
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span>     Fetch resource</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span> Update resource</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span>     Delete resource</td>
+</tr>
+</tbody>
+</table>
 </div>
-
 <p>Note that <a href="http://tristen.ca/tablesort/demo/">tablesort</a> provides alternative comparison implementations like
 numbers, filesizes, dates and month names. See the <a href="http://tristen.ca/tablesort/demo/">tablesort documentation</a> for more information.</p>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
@@ -2289,33 +2317,33 @@ numbers, filesizes, dates and month names. See the <a href="http://tristen.ca/ta
   new Tablesort(tables.item(tables.length - 1));
 </script>
 
-<h3 id="import-table-from-file">Import table from file</h3>
-<p><a href="https://timvink.github.io/mkdocs-table-reader-plugin/">:octicons-cpu-24: Plugin</a></p>
+<h3 id="import-table-from-file">Import table from file<a class="headerlink" href="#import-table-from-file" title="Permanent link">&para;</a></h3>
+<p><a href="https://timvink.github.io/mkdocs-table-reader-plugin/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.75 8h6.5a.75.75 0 0 1 .75.75v6.5a.75.75 0 0 1-.75.75h-6.5a.75.75 0 0 1-.75-.75v-6.5A.75.75 0 0 1 8.75 8Zm.75 6.5h5v-5h-5Z"/><path d="M15.25 1a.75.75 0 0 1 .75.75V4h2.25c.966 0 1.75.784 1.75 1.75V8h2.25a.75.75 0 0 1 0 1.5H20v5h2.25a.75.75 0 0 1 0 1.5H20v2.25A1.75 1.75 0 0 1 18.25 20H16v2.25a.75.75 0 0 1-1.5 0V20h-5v2.25a.75.75 0 0 1-1.5 0V20H5.75A1.75 1.75 0 0 1 4 18.25V16H1.75a.75.75 0 0 1 0-1.5H4v-5H1.75a.75.75 0 0 1 0-1.5H4V5.75C4 4.784 4.784 4 5.75 4H8V1.75a.75.75 0 0 1 1.5 0V4h5V1.75a.75.75 0 0 1 .75-.75Zm3 17.5a.25.25 0 0 0 .25-.25V5.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25Z"/></svg></span> Plugin</a></p>
 <p>You can also import data from a CSV or Excel file using the plugin <a href="https://timvink.github.io/mkdocs-table-reader-plugin/"><code>mkdocs-table-reader-plugin</code></a>.</p>
 <p>First, you will need to install it with <code>pip</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-table-reader-plugin
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-table-reader-plugin
+</span></code></pre></div>
 <p>Then extend the <code>mkdocs.yml</code> file like this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">table-reader</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">table-reader</span>
+</span></code></pre></div>
 <p>Then, it is a simple process to import the data in to the Markdown files.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Import data from :fontawesome-solid-file-csv: CSV file</label><label for="__tabbed_3_2">Import data from :fontawesome-solid-file-excel: Excel file</label><label for="__tabbed_3_3">Import data from other file types</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Import data from <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zm192 0v128h128L256 0zM80 224h16c22.1 0 40 17.9 40 40v8c0 8.8-7.2 16-16 16s-16-7.2-16-16v-8c0-4.4-3.6-8-8-8H80c-4.4 0-8 3.6-8 8v80c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8v-8c0-8.8 7.2-16 16-16s16 7.2 16 16v8c0 22.1-17.9 40-40 40H80c-22.1 0-40-17.9-40-40v-80c0-22.1 17.9-40 40-40zm72 46.4c0-25.6 20.8-46.4 46.4-46.4H216c8.8 0 16 7.2 16 16s-7.2 16-16 16h-17.6c-7.9 0-14.4 6.4-14.4 14.4 0 5.2 2.8 9.9 7.2 12.5l25.4 14.5C231 305.7 240 321 240 337.7c0 25.6-20.8 46.4-46.4 46.4H168c-8.8 0-16-7.2-16-16s7.2-16 16-16h25.6c7.9 0 14.4-6.4 14.4-14.4 0-5.2-2.8-9.9-7.2-12.5l-25.4-14.5c-14.5-8.3-23.4-23.7-23.4-40.3zM280 240v31.6c0 23 5.5 45.6 16 66 10.5-20.3 16-42.9 16-66V240c0-8.8 7.2-16 16-16s16 7.2 16 16v31.6c0 34.7-10.3 68.7-29.6 97.6l-5.1 7.7c-3 4.5-8 7.1-13.3 7.1s-10.3-2.7-13.3-7.1l-5.1-7.7c-19.3-28.9-29.6-62.9-29.6-97.6V240c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg></span> CSV file</label><label for="__tabbed_3_2">Import data from <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zm192 0v128h128L256 0zM155.7 250.2l36.3 51.9 36.3-51.9c7.6-10.9 22.6-13.5 33.4-5.9s13.5 22.6 5.9 33.4L221.3 344l46.4 66.2c7.6 10.9 5 25.8-5.9 33.4s-25.8 5-33.4-5.9L192 385.8l-36.3 51.9c-7.6 10.9-22.6 13.5-33.4 5.9s-13.5-22.6-5.9-33.4l46.3-66.2-46.4-66.2c-7.6-10.9-5-25.8 5.9-33.4s25.8-5 33.4 5.9z"/></svg></span> Excel file</label><label for="__tabbed_3_3">Import data from other file types</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Let's use a :fontawesome-solid-file-csv: CSV in the local directory. The file may look like this:</p>
-<div class="highlight"><span class="filename">./data.csv</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>col1,col2,col3
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>r1c1,r1c2,r1c3
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>r2c1,r2c2,r2c3
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>r3c1,r3c2,r3c3
-</code></pre></div>
-<p>You can then add it to your :fontawesome-solid-file-arrow-down: Markdown page like this:</p>
-<div class="highlight"><span class="filename">./markdown.md</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>...
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>{{ read_csv(&#39;./data.csv&#39;) }}
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>...
-</code></pre></div>
+<p>Let's use a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zm192 0v128h128L256 0zM80 224h16c22.1 0 40 17.9 40 40v8c0 8.8-7.2 16-16 16s-16-7.2-16-16v-8c0-4.4-3.6-8-8-8H80c-4.4 0-8 3.6-8 8v80c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8v-8c0-8.8 7.2-16 16-16s16 7.2 16 16v8c0 22.1-17.9 40-40 40H80c-22.1 0-40-17.9-40-40v-80c0-22.1 17.9-40 40-40zm72 46.4c0-25.6 20.8-46.4 46.4-46.4H216c8.8 0 16 7.2 16 16s-7.2 16-16 16h-17.6c-7.9 0-14.4 6.4-14.4 14.4 0 5.2 2.8 9.9 7.2 12.5l25.4 14.5C231 305.7 240 321 240 337.7c0 25.6-20.8 46.4-46.4 46.4H168c-8.8 0-16-7.2-16-16s7.2-16 16-16h25.6c7.9 0 14.4-6.4 14.4-14.4 0-5.2-2.8-9.9-7.2-12.5l-25.4-14.5c-14.5-8.3-23.4-23.7-23.4-40.3zM280 240v31.6c0 23 5.5 45.6 16 66 10.5-20.3 16-42.9 16-66V240c0-8.8 7.2-16 16-16s16 7.2 16 16v31.6c0 34.7-10.3 68.7-29.6 97.6l-5.1 7.7c-3 4.5-8 7.1-13.3 7.1s-10.3-2.7-13.3-7.1l-5.1-7.7c-19.3-28.9-29.6-62.9-29.6-97.6V240c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg></span> CSV in the local directory. The file may look like this:</p>
+<div class="language-text highlight"><span class="filename">./data.csv</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>col1,col2,col3
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>r1c1,r1c2,r1c3
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>r2c1,r2c2,r2c3
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>r3c1,r3c2,r3c3
+</span></code></pre></div>
+<p>You can then add it to your <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zm192 0v128h128L256 0zm-40 232v102.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/></svg></span> Markdown page like this:</p>
+<div class="language-md highlight"><span class="filename">./markdown.md</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>...
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>{{ read_csv(&#39;./data.csv&#39;) }}
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>...
+</span></code></pre></div>
 <div class="result" markdown>
 <p>...</p>
 <table>
@@ -2348,15 +2376,15 @@ numbers, filesizes, dates and month names. See the <a href="http://tristen.ca/ta
 </div>
 </div>
 <div class="tabbed-block">
-<p>Let's use an :fontawesome-solid-file-excel: Excel file in the local directory. The file may look like this:</p>
-<p><img alt="" src="https://i.stack.imgur.com/f32ks.png" />{width="300px"}</p>
-<p>And you can add it to your :fontawesome-solid-file-arrow-down: Markdown page like this:</p>
-<div class="highlight"><span class="filename">./markdown.md</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>...
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>{{ read_excel(&#39;./Book1.xlsx&#39;, engine=&#39;openpyxl&#39;) }}
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>...
-</code></pre></div>
+<p>Let's use an <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zm192 0v128h128L256 0zM155.7 250.2l36.3 51.9 36.3-51.9c7.6-10.9 22.6-13.5 33.4-5.9s13.5 22.6 5.9 33.4L221.3 344l46.4 66.2c7.6 10.9 5 25.8-5.9 33.4s-25.8 5-33.4-5.9L192 385.8l-36.3 51.9c-7.6 10.9-22.6 13.5-33.4 5.9s-13.5-22.6-5.9-33.4l46.3-66.2-46.4-66.2c-7.6-10.9-5-25.8 5.9-33.4s25.8-5 33.4 5.9z"/></svg></span> Excel file in the local directory. The file may look like this:</p>
+<p><img alt="" src="https://i.stack.imgur.com/f32ks.png" width="300px" /></p>
+<p>And you can add it to your <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zm192 0v128h128L256 0zm-40 232v102.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/></svg></span> Markdown page like this:</p>
+<div class="language-md highlight"><span class="filename">./markdown.md</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>...
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>{{ read_excel(&#39;./Book1.xlsx&#39;, engine=&#39;openpyxl&#39;) }}
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>...
+</span></code></pre></div>
 <div class="result" markdown>
 <p>It will then return a result like this:</p>
 <table>
@@ -2390,20 +2418,20 @@ numbers, filesizes, dates and month names. See the <a href="http://tristen.ca/ta
 <p class="admonition-title">Warning</p>
 <p>You may receive an error if you use <code>engine='openpyxl'</code>.</p>
 <p>If this happens, you can resolve it by installing it using <code>pip</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pip<span class="w"> </span>install<span class="w"> </span>openpyxl
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pip<span class="w"> </span>install<span class="w"> </span>openpyxl
+</span></code></pre></div>
 <p>Read more here: <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html#:~:text=enginestr%2C%20default%20None">pandas.read_excel</a></p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Pro Tip: Multiple Sheets</p>
 <p>If your Excel file contains multiple sheets, you may want to extend the function by adding the <code>sheet_name</code> parameter.</p>
 <p>It would look like this:</p>
-<div class="highlight"><span class="filename">./markdown.md</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>...
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>{{ read_excel(&#39;./Book1.xlsx&#39;, engine=&#39;openpyxl&#39;, sheet_name=&quot;Sheet1&quot;) }}
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>...
-</code></pre></div>
+<div class="language-md highlight"><span class="filename">./markdown.md</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>...
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>{{ read_excel(&#39;./Book1.xlsx&#39;, engine=&#39;openpyxl&#39;, sheet_name=&quot;Sheet1&quot;) }}
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>...
+</span></code></pre></div>
 <p>By default, Pandas will grab the first sheet in the workbook.</p>
 <p>Read more here: <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html#:~:text=sheet_namestr%2C%20int%2C%20list%2C%20or%20None%2C%20default%200">pandas.read_excel</a></p>
 </div>

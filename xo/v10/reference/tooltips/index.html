@@ -2100,112 +2100,97 @@
 
 
 
-<h1 id="tooltips">Tooltips</h1>
+<h1 id="tooltips">Tooltips<a class="headerlink" href="#tooltips" title="Permanent link">&para;</a></h1>
 <p>Technical documentation often incurs the usage of many acronyms, which may
 need additional explanation, especially for new user of your project. For these
 matters, Material for MkDocs uses a combination of Markdown extensions to
 enable site-wide glossaries.</p>
-<h2 id="configuration">Configuration</h2>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>This configuration enables abbreviations and allows to build a simple
 project-wide glossary, sourcing definitions from a central location. Add the
 following line to <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">abbr</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.snippets</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">abbr</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.snippets</span>
+</span></code></pre></div>
 <p>See additional configuration options:</p>
 <ul>
 <li><a href="../../setup/extensions/python-markdown/#abbreviations">Abbreviations</a></li>
 <li><a href="../../setup/extensions/python-markdown/#attribute-lists">Attribute Lists</a></li>
 <li><a href="../../setup/extensions/python-markdown-extensions/#snippets">Snippets</a></li>
 </ul>
-<h3 id="improved-tooltips">Improved tooltips</h3>
-<p><a href="../../insiders/">:octicons-heart-fill-24:{ .mdx-heart } Sponsors only</a>{ .mdx-insiders } ·
-<a href="../../insiders/">:octicons-tag-24: insiders-4.15.0</a> ·
-:octicons-beaker-24: Experimental</p>
+<h3 id="improved-tooltips">Improved tooltips<a class="headerlink" href="#improved-tooltips" title="Permanent link">&para;</a></h3>
+<p><a class="mdx-insiders" href="../../insiders/"><span class="twemoji mdx-heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg></span> Sponsors only</a> ·
+<a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.15.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental</p>
 <p>When improved tooltips are enabled, Material for MkDocs replaces the browser's
 rendering logic for <code>title</code> attribute with beautiful little tooltips.
 Add the following lines to <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">theme</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.tooltips</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">theme</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.tooltips</span>
+</span></code></pre></div>
 <p>Now, tooltips will be rendered for the following elements:</p>
 <ul>
 <li><strong>Content</strong> – elements with a <code>title</code>, permalinks and code copy button</li>
 <li><strong>Header</strong> – home button, header title, color palette switch and repository link</li>
 <li><strong>Navigation</strong> – links that are shortened with ellipsis, i.e. <code>...</code></li>
 </ul>
-<h2 id="usage">Usage</h2>
-<h3 id="adding-tooltips">Adding tooltips</h3>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h3 id="adding-tooltips">Adding tooltips<a class="headerlink" href="#adding-tooltips" title="Permanent link">&para;</a></h3>
 <p>The <a href="https://daringfireball.net/projects/markdown/syntax#link">Markdown syntax</a> allows to specify a <code>title</code> for each link, which will
 render as a beautiful tooltip when <a href="#improved-tooltips">improved tooltips</a> are enabled. Add a 
 tooltip to a link with the following lines:</p>
-<div class="highlight"><span class="filename">Link with tooltip, inline syntax</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[<span class="nt">Hover me</span>](<span class="na">https://example.com &quot;I&#39;m a tooltip!&quot;</span>)
-</code></pre></div>
-<div class="result" markdown>
-
-[Hover me](https://example.com "I'm a tooltip!")
-
+<div class="language-markdown highlight"><span class="filename">Link with tooltip, inline syntax</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[<span class="nt">Hover me</span>](<span class="na">https://example.com &quot;I&#39;m a tooltip!&quot;</span>)
+</span></code></pre></div>
+<div class="result">
+<p><a href="https://example.com" title="I'm a tooltip!">Hover me</a></p>
 </div>
-
 <p>Tooltips can also be added to link references:</p>
-<div class="highlight"><span class="filename">Link with tooltip, reference syntax</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[<span class="nt">Hover me</span>][<span class="nl">example</span>]
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  [<span class="nl">example</span>]: <span class="na">https://example.com &quot;I&#39;m a tooltip!&quot;</span>
-</code></pre></div>
-<div class="result" markdown>
-
-[Hover me](https://example.com "I'm a tooltip!")
-
+<div class="language-markdown highlight"><span class="filename">Link with tooltip, reference syntax</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[<span class="nt">Hover me</span>][<span class="nl">example</span>]
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  [<span class="nl">example</span>]: <span class="na">https://example.com &quot;I&#39;m a tooltip!&quot;</span>
+</span></code></pre></div>
+<div class="result">
+<p><a href="https://example.com" title="I'm a tooltip!">Hover me</a></p>
 </div>
-
 <p>For all other elements, a <code>title</code> can be added by using the <a href="../../setup/extensions/python-markdown/#attribute-lists">Attribute Lists</a>
 extension:</p>
-<div class="highlight"><span class="filename">Icon with tooltip</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>:material-information-outline:{ title=&quot;Important information&quot; }
-</code></pre></div>
-<div class="result" markdown>
-
-:material-information-outline:{ title="Important information" }
-
+<div class="language-markdown highlight"><span class="filename">Icon with tooltip</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>:material-information-outline:{ title=&quot;Important information&quot; }
+</span></code></pre></div>
+<div class="result">
+<p><span class="twemoji" title="Important information"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2v6Z"/></svg></span></p>
 </div>
-
-<h3 id="adding-abbreviations">Adding abbreviations</h3>
+<h3 id="adding-abbreviations">Adding abbreviations<a class="headerlink" href="#adding-abbreviations" title="Permanent link">&para;</a></h3>
 <p>Abbreviations can be defined by using a special syntax similar to URLs and 
 <a href="../footnotes/">footnotes</a>, starting with a <code>*</code> and immediately followed by the term or
 acronym to be associated in square brackets:</p>
-<div class="highlight"><span class="filename">Text with abbreviations</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>The HTML specification is maintained by the W3C.
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>*[HTML]: Hyper Text Markup Language
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>*[W3C]: World Wide Web Consortium
-</code></pre></div>
-<div class="result" markdown>
-
-The HTML specification is maintained by the W3C.
-
-*[HTML]: Hyper Text Markup Language
-*[W3C]: World Wide Web Consortium
-
+<div class="language-markdown highlight"><span class="filename">Text with abbreviations</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>The HTML specification is maintained by the W3C.
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>*[HTML]: Hyper Text Markup Language
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>*[W3C]: World Wide Web Consortium
+</span></code></pre></div>
+<div class="result">
+<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
 </div>
-
-<h3 id="adding-a-glossary">Adding a glossary</h3>
+<h3 id="adding-a-glossary">Adding a glossary<a class="headerlink" href="#adding-a-glossary" title="Permanent link">&para;</a></h3>
 <p>The <a href="../../setup/extensions/python-markdown-extensions/#snippets">Snippets</a> extension can be used to implement a simple glossary by moving
 all abbreviations in a dedicated file<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, and <a href="https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#auto-append-snippets">auto-append</a> this file to all
 pages with the following configuration:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">:octicons-file-code-16: <code>includes/abbreviations.md</code></label><label for="__tabbed_1_2">:octicons-file-code-16: <code>mkdocs.yml</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"/></svg></span> <code>includes/abbreviations.md</code></label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"/></svg></span> <code>mkdocs.yml</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>*[HTML]: Hyper Text Markup Language
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>*[W3C]: World Wide Web Consortium
-</code></pre></div>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>*[HTML]: Hyper Text Markup Language
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>*[W3C]: World Wide Web Consortium
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.snippets</span><span class="p">:</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">      </span><span class="nt">auto_append</span><span class="p">:</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">includes/abbreviations.md</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.snippets</span><span class="p">:</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">      </span><span class="nt">auto_append</span><span class="p">:</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">includes/abbreviations.md</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>

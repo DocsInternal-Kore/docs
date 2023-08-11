@@ -2100,63 +2100,54 @@
 
 
 
-<h1 id="footnotes">Footnotes</h1>
+<h1 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h1>
 <p>Footnotes are a great way to add supplemental or additional information to a
 specific word, phrase or sentence without interrupting the flow of a document.
 Material for MkDocs provides the ability to define, reference and render
 footnotes.</p>
-<h2 id="configuration">Configuration</h2>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>This configuration adds the ability to define inline footnotes, which are then
 rendered below all Markdown content of a document. Add the following lines to
 <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">footnotes</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">footnotes</span>
+</span></code></pre></div>
 <p>See additional configuration options:</p>
 <ul>
 <li><a href="../../setup/extensions/python-markdown/#footnotes">Footnotes</a></li>
 </ul>
-<h2 id="usage">Usage</h2>
-<h3 id="adding-footnote-references">Adding footnote references</h3>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h3 id="adding-footnote-references">Adding footnote references<a class="headerlink" href="#adding-footnote-references" title="Permanent link">&para;</a></h3>
 <p>A footnote reference must be enclosed in square brackets and must start with a
 caret <code>^</code>, directly followed by an arbitrary identifier, which is similar to
 the standard Markdown link syntax.</p>
-<div class="highlight"><span class="filename">Text with footnote references</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
-</code></pre></div>
-<div class="result" markdown>
-
-Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
-
+<div class="language-text highlight"><span class="filename">Text with footnote references</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+</span></code></pre></div>
+<div class="result">
+<p>Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
 </div>
-
-<h3 id="adding-footnote-content">Adding footnote content</h3>
+<h3 id="adding-footnote-content">Adding footnote content<a class="headerlink" href="#adding-footnote-content" title="Permanent link">&para;</a></h3>
 <p>The footnote content must be declared with the same identifier as the reference.
 It can be inserted at an arbitrary position in the document and is always
 rendered at the bottom of the page. Furthermore, a backlink to the footnote
 reference is automatically added.</p>
-<h4 id="on-a-single-line">on a single line</h4>
+<h4 id="on-a-single-line">on a single line<a class="headerlink" href="#on-a-single-line" title="Permanent link">&para;</a></h4>
 <p>Short footnotes can be written on the same line:</p>
-<div class="highlight"><span class="filename">Footnote</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</code></pre></div>
-<div class="result" markdown>
-
-[:octicons-arrow-down-24: Jump to footnote](#fn:1)
-
+<div class="language-text highlight"><span class="filename">Footnote</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</span></code></pre></div>
+<div class="result">
+<p><a href="#fn:1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.97 13.22a.75.75 0 0 1 1.06 0L11 18.19V3.75a.75.75 0 0 1 1.5 0v14.44l4.97-4.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"/></svg></span> Jump to footnote</a></p>
 </div>
-
-<h4 id="on-multiple-lines">on multiple lines</h4>
+<h4 id="on-multiple-lines">on multiple lines<a class="headerlink" href="#on-multiple-lines" title="Permanent link">&para;</a></h4>
 <p>Paragraphs can be written on the next line and must be indented by four spaces:</p>
-<div class="highlight"><span class="filename">Footnote</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[^2]:
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    massa, nec semper lorem quam in massa.
-</code></pre></div>
-<div class="result" markdown>
-
-[:octicons-arrow-down-24: Jump to footnote](#fn:2)
-
+<div class="language-text highlight"><span class="filename">Footnote</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[^2]:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<div class="result">
+<p><a href="#fn:2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.97 13.22a.75.75 0 0 1 1.06 0L11 18.19V3.75a.75.75 0 0 1 1.5 0v14.44l4.97-4.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"/></svg></span> Jump to footnote</a></p>
 </div>
-
 <div class="footnote">
 <hr />
 <ol>

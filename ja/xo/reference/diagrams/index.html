@@ -2116,219 +2116,199 @@
 
 
 
-<h1 id="diagrams">Diagrams</h1>
+<h1 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">&para;</a></h1>
 <p>Diagrams help to communicate complex relationships and interconnections between
 different technical components, and are a great addition to project
 documentation. Material for MkDocs integrates with <a href="https://mermaid-js.github.io/mermaid/">Mermaid.js</a>, a very
 popular and flexible solution for drawing diagrams.</p>
-<h2 id="configuration">Configuration</h2>
-<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/8.2.0">:octicons-tag-24: 8.2.0</a></p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/8.2.0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 8.2.0</a></p>
 <p>This configuration enables native support for <a href="https://mermaid-js.github.io/mermaid/">Mermaid.js</a> diagrams. Material
 for MkDocs will automatically initialize the JavaScript runtime when a page 
 includes a <code>mermaid</code> code block:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.superfences</span><span class="p">:</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="nt">custom_fences</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">          </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">          </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:pymdownx.superfences.fence_code_format</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.superfences</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="nt">custom_fences</span><span class="p">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">          </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">          </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:pymdownx.superfences.fence_code_format</span>
+</span></code></pre></div>
 <p>No further configuration is necessary. Advantages over a custom integration:</p>
-<ul>
-<li>[x] Works with <a href="../../setup/setting-up-navigation/#instant-loading">instant loading</a> without any additional effort</li>
-<li>[x] Diagrams automatically use fonts and colors defined in <code>mkdocs.yml</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
-<li>[x] Fonts and colors can be customized with <a href="../../customization/#additional-css">additional style sheets</a></li>
-<li>[x] Support for both, light and dark color schemes – <em>try it on this page!</em></li>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Works with <a href="../../setup/setting-up-navigation/#instant-loading">instant loading</a> without any additional effort</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Diagrams automatically use fonts and colors defined in <code>mkdocs.yml</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fonts and colors can be customized with <a href="../../customization/#additional-css">additional style sheets</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Support for both, light and dark color schemes – <em>try it on this page!</em></li>
 </ul>
-<h2 id="usage">Usage</h2>
-<h3 id="using-flowcharts">Using flowcharts</h3>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h3 id="using-flowcharts">Using flowcharts<a class="headerlink" href="#using-flowcharts" title="Permanent link">&para;</a></h3>
 <p><a href="https://mermaid-js.github.io/mermaid/#/flowchart">Flowcharts</a> are diagrams that represent workflows or processes. The steps
 are rendered as nodes of various kinds and are connected by edges, describing
 the necessary order of steps:</p>
-<div class="highlight"><span class="filename">Flow chart</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>``` mermaid
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>graph LR
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  A[Start] --&gt; B{Error?};
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  B --&gt;|Yes| C[Hmm...];
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  C --&gt; D[Debug];
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  D --&gt; B;
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  B ----&gt;|No| E[Yay!];
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>```
-</code></pre></div>
-<div class="result" markdown>
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>graph LR
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  A[Start] --&gt; B{Error?};
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  B --&gt;|Yes| C[Hmm...];
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  C --&gt; D[Debug];
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  D --&gt; B;
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  B ----&gt;|No| E[Yay!];
-</code></pre></div>
-
+<div class="language-markdown highlight"><span class="filename">Flow chart</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>``` mermaid
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>graph LR
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  A[Start] --&gt; B{Error?};
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  B --&gt;|Yes| C[Hmm...];
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  C --&gt; D[Debug];
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  D --&gt; B;
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  B ----&gt;|No| E[Yay!];
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>```
+</span></code></pre></div>
+<div class="result">
+<pre class="mermaid"><code>graph LR
+  A[Start] --&gt; B{Error?};
+  B --&gt;|Yes| C[Hmm...];
+  C --&gt; D[Debug];
+  D --&gt; B;
+  B ----&gt;|No| E[Yay!];</code></pre>
 </div>
-
-<h3 id="using-sequence-diagrams">Using sequence diagrams</h3>
+<h3 id="using-sequence-diagrams">Using sequence diagrams<a class="headerlink" href="#using-sequence-diagrams" title="Permanent link">&para;</a></h3>
 <p><a href="https://mermaid-js.github.io/mermaid/#/sequenceDiagram">Sequence diagrams</a> describe a specific scenario as sequential interactions 
 between multiple objects or actors, including the messages that are exchanged
 between those actors:</p>
-<div class="highlight"><span class="filename">Sequence diagram</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>``` mermaid
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sequenceDiagram
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  autonumber
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  Alice-&gt;&gt;John: Hello John, how are you?
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  loop Healthcheck
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>      John-&gt;&gt;John: Fight against hypochondria
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  end
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  Note right of John: Rational thoughts!
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  John--&gt;&gt;Alice: Great!
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  John-&gt;&gt;Bob: How about you?
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  Bob--&gt;&gt;John: Jolly good!
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>```
-</code></pre></div>
-<div class="result" markdown>
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sequenceDiagram
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  autonumber
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  Alice-&gt;&gt;John: Hello John, how are you?
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  loop Healthcheck
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>      John-&gt;&gt;John: Fight against hypochondria
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  end
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  Note right of John: Rational thoughts!
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  John--&gt;&gt;Alice: Great!
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  John-&gt;&gt;Bob: How about you?
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  Bob--&gt;&gt;John: Jolly good!
-</code></pre></div>
-
+<div class="language-markdown highlight"><span class="filename">Sequence diagram</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>``` mermaid
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sequenceDiagram
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  autonumber
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  Alice-&gt;&gt;John: Hello John, how are you?
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  loop Healthcheck
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>      John-&gt;&gt;John: Fight against hypochondria
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  end
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  Note right of John: Rational thoughts!
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  John--&gt;&gt;Alice: Great!
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  John-&gt;&gt;Bob: How about you?
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  Bob--&gt;&gt;John: Jolly good!
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>```
+</span></code></pre></div>
+<div class="result">
+<pre class="mermaid"><code>sequenceDiagram
+  autonumber
+  Alice-&gt;&gt;John: Hello John, how are you?
+  loop Healthcheck
+      John-&gt;&gt;John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John--&gt;&gt;Alice: Great!
+  John-&gt;&gt;Bob: How about you?
+  Bob--&gt;&gt;John: Jolly good!</code></pre>
 </div>
-
-<h3 id="using-state-diagrams">Using state diagrams</h3>
+<h3 id="using-state-diagrams">Using state diagrams<a class="headerlink" href="#using-state-diagrams" title="Permanent link">&para;</a></h3>
 <p><a href="https://mermaid-js.github.io/mermaid/#/stateDiagram">State diagrams</a> are a great tool to describe the behavior of a system,
 decomposing it into a finite number of states, and transitions between those
 states:</p>
-<div class="highlight"><span class="filename">State diagram</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>``` mermaid
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>stateDiagram-v2
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  state fork_state &lt;&lt;fork&gt;&gt;
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    [*] --&gt; fork_state
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    fork_state --&gt; State2
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    fork_state --&gt; State3
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    state join_state &lt;&lt;join&gt;&gt;
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    State2 --&gt; join_state
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    State3 --&gt; join_state
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    join_state --&gt; State4
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    State4 --&gt; [*]
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>```
-</code></pre></div>
-<div class="result" markdown>
+<div class="language-markdown highlight"><span class="filename">State diagram</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>``` mermaid
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>stateDiagram-v2
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  state fork_state &lt;&lt;fork&gt;&gt;
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    [*] --&gt; fork_state
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    fork_state --&gt; State2
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    fork_state --&gt; State3
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    state join_state &lt;&lt;join&gt;&gt;
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    State2 --&gt; join_state
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    State3 --&gt; join_state
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    join_state --&gt; State4
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    State4 --&gt; [*]
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>```
+</span></code></pre></div>
+<div class="result">
+<pre class="mermaid"><code>stateDiagram-v2
+  state fork_state &lt;&lt;fork&gt;&gt;
+    [*] --&gt; fork_state
+    fork_state --&gt; State2
+    fork_state --&gt; State3
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>stateDiagram-v2
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  state fork_state &lt;&lt;fork&gt;&gt;
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    [*] --&gt; fork_state
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    fork_state --&gt; State2
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    fork_state --&gt; State3
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    state join_state &lt;&lt;join&gt;&gt;
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    State2 --&gt; join_state
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    State3 --&gt; join_state
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    join_state --&gt; State4
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    State4 --&gt; [*]
-</code></pre></div>
-
+    state join_state &lt;&lt;join&gt;&gt;
+    State2 --&gt; join_state
+    State3 --&gt; join_state
+    join_state --&gt; State4
+    State4 --&gt; [*]</code></pre>
 </div>
-
-<h3 id="using-class-diagrams">Using class diagrams</h3>
+<h3 id="using-class-diagrams">Using class diagrams<a class="headerlink" href="#using-class-diagrams" title="Permanent link">&para;</a></h3>
 <p><a href="https://mermaid-js.github.io/mermaid/#/classDiagram">Class diagrams</a> are central to object oriented programing, describing the
 structure of a system by modelling entities as classes and relationships between
 them:</p>
-<div class="highlight"><span class="filename">Class diagram</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>``` mermaid
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>classDiagram
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  Person &lt;|-- Student
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  Person &lt;|-- Professor
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  Person : +String name
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  Person : +String phoneNumber
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  Person : +String emailAddress
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  Person: +purchaseParkingPass()
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  Address &quot;1&quot; &lt;-- &quot;0..1&quot; Person:lives at
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  class Student{
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    +int studentNumber
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    +int averageMark
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    +isEligibleToEnrol()
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    +getSeminarsTaken()
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  }
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>  class Professor{
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    +int salary
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>  }
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>  class Address{
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>    +String street
-<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>    +String city
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>    +String state
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>    +int postalCode
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>    +String country
-<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>    -validate()
-<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>    +outputAsLabel()  
-<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>  }
-<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>```
-</code></pre></div>
-<div class="result" markdown>
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>classDiagram
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  Person &lt;|-- Student
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  Person &lt;|-- Professor
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  Person : +String name
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>  Person : +String phoneNumber
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>  Person : +String emailAddress
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  Person: +purchaseParkingPass()
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  Address &quot;1&quot; &lt;-- &quot;0..1&quot; Person:lives at
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>  class Student{
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    +int studentNumber
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    +int averageMark
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    +isEligibleToEnrol()
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    +getSeminarsTaken()
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>  }
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>  class Professor{
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    +int salary
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>  }
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>  class Address{
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    +String street
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>    +String city
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>    +String state
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>    +int postalCode
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>    +String country
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    -validate()
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>    +outputAsLabel()  
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>  }
-</code></pre></div>
-
+<div class="language-markdown highlight"><span class="filename">Class diagram</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>``` mermaid
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>classDiagram
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  Person &lt;|-- Student
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  Person &lt;|-- Professor
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>  Person : +String name
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  Person : +String phoneNumber
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  Person : +String emailAddress
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  Person: +purchaseParkingPass()
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  Address &quot;1&quot; &lt;-- &quot;0..1&quot; Person:lives at
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  class Student{
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    +int studentNumber
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    +int averageMark
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    +isEligibleToEnrol()
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    +getSeminarsTaken()
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>  }
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>  class Professor{
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    +int salary
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>  }
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  class Address{
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    +String street
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    +String city
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    +String state
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    +int postalCode
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    +String country
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    -validate()
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    +outputAsLabel()  
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>  }
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>```
+</span></code></pre></div>
+<div class="result">
+<pre class="mermaid"><code>classDiagram
+  Person &lt;|-- Student
+  Person &lt;|-- Professor
+  Person : +String name
+  Person : +String phoneNumber
+  Person : +String emailAddress
+  Person: +purchaseParkingPass()
+  Address "1" &lt;-- "0..1" Person:lives at
+  class Student{
+    +int studentNumber
+    +int averageMark
+    +isEligibleToEnrol()
+    +getSeminarsTaken()
+  }
+  class Professor{
+    +int salary
+  }
+  class Address{
+    +String street
+    +String city
+    +String state
+    +int postalCode
+    +String country
+    -validate()
+    +outputAsLabel()  
+  }</code></pre>
 </div>
-
-<h3 id="using-entity-relationship-diagrams">Using entity-relationship diagrams</h3>
+<h3 id="using-entity-relationship-diagrams">Using entity-relationship diagrams<a class="headerlink" href="#using-entity-relationship-diagrams" title="Permanent link">&para;</a></h3>
 <p>An <a href="https://mermaid-js.github.io/mermaid/#/entityRelationshipDiagram">entity-relationship diagram</a> is composed of entity types and specifies
 relationships that exist between entities. It describes inter-related things in
 a specific domain of knowledge:</p>
-<div class="highlight"><span class="filename">Entity-relationship diagram</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>``` mermaid
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>erDiagram
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  CUSTOMER ||--o{ ORDER : places
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  ORDER ||--|{ LINE-ITEM : contains
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  LINE-ITEM {
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    string name
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    int pricePerUnit
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>  }
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>```
-</code></pre></div>
-<div class="result" markdown>
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>erDiagram
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  CUSTOMER ||--o{ ORDER : places
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  ORDER ||--|{ LINE-ITEM : contains
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  LINE-ITEM {
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    string name
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    int pricePerUnit
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>  }
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-</code></pre></div>
-
+<div class="language-markdown highlight"><span class="filename">Entity-relationship diagram</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>``` mermaid
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>erDiagram
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  CUSTOMER ||--o{ ORDER : places
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  ORDER ||--|{ LINE-ITEM : contains
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  LINE-ITEM {
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    string name
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    int pricePerUnit
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>  }
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>```
+</span></code></pre></div>
+<div class="result">
+<pre class="mermaid"><code>erDiagram
+  CUSTOMER ||--o{ ORDER : places
+  ORDER ||--|{ LINE-ITEM : contains
+  LINE-ITEM {
+    string name
+    int pricePerUnit
+  }
+  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses</code></pre>
 </div>
-
-<h3 id="other-diagram-types">Other diagram types</h3>
+<h3 id="other-diagram-types">Other diagram types<a class="headerlink" href="#other-diagram-types" title="Permanent link">&para;</a></h3>
 <p>Besides the diagram types listed above, <a href="https://mermaid-js.github.io/mermaid/">Mermaid.js</a> provides support for
 <a href="https://mermaid-js.github.io/mermaid/#/pie">pie charts</a>, <a href="https://mermaid-js.github.io/mermaid/#/gantt">gantt charts</a>, <a href="https://mermaid-js.github.io/mermaid/#/user-journey">user journeys</a>, <a href="https://mermaid-js.github.io/mermaid/#/gitgraph">git graphs</a> and
 <a href="https://mermaid-js.github.io/mermaid/#/requirementDiagram">requirement diagrams</a>, all of which are not officially supported by Material

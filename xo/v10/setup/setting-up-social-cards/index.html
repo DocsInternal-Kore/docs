@@ -2344,396 +2344,374 @@
 
 
 
-<h1 id="setting-up-social-cards">Setting up social cards</h1>
+<h1 id="setting-up-social-cards">Setting up social cards<a class="headerlink" href="#setting-up-social-cards" title="Permanent link">&para;</a></h1>
 <p>Material for MkDocs can automatically create beautiful social cards for your 
 documentation, which appear as link previews on social media platforms. You 
 can select from several <a href="#+social.cards_layout">pre-designed layouts</a> or create
 <a href="#customization">custom layouts</a> to match your unique style and branding.</p>
 <hr />
-<p>:fontawesome-brands-youtube:{ style="color: #EE0F0F" }
-<strong><a href="https://www.youtube.com/watch?v=4OjnOc6ftJ8">How to build custom social cards</a></strong> by @james-willett – :octicons-clock-24:
+<p><span class="twemoji" style="color: #EE0F0F"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></span>
+<strong><a href="https://www.youtube.com/watch?v=4OjnOc6ftJ8">How to build custom social cards</a></strong> by <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/james-willett" title="GitHub User: james-willett">@james-willett</a> – <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.5 7.25a.75.75 0 0 0-1.5 0v5.5c0 .27.144.518.378.651l3.5 2a.75.75 0 0 0 .744-1.302L12.5 12.315V7.25Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/></svg></span>
 24m – Learn how to create entirely custom social cards perfectly matching your
 branding for each page automatically!</p>
-<figure markdown>
-
-[![Layout default variant]][Layout default variant]
-
-  <figcaption markdown>
-
-Social card of our [formatting] reference
-
-  </figcaption>
+<figure>
+<p><a href="../../assets/screenshots/social-cards-variant.png"><img alt="Layout default variant" src="../../assets/screenshots/social-cards-variant.png" /></a></p>
+<figcaption>
+<p>Social card of our <a href="../../reference/formatting/">formatting</a> reference</p>
+</figcaption>
 </figure>
-
-<h2 id="configuration">Configuration</h2>
-<h3 id="built-in-social-plugin">Built-in social plugin</h3>
-<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/8.5.0">:octicons-tag-24: 8.5.0</a> ·
-:octicons-cpu-24: Plugin ·
-:octicons-beaker-24: Experimental</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<h3 id="built-in-social-plugin">Built-in social plugin<a class="headerlink" href="#built-in-social-plugin" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/8.5.0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 8.5.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.75 8h6.5a.75.75 0 0 1 .75.75v6.5a.75.75 0 0 1-.75.75h-6.5a.75.75 0 0 1-.75-.75v-6.5A.75.75 0 0 1 8.75 8Zm.75 6.5h5v-5h-5Z"/><path d="M15.25 1a.75.75 0 0 1 .75.75V4h2.25c.966 0 1.75.784 1.75 1.75V8h2.25a.75.75 0 0 1 0 1.5H20v5h2.25a.75.75 0 0 1 0 1.5H20v2.25A1.75 1.75 0 0 1 18.25 20H16v2.25a.75.75 0 0 1-1.5 0V20h-5v2.25a.75.75 0 0 1-1.5 0V20H5.75A1.75 1.75 0 0 1 4 18.25V16H1.75a.75.75 0 0 1 0-1.5H4v-5H1.75a.75.75 0 0 1 0-1.5H4V5.75C4 4.784 4.784 4 5.75 4H8V1.75a.75.75 0 0 1 1.5 0V4h5V1.75a.75.75 0 0 1 .75-.75Zm3 17.5a.25.25 0 0 0 .25-.25V5.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25Z"/></svg></span> Plugin ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental</p>
 <p>The built-in social plugin automatically generate a custom preview image for 
 each page. Install all <a href="../dependencies/image-processing/">dependencies for image processing</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and add the 
 following lines to <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">social</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">social</span>
+</span></code></pre></div>
 <blockquote>
 <p>Note that <a href="../../insiders/">Insiders</a> contains a ground up rewrite of the social plugin that 
 generates images much more efficiently in parallel and allows to build 
 entirely <a href="#customization">custom layouts</a>.</p>
 </blockquote>
 <p>The following configuration options are available:</p>
-<p><a href="#+social.enabled"><code>enabled</code></a>{ #+social.enabled }</p>
-<p>:   :octicons-milestone-24: Default: <code>true</code> – This option specifies whether
-    the plugin is enabled when building your project. If you want to speed up
-    local builds, you can use an <a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      enabled: !ENV [CI, false]
-```
-</code></pre></div>
-<p><a href="#+social.concurrency"><code>concurrency</code></a>{ #+social.concurrency }</p>
-<p>:   <a href="../../insiders/">:octicons-tag-24: insiders-4.33.0</a> · :octicons-milestone-24: 
-    Default: <em>number of CPUs</em> – How many CPUs the plugin is allowed to use when
-    generating social cards. With more CPUs, the plugin can do more work in the
-    same time, thus complete generation faster. Concurrent processing can be
-    disabled with:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      concurrency: 1
-```
-</code></pre></div>
-<h4 id="social-cards">Social cards</h4>
+<dl>
+<dt><a href="#+social.enabled" id="+social.enabled"><code>enabled</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>true</code> – This option specifies whether
+the plugin is enabled when building your project. If you want to speed up
+local builds, you can use an <a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kt">!ENV</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">CI</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">false</span><span class="p p-Indicator">]</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+social.concurrency" id="+social.concurrency"><code>concurrency</code></a></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.33.0</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> 
+Default: <em>number of CPUs</em> – How many CPUs the plugin is allowed to use when
+generating social cards. With more CPUs, the plugin can do more work in the
+same time, thus complete generation faster. Concurrent processing can be
+disabled with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="nt">concurrency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</span></code></pre></div>
+</dd>
+</dl>
+<h4 id="social-cards">Social cards<a class="headerlink" href="#social-cards" title="Permanent link">&para;</a></h4>
 <p>The following configuration options are available for card generation:</p>
-<p><a href="#+social.cards"><code>cards</code></a>{ #+social.cards }</p>
-<p>:   :octicons-milestone-24: Default: <code>true</code> – This option specifies whether
-    to generate social card images. If you want to switch the plugin off, e.g.
-    for local builds, you can use an <a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      cards: !ENV [CI, false]
-```
-</code></pre></div>
-<p><a href="#+social.cards_dir"><code>cards_dir</code></a>{ #+social.cards_dir }</p>
-<p>:   :octicons-milestone-24: Default: <code>assets/images/social</code> – This option
-    specifies where the generated social cards will be stored. While it's
-    usually not necessary to change this option, change it with:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      cards_dir: assets/images/social
-```
-</code></pre></div>
-<div class="mdx-deprecated" markdown>
-
-[`cards_color`](#+social.cards_color){ #+social.cards_color } – <small>:material-trash-can: Deprecated, use [`cards_layout_options`][layout options]</small>
-
-:   :octicons-milestone-24: Default: [`theme.palette.primary`][primary color] – 
-    This option specifies the colors for the background `fill` and foreground
-    `text` when generating the social card:
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">      </span><span class="nt">cards_color</span><span class="p">:</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="nt">fill</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#0FF1CE&quot;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#FFFFFF&quot;</span>
-</code></pre></div>
-
-[`cards_font`](#+social.cards_font){ #+social.cards_font } – <small>:material-trash-can: Deprecated, use [`cards_layout_options`][layout options]</small>
-
-:   :octicons-milestone-24: Default: [`theme.font.text`][font] – This option
-    specifies which font to use for rendering the social card, which can be
-    any font hosted on [Google Fonts]:
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">      </span><span class="nt">cards_font</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ubuntu</span>
-</code></pre></div>
-
+<dl>
+<dt><a href="#+social.cards" id="+social.cards"><code>cards</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>true</code> – This option specifies whether
+to generate social card images. If you want to switch the plugin off, e.g.
+for local builds, you can use an <a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">      </span><span class="nt">cards</span><span class="p">:</span><span class="w"> </span><span class="kt">!ENV</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">CI</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">false</span><span class="p p-Indicator">]</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+social.cards_dir" id="+social.cards_dir"><code>cards_dir</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>assets/images/social</code> – This option
+specifies where the generated social cards will be stored. While it's
+usually not necessary to change this option, change it with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">      </span><span class="nt">cards_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/images/social</span>
+</span></code></pre></div>
+</dd>
+</dl>
+<div class="mdx-deprecated">
+<dl>
+<dt><a href="#+social.cards_color" id="+social.cards_color"><code>cards_color</code></a> – <small><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8Z"/></svg></span> Deprecated, use <a href="#+social.cards_layout_options"><code>cards_layout_options</code></a></small></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <a href="../changing-the-colors/#primary-color"><code>theme.palette.primary</code></a> – 
+This option specifies the colors for the background <code>fill</code> and foreground
+<code>text</code> when generating the social card:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">      </span><span class="nt">cards_color</span><span class="p">:</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="nt">fill</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#0FF1CE&quot;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#FFFFFF&quot;</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+social.cards_font" id="+social.cards_font"><code>cards_font</code></a> – <small><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8Z"/></svg></span> Deprecated, use <a href="#+social.cards_layout_options"><code>cards_layout_options</code></a></small></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <a href="../changing-the-fonts/#regular-font"><code>theme.font.text</code></a> – This option
+specifies which font to use for rendering the social card, which can be
+any font hosted on <a href="https://fonts.google.com/">Google Fonts</a>:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">      </span><span class="nt">cards_font</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ubuntu</span>
+</span></code></pre></div>
+</dd>
+</dl>
 </div>
-
-<p><a href="#+social.cards_layout_dir"><code>cards_layout_dir</code></a>{ #+social.cards_layout_dir }</p>
-<p>:   <a href="../../insiders/">:octicons-tag-24: insiders-4.33.0</a> · :octicons-milestone-24:
-    Default: <em>none</em> – This option specifies where the social plugin should try
-    to resolve <a href="#customization">custom layouts</a> from, taking precedence over the included
-    layouts:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      cards_layout_dir: layouts
-```
-</code></pre></div>
-<p><a href="#+social.cards_layout"><code>cards_layout</code></a>{ #+social.cards_layout } :material-alert-decagram:{ .mdx-pulse title="Added on May 8, 2023" }</p>
-<p>:   <a href="../../insiders/">:octicons-tag-24: insiders-4.33.0</a> · :octicons-milestone-24:
-    Default: <code>default</code> – Layout specification the social card should use. The
-    plugin includes the following layouts which make use of the <a href="../changing-the-colors/#color-palette">color palette</a>
-    and <a href="../changing-the-fonts/#regular-font">font</a>:</p>
-<div class="highlight"><pre><span></span><code>=== &quot;`default`&quot;
-
-    ``` yaml
-    plugins:
-      - social:
-          cards_layout: default
-    ```
-
-    This layout uses the configured [primary color] as a background:
-
-    [![Layout default]][Layout default]
-
-=== &quot;`default/variant`&quot;
-
-    ``` yaml
-    plugins:
-      - social:
-          cards_layout: default/variant
-    ```
-
-    This layout includes the [page icon] as a watermark, if defined:
-
-    [![Layout default variant]][Layout default variant]
-
-=== &quot;`default/accent`&quot;
-
-    ``` yaml
-    plugins:
-      - social:
-          cards_layout: default/accent
-    ```
-
-    This layout uses the configured [accent color] as a background:
-
-    [![Layout default accent]][Layout default accent]
-
-=== &quot;`default/invert`&quot;
-
-    ``` yaml
-    plugins:
-      - social:
-          cards_layout: default/invert
-    ```
-
-    This layout inverts the background and foreground colors:
-
-    [![Layout default invert]][Layout default invert]
-
-=== &quot;`default/only/image`&quot;
-
-    ``` yaml
-    plugins:
-      - social:
-          cards_layout: default/only/image
-          cards_layout_options:
-            background_image: layouts/background.png
-
-    ```
-
-    This layout will only show the given background image and scale to fit:
-
-    [![Layer background image]][Layer background image]
-
-All [`default`][default layouts] layouts make use of the following
-[template variables]:
-
-- :material-page-layout-header: – `config.site_name`
-- :material-page-layout-body: – `page.meta.title` or `page.title`
-- :material-page-layout-footer: – `page.meta.description` or `config.site_description`
-- :material-page-layout-sidebar-right: – `theme.logo` or `theme.icon.logo`
-</code></pre></div>
-<p><a href="#+social.cards_layout_options"><code>cards_layout_options</code></a>{ #+social.cards_layout_options }</p>
-<p>:   <a href="https://github.com/squidfunk/mkdocs-material/releases/tag/9.1.10">:octicons-tag-24: 9.1.10</a> · :octicons-milestone-24:
-    Default: <em>none</em> – This option allows to set <a href="#parameters">parameters</a> as provided by
-    the layout specification. For <a href="#customization">custom layouts</a>, this key can be used to
-    provide layout-specific options, making layouts entirely configurable.</p>
-<div class="highlight"><pre><span></span><code>---
-
-All [`default`][default layouts] layouts expose the following parameters:
-
-[`background_color`](#+social.cards_layout_options.background_color){ #+social.cards_layout_options.background_color }
-
-:   Set a background color, which can be a [CSS color keyword], or a 3, 4, 6
-    or 8 letter HEX color code. Alpha channels are supported as well:
-
-    ``` yaml
-    plugins:
-      - social:
-          cards_layout_options:
-            background_color: &quot;#0FF1CE&quot;
-    ```
-
-[`background_image`](#+social.cards_layout_options.background_image){ #+social.cards_layout_options.background_image }
-
-:   [:octicons-tag-24: insiders-4.33.0][Insiders] – Set a background image. 
-    If a `background_color` is set, like for the
-    [`default`][default layouts] layouts, the image is tinted (overlayed)
-    with the color. Thus, the background color must be (partially)
-    transparent for the image to become visible:
-
-    ``` yaml
-    plugins:
-      - social:
-          cards_layout_options:
-            background_color: &quot;#00000000&quot;
-            background_image: layouts/background.png
-    ```
-
-    The path of the image must be defined relative to the project root.
-
-[`color`](#+social.cards_layout_options.color){ #+social.cards_layout_options.color }
-
-:   Set a foreground color, which can be a [CSS color keyword], or a 3, 4, 6
-    or 8 letter HEX color code. The color is primarily used to tint text and
-    icons:
-
-    ``` yaml
-    plugins:
-      - social:
-          cards_layout_options:
-            color: &quot;#0FF1CE&quot;
-    ```
-
-[`font_family`](#+social.cards_layout_options.font_family){ #+social.cards_layout_options.font_family }
-
-:   Set a font family. This overrides the [font] that is set as part of the
-    theme configuration. The [built-in social plugin] will automatically
-    download the font from [Google Fonts]:
-
-    ``` yaml
-    plugins:
-      - social:
-          cards_layout_options:
-            font_family: Ubuntu
-    ```
-</code></pre></div>
-<p><a href="#+privacy.cards_include"><code>cards_include</code></a>{ #+privacy.cards_include }</p>
-<p>:   <a href="../../insiders/">:octicons-tag-24: insiders-4.35.0</a> · :octicons-milestone-24:
-    Default: <em>none</em> – This option allows to only generate social cards for
-    certain subsections of your documentation, e.g. to generate different
-    cards for different subfolders with multiple instances of the plugin:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      cards_include:
-        - blog/*
-```
-</code></pre></div>
-<p><a href="#+privacy.cards_exclude"><code>cards_exclude</code></a>{ #+privacy.cards_exclude }</p>
-<p>:   :octicons-milestone-24: Default: <em>none</em> – This option allows to exclude
-    certain subsections of your documentation from generating social cards:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      cards_exclude:
-        - changelog/*.md
-```
-</code></pre></div>
-<h4 id="debugging">Debugging</h4>
+<dl>
+<dt><a href="#+social.cards_layout_dir" id="+social.cards_layout_dir"><code>cards_layout_dir</code></a></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.33.0</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span>
+Default: <em>none</em> – This option specifies where the social plugin should try
+to resolve <a href="#customization">custom layouts</a> from, taking precedence over the included
+layouts:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">      </span><span class="nt">cards_layout_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">layouts</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+social.cards_layout" id="+social.cards_layout"><code>cards_layout</code></a> <span class="twemoji mdx-pulse" title="Added on May 8, 2023"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12m-10 5h-2v-2h2v2m0-4h-2V7h2v6Z"/></svg></span></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.33.0</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span>
+Default: <code>default</code> – Layout specification the social card should use. The
+plugin includes the following layouts which make use of the <a href="../changing-the-colors/#color-palette">color palette</a>
+and <a href="../changing-the-fonts/#regular-font">font</a>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>default</code></label><label for="__tabbed_1_2"><code>default/variant</code></label><label for="__tabbed_1_3"><code>default/accent</code></label><label for="__tabbed_1_4"><code>default/invert</code></label><label for="__tabbed_1_5"><code>default/only/image</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">      </span><span class="nt">cards_layout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+</span></code></pre></div>
+<p>This layout uses the configured <a href="../changing-the-colors/#primary-color">primary color</a> as a background:</p>
+<p><a href="../../assets/screenshots/social-cards.png"><img alt="Layout default" src="../../assets/screenshots/social-cards.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">      </span><span class="nt">cards_layout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default/variant</span>
+</span></code></pre></div>
+<p>This layout includes the <a href="../../reference/#setting-the-page-icon">page icon</a> as a watermark, if defined:</p>
+<p><a href="../../assets/screenshots/social-cards-variant.png"><img alt="Layout default variant" src="../../assets/screenshots/social-cards-variant.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">      </span><span class="nt">cards_layout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default/accent</span>
+</span></code></pre></div>
+<p>This layout uses the configured <a href="../changing-the-colors/#accent-color">accent color</a> as a background:</p>
+<p><a href="../../assets/screenshots/social-cards-accent.png"><img alt="Layout default accent" src="../../assets/screenshots/social-cards-accent.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">      </span><span class="nt">cards_layout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default/invert</span>
+</span></code></pre></div>
+<p>This layout inverts the background and foreground colors:</p>
+<p><a href="../../assets/screenshots/social-cards-invert.png"><img alt="Layout default invert" src="../../assets/screenshots/social-cards-invert.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">      </span><span class="nt">cards_layout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default/only/image</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">        </span><span class="nt">background_image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">layouts/background.png</span>
+</span></code></pre></div>
+<p>This layout will only show the given background image and scale to fit:</p>
+<p><a href="../../assets/screenshots/social-cards-layer-background-image.png"><img alt="Layer background image" src="../../assets/screenshots/social-cards-layer-background-image.png" /></a></p>
+</div>
+</div>
+</div>
+<p>All <a href="#+social.cards_layout"><code>default</code></a> layouts make use of the following
+<a href="https://www.mkdocs.org/dev-guide/themes/#template-variables">template variables</a>:</p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m0 2v4h12V4H6Z"/></svg></span> – <code>config.site_name</code></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m0 6v8h12V8H6Z"/></svg></span> – <code>page.meta.title</code> or <code>page.title</code></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m0 14v4h12v-4H6Z"/></svg></span> – <code>page.meta.description</code> or <code>config.site_description</code></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m8 6v8h4V8h-4Z"/></svg></span> – <code>theme.logo</code> or <code>theme.icon.logo</code></li>
+</ul>
+</dd>
+<dt><a href="#+social.cards_layout_options" id="+social.cards_layout_options"><code>cards_layout_options</code></a></dt>
+<dd>
+<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/9.1.10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 9.1.10</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span>
+Default: <em>none</em> – This option allows to set <a href="#parameters">parameters</a> as provided by
+the layout specification. For <a href="#customization">custom layouts</a>, this key can be used to
+provide layout-specific options, making layouts entirely configurable.</p>
+<hr />
+<p>All <a href="#+social.cards_layout"><code>default</code></a> layouts expose the following parameters:</p>
+<dl>
+<dt><a href="#+social.cards_layout_options.background_color" id="+social.cards_layout_options.background_color"><code>background_color</code></a></dt>
+<dd>
+<p>Set a background color, which can be a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#color_keywords">CSS color keyword</a>, or a 3, 4, 6
+or 8 letter HEX color code. Alpha channels are supported as well:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="nt">background_color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#0FF1CE&quot;</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+social.cards_layout_options.background_image" id="+social.cards_layout_options.background_image"><code>background_image</code></a></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.33.0</a> – Set a background image. 
+If a <code>background_color</code> is set, like for the
+<a href="#+social.cards_layout"><code>default</code></a> layouts, the image is tinted (overlayed)
+with the color. Thus, the background color must be (partially)
+transparent for the image to become visible:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">        </span><span class="nt">background_color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#00000000&quot;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">        </span><span class="nt">background_image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">layouts/background.png</span>
+</span></code></pre></div>
+<p>The path of the image must be defined relative to the project root.</p>
+</dd>
+<dt><a href="#+social.cards_layout_options.color" id="+social.cards_layout_options.color"><code>color</code></a></dt>
+<dd>
+<p>Set a foreground color, which can be a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#color_keywords">CSS color keyword</a>, or a 3, 4, 6
+or 8 letter HEX color code. The color is primarily used to tint text and
+icons:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#0FF1CE&quot;</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+social.cards_layout_options.font_family" id="+social.cards_layout_options.font_family"><code>font_family</code></a></dt>
+<dd>
+<p>Set a font family. This overrides the <a href="../changing-the-fonts/#regular-font">font</a> that is set as part of the
+theme configuration. The <a href="#built-in-social-plugin">built-in social plugin</a> will automatically
+download the font from <a href="https://fonts.google.com/">Google Fonts</a>:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">        </span><span class="nt">font_family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ubuntu</span>
+</span></code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt><a href="#+privacy.cards_include" id="+privacy.cards_include"><code>cards_include</code></a></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.35.0</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span>
+Default: <em>none</em> – This option allows to only generate social cards for
+certain subsections of your documentation, e.g. to generate different
+cards for different subfolders with multiple instances of the plugin:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">      </span><span class="nt">cards_include</span><span class="p">:</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blog/*</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+privacy.cards_exclude" id="+privacy.cards_exclude"><code>cards_exclude</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <em>none</em> – This option allows to exclude
+certain subsections of your documentation from generating social cards:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">      </span><span class="nt">cards_exclude</span><span class="p">:</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">changelog/*.md</span>
+</span></code></pre></div>
+</dd>
+</dl>
+<h4 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h4>
 <p>The following configuration options are available for debugging:</p>
-<p><a href="#+social.debug"><code>debug</code></a>{ #+social.debug }</p>
-<p>:   <a href="../../insiders/">:octicons-tag-24: insiders-4.33.0</a> · :octicons-milestone-24:
-    Default: <code>false</code> – This option enables a special debug mode, which renders
-    each layer with an outline and its <code>x</code> and <code>y</code> offset in order to understand
-    how the layout is composed, and optionally renders a grid for easier
-    alignment:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      debug: true
-```
-
-=== &quot;With debug mode&quot;
-
-    [![Debug mode enabled]][Debug mode enabled]
-
-=== &quot;Without&quot;
-
-    [![Debug mode disabled]][Debug mode disabled]
-
-[Debug mode enabled]: ../assets/screenshots/social-cards-debug.png
-[Debug mode disabled]: ../assets/screenshots/social-cards-variant.png
-</code></pre></div>
-<p><a href="#+social.debug_on_build"><code>debug_on_build</code></a>{ #+social.debug_on_build }</p>
-<p>:   <a href="../../insiders/">:octicons-tag-24: insiders-4.34.1</a> · :octicons-milestone-24:
-    Default: <code>false</code> – Whether debug mode should be automatically disabled
-    <a href="../../creating-your-site/#building-your-site">when building your site</a> with <code>mkdocs build</code>. It can be changed with:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      debug_on_build: true
-```
-
-This setting is just intended to be a safety net, so that when building
-your site social cards definitely won&#39;t contain the dot grid or layer
-outlines by accident.
-</code></pre></div>
-<p><a href="#+social.debug_grid"><code>debug_grid</code></a>{ #+social.debug_grid }</p>
-<p>:   <a href="../../insiders/">:octicons-tag-24: insiders-4.33.0</a> · :octicons-milestone-24:
-    Default: <code>true</code> – This option enables the rendering of a dot grid when
-    <a href="#+social.debug"><code>debug</code></a> is enabled (see screenshot above). The grid can be switched
-    off with:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      debug_grid: false
-```
-</code></pre></div>
-<p><a href="#+social.debug_grid_step"><code>debug_grid_step</code></a>{ #+social.debug_grid_step }</p>
-<p>:   <a href="../../insiders/">:octicons-tag-24: insiders-4.33.0</a> · :octicons-milestone-24:
-    Default: <code>32</code> – This option specifies the step size of the grid in pixels,
-    if enabled, which can be used to align elements. It can be changed with:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      debug_grid_step: 64
-```
-</code></pre></div>
-<p><a href="#+social.debug_color"><code>debug_color</code></a>{ #+social.debug_color }</p>
-<p>:   <a href="../../insiders/">:octicons-tag-24: insiders-4.33.0</a> · :octicons-milestone-24:
-    Default: <code>grey</code> – This option sets the color of the layer outlines and
-    the grid which are rendered when <a href="#+social.debug"><code>debug</code></a> is enabled. It can be
-    changed with:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      debug_color: yellow
-```
-</code></pre></div>
-<h4 id="caching">Caching</h4>
+<dl>
+<dt><a href="#+social.debug" id="+social.debug"><code>debug</code></a></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.33.0</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span>
+Default: <code>false</code> – This option enables a special debug mode, which renders
+each layer with an outline and its <code>x</code> and <code>y</code> offset in order to understand
+how the layout is composed, and optionally renders a grid for easier
+alignment:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">With debug mode</label><label for="__tabbed_2_2">Without</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a href="../../assets/screenshots/social-cards-debug.png"><img alt="Debug mode enabled" src="../../assets/screenshots/social-cards-debug.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a href="../../assets/screenshots/social-cards-variant.png"><img alt="Debug mode disabled" src="../../assets/screenshots/social-cards-variant.png" /></a></p>
+</div>
+</div>
+</div>
+</dd>
+<dt><a href="#+social.debug_on_build" id="+social.debug_on_build"><code>debug_on_build</code></a></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.34.1</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span>
+Default: <code>false</code> – Whether debug mode should be automatically disabled
+<a href="../../creating-your-site/#building-your-site">when building your site</a> with <code>mkdocs build</code>. It can be changed with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">      </span><span class="nt">debug_on_build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></code></pre></div>
+<p>This setting is just intended to be a safety net, so that when building
+your site social cards definitely won't contain the dot grid or layer
+outlines by accident.</p>
+</dd>
+<dt><a href="#+social.debug_grid" id="+social.debug_grid"><code>debug_grid</code></a></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.33.0</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span>
+Default: <code>true</code> – This option enables the rendering of a dot grid when
+<a href="#+social.debug"><code>debug</code></a> is enabled (see screenshot above). The grid can be switched
+off with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">      </span><span class="nt">debug_grid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+social.debug_grid_step" id="+social.debug_grid_step"><code>debug_grid_step</code></a></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.33.0</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span>
+Default: <code>32</code> – This option specifies the step size of the grid in pixels,
+if enabled, which can be used to align elements. It can be changed with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">      </span><span class="nt">debug_grid_step</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">64</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+social.debug_color" id="+social.debug_color"><code>debug_color</code></a></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.33.0</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span>
+Default: <code>grey</code> – This option sets the color of the layer outlines and
+the grid which are rendered when <a href="#+social.debug"><code>debug</code></a> is enabled. It can be
+changed with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">      </span><span class="nt">debug_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+</span></code></pre></div>
+</dd>
+</dl>
+<h4 id="caching">Caching<a class="headerlink" href="#caching" title="Permanent link">&para;</a></h4>
 <p>The <a href="#built-in-social-plugin">built-in social plugin</a> implements an intelligent caching mechanism,
 ensuring that social cards are only re-generated when they're not contained in
 the cache or their contents change. If any of the variables used in a layout 
 changes, the plugin will detect it and re-generate the card.</p>
 <p>The following configuration options are available for caching:</p>
-<p><a href="#+social.cache"><code>cache</code></a>{ #+social.cache }</p>
-<p>:   <a href="../../insiders/">:octicons-tag-24: insiders-4.33.0</a> · :octicons-milestone-24:
-    Default: <code>true</code> – Whether the plugin queries its cache for an existing
-    artifact before starting a generation job. It's normally not necessary to
-    change this setting, except for when debugging the plugin itself. Caching
-    can be disabled with:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      cache: false
-```
-</code></pre></div>
-<p><a href="#+social.cache_dir"><code>cache_dir</code></a>{ #+social.cache_dir }</p>
-<p>:   :octicons-milestone-24: Default: <code>.cache/plugins/social</code> – This option
-    specifies the file system location of the plugin's cache. It's normally not
-    necessary to change this setting, except for when debugging the plugin
-    itself. The cache directory can be changed with:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - social:
-      cache_dir: .cache/plugins/social
-```
-
-By default, all built-in plugins that implement caching will create a
-`.cache` directory in the same folder your `mkdocs.yml` resides, and create
+<dl>
+<dt><a href="#+social.cache" id="+social.cache"><code>cache</code></a></dt>
+<dd>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.33.0</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span>
+Default: <code>true</code> – Whether the plugin queries its cache for an existing
+artifact before starting a generation job. It's normally not necessary to
+change this setting, except for when debugging the plugin itself. Caching
+can be disabled with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">      </span><span class="nt">cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+social.cache_dir" id="+social.cache_dir"><code>cache_dir</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>.cache/plugins/social</code> – This option
+specifies the file system location of the plugin's cache. It's normally not
+necessary to change this setting, except for when debugging the plugin
+itself. The cache directory can be changed with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">      </span><span class="nt">cache_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache/plugins/social</span>
+</span></code></pre></div>
+<p>By default, all built-in plugins that implement caching will create a
+<code>.cache</code> directory in the same folder your <code>mkdocs.yml</code> resides, and create
 subfolders to not interfere with each other. If you use multiple instances
-of this plugin, it could be necessary to change this setting.
-</code></pre></div>
-<h2 id="usage">Usage</h2>
+of this plugin, it could be necessary to change this setting.</p>
+</dd>
+</dl>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>If you want to adjust the title or set a custom description for the social card,
 you can set the front matter <code>title</code> and <code>description</code> properties, which take 
 precedence over the default values.</p>
@@ -2741,97 +2719,97 @@ precedence over the default values.</p>
 <li><a href="../../reference/#setting-the-page-title">Changing the title</a></li>
 <li><a href="../../reference/#setting-the-page-description">Changing the description</a></li>
 </ul>
-<h3 id="choosing-a-font">Choosing a font</h3>
+<h3 id="choosing-a-font">Choosing a font<a class="headerlink" href="#choosing-a-font" title="Permanent link">&para;</a></h3>
 <p>Some fonts do not contain CJK characters, like for example the
 <a href="../changing-the-fonts/#regular-font">default font, <code>Roboto</code></a>. In case your <code>site_name</code>, <code>site_description</code>, or
 page title contain CJK characters, choose another font from <a href="https://fonts.google.com/">Google Fonts</a> which
 comes with CJK characters, e.g. one from the <code>Noto Sans</code> font family:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Chinese (Simplified)</label><label for="__tabbed_1_2">Chinese (Traditional)</label><label for="__tabbed_1_3">Japanese</label><label for="__tabbed_1_4">Korean</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Chinese (Simplified)</label><label for="__tabbed_3_2">Chinese (Traditional)</label><label for="__tabbed_3_3">Japanese</label><label for="__tabbed_3_4">Korean</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
-<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
-<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">        </span><span class="nt">font_family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Noto Sans SC</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">        </span><span class="nt">font_family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Noto Sans SC</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
-<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">        </span><span class="nt">font_family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Noto Sans TC</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">        </span><span class="nt">font_family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Noto Sans TC</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
-<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
-<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">        </span><span class="nt">font_family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Noto Sans JP</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">        </span><span class="nt">font_family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Noto Sans JP</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
-<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
-<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">        </span><span class="nt">font_family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Noto Sans KR</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">      </span><span class="nt">cards_layout_options</span><span class="p">:</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">        </span><span class="nt">font_family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Noto Sans KR</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
-<h3 id="changing-the-layout">Changing the layout</h3>
-<p><a href="../../insiders/">:octicons-tag-24: insiders-4.37.0</a> ·
-:octicons-beaker-24: Experimental</p>
+<h3 id="changing-the-layout">Changing the layout<a class="headerlink" href="#changing-the-layout" title="Permanent link">&para;</a></h3>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.37.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental</p>
 <p>If you want to use a different layout for a single page (e.g. your landing
 page), you can use the <code>social</code> front matter property together with the
 <a href="#+social.cards_layout"><code>cards_layout</code></a> key, exactly as in <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nn">---</span>
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="nt">social</span><span class="p">:</span>
-<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">  </span><span class="nt">cards_layout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom</span>
-<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="nn">---</span>
-<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
-<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="c1"># Headline</span>
-<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="nn">...</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nn">---</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">  </span><span class="nt">cards_layout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="nn">---</span>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="c1"># Headline</span>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="nn">...</span>
+</span></code></pre></div>
 <p>You can apply those changes for entire subtrees of your documentation, e.g.,
 to generate different social cards for your blog and API reference, by using
 the <a href="../../reference/#built-in-meta-plugin">built-in meta plugin</a>.</p>
-<h3 id="parametrizing-the-layout">Parametrizing the layout</h3>
-<p><a href="../../insiders/">:octicons-tag-24: insiders-4.37.0</a> ·
-:octicons-beaker-24: Experimental</p>
+<h3 id="parametrizing-the-layout">Parametrizing the layout<a class="headerlink" href="#parametrizing-the-layout" title="Permanent link">&para;</a></h3>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.37.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental</p>
 <p>Besides changing the entire layout, you can override all options that a layout
 exposes. This means you can parametrize social cards with custom front matter
 properties, such as <code>tags</code>, <code>date</code>, <code>author</code> or anything you can think of.
 Simply define <a href="#+social.cards_layout_options"><code>cards_layout_options</code></a>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nn">---</span>
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nt">social</span><span class="p">:</span>
-<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">  </span><span class="nt">cards_layout_options</span><span class="p">:</span>
-<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="w">    </span><span class="nt">background_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span><span class="w"> </span><span class="c1"># Change background color</span>
-<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="w">    </span><span class="nt">background_image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"> </span><span class="c1"># Remove background image</span>
-<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="nn">---</span>
-<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>
-<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="c1"># Headline</span>
-<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a><span class="nn">...</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nn">---</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">  </span><span class="nt">cards_layout_options</span><span class="p">:</span>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="w">    </span><span class="nt">background_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span><span class="w"> </span><span class="c1"># Change background color</span>
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="w">    </span><span class="nt">background_image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"> </span><span class="c1"># Remove background image</span>
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="nn">---</span>
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="c1"># Headline</span>
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a><span class="nn">...</span>
+</span></code></pre></div>
 <p>You can apply those changes for entire subtrees of your documentation, e.g.,
 to generate different social cards for your blog and API reference, by using
 the <a href="../../reference/#built-in-meta-plugin">built-in meta plugin</a>.</p>
-<h3 id="disabling-social-cards">Disabling social cards</h3>
-<p><a href="../../insiders/">:octicons-tag-24: insiders-4.37.0</a> ·
-:octicons-beaker-24: Experimental</p>
+<h3 id="disabling-social-cards">Disabling social cards<a class="headerlink" href="#disabling-social-cards" title="Permanent link">&para;</a></h3>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.37.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental</p>
 <p>If you wish to disable social cards for a page, simply add the following to the
 front matter of the Markdown document:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nn">---</span>
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nt">social</span><span class="p">:</span>
-<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">  </span><span class="nt">cards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="nn">---</span>
-<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>
-<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="c1"># Headline</span>
-<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="nn">...</span>
-</code></pre></div>
-<h2 id="customization">Customization</h2>
-<p><a href="../../insiders/">:octicons-heart-fill-24:{ .mdx-heart } Sponsors only</a>{ .mdx-insiders } ·
-<a href="../../insiders/">:octicons-tag-24: insiders-4.33.0</a> ·
-:octicons-beaker-24: Experimental</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nn">---</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">  </span><span class="nt">cards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="nn">---</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="c1"># Headline</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="nn">...</span>
+</span></code></pre></div>
+<h2 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h2>
+<p><a class="mdx-insiders" href="../../insiders/"><span class="twemoji mdx-heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg></span> Sponsors only</a> ·
+<a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.33.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental</p>
 <p><a href="../../insiders/">Insiders</a> ships a ground up rewrite of the <a href="#built-in-social-plugin">built-in social plugin</a> and
 introduces a brand new layout system based on a combination of YAML and
 <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja templates</a> – the same engine Material for MkDocs uses for HTML
@@ -2885,20 +2863,20 @@ cached to ensure they are only regenerated when their contents change.</p>
 it is a good idea to <a href="https://github.com/squidfunk/mkdocs-material-insiders/tree/master/src/plugins/social/layouts">study the pre-designed layouts</a> (link to <a href="../../insiders/">Insiders</a>
 repository), in order to get a better understanding of how they work. Then,
 create a new layout and reference it in <code>mkdocs.yml</code>:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">:octicons-file-code-16: <code>layouts/custom.yml</code></label><label for="__tabbed_2_2">:octicons-file-code-16: <code>mkdocs.yml</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"/></svg></span> <code>layouts/custom.yml</code></label><label for="__tabbed_4_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"/></svg></span> <code>mkdocs.yml</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="nt">layers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="nt">layers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
-<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">      </span><span class="nt">cards_layout_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">layouts</span>
-<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="w">      </span><span class="nt">cards_layout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom</span>
-<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">social</span><span class="p">:</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">      </span><span class="nt">cards_layout_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">layouts</span>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="w">      </span><span class="nt">cards_layout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom</span>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -2907,15 +2885,15 @@ and see how the <code>.cache</code> directory is populated with the generated ca
 any card in your editor, so you can see your changes immediately. Since we
 haven't defined any layers, the cards are transparent.</p>
 <p>The following sections explain how to create custom layouts.</p>
-<h3 id="size-and-offset">Size and offset</h3>
+<h3 id="size-and-offset">Size and offset<a class="headerlink" href="#size-and-offset" title="Permanent link">&para;</a></h3>
 <p>Each layer has an associated size and offset, which is defined in pixels. The
 <code>size</code> is defined by a <code>width</code> and <code>height</code> property, and the <code>offset</code> by <code>x</code>
 and <code>y</code> properties:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nt">layers</span><span class="p">:</span>
-<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">0</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nt">layers</span><span class="p">:</span>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">0</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span></code></pre></div>
 <p>If the <code>size</code> is omitted, it defaults to the size of the layout. If the <code>offset</code>
 is omitted, it defaults to the top left corner, which is the defaut <code>origin</code>.
 Saving the layout and reloading renders:</p>
@@ -2923,61 +2901,79 @@ Saving the layout and reloading renders:</p>
 <p>The layer outline and grid are visible because we enabled <a href="#+social.debug"><code>debug</code></a>
 mode in <code>mkdocs.yml</code>. The top left shows the layer index and offset, which is
 useful for alignment and composition.</p>
-<h4 id="origin">Origin</h4>
-<p><a href="../../insiders/">:octicons-tag-24: insiders-4.35.0</a> ·
-:octicons-beaker-24: Experimental</p>
+<h4 id="origin">Origin<a class="headerlink" href="#origin" title="Permanent link">&para;</a></h4>
+<p><a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.35.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental</p>
 <p>The <code>origin</code> for the <code>x</code> and <code>y</code> values can be changed, so that the layer is
 aligned to one of the edges or corners of the layout, e.g., to the bottom right
 corner of the layout:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="nt">layers</span><span class="p">:</span>
-<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">0</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="hll"><span class="w">    </span><span class="nt">origin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end bottom</span>
-</span></code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="nt">layers</span><span class="p">:</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">0</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="hll"><span class="w">    </span><span class="nt">origin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end bottom</span>
+</span></span></code></pre></div>
 <p>The following table shows the supported values:</p>
-<figure markdown>
-
-| Origin         |                 |              |
-| -------------- | --------------- | ------------ |
-| :material-arrow-top-left:    `start top`    | :material-arrow-up:     `center top`    | :material-arrow-top-right:    `end top`    |
-| :material-arrow-left:        `start center` | :material-circle-small: `center`        | :material-arrow-right:        `end center` |
-| :material-arrow-bottom-left: `start bottom` | :material-arrow-down:   `center bottom` | :material-arrow-bottom-right: `end bottom` |
-
-  <figcaption>
+<figure>
+<table>
+<thead>
+<tr>
+<th>Origin</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 17.59 17.59 19 7 8.41V15H5V5h10v2H8.41L19 17.59Z"/></svg></span>    <code>start top</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg></span>     <code>center top</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 17.59 15.59 7H9V5h10v10h-2V8.41L6.41 19 5 17.59Z"/></svg></span>    <code>end top</code></td>
+</tr>
+<tr>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg></span>        <code>start center</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2c1.11 0 2-.89 2-2a2 2 0 0 0-2-2Z"/></svg></span> <code>center</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span>        <code>end center</code></td>
+</tr>
+<tr>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 7 15.59V9H5v10h10v-2H8.41L19 6.41Z"/></svg></span> <code>start bottom</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 4h2v12l5.5-5.5 1.42 1.42L12 19.84l-7.92-7.92L5.5 10.5 11 16V4Z"/></svg></span>   <code>center bottom</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 6.41 6.41 5 17 15.59V9h2v10H9v-2h6.59L5 6.41Z"/></svg></span> <code>end bottom</code></td>
+</tr>
+</tbody>
+</table>
+<figcaption>
     Supported values for origin
   </figcaption>
 </figure>
-
-<h3 id="backgrounds">Backgrounds</h3>
+<h3 id="backgrounds">Backgrounds<a class="headerlink" href="#backgrounds" title="Permanent link">&para;</a></h3>
 <p>Each layer can be assigned a background color and image. If both are given, the
 color is rendered on top of the image, allowing for semi-transparent, tinted
 backgrounds:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Background color</label><label for="__tabbed_3_2">Background image</label><label for="__tabbed_3_3">Background image, tinted</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Background color</label><label for="__tabbed_5_2">Background image</label><label for="__tabbed_5_3">Background image, tinted</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="nt">layers</span><span class="p">:</span>
-<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">background</span><span class="p">:</span>
-<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#4051b5&quot;</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="nt">layers</span><span class="p">:</span>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">background</span><span class="p">:</span>
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#4051b5&quot;</span>
+</span></code></pre></div>
 <p><img alt="Layer background color" src="../../assets/screenshots/social-cards-layer-background-color.png" /></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="nt">layers</span><span class="p">:</span>
-<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">background</span><span class="p">:</span>
-<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">layouts/background.png</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="nt">layers</span><span class="p">:</span>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">background</span><span class="p">:</span>
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">layouts/background.png</span>
+</span></code></pre></div>
 <p><img alt="Layer background image" src="../../assets/screenshots/social-cards-layer-background-image.png" /></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="nt">layers</span><span class="p">:</span>
-<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">background</span><span class="p">:</span>
-<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">layouts/background.png</span>
-<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#4051b5ee&quot;</span><span class="w"> </span><span class="c1"># (1)!</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="nt">layers</span><span class="p">:</span>
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">background</span><span class="p">:</span>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">layouts/background.png</span>
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#4051b5ee&quot;</span><span class="w"> </span><span class="c1"># (1)!</span>
+</span></code></pre></div>
 <ol>
 <li>The color value can be set to a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#color_keywords">CSS color keyword</a>, or a 3, 4, 6 or 8
     letter HEX color code, allowing for semi-transparent layers.</li>
@@ -2989,25 +2985,25 @@ backgrounds:</p>
 <p>Background images are automatically scaled to fit the layer while preserving
 aspect-ratio. Notice how we omitted <code>size</code> and <code>offset</code>, because we want to
 fill the entire area of the social card.</p>
-<h3 id="typography">Typography</h3>
+<h3 id="typography">Typography<a class="headerlink" href="#typography" title="Permanent link">&para;</a></h3>
 <p>Now, we can add dynamic typography that is sourced from Markdown files - this is
 the actual raison d'être of the <a href="#built-in-social-plugin">built-in social plugin</a>. <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja templates</a> are
 used to render a text string that is then added to the image:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="nt">layers</span><span class="p">:</span>
-<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">832</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">310</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">62</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">160</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">    </span><span class="nt">typography</span><span class="p">:</span>
-<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">      </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">page.title</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"> </span><span class="c1"># (1)!</span>
-<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="w">      </span><span class="nt">align</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
-<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
-<a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a><span class="w">      </span><span class="nt">line</span><span class="p">:</span>
-<a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a><span class="w">        </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-<a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a><span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.25</span>
-<a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a><span class="w">      </span><span class="nt">font</span><span class="p">:</span>
-<a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a><span class="w">        </span><span class="nt">family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Roboto</span>
-<a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a><span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bold</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="nt">layers</span><span class="p">:</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">832</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">310</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">62</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">160</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">    </span><span class="nt">typography</span><span class="p">:</span>
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">      </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">page.title</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="w">      </span><span class="nt">align</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
+</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a><span class="w">      </span><span class="nt">line</span><span class="p">:</span>
+</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a><span class="w">        </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+</span><span id="__span-40-11"><a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a><span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.25</span>
+</span><span id="__span-40-12"><a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a><span class="w">      </span><span class="nt">font</span><span class="p">:</span>
+</span><span id="__span-40-13"><a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a><span class="w">        </span><span class="nt">family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Roboto</span>
+</span><span id="__span-40-14"><a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a><span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bold</span>
+</span></code></pre></div>
 <ol>
 <li>
 <p>The following variables can be used in <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja templates</a>:</p>
@@ -3025,13 +3021,13 @@ and a maximum number of 3 lines. The plugin automatically computes the font size
 from the line height, the number of lines, and font metrics like ascender and
 descender.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> This renders:</p>
 <p><img alt="Layer typography" src="../../assets/screenshots/social-cards-layer-typography.png" /></p>
-<h4 id="overflow">Overflow</h4>
+<h4 id="overflow">Overflow<a class="headerlink" href="#overflow" title="Permanent link">&para;</a></h4>
 <p>If the text overflows the layer, there are two possible behaviors: either the
 text is automatically truncated and shortened with an ellipsis, or the text is
 automatically scaled down to fit the layer:</p>
-<div class="no-copy highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="gh"># If we use a very long headline, we can see how the text will be truncated</span>
-</code></pre></div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">:octicons-ellipsis-16: Ellipsis</label><label for="__tabbed_4_2">:material-arrow-collapse: Shrink</label></div>
+<div class="language-markdown no-copy highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="gh"># If we use a very long headline, we can see how the text will be truncated</span>
+</span></code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 5.75C0 4.784.784 4 1.75 4h12.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 14.25 12H1.75A1.75 1.75 0 0 1 0 10.25ZM12 7a1 1 0 1 0 0 2 1 1 0 0 0 0-2ZM7 8a1 1 0 1 0 2 0 1 1 0 0 0-2 0ZM4 7a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg></span> Ellipsis</label><label for="__tabbed_6_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.5 3.09 15 7.59V4h-2v7h7V9h-3.59l4.5-4.5-1.41-1.41M4 13v2h3.59l-4.5 4.5 1.41 1.41 4.5-4.5V20h2v-7H4Z"/></svg></span> Shrink</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="Layer typography ellipsis" src="../../assets/screenshots/social-cards-layer-typography-ellipsis.png" /></p>
@@ -3043,134 +3039,152 @@ automatically scaled down to fit the layer:</p>
 </div>
 <p>While truncating with an ellipsis is the default, auto-shrinking can be enabled 
 by setting <code>overflow</code> to <code>shrink</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="nt">layers</span><span class="p">:</span>
-<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">832</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">310</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">62</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">160</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="w">    </span><span class="nt">typography</span><span class="p">:</span>
-<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a><span class="w">      </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">page.title</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a><span class="hll"><span class="w">      </span><span class="nt">overflow</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shrink</span>
-</span><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a><span class="w">      </span><span class="nt">align</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
-<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
-<a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a><span class="w">      </span><span class="nt">line</span><span class="p">:</span>
-<a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a><span class="w">        </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-<a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a><span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.25</span>
-<a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a><span class="w">      </span><span class="nt">font</span><span class="p">:</span>
-<a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a><span class="w">        </span><span class="nt">family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Roboto</span>
-<a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a><span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bold</span>
-</code></pre></div>
-<h4 id="alignment">Alignment</h4>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="nt">layers</span><span class="p">:</span>
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">832</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">310</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">62</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">160</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="w">    </span><span class="nt">typography</span><span class="p">:</span>
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a><span class="w">      </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">page.title</span><span class="nv"> </span><span class="s">}}&quot;</span>
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a><span class="hll"><span class="w">      </span><span class="nt">overflow</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shrink</span>
+</span></span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a><span class="w">      </span><span class="nt">align</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a><span class="w">      </span><span class="nt">line</span><span class="p">:</span>
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a><span class="w">        </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+</span><span id="__span-42-12"><a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a><span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.25</span>
+</span><span id="__span-42-13"><a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a><span class="w">      </span><span class="nt">font</span><span class="p">:</span>
+</span><span id="__span-42-14"><a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a><span class="w">        </span><span class="nt">family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Roboto</span>
+</span><span id="__span-42-15"><a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a><span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bold</span>
+</span></code></pre></div>
+<h4 id="alignment">Alignment<a class="headerlink" href="#alignment" title="Permanent link">&para;</a></h4>
 <p>Text can be aligned to all corners and edges of the layer. For example, if we
 want to align the text to the middle of the layer, we can set <code>align</code> to  <code>start center</code>, which will render as:</p>
 <p><img alt="Layer typography align" src="../../assets/screenshots/social-cards-layer-typography-align.png" /></p>
 <p>The following table shows the supported values:</p>
-<figure markdown>
-
-| Alignment      |                 |              |
-| -------------- | --------------- | ------------ |
-| :material-arrow-top-left:    `start top`    | :material-arrow-up:     `center top`    | :material-arrow-top-right:    `end top`    |
-| :material-arrow-left:        `start center` | :material-circle-small: `center`        | :material-arrow-right:        `end center` |
-| :material-arrow-bottom-left: `start bottom` | :material-arrow-down:   `center bottom` | :material-arrow-bottom-right: `end bottom` |
-
-  <figcaption>
+<figure>
+<table>
+<thead>
+<tr>
+<th>Alignment</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 17.59 17.59 19 7 8.41V15H5V5h10v2H8.41L19 17.59Z"/></svg></span>    <code>start top</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg></span>     <code>center top</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 17.59 15.59 7H9V5h10v10h-2V8.41L6.41 19 5 17.59Z"/></svg></span>    <code>end top</code></td>
+</tr>
+<tr>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg></span>        <code>start center</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2c1.11 0 2-.89 2-2a2 2 0 0 0-2-2Z"/></svg></span> <code>center</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span>        <code>end center</code></td>
+</tr>
+<tr>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 7 15.59V9H5v10h10v-2H8.41L19 6.41Z"/></svg></span> <code>start bottom</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 4h2v12l5.5-5.5 1.42 1.42L12 19.84l-7.92-7.92L5.5 10.5 11 16V4Z"/></svg></span>   <code>center bottom</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 6.41 6.41 5 17 15.59V9h2v10H9v-2h6.59L5 6.41Z"/></svg></span> <code>end bottom</code></td>
+</tr>
+</tbody>
+</table>
+<figcaption>
     Supported values for text alignment
   </figcaption>
 </figure>
-
-<h4 id="font">Font</h4>
+<h4 id="font">Font<a class="headerlink" href="#font" title="Permanent link">&para;</a></h4>
 <p>The <a href="#built-in-social-plugin">built-in social plugin</a> integrates with <a href="https://fonts.google.com/">Google Fonts</a> and will
 automatically download the font files for you. The <code>font</code> property accepts a
 <code>family</code> and <code>style</code> property, where the <code>family</code> must be set to the name of the
 font, and the <code>style</code> to one of the supported font styles. For example, setting
 <code>family</code> to <code>Roboto</code> will automatically download the following files:</p>
-<div id="example" class="no-copy highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>.cache/plugins/social/fonts
-<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>└─<span class="w"> </span>Roboto/
-<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">    </span>├─<span class="w"> </span>Black.ttf
-<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="w">    </span>├─<span class="w"> </span>Black<span class="w"> </span>Italic.ttf
-<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="w">    </span>├─<span class="w"> </span>Bold.ttf
-<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="w">    </span>├─<span class="w"> </span>Bold<span class="w"> </span>Italic.ttf
-<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="w">    </span>├─<span class="w"> </span>Italic.ttf
-<a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a><span class="w">    </span>├─<span class="w"> </span>Light.ttf
-<a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a><span class="w">    </span>├─<span class="w"> </span>Light<span class="w"> </span>Italic.ttf
-<a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a><span class="w">    </span>├─<span class="w"> </span>Medium.ttf
-<a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a><span class="w">    </span>├─<span class="w"> </span>Medium<span class="w"> </span>Italic.ttf
-<a id="__codelineno-43-12" name="__codelineno-43-12" href="#__codelineno-43-12"></a><span class="w">    </span>├─<span class="w"> </span>Regular.ttf
-<a id="__codelineno-43-13" name="__codelineno-43-13" href="#__codelineno-43-13"></a><span class="w">    </span>├─<span class="w"> </span>Thin.ttf
-<a id="__codelineno-43-14" name="__codelineno-43-14" href="#__codelineno-43-14"></a><span class="w">    </span>└─<span class="w"> </span>Thin<span class="w"> </span>Italic.ttf
-</code></pre></div>
+<div id="example" class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>.cache/plugins/social/fonts
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>└─<span class="w"> </span>Roboto/
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">    </span>├─<span class="w"> </span>Black.ttf
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="w">    </span>├─<span class="w"> </span>Black<span class="w"> </span>Italic.ttf
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="w">    </span>├─<span class="w"> </span>Bold.ttf
+</span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="w">    </span>├─<span class="w"> </span>Bold<span class="w"> </span>Italic.ttf
+</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="w">    </span>├─<span class="w"> </span>Italic.ttf
+</span><span id="__span-43-8"><a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a><span class="w">    </span>├─<span class="w"> </span>Light.ttf
+</span><span id="__span-43-9"><a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a><span class="w">    </span>├─<span class="w"> </span>Light<span class="w"> </span>Italic.ttf
+</span><span id="__span-43-10"><a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a><span class="w">    </span>├─<span class="w"> </span>Medium.ttf
+</span><span id="__span-43-11"><a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a><span class="w">    </span>├─<span class="w"> </span>Medium<span class="w"> </span>Italic.ttf
+</span><span id="__span-43-12"><a id="__codelineno-43-12" name="__codelineno-43-12" href="#__codelineno-43-12"></a><span class="w">    </span>├─<span class="w"> </span>Regular.ttf
+</span><span id="__span-43-13"><a id="__codelineno-43-13" name="__codelineno-43-13" href="#__codelineno-43-13"></a><span class="w">    </span>├─<span class="w"> </span>Thin.ttf
+</span><span id="__span-43-14"><a id="__codelineno-43-14" name="__codelineno-43-14" href="#__codelineno-43-14"></a><span class="w">    </span>└─<span class="w"> </span>Thin<span class="w"> </span>Italic.ttf
+</span></code></pre></div>
 <p>In that case, the author can use <code>Bold</code> or <code>Medium Italic</code> as the <code>style</code>. If
 the font style specified in the layer is not part of the font family, the
 font always falls back to <code>Regular</code> and prints a warning in <a href="#+social.debug"><code>debug</code></a>
 mode, as <code>Regular</code> is included with all font families.</p>
-<h3 id="icons">Icons</h3>
+<h3 id="icons">Icons<a class="headerlink" href="#icons" title="Permanent link">&para;</a></h3>
 <p>Authors can leverage the full range of icons that are shipped with Material for
 MkDocs, or even provide custom icons by using theme extension and going through
 the process described in the guide on <a href="../changing-the-logo-and-icons/#additional-icons">additional icons</a>. Icons can even be
 tinted by using the <code>color</code> property:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="nt">layers</span><span class="p">:</span>
-<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">background</span><span class="p">:</span>
-<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#4051b5&quot;</span>
-<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">144</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">144</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">992</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">64</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="w">    </span><span class="nt">icon</span><span class="p">:</span>
-<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a><span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/cat</span>
-<a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="nt">layers</span><span class="p">:</span>
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">background</span><span class="p">:</span>
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#4051b5&quot;</span>
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">144</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">144</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">992</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">64</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="w">    </span><span class="nt">icon</span><span class="p">:</span>
+</span><span id="__span-44-8"><a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a><span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/cat</span>
+</span><span id="__span-44-9"><a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
+</span></code></pre></div>
 <p>This will render the icon in the top right corner of the social card:</p>
 <p><img alt="Layer icon" src="../../assets/screenshots/social-cards-layer-icon.png" /></p>
 <p>The possibilities are endless. For example, icons can be used to draw shapes
 like circles:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="nt">layers</span><span class="p">:</span>
-<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">background</span><span class="p">:</span>
-<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#4051b5&quot;</span>
-<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">2400</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">2400</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">-1024</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">64</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a><span class="w">    </span><span class="nt">icon</span><span class="p">:</span>
-<a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a><span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/circle</span>
-<a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#5c6bc0&quot;</span>
-<a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1800</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">1800</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">512</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">-1024</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a><span class="w">    </span><span class="nt">icon</span><span class="p">:</span>
-<a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a><span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/circle</span>
-<a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#3949ab&quot;</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1200</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">630</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="nt">layers</span><span class="p">:</span>
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">background</span><span class="p">:</span>
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#4051b5&quot;</span>
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">2400</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">2400</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">-1024</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">64</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-45-7"><a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a><span class="w">    </span><span class="nt">icon</span><span class="p">:</span>
+</span><span id="__span-45-8"><a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a><span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/circle</span>
+</span><span id="__span-45-9"><a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#5c6bc0&quot;</span>
+</span><span id="__span-45-10"><a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> width</span><span class="p">:</span><span class="w"> </span><span class="nv">1800</span><span class="p p-Indicator">,</span><span class="nt"> height</span><span class="p">:</span><span class="w"> </span><span class="nv">1800</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-45-11"><a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a><span class="w">    </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> x</span><span class="p">:</span><span class="w"> </span><span class="nv">512</span><span class="p p-Indicator">,</span><span class="nt"> y</span><span class="p">:</span><span class="w"> </span><span class="nv">-1024</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-45-12"><a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a><span class="w">    </span><span class="nt">icon</span><span class="p">:</span>
+</span><span id="__span-45-13"><a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a><span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/circle</span>
+</span><span id="__span-45-14"><a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a><span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#3949ab&quot;</span>
+</span></code></pre></div>
 <p>This will add two circles to the background:</p>
 <p><img alt="Layer icon circles" src="../../assets/screenshots/social-cards-layer-icon-circles.png" /></p>
-<h3 id="tags">Tags</h3>
+<h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h3>
 <p>The new <a href="#built-in-social-plugin">built-in social plugin</a> gives full flexibility of the meta tags that
 are added to your site, which are necessary to instruct services like Twitter
 or Discord how to display your social card. All default layouts use the following
 set of tags, which you can copy to your layout and adapt:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="nt">definitions</span><span class="p">:</span>
-<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>
-<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;page_title_with_site_name</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="w">    </span><span class="no">{%- if not page.is_homepage -%}</span>
-<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="w">      </span><span class="no">{{ page.meta.get(&quot;title&quot;, page.title) }} - {{ config.site_name }}</span>
-<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a><span class="w">    </span><span class="no">{%- else -%}</span>
-<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="w">      </span><span class="no">{{ page.meta.get(&quot;title&quot;, page.title) }}</span>
-<a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a><span class="w">    </span><span class="no">{%- endif -%}</span>
-<a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>
-<a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;page_description</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a><span class="w">    </span><span class="no">{{ page.meta.get(&quot;description&quot;, config.site_description) or &quot;&quot; }}</span>
-<a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a>
-<a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a><span class="nt">tags</span><span class="p">:</span>
-<a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a>
-<a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a><span class="w">  </span><span class="nt">og:type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">website</span>
-<a id="__codelineno-46-16" name="__codelineno-46-16" href="#__codelineno-46-16"></a><span class="w">  </span><span class="nt">og:title</span><span class="p">:</span><span class="w"> </span><span class="nv">*page_title_with_site_name</span>
-<a id="__codelineno-46-17" name="__codelineno-46-17" href="#__codelineno-46-17"></a><span class="w">  </span><span class="nt">og:description</span><span class="p">:</span><span class="w"> </span><span class="nv">*page_description</span>
-<a id="__codelineno-46-18" name="__codelineno-46-18" href="#__codelineno-46-18"></a><span class="w">  </span><span class="nt">og:image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">image.url</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<a id="__codelineno-46-19" name="__codelineno-46-19" href="#__codelineno-46-19"></a><span class="w">  </span><span class="nt">og:image:type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">image.type</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<a id="__codelineno-46-20" name="__codelineno-46-20" href="#__codelineno-46-20"></a><span class="w">  </span><span class="nt">og:image:width</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">image.width</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<a id="__codelineno-46-21" name="__codelineno-46-21" href="#__codelineno-46-21"></a><span class="w">  </span><span class="nt">og:image:height</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">image.height</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<a id="__codelineno-46-22" name="__codelineno-46-22" href="#__codelineno-46-22"></a><span class="w">  </span><span class="nt">og:url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">page.canonical_url</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<a id="__codelineno-46-23" name="__codelineno-46-23" href="#__codelineno-46-23"></a>
-<a id="__codelineno-46-24" name="__codelineno-46-24" href="#__codelineno-46-24"></a><span class="w">  </span><span class="nt">twitter:card</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">summary_large_image</span>
-<a id="__codelineno-46-25" name="__codelineno-46-25" href="#__codelineno-46-25"></a><span class="w">  </span><span class="nt">twitter.title</span><span class="p">:</span><span class="w"> </span><span class="nv">*page_title_with_site_name</span>
-<a id="__codelineno-46-26" name="__codelineno-46-26" href="#__codelineno-46-26"></a><span class="w">  </span><span class="nt">twitter:description</span><span class="p">:</span><span class="w"> </span><span class="nv">*page_description</span>
-<a id="__codelineno-46-27" name="__codelineno-46-27" href="#__codelineno-46-27"></a><span class="w">  </span><span class="nt">twitter:image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">image.url</span><span class="nv"> </span><span class="s">}}&quot;</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="nt">definitions</span><span class="p">:</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;page_title_with_site_name</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="w">    </span><span class="no">{%- if not page.is_homepage -%}</span>
+</span><span id="__span-46-5"><a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="w">      </span><span class="no">{{ page.meta.get(&quot;title&quot;, page.title) }} - {{ config.site_name }}</span>
+</span><span id="__span-46-6"><a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a><span class="w">    </span><span class="no">{%- else -%}</span>
+</span><span id="__span-46-7"><a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="w">      </span><span class="no">{{ page.meta.get(&quot;title&quot;, page.title) }}</span>
+</span><span id="__span-46-8"><a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a><span class="w">    </span><span class="no">{%- endif -%}</span>
+</span><span id="__span-46-9"><a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>
+</span><span id="__span-46-10"><a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;page_description</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+</span><span id="__span-46-11"><a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a><span class="w">    </span><span class="no">{{ page.meta.get(&quot;description&quot;, config.site_description) or &quot;&quot; }}</span>
+</span><span id="__span-46-12"><a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a>
+</span><span id="__span-46-13"><a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a><span class="nt">tags</span><span class="p">:</span>
+</span><span id="__span-46-14"><a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a>
+</span><span id="__span-46-15"><a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a><span class="w">  </span><span class="nt">og:type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">website</span>
+</span><span id="__span-46-16"><a id="__codelineno-46-16" name="__codelineno-46-16" href="#__codelineno-46-16"></a><span class="w">  </span><span class="nt">og:title</span><span class="p">:</span><span class="w"> </span><span class="nv">*page_title_with_site_name</span>
+</span><span id="__span-46-17"><a id="__codelineno-46-17" name="__codelineno-46-17" href="#__codelineno-46-17"></a><span class="w">  </span><span class="nt">og:description</span><span class="p">:</span><span class="w"> </span><span class="nv">*page_description</span>
+</span><span id="__span-46-18"><a id="__codelineno-46-18" name="__codelineno-46-18" href="#__codelineno-46-18"></a><span class="w">  </span><span class="nt">og:image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">image.url</span><span class="nv"> </span><span class="s">}}&quot;</span>
+</span><span id="__span-46-19"><a id="__codelineno-46-19" name="__codelineno-46-19" href="#__codelineno-46-19"></a><span class="w">  </span><span class="nt">og:image:type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">image.type</span><span class="nv"> </span><span class="s">}}&quot;</span>
+</span><span id="__span-46-20"><a id="__codelineno-46-20" name="__codelineno-46-20" href="#__codelineno-46-20"></a><span class="w">  </span><span class="nt">og:image:width</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">image.width</span><span class="nv"> </span><span class="s">}}&quot;</span>
+</span><span id="__span-46-21"><a id="__codelineno-46-21" name="__codelineno-46-21" href="#__codelineno-46-21"></a><span class="w">  </span><span class="nt">og:image:height</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">image.height</span><span class="nv"> </span><span class="s">}}&quot;</span>
+</span><span id="__span-46-22"><a id="__codelineno-46-22" name="__codelineno-46-22" href="#__codelineno-46-22"></a><span class="w">  </span><span class="nt">og:url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">page.canonical_url</span><span class="nv"> </span><span class="s">}}&quot;</span>
+</span><span id="__span-46-23"><a id="__codelineno-46-23" name="__codelineno-46-23" href="#__codelineno-46-23"></a>
+</span><span id="__span-46-24"><a id="__codelineno-46-24" name="__codelineno-46-24" href="#__codelineno-46-24"></a><span class="w">  </span><span class="nt">twitter:card</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">summary_large_image</span>
+</span><span id="__span-46-25"><a id="__codelineno-46-25" name="__codelineno-46-25" href="#__codelineno-46-25"></a><span class="w">  </span><span class="nt">twitter.title</span><span class="p">:</span><span class="w"> </span><span class="nv">*page_title_with_site_name</span>
+</span><span id="__span-46-26"><a id="__codelineno-46-26" name="__codelineno-46-26" href="#__codelineno-46-26"></a><span class="w">  </span><span class="nt">twitter:description</span><span class="p">:</span><span class="w"> </span><span class="nv">*page_description</span>
+</span><span id="__span-46-27"><a id="__codelineno-46-27" name="__codelineno-46-27" href="#__codelineno-46-27"></a><span class="w">  </span><span class="nt">twitter:image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">image.url</span><span class="nv"> </span><span class="s">}}&quot;</span>
+</span></code></pre></div>
 <p>Note that this examples makes use of <a href="https://support.atlassian.com/bitbucket-cloud/docs/yaml-anchors/">YAML anchors</a> to minify repetition. The
  <code>definitions</code> property is solely intended for the definition on aliases that
  can then be referenced with anchors.</p>

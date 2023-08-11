@@ -1117,8 +1117,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#caching-recommended-caching-data-toc-labelcaching" class="md-nav__link">
-    Caching recommended { #caching data-toc-label="Caching" }
+  <a href="#caching" class="md-nav__link">
+    Caching
   </a>
   
 </li>
@@ -2132,8 +2132,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#caching-recommended-caching-data-toc-labelcaching" class="md-nav__link">
-    Caching recommended { #caching data-toc-label="Caching" }
+  <a href="#caching" class="md-nav__link">
+    Caching
   </a>
   
 </li>
@@ -2194,253 +2194,260 @@
 
 
 
-<h1 id="ensuring-data-privacy">Ensuring data privacy</h1>
+<h1 id="ensuring-data-privacy">Ensuring data privacy<a class="headerlink" href="#ensuring-data-privacy" title="Permanent link">&para;</a></h1>
 <p>Material for MkDocs makes compliance with data privacy regulations very easy, 
 as it offers a native <a href="#cookie-consent">cookie consent</a> solution to seek explicit consent from
 users before setting up <a href="../setting-up-site-analytics/">analytics</a>. Additionally, external assets can be
 automatically downloaded for <a href="#built-in-privacy-plugin">self-hosting</a>.</p>
-<h2 id="configuration">Configuration</h2>
-<h3 id="cookie-consent">Cookie consent</h3>
-<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/8.4.0">:octicons-tag-24: 8.4.0</a> ·
-:octicons-milestone-24: Default: <em>none</em> ·
-:octicons-beaker-24: Experimental</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<h3 id="cookie-consent">Cookie consent<a class="headerlink" href="#cookie-consent" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/8.4.0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 8.4.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <em>none</em> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental</p>
 <p>Material for MkDocs ships a native and extensible cookie consent form which
 asks the user for consent prior to sending requests to third parties. Add the
 following to <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">extra</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">consent</span><span class="p">:</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cookie consent</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span><span class="w"> </span><span class="c1"># (1)!</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="no">We use cookies to recognize your repeated visits and preferences, as well</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="no">as to measure the effectiveness of our documentation and whether users</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="no">find what they&#39;re searching for. With your consent, you&#39;re helping us to</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="no">make our documentation better.</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">consent</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cookie consent</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span><span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="no">We use cookies to recognize your repeated visits and preferences, as well</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="no">as to measure the effectiveness of our documentation and whether users</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="no">find what they&#39;re searching for. With your consent, you&#39;re helping us to</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="no">make our documentation better.</span>
+</span></code></pre></div>
 <ol>
 <li>You can add arbitrary HTML tags in the <code>description</code>, e.g. to link to your
     terms of service or other parts of the site.</li>
 </ol>
 <p>The following properties are available:</p>
-<p><a href="#+consent.title"><code>title</code></a>{ #+consent.title }</p>
-<p>:   :octicons-milestone-24: Default: <em>none</em> · :octicons-alert-24: <strong>Required</strong> –
-    This property sets the title of the cookie consent, which is rendered at the 
-    top of the form and must be set to a non-empty string.</p>
-<p><a href="#+consent.description"><code>description</code></a>{ #+consent.description }</p>
-<p>:   :octicons-milestone-24: Default: <em>none</em> · :octicons-alert-24: <strong>Required</strong> –
-    This property sets the description of the cookie consent, is rendered below
-    the title, and may include raw HTML (e.g. a links to the terms of service).</p>
-<p><a href="#+consent.cookies"><code>cookies</code></a>{ #+consent.cookies }</p>
-<p>:   :octicons-milestone-24: Default: <em>none</em> – This property allows to add custom 
-    cookies or change the initial <code>checked</code> state and name of built-in cookies.
-    Currently, the following cookies are built-in:</p>
-<div class="highlight"><pre><span></span><code>- __Google Analytics__ – `analytics` (enabled by default)
-- __GitHub__ – `github` (enabled by default)
-
-Each cookie must receive a unique identifier which is used as a key in the
-`cookies` map, and can be either set to a string, or to a map defining
-`name` and `checked` state:
-
-===  &quot;Custom cookie name&quot;
-
-    ``` yaml
-    extra:
-      consent:
-        cookies:
-          analytics: Custom name
-    ```
-
-===  &quot;Custom initial state&quot;
-
-    ``` yaml
-    extra:
-      consent:
-        cookies:
-          analytics:
-            name: Google Analytics
-            checked: false
-    ```
-
-===  &quot;Custom cookie&quot;
-
-    ``` yaml
-    extra:
-      consent:
-        cookies:
-          analytics: Google Analytics # (1)!
-          custom: Custom cookie
-    ```
-
-    1.  If you define a custom cookie as part of the `cookies` property,
-        the `analytics` cookie must be added back explicitly, or analytics
-        won&#39;t be triggered.
-
-If Google Analytics was configured via `mkdocs.yml`, the cookie consent will
-automatically include a setting for the user to disable it. [Custom cookies]
-can be used from JavaScript.
-</code></pre></div>
-<p><a href="#+consent.actions"><code>actions</code></a>{ #+consent.actions }</p>
-<p>:   :octicons-milestone-24: Default: <code>[accept, manage]</code> – This property defines
-    which buttons are shown and in which order, e.g. to allow the user to accept 
-    cookies and manage settings:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-extra:
-  consent:
-    actions:
-      - accept
-      - manage # (1)!
-```
-
-1.  If the `manage` settings button is omitted from the `actions` property,
-    the settings are always shown.
-
-The cookie consent form includes three types of buttons:
-
-- `accept` – Button to accept selected cookies
-- `reject` – Button to reject all cookies
-- `manage` – Button to manage settings
-</code></pre></div>
+<dl>
+<dt><a href="#+consent.title" id="+consent.title"><code>title</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <em>none</em> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> <strong>Required</strong> –
+This property sets the title of the cookie consent, which is rendered at the 
+top of the form and must be set to a non-empty string.</p>
+</dd>
+<dt><a href="#+consent.description" id="+consent.description"><code>description</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <em>none</em> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> <strong>Required</strong> –
+This property sets the description of the cookie consent, is rendered below
+the title, and may include raw HTML (e.g. a links to the terms of service).</p>
+</dd>
+<dt><a href="#+consent.cookies" id="+consent.cookies"><code>cookies</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <em>none</em> – This property allows to add custom 
+cookies or change the initial <code>checked</code> state and name of built-in cookies.
+Currently, the following cookies are built-in:</p>
+<ul>
+<li><strong>Google Analytics</strong> – <code>analytics</code> (enabled by default)</li>
+<li><strong>GitHub</strong> – <code>github</code> (enabled by default)</li>
+</ul>
+<p>Each cookie must receive a unique identifier which is used as a key in the
+<code>cookies</code> map, and can be either set to a string, or to a map defining
+<code>name</code> and <code>checked</code> state:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Custom cookie name</label><label for="__tabbed_1_2">Custom initial state</label><label for="__tabbed_1_3">Custom cookie</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">consent</span><span class="p">:</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">cookies</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">analytics</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Custom name</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">consent</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">cookies</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="nt">analytics</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Google Analytics</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="nt">checked</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">consent</span><span class="p">:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">cookies</span><span class="p">:</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="nt">analytics</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Google Analytics</span><span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="nt">custom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Custom cookie</span>
+</span></code></pre></div>
+<ol>
+<li>If you define a custom cookie as part of the <code>cookies</code> property,
+    the <code>analytics</code> cookie must be added back explicitly, or analytics
+    won't be triggered.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>If Google Analytics was configured via <code>mkdocs.yml</code>, the cookie consent will
+automatically include a setting for the user to disable it. <a href="#custom-cookies">Custom cookies</a>
+can be used from JavaScript.</p>
+</dd>
+<dt><a href="#+consent.actions" id="+consent.actions"><code>actions</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>[accept, manage]</code> – This property defines
+which buttons are shown and in which order, e.g. to allow the user to accept 
+cookies and manage settings:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">consent</span><span class="p">:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">actions</span><span class="p">:</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manage</span><span class="w"> </span><span class="c1"># (1)!</span>
+</span></code></pre></div>
+<ol>
+<li>If the <code>manage</code> settings button is omitted from the <code>actions</code> property,
+    the settings are always shown.</li>
+</ol>
+<p>The cookie consent form includes three types of buttons:</p>
+<ul>
+<li><code>accept</code> – Button to accept selected cookies</li>
+<li><code>reject</code> – Button to reject all cookies</li>
+<li><code>manage</code> – Button to manage settings</li>
+</ul>
+</dd>
+</dl>
 <p>When a user first visits your site, a cookie consent form is rendered:</p>
 <p><a href="../../assets/screenshots/consent.png"><img alt="Cookie consent enabled" src="../../assets/screenshots/consent.png" /></a></p>
-<h4 id="change-cookie-settings">Change cookie settings</h4>
+<h4 id="change-cookie-settings">Change cookie settings<a class="headerlink" href="#change-cookie-settings" title="Permanent link">&para;</a></h4>
 <p>In order to comply with GDPR, users must be able to change their cookie settings
 at any time. This can be done by adding a simple link to your <a href="../setting-up-the-footer/#copyright-notice">copyright notice</a> 
 in <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">copyright</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="no">Copyright &amp;copy; 2016 - 2023 Martin Donath –</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="no">&lt;a href=&quot;#__consent&quot;&gt;Change cookie settings&lt;/a&gt;</span>
-</code></pre></div>
-<h3 id="built-in-privacy-plugin">Built-in privacy plugin</h3>
-<p><a href="../../insiders/">:octicons-heart-fill-24:{ .mdx-heart } Sponsors only</a>{ .mdx-insiders } ·
-<a href="../../insiders/">:octicons-tag-24: insiders-4.9.0</a> ·
-:octicons-cpu-24: Plugin ·
-:octicons-beaker-24: Experimental</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">copyright</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="no">Copyright &amp;copy; 2016 - 2023 Martin Donath –</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="no">&lt;a href=&quot;#__consent&quot;&gt;Change cookie settings&lt;/a&gt;</span>
+</span></code></pre></div>
+<h3 id="built-in-privacy-plugin">Built-in privacy plugin<a class="headerlink" href="#built-in-privacy-plugin" title="Permanent link">&para;</a></h3>
+<p><a class="mdx-insiders" href="../../insiders/"><span class="twemoji mdx-heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg></span> Sponsors only</a> ·
+<a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.9.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.75 8h6.5a.75.75 0 0 1 .75.75v6.5a.75.75 0 0 1-.75.75h-6.5a.75.75 0 0 1-.75-.75v-6.5A.75.75 0 0 1 8.75 8Zm.75 6.5h5v-5h-5Z"/><path d="M15.25 1a.75.75 0 0 1 .75.75V4h2.25c.966 0 1.75.784 1.75 1.75V8h2.25a.75.75 0 0 1 0 1.5H20v5h2.25a.75.75 0 0 1 0 1.5H20v2.25A1.75 1.75 0 0 1 18.25 20H16v2.25a.75.75 0 0 1-1.5 0V20h-5v2.25a.75.75 0 0 1-1.5 0V20H5.75A1.75 1.75 0 0 1 4 18.25V16H1.75a.75.75 0 0 1 0-1.5H4v-5H1.75a.75.75 0 0 1 0-1.5H4V5.75C4 4.784 4.784 4 5.75 4H8V1.75a.75.75 0 0 1 1.5 0V4h5V1.75a.75.75 0 0 1 .75-.75Zm3 17.5a.25.25 0 0 0 .25-.25V5.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25Z"/></svg></span> Plugin ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental</p>
 <p>The built-in privacy plugin automatically identifies <a href="#how-it-works">external assets</a> as part
 of the build process and downloads all assets for very simple self-hosting. Add
 the following lines to <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">privacy</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">privacy</span>
+</span></code></pre></div>
 <blockquote>
 <p>If you need to be able to build your documentation with and without
 <a href="../../insiders/">Insiders</a>, please refer to the <a href="../../insiders/getting-started/#built-in-plugins">built-in plugins</a> section to learn how
 shared configurations help to achieve this.</p>
 </blockquote>
 <p>The following configuration options are available:</p>
-<p><a href="#+privacy.enabled"><code>enabled</code></a>{ #+privacy.enabled }</p>
-<p>:   :octicons-milestone-24: Default: <code>true</code> – This option specifies whether
-    the plugin is enabled when building your project. If you want to speed up
-    local builds, you can use an <a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - privacy:
-      enabled: !ENV [CI, false]
-```
-</code></pre></div>
-<p><a href="#+privacy.concurrency"><code>concurrency</code></a>{ #+privacy.concurrency }</p>
-<p>:   :octicons-milestone-24: Default: <em>number of CPUs</em> – This option specifies
-    how many CPUs the plugin is allowed to use when downloading external assets.
-    With more CPUs, the plugin can do more work in the same time, thus complete
-    its work faster. Concurrent processing can be disabled with:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - privacy:
-      concurrency: 1
-```
-</code></pre></div>
-<h4 id="external-assets">External assets</h4>
+<dl>
+<dt><a href="#+privacy.enabled" id="+privacy.enabled"><code>enabled</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>true</code> – This option specifies whether
+the plugin is enabled when building your project. If you want to speed up
+local builds, you can use an <a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kt">!ENV</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">CI</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">false</span><span class="p p-Indicator">]</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+privacy.concurrency" id="+privacy.concurrency"><code>concurrency</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <em>number of CPUs</em> – This option specifies
+how many CPUs the plugin is allowed to use when downloading external assets.
+With more CPUs, the plugin can do more work in the same time, thus complete
+its work faster. Concurrent processing can be disabled with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">      </span><span class="nt">concurrency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</span></code></pre></div>
+</dd>
+</dl>
+<h4 id="external-assets">External assets<a class="headerlink" href="#external-assets" title="Permanent link">&para;</a></h4>
 <p>The following configuration options are available for external assets:</p>
-<p><a href="#+privacy.assets"><code>assets</code></a>{ #+privacy.assets }</p>
-<p>:   :octicons-milestone-24: Default: <code>true</code> – This option specifies whether the
-    plugin should scan the HTML output to detect and process external assets:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - privacy:
-      assets: true
-```
-
-If you&#39;ve removed all external assets from your project via [customization],
-it&#39;s still a good idea to enable the plugin, as the plugin will make sure
+<dl>
+<dt><a href="#+privacy.assets" id="+privacy.assets"><code>assets</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>true</code> – This option specifies whether the
+plugin should scan the HTML output to detect and process external assets:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">      </span><span class="nt">assets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></code></pre></div>
+<p>If you've removed all external assets from your project via <a href="../../customization/">customization</a>,
+it's still a good idea to enable the plugin, as the plugin will make sure
 that there are no hidden external links in any Markdown files that were 
-unintentionally added.
-
-Using `assets` in [strict mode] will make the build fail when external
-assets are detected.
-</code></pre></div>
-<p><a href="#+privacy.assets_fetch"><code>assets_fetch</code></a>{ #+privacy.assets_fetch }</p>
-<p>:   :octicons-milestone-24: Default: <code>true</code> – This option specifies whether the
-    plugin should download external assets it encountered and bundle them with
-    your documentation:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - privacy:
-      assets_fetch: true
-```
-</code></pre></div>
-<p><a href="#+privacy.assets_fetch_dir"><code>assets_fetch_dir</code></a>{ #+privacy.assets_fetch_dir }</p>
-<p>:   :octicons-milestone-24: Default: <code>assets/external</code> – This option
-    specifies where the downloaded <a href="#how-it-works">external assets</a> will be stored. It's
-    normally not necessary to change this option:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - privacy:
-      assets_fetch_dir: assets/external
-```
-
-The path must be defined relative to [`docs_dir`][docs_dir].
-</code></pre></div>
-<p><a href="#+privacy.assets_include"><code>assets_include</code></a>{ #+privacy.assets_include }</p>
-<p>:   :octicons-milestone-24: Default: <em>none</em> – This option allows to only include
-    certain external assets for processing by the privacy plugin, so they will
-    be downloaded and bundled during the build:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - privacy:
-      assets_include:
-        - unsplash.com/*
-```
-
-!!! tip &quot;Hosting images externally and optimizing them automatically&quot;
-
-    This option makes the [built-in privacy plugin] an excellent choice for
-    when you want to host assets like images outside of your git repository
-    in another location to keep them fresh and your repository lean.
-
-    Additionally, as of [:octicons-tag-24: insiders-4.30.0][Insiders], the
-    built-in privacy plugin was entirely rewritten and now works perfectly
-    with the [built-in optimize plugin], which means that external assets
-    can be passed through the same optimization pipeline as the rest of your
-    documentation. This means you can store and edit unoptimized files
-    outside of your repository, and let both plugins built a highly
-    optimized site for you.
-
-    If you want to implement separate pipelines, i.e., optimize some images
-    differently from others or exclude some images from downloading, you can
-    use multiple instances of the [built-in privacy plugin].
-</code></pre></div>
-<p><a href="#+privacy.assets_exclude"><code>assets_exclude</code></a>{ #+privacy.assets_exclude }</p>
-<p>:   :octicons-milestone-24: Default: <em>none</em> – This option allows to exclude
-    certain external assets from processing by the privacy plugin, so they will
-    not be downloaded and bundled during the build:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - privacy:
-      assets_exclude: # (1)!
-        - cdn.jsdelivr.net/npm/mathjax@3/* 
-        - giscus.app/*
-```
-
-1.  [MathJax] loads web fonts for typesetting of mathematical content
+unintentionally added.</p>
+<p>Using <code>assets</code> in <a href="https://www.mkdocs.org/user-guide/configuration/#strict">strict mode</a> will make the build fail when external
+assets are detected.</p>
+</dd>
+<dt><a href="#+privacy.assets_fetch" id="+privacy.assets_fetch"><code>assets_fetch</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>true</code> – This option specifies whether the
+plugin should download external assets it encountered and bundle them with
+your documentation:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">      </span><span class="nt">assets_fetch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+privacy.assets_fetch_dir" id="+privacy.assets_fetch_dir"><code>assets_fetch_dir</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>assets/external</code> – This option
+specifies where the downloaded <a href="#how-it-works">external assets</a> will be stored. It's
+normally not necessary to change this option:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">      </span><span class="nt">assets_fetch_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/external</span>
+</span></code></pre></div>
+<p>The path must be defined relative to <a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir"><code>docs_dir</code></a>.</p>
+</dd>
+<dt><a href="#+privacy.assets_include" id="+privacy.assets_include"><code>assets_include</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <em>none</em> – This option allows to only include
+certain external assets for processing by the privacy plugin, so they will
+be downloaded and bundled during the build:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">      </span><span class="nt">assets_include</span><span class="p">:</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unsplash.com/*</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Hosting images externally and optimizing them automatically</p>
+<p>This option makes the <a href="#built-in-privacy-plugin">built-in privacy plugin</a> an excellent choice for
+when you want to host assets like images outside of your git repository
+in another location to keep them fresh and your repository lean.</p>
+<p>Additionally, as of <a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.30.0</a>, the
+built-in privacy plugin was entirely rewritten and now works perfectly
+with the <a href="../building-an-optimized-site/#built-in-optimize-plugin">built-in optimize plugin</a>, which means that external assets
+can be passed through the same optimization pipeline as the rest of your
+documentation. This means you can store and edit unoptimized files
+outside of your repository, and let both plugins built a highly
+optimized site for you.</p>
+<p>If you want to implement separate pipelines, i.e., optimize some images
+differently from others or exclude some images from downloading, you can
+use multiple instances of the <a href="#built-in-privacy-plugin">built-in privacy plugin</a>.</p>
+</div>
+</dd>
+<dt><a href="#+privacy.assets_exclude" id="+privacy.assets_exclude"><code>assets_exclude</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <em>none</em> – This option allows to exclude
+certain external assets from processing by the privacy plugin, so they will
+not be downloaded and bundled during the build:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">      </span><span class="nt">assets_exclude</span><span class="p">:</span><span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cdn.jsdelivr.net/npm/mathjax@3/*</span><span class="w"> </span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">giscus.app/*</span>
+</span></code></pre></div>
+<ol>
+<li>
+<p><a href="../../reference/math/">MathJax</a> loads web fonts for typesetting of mathematical content
     through relative URLs, and thus cannot be automatically bundled by the
-    privacy plugin. [MathJax can be self-hosted].
-
-    Giscus, which we recommend to use as a [comment system], uses a technique
-    called code-splitting to load only the code that is necessary, which
-    is implemented via relative URLs. [Giscus can be self-hosted] as well.
-
-Excluding specific external assets can be necessary if they contain
-dynamically created or relative URLs, which can&#39;t be resolved by the privacy
-plugin due to [technical limitations].
-</code></pre></div>
+    privacy plugin. <a href="https://docs.mathjax.org/en/latest/web/hosting.html">MathJax can be self-hosted</a>.</p>
+<p>Giscus, which we recommend to use as a <a href="../adding-a-comment-system/">comment system</a>, uses a technique
+called code-splitting to load only the code that is necessary, which
+is implemented via relative URLs. <a href="https://github.com/giscus/giscus/blob/main/SELF-HOSTING.md">Giscus can be self-hosted</a> as well.</p>
+</li>
+</ol>
+<p>Excluding specific external assets can be necessary if they contain
+dynamically created or relative URLs, which can't be resolved by the privacy
+plugin due to <a href="#limitations">technical limitations</a>.</p>
+</dd>
+</dl>
 <div class="admonition question">
 <p class="admonition-title">Why can't Material for MkDocs bundle all assets by design?</p>
 <p>The primary reason why Material for MkDocs can't just bundle all of its own
@@ -2458,53 +2465,55 @@ that would need to be remembered to be defined as further local assets.</p>
 the process of downloading all external assets manually to ensure compliance
 with GDPR with some some <a href="#limitations">technical limitations</a>.</p>
 </div>
-<h4 id="external-links">External links</h4>
-<p><a href="../../insiders/">:octicons-heart-fill-24:{ .mdx-heart } Sponsors only</a>{ .mdx-insiders } ·
-<a href="../../insiders/">:octicons-tag-24: insiders-4.26.0</a> ·
-:octicons-beaker-24: Experimental</p>
+<h4 id="external-links">External links<a class="headerlink" href="#external-links" title="Permanent link">&para;</a></h4>
+<p><a class="mdx-insiders" href="../../insiders/"><span class="twemoji mdx-heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg></span> Sponsors only</a> ·
+<a href="../../insiders/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> insiders-4.26.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental</p>
 <p>The following configuration options are available for external links:</p>
-<p><a href="#+privacy.links"><code>links</code></a>{ #+privacy.links }</p>
-<p>:   :octicons-milestone-24: Default: <code>true</code> – This option specifies whether the
-    plugin should parse and process external links. If you want to speed up
-    local builds, you can use an <a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - privacy:
-      links: !ENV [CI, false]
-```
-</code></pre></div>
-<p><a href="#+privacy.links_attr_map"><code>links_attr_map</code></a>{ #+privacy.links_attr_map }</p>
-<p>:   :octicons-milestone-24: Default: <em>None</em> – This option specifies custom
-    attributes that should be added to external links, like for example
-    <code>target="_blank"</code> so all external links open in a new window:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - privacy:
-      links_attr_map:
-        target: _blank
-```
-</code></pre></div>
-<p><a href="#+privacy.links_noopener"><code>links_noopener</code></a>{ #+privacy.links_noopener }</p>
-<p>:   :octicons-milestone-24: Default: <code>true</code> – This option specifies whether the
-    plugin should automatically add <a href="https://mathiasbynens.github.io/rel-noopener/"><code>rel="noopener"</code></a> to all links
-    with <code>target="_blank"</code> for security reasons:</p>
-<div class="highlight"><pre><span></span><code>``` yaml
-plugins:
-  - privacy:
-      links_noopener: true
-```
-</code></pre></div>
-<h4 id="how-it-works">How it works</h4>
+<dl>
+<dt><a href="#+privacy.links" id="+privacy.links"><code>links</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>true</code> – This option specifies whether the
+plugin should parse and process external links. If you want to speed up
+local builds, you can use an <a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">      </span><span class="nt">links</span><span class="p">:</span><span class="w"> </span><span class="kt">!ENV</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">CI</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">false</span><span class="p p-Indicator">]</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+privacy.links_attr_map" id="+privacy.links_attr_map"><code>links_attr_map</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <em>None</em> – This option specifies custom
+attributes that should be added to external links, like for example
+<code>target="_blank"</code> so all external links open in a new window:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">      </span><span class="nt">links_attr_map</span><span class="p">:</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_blank</span>
+</span></code></pre></div>
+</dd>
+<dt><a href="#+privacy.links_noopener" id="+privacy.links_noopener"><code>links_noopener</code></a></dt>
+<dd>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Default: <code>true</code> – This option specifies whether the
+plugin should automatically add <a href="https://mathiasbynens.github.io/rel-noopener/"><code>rel="noopener"</code></a> to all links
+with <code>target="_blank"</code> for security reasons:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">      </span><span class="nt">links_noopener</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></code></pre></div>
+</dd>
+</dl>
+<h4 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h4>
 <p>The <a href="#built-in-privacy-plugin">built-in privacy plugin</a> scans the resulting HTML for links to external
 resources, including external scripts, style sheets, images and web fonts, and
 downloads them to bundle them with your documentation site. Every URL referring
 to an external resource, no matter if part of a template or Markdown file, is
 then replaced with the URL to the local copy. An example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://example.com/script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://example.com/script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
 <p>The external script is downloaded, and the link is replaced with:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;assets/external/example.com/script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;assets/external/example.com/script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
 <p>Style sheets are scanned for external <code>url(...)</code> references, e.g. images and
 web fonts, which are then also downloaded and bundled with your documentation
 site. This means that <a href="../changing-the-fonts/">Google Fonts</a> can be configured in <code>mkdocs.yml</code> as usual,
@@ -2517,71 +2526,71 @@ removed during the build process.</p>
 <summary>Expand to inspect example</summary>
 <p>For the official documentation, the <a href="#built-in-privacy-plugin">built-in privacy plugin</a> downloads the
 following resources:</p>
-<div id="example" class="no-copy highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>.
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>└─<span class="w"> </span>assets/external/
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">   </span>├─<span class="w"> </span>unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">   </span>├─<span class="w"> </span>fonts.googleapis.com/css
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">   </span>├─<span class="w"> </span>fonts.gstatic.com/s/
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">   </span>│<span class="w">  </span>├─<span class="w"> </span>roboto/v29/
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc-CsTKlA.woff2
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc0CsTKlA.woff2
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc1CsTKlA.woff2
-<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc2CsTKlA.woff2
-<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc3CsTKlA.woff2
-<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc5CsTKlA.woff2
-<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc6CsQ.woff2
-<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic-CsTKlA.woff2
-<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic0CsTKlA.woff2
-<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic1CsTKlA.woff2
-<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic2CsTKlA.woff2
-<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic3CsTKlA.woff2
-<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic5CsTKlA.woff2
-<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic6CsQ.woff2
-<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xEIzIFKw.woff2
-<a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xFIzIFKw.woff2
-<a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xGIzIFKw.woff2
-<a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xHIzIFKw.woff2
-<a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xIIzI.woff2
-<a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xLIzIFKw.woff2
-<a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xMIzIFKw.woff2
-<a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2
-<a id="__codelineno-19-29" name="__codelineno-19-29" href="#__codelineno-19-29"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fBBc4.woff2
-<a id="__codelineno-19-30" name="__codelineno-19-30" href="#__codelineno-19-30"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2
-<a id="__codelineno-19-31" name="__codelineno-19-31" href="#__codelineno-19-31"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2
-<a id="__codelineno-19-32" name="__codelineno-19-32" href="#__codelineno-19-32"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2
-<a id="__codelineno-19-33" name="__codelineno-19-33" href="#__codelineno-19-33"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2
-<a id="__codelineno-19-34" name="__codelineno-19-34" href="#__codelineno-19-34"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2
-<a id="__codelineno-19-35" name="__codelineno-19-35" href="#__codelineno-19-35"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2
-<a id="__codelineno-19-36" name="__codelineno-19-36" href="#__codelineno-19-36"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfBBc4.woff2
-<a id="__codelineno-19-37" name="__codelineno-19-37" href="#__codelineno-19-37"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2
-<a id="__codelineno-19-38" name="__codelineno-19-38" href="#__codelineno-19-38"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2
-<a id="__codelineno-19-39" name="__codelineno-19-39" href="#__codelineno-19-39"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2
-<a id="__codelineno-19-40" name="__codelineno-19-40" href="#__codelineno-19-40"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2
-<a id="__codelineno-19-41" name="__codelineno-19-41" href="#__codelineno-19-41"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2
-<a id="__codelineno-19-42" name="__codelineno-19-42" href="#__codelineno-19-42"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu4WxKOzY.woff2
-<a id="__codelineno-19-43" name="__codelineno-19-43" href="#__codelineno-19-43"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu4mxK.woff2
-<a id="__codelineno-19-44" name="__codelineno-19-44" href="#__codelineno-19-44"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu5mxKOzY.woff2
-<a id="__codelineno-19-45" name="__codelineno-19-45" href="#__codelineno-19-45"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu72xKOzY.woff2
-<a id="__codelineno-19-46" name="__codelineno-19-46" href="#__codelineno-19-46"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu7GxKOzY.woff2
-<a id="__codelineno-19-47" name="__codelineno-19-47" href="#__codelineno-19-47"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu7WxKOzY.woff2
-<a id="__codelineno-19-48" name="__codelineno-19-48" href="#__codelineno-19-48"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>KFOmCnqEu92Fr1Mu7mxKOzY.woff2
-<a id="__codelineno-19-49" name="__codelineno-19-49" href="#__codelineno-19-49"></a><span class="w">   </span>│<span class="w">  </span>└─<span class="w"> </span>robotomono/v13/
-<a id="__codelineno-19-50" name="__codelineno-19-50" href="#__codelineno-19-50"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSV0mf0h.woff2
-<a id="__codelineno-19-51" name="__codelineno-19-51" href="#__codelineno-19-51"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSZ0mf0h.woff2
-<a id="__codelineno-19-52" name="__codelineno-19-52" href="#__codelineno-19-52"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSd0mf0h.woff2
-<a id="__codelineno-19-53" name="__codelineno-19-53" href="#__codelineno-19-53"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSh0mQ.woff2
-<a id="__codelineno-19-54" name="__codelineno-19-54" href="#__codelineno-19-54"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSt0mf0h.woff2
-<a id="__codelineno-19-55" name="__codelineno-19-55" href="#__codelineno-19-55"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSx0mf0h.woff2
-<a id="__codelineno-19-56" name="__codelineno-19-56" href="#__codelineno-19-56"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtElOUlYIw.woff2
-<a id="__codelineno-19-57" name="__codelineno-19-57" href="#__codelineno-19-57"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEleUlYIw.woff2
-<a id="__codelineno-19-58" name="__codelineno-19-58" href="#__codelineno-19-58"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEluUlYIw.woff2
-<a id="__codelineno-19-59" name="__codelineno-19-59" href="#__codelineno-19-59"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEm-Ul.woff2
-<a id="__codelineno-19-60" name="__codelineno-19-60" href="#__codelineno-19-60"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEmOUlYIw.woff2
-<a id="__codelineno-19-61" name="__codelineno-19-61" href="#__codelineno-19-61"></a><span class="w">   </span>│<span class="w">     </span>└─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEn-UlYIw.woff2
-<a id="__codelineno-19-62" name="__codelineno-19-62" href="#__codelineno-19-62"></a><span class="w">   </span>└─<span class="w"> </span>polyfill.io/v3/polyfill.min.js
-</code></pre></div>
+<div id="example" class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>.
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>└─<span class="w"> </span>assets/external/
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">   </span>├─<span class="w"> </span>unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">   </span>├─<span class="w"> </span>fonts.googleapis.com/css
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">   </span>├─<span class="w"> </span>fonts.gstatic.com/s/
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">   </span>│<span class="w">  </span>├─<span class="w"> </span>roboto/v29/
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc-CsTKlA.woff2
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc0CsTKlA.woff2
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc1CsTKlA.woff2
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc2CsTKlA.woff2
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc3CsTKlA.woff2
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc5CsTKlA.woff2
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TjASc6CsQ.woff2
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic-CsTKlA.woff2
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic0CsTKlA.woff2
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic1CsTKlA.woff2
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic2CsTKlA.woff2
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic3CsTKlA.woff2
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic5CsTKlA.woff2
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOjCnqEu92Fr1Mu51TzBic6CsQ.woff2
+</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xEIzIFKw.woff2
+</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xFIzIFKw.woff2
+</span><span id="__span-19-23"><a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xGIzIFKw.woff2
+</span><span id="__span-19-24"><a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xHIzIFKw.woff2
+</span><span id="__span-19-25"><a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xIIzI.woff2
+</span><span id="__span-19-26"><a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xLIzIFKw.woff2
+</span><span id="__span-19-27"><a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOkCnqEu92Fr1Mu51xMIzIFKw.woff2
+</span><span id="__span-19-28"><a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2
+</span><span id="__span-19-29"><a id="__codelineno-19-29" name="__codelineno-19-29" href="#__codelineno-19-29"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fBBc4.woff2
+</span><span id="__span-19-30"><a id="__codelineno-19-30" name="__codelineno-19-30" href="#__codelineno-19-30"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2
+</span><span id="__span-19-31"><a id="__codelineno-19-31" name="__codelineno-19-31" href="#__codelineno-19-31"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2
+</span><span id="__span-19-32"><a id="__codelineno-19-32" name="__codelineno-19-32" href="#__codelineno-19-32"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2
+</span><span id="__span-19-33"><a id="__codelineno-19-33" name="__codelineno-19-33" href="#__codelineno-19-33"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2
+</span><span id="__span-19-34"><a id="__codelineno-19-34" name="__codelineno-19-34" href="#__codelineno-19-34"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2
+</span><span id="__span-19-35"><a id="__codelineno-19-35" name="__codelineno-19-35" href="#__codelineno-19-35"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2
+</span><span id="__span-19-36"><a id="__codelineno-19-36" name="__codelineno-19-36" href="#__codelineno-19-36"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfBBc4.woff2
+</span><span id="__span-19-37"><a id="__codelineno-19-37" name="__codelineno-19-37" href="#__codelineno-19-37"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2
+</span><span id="__span-19-38"><a id="__codelineno-19-38" name="__codelineno-19-38" href="#__codelineno-19-38"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2
+</span><span id="__span-19-39"><a id="__codelineno-19-39" name="__codelineno-19-39" href="#__codelineno-19-39"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2
+</span><span id="__span-19-40"><a id="__codelineno-19-40" name="__codelineno-19-40" href="#__codelineno-19-40"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2
+</span><span id="__span-19-41"><a id="__codelineno-19-41" name="__codelineno-19-41" href="#__codelineno-19-41"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2
+</span><span id="__span-19-42"><a id="__codelineno-19-42" name="__codelineno-19-42" href="#__codelineno-19-42"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu4WxKOzY.woff2
+</span><span id="__span-19-43"><a id="__codelineno-19-43" name="__codelineno-19-43" href="#__codelineno-19-43"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu4mxK.woff2
+</span><span id="__span-19-44"><a id="__codelineno-19-44" name="__codelineno-19-44" href="#__codelineno-19-44"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu5mxKOzY.woff2
+</span><span id="__span-19-45"><a id="__codelineno-19-45" name="__codelineno-19-45" href="#__codelineno-19-45"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu72xKOzY.woff2
+</span><span id="__span-19-46"><a id="__codelineno-19-46" name="__codelineno-19-46" href="#__codelineno-19-46"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu7GxKOzY.woff2
+</span><span id="__span-19-47"><a id="__codelineno-19-47" name="__codelineno-19-47" href="#__codelineno-19-47"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>KFOmCnqEu92Fr1Mu7WxKOzY.woff2
+</span><span id="__span-19-48"><a id="__codelineno-19-48" name="__codelineno-19-48" href="#__codelineno-19-48"></a><span class="w">   </span>│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>KFOmCnqEu92Fr1Mu7mxKOzY.woff2
+</span><span id="__span-19-49"><a id="__codelineno-19-49" name="__codelineno-19-49" href="#__codelineno-19-49"></a><span class="w">   </span>│<span class="w">  </span>└─<span class="w"> </span>robotomono/v13/
+</span><span id="__span-19-50"><a id="__codelineno-19-50" name="__codelineno-19-50" href="#__codelineno-19-50"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSV0mf0h.woff2
+</span><span id="__span-19-51"><a id="__codelineno-19-51" name="__codelineno-19-51" href="#__codelineno-19-51"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSZ0mf0h.woff2
+</span><span id="__span-19-52"><a id="__codelineno-19-52" name="__codelineno-19-52" href="#__codelineno-19-52"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSd0mf0h.woff2
+</span><span id="__span-19-53"><a id="__codelineno-19-53" name="__codelineno-19-53" href="#__codelineno-19-53"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSh0mQ.woff2
+</span><span id="__span-19-54"><a id="__codelineno-19-54" name="__codelineno-19-54" href="#__codelineno-19-54"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSt0mf0h.woff2
+</span><span id="__span-19-55"><a id="__codelineno-19-55" name="__codelineno-19-55" href="#__codelineno-19-55"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSx0mf0h.woff2
+</span><span id="__span-19-56"><a id="__codelineno-19-56" name="__codelineno-19-56" href="#__codelineno-19-56"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtElOUlYIw.woff2
+</span><span id="__span-19-57"><a id="__codelineno-19-57" name="__codelineno-19-57" href="#__codelineno-19-57"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEleUlYIw.woff2
+</span><span id="__span-19-58"><a id="__codelineno-19-58" name="__codelineno-19-58" href="#__codelineno-19-58"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEluUlYIw.woff2
+</span><span id="__span-19-59"><a id="__codelineno-19-59" name="__codelineno-19-59" href="#__codelineno-19-59"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEm-Ul.woff2
+</span><span id="__span-19-60"><a id="__codelineno-19-60" name="__codelineno-19-60" href="#__codelineno-19-60"></a><span class="w">   </span>│<span class="w">     </span>├─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEmOUlYIw.woff2
+</span><span id="__span-19-61"><a id="__codelineno-19-61" name="__codelineno-19-61" href="#__codelineno-19-61"></a><span class="w">   </span>│<span class="w">     </span>└─<span class="w"> </span>L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEn-UlYIw.woff2
+</span><span id="__span-19-62"><a id="__codelineno-19-62" name="__codelineno-19-62" href="#__codelineno-19-62"></a><span class="w">   </span>└─<span class="w"> </span>polyfill.io/v3/polyfill.min.js
+</span></code></pre></div>
 </details>
-<h4 id="caching-recommended-caching-data-toc-labelcaching">Caching <small>recommended</small> { #caching data-toc-label="Caching" }</h4>
+<h4 id="caching">Caching <small>recommended</small><a class="headerlink" href="#caching" title="Permanent link">&para;</a></h4>
 <p>All downloaded files are written to the <code>.cache</code> directory, significantly 
 reducing the duration of subsequent builds as only replacements need to be 
 carried out. You might want to:</p>
@@ -2591,65 +2600,65 @@ carried out. You might want to:</p>
 <p>When building your site for publishing, use a build cache to save the
     <code>.cache</code> directory in between builds. Taking the example from the
     <a href="../../publishing-your-site/#with-github-actions">publishing guide</a>, add the following lines:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">on</span><span class="p p-Indicator">:</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="nt">push</span><span class="p">:</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">      </span><span class="nt">branches</span><span class="p">:</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
-<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="nt">jobs</span><span class="p">:</span>
-<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
-<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
-<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v4</span>
-<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.x</span>
-<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;cache_id=$(date --utc &#39;+%V&#39;)&quot; &gt;&gt; $GITHUB_ENV</span>
-</span><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/cache@v3</span>
-</span><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="hll"><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-</span><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a><span class="hll"><span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs-material-${{ env.cache_id }}</span>
-</span><a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="hll"><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache</span>
-</span><a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a><span class="hll"><span class="w">          </span><span class="nt">restore-keys</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-</span><a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="hll"><span class="w">            </span><span class="no">mkdocs-material-</span>
-</span><a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install mkdocs-material</span>
-<a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">on</span><span class="p p-Indicator">:</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="nt">push</span><span class="p">:</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">      </span><span class="nt">branches</span><span class="p">:</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="nt">jobs</span><span class="p">:</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v4</span>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.x</span>
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;cache_id=$(date --utc &#39;+%V&#39;)&quot; &gt;&gt; $GITHUB_ENV</span>
+</span></span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/cache@v3</span>
+</span></span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="hll"><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+</span></span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a><span class="hll"><span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs-material-${{ env.cache_id }}</span>
+</span></span><span id="__span-20-19"><a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="hll"><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache</span>
+</span></span><span id="__span-20-20"><a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a><span class="hll"><span class="w">          </span><span class="nt">restore-keys</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span></span><span id="__span-20-21"><a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="hll"><span class="w">            </span><span class="no">mkdocs-material-</span>
+</span></span><span id="__span-20-22"><a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install mkdocs-material</span>
+</span><span id="__span-20-23"><a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force</span>
+</span></code></pre></div>
 </li>
 </ol>
-<h4 id="limitations">Limitations</h4>
+<h4 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h4>
 <p>Note that dynamically created URLs as part of scripts are not detected, and thus
 cannot be automatically downloaded. The <a href="#built-in-privacy-plugin">built-in privacy plugin</a> does not
 execute scripts – it can only detect fully qualified URLs to download and
 replace.</p>
 <p>In short, don't do this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">cdn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://polyfill.io&quot;</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cdn</span><span class="si">}</span><span class="sb">/v3/polyfill.min.js`</span>
-</code></pre></div>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">cdn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://polyfill.io&quot;</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cdn</span><span class="si">}</span><span class="sb">/v3/polyfill.min.js`</span>
+</span></code></pre></div>
 <p>Instead, always use fully qualified URLs:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="s2">&quot;https://polyfill.io/v3/polyfill.min.js&quot;</span>
-</code></pre></div>
-<h2 id="customization">Customization</h2>
-<h3 id="custom-cookies">Custom cookies</h3>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="s2">&quot;https://polyfill.io/v3/polyfill.min.js&quot;</span>
+</span></code></pre></div>
+<h2 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h2>
+<h3 id="custom-cookies">Custom cookies<a class="headerlink" href="#custom-cookies" title="Permanent link">&para;</a></h3>
 <p>If you've customized the <a href="#cookie-consent">cookie consent</a> and added a <code>custom</code> cookie, the user
 will be prompted to accept or reject your custom cookie. Once the user accepts
 or rejects the cookie consent, or <a href="#change-cookie-settings">changes the settings</a>, the page reloads<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.
 Use <a href="../../customization/#additional-javascript">additional JavaScript</a> to query the result:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">:octicons-file-code-16: <code>docs/javascripts/consent.js</code></label><label for="__tabbed_1_2">:octicons-file-code-16: <code>mkdocs.yml</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"/></svg></span> <code>docs/javascripts/consent.js</code></label><label for="__tabbed_2_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"/></svg></span> <code>mkdocs.yml</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">consent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">__md_get</span><span class="p">(</span><span class="s2">&quot;__consent&quot;</span><span class="p">)</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">consent</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">consent</span><span class="p">.</span><span class="nx">custom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="cm">/* The user accepted the cookie */</span>
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">  </span><span class="cm">/* The user rejected the cookie */</span>
-<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="p">}</span>
-</code></pre></div>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">consent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">__md_get</span><span class="p">(</span><span class="s2">&quot;__consent&quot;</span><span class="p">)</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">consent</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">consent</span><span class="p">.</span><span class="nx">custom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="cm">/* The user accepted the cookie */</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">  </span><span class="cm">/* The user rejected the cookie */</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="p">}</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nt">extra_javascript</span><span class="p">:</span>
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">javascripts/consent.js</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nt">extra_javascript</span><span class="p">:</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">javascripts/consent.js</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>

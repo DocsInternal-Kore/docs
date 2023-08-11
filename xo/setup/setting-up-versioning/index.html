@@ -2100,35 +2100,30 @@
 
 
 
-<h1 id="setting-up-versioning">Setting up versioning</h1>
+<h1 id="setting-up-versioning">Setting up versioning<a class="headerlink" href="#setting-up-versioning" title="Permanent link">&para;</a></h1>
 <p>Material for MkDocs makes it easy to deploy multiple versions of your project
 documentation by integrating with external utilities that add those capabilities
 to MkDocs, i.e. <a href="https://github.com/jimporter/mike">mike</a>. When deploying a new version, older versions of your
 documentation remain untouched.</p>
-<h2 id="configuration">Configuration</h2>
-<h3 id="versioning">Versioning</h3>
-<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/7.0.0">:octicons-tag-24: 7.0.0</a> ·
-<a href="https://github.com/jimporter/mike">:octicons-package-24: Utility</a></p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<h3 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/7.0.0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 7.0.0</a> ·
+<a href="https://github.com/jimporter/mike"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.876.64V.639l8.25 4.763c.541.313.875.89.875 1.515v9.525a1.75 1.75 0 0 1-.875 1.516l-8.25 4.762a1.748 1.748 0 0 1-1.75 0l-8.25-4.763a1.75 1.75 0 0 1-.875-1.515V6.917c0-.625.334-1.202.875-1.515L11.126.64a1.748 1.748 0 0 1 1.75 0Zm-1 1.298L4.251 6.34l7.75 4.474 7.75-4.474-7.625-4.402a.248.248 0 0 0-.25 0Zm.875 19.123 7.625-4.402a.25.25 0 0 0 .125-.216V7.639l-7.75 4.474ZM3.501 7.64v8.803c0 .09.048.172.125.216l7.625 4.402v-8.947Z"/></svg></span> Utility</a></p>
 <p><a href="https://github.com/jimporter/mike">mike</a> makes it easy to deploy multiple versions of your project documentation.
 It integrates natively with Material for MkDocs and can be enabled via
 <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">extra</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mike</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mike</span>
+</span></code></pre></div>
 <p>This renders a version selector in the header:</p>
-<figure markdown>
-
-[![Version selector preview]][Version selector preview]
-
-  <figcaption markdown>
-
-Check out the versioning example to see it in action –
-[squidfunk.github.io/mkdocs-material-example-versioning][version example]
-
-  </figcaption>
+<figure>
+<p><a href="../../assets/screenshots/versioning.png"><img alt="Version selector preview" src="../../assets/screenshots/versioning.png" /></a></p>
+<figcaption>
+<p>Check out the versioning example to see it in action –
+<a href="https://squidfunk.github.io/mkdocs-material-example-versioning/">squidfunk.github.io/mkdocs-material-example-versioning</a></p>
+</figcaption>
 </figure>
-
 <div class="admonition quote">
 <p class="admonition-title"><a href="https://github.com/jimporter/mike#why-use-mike">Why use mike?</a></p>
 <p>mike is built around the idea that once you've generated your docs for a
@@ -2141,21 +2136,21 @@ sitting in your <code>gh-pages</code> branch.</p>
 to particularly notable versions. This makes it easy to make permalinks to
 whatever version of the documentation you want to direct people to.</p>
 </div>
-<h3 id="version-warning">Version warning</h3>
-<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/8.0.0">:octicons-tag-24: 8.0.0</a> ·
-:octicons-file-symlink-file-24: Customization</p>
+<h3 id="version-warning">Version warning<a class="headerlink" href="#version-warning" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/squidfunk/mkdocs-material/releases/tag/8.0.0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 8.0.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></svg></span> Customization</p>
 <p>If you're using versioning, you might want to display a warning when the user
 visits any other version than the latest version. Using <a href="../../customization/#extending-the-theme">theme extension</a>,
 you can <a href="../../customization/#overriding-blocks">override the <code>outdated</code> block</a>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{% extends &quot;base.html&quot; %}
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>{% block outdated %}
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  You&#39;re not viewing the latest version.
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ &#39;../&#39; ~ base_url }}&quot;</span><span class="p">&gt;</span> <span class="cm">&lt;!-- (1)! --&gt;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Click here to go to latest.<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>{% endblock %}
-</code></pre></div>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{% extends &quot;base.html&quot; %}
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>{% block outdated %}
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  You&#39;re not viewing the latest version.
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ &#39;../&#39; ~ base_url }}&quot;</span><span class="p">&gt;</span> <span class="cm">&lt;!-- (1)! --&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Click here to go to latest.<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>{% endblock %}
+</span></code></pre></div>
 <ol>
 <li>Given this value for the <code>href</code> attribute, the link will always redirect to 
     the root of your site, which will then redirect to the latest version. This
@@ -2168,35 +2163,35 @@ you can <a href="../../customization/#overriding-blocks">override the <code>outd
 <p>The default version is identified by the <code>latest</code> alias. If you wish to set
 another alias as the latest version, e.g. <code>stable</code>, add the following lines
 to <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">extra</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable</span><span class="w"> </span><span class="c1"># (1)!</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable</span><span class="w"> </span><span class="c1"># (1)!</span>
+</span></code></pre></div>
 <ol>
 <li>
 <p>You can also define multiple aliases as the default version, e.g. <code>stable</code>
     and <code>development</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">extra</span><span class="p">:</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">default</span><span class="p">:</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">development</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">default</span><span class="p">:</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">development</span>
+</span></code></pre></div>
 <p>Now every version that has the <code>stable</code> and <code>development</code> aliases will not
 display the version warning.</p>
 </li>
 </ol>
 <p>Make sure one alias matches the <a href="#setting-a-default-version">default version</a>, as this is where users are
 redirected to.</p>
-<h2 id="usage">Usage</h2>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>While this section outlines the basic workflow for publishing new versions, 
 it's best to check out <a href="https://github.com/jimporter/mike">mike's documentation</a> to make yourself familiar
 with its mechanics.</p>
-<h3 id="publishing-a-new-version">Publishing a new version</h3>
+<h3 id="publishing-a-new-version">Publishing a new version<a class="headerlink" href="#publishing-a-new-version" title="Permanent link">&para;</a></h3>
 <p>If you want to publish a new version of your project documentation, choose a
 version identifier and update the alias set as the default version with:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mike deploy --push --update-aliases 0.1 latest
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mike deploy --push --update-aliases 0.1 latest
+</span></code></pre></div>
 <p>Note that every version will be deployed as a subdirectory of your <code>site_url</code>,
 e.g.:</p>
 <ul>
@@ -2204,15 +2199,15 @@ e.g.:</p>
 <li><em>docs.example.com/0.2/</em></li>
 <li>...</li>
 </ul>
-<h3 id="setting-a-default-version">Setting a default version</h3>
+<h3 id="setting-a-default-version">Setting a default version<a class="headerlink" href="#setting-a-default-version" title="Permanent link">&para;</a></h3>
 <p>When starting with <a href="https://github.com/jimporter/mike">mike</a>, a good idea is to set an alias as a default version,
 e.g. <code>latest</code>, and when publishing a new version, always update the alias to
 point to the latest version:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mike set-default --push latest
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mike set-default --push latest
+</span></code></pre></div>
 <p>When publishing a new version, <a href="https://github.com/jimporter/mike">mike</a> will create a redirect in the root of
 your project documentation to the version associated with the alias:</p>
-<p><em>docs.example.com</em> :octicons-arrow-right-24: <em>docs.example.com/0.1</em></p>
+<p><em>docs.example.com</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></svg></span> <em>docs.example.com/0.1</em></p>
 
 
 

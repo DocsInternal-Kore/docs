@@ -2119,7 +2119,7 @@
 
 
 
-<h1 id="blog-support-just-landed">Blog support just landed</h1>
+<h1 id="blog-support-just-landed">Blog support just landed<a class="headerlink" href="#blog-support-just-landed" title="Permanent link">&para;</a></h1>
 <p><strong>Hey there! You're looking at our new blog, built with the brand new
 <a href="../../../setup/setting-up-a-blog/#built-in-blog-plugin">built-in blog plugin</a>. With this plugin, you can easily build a blog alongside
 your documentation or standalone.</strong></p>
@@ -2135,8 +2135,8 @@ create a technical blog alongside your documentation, or as the main thing.</p>
 <p><em>This article explains how to build a standalone blog with Material for MkDocs.
 If you want to build a blog alongside your documentation, please refer to
 <a href="../../../setup/setting-up-a-blog/#built-in-blog-plugin">the plugin's documentation</a>.</em></p>
-<h2 id="quick-start">Quick start</h2>
-<h3 id="setting-up-insiders">Setting up Insiders</h3>
+<h2 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<h3 id="setting-up-insiders">Setting up Insiders<a class="headerlink" href="#setting-up-insiders" title="Permanent link">&para;</a></h3>
 <p>Before we can start bootstrapping a blog and <a href="#writing-your-first-post">write our first post</a>, we need to
 set up <a href="../../../insiders/">Insiders</a>, since the <a href="../../../setup/setting-up-a-blog/#built-in-blog-plugin">built-in blog plugin</a> is currently reserved to
 sponsors. Without the funds this project receives through sponsorships, this
@@ -2146,59 +2146,59 @@ plugin wouldn't exist. Three steps are necessary:</p>
 <li><a href="../../../insiders/getting-started/#requirements">Create a personal access token</a></li>
 <li><a href="../../../insiders/getting-started/#installation">Install Insiders</a></li>
 </ol>
-<h3 id="creating-a-standalone-blog">Creating a standalone blog</h3>
+<h3 id="creating-a-standalone-blog">Creating a standalone blog<a class="headerlink" href="#creating-a-standalone-blog" title="Permanent link">&para;</a></h3>
 <p>After Insiders is installed, you can bootstrap a new project using the <code>mkdocs</code>
 executable:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdocs new .
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdocs new .
+</span></code></pre></div>
 <p>This will create the following structure:</p>
-<div class="no-copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>.
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├─<span class="w"> </span>docs/
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│<span class="w">  </span>└─<span class="w"> </span>index.md
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>└─<span class="w"> </span>mkdocs.yml
-</code></pre></div>
-<h4 id="configuration">Configuration</h4>
+<div class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├─<span class="w"> </span>docs/
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│<span class="w">  </span>└─<span class="w"> </span>index.md
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>└─<span class="w"> </span>mkdocs.yml
+</span></code></pre></div>
+<h4 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h4>
 <p>In this article, we're going to build a standalone blog, which means that the
 blog lives at the root of your project. For this reason, open <code>mkdocs.yml</code>,
 and replace its contents with:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Blog</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">theme</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.sections</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">blog</span><span class="p">:</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="nt">blog_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span><span class="w"> </span><span class="c1"># (1)!</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nt">nav</span><span class="p">:</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Blog</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">theme</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.sections</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">blog</span><span class="p">:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="nt">blog_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span><span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nt">nav</span><span class="p">:</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+</span></code></pre></div>
 <ol>
 <li>This is the important part – we're hosting the blog at the root of the
     project, and not in a subdirectory. For more information, see the
     <a href="../../../setup/setting-up-a-blog/#+blog.blog_dir"><code>blog_dir</code></a> configuration option.</li>
 </ol>
-<h4 id="blog-setup">Blog setup</h4>
+<h4 id="blog-setup">Blog setup<a class="headerlink" href="#blog-setup" title="Permanent link">&para;</a></h4>
 <p>The blog index page lives in <code>docs/index.md</code>. This page was pre-filled by
 MkDocs with some content, so we're going to replace it with what we need to
 bootstrap the blog:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gh"># Blog</span>
-</code></pre></div>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gh"># Blog</span>
+</span></code></pre></div>
 <p>That's it.</p>
-<h3 id="writing-your-first-post">Writing your first post</h3>
+<h3 id="writing-your-first-post">Writing your first post<a class="headerlink" href="#writing-your-first-post" title="Permanent link">&para;</a></h3>
 <p>Now that we have set up the <a href="../../../setup/setting-up-a-blog/#built-in-blog-plugin">built-in blog plugin</a>, we can start writing our
 first post. All blog posts are written with the <a href="../../../reference/">exact same Markdown flavor</a> as
 already included with Material for MkDocs. First, create a folder called <code>posts</code>
 with a file called <code>hello-world.md</code>:</p>
-<div class="no-copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├─<span class="w"> </span>docs/
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>│<span class="w">  </span>├─<span class="w"> </span>posts/
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>hello-world.md<span class="w"> </span><span class="c1"># (1)!</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>│<span class="w">  </span>└─<span class="w"> </span>index.md
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>└─<span class="w"> </span>mkdocs.yml
-</code></pre></div>
+<div class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├─<span class="w"> </span>docs/
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>│<span class="w">  </span>├─<span class="w"> </span>posts/
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>hello-world.md<span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>│<span class="w">  </span>└─<span class="w"> </span>index.md
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>└─<span class="w"> </span>mkdocs.yml
+</span></code></pre></div>
 <ol>
 <li>If you'd like to arrange posts differently, you're free to do so. The URLs
     are built from the format specified in <a href="../../../setup/setting-up-a-blog/#+blog.post_url_format"><code>post_url_format</code></a> and
@@ -2206,38 +2206,38 @@ with a file called <code>hello-world.md</code>:</p>
     inside the <code>posts</code> directory.</li>
 </ol>
 <p>Then, open up <code>hello-world.md</code>, and add the following lines:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nn">---</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1"># (1)!</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2022-01-31</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nt">categories</span><span class="p">:</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">World</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nn">---</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># Hello world!</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="l l-Scalar l-Scalar-Plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="l l-Scalar l-Scalar-Plain">maximus ex. Sed consequat, nulla quis malesuada dapibus, elit metus vehicula</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="l l-Scalar l-Scalar-Plain">erat, ut egestas tellus eros at risus. In hac habitasse platea dictumst.</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="l l-Scalar l-Scalar-Plain">Phasellus id lacus pulvinar erat consequat pretium. Morbi malesuada arcu mauris</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="l l-Scalar l-Scalar-Plain">Nam vel justo sem. Nam placerat purus non varius luctus. Integer pretium leo in</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="l l-Scalar l-Scalar-Plain">sem rhoncus, quis gravida orci mollis. Proin id aliquam est. Vivamus in nunc ac</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="l l-Scalar l-Scalar-Plain">metus tristique pellentesque. Suspendisse viverra urna in accumsan aliquet.</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="l l-Scalar l-Scalar-Plain">&lt;!-- more --&gt;</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="l l-Scalar l-Scalar-Plain">Donec volutpat, elit ac volutpat laoreet, turpis dolor semper nibh, et dictum</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="l l-Scalar l-Scalar-Plain">massa ex pulvinar elit. Curabitur commodo sit amet dolor sed mattis. Etiam</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="l l-Scalar l-Scalar-Plain">tempor odio eu nisi gravida cursus. Maecenas ante enim, fermentum sit amet</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="l l-Scalar l-Scalar-Plain">molestie nec, mollis ac libero. Vivamus sagittis suscipit eros ut luctus.</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="l l-Scalar l-Scalar-Plain">Nunc vehicula sagittis condimentum. Cras facilisis bibendum lorem et feugiat.</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="l l-Scalar l-Scalar-Plain">In auctor accumsan ligula, at consectetur erat commodo quis. Morbi ac nunc</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="l l-Scalar l-Scalar-Plain">pharetra, pellentesque risus in, consectetur urna. Nulla id enim facilisis</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="l l-Scalar l-Scalar-Plain">arcu tincidunt pulvinar. Vestibulum laoreet risus scelerisque porta congue.</span>
-<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="l l-Scalar l-Scalar-Plain">In velit purus, dictum quis neque nec, molestie viverra risus. Nam pellentesque</span>
-<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="l l-Scalar l-Scalar-Plain">tellus id elit ultricies, vel finibus erat cursus.</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nn">---</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2022-01-31</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nt">categories</span><span class="p">:</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">World</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nn">---</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># Hello world!</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="l l-Scalar l-Scalar-Plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="l l-Scalar l-Scalar-Plain">maximus ex. Sed consequat, nulla quis malesuada dapibus, elit metus vehicula</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="l l-Scalar l-Scalar-Plain">erat, ut egestas tellus eros at risus. In hac habitasse platea dictumst.</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="l l-Scalar l-Scalar-Plain">Phasellus id lacus pulvinar erat consequat pretium. Morbi malesuada arcu mauris</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="l l-Scalar l-Scalar-Plain">Nam vel justo sem. Nam placerat purus non varius luctus. Integer pretium leo in</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="l l-Scalar l-Scalar-Plain">sem rhoncus, quis gravida orci mollis. Proin id aliquam est. Vivamus in nunc ac</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="l l-Scalar l-Scalar-Plain">metus tristique pellentesque. Suspendisse viverra urna in accumsan aliquet.</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="l l-Scalar l-Scalar-Plain">&lt;!-- more --&gt;</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="l l-Scalar l-Scalar-Plain">Donec volutpat, elit ac volutpat laoreet, turpis dolor semper nibh, et dictum</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="l l-Scalar l-Scalar-Plain">massa ex pulvinar elit. Curabitur commodo sit amet dolor sed mattis. Etiam</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="l l-Scalar l-Scalar-Plain">tempor odio eu nisi gravida cursus. Maecenas ante enim, fermentum sit amet</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="l l-Scalar l-Scalar-Plain">molestie nec, mollis ac libero. Vivamus sagittis suscipit eros ut luctus.</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="l l-Scalar l-Scalar-Plain">Nunc vehicula sagittis condimentum. Cras facilisis bibendum lorem et feugiat.</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="l l-Scalar l-Scalar-Plain">In auctor accumsan ligula, at consectetur erat commodo quis. Morbi ac nunc</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="l l-Scalar l-Scalar-Plain">pharetra, pellentesque risus in, consectetur urna. Nulla id enim facilisis</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="l l-Scalar l-Scalar-Plain">arcu tincidunt pulvinar. Vestibulum laoreet risus scelerisque porta congue.</span>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="l l-Scalar l-Scalar-Plain">In velit purus, dictum quis neque nec, molestie viverra risus. Nam pellentesque</span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="l l-Scalar l-Scalar-Plain">tellus id elit ultricies, vel finibus erat cursus.</span>
+</span></code></pre></div>
 <ol>
 <li>If you mark a post as a <a href="../../../setup/setting-up-a-blog/#drafts">draft</a>, a red marker appears next to the post date 
     on index pages. When the site is built, drafts are not included in the 
@@ -2251,23 +2251,22 @@ automatically generated for you:</p>
 <p>However, this is just the start. The <a href="../../../setup/setting-up-a-blog/#built-in-blog-plugin">built-in blog plugin</a> packs a lot of
 functionality needed in day-to-day blogging. Visit the documentation of the
 plugin to learn about the following topics:</p>
-<div class="mdx-columns" markdown>
-
-- [Adding an excerpt]
-- [Adding authors]
-- [Adding categories]
-- [Adding tags]
-- [Adding related links]
-- [Linking from and to posts]
-- [Setting the reading time]
-- [Setting defaults]
-
+<div class="mdx-columns">
+<ul>
+<li><a href="../../../setup/setting-up-a-blog/#adding-an-excerpt">Adding an excerpt</a></li>
+<li><a href="../../../setup/setting-up-a-blog/#adding-authors">Adding authors</a></li>
+<li><a href="../../../setup/setting-up-a-blog/#adding-categories">Adding categories</a></li>
+<li><a href="../../../setup/setting-up-a-blog/#adding-tags">Adding tags</a></li>
+<li><a href="../../../setup/setting-up-a-blog/#adding-related-links">Adding related links</a></li>
+<li><a href="../../../setup/setting-up-a-blog/#linking-from-and-to-posts">Linking from and to posts</a></li>
+<li><a href="../../../setup/setting-up-a-blog/#setting-the-reading-time">Setting the reading time</a></li>
+<li><a href="../../../setup/setting-up-a-blog/#setting-defaults">Setting defaults</a></li>
+</ul>
 </div>
-
 <p>Additionally, the <a href="../../../setup/setting-up-a-blog/#built-in-blog-plugin">built-in blog plugin</a> has dozens of <a href="../../../setup/setting-up-a-blog/#configuration">configuration options</a>
 which allow for fine-tuning the output. You can configure post slugs, general
 behavior and much more.</p>
-<h2 id="whats-next">What's next?</h2>
+<h2 id="whats-next">What's next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <p>Getting basic blogging support out the door was quite a challenge – the
 <a href="../../../setup/setting-up-a-blog/#built-in-blog-plugin">built-in blog plugin</a> is probably the biggest release this year and already
 packs a lot of functionality. However, Material for MkDocs is used in many

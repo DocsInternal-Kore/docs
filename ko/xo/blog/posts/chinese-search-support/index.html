@@ -2025,7 +2025,7 @@
 
 
 
-<h1 id="chinese-search-support">Chinese search support – 中文搜索​支持</h1>
+<h1 id="chinese-search-support">Chinese search support – 中文搜索​支持<a class="headerlink" href="#chinese-search-support" title="Permanent link">&para;</a></h1>
 <p><strong>Insiders adds experimental Chinese language support for the <a href="../../../setup/setting-up-site-search/#built-in-search-plugin">built-in search 
 plugin</a> – a feature that has been requested for a long time given the large
 number of Chinese users.</strong></p>
@@ -2037,35 +2037,33 @@ stemming. The latest Insiders release adds long-awaited Chinese language support
 for the built-in search plugin, something that has been requested by many users.</p>
 <!-- more -->
 
-<p><em>Material for MkDocs終於​支持​中文​了！文本​被​正確​分割​並且​更​容易​找到。</em>
-{ style="display: inline" }</p>
-<p><em>This article explains how to set up Chinese language support for the built-in
-search plugin in a few minutes.</em>
-{ style="display: inline" }</p>
-<h2 id="configuration">Configuration</h2>
+<p style="display: inline"><em>Material for MkDocs終於​支持​中文​了！文本​被​正確​分割​並且​更​容易​找到。</em></p>
+<p style="display: inline"><em>This article explains how to set up Chinese language support for the built-in
+search plugin in a few minutes.</em></p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>Chinese language support for Material for MkDocs is provided by <a href="https://pypi.org/project/jieba/">jieba</a>, an
 excellent Chinese text segmentation library. If <a href="https://pypi.org/project/jieba/">jieba</a> is installed, the
 built-in search plugin automatically detects Chinese characters and runs them
 through the segmenter. You can install <a href="https://pypi.org/project/jieba/">jieba</a> with:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install jieba
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install jieba
+</span></code></pre></div>
 <p>The next step is only required if you specified the <a href="../../../setup/setting-up-site-search/#separator"><code>separator</code></a> 
 configuration in <code>mkdocs.yml</code>. Text is segmented with <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width whitespace</a> 
 characters, so it renders exactly the same in the search modal. Adjust
 <code>mkdocs.yml</code> so that the <a href="../../../setup/setting-up-site-search/#separator"><code>separator</code></a> includes the <code>\u200b</code>
 character:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">plugins</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">search</span><span class="p">:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="nt">separator</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;[\s\u200b\-]&#39;</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">search</span><span class="p">:</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="nt">separator</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;[\s\u200b\-]&#39;</span>
+</span></code></pre></div>
 <p>That's all that is necessary.</p>
-<h2 id="usage">Usage</h2>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>If you followed the instructions in the configuration guide, Chinese words will 
 now be tokenized using <a href="https://pypi.org/project/jieba/">jieba</a>. Try searching for
-<a href="?q=支持">:octicons-search-24: 支持</a> to see how it integrates with the 
+<a href="?q=支持"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2ZM3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0Z"/></svg></span> 支持</a> to see how it integrates with the 
 built-in search plugin.</p>
 <hr />
-<p>Note that this is an experimental feature, and I, @squidfunk, am not 
+<p>Note that this is an experimental feature, and I, <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/squidfunk" title="GitHub User: squidfunk">@squidfunk</a>, am not 
 proficient in Chinese (yet?). If you find a bug or think something can be
 improved, please <a href="https://github.com/squidfunk/mkdocs-material/issues/new/choose">open an issue</a>.</p>
 
