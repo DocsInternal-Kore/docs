@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#conversation-details-summary-api" class="md-skip">
+        <a href="#conversation-details-and-summary-api" class="md-skip">
           Skip to content
         </a>
       
@@ -1561,15 +1561,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#request-body-parameters" class="md-nav__link">
-    Request Body Parameters
+  <a href="#sample-request" class="md-nav__link">
+    Sample Request
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#note-if-session-id-is-available-call-id-is-not-mandatory-vice-versa-if-both-are-present-session-id-will-be-considered" class="md-nav__link">
-    Note: if session ID is available call ID is not mandatory &amp; vice versa. If both are present session ID will be considered.
+  <a href="#request-body-parameters" class="md-nav__link">
+    Request Body Parameters
   </a>
   
 </li>
@@ -2130,15 +2130,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#request-body-parameters" class="md-nav__link">
-    Request Body Parameters
+  <a href="#sample-request" class="md-nav__link">
+    Sample Request
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#note-if-session-id-is-available-call-id-is-not-mandatory-vice-versa-if-both-are-present-session-id-will-be-considered" class="md-nav__link">
-    Note: if session ID is available call ID is not mandatory &amp; vice versa. If both are present session ID will be considered.
+  <a href="#request-body-parameters" class="md-nav__link">
+    Request Body Parameters
   </a>
   
 </li>
@@ -2169,8 +2169,8 @@
 
 
 
-<h1 id="conversation-details-summary-api">Conversation Details &amp; Summary API<a class="headerlink" href="#conversation-details-summary-api" title="Permanent link">&para;</a></h1>
-<p>To fetch the conversational details and summary between the bot and the user. This API supports pagination. You can provide skip and limit to get a certain number of messages at a time.</p>
+<h1 id="conversation-details-and-summary-api"><strong>Conversation Details and Summary API</strong><a class="headerlink" href="#conversation-details-and-summary-api" title="Permanent link">&para;</a></h1>
+<p>To fetch the conversational details and conversation summary data between the bot and the user. This API supports pagination. You can specify skip and limit parameters to retrieve a certain number of messages at a time.</p>
 <table>
   <tr>
    <td><strong>Method</strong>
@@ -2181,8 +2181,7 @@
   <tr>
    <td><strong>Endpoint</strong>
    </td>
-   <td>
-</strong<code>https://{{host}}/api/public/bot/{{botId}}/conversationDetails</code>
+   <td><code>https://{{host}}/api/public/bot/{{botId}}/conversationDetails</code>
    </td>
   </tr>
   <tr>
@@ -2200,7 +2199,7 @@
   <tr>
    <td><strong>API Scope</strong>
    </td>
-   <td> Bot Builder: Chat History or
+   <td>Bot Builder: Chat History
    </td>
   </tr>
 </table>
@@ -2210,7 +2209,7 @@
   <tr>
    <td><strong>PARAMETER</strong>
    </td>
-   <td><strong>REQUIRED/OPTIONAL</strong>
+   <td><strong>REQUIRED</strong>
    </td>
    <td><strong>DESCRIPTION</strong>
    </td>
@@ -2218,7 +2217,7 @@
   <tr>
    <td>host
    </td>
-   <td>required
+   <td>Required
    </td>
    <td>Environment URL, for example, https://bots.kore.ai
    </td>
@@ -2226,26 +2225,28 @@
   <tr>
    <td>botId
    </td>
-   <td>required
+   <td>Required
    </td>
    <td>Bot ID or Stream ID. You can access it from the General Settings page of the bot.
    </td>
   </tr>
 </table>
 
-<p>curl --location --request POST '<a href="https://bots.kore.ai/api/public/bot/st-86ef3c8d-7021-5f2b-bf6c-8a14ec6fffb0/conversationDetails'">https://bots.kore.ai/api/public/bot/st-86ef3c8d-7021-5f2b-bf6c-8a14ec6fffb0/conversationDetails'</a> \</p>
-<p>--header 'auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNzLTkxY2I0ODlhLThhMDYtNTMwMy1hYWMxLTNhZmM3NWJkZTUxYiJ9.uzxDMjnN1eP_HxhRZDoGf6P-Zgukzn2l6C_Vh1bwmMs' \</p>
-<p>--header 'Content-Type: application/json' \</p>
-<p>--data-raw '{</p>
-<p>"callId":"00001",</p>
-<p>"isSummaryRequired":true</p>
-<p>}'</p>
+<h2 id="sample-request">Sample Request<a class="headerlink" href="#sample-request" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl --location --request POST &#39;https://bots.kore.ai/api/public/bot/st-86exxx8d-7021-5f2b-bf6c-8a1xxxxxb0/conversationDetails&#39; \
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>--header &#39;auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNzLTkxY2I0ODlhLThhMDYxxxxxkZTUxYiJ9.uzxDMjnN1eP_HxhRZDoGf6P-ZxxxxxC_Vh1xxxMs&#39; \
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>--header &#39;Content-Type: application/json&#39; \
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>--data-raw &#39;{
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&quot;callId&quot;:&quot;00001&quot;,
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>&quot;isSummaryRequired&quot;:true
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>}&#39;
+</span></code></pre></div>
 <h2 id="request-body-parameters">Request Body Parameters<a class="headerlink" href="#request-body-parameters" title="Permanent link">&para;</a></h2>
 <table>
   <tr>
    <td><strong>PARAMETER</strong>
    </td>
-   <td><strong>REQUIRED/OPTIONAL</strong>
+   <td><strong>REQUIRED</strong>
    </td>
    <td><strong>DESCRIPTION</strong>
    </td>
@@ -2253,7 +2254,7 @@
   <tr>
    <td>skip/offset
    </td>
-   <td>optional
+   <td>Optional
    </td>
    <td>The number of messages to be skipped.
    </td>
@@ -2261,7 +2262,7 @@
   <tr>
    <td>limit
    </td>
-   <td>optional
+   <td>Optional
    </td>
    <td>The number of messages to be shown on each page.
    </td>
@@ -2271,15 +2272,15 @@
    </td>
    <td>Required
    </td>
-   <td>A specific session ID of the bot for which you want to fetch the details.Which session details that needs to be fetched
+   <td>A unique session ID of the bot for which you want to fetch the details.
    </td>
   </tr>
   <tr>
-   <td>callId
+   <td>callId                
    </td>
    <td>Required
    </td>
-   <td>A specific callId of the bot for which you want to fetch the details.
+   <td>A unique callId of the bot for which you want to fetch the details.
    </td>
   </tr>
   <tr>
@@ -2292,252 +2293,138 @@
 
 <li><em>true</em>: Include the summary in the response.
 
-<li><em>false</em>: Don’t include the summary in the response; this is the default value.
-
-<p>
-Default value for this is false, if isSummaryRequired is true, it will give us the summary of the conversation.
+<li><em>false</em>: Don’t include the summary in the response. This is the default value.
 </li>
 </ul>
    </td>
   </tr>
 </table>
 
-<h2 id="note-if-session-id-is-available-call-id-is-not-mandatory-vice-versa-if-both-are-present-session-id-will-be-considered">Note: if session ID is available call ID is not mandatory &amp; vice versa. If both are present session ID will be considered.<a class="headerlink" href="#note-if-session-id-is-available-call-id-is-not-mandatory-vice-versa-if-both-are-present-session-id-will-be-considered" title="Permanent link">&para;</a></h2>
+<p><strong>Note</strong>: If the session ID is available, the call ID is not mandatory &amp; vice versa. If both are present, the session ID is considered.</p>
 <h2 id="sample-response">Sample Response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h2>
-<p>{</p>
-<p>"conversationInfo": {</p>
-<div class="language-text highlight"><pre><span></span><code>   &quot;userId&quot;: &quot;u-c8c61885-85bb-5db2-bf8e-6fd4a97c58f9&quot;,
-
-   &quot;callId&quot;: &quot;9eb6c49e-f647-4c48-b31c-cc207e3a6080&quot;,
-
-   &quot;sessionStartTime&quot;: &quot;2023-08-07T11:18:10.195Z&quot;,
-
-   &quot;agentHandOffTime&quot;: &quot;2023-08-07T11:18:11.304Z&quot;,
-
-   &quot;userDetails&quot;: {
-
-       &quot;firstName&quot;: &quot;&quot;,
-
-       &quot;lastName&quot;: &quot;&quot;,
-
-       &quot;phoneNumber&quot;: **null**
-
-   },
-
-   &quot;currentTask&quot;: &quot;null&quot;,
-
-   &quot;sessionId&quot;: &quot;64d0d2f2bfeaa2d58a566d08&quot;
-</code></pre></div>
-<p>},</p>
-<p>"conversationFlow": [</p>
-<div class="language-text highlight"><pre><span></span><code>   {
-
-       &quot;status&quot;: &quot;completedTask&quot;,
-
-       &quot;messageStoreId&quot;: &quot;xxx&quot;,
-
-       &quot;taskName&quot;: &quot;ConnectToAgent&quot;
-
-   }
-</code></pre></div>
-<p>],</p>
-<p>"conversationHistory": [</p>
-<div class="language-text highlight"><pre><span></span><code>   {
-
-       &quot;channels&quot;: [
-
-           {
-
-               &quot;type&quot;: &quot;audiocodes&quot;
-
-           }
-
-       ],
-
-       &quot;type&quot;: &quot;outgoing&quot;,
-
-       &quot;status&quot;: &quot;pending&quot;,
-
-       &quot;createdOn&quot;: &quot;2023-08-07T11:18:10.337Z&quot;,
-
-       &quot;lmodifiedOn&quot;: &quot;2023-08-07T11:18:10.337Z&quot;,
-
-       &quot;createdBy&quot;: &quot;u-c8c61885-85bb-5db2-bf8e-6fd4a97c58f9&quot;,
-
-       &quot;components&quot;: [
-
-           {
-
-               &quot;_id&quot;: &quot;cp-faacd4b7-7fb5-57f1-aef8-455734582c33&quot;,
-
-               &quot;cT&quot;: &quot;text&quot;,
-
-               &quot;data&quot;: {
-
-                   &quot;text&quot;: &quot;Agent transfer initiated&quot;
-
-               },
-
-               &quot;thumbnails&quot;: []
-
-           }
-
-       ],
-
-       &quot;isBB&quot;: 0,
-
-       &quot;lang&quot;: &quot;en&quot;,
-
-       &quot;iv&quot;: &quot;e2DtaGM52TC9k+Q7EQpUig==&quot;,
-
-       &quot;ire&quot;: **true**,
-
-       &quot;timestampValue&quot;: 1691407090369,
-
-       &quot;sT&quot;: 0
-
-   },
-
-   {
-
-       &quot;channels&quot;: [
-
-           {
-
-               &quot;type&quot;: &quot;audiocodes&quot;
-
-           }
-
-       ],
-
-       &quot;type&quot;: &quot;outgoing&quot;,
-
-       &quot;status&quot;: &quot;pending&quot;,
-
-       &quot;createdOn&quot;: &quot;2023-08-07T11:18:10.761Z&quot;,
-
-       &quot;lmodifiedOn&quot;: &quot;2023-08-07T11:18:10.761Z&quot;,
-
-       &quot;createdBy&quot;: &quot;u-c8c61885-85bb-5db2-bf8e-6fd4a97c58f9&quot;,
-
-       &quot;components&quot;: [
-
-           {
-
-               &quot;_id&quot;: &quot;cp-8fed6639-fb80-5ea1-9d4c-7a4508d6a266&quot;,
-
-               &quot;cT&quot;: &quot;text&quot;,
-
-               &quot;data&quot;: {
-
-                   &quot;text&quot;: &quot;I will need to get an agent on the line to help you with that. Please hold while I find an available agent.&quot;
-
-               },
-
-               &quot;thumbnails&quot;: []
-
-           }
-
-       ],
-
-       &quot;tN&quot;: &quot;ConnectToAgent&quot;,
-
-       &quot;isBB&quot;: 0,
-
-       &quot;ms&quot;: 1,
-
-       &quot;lang&quot;: &quot;en&quot;,
-
-       &quot;agentAssistDetails&quot;: {
-
-           &quot;streamId&quot;: &quot;st-86ef3c8d-7021-5f2b-bf6c-8a14ec6fffb0&quot;,
-
-           &quot;srcChannel&quot;: &quot;&quot;,
-
-           &quot;childBotStreamId&quot;: &quot;st-86ef3c8d-7021-5f2b-bf6c-8a14ec6fffb0&quot;,
-
-           &quot;experience&quot;: &quot;&quot;,
-
-           &quot;userInput&quot;: &quot;ConnectToAgent&quot;
-
+<p>```
+{
+   "conversationInfo": {
+       "userId": "u-c8c61885-85bb-5db2-bf8e-6fd4a97c58f9",
+       "callId": "9eb6c49e-f647-4c48-b31c-cc207e3a6080",
+       "sessionStartTime": "2023-08-07T11:18:10.195Z",
+       "agentHandOffTime": "2023-08-07T11:18:11.304Z",
+       "userDetails": {
+           "firstName": "",
+           "lastName": "",
+           "phoneNumber": null
        },
-
-       &quot;iv&quot;: &quot;njinotGbS2aYa+JMqV9pbw==&quot;,
-
-       &quot;ire&quot;: **true**,
-
-       &quot;timestampValue&quot;: 1691407090768,
-
-       &quot;sT&quot;: 0
-
+       "currentTask": "null",
+       "sessionId": "64d0d2f2bfeaa2d58a566d08"
    },
-
-   {
-
-       &quot;channels&quot;: [
-
-           {
-
-               &quot;type&quot;: &quot;audiocodes&quot;
-
-           }
-
-       ],
-
-       &quot;type&quot;: &quot;ctrlmsg&quot;,
-
-       &quot;status&quot;: &quot;received&quot;,
-
-       &quot;createdBy&quot;: &quot;u-c8c61885-85bb-5db2-bf8e-6fd4a97c58f9&quot;,
-
-       &quot;lmodifiedBy&quot;: &quot;u-c8c61885-85bb-5db2-bf8e-6fd4a97c58f9&quot;,
-
-       &quot;lmodifiedOn&quot;: &quot;2023-08-07T11:34:19.170Z&quot;,
-
-       &quot;isBB&quot;: 0,
-
-       &quot;ms&quot;: 4,
-
-       &quot;sT&quot;: 0,
-
-       &quot;components&quot;: [
-
-           {
-
-               &quot;_id&quot;: &quot;cp-125ef7dd-5126-5e17-8828-7f79db72b959&quot;,
-
-               &quot;cT&quot;: &quot;text&quot;,
-
-               &quot;data&quot;: {
-
-                   &quot;text&quot;: &quot;sending a ctrl message to CS&quot;
-
-               },
-
-               &quot;thumbnails&quot;: []
-
-           }
-
-       ],
-
-       &quot;iv&quot;: &quot;muN3K1QJY9GhQYQ0qcahwg==&quot;,
-
-       &quot;ire&quot;: **true**,
-
-       &quot;createdOn&quot;: &quot;2023-08-07T11:34:19.197Z&quot;,
-
-       &quot;timestampValue&quot;: 1691408059197
-
+   "conversationFlow": [
+       {
+           "status": "completedTask",
+           "messageStoreId": "xxx",
+           "taskName": "ConnectToAgent"
+       }
+   ],
+   "conversationHistory": [
+       {
+           "channels": [
+               {
+                   "type": "audiocodes"
+               }
+           ],
+           "type": "outgoing",
+           "status": "pending",
+           "createdOn": "2023-08-07T11:18:10.337Z",
+           "lmodifiedOn": "2023-08-07T11:18:10.337Z",
+           "createdBy": "u-c8c61885-85bb-5db2-bf8e-6fd4a97c58f9",
+           "components": [
+               {
+                   "_id": "cp-faacd4b7-7fb5-57f1-aef8-455734582c33",
+                   "cT": "text",
+                   "data": {
+                       "text": "Agent transfer initiated"
+                   },
+                   "thumbnails": []
+               }
+           ],
+           "isBB": 0,
+           "lang": "en",
+           "iv": "e2DtaGM52TC9k+Q7EQpUig==",
+           "ire": true,
+           "timestampValue": 1691407090369,
+           "sT": 0
+       },
+       {
+           "channels": [
+               {
+                   "type": "audiocodes"
+               }
+           ],
+           "type": "outgoing",
+           "status": "pending",
+           "createdOn": "2023-08-07T11:18:10.761Z",
+           "lmodifiedOn": "2023-08-07T11:18:10.761Z",
+           "createdBy": "u-c8c61885-85bb-5db2-bf8e-6fd4a97c58f9",
+           "components": [
+               {
+                   "_id": "cp-8fed6639-fb80-5ea1-9d4c-7a4508d6a266",
+                   "cT": "text",
+                   "data": {
+                       "text": "I will need to get an agent on the line to help you with that. Please hold while I find an available agent."
+                   },
+                   "thumbnails": []
+               }
+           ],
+           "tN": "ConnectToAgent",
+           "isBB": 0,
+           "ms": 1,
+           "lang": "en",
+           "agentAssistDetails": {
+               "streamId": "st-86ef3c8d-7021-5f2b-bf6c-8a14ec6fffb0",
+               "srcChannel": "",
+               "childBotStreamId": "st-86ef3c8d-7021-5f2b-bf6c-8a14ec6fffb0",
+               "experience": "",
+               "userInput": "ConnectToAgent"
+           },
+           "iv": "njinotGbS2aYa+JMqV9pbw==",
+           "ire": true,
+           "timestampValue": 1691407090768,
+           "sT": 0
+       },
+       {
+           "channels": [
+               {
+                   "type": "audiocodes"
+               }
+           ],
+           "type": "ctrlmsg",
+           "status": "received",
+           "createdBy": "u-c8c61885-85bb-5db2-bf8e-6fd4a97c58f9",
+           "lmodifiedBy": "u-c8c61885-85bb-5db2-bf8e-6fd4a97c58f9",
+           "lmodifiedOn": "2023-08-07T11:34:19.170Z",
+           "isBB": 0,
+           "ms": 4,
+           "sT": 0,
+           "components": [
+               {
+                   "_id": "cp-125ef7dd-5126-5e17-8828-7f79db72b959",
+                   "cT": "text",
+                   "data": {
+                       "text": "sending a ctrl message to CS"
+                   },
+                   "thumbnails": []
+               }
+           ],
+           "iv": "muN3K1QJY9GhQYQ0qcahwg==",
+           "ire": true,
+           "createdOn": "2023-08-07T11:34:19.197Z",
+           "timestampValue": 1691408059197
+       }
+   ],
+   "summary": {
+       "ConversationSummary": "agent will need to get an agent on the line to help customer with that.",
+       "time": "2023-08-09T06:53:18.579Z"
    }
-</code></pre></div>
-<p>],</p>
-<p>"summary": {</p>
-<div class="language-text highlight"><pre><span></span><code>   &quot;ConversationSummary&quot;: &quot;agent will need to get an agent on the line to help customer with that.&quot;,
-
-   &quot;time&quot;: &quot;2023-08-09T06:53:18.579Z&quot;
-</code></pre></div>
-<p>}</p>
-<p>}</p>
+}</p>
 
 
 
