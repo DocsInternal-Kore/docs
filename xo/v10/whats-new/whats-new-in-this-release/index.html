@@ -49,7 +49,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2131,20 +2142,20 @@
 <h3 id="automatic-dialog-generation">Automatic Dialog Generation<a class="headerlink" href="#automatic-dialog-generation" title="Permanent link">&para;</a></h3>
 <p>This feature auto-generates conversations and dialog flows using the VA’s purpose and intent description provided during the creation process. The Platform uses LLM and generative AI to create suitable Dialog Tasks for Conversation Design, Logic Building &amp; Training by including the required nodes in the flow.</p>
 <p>You can provide an intent description, and the Platform handles the Conversation Generation for the Dialog Flow. You can preview the conversation flow, view the Bot Action taken, improvise the intent description, and regenerate the conversation to make it more human-like. The nodes and the flow for the Business Logic are automatically built for your conversation, and you only need to configure the flow transition. <a href="https://developer.kore.ai/docs/bots/chatbot-overview/using-the-dialog-builder-tool/#Auto-Generate_Dialog_Tasks">Learn more </a>.</p>
-<p><img alt="Autogenerate Dialog Task" src="../../assets/images/autogenerate-dialog-task.gif" /></p>
+<p><a class="glightbox" href="../../assets/images/autogenerate-dialog-task.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Autogenerate Dialog Task" src="../../assets/images/autogenerate-dialog-task.gif" /></a></p>
 <h3 id="training-data-suggestions">Training Data Suggestions<a class="headerlink" href="#training-data-suggestions" title="Permanent link">&para;</a></h3>
 <p>Quickly generate high-quality training data using suggested utterances for each intent. Review and add the utterances to create a robust training set for your bot. <a href="https://developer.kore.ai/docs/bots/chatbot-overview/using-the-dialog-builder-tool/#Automatically_Generate_Utterance_Suggestions"> Learn more </a>.</p>
-<p><img alt="Training Data Suggestions" src="../../assets/images/training-suggestions.gif" /></p>
+<p><a class="glightbox" href="../../assets/images/training-suggestions.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Training Data Suggestions" src="../../assets/images/training-suggestions.gif" /></a></p>
 <h3 id="nlp-batch-test-case-suggestions">NLP Batch Test Case Suggestions<a class="headerlink" href="#nlp-batch-test-case-suggestions" title="Permanent link">&para;</a></h3>
 <p>Automatically generate NLP test cases for every intent, including the entity checks. Use the generated utterances to quickly create test suites in the builder. <a href="https://developer.kore.ai/docs/bots/test-your-bot/batch-testing/batch-testing/#Generating_Test_Cases_Automatically"> Learn more </a>.</p>
-<p><img alt="Batch Test Case Suggestions" src="../../assets/images/batch-testing.gif" /></p>
+<p><a class="glightbox" href="../../assets/images/batch-testing.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Batch Test Case Suggestions" src="../../assets/images/batch-testing.gif" /></a></p>
 <h3 id="conversation-test-cases-suggestions">Conversation Test Cases Suggestions<a class="headerlink" href="#conversation-test-cases-suggestions" title="Permanent link">&para;</a></h3>
 <p>Get simulated user inputs covering end-user scenarios at every test step. Use the suggestions to create test suites instantly. You can view input/utterance suggestions at every conversation step simulating the various input types and scenarios. This feature helps check if the task/intent is robust enough to handle random user utterances. It helps you predict and simulate the end user’s behavior and check if the VA can execute all the defined flows by generating user responses and presenting any digressions from the specified intent. <a href="https://developer.kore.ai/docs/bots/test-your-bot/create-a-test-suite/#Generated_User_Response_Suggestions"> Learn more </a>.</p>
-<p><img alt="Conversation Test Cases Suggestions" src="../../assets/images/conv-test.gif" /></p>
+<p><a class="glightbox" href="../../assets/images/conv-test.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Conversation Test Cases Suggestions" src="../../assets/images/conv-test.gif" /></a></p>
 <h2 id="dynamic-conversations">Dynamic Conversations<a class="headerlink" href="#dynamic-conversations" title="Permanent link">&para;</a></h2>
 <h3 id="dynamic-paraphrasing">Dynamic Paraphrasing<a class="headerlink" href="#dynamic-paraphrasing" title="Permanent link">&para;</a></h3>
 <p>You can now leverage Generative AI to rephrase bot responses based on conversation context and users’ emotions, resulting in more empathetic and natural responses that enhance user experience and engagement. When the OpenAI or Azure-OpenAI integration is enabled, you can see a new setting to rephrase responses at the node level for Message, Entity, and Confirmation Nodes. The messages added as User Prompts, Error Prompts, and Bot Responses are rephrased during runtime using the integration. <a href="https://developer.kore.ai/docs/bots/nlp/llm-and-generative-ai/#Dynamic_Prompt_and_Message_Rephrasing"> Learn more </a>.</p>
-<p><img alt="Dynamic Paraphrasing" src="../../assets/images/rephrase-response.gif" /></p>
+<p><a class="glightbox" href="../../assets/images/rephrase-response.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Dynamic Paraphrasing" src="../../assets/images/rephrase-response.gif" /></a></p>
 <h3 id="ai-assisted-adaptive-dialog">AI-Assisted Adaptive Dialog<a class="headerlink" href="#ai-assisted-adaptive-dialog" title="Permanent link">&para;</a></h3>
 <p>The AI-Assisted Dialog Node lets you leverage the full potential of LLMs and Generative AI models to quickly build conversations that involve complex flows and also provide human-like experiences. You can define the entities you would like to collect and also the business rules that govern the collection of these entities. The XO Platform orchestrates the conversation using contextual intelligence, ensuring that the conversation is always grounded to your enterprise business rules. You can also provide exit rules for handing off the conversation to the virtual assistant or the human agents. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/ai-assisted-adaptive-dialog/"> Learn more</a>.</p>
 <h3 id="knowledge-graph-powered-by-llm">Knowledge Graph Powered by LLM<a class="headerlink" href="#knowledge-graph-powered-by-llm" title="Permanent link">&para;</a></h3>
@@ -2275,5 +2286,5 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

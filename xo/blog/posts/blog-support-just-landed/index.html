@@ -56,7 +56,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3023,7 +3034,7 @@ with a file called <code>hello-world.md</code>:</p>
 <p>When you spin up the <a href="../../../creating-your-site/#previewing-as-you-write">live preview server</a>, you should be greeted by your first
 post! You'll also realize, that <a href="../../../setup/setting-up-a-blog/#archive">archive</a> and <a href="../../../setup/setting-up-a-blog/#categories">category</a> indexes have been
 automatically generated for you:</p>
-<p><img alt="Blog" src="blog.png" /></p>
+<p><a class="glightbox" href="blog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Blog" src="blog.png" /></a></p>
 <p>However, this is just the start. The <a href="../../../setup/setting-up-a-blog/#built-in-blog-plugin">built-in blog plugin</a> packs a lot of
 functionality needed in day-to-day blogging. Visit the documentation of the
 plugin to learn about the following topics:</p>
@@ -3169,5 +3180,5 @@ engines for technical blogging!</p>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

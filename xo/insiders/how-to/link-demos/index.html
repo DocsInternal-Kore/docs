@@ -49,7 +49,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2722,7 +2733,7 @@
 <p>how do different kind of links going to work?</p>
 <ol>
 <li>Open link from image 
-<a href="https://www.pngwing.com/en/free-png-duoxo"><img alt="Mushroom" src="../../mushroom.png" width="60" /> </a> </li>
+<a href="https://www.pngwing.com/en/free-png-duoxo"><a class="glightbox" href="../../mushroom.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Mushroom" src="../../mushroom.png" width="60" /></a> </a> </li>
 <li><a href="https://developer.kore.ai/docs/bots/how-tos/update-booking-task/">Open link through text</a> </li>
 <li><a href="https://developer.kore.ai/uncategorised/change-flight-task/" target="_blank">Open link in new tab</a></li>
 <li></li>
@@ -2788,11 +2799,22 @@
             font-size: 30px;
         }
     </style>
-</head></p>
+ <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head></p>
 <body>
     <div class="box">
         <a href="#popup-box">
-            Click the image to enlarge ! <img src="/mushroom.png" width="60" height="60">
+            Click the image to enlarge ! <a class="glightbox" href="/mushroom.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="/mushroom.png" width="60" height="60"></a>
         </a>
     </div>
     <div id="popup-box" class="modal">
@@ -2801,7 +2823,7 @@
                 This is a Mushroom !
             </h1>
             <b>
-                <p><img src="/mushroom.png"></p>
+                <p><a class="glightbox" href="/mushroom.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="/mushroom.png"></a></p>
             </b>
             <a href="#"
                class="box-close">
@@ -2809,7 +2831,7 @@
             </a>
         </div>
     </div>
-</body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 <p></html></p>
 
 

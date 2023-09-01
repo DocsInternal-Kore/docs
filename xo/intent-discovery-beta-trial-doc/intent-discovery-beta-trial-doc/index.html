@@ -49,7 +49,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2873,7 +2884,7 @@
 <h1 id="intent-discovery-beta"><strong>Intent Discovery (Beta)</strong><a class="headerlink" href="#intent-discovery-beta" title="Permanent link">&para;</a></h1>
 <p>The new Intent Discovery module helps you auto-extract popular intents from previous user conversations. It reduces the time and effort to build a virtual assistant and leads to the success of your Conversational AI Journey. This is a beta feature and is available only for the English language and Enterprise users.</p>
 <p>You can upload your historical transcripts in CSV format. After the transcripts are uploaded into the bot, the bot uses LLMs to identify the different topics, intents, or conversations between the user and the bot. It intelligently identifies all the intents available. You can review each intent to understand which conversations have resulted in identifying these intents. After the review, you can also see the underline utterances that resulted in identifying an intent. You can either add these intents as new intents for your virtual assistant or pick specific utterances and train them as utterances for your existing dialogs and FAQs. So, it helps both ways – either create new intents or enhance the training you provide to your virtual assistant.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/intent-discovery-intro.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/intent-discovery-intro.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/intent-discovery-intro.png" /></a></p>
 <p>The Intent Discovery journey consists of the following steps:</p>
 <ol>
 <li><a href="#create-a-project">Create a Project</a>: You may have many business use cases to automate. Projects help manage intent discovery for each business use case separately – a project for a specific use case.</li>
@@ -2886,13 +2897,13 @@
 <li>Go to <strong>Build &gt; Tools &gt; Intent Discovery</strong>.</li>
 </ol>
 <figure>
-<p><img alt="Image title" src="../../assets/images/intent-discovery/create-project.png" width="400" />{ align=right }</p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/create-project.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" src="../../assets/images/intent-discovery/create-project.png" width="400" /></a>{ align=right }</p>
 </figure>
 <figure>
-<p><img alt="Image caption" src="../../assets/images/intent-discovery/create-project.png" width="500" />{ align=left }</p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/create-project.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image caption" src="../../assets/images/intent-discovery/create-project.png" width="500" /></a>{ align=left }</p>
 </figure>
 <figure>
-<p><img alt="Image title" src="../../assets/images/intent-discovery/create-project.png" width="600" />
+<p><a class="glightbox" href="../../assets/images/intent-discovery/create-project.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" src="../../assets/images/intent-discovery/create-project.png" width="600" /></a>
   </p>
 <figcaption>Image caption</figcaption>
 </figure>
@@ -2900,9 +2911,9 @@
 <li>Click the <strong>Create Project</strong> button.</li>
 <li>Enter a name and a brief description of the project. Note that the character limit for Project Name is 256, and Description is 1000. Click <strong>Proceed</strong>. </li>
 </ol>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/enter-project-name-and-desc.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/enter-project-name-and-desc.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/enter-project-name-and-desc.png" /></a></p>
 <p>The new project is created. You see the Intent Discovery page with the header ‘Projects / {{New Project’s Name}}’.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/upload-transcript.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/upload-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/upload-transcript.png" /></a></p>
 <p>The Intent Discovery landing page lists all the projects with conversational insights for each project, such as the status of the project, number of sessions, intents extracted, and results in terms of added dialogs, added FAQs, trained dialogs, and trained FAQs. Note that the result will be NA for the projects for which intent extraction is incomplete.</p>
 <p>The status of a project can be any of the following, displayed in the Status column:</p>
 <ul>
@@ -2911,14 +2922,14 @@
 <li>Intent Extraction In Progress</li>
 <li>Intents Extracted</li>
 </ul>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/intent-discovery-page.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/intent-discovery-page.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/intent-discovery-page.png" /></a></p>
 <p><strong>Note</strong>: You can create <strong>a maximum of 10 projects</strong> per VA. You can change an existing project’s name and description anytime.</p>
 <h2 id="upload-transcripts">Upload Transcripts<a class="headerlink" href="#upload-transcripts" title="Permanent link">&para;</a></h2>
 <p>On the Intent Discovery page for the new project, you can see a button to initiate the upload of the transcript file(s) and a link to download a sample transcript file.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/upload-transcript.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/upload-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/upload-transcript.png" /></a></p>
 <p>You can download the sample CSV file by clicking the link. Ensure to upload transcripts in the format specified in the sample file. Please note that <strong>all the columns in the file must be filled</strong>.</p>
 <h3 id="format-of-the-csv-transcript-file">Format of the CSV (Transcript) file<a class="headerlink" href="#format-of-the-csv-transcript-file" title="Permanent link">&para;</a></h3>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/sample-csv-file.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/sample-csv-file.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/sample-csv-file.png" /></a></p>
 <table>
   <tr>
    <td>FIELD NAME
@@ -2979,10 +2990,10 @@
 <ol>
 <li>Click the <strong>Upload Transcript</strong> button, and then browse and select the transcripts files (CSV format). The selected files are uploaded, and you see a prompt to manage the transcripts on the next page.</li>
 </ol>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/browse-for-transcript.png" /></p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/upload-transcript-confirmation.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/browse-for-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/browse-for-transcript.png" /></a></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/upload-transcript-confirmation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/upload-transcript-confirmation.png" /></a></p>
 <p>If some transcript files are uploaded but No intents extracted so far, the** Manage Transcripts** button is displayed as shown in the screenshot below.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/manage-transcripts.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/manage-transcripts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/manage-transcripts.png" /></a></p>
 <ol>
 <li>On clicking <strong>Manage Transcripts</strong>, you can see the <strong>Transcripts</strong> dialog box with the list of all the transcript files. Below details are displayed on the window:<ol>
 <li>File Name: Name of the transcript file uploaded</li>
@@ -2999,30 +3010,30 @@
 </ol>
 </li>
 </ol>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/transcript-list.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/transcript-list.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/transcript-list.png" /></a></p>
 <p>The dialog box has the provision to download a sample file using the <strong>Sample File</strong> button and upload additional transcript files by clicking the <strong>Upload Transcripts</strong> button.</p>
 <h3 id="view-conversations-in-the-transcript">View Conversations in the Transcript<a class="headerlink" href="#view-conversations-in-the-transcript" title="Permanent link">&para;</a></h3>
 <p>Upon successful upload of the transcript(s), the platform extracts the conversations from the uploaded files. You can view all the conversations, and the chat messages exchanged between the end user and the VA/agent.</p>
 <p>The platform displays the conversation session summary, which includes the count of the VA messages and user messages. You need to select a <strong>Date Filter</strong> under <strong>Contents</strong> to display the details.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/conversation-in-transcript.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/conversation-in-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/conversation-in-transcript.png" /></a></p>
 <p>If a conversation is not useful or is not contributing to the intent, you can delete the specific conversation. Deleting a conversation also impacts the conversation count and average message count in the columns.</p>
 <h3 id="delete-transcripts">Delete Transcripts<a class="headerlink" href="#delete-transcripts" title="Permanent link">&para;</a></h3>
 <p>You can delete the uploaded transcript file if the file is not required anymore, in case the upload was incorrect, or if the conversation has been extracted but the file is not useful.</p>
 <p>On hovering any row, the** delete** icon is displayed, which is used to delete that specific Transcript.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/delete-transcript.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/delete-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/delete-transcript.png" /></a></p>
 <h2 id="extract-intents">Extract Intents<a class="headerlink" href="#extract-intents" title="Permanent link">&para;</a></h2>
 <p>The next step is intent extraction. </p>
 <p>On clicking the <strong>Extract Intents</strong> button on the Transcripts dialog box, you can see a message about intents being extracted. This process may take a few minutes depending on the number and size of the transcript files.</p>
 <p>In case the status of one or more transcript files is <strong>Conv. Extraction In-Progress</strong>, you can still initiate intent extraction. In that case, conversation extraction from those transcript files runs in the background, and once that is complete, intent extraction will begin.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/intent-extraction-in-progress.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/intent-extraction-in-progress.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/intent-extraction-in-progress.png" /></a></p>
 <p>After the intent extraction is completed, you can see the list of extracted intents along with session count, qualified utterances, and actions.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/intents-extracted.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/intents-extracted.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/intents-extracted.png" /></a></p>
 <p>You can view the details of the intent action by clicking the <strong>View</strong> icon under the Actions column next to the text.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/click-view-on-intent.png" /></p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/view-intent-activity.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/click-view-on-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/click-view-on-intent.png" /></a></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/view-intent-activity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/view-intent-activity.png" /></a></p>
 <h3 id="extracted-intent-details">Extracted Intent Details<a class="headerlink" href="#extracted-intent-details" title="Permanent link">&para;</a></h3>
 <p>Clicking anywhere on the extracted Intents row displays a pop-up dialog box to view the details of the extracted Intent. The title of the dialog box is the extracted Intent name.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/extracted-intent-details-slider.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/extracted-intent-details-slider.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/extracted-intent-details-slider.png" /></a></p>
 <p>The dialog box shows a table with individual rows for each session. The table has below columns: </p>
 <ul>
 <li>Session ID: The session ID and the Date and Time of the Session.</li>
@@ -3038,7 +3049,7 @@
 <p>A <strong>Status</strong> dropdown is also displayed at the top of the dialog box to mark the status of sessions as <strong>Reviewed</strong> or <strong>Yet to Review</strong>. You can bulk-select sessions and change the status using this option.</p>
 <h3 id="session-details">Session Details<a class="headerlink" href="#session-details" title="Permanent link">&para;</a></h3>
 <p>This dialog box, titled <strong>Transcript,</strong> shows the summary of the session. The detailed chat is displayed below the summary.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/session-summary.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/session-summary.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/session-summary.png" /></a></p>
 <h2 id="train-the-utterances">Train the Utterances<a class="headerlink" href="#train-the-utterances" title="Permanent link">&para;</a></h2>
 <p>In a scenario where the utterances cannot be mapped to the existing intents, you can create a new intent.</p>
 <p>Once the intents are listed, you can perform the following actions for the intents:</p>
@@ -3054,8 +3065,8 @@
 <li>All the utterances qualified for the extracted intent are displayed in a table. The bookmark icon appears if you have bookmarked this utterance in the <a href="#extracted-intent-details">Extracted Intent Details</a> dialog box. </li>
 <li>Select all the required utterances and click the <strong>Add to Bot</strong> button. A confirmation message is shown on adding a new Dialog Task.</li>
 </ol>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/add-dialog-task-st1.png" /></p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/add-dialog-task-st2.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/add-dialog-task-st1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/add-dialog-task-st1.png" /></a></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/add-dialog-task-st2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/add-dialog-task-st2.png" /></a></p>
 <p>The <strong>Actions</strong> column text for the intent will reflect the addition of a dialog task. </p>
 <p>For example:</p>
 <ul>
@@ -3073,12 +3084,12 @@
 <li>Click the <strong>Add/Train</strong> dropdown across the intent, then select the <strong>Dialog Task</strong> option under <strong>Train</strong>. The <strong>Train Dialog Task</strong> dialog box for the intent is displayed.</li>
 <li>Select the dialog task to be trained from the <strong>Intent</strong> drop-down and select all the required utterances from the table below. Click <strong>Add Utterances</strong>.</li>
 </ol>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/train-dialog-task-st1.png" /></p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/train-dialog-task-st2.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/train-dialog-task-st1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/train-dialog-task-st1.png" /></a></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/train-dialog-task-st2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/train-dialog-task-st2.png" /></a></p>
 <ol>
 <li>Once the existing Dialog task is trained with the selected Utterances, a confirmation message is shown.</li>
 </ol>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/train-dialog-task-st3.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/train-dialog-task-st3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/train-dialog-task-st3.png" /></a></p>
 <p>The <strong>Actions</strong> column text for the intent will reflect the training of a new dialog task. </p>
 <p>For example:</p>
 <ul>
@@ -3098,14 +3109,14 @@
 <li>All the Utterances qualified for the Extracted Intent are displayed in a table. The bookmark icon appears if the user has bookmarked this utterance in the Session summary dialog box. </li>
 <li>Select all the required utterances and click <strong>Next</strong>.</li>
 </ol>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/add-faq-st1.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/add-faq-st1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/add-faq-st1.png" /></a></p>
 <ol>
 <li>On the next dialog box, provide the FAQ question text to be created as an FAQ, along with the required Bot Response to be shown. All the selected utterances from the previous screen are added as alternative questions for this FAQ. </li>
 <li>Provide or select other features of the FAQ, like Bot response channel, Display name, reference ID, etc. as per your need and preference, and click the <strong>Add to Bot</strong> button. </li>
 </ol>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/add-faq-st2.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/add-faq-st2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/add-faq-st2.png" /></a></p>
 <p>A confirmation message is shown on adding a new FAQ. </p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/add-faq-st3.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/add-faq-st3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/add-faq-st3.png" /></a></p>
 <p>The <strong>Actions</strong> column text for the intent will reflect the addition of an FAQ. </p>
 <p>For example:</p>
 <ul>
@@ -3123,11 +3134,11 @@
 <li>Click the <strong>Add/Train</strong> dropdown across the intent, then select the <strong>FAQ</strong> option under <strong>Train</strong>. The <strong>Train FAQ</strong> dialog box for the intent is displayed.</li>
 <li>Select the FAQ to be trained from the <strong>FAQ</strong> drop-down. A label box showing the current Bot Response appears. Select all the required utterances from the table below and click <strong>Add Utterances</strong>.</li>
 </ol>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/train-faq-st1.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/train-faq-st1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/train-faq-st1.png" /></a></p>
 <ol>
 <li>Once the existing FAQ is trained with the selected Utterances, a confirmation message is shown.</li>
 </ol>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/train-faq-st2.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/train-faq-st2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/train-faq-st2.png" /></a></p>
 <p>The <strong>Actions</strong> column text for the intent will reflect the training of an FAQ. </p>
 <p>For example:</p>
 <ul>
@@ -3156,8 +3167,8 @@
 <p>Please note that the previously loaded transcript files will not be deleted while uploading new ones. Re-extraction of intents will restore the above-deleted project data.</p>
 <h2 id="deleting-a-project">Deleting a project<a class="headerlink" href="#deleting-a-project" title="Permanent link">&para;</a></h2>
 <p>You can also delete the project if it is no longer required. Since a maximum of 10 projects can be created within a bot, you may need to delete a past, unwanted project to make a place for a new one.</p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/delete-project.png" /></p>
-<p><img alt="alt_text" src="../../assets/images/intent-discovery/project-delete-confirmation.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/delete-project.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/delete-project.png" /></a></p>
+<p><a class="glightbox" href="../../assets/images/intent-discovery/project-delete-confirmation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../../assets/images/intent-discovery/project-delete-confirmation.png" /></a></p>
 <p>When you delete a project, all the corresponding data in the project is automatically deleted, which includes: </p>
 <ul>
 <li>Transcripts </li>
@@ -3267,5 +3278,5 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

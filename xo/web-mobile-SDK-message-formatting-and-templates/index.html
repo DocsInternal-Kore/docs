@@ -53,7 +53,18 @@
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3270,7 +3281,7 @@ This topic describes the following:</p>
 <h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
 <h3 id="quick-replies-template-text">Quick Replies Template – Text<a class="headerlink" href="#quick-replies-template-text" title="Permanent link">&para;</a></h3>
 <p>Shows a formatted text message to the user with clickable text choices. \
 <strong>Required Parameters</strong></p>
@@ -3306,7 +3317,7 @@ This topic describes the following:</p>
 <h3 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
 <h3 id="quick-replies-template-text-and-image">Quick Replies Template – Text and Image<a class="headerlink" href="#quick-replies-template-text-and-image" title="Permanent link">&para;</a></h3>
 <p>Shows formatted text to the user with clickable text and images as choices. \
 <strong>Required Parameters</strong></p>
@@ -3381,7 +3392,7 @@ This topic describes the following:</p>
 </span></code></pre></div>
 <p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
 <p><strong>CSAT</strong></p>
 <p>Displays a dialog with the feedback survey question and five smiley icons, each with a different expression to capture the customer’s response. When the customer clicks an icon, it corresponds to a relevant survey score and response, which include "Highly unsatisfied,” "Unsatisfied,” "Average,” "Satisfied,” and "Highly satisfied.” Except for “Satisfied” and “Highly Satisfied,” the other responses prompt a follow-up question to the customer.</p>
 <p><strong>Required Parameters</strong></p>
@@ -3421,7 +3432,7 @@ This topic describes the following:</p>
 </span></code></pre></div>
 <p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
 <p><strong>Like/Dislike</strong></p>
 <p>Displays a dialog with the feedback survey question and two icons to capture the customer’s response. One is the <strong>Like</strong> icon, and the other is the <strong>Dislike</strong> icon. When the customer clicks the former, a response message is displayed. When the customer clicks the latter, a prompt displays the follow-up survey question to capture the customer’s response.</p>
 <p><strong>Required Parameters</strong></p>
@@ -3462,7 +3473,7 @@ This topic describes the following:</p>
 </span></code></pre></div>
 <p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
 <h3 id="list-template">List Template<a class="headerlink" href="#list-template" title="Permanent link">&para;</a></h3>
 <p>Shows a formatted list of choices to the user as clickable text and images as choices. List template has the following limitations:</p>
 <ul>
@@ -3587,7 +3598,7 @@ This topic describes the following:</p>
 <h3 id="_3"><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
 <h3 id="error-template">Error Template<a class="headerlink" href="#error-template" title="Permanent link">&para;</a></h3>
 <p>Shows formatted messages to an end user for validation, errors and warning messages. \
 <strong>Example</strong></p>
@@ -3603,7 +3614,7 @@ This topic describes the following:</p>
 <h3 id="_4"><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
 <h3 id="attachment-template"><strong>Attachment Template</strong><a class="headerlink" href="#attachment-template" title="Permanent link">&para;</a></h3>
 <p>Provides support to display images, render videos, links and play audio files to a user based on specified URL links.</p>
 <p>The following formats are supported for attachment template:</p>
@@ -3626,7 +3637,7 @@ This topic describes the following:</p>
 </span></code></pre></div>
 <p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image8.jpg" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image8.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.jpg" title="image_tooltip" /></a></p>
 <p><strong>Image Template</strong></p>
 <p>To view image, use the following JS script:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>var message = {
@@ -3639,7 +3650,7 @@ This topic describes the following:</p>
 </span></code></pre></div>
 <p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image9.jpg" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image9.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image9.jpg" title="image_tooltip" /></a></p>
 <p><strong>Video Template</strong></p>
 <p>You can either download or watch the video directly in the assistant window.</p>
 <p>To download and watch the video, use this JS script:</p>
@@ -3654,7 +3665,7 @@ This topic describes the following:</p>
 </span></code></pre></div>
 <p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image10.jpg" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image10.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image10.jpg" title="image_tooltip" /></a></p>
 <p>To play the video within the assistant window, use this JS script:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>var message =
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>   {
@@ -3668,7 +3679,7 @@ This topic describes the following:</p>
 </span></code></pre></div>
 <p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image11.jpg" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image11.jpg" title="image_tooltip" /></a></p>
 <h3 id="text-template">Text Template<a class="headerlink" href="#text-template" title="Permanent link">&para;</a></h3>
 <p>Shows messages to the user using XO Platform defined default formatting. \
 <strong>Example</strong></p>
@@ -3789,7 +3800,7 @@ This topic describes the following:</p>
 <h3 id="_5"><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image12.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image12.png" title="image_tooltip" /></a></p>
 <h3 id="piechart-template">Piechart Template<a class="headerlink" href="#piechart-template" title="Permanent link">&para;</a></h3>
 <p>This template is supported only for Web SDK; doesn't apply for Mobile SDK.</p>
 <p>Shows the data in a Pie chart in one of these three variations - regular full pie, donut pie, and donut pie with legend table. If you do not specify a type, “regular’ will be considered by default \
@@ -3829,7 +3840,7 @@ This topic describes the following:</p>
 <h3 id="_6"><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image13.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image13.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image13.png" title="image_tooltip" /></a></p>
 <h3 id="line-chart-template">Line Chart Template<a class="headerlink" href="#line-chart-template" title="Permanent link">&para;</a></h3>
 <p>This template is supported only for Web SDK; doesn't apply for Mobile SDK.</p>
 <p>Shows the data in a line chart. \
@@ -3870,7 +3881,7 @@ This topic describes the following:</p>
 <h2 id="_7"><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image14.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image14.png" title="image_tooltip" /></a></p>
 <h3 id="bar-chart-template">Bar Chart Template<a class="headerlink" href="#bar-chart-template" title="Permanent link">&para;</a></h3>
 <p>This template is supported only for Web SDK; doesn't apply for Mobile SDK.</p>
 <p>Shows the data in a bar graph in one of these variants: a single data series simple bar graphs, multiple data series bar graphs, or stacked multiple data series bar graphs. \
@@ -3913,7 +3924,7 @@ This topic describes the following:</p>
 <h2 id="_8"><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image15.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image15.png" title="image_tooltip" /></a></p>
 <h3 id="regular-table-template">Regular Table Template<a class="headerlink" href="#regular-table-template" title="Permanent link">&para;</a></h3>
 <p>This template is supported only for Web SDK; doesn't apply for Mobile SDK.</p>
 <p>Shows the data in a regular or responsive table format. \
@@ -3953,7 +3964,7 @@ This topic describes the following:</p>
 <h2 id="_9"><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image16.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image16.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image16.png" title="image_tooltip" /></a></p>
 <h3 id="mini-table-template">Mini Table Template<a class="headerlink" href="#mini-table-template" title="Permanent link">&para;</a></h3>
 <p>This template is supported only for Web SDK; doesn't apply for Mobile SDK.</p>
 <p>For each row header in a table, this template shows column data as separate cards. This is ideally suitable for data with 3-4 columns and 4-5 rows. \
@@ -3987,7 +3998,7 @@ This topic describes the following:</p>
 <h2 id="_10"><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image17.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image17.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image17.png" title="image_tooltip" /></a></p>
 <h2 id="botkit-sdk-message-formatting-with-templates">BotKit SDK Message Formatting with Templates<a class="headerlink" href="#botkit-sdk-message-formatting-with-templates" title="Permanent link">&para;</a></h2>
 <p>You can also apply message templates in the BotKit SDK using the sendUserMessage function by setting the <code>isTemplate</code> parameter to <code>true</code> in the payload object as shown in the following example.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>on_user_message: function(requestId, data, callback) {
@@ -4030,7 +4041,7 @@ This topic describes the following:</p>
 <li><strong>Link</strong> - <a href="http://myCompany.com">Text for the link here</a> For example, <code>Here is a link to [Kore.ai.com](https://kore.ai/).</code></li>
 <li><strong>New Line</strong> - \n One line indention.</li>
 <li><strong>Multi Line</strong> - \n\n\n Three line indentions.</li>
-<li><strong>Image</strong> - <img alt="Text for the link here" src="http://myCompany.com" /> For example, <code>![My image](http://d1hqmx8kqvpnpa.cloudfront.net/f-eeca5df3-7580-5a09-9aa3-09f809b44ac4.png)</code></li>
+<li><strong>Image</strong> - <a class="glightbox" href="http://myCompany.com" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Text for the link here" src="http://myCompany.com" /></a> For example, <code>![My image](http://d1hqmx8kqvpnpa.cloudfront.net/f-eeca5df3-7580-5a09-9aa3-09f809b44ac4.png)</code></li>
 <li><strong>List</strong> -<ul>
 <li><strong>Unordered Bulleted List</strong> - * Text for the list time  Add a space after the " * " symbol.<ul>
 <li><code>* This is an example of an unordered list Bullet 1.</code></li>
@@ -4141,7 +4152,7 @@ This topic describes the following:</p>
 </ol>
 <p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image18.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image18.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image18.png" title="image_tooltip" /></a></p>
 <p>Like-dislike template: \
 <code>var message = {</code></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>  &quot;type&quot;: &quot;template&quot;,
@@ -4155,7 +4166,7 @@ This topic describes the following:</p>
 </ol>
 <p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image19.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image19.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image19.png" title="image_tooltip" /></a></p>
 <p>Multi-select Template: \
 <code>var message = {</code></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>  &quot;type&quot;: &quot;template&quot;,
@@ -4189,7 +4200,7 @@ This topic describes the following:</p>
 </ol>
 <p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image20.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image20.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image20.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image20.png" title="image_tooltip" /></a></p>
 <p>To understand customized JavaScript responses and channel-specific templates, refer to <em><a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/prompt-editor/#Customize_JavaScript_Responses">Customize JavaScript Responses</a></em> in <em><a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/prompt-editor/">User Prompts</a>.</em></p>
 
 
@@ -4290,5 +4301,5 @@ This topic describes the following:</p>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

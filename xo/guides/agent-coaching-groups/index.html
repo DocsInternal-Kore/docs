@@ -49,7 +49,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2821,9 +2832,9 @@
 <li>From the top menu, click <strong>Configuration</strong>.</li>
 <li>
 <p>Click <strong>Agent</strong> <strong>Coaching</strong> from the left menu. The <strong>Agent Coaching</strong> page is displayed with pre-existing groups, if any.</p>
-<p><img alt="Alt text" src="../../assets/images/agent-coaching-groups/agent-coaching-page.png" />
+<p><a class="glightbox" href="../../assets/images/agent-coaching-groups/agent-coaching-page.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../assets/images/agent-coaching-groups/agent-coaching-page.png" /></a>
 4. Click the <strong>+ New Coaching Group</strong> button.
-<img alt="Alt text" src="../../assets/images/agent-coaching-groups/new-coaching-group.png" /></p>
+<a class="glightbox" href="../../assets/images/agent-coaching-groups/new-coaching-group.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../assets/images/agent-coaching-groups/new-coaching-group.png" /></a></p>
 </li>
 <li>
 <p>Enter a name for the new group in the <strong>Name</strong> field.</p>
@@ -2838,10 +2849,10 @@
 <li>Go to the <strong>Configuration &gt; Agent Coaching</strong> main page.</li>
 <li>Locate the group you want to edit by going through the displayed list.</li>
 <li>Click the <strong>edit</strong> button beside a group name you want to edit.
-    <img alt="Alt text" src="../../assets/images/agent-coaching-groups/edit-group-button.png" />
-    <img alt="Alt text" src="../../assets/images/agent-coaching-groups/edit-group-info.png" /></li>
+    <a class="glightbox" href="../../assets/images/agent-coaching-groups/edit-group-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../assets/images/agent-coaching-groups/edit-group-button.png" /></a>
+    <a class="glightbox" href="../../assets/images/agent-coaching-groups/edit-group-info.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../assets/images/agent-coaching-groups/edit-group-info.png" /></a></li>
 <li>Update the group name and description, as required.
-    <img alt="Alt text" src="../../assets/images/agent-coaching-groups/edit-group-save.png" /></li>
+    <a class="glightbox" href="../../assets/images/agent-coaching-groups/edit-group-save.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../assets/images/agent-coaching-groups/edit-group-save.png" /></a></li>
 <li>Click <strong>Save</strong>.</li>
 </ol>
 <h3 id="deleting-a-group">Deleting a group<a class="headerlink" href="#deleting-a-group" title="Permanent link">&para;</a></h3>
@@ -2855,11 +2866,11 @@
 <p>Locate the group you want to delete by going through the displayed list.</p>
 </li>
 <li>Click the <strong>edit</strong> symbol beside a group name.
-    <img alt="Alt text" src="../../assets/images/agent-coaching-groups/edit-group-button.png" /></li>
+    <a class="glightbox" href="../../assets/images/agent-coaching-groups/edit-group-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../assets/images/agent-coaching-groups/edit-group-button.png" /></a></li>
 <li>Click the <strong>delete</strong> button on the subsequent screen.
-    <img alt="Alt text" src="../../assets/images/agent-coaching-groups/delete-group-button.png" /></li>
+    <a class="glightbox" href="../../assets/images/agent-coaching-groups/delete-group-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../assets/images/agent-coaching-groups/delete-group-button.png" /></a></li>
 <li>Click <strong>Yes</strong> on the confirmation screen, as shown in the following screenshot.
-    <img alt="Alt text" src="../../assets/images/agent-coaching-groups/delete-group-confirmation.png" width="200" /></li>
+    <a class="glightbox" href="../../assets/images/agent-coaching-groups/delete-group-confirmation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../assets/images/agent-coaching-groups/delete-group-confirmation.png" width="200" /></a></li>
 </ol>
 <p><strong>Group Rules:</strong></p>
 <table>
@@ -3025,5 +3036,5 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -49,7 +49,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2816,13 +2827,13 @@
 <p>AI-driven, NLP-based chat, and voice Conversational Virtual Assistants are the latest in technology and a must for contemporary enterprises.</p>
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
 <h2 id="what-are-conversational-assistants">What are Conversational Assistants?<a class="headerlink" href="#what-are-conversational-assistants" title="Permanent link">&para;</a></h2>
 <p>A Conversational Virtual Assistant (VA) acts as an intelligent intermediary between people, digital systems, and internet-enabled things. It replaces the traditional Graphical User Interfaces (GUIs) of an application or website with a Conversational User Interface (CUI). It is a paradigm shift from the earlier communications achieved either by entering syntax-specific commands or clicking icons.</p>
 <p>These Virtual Assistants are designed to converse with users through a combination of natural language-based conversations. Responses can come in the form of text, links, buttons, calendars, or other widgets that accelerate the speed with which a user can respond.</p>
 <p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
 <p>AI-powered messaging solutions or Conversational Virtual Assistants serve as the stepping stone to the future. They communicate with intelligent virtual agents, organization apps, websites, social media platforms, and messenger platforms. Users can interact with such assistants using voice or text to access information, complete tasks, and execute transactions.</p>
 <h2 id="why-add-a-conversational-virtual-assistant-to-your-business">Why Add a Conversational Virtual Assistant to Your Business?<a class="headerlink" href="#why-add-a-conversational-virtual-assistant-to-your-business" title="Permanent link">&para;</a></h2>
 <p>In a nutshell, such an assistant can significantly reduce the amount of time and labor required to maintain specific business processes. Here is what a Conversational VA can achieve:</p>
@@ -2837,7 +2848,7 @@
 </ul>
 <p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
 <h2 id="how-do-conversational-virtual-assistants-work">How Do Conversational Virtual Assistants Work?<a class="headerlink" href="#how-do-conversational-virtual-assistants-work" title="Permanent link">&para;</a></h2>
 <p>A Conversational Virtual Assistant works by analyzing what users say, to detect their goals and extract the information required in order to achieve that goal.</p>
 <p>Let’s take a look at the key components and the core process that enable a Virtual Assistant to fulfill its functions.</p>
@@ -2966,5 +2977,5 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

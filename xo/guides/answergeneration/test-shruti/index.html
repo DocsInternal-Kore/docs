@@ -53,7 +53,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2785,7 +2796,7 @@
 <h1 id="snippet-extraction">Snippet Extraction<a class="headerlink" href="#snippet-extraction" title="Permanent link">&para;</a></h1>
 <p>The Snippet Extraction workbench stage helps extract pertinent excerpts from the source data which can be displayed as answer snippets in response to user queries. When data is processed, relevant snippets are extracted and stored along with a title and a URL. When a user queries, the generated snippets are displayed to the users.  This makes it an efficient way to find and display answer snippets. This stage can be used to configure the fields to be used for generating the answer snippets. </p>
 <p>Note that this stage is only used for the Extractive Model of producing answer snippets. When the Extractive Model is enabled in Answer snippets, this workbench stage is automatically added to the Index pipeline. </p>
-<p><img alt="alt_text" src="../images/answersnippets1.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="../images/answersnippets1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/answersnippets1.png" title="image_tooltip" /></a></p>
 <p><a href="images/answersnippets1.png" rel="some text"><img src="images/answersnippets1.png"></img></a></p>
 <p>Use the following fields to configure this Workbench stage.</p>
 <p><strong>Stage Name</strong>: Give an appropriate name to the stage for easy identification.</p>
@@ -2811,7 +2822,7 @@ In continuation of the above example, you can set ‘page_html’ as the source 
 
 You can add one or more outcome fields using the AND button. For example, if you want to run the snippet extraction stage for content from files, web pages, and data from the connectors, you can specify the condition and the outcome as shown below.
 </code></pre></div>
-<p><img alt="alt_text" src="../images/answersnippets2.png" title="image_tooltip" /></p>
+<p><a class="glightbox" href="../images/answersnippets2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/answersnippets2.png" title="image_tooltip" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
@@ -2993,5 +3004,5 @@ Based on valuable customer feedback, we’ve enhanced the Intent Discovery modul
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

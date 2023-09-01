@@ -53,7 +53,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2754,26 +2765,26 @@
 <ol>
 <li>Go to <strong>AUTOMATIONS</strong> &gt; <strong>Attached bots</strong> &gt; Click the bot to be configured.</li>
 </ol>
-<p><img alt="Intent Over Entity" src="../../assets/images/intent-over-entity.png" /></p>
+<p><a class="glightbox" href="../../assets/images/intent-over-entity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Intent Over Entity" src="../../assets/images/intent-over-entity.png" /></a></p>
 <ol>
 <li>
 <p>Click <strong>CONVERSATIONAL SKILLS</strong> on the left panel and then click <strong>Dialog Task</strong> from the dropdown menu.
-<img alt="Dialog Task Menu" src="../../assets/images/dialod-task-menu.png" /></p>
+<a class="glightbox" href="../../assets/images/dialod-task-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Dialog Task Menu" src="../../assets/images/dialod-task-menu.png" /></a></p>
 </li>
 <li>
 <p>The <strong>Dialog Tasks</strong> page appears. Clicking anywhere in the row opens the flow designer for the dialog task.</p>
 </li>
 </ol>
-<p><img alt="Dialog Task Page" src="../../assets/images/dialog-task-page.png" /></p>
-<p><img alt="Flow Designer" src="../../assets/images/flow-designer-page.png" /></p>
+<p><a class="glightbox" href="../../assets/images/dialog-task-page.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Dialog Task Page" src="../../assets/images/dialog-task-page.png" /></a></p>
+<p><a class="glightbox" href="../../assets/images/flow-designer-page.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Flow Designer" src="../../assets/images/flow-designer-page.png" /></a></p>
 <ol>
 <li>Click the <strong>ENTITY</strong> node to be configured and then click the <strong>INSTANCE PROPERTIES</strong> tab.</li>
 </ol>
-<p><img alt="Entity Node" src="../../assets/images/entity-node.png" /></p>
+<p><a class="glightbox" href="../../assets/images/entity-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Entity Node" src="../../assets/images/entity-node.png" /></a></p>
 <ol>
 <li>Click <strong>Advanced Controls</strong> and select <strong>Intent over Entity</strong>. A check box confirms the selection.</li>
 </ol>
-<p><img alt="Advanced Controls" src="../../assets/images/advanced-controls.png" />
+<p><a class="glightbox" href="../../assets/images/advanced-controls.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Advanced Controls" src="../../assets/images/advanced-controls.png" /></a>
 Manage Interruption Behavior</p>
 <p>This feature allows you to manage the interaction's interruption behavior to suit your requirements. There are several pre-configured scenarios available to be configured.</p>
 <div class="admonition note">
@@ -2784,15 +2795,15 @@ Manage Interruption Behavior</p>
 <ol>
 <li>Click the ellipsis (three dots) icon on the top right corner of the flow designer page.</li>
 </ol>
-<p><img alt="Ellipsis Icon" src="../../assets/images/ellipsis-icon.png" /></p>
+<p><a class="glightbox" href="../../assets/images/ellipsis-icon.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Ellipsis Icon" src="../../assets/images/ellipsis-icon.png" /></a></p>
 <ol>
 <li>Click <strong>Manage Interruptions</strong> from the dropdown menu. The <strong>Manage Interruption Behavior</strong> page appears.</li>
 </ol>
-<p><img alt="Interruption Behavior Dropdown" src="../../assets/images/manage-interruption-dropdown.png" />
-<img alt="Manage Interruption Behavior" src="../../assets/images/manage-interruption-behavior.png" /></p>
+<p><a class="glightbox" href="../../assets/images/manage-interruption-dropdown.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Interruption Behavior Dropdown" src="../../assets/images/manage-interruption-dropdown.png" /></a>
+<a class="glightbox" href="../../assets/images/manage-interruption-behavior.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Manage Interruption Behavior" src="../../assets/images/manage-interruption-behavior.png" /></a></p>
 <ol>
 <li>Select the required interruption behavior. A confirmation is displayed.
-<img alt="Interruption Settings Saved" src="../../assets/images/interruption-settings-saved.png" /></li>
+<a class="glightbox" href="../../assets/images/interruption-settings-saved.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Interruption Settings Saved" src="../../assets/images/interruption-settings-saved.png" /></a></li>
 </ol>
 
 
@@ -2893,5 +2904,5 @@ Manage Interruption Behavior</p>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
