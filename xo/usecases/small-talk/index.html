@@ -2978,8 +2978,8 @@ This information is stored in the Small Talk context and can be accessed using: 
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  &quot;previousMatchData&quot;: []
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>}
 </span></code></pre></div>
-You can define and store multiple pattern tokens in the same user input and they can be accessed using the positional count variables – __0_, __1_, __2_ so on, and so forth. Since they capture the positional content, they are not continuous in case the optional token is missing from the user utterance. \
-For example, consider the pattern: _how is the <em>[ climate temperature ]  { at _~location } ~time</em></p>
+You can define and store multiple pattern tokens in the same user input and they can be accessed using the positional count variables – __0_, __1_, __2_ so on, and so forth. Since they capture the positional content, they are not continuous in case the optional token is missing from the user utterance. </p>
+<p>For example, consider the pattern: <em>how is the *[ climate temperature ]  { at _~location } ~time</em></p>
 <ul>
 <li><strong>Case1</strong>: <ul>
 <li>user utterance: “<em>how is the temperature in London today</em>“</li>
@@ -2996,8 +2996,8 @@ For example, consider the pattern: _how is the <em>[ climate temperature ]  { at
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  },
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  &quot;previousMatchData&quot;: []}
 </span></code></pre></div>
-* <strong>Case2</strong>:
-  * user utterance: “<em>how is the climate today</em>“</p>
+ * <strong>Case2</strong>:
+   * user utterance: “<em>how is the climate today</em>“</p>
 <p>context: 
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  &quot;pattern&quot;: &quot;how is the _[ climate temperature ]  { at _~location } ~time&quot;,
