@@ -2900,12 +2900,12 @@
 <li>Log in to your <a href="https://developer.amazon.com/dashboard">Amazon Developer Dashboard</a> and click the <strong>Alexa</strong> tab.</li>
 <li>Select <strong>Alexa Skills Kit</strong> on the menu.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alexa Skills" src="../images/alexa-1.png" title="Alexa Skills Kit" /></a></p>
+<p><a class="glightbox" href="../images/alexa-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alexa skills" src="../images/alexa-1.png" title="alexa skills" /></a></p>
 <ol>
 <li>Click the <strong>Skills</strong> tab on the <strong>Alexa Developer Console</strong>.</li>
 <li>Click <strong>Create Skill</strong>.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Create Skill" src="../images/alexa-2.png" title="create skill" /></a></p>
+<p><a class="glightbox" href="../images/alexa-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="create skill" src="../images/alexa-2.png" title="create skill" /></a></p>
 <ol>
 <li>Enter the <strong>Skill Name</strong> field information on the <strong>Create a New Skill</strong> page and select the <strong>primary locale</strong> value.</li>
 <li>Then, follow the steps below:</li>
@@ -2923,12 +2923,11 @@
 <li>Select the <strong>Start from Scratch</strong> tab.</li>
 <li>Click <strong>Continue with Template</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../images/alexa-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="continue with temaplate" src="../images/alexa-5.png" title="continue templates" /></a></p>
-<ul>
-<li>Enter the captcha shown on the screen and click <strong>Submit</strong> to process and create an Amazon Alexa voice skill.</li>
-</ul>
-<p>Your skill is built and listed on the Developer Console.</p>
-<p><a class="glightbox" href="../images/alexa-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="developer console" src="../images/alexa-6.png" title="developer console" /></a></p>
+<p><a class="glightbox" href="../images/alexa-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="continue with template" src="../images/alexa-5.png" title="continue with template" /></a></p>
+<ol>
+<li>Enter the captcha shown on the screen and click <strong>Submit</strong> to process and create an Amazon Alexa voice skill. Your skill is built and listed on the Developer Console.</li>
+</ol>
+<p><a class="glightbox" href="../images/alexa-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alexa voice skill" src="../images/alexa-6.png" title="alexa voice skill" /></a></p>
 <ol>
 <li>Click <strong>Your Skills</strong> to view the custom skill you added to the console.</li>
 </ol>
@@ -2953,17 +2952,23 @@
 <li>Click <strong>Confirm</strong> on the <strong>Download</strong> window.</li>
 <li>Click <strong>Drag and drop a <em>.json</em> file</strong> on the <strong>JSON Editor</strong> of the Alexa Developer Console and upload the file.</li>
 </ul>
-<p><a class="glightbox" href="../images/alexa-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="upload file" src="../images/alexa-9.png" title="upload file" /></a></p>
+<p><a class="glightbox" href="../images/alexa-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="developer console" src="../images/alexa-9.png" title="developer console" /></a></p>
 <ul>
 <li>The JSON Editor gets updated with the information in the uploaded file.</li>
 <li>Click <strong>Evaluate Model</strong> to review and ensure that there are no errors.</li>
 <li>Click <strong>Save Model</strong>, then click <strong>Build Model</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../images/alexa-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="save model" src="../images/alexa-10.png" title="save model" /></a></p>
-<p><strong>Note</strong>: It takes 2-5 mins for the Model to build. Any changes to the built model can be implemented by rebuilding the model.</p>
+<p><a class="glightbox" href="../images/alexa-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="evaluate model" src="../images/alexa-10.png" title="evaluate model" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It takes 2-5 mins for the Model to build. Any changes to the built model can be implemented by rebuilding the model.</p>
+</div>
 <h3 id="create-a-single-intent-with-the-searchquery-slot-type">Create a Single Intent with the SearchQuery Slot Type<a class="headerlink" href="#create-a-single-intent-with-the-searchquery-slot-type" title="Permanent link">&para;</a></h3>
 <p>The <code>AMAZON.SearchQuery</code> slot type helps capture less-predictable user utterances in the search query for an intent name. Once you configure the <strong><em>SearchQuery</em></strong> Slot Type, the Alexa Channel redirects the utterances to your Kore.ai Virtual Assistant for intent detection.</p>
-<p><strong>Important Tip</strong>: Please ensure that your skill uses at most one <code>AMAZON.SearchQuery</code> slot per intent. The <code>Amazon.SearchQuery</code> slot type cannot be combined with another intent slot in sample utterances.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Please ensure that your skill uses at most one <code>AMAZON.SearchQuery</code> slot per intent. The <code>Amazon.SearchQuery</code> slot type cannot be combined with another intent slot in sample utterances.</p>
+</div>
 <p>To configure a custom Interaction Model for the <strong>SearchQuery</strong> Slot Type, follow the steps below:</p>
 <ol>
 <li>Follow the sequence in Step 4 of <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-amazon-alexa-channel/#Dialog_Migration_to_Extract_the_Dialog_Tasks_from_Koreai">Dialog Migration to Extract the Dialog Tasks from Kore.ai</a>.</li>
@@ -2994,15 +2999,10 @@
 <ul>
 <li>Repeat these steps for all the remaining variable words.</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>On the <strong>Intents</strong> detail page, the <strong>Intent Slots</strong> section displays the slots you add. When you highlight a word or phrase in an utterance, you can add a new slot or select an existing slot.</p>
-</div>
-<p>6, Select <code>AMAZON.SearchQuery</code> from the dropdown list in the <strong>SLOT TYPE</strong> column.</p>
-<p><a class="glightbox" href="../images/alexa-15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="slot type" src="../images/alexa-15.png" title="slot type" /></a></p>
-<ol>
-<li>Click <strong>Save Model</strong> and <strong>Build Model</strong> on the top action panel.</li>
-</ol>
+<p><strong>Note</strong>: On the <strong>Intents</strong> detail page, the <strong>Intent Slots</strong> section displays the slots you add. When you highlight a word or phrase in an utterance, you can add a new slot or select an existing slot.</p>
+<p>Select <code>AMAZON.SearchQuery</code> from the dropdown list in the <strong>SLOT TYPE</strong> column.</p>
+<p><a class="glightbox" href="../images/alexa-15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intent slots" src="../images/alexa-15.png" title="intent slots" /></a></p>
+<p>Click <strong>Save Model</strong> and <strong>Build Model</strong> on the top action panel.</p>
 <h2 id="step-3-enable-account-linking-optional">Step 3: Enable Account Linking (Optional)<a class="headerlink" href="#step-3-enable-account-linking-optional" title="Permanent link">&para;</a></h2>
 <p>If end-user authorization is required for making API calls to external services, you need to enable the <strong>Account Linking</strong> feature for your Alexa Skill with the steps below:</p>
 <ol>
@@ -3013,10 +3013,7 @@
 </ol>
 <p><a class="glightbox" href="../images/alexa-16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="implicit grant" src="../images/alexa-16.png" title="implicit grant" /></a></p>
 <p>Alexa shares the user <strong>access tokens</strong> with Kore.ai assistants to make API calls defined for the Service nodes.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Please enable <strong>Account Linking</strong> on the Kore.ai Platform under <strong>Configurations</strong> in the <strong>Amazon Alexa</strong> window. This allows Kore.ai assistants to use the access tokens from Alexa to make API calls defined in the Service nodes.</p>
-</div>
+<p><strong>Important Tip</strong>: Please enable <strong>Account Linking</strong> on the Kore.ai Platform under <strong>Configurations</strong> in the <strong>Amazon Alexa</strong> window. This allows Kore.ai assistants to use the access tokens from Alexa to make API calls defined in the Service nodes.</p>
 <p><a class="glightbox" href="../images/alexa-17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="account linking" src="../images/alexa-17.png" title="account linking" /></a></p>
 <h2 id="step-4-enable-the-webhook-integration">Step 4: Enable the Webhook Integration<a class="headerlink" href="#step-4-enable-the-webhook-integration" title="Permanent link">&para;</a></h2>
 <ol>
@@ -3024,7 +3021,7 @@
 <li>Click the <strong>Endpoint</strong> left menu option.</li>
 <li>Select <strong>HTTPS</strong> as the <strong>Service Endpoint Type</strong>.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="service endpoint" src="../images/alexa-18.png" title="service endpoint" /></a></p>
+<p><a class="glightbox" href="../images/alexa-18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="service endpoint type" src="../images/alexa-18.png" title="service endpoint type" /></a></p>
 <ol>
 <li>On the Kore.ai XO Platform, copy the <strong>Webhook URL</strong> available under <strong>Configurations</strong> on the <strong>Amazon Alexa</strong> Channel window.</li>
 <li>Paste the URL for the <strong>Default Region</strong> field on the <strong>Service Endpoint Type</strong> page.</li>
@@ -3045,18 +3042,17 @@
 <li>Select <strong>Yes</strong> for <strong>Enable Channel</strong>.</li>
 <li>Click <strong>Save</strong> to complete the configuration.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configuration" src="../images/alexa-21.png" title="configuration" /></a></p>
 <h2 id="step-6-test-the-integration">Step 6: Test the Integration<a class="headerlink" href="#step-6-test-the-integration" title="Permanent link">&para;</a></h2>
 <p>Once done, test the utterance integration on the <strong>Alexa Developer Console</strong> using the steps below:</p>
 <ol>
 <li>Click the <strong>Test</strong> tab.</li>
 <li>Select <strong>Development</strong> for the <strong>Skill testing is enabled in</strong> option.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="test development" src="../images/alexa-22.png" title="test development" /></a></p>
+<p><a class="glightbox" href="../images/alexa-21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="skill testing" src="../images/alexa-21.png" title="skill testing" /></a></p>
 <ol>
 <li>Navigate to the <strong>Alexa Simulator</strong> section, type an intent utterance, and click enter.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alexa simulator" src="../images/alexa-23.png" title="alexa simulator" /></a></p>
+<p><a class="glightbox" href="../images/alexa-22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alexa simulator" src="../images/alexa-22.png" title="alexa simulator" /></a></p>
 <p>If you get a successful response, then the integration is considered a success.</p>
 <h2 id="step-7-distribution">Step 7: Distribution<a class="headerlink" href="#step-7-distribution" title="Permanent link">&para;</a></h2>
 <p>To publish your Alexa Skill on the <strong>Alexa App</strong>, follow the steps below:</p>
@@ -3064,7 +3060,7 @@
 <li>Click the <strong>Distribution</strong> tab on the <strong>Alexa Developer Console</strong>.</li>
 <li>Click <strong>Skill Preview</strong>.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-24.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="skill preview" src="../images/alexa-24.png" title="skill preview" /></a></p>
+<p><a class="glightbox" href="../images/alexa-23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="skill preview" src="../images/alexa-23.png" title="skill preview" /></a></p>
 <ol>
 <li>Enter the values for the required fields.</li>
 <li>Click <strong>Save and Continue</strong>.</li>
@@ -3074,7 +3070,7 @@
 <ol>
 <li>Click the <strong>Distribution</strong> tab. Then, click the <strong>Privacy &amp; Compliance</strong> left menu option.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-26.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="privacy compliance" src="../images/alexa-26.png" title="privacy compliance" /></a></p>
+<p><a class="glightbox" href="../images/alexa-24.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="privacy compliance" src="../images/alexa-24.png" title="privacy compliance" /></a></p>
 <ol>
 <li>Provide all the required details.</li>
 <li>Click <strong>Save and Continue</strong>.</li>
@@ -3086,22 +3082,22 @@
 <li>Enter the required details.</li>
 <li>Click <strong>Save and Continue</strong>.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-27.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="beta test" src="../images/alexa-27.png" title="beta test" /></a></p>
+<p><a class="glightbox" href="../images/alexa-26.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="beta test" src="../images/alexa-26.png" title="beta test" /></a></p>
 <h3 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h3>
 <p>The next step is to <strong>validate your skills</strong> for the model. After configuring <strong>Availability</strong>, you will be redirected to the <strong>Validation</strong> page under the <strong>Certification</strong> section. Here, follow these steps:</p>
 <ol>
 <li>Review and complete any required fixes based on the details displayed for the issue.</li>
 <li>Click <strong>Run</strong> to validate your skill.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-28.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="validate skill" src="../images/alexa-28.png" title="validate skill" /></a></p>
+<p><a class="glightbox" href="../images/alexa-27.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="validate skill" src="../images/alexa-27.png" title="validate skill" /></a></p>
 <ol>
 <li>Upon successful validation, your skill will be visible under <strong>Alexa Skills</strong> on Amazon App Store.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alexa skills" src="../images/alexa-29.png" title="alexa skills" /></a></p>
+<p><a class="glightbox" href="../images/alexa-28.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alexa skills" src="../images/alexa-28.png" title="alexa skills" /></a></p>
 <ol>
 <li>Additionally, your <strong>Skill Builder Checklist</strong> will display green checks for all the options.</li>
 </ol>
-<p><a class="glightbox" href="../images/alexa-30.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="skill builder" src="../images/alexa-30.png" title="skill builder" /></a></p>
+<p><a class="glightbox" href="../images/alexa-29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="builder checklist" src="../images/alexa-29.png" title="builder checklist" /></a></p>
 <ol>
 <li>After enabling the channel and verifying all the configurations, you can test the new channel integration by publishing your virtual assistant. <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/">Learn more</a>.</li>
 </ol>
