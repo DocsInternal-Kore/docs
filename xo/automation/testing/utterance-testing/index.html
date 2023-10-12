@@ -2760,9 +2760,7 @@
 <li>In the <strong>Type a user utterance</strong> field, enter the utterance that you want to test. Example: <em>Book a flight</em>.</li>
 <li>The result appears with a single, multiple, or no matching intents</li>
 </ol>
-<p>\
-<a class="glightbox" href="./images/utterance-testing-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-1.png" width="650"></a>
-\</p>
+<p><a class="glightbox" href="./images/utterance-testing-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-1.png" width="650"></a></p>
 <h2 id="types-of-test-results">Types of Test Results<a class="headerlink" href="#types-of-test-results" title="Permanent link">&para;</a></h2>
 <p>When you test an utterance, the NLP engine tries to identify an intent using the following  engines and intent identification features:</p>
 <ul>
@@ -2771,14 +2769,13 @@
 <li><a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-ai-overview/">Knowledge AI</a>, including the <a href="https://developer.kore.ai/docs/bots/nlp/knowledge-graph/">Knowledge Graph</a> engine and the <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/answer-from-documents/">Answer from Documents</a> feature,</li>
 <li><a href="https://developer.kore.ai/docs/bots/nlp/nlp-detection/">Ranking and Resolver</a>.</li>
 </ul>
-<p>!!! note</p>
-<div class="language-text highlight"><pre><span></span><code>Utterance testing differs for Knowledge AI and Ranking and Resolver, depending on the NLP version, Ranking and Resolver version, and whether you are using the Few-Shot Knowledge Graph model.
-</code></pre></div>
-<p>\
-<span style="font-weight: 500;">Utterance Match Classification</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Utterance testing differs for Knowledge AI and Ranking and Resolver, depending on the NLP version, Ranking and Resolver version, and whether you are using the Few-Shot Knowledge Graph model.</p>
+</div>
+<p>Utterance Match Classification</p>
 <p>Test results are classified as either <em>Probable Matches</em> or <em>Definitive Matches</em>, as follows;</p>
-<p>\
-<a class="glightbox" href="./images/utterence-testing-2-testing-matches.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterence-testing-2-testing-matches.png" width="300"></a></p>
+<p><a class="glightbox" href="./images/utterence-testing-2-testing-matches.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterence-testing-2-testing-matches.png" width="300"></a></p>
 <p><em>Definitive Matches</em> get high confidence scores and are assumed to be perfect matches for the user utterance. In published assistants, if user input matches with a single <em>Definitive Match</em>, the VA directly executes the task. If the utterances match with multiple <em>Definitive Matches</em>, they are sent as options for the end-user to choose one.</p>
 <p>On the other hand, <em>Probable Matches</em> are intents that score reasonably well against the user input but do not inspire enough confidence to be termed as exact matches. Internally the system further classifies possible matches into good and unsure matches based on their scores. If the end-user utterances were generating possible matches in a published VA, the assistant sends these matches as <em>“Did you mean?”</em> suggestions for the end-user.</p>
 <p>Below are the possible outcomes of a user utterance test:</p>
@@ -2786,9 +2783,7 @@
 <li><strong>Single Match (Possible or Definitive)</strong>: The NLP engine finds a match for the user utterance with a single intent or task. The intent is displayed below the User Utterance field. If it is a correct match, you can move on to test the next utterance or you can also further train the task to improve its score. If it is an incorrect match, you can mark it as incorrect and select the appropriate intent.</li>
 <li><strong>Multiple Matches (Possible or Definitive or Both)</strong>: NLP engine identifies multiple intents that match with the user utterance. From the results, select the radio button for the matching task and train it. </li>
 </ul>
-<p><a class="glightbox" href="./images/utterance-testing-3-utterancetesting-multiple.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-3-utterancetesting-multiple.png" width="650"></a>
-<br/>
-<br/></p>
+<p><a class="glightbox" href="./images/utterance-testing-3-utterancetesting-multiple.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-3-utterancetesting-multiple.png" width="650"></a></p>
 <ul>
 <li><strong>Unidentified Intent</strong>: The user input did not match any task in any of the linked assistants. Select an intent and train it to match the user utterance. </li>
 </ul>
@@ -2803,13 +2798,12 @@
 <ul>
 <li><strong>Identification Engine</strong> – Machine Learning, Fundamental Meaning or Knowledge Graph;</li>
 <li>**Training Type **– match can be from NER, pattern training, entity name, system concept, etc.. In case of pattern match, click the row to get the details for the same;</li>
-<li><strong>Confidence Score</strong> identified by the ML engine using NER training (only when Conditional Random Field is selected as the NER model) \</li>
+<li><strong>Confidence Score</strong> identified by the ML engine using NER training (only when Conditional Random Field is selected as the NER model) </li>
 </ul>
 <p><a class="glightbox" href="./images/utterance-testing-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-5.png" width="650"></a></p>
 <h2 id="analyzing-the-test-results">Analyzing the Test Results<a class="headerlink" href="#analyzing-the-test-results" title="Permanent link">&para;</a></h2>
 <p>When you test a user utterance, in addition to the matching intents you will also see an NLP Analysis box that provides a quick overview of the shortlisted intents, the NLP models using which they were shortlisted, corresponding scores, and the final winner.</p>
 <p><a class="glightbox" href="./images/utterance-testing-6-fm-en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-6-fm-en.png" width="650"></a></p>
-<p><br/></p>
 <p>Under the <em>Fundamental Meaning</em> tab, you can see the scores of all the intents even if they aren’t shortlisted.</p>
 <p>As mentioned above, the Kore.ai NLP engine uses Machine Learning, Fundamental Meaning, and Knowledge Graph (if any) models to match intents. If the NLP engine finds a single <em>Definitive Match</em> through one of the underlying models, you will see the task as the matching intent. If the test identifies more than one definitive match, you will receive them as options to pick the right intent.</p>
 <p>If the models shortlist more than one possible match, all the shortlisted intents are re-scored by the <em>Ranking and Resolver</em> using the <em>Fundamental Meaning</em> model to determine the final winner.</p>
@@ -2818,37 +2812,25 @@
 <p class="admonition-title">Note</p>
 <p>The NLP score is an absolute value and can only be used to compare against other tasks with the same input. Task scores cannot be compared across different utterances.</p>
 </div>
-<p><br/></p>
-<p><a class="glightbox" href="./images/utterance-testing-7-testing-mltc.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-7-testing-mltc.png" width="650"></a>
-<br/>
-<br/></p>
+<p><a class="glightbox" href="./images/utterance-testing-7-testing-mltc.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-7-testing-mltc.png" width="650"></a></p>
 <p>From each model dialog, clicking the icon on the top right will display the configurations and thresholds in place for the corresponding engines.</p>
 <h3 id="ml-model">ML Model<a class="headerlink" href="#ml-model" title="Permanent link">&para;</a></h3>
 <p>The ML model tries to match the user input with the task label and the training utterances of each task. If the user input consists of multiple sentences, each sentence is run separately against the task name as well as the task utterances.</p>
 <p>Click on the Machine Learning Model button to open the Machine Learning Model section of NLP Analysis. This shows only the names of the tasks that secure a positive score. In general, the more the number of training utterances that you add to a task, the greater are its chances for discovery. For more information, read <a href="https://developer.kore.ai/docs/bots/nlp/user-utterances/">Machine Learning</a>.</p>
-<p><br/></p>
-<p><a class="glightbox" href="./images/utterance-testing-8-testing-ml.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-8-testing-ml.png" width="650"></a>
-<br/>
-<br/></p>
+<p><a class="glightbox" href="./images/utterance-testing-8-testing-ml.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-8-testing-ml.png" width="650"></a></p>
 <h3 id="fm-model">FM Model<a class="headerlink" href="#fm-model" title="Permanent link">&para;</a></h3>
 <p>Apart from the ML model, each task in the VA is also scored against the user input using a comprehensive custom NLP algorithm that involves different combinations of task names, synonyms, and patterns. The Fundamental Meaning (FM) Model tab shows the analysis for all the intents in the VA. Click the tab to view the scores of each task.
 Clicking the <strong>Processed Utterance</strong> shows how the user utterance was analyzed and processed.</p>
-<p><span style="font-weight: 500;"> FM Scoring Model </span></p>
+<p>FM Scoring Model</p>
 <p>From v. 7.2, the FM engine generates the model in two ways, depending upon the language of the VA.</p>
 <p><strong>Approach 1</strong>: Supported for German and French languages.</p>
 <p>The <strong>word analysis</strong> factors pertaining to Original Word, Universal Parts of Speech, Dependency Relation and Related Word are elaborated.</p>
 <p>Next, the <strong>score breakup</strong> for each of the intents processed is displayed. Selecting a scored intent (matched or eliminated) displays the details of the scoring for each word. This includes the words from the utterance and score assigned to each based upon the dependency parsing.</p>
-<p><br/></p>
-<p><a class="glightbox" href="./images/utterance-testing-9-fm-de.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-9-fm-de.png" width="650"></a>
-<br/>
-<br/></p>
+<p><a class="glightbox" href="./images/utterance-testing-9-fm-de.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-9-fm-de.png" width="650"></a></p>
 <p><strong>Approach 2</strong>: Supported for languages, other than the ones mentioned above.</p>
 <p>The <strong>word analysis</strong> factors pertaining to Original Word, Role in the sentence and Processed word (in case of spell correction) are elaborated.</p>
 <p>Next, the <strong>score breakup</strong> for each of the intents processed is displayed. Selecting a scored intent (matched or eliminated) displays the details of the scoring for each word. The detailed breakdown is given below.</p>
-<p><br/></p>
-<p><a class="glightbox" href="./images/utterance-testing-10-fundamental-meaning.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-10-fundamental-meaning.png" width="650"></a>
-<br/>
-<br/></p>
+<p><a class="glightbox" href="./images/utterance-testing-10-fundamental-meaning.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-10-fundamental-meaning.png" width="650"></a></p>
 <p>The other scoring methods are:</p>
 <ul>
 <li><strong>Words Matched</strong>: The score given for the number of words in the user input that matched words in the task name or a trained utterance for the task.</li>
@@ -2870,10 +2852,7 @@ Clicking the <strong>Processed Utterance</strong> shows how the user utterance w
 <h3 id="knowledge-graph">Knowledge Graph<a class="headerlink" href="#knowledge-graph" title="Permanent link">&para;</a></h3>
 <p>If the VA includes a Knowledge Graph, the user utterances are processed to extract the terms and are mapped with the Knowledge Graph to fetch the relevant paths. All the paths containing more than a preset threshold of the number of terms get shortlisted for further screening. Path with 100% terms covered and having a similar FAQ in the path is considered a perfect match.</p>
 <p>In case the utterance triggers a dialog (as per run a dialog option in KG), the same is displayed as <em>matched intent</em> and <em>matched utterance</em>. You can further train the VA as you would for an intent from ML or FM engine. <a href="https://developer.kore.ai/docs/bots/nlp/knowledge-graph/">Know more about Knowledge Graph Training from here</a>.</p>
-<p><br/></p>
-<p><a class="glightbox" href="./images/utterance-testing-11-testing-kg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-11-testing-kg.png" width="650"></a>
-<br/>
-<br/></p>
+<p><a class="glightbox" href="./images/utterance-testing-11-testing-kg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-11-testing-kg.png" width="650"></a></p>
 <h3 id="answer-from-documents">Answer from Documents<a class="headerlink" href="#answer-from-documents" title="Permanent link">&para;</a></h3>
 <p>If you have enabled <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/answer-from-documents/">Answer from Documents</a> for your VA, and a match is found within your uploaded documents, you will see results for this match, provided the intent is not identified using any other method (a dialog task, a Knowledge Graph FAQ, the Machine Learning or the Fundamental Meaning engine).</p>
 <p>When an utterance is answered from a document, you will see a note mentioning that no Intent was identified by the ML, FM, and KG engines. Click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/manage-faqs/">Add to KG</a> to add an FAQ to the Knowledge Graph to address the utterance and improve intent identification. </p>
@@ -2885,19 +2864,13 @@ Clicking the <strong>Processed Utterance</strong> shows how the user utterance w
 <li>A similarity score between the tested utterance and the top-matched document;</li>
 <li>The content of the answer.</li>
 </ol>
-<p><br/></p>
-<p><a class="glightbox" href="./images/utterance-testing-12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-12.png" width="650"></a>
-<br/>
-<br/></p>
+<p><a class="glightbox" href="./images/utterance-testing-12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-12.png" width="650"></a></p>
 <h3 id="ranking-and-resolver">Ranking and Resolver<a class="headerlink" href="#ranking-and-resolver" title="Permanent link">&para;</a></h3>
 <p>Ranking and Resolver determines the final winner of the entire NLP computation. If either the ML model or the Knowledge Graph find a perfect match, the ranking and resolver doesn’t re-score the intent and presents it as a matched intent. Even if there are multiple perfect matches, they will be presented as options to the developers from which they can choose.</p>
 <p>The Ranking and Resolver re-scores all the other good and unsure matches identified by the three models using the Fundamental Meaning model. After re-scoring, if the final score of an intent crosses a certain threshold, it too is considered as a match.</p>
 <p>Selecting the Ranking and Resolver tab provides you with details on how the winning intent has been determined.</p>
 <p>The ranking and details for each match can be viewed by selecting the matched utterance.</p>
-<p><br/></p>
-<p><a class="glightbox" href="./images/utterance-testing-13-rr-matched-utterance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-13-rr-matched-utterance.png" width="650"></a>
-<br/>
-<br/></p>
+<p><a class="glightbox" href="./images/utterance-testing-13-rr-matched-utterance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-13-rr-matched-utterance.png" width="650"></a></p>
 <h4 id="rr-scoring-model">RR Scoring Model<a class="headerlink" href="#rr-scoring-model" title="Permanent link">&para;</a></h4>
 <p>Depending upon the Bot language the scoring model can be:</p>
 <ul>
@@ -2918,9 +2891,9 @@ Clicking the <strong>Processed Utterance</strong> shows how the user utterance w
 <table style="width: 100%; border-collapse: collapse; background-color: #dffbea;">
 <tr>
 <td><strong>Ranking and Resolver v2</strong>
-<br/>
+
 <a href="https://developer.kore.ai/docs/bots/nlp/nlp-detection/#Notes_on_Ranking_and_Resolver_Version_2">Version 2 of the Ranking and Resolver</a> only ranks the scores of the definitive matches from ML and KG engines (not the FM engine) without intent rescoring to ensure the best intent identification accuracy.
-If you enable Ranking and Resolver Version 2, your test results adjust as follows: <br/><br/>
+If you enable Ranking and Resolver Version 2, your test results adjust as follows:
 
 The Ranking & Resolver window displays the following:
    * The definitive intent that is matched based on ranking.
@@ -2929,7 +2902,7 @@ The Ranking & Resolver window displays the following:
    * The other definitive intent(s), the reason for elimination, and the ranking score.
    * The result, including the winning and eliminated intents.
 
-<br/><a class="glightbox" href="./images/utterance-testing-14-rr-testing.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-14-rr-testing.png" width="650"></a><br/><br/>
+<a class="glightbox" href="./images/utterance-testing-14-rr-testing.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-14-rr-testing.png" width="650"></a>
 
 The NLP Analysis page within the NLP Insights dashboard displays the following:
 * The given user utterance.
@@ -2937,9 +2910,7 @@ The NLP Analysis page within the NLP Insights dashboard displays the following:
 * The flow of Version 2 of R&R, including the ranking, identification, and marking of the winning intent as the definitive match.
 * The identification and marking of the probable match.
 
-<br/><a class="glightbox" href="./images/utterance-testing-15-rr-nlp.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-15-rr-nlp.png" width="650"></a>
-<br/>
-<br/>     
+<a class="glightbox" href="./images/utterance-testing-15-rr-nlp.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-15-rr-nlp.png" width="650"></a>    
    </td>
   <tr>
  </table>
@@ -2960,10 +2931,7 @@ The NLP Analysis page within the NLP Insights dashboard displays the following:
 <li>Under the <em>Intent Patterns</em> section, enter task patterns for the intent. For more information, read <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Managing_Patterns">Managing Patterns</a>.</li>
 <li>When you are done making the relevant training entries, click <strong>Re-Run Utterance</strong> to see if you have improved the intent to get a high confidence score. </li>
 </ol>
-<p><br/></p>
-<p><a class="glightbox" href="./images/utterance-testing-16-utterance-training.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-16-utterance-training.png" width="650"></a>
-<br/>
-<br/></p>
+<p><a class="glightbox" href="./images/utterance-testing-16-utterance-training.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-16-utterance-training.png" width="650"></a></p>
 <h3 id="view-matched-training-data">View Matched Training Data<a class="headerlink" href="#view-matched-training-data" title="Permanent link">&para;</a></h3>
 <p>The <strong>Ranker and Resolver NLP Analysis</strong> window lists the matched training data (ML utterances, intent synonyms, questions, patterns, and traits) that helped the ML, KG, or FM engine to identify the qualified intent during utterance testing. This crucial information is available in all the NLU languages of R&amp;R V1 and V2, and helps understand why the given intent is qualified.</p>
 <p>The system displays the matched training data for the following NLP engines and network models:</p>
@@ -3003,10 +2971,7 @@ The NLP Analysis page within the NLP Insights dashboard displays the following:
 </table>
 
 <p>For the intents qualified and eliminated in R&amp;R, the system displays the elimination reason in addition to the matched utterance, processed utterance, and the winning intent.</p>
-<p><br/></p>
-<p><a class="glightbox" href="./images/utterance-testing-17-rr-matched-training-data-view.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-17-rr-matched-training-data-view.png" width="650"></a>
-<br/>
-<br/></p>
+<p><a class="glightbox" href="./images/utterance-testing-17-rr-matched-training-data-view.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-17-rr-matched-training-data-view.png" width="650"></a></p>
 <h3 id="train-with-faq">Train with FAQ<a class="headerlink" href="#train-with-faq" title="Permanent link">&para;</a></h3>
 <p>If you want the assistant to respond to user utterance with FAQs there are two ways to do it:</p>
 <ul>
@@ -3016,7 +2981,6 @@ The NLP Analysis page within the NLP Insights dashboard displays the following:
 <p><a href="https://developer.kore.ai/docs/bots/nlp/knowledge-graph/">Know more about Knowledge Graph Training</a>.</p>
 <h3 id="mark-an-incorrect-match">Mark an Incorrect Match<a class="headerlink" href="#mark-an-incorrect-match" title="Permanent link">&para;</a></h3>
 <p>When a user input matches an incorrect task, do the following to match it with the right intent:</p>
-<p><br/></p>
 <p><a class="glightbox" href="./images/utterance-testing-18-mark-incorrect-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/utterance-testing-18-mark-incorrect-intent.png" width="650"></a></p>
 
 
