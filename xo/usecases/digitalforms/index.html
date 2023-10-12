@@ -3123,17 +3123,15 @@ Of special interest are the following Component Properties:</li>
 <li><strong>Add a Form</strong> by selecting it from the drop-down list.</li>
 <li>Select the <strong>Dialog to Invoke on Submit</strong> from the drop-down list.</li>
 <li>Click <strong>Save</strong>.</li>
-</ol>
-<blockquote>
-<p><strong>Note</strong>: While a Digital Form is used to define multiple Widgets and also add to multiple panels, it will be associated with a single Dialog Task across all Widgets and Panels.</p>
-</blockquote>
-<p><a class="glightbox" href="../images/invoke-form-in-widget.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="invoke form in widget" src="../images/invoke-form-in-widget.png" title="invoke form in widget" /></a></p>
-<ol>
 <li><strong>Add the Widget</strong> to an existing panel or create a new panel. 
 You can add a form directly to a panel, it creates a widget by default.</li>
 <li>You can <strong>Test</strong> the panel.</li>
 <li>Follow the steps provided <a href="https://developer.kore.ai/docs/bots/sdks/kore-ai-widget-sdk-tutorial/">here</a> to publish and host the panels.</li>
 </ol>
+<blockquote>
+<p><strong>Note</strong>: While a Digital Form is used to define multiple Widgets and also add to multiple panels, it will be associated with a single Dialog Task across all Widgets and Panels.</p>
+</blockquote>
+<p><a class="glightbox" href="../images/invoke-form-in-widget.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="invoke form in widget" src="../images/invoke-form-in-widget.png" title="invoke form in widget" /></a></p>
 <h2 id="the-user-experience">The User Experience<a class="headerlink" href="#the-user-experience" title="Permanent link">&para;</a></h2>
 <p>When the end-user initiates the dialog and reaches the node connecting to the Form node, the following events take place. Depending upon the experience selected at design time and the channel of invocation, the flow is the following:</p>
 <h3 id="form-experience">Form Experience<a class="headerlink" href="#form-experience" title="Permanent link">&para;</a></h3>
@@ -5543,27 +5541,17 @@ Yes/No values
 </span></code></pre></div>
 <h2 id="limitations"><strong>Limitations</strong><a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Digital Forms will not work as expected on the following channels:</p>
-</li>
-<li>
-<p>Amazon Alexa</p>
-</li>
+<li>Digital Forms will not work as expected on the following channels:<ul>
+<li>Amazon Alexa</li>
 <li>Cisco Jabber</li>
 <li>Google Assistant</li>
 <li>IVR Voice</li>
-<li>
-<p>Twilio Voice</p>
+<li>Twilio Voice</li>
+</ul>
 </li>
-<li>
-<p>You are advised to choose the Conversation Experience for these channels.</p>
-</li>
-<li>
-<p>Digital Forms created in the parent bot are not inherited into <strong>Smart Bots</strong>.</p>
-</li>
-<li>
-<p>The Digital Forms functionality is not applicable for <strong>Universal Bots</strong>.</p>
-</li>
+<li>You are advised to choose the Conversation Experience for these channels.</li>
+<li>Digital Forms created in the parent bot are not inherited into <strong>Smart Bots</strong>.</li>
+<li>The Digital Forms functionality is not applicable for <strong>Universal Bots</strong>.</li>
 </ul>
 
 
