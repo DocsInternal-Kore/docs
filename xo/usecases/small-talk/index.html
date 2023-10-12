@@ -2726,6 +2726,124 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    Benefits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    Terminology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-small-talk" class="md-nav__link">
+    Default Small Talk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-small-talk" class="md-nav__link">
+    Customize Small Talk
+  </a>
+  
+    <nav class="md-nav" aria-label="Customize Small Talk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-setup" class="md-nav__link">
+    General Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-groups" class="md-nav__link">
+    Add Groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-settings" class="md-nav__link">
+    Group Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-small-talk" class="md-nav__link">
+    Import Small Talk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-the-existing-greetings-group" class="md-nav__link">
+    Modify the Existing Greetings Group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-with-query-response-pairs" class="md-nav__link">
+    Work with Query – Response Pairs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#small-talk-context" class="md-nav__link">
+    Small Talk Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    Training
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2748,10 +2866,10 @@
 <p>The Small Talk conversation is designed as a series of interaction volleys between the assistant and the user. VAs that can answer social inputs like <em>How Are You?</em> are more likely to create a positive impression and help build an invaluable connection with the user.</p>
 <p>You can find Small Talk on the Unified XO Platform under <strong>Build &gt; Conversational Skills &gt; Small Talk</strong>.</p>
 <p><a class="glightbox" href="../images/small-talk-navigation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Small Talk Navigation" src="../images/small-talk-navigation.png" title="Small Talk Navigation" /></a></p>
-<h1 id="benefits">Benefits<a class="headerlink" href="#benefits" title="Permanent link">&para;</a></h1>
+<h2 id="benefits">Benefits<a class="headerlink" href="#benefits" title="Permanent link">&para;</a></h2>
 <p>Positive interactions are key to businesses today, especially in the context of CRM automation. Even when people know that they are not being assisted by a human, they still appreciate the occasional joke, casual chat or other friendly cues that make human-to-human conversations more engaging. This is why a Virtual Assistant that can handle small talk improves the experience for your users or customers.</p>
 <p>The Small Talk Engine within the Kore.ai XO Platform lets you configure the conversational elements that are specific to your business context, so that you can create a conversational VA that recognizes when people make small talk and responds accordingly, thus providing a friendly experience, rather than one that feels dry and technical. </p>
-<h1 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h1>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <p>The Small Talk Engine provides the following features:</p>
 <ul>
 <li><strong><em>Custom Small Talk</em></strong> allows you to build a personality and train the VA to conduct casual conversations around your areas of interest.</li>
@@ -2759,7 +2877,7 @@
 <li><strong>Emoji identification</strong>: The XO Platform can identify the emojis in user utterances and respond accordingly, using Small Talk.</li>
 <li><strong>Small Talk works with intent detection.</strong> Interjections, such as <em>hello</em> at the start of an utterance will not be considered as small talk. For example, the user’s utterance <em>Hello, I need to book a flight</em> will be matched with the intent: <em>book a flight</em>, so the VA will address the user’s need, rather than use Small Talk.</li>
 </ul>
-<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Small Talk is a series of User Utterances and Bot Responses. The primary objective of Small Talk is to engage users in casual conversations and in general, functional topics or business transactions are not included in Small Talk.</p>
 <p>The various user queries in Small Talk are categorized into groups and assigned hierarchical structure. The <strong>Greetings</strong> category is auto-generated by default for all new assistants. This group contains various questions related to greetings and pleasantries. You can define additional groups or categories and build interaction flows under each group.</p>
 <ul>
@@ -2767,14 +2885,14 @@
 <li>A child question can have one or more subsequent child questions up to three levels. Every question can have one or more alternate questions.</li>
 <li>Every question can have one or more responses. When multiple responses are present, the Platform will pick one at random.</li>
 </ul>
-<h1 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h1>
+<h2 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h2>
 <p>Following are the various terms associated with Small Talk:</p>
 <ol>
 <li><strong>Groups</strong> – Based upon the purpose and content, Small Talk is categorized into groups.</li>
 <li><strong>User Queries</strong> – For each group, you can add User Queries, Alternate Queries, and Child Queries. Queries are formed using patterns. <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#managing-patterns">Know more about patterns</a></li>
 <li><strong>Bot Responses</strong> – Each User Query must be associated with a bot response. These can be in plain text format or JavaScript. You can specify channel-specific responses. You can also enter multiple responses, one of which will be picked randomly by the Platform at runtime.</li>
 </ol>
-<h1 id="default-small-talk">Default Small Talk<a class="headerlink" href="#default-small-talk" title="Permanent link">&para;</a></h1>
+<h2 id="default-small-talk">Default Small Talk<a class="headerlink" href="#default-small-talk" title="Permanent link">&para;</a></h2>
 <p>Small Talk is a VA-level task that is configured automatically. When you create a new VA, the Small Talk is generated by default.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2873,9 +2991,9 @@ comment`est`vous comment`ca`va ca`va
 </table>
 
 <p><a class="glightbox" href="../images/standard-responses-greeting-group.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Standard Responses Greeting Group" src="../images/standard-responses-greeting-group.png" title="Standard Responses Greetings Group" /></a></p>
-<h1 id="customize-small-talk">Customize Small Talk<a class="headerlink" href="#customize-small-talk" title="Permanent link">&para;</a></h1>
+<h2 id="customize-small-talk">Customize Small Talk<a class="headerlink" href="#customize-small-talk" title="Permanent link">&para;</a></h2>
 <p>This section provides step-by-step guidance on the general set up and group configurations to customize Small Talk for your VA.</p>
-<h2 id="general-setup">General Setup<a class="headerlink" href="#general-setup" title="Permanent link">&para;</a></h2>
+<h3 id="general-setup">General Setup<a class="headerlink" href="#general-setup" title="Permanent link">&para;</a></h3>
 <p>To add Small Talk to your VA, follow the below steps:</p>
 <ol>
 <li>Open the VA to which you want to add Small Talk;</li>
@@ -2883,14 +3001,14 @@ comment`est`vous comment`ca`va ca`va
 <li>You need to start by adding a <strong>New Group.</strong></li>
 <li>Next, you need to add <strong>User Queries</strong> and <strong>Bot Responses</strong>.</li>
 </ol>
-<h2 id="add-groups">Add Groups<a class="headerlink" href="#add-groups" title="Permanent link">&para;</a></h2>
+<h3 id="add-groups">Add Groups<a class="headerlink" href="#add-groups" title="Permanent link">&para;</a></h3>
 <p>You can create a <strong>New Group</strong> manually by clicking <strong>New Group</strong>.</p>
 <p><a class="glightbox" href="../images/add-new-smalltalk-group.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Add New SmallTalk Group" src="../images/add-new-smalltalk-group.png" title="Add New SmallTalk Group" /></a></p>
 <p>On the <strong>New Group</strong> dialog box, enter a name in the <strong>Group Name</strong> field, then click <strong>Proceed</strong>.</p>
 <p><a class="glightbox" href="../images/add-smalltalk-group-name.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Add SmallTalk Group Name" src="../images/add-smalltalk-group-name.png" title="Add SmallTalk Group Name" /></a></p>
 <p>From the Small Talk editor that opens you can enter User Utterance – Bot Response pairs and <strong>Add</strong> to the list.</p>
 <p><a class="glightbox" href="../images/add-user-utterance%20-bot-response-pairs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Add User Utterance and Bot Response Pairs" src="../images/add-user-utterance%20-bot-response-pairs.png" title="Add User Utterance and Bot Response Pairs" /></a></p>
-<h3 id="group-settings">Group Settings<a class="headerlink" href="#group-settings" title="Permanent link">&para;</a></h3>
+<h4 id="group-settings">Group Settings<a class="headerlink" href="#group-settings" title="Permanent link">&para;</a></h4>
 <p>On hovering over any Small Talk group, you have the option to:</p>
 <ul>
 <li><strong>Delete</strong> the group.</li>
@@ -2899,7 +3017,7 @@ comment`est`vous comment`ca`va ca`va
 </a></li>
 </ul>
 <p><a class="glightbox" href="../images/manage-variable-namespaces.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Manage Variable Namespaces" src="../images/manage-variable-namespaces.png" title="Manage Variable Namespaces" /></a></p>
-<h2 id="import-small-talk">Import Small Talk<a class="headerlink" href="#import-small-talk" title="Permanent link">&para;</a></h2>
+<h3 id="import-small-talk">Import Small Talk<a class="headerlink" href="#import-small-talk" title="Permanent link">&para;</a></h3>
 <p>If you have already had Small Talk for your company, you can import it using a JSON or TSV file  </p>
 <ul>
 <li>While in Small Talk, click the <strong>more</strong> (ellipses) icon and select the <strong>Import</strong> option.</li>
@@ -2916,9 +3034,9 @@ comment`est`vous comment`ca`va ca`va
 <p><strong>Warning</strong>
 Existing Small Talk will be replaced with the imported file.</p>
 </blockquote>
-<h2 id="modify-the-existing-greetings-group">Modify the Existing Greetings Group<a class="headerlink" href="#modify-the-existing-greetings-group" title="Permanent link">&para;</a></h2>
+<h3 id="modify-the-existing-greetings-group">Modify the Existing Greetings Group<a class="headerlink" href="#modify-the-existing-greetings-group" title="Permanent link">&para;</a></h3>
 <p>You can click the existing Greetings group to modify it, if the default small talk does not fit your needs. From the Small Talk editor that opens you can now enter User Utterance – Bot Response pairs and <strong>Add</strong> to the list.</p>
-<h2 id="work-with-query-response-pairs">Work with Query – Response Pairs<a class="headerlink" href="#work-with-query-response-pairs" title="Permanent link">&para;</a></h2>
+<h3 id="work-with-query-response-pairs">Work with Query – Response Pairs<a class="headerlink" href="#work-with-query-response-pairs" title="Permanent link">&para;</a></h3>
 <p>Once you create/import a group, you can add/modify the query-response pairs.</p>
 <ol>
 <li>Enter the User Query in the <strong>User</strong> column and the corresponding Bot Response in the <strong>Bot</strong> column.</li>
@@ -2964,7 +3082,7 @@ Existing Small Talk will be replaced with the imported file.</p>
 </ul>
 </li>
 </ol>
-<h1 id="small-talk-context">Small Talk Context<a class="headerlink" href="#small-talk-context" title="Permanent link">&para;</a></h1>
+<h2 id="small-talk-context">Small Talk Context<a class="headerlink" href="#small-talk-context" title="Permanent link">&para;</a></h2>
 <p>You can mark desired information in the user utterance pattern definition and it will be available in the context. A new section called <strong>Small Talk</strong> is introduced under <strong>NLP Analysis</strong> which stores the contextual information from the ongoing small talk. You can use this information to personalize the Small Talk messages.</p>
 <p>Marking a section in the user input pattern by including an underscore ‘_’ symbol you can indicate the required information. For example, <em>I am from _~location Where are you from?</em> will allow you to capture the location from the user utterance. 
 This information is stored in the Small Talk context and can be accessed using: <code>context.smallTalk.matchData.0</code></p>
@@ -3026,7 +3144,7 @@ This information is stored in the Small Talk context and can be accessed using: 
 <li>A new primary Small Talk intent is detected.</li>
 <li>Any other intent which is not Small Talk is triggered.</li>
 </ul>
-<h1 id="training">Training<a class="headerlink" href="#training" title="Permanent link">&para;</a></h1>
+<h2 id="training">Training<a class="headerlink" href="#training" title="Permanent link">&para;</a></h2>
 <p>Once you have made changes to the Small Talk, it needs to be trained for the VA to pick up the Small Talk. Click  <strong>Train</strong> on the Small Talk editor screen to train the assistant.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
