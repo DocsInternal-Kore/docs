@@ -2968,17 +2968,17 @@
 <p>Click <strong>Digital Forms &gt; New Form</strong>.</p>
 </li>
 <li>
-<p>On the <strong>New Form</strong> page, enter</p>
-</li>
-<li><strong>Name</strong> of the Form</li>
-<li><strong>Display Name</strong> for the Form</li>
-<li>
-<p><strong>Description</strong> of the Form 
-<a class="glightbox" href="../images/create-new-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Create New Form" src="../images/create-new-form.png" title="Create New Form" /></a></p>
+<p>On the <strong>New Form</strong> page, enter the following:</p>
 </li>
 <li>
-<p><strong>Select form’s Header Style</strong>: You can choose a specific header style from the listed illustrations – the circle indicates the position of logo/icon with respect to the title of the form in the header. Click the card to select the style. If it has a logo, you can upload an image file (jpg or png) for the logo. </p>
+<p><strong>Name</strong> of the Form.</p>
 </li>
+<li><strong>Display Name</strong> for the Form.</li>
+<li><strong>Description</strong> of the Form.</li>
+</ol>
+<p><a class="glightbox" href="../images/create-new-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Create New Form" src="../images/create-new-form.png" title="Create New Form" /></a></p>
+<ol>
+<li><strong>Select form’s Header Style</strong>: You can choose a specific header style from the listed illustrations – the circle indicates the position of logo/icon with respect to the title of the form in the header. Click the card to select the style. If it has a logo, you can upload an image file (jpg or png) for the logo. </li>
 </ol>
 <blockquote>
 <p><strong>Note</strong>: During the Export of the Bot, the logo is not exported along with Digital Forms. So, while importing this Bot, you need to separately copy the logo image file and then manually reupload the logo.</p>
@@ -3093,16 +3093,21 @@ Of special interest are the following Component Properties:</li>
 </li>
 </ul>
 <blockquote>
-<p><strong>IMPORTANT NOTE</strong>: We strongly urge you not to make changes to the connection settings as this affects the V's performance.
-* <strong>Sub-dialog Node</strong> is configured as normal (<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-dialog-node/">see here for details</a>) Of special interest are the following:
-    * Use the <strong>Entity Post-assignment</strong> to capture the user input.
-    * In case you modify the sub-dialog or the source form, you are presented with an option to <strong>Regenerate Dialog</strong>. This ensures that the changes are reflected in the task without having to rebuild the entire task. Be aware that the changes are reflected in all places this sub-dialog is used. </p>
+<p><strong>NOTE</strong>: We urge you not to make changes to the connection settings as this affects the V's performance.</p>
 </blockquote>
-<div class="language-text highlight"><pre><span></span><code>![form experience node](../usecases/images/subdialog-node-configuration.png &quot;form experience node&quot;)
-</code></pre></div>
+<ul>
+<li>
+<p><strong>Sub-dialog Node</strong> is configured as normal (<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-dialog-node/">see here for details</a>) Of special interest are the following:</p>
+</li>
+<li>
+<p>Use the <strong>Entity Post-assignment</strong> to capture the user input.</p>
+</li>
+<li>In case you modify the sub-dialog or the source form, you are presented with an option to <strong>Regenerate Dialog</strong>. This ensures that the changes are reflected in the task without having to rebuild the entire task. Be aware that the changes are reflected in all places this sub-dialog is used. </li>
+</ul>
+<p><a class="glightbox" href="../images/subdialog-node-configuration.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="form experience node" src="../images/subdialog-node-configuration.png" title="form experience node" /></a></p>
 <ol>
 <li>The user input can be accessed as follows:<ul>
-<li>Form component values are accessed from the Context Object using <code>{{context.forms.&amp;lt;form_name&gt;.&amp;lt;component_name&gt;}}</code></li>
+<li>Form component values are accessed from the Context Object using <code>{{context.forms.form_name.component_name}}</code></li>
 <li>In the case of the sub-dialog, the variables used in the post-assignment settings as <code>{{context.&amp;lt;variable_name&gt;}}</code></li>
 </ul>
 </li>
@@ -3112,14 +3117,12 @@ Of special interest are the following Component Properties:</li>
 <p>Digital Forms are rendered in Digital Views by configuring Widgets &amp; Panels, <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/digital-views/">see here for more on Digital Views</a>.</p>
 <p>To invoke a form using Widgets and Panels, follow the below steps:</p>
 <ol>
-<li>Create a widget to invoke the Digital Form from <strong>Build -&gt; Digital Skills -&gt; Digital Views</strong> option.<ul>
+<li>Create a widget to invoke the Digital Form from <strong>Build -&gt; Digital Skills -&gt; Digital Views</strong> option.</li>
 <li>Enter the name.</li>
 <li>Select <em>Digital Forms</em> as the <strong>Source.</strong></li>
 <li><strong>Add a Form</strong> by selecting it from the drop-down list.</li>
 <li>Select the <strong>Dialog to Invoke on Submit</strong> from the drop-down list.</li>
 <li>Click <strong>Save</strong>.</li>
-</ul>
-</li>
 </ol>
 <blockquote>
 <p><strong>Note</strong>: While a Digital Form is used to define multiple Widgets and also add to multiple panels, it will be associated with a single Dialog Task across all Widgets and Panels.</p>
@@ -3278,18 +3281,28 @@ Otherwise, the ongoing task goes on, and based on the configuration, the user is
 <ul>
 <li>
 <p><strong>Text Field</strong> – used for single-line input.</p>
-<p><a class="glightbox" href="../images/text-field-input.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="text field" src="../images/text-field-input.png" title="text field" /></a>
-* <strong>Text Area</strong> – used for multi-line entry.</p>
-<p><a class="glightbox" href="../images/text-area.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="text area" src="../images/text-area.png" title="text area" /></a>
-* <strong>Number</strong> – used for numerical entries.</p>
+<p><a class="glightbox" href="../images/text-field-input.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="text field" src="../images/text-field-input.png" title="text field" /></a></p>
+</li>
+<li>
+<p><strong>Text Area</strong> – used for multi-line entry.</p>
+<p><a class="glightbox" href="../images/text-area.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="text area" src="../images/text-area.png" title="text area" /></a></p>
+</li>
+<li>
+<p><strong>Number</strong> – used for numerical entries.</p>
 </li>
 </ul>
-<p><a class="glightbox" href="../images/number-field.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="number field" src="../images/number-field.png" title="number field" /></a>
-* <strong>Radio Button</strong> – used as a selection option from a given list.</p>
-<p><a class="glightbox" href="../images/radio-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="radio button" src="../images/radio-button.png" title="radio button" /></a>
-* <strong>Dropdown</strong> – Used as a selection option from a given list; can be multi-select.</p>
-<p><a class="glightbox" href="../images/dropdown-list.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="dropdown list" src="../images/dropdown-list.png" title="dropdown list" /></a>
-* <strong>Checkbox</strong> – Used for multi-select option from a given list.</p>
+<p><a class="glightbox" href="../images/number-field.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="number field" src="../images/number-field.png" title="number field" /></a></p>
+<ul>
+<li><strong>Radio Button</strong> – used as a selection option from a given list.</li>
+</ul>
+<p><a class="glightbox" href="../images/radio-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="radio button" src="../images/radio-button.png" title="radio button" /></a></p>
+<ul>
+<li><strong>Dropdown</strong> – Used as a selection option from a given list; can be multi-select.</li>
+</ul>
+<p><a class="glightbox" href="../images/dropdown-list.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="dropdown list" src="../images/dropdown-list.png" title="dropdown list" /></a></p>
+<ul>
+<li><strong>Checkbox</strong> – Used for multi-select option from a given list.</li>
+</ul>
 <p><a class="glightbox" href="../images/checkbox.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="checkbox" src="../images/checkbox.png" title="checkbox" /></a></p>
 <ul>
 <li><strong>Date</strong> – Used for date entries, gives a date picker for the user to choose the date.</li>
@@ -3301,16 +3314,20 @@ Use the <strong>Date component</strong> and set the <em>Time option</em> to <em>
 </ul>
 <p><a class="glightbox" href="../images/date-time.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="date and time" src="../images/date-time.png" title="date and time" /></a></p>
 <ul>
-<li><strong>Phone Number</strong> – Used for phone number entries, allows the user to choose the country code.
-  <a class="glightbox" href="../images/phone-number.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="phone number" src="../images/phone-number.png" title="phone number" /></a></li>
+<li><strong>Phone Number</strong> – Used for phone number entries, allows the user to choose the country code.</li>
+</ul>
+<p><a class="glightbox" href="../images/phone-number.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="phone number" src="../images/phone-number.png" title="phone number" /></a></p>
+<ul>
 <li><strong>Email</strong> – Used for email address entries, validates for <em><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#120;&#120;&#120;&#64;&#117;&#117;&#117;&#46;&#99;&#111;&#109;">&#120;&#120;&#120;&#64;&#117;&#117;&#117;&#46;&#99;&#111;&#109;</a></em> format.</li>
 </ul>
 <p><a class="glightbox" href="../images/email-field.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="email" src="../images/email-field.png" title="email" /></a></p>
 <ul>
 <li><strong>Toggle</strong> – Used for switching between two values, ideal for yes/no type of inputs.</li>
 </ul>
-<p><a class="glightbox" href="../images/toggle-field.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Toggle" src="../images/toggle-field.png" title="toggle" /></a>
-* <strong>Address</strong> – Used for address entries.</p>
+<p><a class="glightbox" href="../images/toggle-field.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Toggle" src="../images/toggle-field.png" title="toggle" /></a></p>
+<ul>
+<li><strong>Address</strong> – Used for address entries.</li>
+</ul>
 <p><a class="glightbox" href="../images/address-field.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="address" src="../images/address-field.png" title="address" /></a></p>
 <ul>
 <li><strong>URL</strong> – Used for web URL entries, validates for <em>xxx.com</em> format.</li>
