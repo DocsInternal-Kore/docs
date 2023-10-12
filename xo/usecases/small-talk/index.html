@@ -2967,10 +2967,10 @@ Existing Small Talk will be replaced with the imported file.</p>
 </ol>
 <h1 id="small-talk-context">Small Talk Context<a class="headerlink" href="#small-talk-context" title="Permanent link">&para;</a></h1>
 <p>You can mark desired information in the user utterance pattern definition and it will be available in the context. A new section called <strong>Small Talk</strong> is introduced under <strong>NLP Analysis</strong> which stores the contextual information from the ongoing small talk. You can use this information to personalize the Small Talk messages.</p>
-<p>Marking a section in the user input pattern by including an underscore ‘<em>’ symbol you can indicate the required information. For example, _I am from _~location Where are you from?</em> will allow you to capture the location from the user utterance. \
-This information is stored in the Small Talk context and can be accessed using: <code>context.smallTalk.matchData._0</code> The following is the JSON structure: \
-<code>context.smallTalk.matchData._0 The following is the JSON structure:</code></p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+<p>Marking a section in the user input pattern by including an underscore ‘_’ symbol you can indicate the required information. For example, <em>I am from _~location Where are you from?</em> will allow you to capture the location from the user utterance. 
+This information is stored in the Small Talk context and can be accessed using: <code>context.smallTalk.matchData._0</code> The following is the JSON structure: 
+<code>context.smallTalk.matchData._0 The following is the JSON structure:</code>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  &quot;pattern&quot;: &quot;I am from _~location Where are you from?&quot;,
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  &quot;matchData&quot;: {
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    &quot;_0&quot;: &quot;chicago&quot;
