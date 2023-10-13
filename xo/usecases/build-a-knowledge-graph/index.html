@@ -2939,11 +2939,11 @@ All features explained here are supported by the Few-Shot Knowledge Graph, excep
 <li>Click the <strong>Delete</strong> icon.</li>
 <li>
 <p>On the confirmation dialog box, you can find the following options:</p>
-</li>
-<li>
-<p><strong>Delete the FAQs along with the term</strong> – Choosing this option deletes the term and FAQs under it.</p>
-</li>
+<ul>
+<li><strong>Delete the FAQs along with the term</strong> – Choosing this option deletes the term and FAQs under it.</li>
 <li><strong>Delete the term and move FAQs to root term</strong> - Choosing this option deletes the term and moves the FAQs under it to the root term.</li>
+</ul>
+</li>
 </ol>
 <blockquote>
 <p><strong>Note</strong></p>
@@ -2974,17 +2974,15 @@ All features explained here are supported by the Few-Shot Knowledge Graph, excep
 <p>The Knowledge Graph engine works well with the default settings, but you can fine-tune the KG engine performance. Here are a few guidelines:</p>
 <ol>
 <li>Configure the Knowledge Graph by defining terms, <strong>synonyms, primary and alternative questions, or user utterances.</strong> Though hierarchy does not affect the KG engine performance, it does help organize and guide your knowledge implementation.</li>
-<li>
-<p>Set the following parameters:</p>
-</li>
-<li>
-<p><strong>Path Coverage</strong> – For Ontology-based graphs, you can define the minimum percentage of terms in the user’s utterance to be present in a path to qualify it for further scoring.</p>
-</li>
+<li>Set the following parameters:<ul>
+<li><strong>Path Coverage</strong> – For Ontology-based graphs, you can define the minimum percentage of terms in the user’s utterance to be present in a path to qualify it for further scoring.</li>
 <li><strong>Definite Score for KG</strong> – Define the minimum score for a KG intent match to consider as a definite match and discard any other intent matches found.</li>
 <li><strong>Minimum and Definitive Level for Knowledge Tasks</strong> – Define minimum and definitive threshold to identify and respond in case of a knowledge task.</li>
 <li><strong>KG Suggestions Count</strong> – Define the maximum number of KG/FAQ suggestions to present when a definite KG intent match is unavailable.</li>
 <li><strong>The proximity of Suggested Matches</strong> – Define the maximum difference to allow between top-scoring and immediate next suggested questions to consider as equally important. </li>
 <li><strong>Qualify Contextual Paths</strong> – This ensures that the bot context is populated and retained with the terms/nodes of the matched intent. This further enhances the user experience.</li>
+</ul>
+</li>
 </ol>
 <blockquote>
 <p><strong>Note</strong>: You can customize these settings in Natural Language &gt; Thresholds &amp; Configurations. See Knowledge Graph Training for details.</p>
