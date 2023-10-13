@@ -2886,9 +2886,11 @@
 <p>The steps to add the <strong>Amazon Alexa</strong> channel are given below:</p>
 <ol>
 <li><strong>Add a New Skill</strong> – Create a new Alexa skill in the Amazon developer console.</li>
-<li><strong>Configure the Interaction Model</strong> – The Alexa skill can be built in one of the following ways:</li>
+<li><strong>Configure the Interaction Model</strong> – The Alexa skill can be built in one of the following ways:<ul>
 <li>Dialog Migration to extract the dialog tasks from Kore.ai and import them into Amazon Alexa’s Skills. This will entail reimport for reflecting the ongoing changes in the dialog definition. Intent detection and execution are primarily controlled by Alexa.</li>
 <li>Redirection to create a single intent in your skill with the <a href="https://developer.amazon.com/en-US/docs/alexa/custom-skills/slot-type-reference.html#searchquery">SearchQuery</a> Slot Type that accepts user inputs and redirects them to your Kore.ai VA. Intent detection and execution are primarily controlled by the Kore.ai VA.</li>
+</ul>
+</li>
 <li><strong>Enable Account Linking (Optional)</strong> – To access end user’s authentication details to make API calls to external services.</li>
 <li><strong>Enable Webhook Integration</strong> – To integrate Amazon Alexa with your Kore.ai VA, enable webhook integration by copying the <strong>Webhook URL</strong> on the <strong>Configurations</strong> tab of the Amazon Alexa Channel page in the XO Platform and select <em>HTTPS</em> as the Service Endpoint type.</li>
 <li><strong>Enable Channel</strong> – Enable the channel after completing the integration setup.</li>
@@ -2898,37 +2900,27 @@
 <h2 id="step-1-add-a-new-skill">Step 1: Add a New Skill<a class="headerlink" href="#step-1-add-a-new-skill" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Log in to your <a href="https://developer.amazon.com/dashboard">Amazon Developer Dashboard</a> and click the <strong>Alexa</strong> tab.</li>
-<li>Select <strong>Alexa Skills Kit</strong> on the menu.</li>
-</ol>
-<p><a class="glightbox" href="../images/alexa-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alexa skills" src="../images/alexa-1.png" title="alexa skills" /></a></p>
-<ol>
+<li>Select <strong>Alexa Skills Kit</strong> on the menu. \
+<a class="glightbox" href="../images/alexa-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alexa skills" src="../images/alexa-1.png" title="alexa skills" /></a></li>
 <li>Click the <strong>Skills</strong> tab on the <strong>Alexa Developer Console</strong>.</li>
-<li>Click <strong>Create Skill</strong>.</li>
-</ol>
-<p><a class="glightbox" href="../images/alexa-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="create skill" src="../images/alexa-2.png" title="create skill" /></a></p>
-<ol>
+<li>Click <strong>Create Skill</strong>. \
+ <a class="glightbox" href="../images/alexa-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="create skill" src="../images/alexa-2.png" title="create skill" /></a></li>
 <li>Enter the <strong>Skill Name</strong> field information on the <strong>Create a New Skill</strong> page and select the <strong>primary locale</strong> value.</li>
-<li>Then, follow the steps below:</li>
+<li>Then, follow the steps below:<ul>
 <li>Enable the <strong>Sync Locale</strong> option, if required.</li>
-<li>Select <strong>Custom</strong> (default selection) to <strong>Choose a model to add to your skill</strong> to create all of your skill’s interactions and map them to your custom model.</li>
-</ol>
-<p><a class="glightbox" href="../images/alexa-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sync locale" src="../images/alexa-3.png" title="sync locale" /></a></p>
-<ul>
+<li>Select <strong>Custom</strong> (default selection) to <strong>Choose a model to add to your skill</strong> to create all of your skill’s interactions and map them to your custom model.\
+<a class="glightbox" href="../images/alexa-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sync locale" src="../images/alexa-3.png" title="sync locale" /></a></li>
 <li>Under <strong>Choose a method to host your skill’s backend resources</strong> section, select <strong>Alexa-hosted(Node.js)</strong>.</li>
-<li>Click <strong>Create Skill</strong>.</li>
-</ul>
-<p><a class="glightbox" href="../images/alexa-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="choose method" src="../images/alexa-4.png" title="choose method" /></a></p>
-<ul>
+<li>Click <strong>Create Skill</strong>. \
+<a class="glightbox" href="../images/alexa-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="choose method" src="../images/alexa-4.png" title="choose method" /></a></li>
 <li>Select a template to add to your skill with these steps:</li>
 <li>Select the <strong>Start from Scratch</strong> tab.</li>
-<li>Click <strong>Continue with Template</strong>.</li>
+<li>Click <strong>Continue with Template</strong>. \
+<a class="glightbox" href="../images/alexa-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="continue with template" src="../images/alexa-5.png" title="continue with template" /></a></li>
 </ul>
-<p><a class="glightbox" href="../images/alexa-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="continue with template" src="../images/alexa-5.png" title="continue with template" /></a></p>
-<ol>
-<li>Enter the captcha shown on the screen and click <strong>Submit</strong> to process and create an Amazon Alexa voice skill. Your skill is built and listed on the Developer Console.</li>
-</ol>
-<p><a class="glightbox" href="../images/alexa-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alexa voice skill" src="../images/alexa-6.png" title="alexa voice skill" /></a></p>
-<ol>
+</li>
+<li>Enter the captcha shown on the screen and click <strong>Submit</strong> to process and create an Amazon Alexa voice skill. Your skill is built and listed on the Developer Console. \
+<a class="glightbox" href="../images/alexa-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alexa voice skill" src="../images/alexa-6.png" title="alexa voice skill" /></a></li>
 <li>Click <strong>Your Skills</strong> to view the custom skill you added to the console.</li>
 </ol>
 <h2 id="step-2-configure-the-interaction-model">Step 2: Configure the Interaction Model<a class="headerlink" href="#step-2-configure-the-interaction-model" title="Permanent link">&para;</a></h2>
