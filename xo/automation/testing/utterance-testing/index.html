@@ -2752,18 +2752,12 @@
     Types of Test Results
   </a>
   
-    <nav class="md-nav" aria-label="Types of Test Results">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#utterance-match-classification" class="md-nav__link">
     Utterance Match Classification
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2833,7 +2827,7 @@
         
           <li class="md-nav__item">
   <a href="#ranking-and-resolver-v2" class="md-nav__link">
-    Ranking and Resolver v2"
+    Ranking and Resolver v2
   </a>
   
 </li>
@@ -2938,7 +2932,7 @@
 <p class="admonition-title">Note</p>
 <p>Utterance testing differs for Knowledge AI and Ranking and Resolver, depending on the NLP version, Ranking and Resolver version, and whether you are using the Few-Shot Knowledge Graph model.</p>
 </div>
-<h4 id="utterance-match-classification">Utterance Match Classification<a class="headerlink" href="#utterance-match-classification" title="Permanent link">&para;</a></h4>
+<h3 id="utterance-match-classification">Utterance Match Classification<a class="headerlink" href="#utterance-match-classification" title="Permanent link">&para;</a></h3>
 <p>Test results are classified as either <em>Probable Matches</em> or <em>Definitive Matches</em>, as follows;</p>
 <p><a class="glightbox" href="../images/utterence-testing-2-testing-matches.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Utterance Match Classification" src="../images/utterence-testing-2-testing-matches.png" title="Utterance Match Classification" /></a></p>
 <p><em>Definitive Matches</em> get high confidence scores and are assumed to be perfect matches for the user utterance. In published assistants, if user input matches with a single <em>Definitive Match</em>, the VA directly executes the task. If the utterances match with multiple <em>Definitive Matches</em>, they are sent as options for the end-user to choose one.</p>
@@ -3053,7 +3047,7 @@ Clicking the <strong>Processed Utterance</strong> shows how the user utterance w
 <li>Intents for which the pre-conditions, in case defined, are not met are eliminated.</li>
 <li>If the definitive match was from Knowledge Graph Engine by Search In Answer and there is another matched intent.</li>
 </ul>
-<h4 id="ranking-and-resolver-v2">Ranking and Resolver v2"<a class="headerlink" href="#ranking-and-resolver-v2" title="Permanent link">&para;</a></h4>
+<h4 id="ranking-and-resolver-v2">Ranking and Resolver v2<a class="headerlink" href="#ranking-and-resolver-v2" title="Permanent link">&para;</a></h4>
 <p><a href="https://developer.kore.ai/docs/bots/nlp/nlp-detection/#Notes_on_Ranking_and_Resolver_Version_2">Version 2 of the Ranking and Resolver</a> only ranks the scores of the definitive matches from ML and KG engines (not the FM engine) without intent rescoring to ensure the best intent identification accuracy.
 If you enable Ranking and Resolver Version 2, your test results adjust as follows: </p>
 <p>The <strong>Ranking &amp; Resolver</strong> window displays the following:
