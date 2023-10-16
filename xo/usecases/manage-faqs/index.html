@@ -2726,6 +2726,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-faqs" class="md-nav__link">
+    Add FAQs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manage-bot-responses" class="md-nav__link">
+    Manage Bot Responses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-faqs-from-an-existing-source" class="md-nav__link">
+    Add FAQs from an Existing Source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move-faqs-between-nodes" class="md-nav__link">
+    Move FAQs Between Nodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-faqs-and-responses" class="md-nav__link">
+    Edit FAQs and Responses
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2755,25 +2798,23 @@
 <li>Lemmatization using Parts of Speech Search in Answer and Contextual Paths Qualification. Please see the Knowledge Graph Types Comparison Table for a detailed list of supported features.</li>
 <li>Path Level and Knowledge Graph Synonyms are only supported for Mandatory Terms and for Tags.</li>
 </ul>
-<h1 id="add-faqs">Add FAQs<a class="headerlink" href="#add-faqs" title="Permanent link">&para;</a></h1>
-<p>To add an FAQ, follow the below steps:</p>
-<ol>
-<li>On the left pane of the <strong>Knowledge Graph</strong> window, click the node to which you want to add questions.</li>
-<li>Click <strong>Add Intent</strong> on the top-right.
-<a class="glightbox" href="../images/add-faq-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="add faq intent" src="../images/add-faq-intent.png" title="add faq intent" /></a></li>
-<li>On the <strong>Intent</strong> window, under the <strong>Intent</strong> section, select <strong>FAQ</strong>.</li>
-<li>(Optional) Enter a <strong>Display Name</strong> to represent the FAQ to the end-users.</li>
-<li>In the <strong>Add Question</strong> field, enter the question that describes the user’s query.</li>
-<li>(Optional) If there are alternatives to the same question, add them in the <strong>Add Alternate FAQ</strong> field. Repeat the step for all the alternative questions you want to add.</li>
-<li>(Optional) Use patterns to define the FAQs. This can be done by preceding the pattern with || (two vertical bars) in the alternate question field. The Platform marks these as patterns and evaluates them accordingly (<a href="https://developer.kore.ai/docs/bots/how-tos/how-to-use-patterns-for-intents-entities/">see here for more on patterns</a>).</li>
-<li>(Optional) Add terms that enable the Knowledge Graph Engine to identify questions more effectively.</li>
-<li>(Optional) Enable or disable the <strong>Intent Status</strong> for the FAQ intents. The Knowledge Graph does not use the FAQs intents that are enabled. These intents do not participate in the intent recognition process during testing and end-user interaction.</li>
-<li>(Optional) Enable or disable the <strong>Term Status</strong>. The Knowledge Graph uses only the enabled terms. The disabled terms and all their FAQ intents do not participate in the intent recognition process during testing and end-user interaction.</li>
-<li>(Optional) Add a <strong>Reference Id</strong>. This field is used to reference any external content used as a source for this FAQ.
-<a class="glightbox" href="../images/add-faq-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="add faq form" src="../images/add-faq-form.png" title="add faq form" /></a></li>
-</ol>
+<h2 id="add-faqs">Add FAQs<a class="headerlink" href="#add-faqs" title="Permanent link">&para;</a></h2>
+<p>To add an FAQ, follow the below steps:
+1. On the left pane of the <strong>Knowledge Graph</strong> window, click the node to which you want to add questions.
+2. Click <strong>Add Intent</strong> on the top-right.
+<a class="glightbox" href="../images/add-faq-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="add faq intent" src="../images/add-faq-intent.png" title="add faq intent" /></a>
+3. On the <strong>Intent</strong> window, under the <strong>Intent</strong> section, select <strong>FAQ</strong>.
+4. (Optional) Enter a <strong>Display Name</strong> to represent the FAQ to the end-users.
+5. In the <strong>Add Question</strong> field, enter the question that describes the user’s query.
+6. (Optional) If there are alternatives to the same question, add them in the <strong>Add Alternate FAQ</strong> field. Repeat the step for all the alternative questions you want to add.
+7. (Optional) Use patterns to define the FAQs. This can be done by preceding the pattern with || (two vertical bars) in the alternate question field. The Platform marks these as patterns and evaluates them accordingly (<a href="https://developer.kore.ai/docs/bots/how-tos/how-to-use-patterns-for-intents-entities/">see here for more on patterns</a>).
+8. (Optional) Add terms that enable the Knowledge Graph Engine to identify questions more effectively.
+9. (Optional) Enable or disable the <strong>Intent Status</strong> for the FAQ intents. The Knowledge Graph does not use the FAQs intents that are enabled. These intents do not participate in the intent recognition process during testing and end-user interaction.
+10. (Optional) Enable or disable the <strong>Term Status</strong>. The Knowledge Graph uses only the enabled terms. The disabled terms and all their FAQ intents do not participate in the intent recognition process during testing and end-user interaction.
+11. (Optional) Add a <strong>Reference Id</strong>. This field is used to reference any external content used as a source for this FAQ.
+<a class="glightbox" href="../images/add-faq-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="add faq form" src="../images/add-faq-form.png" title="add faq form" /></a></p>
 <p>As you enter these questions, pay attention to terms that you can further add to your FAQ hierarchy. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/creating-a-knowledge-graph/?preview_id=18007&amp;preview_nonce=70f4e3338c&amp;post_format=standard&amp;_thumbnail_id=-1&amp;preview=true#">Learn more</a>.</p>
-<h1 id="manage-bot-responses">Manage Bot Responses<a class="headerlink" href="#manage-bot-responses" title="Permanent link">&para;</a></h1>
+<h2 id="manage-bot-responses">Manage Bot Responses<a class="headerlink" href="#manage-bot-responses" title="Permanent link">&para;</a></h2>
 <p>For the FAQ Response, you can compose a simple or complex channel-specific reply. The editor is like any other prompt editor on the Platform, for example, messages for dialog nodes. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/prompt-editor/">Learn more</a>. </p>
 <p>You can add channel-specific responses to questions in your Knowledge Graph. By creating varying responses with different language and formatting options, you can leverage the dynamic responses on the selected channels. </p>
 <p>To add a channel-specific response, select the channel from the channels list before typing the response.</p>
@@ -2790,7 +2831,7 @@
 <p>Select <strong>Add Alternate Response</strong> if your question can have more than one answer. Repeat the step for all the alternative responses you want to add. At runtime, the platform picks one response at random.</p>
 </li>
 </ul>
-<h1 id="add-faqs-from-an-existing-source">Add FAQs from an Existing Source<a class="headerlink" href="#add-faqs-from-an-existing-source" title="Permanent link">&para;</a></h1>
+<h2 id="add-faqs-from-an-existing-source">Add FAQs from an Existing Source<a class="headerlink" href="#add-faqs-from-an-existing-source" title="Permanent link">&para;</a></h2>
 <p>When the Knowledge Graph you are trying to build is large and complex, it's important to have all the FAQs in one place and Import or Extract them as required. </p>
 <p>Adding FAQs from an existing source is the most effective method to implement in this case. The different ways to accomplish this include the following:</p>
 <ul>
@@ -2798,7 +2839,7 @@
 <li>Select the <strong>Import</strong> option to import a Knowledge Graph exported from another VA. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/importing-the-bot-ontology-from-csv-or-json/">See here for more</a>.</li>
 <li>Leverage an existing list of Q&amp;As from <strong>Knowledge Extraction</strong> to populate the Questions and Responses. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-extraction-service/">See here for more</a>.</li>
 </ul>
-<h1 id="move-faqs-between-nodes">Move FAQs Between Nodes<a class="headerlink" href="#move-faqs-between-nodes" title="Permanent link">&para;</a></h1>
+<h2 id="move-faqs-between-nodes">Move FAQs Between Nodes<a class="headerlink" href="#move-faqs-between-nodes" title="Permanent link">&para;</a></h2>
 <p>You can move one or more Questions and Response sets between nodes in your Knowledge Graph, with the steps below:</p>
 <ol>
 <li>On the Knowledge Graph, click the name of the node from which you want to move the FAQ. The intents associated to the node display on the right pane.</li>
@@ -2807,7 +2848,7 @@
 </ol>
 <p>The demo below shows you how this works.
 <a class="glightbox" href="../images/move-faq-to-new-node.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="move faq between nodes demo" src="../images/move-faq-to-new-node.gif" title="move faq between nodes demo" /></a></p>
-<h1 id="edit-faqs-and-responses">Edit FAQs and Responses<a class="headerlink" href="#edit-faqs-and-responses" title="Permanent link">&para;</a></h1>
+<h2 id="edit-faqs-and-responses">Edit FAQs and Responses<a class="headerlink" href="#edit-faqs-and-responses" title="Permanent link">&para;</a></h2>
 <ol>
 <li>From the nodes hierarchy, select the relevant term.</li>
 <li>FAQs associated with the term appear on the right pane.</li>
