@@ -2817,7 +2817,7 @@
 <ul>
 <li><strong>Non-Intuitive Interface</strong>: IVR systems do not simply let the customers state their needs, they make the users go through an extensive list of menu options, from which customers must select before finding the intent. Even if they allow users to express their intent at first, the backend programs can only understand a limited number of phrases.</li>
 <li>
-<p><strong>Static Flows</strong>: IVR systems use static call flows that do not align with the nonlinear and contextual nature of human interactions. Following is a scenario where a customer is trying to Book Flight tickets: </p>
+<p><strong>Static Flows</strong>: IVR systems use static call flows that do not align with the nonlinear and contextual nature of human interactions. Following is a scenario where a customer is trying to Book Flight tickets:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>User: Book me a ticket to NYC
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>IVR: Sure, for which date?
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>User: Wait, will it rain there this Sunday?
@@ -3124,12 +3124,13 @@ button, which becomes visible upon hovering over the IVR icon under the <strong>
 </ol>
 <p><a class="glightbox" href="../images/IVR-26.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="chat history" src="../images/IVR-26.png" title="chat history" /></a></p>
 <p>In this example, the parameters like <strong>ASR Confidence</strong> <strong>score</strong>,** input mode**, **utterance, **etc. are extracted in the syntax shown below:</p>
-<p><em>“data”: {</em></p>
-<p><em>“text”: \
-“{“confidence”:”0.810000″, \
-“Inputmode”:”voice”, \
-“interpretation”:”Login.”, \
-“utterance”:”Login.”}”</em></p>
+<p>“data”: {_
+  “text”:
+    “{“confidence”:0.810000, 
+       “Inputmode”: voice,
+       “interpretation”:Login.,
+       “utterance”: Login.
+}</p>
 
 
   
