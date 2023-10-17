@@ -2877,11 +2877,11 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have enabled IVR Sandbox, the following settings are required to be configured on the platform. These are pre-populated if you do not enable the IVR settings. In case you have enabled the settings, ensure the values are the same as follows:
-– Enable Transcription set to Yes
-– Transcription engine source set to builtin:speech/transcribe
-– IVR Data Extraction Key set to user input
-– ASR Confidence Threshold Key set to userinput confidence
-– ASR Threshold Confidence set to 50.</p>
+ – Enable Transcription set to Yes.
+ – Transcription engine source set to builtin:speech/transcribe.
+ – IVR Data Extraction Key set to user input.
+ – ASR Confidence Threshold Key set to userinput confidence.
+ – ASR Threshold Confidence set to 50.</p>
 </div>
 <p><a class="glightbox" href="../images/IVR-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IVR Sandbox" src="../images/IVR-6.png" title="IVR Sandbox" /></a>
    <a class="glightbox" href="../images/IVR-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IVR data" src="../images/IVR-7.png" title="image_tooltip" /></a></p>
@@ -2909,7 +2909,7 @@ Steps to configure Telephony Welcome Event:</p>
 <p>Kore.ai XO Platform offers an <strong>IVR Sandbox environment</strong> to instantly launch your VA for interactions over voice calls. This is useful when a working IVR system is not available for testing your VA over a voice channel. IVR Sandbox is an optional integration and it can coexist with your custom IVR integration.</p>
 <p>Enabling this option generates a** Phone Number, Pin, <strong>and **Secret</strong>. To develop and test it with your teams, you can call your VA by using the phone number and PIN allocated for your VA. On receiving the valid Pin and Secret you will be connected with the VA for interactions. See the following steps to understand the Sandbox configuration.</p>
 <ol>
-<li>To enable the Sandbox. select <strong>Enable</strong> for <strong>Kore.ai IVR Sandbox</strong> under the <strong>Configurations</strong> tab .</li>
+<li>To enable the Sandbox, select <strong>Enable</strong> for <strong>Kore.ai IVR Sandbox</strong> under the <strong>Configurations</strong> tab .</li>
 </ol>
 <p><a class="glightbox" href="../images/IVR-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IVR configuration" src="../images/IVR-9.png" title="IVR configuration" /></a></p>
 <ol>
@@ -3019,7 +3019,6 @@ The <strong>Phone Number</strong>, <strong>PIN</strong>, and <strong>Secret</str
    <td>
     Select any document to be the application root document
 
-
 **Note**: The application root contains the file path, which is an entry point for the application.
 
 
@@ -3046,28 +3045,28 @@ The <strong>Phone Number</strong>, <strong>PIN</strong>, and <strong>Secret</str
 <li>From the <strong>Select App</strong> drop-down list, select an existing App or create a new app. See <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#Configure_IVR_Settings">Configure IVR Settings</a> to know more.</li>
 <li>Copy the following values:</li>
 <li><strong>WebHook URL</strong>: For calling the VA from IVR.</li>
-<li><strong>Client Secret</strong>: To generate a JWT token that must be appended to the WebHook URL.</li>
-</ol>
+<li>
+<p><strong>Client Secret</strong>: To generate a JWT token that must be appended to the WebHook URL.</p>
 <p><a class="glightbox" href="./images/IVR-19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/IVR-19.png"></a></p>
-<ol>
-<li>Select <strong>Yes</strong> for Enable Channel.</li>
+</li>
+<li>
+<p>Select <strong>Yes</strong> for Enable Channel.</p>
+</li>
 </ol>
 <p><strong>Generating JWT Token</strong></p>
 <ol>
 <li>To generate the JWT Token, click <a href="https://developer.kore.ai/tools/jwt/">here</a>.</li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For a quick overview of the JWT token, refer to Introduction to JWT tokens.</p>
-</div>
+<p>!!! note</p>
+<div class="language-text highlight"><pre><span></span><code>For a quick overview of the JWT token, refer to Introduction to JWT tokens.
+</code></pre></div>
 <ol>
 <li>JWT has to be passed in the IVR hook URL as a value for the query parameter “token”:
 <code>https://{{host}}/ivr/hooks/{{botId}}?token={{JWT}} \</code>The token can also be passed as the body parameter.</li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The host name, {{host}} refers to an environment URL, for example, <a href="https://bots.kore.ai">https://bots.kore.ai</a>. It changes based on the domain name.</p>
-</div>
+<p>!!! note</p>
+<div class="language-text highlight"><pre><span></span><code>The host name, {{host}} refers to an environment URL, for example, https://bots.kore.ai. It changes based on the domain name.
+</code></pre></div>
 <p><strong>Call The Virtual Assistant From IVR Call flow</strong></p>
 <p>You can pass data to the VA from the IVR call flow using VXML &gt; subdialog &gt; as shown in the following screenshot. The subdialog src should be Webhook URL with JWT Token, which receives the following parameters as Input.</p>
 <p><a class="glightbox" href="../images/IVR-20.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IVR call flow" src="../images/IVR-20.png" title="IVR call flow" /></a></p>
