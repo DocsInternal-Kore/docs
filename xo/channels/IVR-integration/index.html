@@ -2854,26 +2854,30 @@
   The IVR Panel with <strong>Instructions</strong> is displayed.
   <a class="glightbox" href="../images/IVR-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IVR panel" src="../images/IVR-3.png" title="IVR pangel" /></a></li>
 <li>On the <strong>Configurations</strong> tab, perform the following steps:</li>
-<li>Use <strong>Kore.ai IVR Sandbox</strong> for testing your VA. See <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#ivr-sandbox">Sandbox Configuration </a>for more details.</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you save the configuration after associating an app without enabling IVR Settings, the platform pre-populates the required settings for Sandbox.</p>
-</div>
-<ol>
-<li>Associate an App with the IVR channel, either by creating a new one or selecting an existing one. If you do not have any apps, a message is displayed as shown in the following screenshot.</li>
+<li>
+<p>Use <strong>Kore.ai IVR Sandbox</strong> for testing your VA. See <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#ivr-sandbox">Sandbox Configuration </a>for more details.</p>
+</li>
+<li>
+<p>Associate an App with the IVR channel, either by creating a new one or selecting an existing one. If you do not have any apps, a message is displayed as shown in the following screenshot.</p>
+</li>
 </ol>
 <p><a class="glightbox" href="../images/IVR-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="associate app" src="../images/IVR-4.png" title="associate app" /></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you already have created apps, then select an app from the Select App drop-down or create a new app. See Sandbox Configuration steps to know more.</p>
-</div>
 <ol>
 <li>Use the <strong>WebHook URL</strong> provided in your external application.</li>
 <li>Enter the details to complete the setup, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Channel_Settings">Voice Call Properties: Channel Settings</a> for more information.
    <a class="glightbox" href="../images/IVR-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Webhook URL" src="../images/IVR-5.png" title="Webhook URL" /></a></li>
-<li>From the **Voice Call Properties **tab, set the configurations.</li>
+<li>
+<p>From the <strong>Voice Call Properties</strong> tab, set the configurations.</p>
+</li>
+<li>
+<p>The Platform supports all UniMRCP-encoded voice-to-text services. If you select the <strong>Enable Transcription</strong> option for the VA, then the platform allows you to skip defining grammar during configuring IVR settings for any node (described in <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#Configure_Dialog_Node_IVR_Properties">Configure Dialog Node IVR Properties</a>).
+See <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Configuring_Grammar">Voice Call Properties: Configuring Grammar</a> for a detailed configuration for Grammar syntax.</p>
+</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you already have created apps, then select an app from the Select App drop-down or create a new app. See Sandbox Configuration steps to know more.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have enabled IVR Sandbox, the following settings are required to be configured on the platform. These are pre-populated if you do not enable the IVR settings. In case you have enabled the settings, ensure the values are the same as follows:
@@ -2889,15 +2893,15 @@
 <p class="admonition-title">Note</p>
 <p>Sandbox may not respond as expected if you use different values.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you save the configuration after associating  an app without enabling IVR Settings, the  platform pre-populates the required settings for Sandbox.</p>
+</div>
+<p>Once you have enabled the IVR channel, configure the <strong>Telephony Welcome Event</strong> in IVR Settings. This plays a welcome message for users when they connect to the VA through the IVR channel.</p>
+<p>Steps to configure Telephony Welcome Event:</p>
 <ol>
-<li>The Platform supports all UniMRCP-encoded voice-to-text services. If you select the <strong>Enable Transcription</strong> option for the VA, then the platform allows you to skip defining grammar during configuring IVR settings for any node (described in <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#Configure_Dialog_Node_IVR_Properties">Configure Dialog Node IVR Properties</a>).
-See <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Configuring_Grammar">Voice Call Properties: Configuring Grammar</a> for a detailed configuration for Grammar syntax.</li>
-</ol>
-<p>Once you have enabled the IVR channel, configure the <strong>Telephony Welcome Event</strong> in IVR Settings. This plays a welcome message for users when they connect to the VA through the IVR channel.
-Steps to configure Telephony Welcome Event:</p>
-<ol>
-<li>Under the <strong>Build **tab, select **Intelligence —&gt; Events</strong>.</li>
-<li>Select the **Use Voice Call Properties **option to open the voice settings section.</li>
+<li>Under the <strong>Build</strong> tab, select <strong>Intelligence &gt; Events</strong>.</li>
+<li>Select the <strong>Use Voice Call Properties</strong> option to open the voice settings section.</li>
 <li>Under the <strong>Initial Prompts</strong> text field, enter the message that needs to be played when the user connects to the VA. To know more about other configuration fields, see the <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Dialog_Node_Settings">Voice Call Properties: Dialog Node Settings</a> section.
 <a class="glightbox" href="../images/IVR-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="initial prompts" src="../images/IVR-8.png" title="initial prompts" /></a></li>
 </ol>
@@ -2921,14 +2925,14 @@ Steps to configure Telephony Welcome Event:</p>
   <a class="glightbox" href="../images/IVR-11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="create app" src="../images/IVR-11.png" title="create app" /></a></li>
 <li>Upon saving the details, the following pop-up is displayed with <strong>Phone Number, PIN</strong> and <strong>Secret</strong> values. Click <strong>OK</strong>.</li>
 <li>Once enabled, you can access the IVR Sandbox interaction details by clicking the <strong>Test</strong>
- <a class="glightbox" href="../images/IVR-12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="test app" src="../images/IVR-12.png" title="test app" /></a>
 button, which becomes visible upon hovering over the IVR icon under the <strong>Configured Channels</strong>.
- <a class="glightbox" href="../images/IVR-13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure channels" src="../images/IVR-13.png" title="configure channels" /></a></li>
+ <a class="glightbox" href="../images/IVR-13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure channels" src="../images/IVR-13.png" title="configure channels" /></a>
+ <a class="glightbox" href="../images/IVR-12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="test app" src="../images/IVR-12.png" title="test app" /></a></li>
 <li>On clicking <strong>Test</strong>, the following pop-up is displayed.
-<a class="glightbox" href="../images/IVR-14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="testing app" src="../images/IVR-14.png" title="testing app" /></a>
-The <strong>Phone Number</strong>, <strong>PIN</strong>, and <strong>Secret</strong> are populated in the IVR Configurations panel as shown in the following screenshot.
-<a class="glightbox" href="../images/IVR-15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="phone number" src="../images/IVR-15.png" title="phone number" /></a></li>
+<a class="glightbox" href="../images/IVR-14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="testing app" src="../images/IVR-14.png" title="testing app" /></a></li>
 </ol>
+<p>The <strong>Phone Number</strong>, <strong>PIN</strong>, and <strong>Secret</strong> are populated in the IVR Configurations panel as shown in the following screenshot.
+<a class="glightbox" href="../images/IVR-15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="phone number" src="../images/IVR-15.png" title="phone number" /></a></p>
 <p><strong>IVR Sandbox Limitations:</strong></p>
 <ul>
 <li>The platform supports only a limited number of concurrent lines, hence calls to your VAs through IVR Sandbox may not be answered at times.</li>
@@ -2943,15 +2947,12 @@ The <strong>Phone Number</strong>, <strong>PIN</strong>, and <strong>Secret</str
 <p>Kore.ai Virtual Assistants require a JWT token to authenticate the incoming requests from IVR. For generating a JWT token, you should associate an app with the VA. You can select any existing Apps available in your Kore.ai account or create a new app.</p>
 <ol>
 <li>Go to <strong>Deploy</strong> &gt; <strong>Channels</strong> in the left navigation panel of the virtual assistant.</li>
-<li>On the <strong>Channels</strong> page, click <strong>IVR</strong>. The IVR Channel Instructions panel is displayed.
- <a class="glightbox" href="../images/IVR-17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deploy channels" src="../images/IVR-17.png" title="deploy channels" /></a></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The Webhook Payload is used to test the IVR channel configuration for your VA. It can be tested using Postman.</p>
-</div>
-<ol>
-<li>The **IVR Voice Sample CURL **request is as follows:
+<li>
+<p>On the <strong>Channels</strong> page, click <strong>IVR</strong>. The IVR Channel Instructions panel is displayed.
+ <a class="glightbox" href="../images/IVR-17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deploy channels" src="../images/IVR-17.png" title="deploy channels" /></a></p>
+</li>
+<li>
+<p>The **IVR Voice Sample CURL **request is as follows:
  <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> `curl --location --request POST
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> &#39;{{host}}/ivr/hooks/{{streamId}}?token={{token}}&#39;  
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   --header &#39;Content-Type: application/json&#39;
@@ -2962,7 +2963,8 @@ The <strong>Phone Number</strong>, <strong>PIN</strong>, and <strong>Secret</str
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        &quot;app_root&quot;:&quot;app.vxml&quot;
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>}&#39;
 </span></code></pre></div>
- The following table provides the descriptions of all the mandatory and optional request parameters:</li>
+ The following table provides the descriptions of all the mandatory and optional request parameters:</p>
+</li>
 </ol>
 <table>
   <tr>
@@ -3053,17 +3055,24 @@ The <strong>Phone Number</strong>, <strong>PIN</strong>, and <strong>Secret</str
 <p>Select <strong>Yes</strong> for Enable Channel.</p>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Webhook Payload is used to test the IVR channel configuration for your VA. It can be tested using Postman.</p>
+</div>
 <p><strong>Generating JWT Token</strong></p>
 <ol>
-<li>To generate the JWT Token, click <a href="https://developer.kore.ai/tools/jwt/">here</a>.</li>
+<li>
+<p>To generate the JWT Token, click <a href="https://developer.kore.ai/tools/jwt/">here</a>.</p>
+</li>
+<li>
+<p>JWT has to be passed in the IVR hook URL as a value for the query parameter “token”:
+<code>https://{{host}}/ivr/hooks/{{botId}}?token={{JWT}} \</code>The token can also be passed as the body parameter.</p>
+</li>
 </ol>
-<p>!!! note</p>
-<div class="language-text highlight"><pre><span></span><code>For a quick overview of the JWT token, refer to Introduction to JWT tokens.
-</code></pre></div>
-<ol>
-<li>JWT has to be passed in the IVR hook URL as a value for the query parameter “token”:
-<code>https://{{host}}/ivr/hooks/{{botId}}?token={{JWT}} \</code>The token can also be passed as the body parameter.</li>
-</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For a quick overview of the JWT token, refer to Introduction to JWT tokens.</p>
+</div>
 <p>!!! note</p>
 <div class="language-text highlight"><pre><span></span><code>The host name, {{host}} refers to an environment URL, for example, https://bots.kore.ai. It changes based on the domain name.
 </code></pre></div>
