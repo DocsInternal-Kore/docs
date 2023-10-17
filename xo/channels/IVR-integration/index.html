@@ -3096,13 +3096,18 @@ The ASR metadata is extracted in the response using the following syntax:</li>
 6. Click the **ellipsis</strong> icon on top of the <strong>Javascript Message</strong> to view the details of the **ASR metadata **extracted from the response.
   <a class="glightbox" href="../images/IVR-26.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="chat history" src="../images/IVR-26.png" title="chat history" /></a></p>
 <p>In this example, the parameters like <strong>ASR Confidence</strong>, <strong>score</strong>,<strong>input mode</strong>, <strong>utterance</strong>, etc. are extracted in the syntax shown below:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>data”: {
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>“text”:
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>“{“confidence”:”0.810000″,
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>“Inputmode”:”voice”,
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>“interpretation”:”Login.”,
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>“utterance”:”Login.”}”
-</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code> ```
+ data:
+ {
+ &quot;text&quot;:
+ {
+   &quot;confidence&quot;: &quot;0.810000&quot;,
+   &quot;Inputmode&quot;: &quot;voice&quot;,
+   &quot;interpretation&quot;: &quot;Login.&quot;,
+   &quot;utterance&quot;: &quot;Login.&quot;&quot;
+ }
+ ```
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The information is available for the existing and new virtual assistants whose IVR channel is enabled.</p>
