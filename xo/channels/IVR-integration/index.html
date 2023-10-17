@@ -3031,12 +3031,14 @@ button, which becomes visible upon hovering over the IVR icon under the <strong>
 <li>Click the <strong>Configurations</strong> tab.</li>
 </ol>
 <p><a class="glightbox" href="../images/IVR-18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configurations" src="../images/IVR-18.png" title="configurations" /></a>
-5. From the <strong>Select App</strong> drop-down list, select an existing App or create a new app. See <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#Configure_IVR_Settings">Configure IVR Settings</a> to know more.
-6. Copy the following values:
-  *   <strong>WebHook URL</strong>: For calling the VA from IVR.
-  *   <strong>Client Secret</strong>: To generate a JWT token that must be appended to the WebHook URL.
-   <a class="glightbox" href="../images/IVR-19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="webhook url" src="../images/IVR-19.png" title="webhook url" /></a>
-7. Select <strong>Yes</strong> for Enable Channel.</p>
+5. From the <strong>Select App</strong> drop-down list, select an existing App or create a new app. See <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#Configure_IVR_Settings">Configure IVR Settings</a> to know more.</p>
+<ol>
+<li>Copy the following values:</li>
+<li><strong>WebHook URL</strong>: For calling the VA from IVR.</li>
+<li><strong>Client Secret</strong>: To generate a JWT token that must be appended to the WebHook URL.
+   <a class="glightbox" href="../images/IVR-19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="webhook url" src="../images/IVR-19.png" title="webhook url" /></a></li>
+<li>Select <strong>Yes</strong> for Enable Channel.</li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Webhook Payload is used to test the IVR channel configuration for your VA. It can be tested using Postman.</p>
@@ -3077,13 +3079,13 @@ button, which becomes visible upon hovering over the IVR icon under the <strong>
 </ul>
 <p>To extract the metadata from the ASR transcription, follow these steps:</p>
 <ol>
-<li>In** IVR Channel** settings under <strong>Voice Call Properties</strong> various details like <strong>Input Mode</strong>, <strong>ASR Confidence Threshold</strong> etc. are configured.
+<li>In <strong>IVR Channel</strong> settings under <strong>Voice Call Properties</strong> various details like <strong>Input Mode</strong>, <strong>ASR Confidence Threshold</strong> etc. are configured.
  <a class="glightbox" href="../images/IVR-21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="input mode" src="../images/IVR-21.png" title="input mode" /></a></li>
 <li>See <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Channel_Settings">Voice Call Properties: Channel Settings</a> for more information.The additional information provided by the ASR engines can be extracted using the <strong>context object</strong>. This is configured at  <strong>Bot User Session → lastMessage →  asrMetaData</strong>.</li>
-<li>Go to the <strong>Settings</strong> panel of the last message node for your dialog task and configure the <strong>JavaScript Message</strong> under <strong>Bot Responses</strong>, as shown below:</li>
+<li>Go to the <strong>Settings</strong> panel of the last message node for your dialog task and configure the <strong>JavaScript Message</strong> under <strong>Bot Responses</strong>, as shown below:
+  <a class="glightbox" href="../images/IVR-22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="JavaScript message" src="../images/IVR-22.png" title="JavaScript message" /></a>
+The ASR metadata is extracted in the response using the following syntax:</li>
 </ol>
-<p><a class="glightbox" href="../images/IVR-22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="JavaScript message" src="../images/IVR-22.png" title="JavaScript message" /></a>
-The ASR metadata is extracted in the response using the following syntax:</p>
 <p><code>print(JSON.stringify(context.session.BotUserSession.lastMessage.asrMetaData))</code>
   <a class="glightbox" href="../images/IVR-23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="messages " src="../images/IVR-23.png" title="messages" /></a></p>
 <p>In this example, based on the <strong>ASR Confidence</strong> value extracted from the user input, we define the connection rules for the dialog as shown below:</p>
