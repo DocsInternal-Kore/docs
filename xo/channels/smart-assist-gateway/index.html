@@ -2903,9 +2903,10 @@
 <li>Click <strong>Done</strong>.
  <a class="glightbox" href="../images/sa-gateway2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="add response" src="../images/sa-gateway2.png" title="add response" /></a></li>
 </ol>
-<p>!!! tip</p>
-<div class="language-text highlight"><pre><span></span><code>You can use any value currently stored in the `context` variable of your message construction with `{{variable brackets}}`. For example, ‘Hello `{{context.session.UserContext.firstName}}`. How can I help you?’ This helps personalize the response message.
-</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use any value currently stored in the <code>context</code> variable of your message construction with <code>{{variable brackets}}</code>. For example, ‘Hello <code>{{context.session.UserContext.firstName}}</code>. How can I help you?’ This helps personalize the response message.</p>
+</div>
 <h3 id="step-3-select-the-call-termination-handler">Step 3: Select the Call Termination Handler<a class="headerlink" href="#step-3-select-the-call-termination-handler" title="Permanent link">&para;</a></h3>
 <p>Select the intent(dialog) you previously created from the list to handle the <strong>Call Termination</strong> event. This initiates the relevant task for the event flow.</p>
 <h3 id="step-4-define-the-call-control-parameters">Step 4: Define the Call Control Parameters<a class="headerlink" href="#step-4-define-the-call-control-parameters" title="Permanent link">&para;</a></h3>
@@ -2934,8 +2935,8 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
 <p>You don’t have to enable the channel explicitly since it is auto-enabled.</p>
+</div>
 <p>After the channel is enabled and all configurations are verified, you can optionally publish the assistant to make it available for end users with the new channel. Learn more about<a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/"> Publishing your Virtual Assistant</a>.</p>
 <p>To learn more about working with Channels within the Kore.ai XO Platform, please see<a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/"> Channel Enablement.</a></p>
 
