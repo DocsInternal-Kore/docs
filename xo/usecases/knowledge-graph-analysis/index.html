@@ -2768,15 +2768,17 @@
 <h1 id="knowledge-graph-analysis"><strong>Knowledge Graph Analysis</strong><a class="headerlink" href="#knowledge-graph-analysis" title="Permanent link">&para;</a></h1>
 <p>A careful analysis of the Knowledge Graph helps in detecting errors in your questions and the path associated with them that hamper the user experience.</p>
 <p>The Knowledge Graph (KG) Diagnosis tool helps you identify any inefficiencies in your KGs and suggests possible corrective actions. These are just guidelines and you need to further analyze the recommendations before going ahead with any changes.</p>
-<p>The KG provides an option to initiate an inspection, as follows:
-* This option is available only for the in-development version of the KG where there are one or more FAQs added.
-* The analysis considers the thresholds and other configurations of the KG.
-* The analysis issues a warning if any node contains more than 25 questions and an advisory to the effect that the training fails if there are more than 100 questions in any node.
-* You can invoke the diagnosis, by clicking <strong>Inspect</strong> on the KG screen.
-<a class="glightbox" href="../images/KG_Inspect.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="KG Inspect" src="../images/KG_Inspect.png" title="Inspect KG" /></a>
-* You can also add patterns as alternate questions for an FAQ to provide better coverage, which helps in detecting the right FAQs for a user question. KG Inspect helps in identifying any syntax errors that occur knowingly or unknowingly while defining patterns. 
-The platform analyzes the KG and provides a report of the analysis. The identified incorrect patterns in KG are displayed in the report.</p>
+<p>The KG provides an option to initiate an inspection, as follows:</p>
 <ul>
+<li>This option is available only for the in-development version of the KG where there are one or more FAQs added.</li>
+<li>The analysis considers the thresholds and other configurations of the KG.</li>
+<li>The analysis issues a warning if any node contains more than 25 questions and an advisory to the effect that the training fails if there are more than 100 questions in any node.</li>
+<li>You can invoke the diagnosis, by clicking <strong>Inspect</strong> on the KG screen.
+<a class="glightbox" href="../images/KG_Inspect.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="KG Inspect" src="../images/KG_Inspect.png" title="Inspect KG" /></a></li>
+<li>
+<p>You can also add patterns as alternate questions for an FAQ to provide better coverage, which helps in detecting the right FAQs for a user question. KG Inspect helps in identifying any syntax errors that occur knowingly or unknowingly while defining patterns. 
+The platform analyzes the KG and provides a report of the analysis. The identified incorrect patterns in KG are displayed in the report.</p>
+</li>
 <li>
 <p>You have an option to <strong>Re-run</strong> the analysis or <strong>Export</strong> the report. The export option downloads the report in JSON format.
 <a class="glightbox" href="../images/re-run-analysis.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="re-run analysis" src="../images/re-run-analysis.png" title="re-run analysis" /></a></p>
@@ -2799,16 +2801,16 @@ The platform analyzes the KG and provides a report of the analysis. The identifi
 </blockquote>
 <h3 id="report-fields-for-ontology-knowledge-graphs">Report Fields for Ontology Knowledge Graphs<a class="headerlink" href="#report-fields-for-ontology-knowledge-graphs" title="Permanent link">&para;</a></h3>
 <p>The following table details the fields that are displayed in the report:</p>
-<table>
+<table border="1.5">
   <tr>
-   <td><strong>ISSUE TYPE</strong>
-   </td>
-   <td><strong>CATEGORY</strong>
-   </td>
-   <td><strong>DETAILS</strong>
-   </td>
-   <td><strong>SUGGESTION</strong>
-   </td>
+   <th><strong>ISSUE TYPE</strong>
+   </th>
+   <th><strong>CATEGORY</strong>
+   </th>
+   <th><strong>DETAILS</strong>
+   </th>
+   <th><strong>SUGGESTION</strong>
+   </th>
   </tr>
   <tr>
    <td>Patterns with Invalid Syntax
@@ -3026,7 +3028,7 @@ The platform analyzes the KG and provides a report of the analysis. The identifi
 
 <h2 id="report-fields-for-few-shot-knowledge-graphs">Report Fields for Few-Shot Knowledge Graphs<a class="headerlink" href="#report-fields-for-few-shot-knowledge-graphs" title="Permanent link">&para;</a></h2>
 <p>For Few-Shot Knowledge Graphs, nothing regarding paths and keywords requires analysis; since these are not used by the model to detect intent. The only report fields you will see when inspecting such a graph are the following: </p>
-<table>
+<table border="1.5">
   <tr>
    <td><strong>ISSUE TYPE</strong>
    </td>
