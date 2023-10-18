@@ -2817,23 +2817,21 @@
 <p>A <strong>Bot Connector service</strong> enables your bot to exchange messages with the <em>Genesys Agent System</em> configured on the Kore.ai XO Platform by using industry-standard <em>REST</em> and <em>JSON</em> over HTTPS.</p>
 <ol>
 <li>Log in to the <strong><a href="https://login.mypurecloud.com/#/authenticate">Genesys Developer Portal</a></strong>.</li>
-<li>
-<p>Create a Bot Connector with the steps below:</p>
-<ol>
+<li>Create a Bot Connector with the steps below:<ul>
 <li>Navigate to <strong>Admin</strong> &gt; <strong>Integrations</strong> on the left menu.</li>
 <li>Click the <strong>Configuration</strong> tab.</li>
-<li>
-<p>On the Kore.ai XO Platform, navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>Genesys Chat</strong>.
-<a class="glightbox" href="../images/genesys-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="genesys chat" src="../images/genesys-1.png" title="genesys chat" /></a></p>
-</li>
-<li>
-<p>Copy the <strong>Webhook URL</strong> from the <strong>Configurations</strong> section.</p>
-</li>
+<li>On the Kore.ai XO Platform, navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>Genesys Chat</strong>.
+<a class="glightbox" href="../images/genesys-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="genesys chat" src="../images/genesys-1.png" title="genesys chat" /></a></li>
+<li>Copy the <strong>Webhook URL</strong> from the <strong>Configurations</strong> section.</li>
 <li>Paste it in the <strong>Value</strong> field of the <strong>Properties</strong> section under <strong>Configuration</strong> on the <strong>Genesys Chat</strong> Portal.
 <a class="glightbox" href="../images/genesys-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="properties" src="../images/genesys-2.png" title="image_tooltip" /></a></li>
 <li>In the <strong>Genesys Cloud login URL</strong> field under <strong>Configuration</strong>, provide the URL of your Genesys AWS Region which will allow the platform to correctly route the conversation requests. This is a <strong>mandatory field.</strong> You can find the URL of your region through the link provided with the field.
 <a class="glightbox" href="../images/genesys-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="mandatory configuration" src="../images/genesys-3.png" title="mandatory configuration" /></a></li>
-<li>Create an app on the Kore.ai XO platform. A JWT Token is created with the <em>clientId</em> and <em>clientSecret</em> credentials. To create an app, follow the steps below:</li>
+</ul>
+</li>
+<li>
+<p>Create an app on the Kore.ai XO platform. A JWT Token is created with the <em>clientId</em> and <em>clientSecret</em> credentials. To create an app, follow the steps below:</p>
+<ul>
 <li>Click the <strong>Create App</strong> link under the <strong>Configurations</strong> section of the <strong>Genesys Chat</strong> Channel.
 <a class="glightbox" href="../images/genesys-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="genesys configuration" src="../images/genesys-4.png" title="genesys configuration" /></a></li>
 <li>Follow the steps mentioned <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-webmobile-client-channel/">here</a>.
@@ -2846,7 +2844,7 @@
 <a class="glightbox" href="../images/genesys-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="change credentials" src="../images/genesys-6.png" title="change credentials" /></a></li>
 <li>Once you paste all the required credentials, click <strong>Authorize</strong> to validate the authorization.
 <a class="glightbox" href="../images/genesys-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="authorize" src="../images/genesys-7.png" title="authorize" /></a></li>
-</ol>
+</ul>
 <p>Your Bot Connector is created successfully!</p>
 </li>
 </ol>
@@ -2885,7 +2883,7 @@
 <li>For <strong>Restrict Domain Access</strong>, select <em>Allow all domains</em>.</li>
 <li>For <strong>Select your Architect Flow</strong>, select your Message Flow created in the previous step.</li>
 <li>
-<p>Click <strong>Save</strong>. \
+<p>Click <strong>Save</strong>. 
   The system routes the message sent by the user via the <strong>Genesys Messenger</strong> to the message flow.
   <a class="glightbox" href="../images/genesys-11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="genesys messenger" src="../images/genesys-11.png" title="genesys messenger" /></a></p>
 </li>
