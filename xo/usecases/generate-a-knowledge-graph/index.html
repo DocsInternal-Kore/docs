@@ -17,7 +17,7 @@
     
     
       
-        <title>**Build a Knowledge Graph** - Kore ai Docs</title>
+        <title>**Generation of Knowledge Graph** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#build-a-knowledge-graph" class="md-skip">
+        <a href="#generation-of-knowledge-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Build a Knowledge Graph**
+              **Generation of Knowledge Graph**
             
           </span>
         </div>
@@ -2733,90 +2733,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-the-knowledge-graph-node-structure" class="md-nav__link">
-    Create the Knowledge Graph Node Structure
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-the-knowledge-graph" class="md-nav__link">
-    Build the Knowledge Graph
+  <a href="#configuration" class="md-nav__link">
+    Configuration
   </a>
-  
-    <nav class="md-nav" aria-label="Build the Knowledge Graph">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-faqs" class="md-nav__link">
-    Add FAQs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task" class="md-nav__link">
-    Run a Task
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manage-traits-synonyms-and-stop-words" class="md-nav__link">
-    Manage Traits, Synonyms, and Stop Words
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manage-variable-namespaces" class="md-nav__link">
-    Manage Variable Namespaces
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-a-knowledge-graph" class="md-nav__link">
-    Update a Knowledge Graph
+  <a href="#execution" class="md-nav__link">
+    Execution
   </a>
-  
-    <nav class="md-nav" aria-label="Update a Knowledge Graph">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#move-intents-between-nodes" class="md-nav__link">
-    Move Intents Between Nodes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edit-and-delete-terms" class="md-nav__link">
-    Edit and Delete Terms
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edit-intents-and-responses" class="md-nav__link">
-    Edit Intents and Responses
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#improve-performance" class="md-nav__link">
-    Improve Performance
+  <a href="#output" class="md-nav__link">
+    Output
   </a>
   
 </li>
@@ -2840,154 +2779,123 @@
 
 
 
-<h1 id="build-a-knowledge-graph"><strong>Build a Knowledge Graph</strong><a class="headerlink" href="#build-a-knowledge-graph" title="Permanent link">&para;</a></h1>
-<p>The XO Platform’s Knowledge Graph (KG) helps you turn your static FAQ text into an intelligent, personalized conversational experience. It goes beyond the usual practice of capturing FAQs as flat question-answer pairs. Instead, the Knowledge Graph enables you to create a hierarchical structure of key domain terms and associate them with context-specific questions and their alternatives, synonyms, traits, and more. Additionally, you can opt for the LLM-based Few-Shot Knowledge Graph, which requires no ontology and reduces maintenance and training requirements. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-graph-terminology/">Learn more</a>.</p>
-<p>To generate a Knowledge Graph, you need to add FAQs to an existing or new VA. If you have not created a VA, refer to <a href="https://developer.kore.ai/docs/bots/chatbot-overview/getting-started-bots/">Building a Virtual Assistant.</a>.</p>
-<p>To open the Knowledge Graph builder, follow the below steps:</p>
-<ol>
-<li>Log in to the XO Platform and open the VA to which you want to add the Knowledge Graph.</li>
-<li>Select the <strong>Build</strong> tab from the top menu.</li>
-<li>On the left menu, select <strong>Conversation Skills</strong> and click <strong>Knowledge Graph</strong>.</li>
-<li>You will notice that there is already a Knowledge Graph with the name of your assistant.
-<a class="glightbox" href="../images/access-existing-knowledge-graph.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="access existing knowledge graph" src="../images/access-existing-knowledge-graph.png" title="access existing knowledge graph" /></a></li>
-</ol>
+<h1 id="generation-of-knowledge-graph"><strong>Generation of Knowledge Graph</strong><a class="headerlink" href="#generation-of-knowledge-graph" title="Permanent link">&para;</a></h1>
+<p>The performance of the  Knowledge Graph is based on its organization which is influenced by the key domain terms, and the established hierarchy.</p>
+<p>Building the FAQ is easy when you start fresh with the Knowledge Graph, but in case you have a list of questions-answer pairs, converting them into a fully-functional Knowledge Graph is tedious.</p>
+<p>The XO Platform provides a Knowledge Graph Generator that automatically extracts terms from FAQ, defines the hierarchy between these terms, and also associates the FAQ to the right terms. You can then import the output file from the generator to your VA’s Knowledge Graph without worrying about the hierarchy. </p>
+<p>You can also edit the hierarchy after import to suit your needs. It is highly recommended to review and make changes as the Knowledge Graph generated is only a suggestion.</p>
 <blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong>
-All features explained here are supported by the Few-Shot Knowledge Graph, except for the following:</p>
-<ul>
-<li>Few-Shot Knowledge Graphs do not require an ontology structure, but you can create one to  improve intent detection. </li>
-<li>Default terms are not available in Few-Shot Knowledge Graphs. The only exception is when you switch from an Ontology Graph, in which case existing Default terms are stored as such until updated. Afterward, Default terms become Organizer terms and can be set as Mandatory.</li>
-<li>Lemmatization using Parts of Speech, Search in Answer, and Contextual Paths Qualification are not supported by Few-Shot Graphs. Please see the Knowledge Graph Types Comparison Table for a detailed list of supported features.</li>
-<li>Path Level and Knowledge Graph Synonyms are only supported for Mandatory Terms and for Tags.</li>
-</ul>
+<p><strong><p style="color:#1338BE">NOTE</p></strong> The Knowledge Graph Generator is available from v7.1 of the Platform.</p>
 </blockquote>
-<h2 id="create-the-knowledge-graph-node-structure">Create the Knowledge Graph Node Structure<a class="headerlink" href="#create-the-knowledge-graph-node-structure" title="Permanent link">&para;</a></h2>
-<p>By default, the name of the VA becomes the root node of the hierarchy and you can edit this. Create the rest of the nodes below the root node.</p>
-<p>To create nodes, follow the below steps:</p>
-<ol>
-<li>Open the Knowledge Graph.</li>
-<li>On the top left of the Knowledge Graph window, hover over the root node.</li>
-<li>Click the <strong>+</strong> icon. A text box appears below to <strong>Add Node</strong>. For better performance, there is a restriction of 50k FAQs spread across 20k maximum allowed number of nodes.</li>
-<li>Type the name of the node in the text box and press <strong>Enter</strong>. A warning would be displayed in case you enter a duplicate node name, i.e. if a child node with the same name already exists under the parent node.</li>
-</ol>
-<blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong> This node becomes a child for the root node and can be referred to as a First-level node.
-5. Repeat steps 1 to 3 in this section to create other First-level nodes.
-6. After you create First-level nodes, create child nodes as follows:
-    * Hover over any First-level node, and click the plus icon to create its child node.
-    * You can create a child node for any level node by hovering over it and clicking the <strong>+</strong> icon.</p>
-</blockquote>
-<p>Follow the same process to create multiple node levels. </p>
-<p>The demo below shows you how to create nodes.
-<a class="glightbox" href="../images/add-kg-node.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="add kg node" src="../images/add-kg-node.gif" title="add kg node" /></a></p>
-<p>You can delete nodes by clicking the <strong>Delete</strong> icon on the right.</p>
-<p><a class="glightbox" href="../images/delete-kg-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="delete kg node" src="../images/delete-kg-node.png" title="delete kg node" /></a></p>
-<h2 id="build-the-knowledge-graph">Build the Knowledge Graph<a class="headerlink" href="#build-the-knowledge-graph" title="Permanent link">&para;</a></h2>
-<p>The next step is to add Knowledge Graph Intents which can be either:</p>
+<p>The Kore.ai Knowledge Graph Generator is hosted on the Kore GitHub repository. This document provides the steps needed to install and use the generator.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>FAQ</strong> to answer user queries</li>
-<li><strong>Task</strong> to execute a dialog task.</li>
-</ul>
-<h3 id="add-faqs">Add FAQs<a class="headerlink" href="#add-faqs" title="Permanent link">&para;</a></h3>
-<p>Using this option, you can add relevant question-answer sets to the nodes in the hierarchy. Note that there is a limit  of 50k FAQs over 20k nodes to avoid performance issues. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/managing-faqs/">Learn more</a>.</p>
-<h3 id="run-a-task">Run a Task<a class="headerlink" href="#run-a-task" title="Permanent link">&para;</a></h3>
-<p>To leverage the capabilities of the Knowledge Graph and dialog tasks, and handle FAQs that involve complex conversations, you must link a dialog task to a Knowledge Graph Intent </p>
-<ol>
-<li>On the Intent window, under the <strong>Intent</strong> section, select <strong>Task</strong>.</li>
-<li>Optionally, enter a <strong>Display Name.</strong> This name will be used for presenting the FAQ to the end-users in case of ambiguity.</li>
-<li>Select a task from the drop-down list. You can <strong>Add Utterance</strong> that triggers this task.</li>
-<li>If multiple utterances mean the same, <strong>Add Alternate Utterance</strong>.</li>
-<li>You can also add a <strong>Reference Id</strong>. This field can be used to add a reference to any external content used as a source for this FAQ.</li>
-<li>Click <strong>Save</strong>.</li>
-</ol>
-<p><a class="glightbox" href="../images/save-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="save kg task" src="../images/save-task.png" title="save kg task" /></a></p>
-<h3 id="manage-traits-synonyms-and-stop-words">Manage Traits, Synonyms, and Stop Words<a class="headerlink" href="#manage-traits-synonyms-and-stop-words" title="Permanent link">&para;</a></h3>
-<p>You can improve the performance of your Knowledge Graph by adding tags, synonyms, traits, and more. <a href="https://developer.kore.ai/docs/bots/nlp/knowledge-graph/">Refer here</a> to know more.</p>
-<h3 id="manage-variable-namespaces">Manage Variable Namespaces<a class="headerlink" href="#manage-variable-namespaces" title="Permanent link">&para;</a></h3>
-<p><strong>Manage Variable Namespaces</strong> section (introduced in v8.0) allows you to associate the Variable Namespaces to use with this Knowledge Graph. This option is visible only when the Variable Namespace is enabled for the VA. For more information, refer to <a href="https://developer.kore.ai/docs/bots/bot-settings/bot-management/managing-namespace/">Managing Namespace</a>.</p>
-<p><a class="glightbox" href="../images/variable-namespaces-select.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="variable namespaces select" src="../images/variable-namespaces-select.png" title="variable namespaces select" /></a></p>
-<h2 id="update-a-knowledge-graph">Update a Knowledge Graph<a class="headerlink" href="#update-a-knowledge-graph" title="Permanent link">&para;</a></h2>
-<p>Once created, there will be times when you want to make changes to the Knowledge Graph for better organization and presentation.</p>
-<blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong> Once you make any changes to the Knowledge Graph, make sure to click Train on the top-right to send the updates to the Knowledge Graph engine. If you do not train the VA, the changes are not reflected in its responses.</p>
-</blockquote>
-<p>By default, intents added to a child node are visible for all its parent nodes in the path, up to the root node. </p>
-<p>If you do not want the intents from child nodes to be seen beyond a certain parent node, click the following icon on the <strong>Questions</strong> pane of the selected parent.</p>
-<p><a class="glightbox" href="../images/exclude-child-terms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="exclude child terms" src="../images/exclude-child-terms.png" title="exclude child terms" /></a></p>
-<p>The intents from all its child nodes are visible to the selected parent node and not to all its parent nodes.</p>
-<h3 id="move-intents-between-nodes">Move Intents Between Nodes<a class="headerlink" href="#move-intents-between-nodes" title="Permanent link">&para;</a></h3>
-<p>You can move one or more Intent and Response sets between nodes in your Knowledge Graph, as follows.</p>
-<ol>
-<li>On the Knowledge Graph, click the name of the node from which you want to move the intent. The intents associated to the node display on the right pane.</li>
-<li>Identify the intent that you want to move, and select the checkbox next to it. You can select multiple items.</li>
-<li>Drag the intent and drop it on the relevant node. The node is highlighted and the intent displays on the right pane of the node.</li>
-</ol>
-<p>The demo below shows you how this works.</p>
-<p><a class="glightbox" href="../images/move-to-new-node.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="move node" src="../images/move-to-new-node.gif" title="move node" /></a></p>
-<h3 id="edit-and-delete-terms">Edit and Delete Terms<a class="headerlink" href="#edit-and-delete-terms" title="Permanent link">&para;</a></h3>
-<ol>
-<li>On the nodes hierarchy from the left pane, hover over the term/node you want to edit.</li>
-<li>Click the <strong>Settings</strong> (gear) icon. The settings window opens.</li>
-<li>You can change the name of the term, set the term types, set the term status, add traits, add or remove synonyms, and manage context. <a href="https://developer.kore.ai/docs/bots/nlp/knowledge-graph/">Learn more</a>. </li>
-</ol>
-<p><a class="glightbox" href="../images/term-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="term settings" src="../images/term-settings.png" title="term settings" /></a></p>
-<p>To delete a term, follow the steps below:</p>
-<ol>
-<li>On the nodes hierarchy, hover over the term you want to delete.</li>
-<li>Click the <strong>Delete</strong> icon.</li>
-<li>
-<p>On the confirmation dialog box, you can find the following options:</p>
-<ul>
-<li><strong>Delete the FAQs along with the term</strong> – Choosing this option deletes the term and FAQs under it.</li>
-<li><strong>Delete the term and move FAQs to root term</strong> - Choosing this option deletes the term and moves the FAQs under it to the root term.</li>
+<li><strong>Python 3.6</strong>: The Knowledge Graph Generator requires python v3.6. You can download it <a href="https://www.python.org/downloads/">here</a>.</li>
+<li><strong>Virtual Environment</strong>: It is advised to use a virtual environment, instead of installing requirements in the system directly. Follow the <a href="https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments">steps mentioned here</a> to set up a virtual environment.</li>
+<li>For Windows Developers:<ul>
+<li><strong>Microsoft Visual C++</strong> Build Tools – tested with v14.0.</li>
+<li>Windows 10 users must install <strong>Windows 10 SDK</strong>. You can download it <a href="https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/">here</a>.</li>
+<li>The operating system must be up to date for a seamless installation of requirements. Some libraries like SpiCy (internal dependency) need specific DLLs that are available in the latest updates.</li>
 </ul>
 </li>
-</ol>
-<blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong></p>
-<ul>
-<li>If the term has child nodes, all those nodes will be deleted.
-<a class="glightbox" href="../images/child-node-deleted.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="child node deleted" src="../images/child-node-deleted.png" title="child node deleted" /></a></li>
-<li>If your VA is already published, you must train it  for the deletions to be effective.</li>
-<li>If you have deleted the first level term you can selectively train to remove the related terms from the published copy.</li>
-<li>If you have deleted, say, the nth level child term, then you need to select the entire parent term for training.</li>
+<li>A file containing the FAQs in <em>JSON</em> or <em>CSV</em> format. You can obtain this file in two ways:<ul>
+<li>Export the Knowledge Graph from Kore.ai XO Platform, <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/importing-the-bot-ontology-from-csv-or-json/#Exporting_Ontology">see here for how</a>.</li>
+<li>Build the Knowledge Graph in a tabular form with questions in the first column and answers in the corresponding second column and save the file in <em>CSV</em> format.</li>
 </ul>
-</blockquote>
-<h3 id="edit-intents-and-responses">Edit Intents and Responses<a class="headerlink" href="#edit-intents-and-responses" title="Permanent link">&para;</a></h3>
+</li>
+</ul>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <ol>
-<li>From the nodes hierarchy, select the relevant term.</li>
-<li>Intents associated with the term appear on the right pane.</li>
-<li>Hover over the intent or response to edit it and click the <strong>Edit</strong> icon.</li>
-<li>Make changes to the intent or response and click <strong>Save</strong>.</li>
-<li>
-<p>You can delete the intent using the <strong>Delete</strong> icon.
-<a class="glightbox" href="../images/delete-faq-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="delete faq intent" src="../images/delete-faq-intent.png" title="delete faq intent" /></a></p>
-</li>
-<li>
-<p>Selecting multiple intents lets you delete them in bulk.</p>
-</li>
+<li>Download the Knowledge Graph Generator from Kore.ai GitHub: <a href="https://github.com/Koredotcom/KnowledgeGraphGenerator">https://github.com/Koredotcom/KnowledgeGraphGenerator</a>.</li>
+<li>Extract the zip file into a folder and open the command prompt from that generator folder.</li>
+<li>Activate the virtual environment: Execute the following command replacing the placeholders with actual values to activate the virtual environment:<ol>
+<li>For Windows: 
+<code>&amp;lt;virtual_environments_folder_location&gt;/&amp;lt;virtualenv_name&gt;/Scripts/activate</code></li>
+<li>For Unix/macOS: 
+<code>&amp;lt;virtual_environments_folder_location&gt;/&amp;lt;virtualenv_name&gt;/bin/activate</code>.</li>
 </ol>
-<p><a class="glightbox" href="../images/delete-selected-intents.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="bulk delete intents" src="../images/delete-selected-intents.png" title="bulk delete intents" /></a></p>
-<h2 id="improve-performance">Improve Performance<a class="headerlink" href="#improve-performance" title="Permanent link">&para;</a></h2>
-<p>The Knowledge Graph engine works well with the default settings, but you can fine-tune the KG engine performance. Here are a few guidelines:</p>
-<ol>
-<li>Configure the Knowledge Graph by defining terms, <strong>synonyms, primary and alternative questions, or user utterances.</strong> Though hierarchy does not affect the KG engine performance, it does help organize and guide your knowledge implementation.</li>
-<li>Set the following parameters:<ul>
-<li><strong>Path Coverage</strong> – For Ontology-based graphs, you can define the minimum percentage of terms in the user’s utterance to be present in a path to qualify it for further scoring.</li>
-<li><strong>Definite Score for KG</strong> – Define the minimum score for a KG intent match to consider as a definite match and discard any other intent matches found.</li>
-<li><strong>Minimum and Definitive Level for Knowledge Tasks</strong> – Define minimum and definitive threshold to identify and respond in case of a knowledge task.</li>
-<li><strong>KG Suggestions Count</strong> – Define the maximum number of KG/FAQ suggestions to present when a definite KG intent match is unavailable.</li>
-<li><strong>The proximity of Suggested Matches</strong> – Define the maximum difference to allow between top-scoring and immediate next suggested questions to consider as equally important. </li>
-<li><strong>Qualify Contextual Paths</strong> – This ensures that the bot context is populated and retained with the terms/nodes of the matched intent. This further enhances the user experience.</li>
-</ul>
 </li>
+<li>Once the virtual environment is activated, you can see the virtual environment name at the start of every command in the console.</li>
+<li>Install the requirements: Run the following command from your project root directory (KnowledgeGraphGenerator) in the virtual environment to install the requirements 
+<code>pip install -r requirements.txt</code>You can verify the installation by running the following command and ensuring that the list contains all the components mentioned in the <em>requirement.txt</em> file. 
+<code>pip list</code></li>
+<li>Download spacy English model: Run the following command to download spaCy, the NLP model. 
+<code>python -m spacy download en</code></li>
 </ol>
-<blockquote>
-<p>****<p style="color:#1338BE">NOTE</p>**** You can customize these settings in Natural Language &gt; Thresholds &amp; Configurations. See Knowledge Graph Training for details.</p>
-</blockquote>
+<h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
+<p>Now that you have the prerequisites and have configured the Knowledge Graph Generator, let us see how to generate the Knowledge Graph.</p>
+<p>The following command executes the generator:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python KnowledgeGraphGenerator.py --file_path &lt;INPUT_FILE_PATH&gt; --type &lt;INPUT_FILE_TYPE&gt; --language &lt;LANGUAGE_CODE&gt; --v &lt;true/false&gt;
+</span></code></pre></div>
+<p>Let us look at each of the options:</p>
+<table border="1.5">
+<tr bgcolor="#ECECEC">
+   <td><strong>OPTION</strong>
+   </td>
+   <td><strong>DESCRIPTION</strong>
+   </td>
+   <td><strong>MANDATORY/OPTIONAL</strong>
+   </td>
+   <td><strong>DEFAULT VALUE</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Input File Path
+   </td>
+   <td>Input file name along with the location
+   </td>
+   <td>Mandatory
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Input File Type
+   </td>
+   <td>The type of input file:
 <ul>
-<li><strong>Traits</strong> – Traits qualify nodes/terms even if the user utterance does not contain the term/node. Traits are also helpful in filtering the suggested intent list.</li>
+
+<li><em>json_export</em> – for files exported from Kore.ai Bot Builder using JSON Export option
+
+<li><em>csv_export</em> – for files exported from Kore.ai Bot Builder using CSV Export option
+
+<li><em>CSV</em> – for files with questions in the first column and answers in the respective second column
+</li>
 </ul>
+   </td>
+   <td>Mandatory
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Language Code
+   </td>
+   <td>The language code for the language in which input data exist
+   </td>
+   <td>Optional
+   </td>
+   <td>en (English)
+   </td>
+  </tr>
+  <tr>
+   <td>Verbose Mode
+   </td>
+   <td>Running a command in verbose mode to see intermediate progress steps
+   </td>
+   <td>Optional
+   </td>
+   <td>false
+   </td>
+  </tr>
+</table>
+
+<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
+<p>The output JSON file is generated and placed under the project root directory with the name <code>ao_output.json</code></p>
+<p>The output JSON file can directly be imported to Knowledge Graph in the bot. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/importing-the-bot-ontology-from-csv-or-json/#Importing_Ontology">See here</a> for steps to import Knowledge Graph.</p>
+<blockquote>
+<p><strong><p style="color:#1338BE">NOTE</p></strong> When you try to import the Knowledge Graph it replaces the existing one. We recommend you take a back up before importing.</p>
+</blockquote>
 
 
   
