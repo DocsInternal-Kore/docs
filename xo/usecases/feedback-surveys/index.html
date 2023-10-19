@@ -2850,8 +2850,12 @@
 <li>You can use the automatic feedback template that the platform generates or build their flows and submit the feedback to the platform feedback service. Alternatively, it could be a hybrid approach where the feedback flow can emerge from or integrate with another flow.</li>
 <li>Once a customer responds to a Feedback Survey, the event displays on the chat transcript slider of the Conversations History Dashboard. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/feedback-analytics/">Learn more</a>.</li>
 <li>Additionally, you can filter and analyze Conversations (with feedback survey enabled) based on the Feedback Type, Response, and Score using prebuilt and custom filters. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/conversation-history-dashboard/#Prebuilt_Filters_for_Conversations_History">Learn more</a>.</li>
-<li>The feedback response from a customer is captured and pushed to the platform for further analysis in three ways:</li>
-<li>By creating a <strong>Dialog</strong> to capture feedback responses/scores and generate the required analytics to derive actionable insights on the <strong>Feedback Analysis Dashboard</strong>. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/feedback-analytics/">Learn more</a>.</li>
+<li>
+<p>The feedback response from a customer is captured and pushed to the platform for further analysis in three ways:</p>
+</li>
+<li>
+<p>By creating a <strong>Dialog</strong> to capture feedback responses/scores and generate the required analytics to derive actionable insights on the <strong>Feedback Analysis Dashboard</strong>. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/feedback-analytics/">Learn more</a>.</p>
+</li>
 <li>By pushing feedback data to the platform using the Public API. <a href="https://developer.kore.ai/docs/bots/api-guide/feedback-survey-api/">Learn more</a>.</li>
 <li>By pushing feedback data via the Botkit. <a href="https://developer.kore.ai/docs/bots/sdks/using-the-botkit-sdk/#Feedback_Survey">Learn more</a>.</li>
 <li>In addition to the primary survey question, you can configure a <strong>Follow-up Question</strong> for negative feedback to gather specific details and better understand any primary survey issues.</li>
@@ -2997,10 +3001,8 @@
 <p><strong><p style="color:#1338BE">NOTE</p></strong> The default response names provided for <strong>CSAT</strong> and the <strong>Like/Dislike</strong> types are editable; however, the scores set in the system cannot be changed for any survey type.</p>
 </blockquote>
 <ol>
-<li>
-<p>To create your flow, select <strong>Create survey without Dialog</strong> and click <strong>Next</strong>.
-<a class="glightbox" href="../images/survey-without-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="survey without dialog" src="../images/survey-without-dialog.png" title="survey without dialog" /></a></p>
-</li>
+<li>To create your flow, select <strong>Create survey without Dialog</strong> and click <strong>Next</strong>.
+<a class="glightbox" href="../images/survey-without-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="survey without dialog" src="../images/survey-without-dialog.png" title="survey without dialog" /></a></li>
 <li>
 <p><strong>Optional Step</strong>: To capture additional details from the customer for a negative feedback, configure the <strong>follow-up question</strong> with the steps below:</p>
 <ul>
@@ -3020,20 +3022,18 @@
 <p>Either edit the default follow-up question in the text area provided for the <strong>THEN</strong> clause or keep it unchanged.
 <a class="glightbox" href="../images/edit-default-follow-up-question.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="edit default follow-up question" src="../images/edit-default-follow-up-question.png" title="edit default follow-up question" /></a></p>
 </li>
+<li>Modify the <strong>Acknowledgement Message</strong> in the text area or retain the default message to acknowledge the customer’s effort in taking the survey.
+<a class="glightbox" href="../images/acknowledge-message-modify.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="modify acknowledgement message" src="../images/acknowledge-message-modify.png" title="modify acknowledgement message" /></a></li>
+<li>Click <strong>Next</strong> to move to survey launch configuration.</li>
 </ul>
-</li>
-<li>
-<p>Modify the <strong>Acknowledgement Message</strong> in the text area or retain the default message to acknowledge the customer’s effort in taking the survey.
-<a class="glightbox" href="../images/acknowledge-message-modify.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="modify acknowledgement message" src="../images/acknowledge-message-modify.png" title="modify acknowledgement message" /></a></p>
-</li>
-<li>
-<p>Click <strong>Next</strong> to move to survey launch configuration.</p>
 </li>
 </ol>
 <h3 id="step-3-define-launch-configuration">Step 3: Define Launch Configuration<a class="headerlink" href="#step-3-define-launch-configuration" title="Permanent link">&para;</a></h3>
-<p>After defining the survey, you can choose how and when to launch the survey in one of the following ways with the <strong>Launch Configuration</strong>:
-* Associate the survey with the end-of-task (conversation) event.
-* Add the survey task as a sub-dialog to other primary tasks.</p>
+<p>After defining the survey, you can choose how and when to launch the survey in one of the following ways with the <strong>Launch Configuration</strong>:</p>
+<ul>
+<li>Associate the survey with the end-of-task (conversation) event.</li>
+<li>Add the survey task as a sub-dialog to other primary tasks.</li>
+</ul>
 <p>To configure the feedback survey launch, follow the steps below:</p>
 <ol>
 <li>
