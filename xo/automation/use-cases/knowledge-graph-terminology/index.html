@@ -2845,10 +2845,11 @@
 <h2 id="terms-or-nodes">Terms or Nodes<a class="headerlink" href="#terms-or-nodes" title="Permanent link">&para;</a></h2>
 <p>Terms or Nodes are the building blocks of an ontology and are used to define the fundamental concepts and categories of a Knowledge Graph.</p>
 <p>You can organize the terms in a hierarchical order to represent the flow of information in your graph. You can create, organize, edit, and delete terms and set term types to facilitate intent identification </p>
-<blockquote>
-<p><strong>Important</strong>: 
-The Knowledge graph is limited to 20 thousand nodes/terms and 50 thousand FAQs.</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>The Knowledge graph is limited to 20 thousand nodes/terms and 50 thousand FAQs.</p>
+</div>
+
 <h3 id="nodeterm-hierarchy">Node/Term Hierarchy<a class="headerlink" href="#nodeterm-hierarchy" title="Permanent link">&para;</a></h3>
 <p>For easier representation, we identify node/term hierarchy using the following names:</p>
 <h3 id="root-termnode">Root Term/Node<a class="headerlink" href="#root-termnode" title="Permanent link">&para;</a></h3>
@@ -2905,14 +2906,12 @@ The Knowledge graph is limited to 20 thousand nodes/terms and 50 thousand FAQs.<
 <a class="glightbox" href="../images/link-dialog-task-to-kg-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="link dialog task to kg intent" src="../images/link-dialog-task-to-kg-intent.png" title="link dialog task to kg intent" /></a></p>
 </li>
 </ul>
-<blockquote>
-<p>Important</p>
-<ul>
-<li>For Few-shot graphs, you can add all your FAQs to the Root node because the LLM does not require an ontology.</li>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p><ul><li>For Few-shot graphs, you can add all your FAQs to the Root node because the LLM does not require an ontology.</li>
 <li>Default terms are not available in Few-Shot Knowledge Graphs. The only exception is when you switch from an Ontology Graph, in which case existing Default terms are stored as such until updated. Afterward, Default terms become Organizer terms and can be set as Mandatory.</li>
-<li>Path Level Synonyms are only supported for Mandatory Terms and for Tags.</li>
-</ul>
-</blockquote>
+<li>Path Level Synonyms are only supported for Mandatory Terms and for Tags.</li></ul></p>
+</div>
 
 
   
