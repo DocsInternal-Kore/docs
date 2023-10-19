@@ -3001,20 +3001,21 @@
 <p><strong>Like/Dislike</strong></p>
 <p><a class="glightbox" href="../images/like-dislike-survey.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="like dislike survey" src="../images/like-dislike-survey.png" title="like dislike survey" /></a></p>
 <p><strong>Create the Survey Flow</strong></p>
-<p>To create your flow, follow the steps below:
-1. Select <strong>Create survey without Dialog</strong> and click <strong>Next</strong>.
-<a class="glightbox" href="../images/survey-without-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="survey without dialog" src="../images/survey-without-dialog.png" title="survey without dialog" /></a>
-2. <strong>(Optional Step)</strong>: To capture additional details from the customer for a negative feedback, configure the <strong>follow-up question</strong> with the steps below:</p>
-<div class="language-text highlight"><pre><span></span><code>* Enable the **Follow-up Question** option (default setting).
-![enable follow-up](../usecases/images/follow-up-enable.png &quot;enable follow-up&quot;)
-* Define when to post the follow-up question by configuring the **IF condition**, where you must select the conditional option from the list for **User Score**.
-![configure condition](../usecases/images/configure-if-condition.png &quot;configure condition&quot;)
-* Next, increment or decrement the **feedback score counter** for the selected condition to set the validation criterion.
-![adjust feedback counter](../usecases/images/adjust-feedback-score-counter.png &quot;adjust feedback counter&quot;)
-* Either edit the default follow-up question in the text area provided for the **THEN** clause or keep it unchanged.
-![edit default follow-up question](../usecases/images/edit-default-follow-up-question.png &quot;edit default follow-up question&quot;)
-</code></pre></div>
+<p>To create your flow, follow the steps below:</p>
 <ol>
+<li>Select <strong>Create survey without Dialog</strong> and click <strong>Next</strong>.
+<a class="glightbox" href="../images/survey-without-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="survey without dialog" src="../images/survey-without-dialog.png" title="survey without dialog" /></a></li>
+<li><strong>(Optional Step)</strong>: To capture additional details from the customer for a negative feedback, configure the <strong>follow-up question</strong> with the steps below:<ul>
+<li>Enable the <strong>Follow-up Question</strong> option (default setting).
+<a class="glightbox" href="../images/follow-up-enable.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="enable follow-up" src="../images/follow-up-enable.png" title="enable follow-up" /></a></li>
+<li>Define when to post the follow-up question by configuring the <strong>IF condition</strong>, where you must select the conditional option from the list for <strong>User Score</strong>.
+<a class="glightbox" href="../images/configure-if-condition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure condition" src="../images/configure-if-condition.png" title="configure condition" /></a></li>
+<li>Next, increment or decrement the <strong>feedback score counter</strong> for the selected condition to set the validation criterion.
+<a class="glightbox" href="../images/adjust-feedback-score-counter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="adjust feedback counter" src="../images/adjust-feedback-score-counter.png" title="adjust feedback counter" /></a></li>
+<li>Either edit the default follow-up question in the text area provided for the <strong>THEN</strong> clause or keep it unchanged.
+<a class="glightbox" href="../images/edit-default-follow-up-question.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="edit default follow-up question" src="../images/edit-default-follow-up-question.png" title="edit default follow-up question" /></a></li>
+</ul>
+</li>
 <li>Modify the <strong>Acknowledgement Message</strong> in the text area or retain the default message to acknowledge the customer’s effort in taking the survey.
 <a class="glightbox" href="../images/acknowledge-message-modify.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="modify acknowledgement message" src="../images/acknowledge-message-modify.png" title="modify acknowledgement message" /></a></li>
 <li>Click <strong>Next</strong> to move to survey launch configuration.</li>
@@ -3045,9 +3046,10 @@
 <p>After you’ve created the survey, you can view the built-in survey flow as a dialog task under <strong>Build</strong> &gt; <strong>Conversational Skills</strong> &gt; <strong>Dialog Tasks</strong> on the left menu.</p>
 <p>The <strong>Task Flow</strong> will include a combination of <strong>Entity</strong>, <strong>Message</strong>, and <strong>Service</strong> nodes to represent the survey flow.</p>
 <p>You can customize the dialog flow as per your need by changing the dialog flow definition fields.</p>
-<p><strong>Important</strong></p>
+<p style="color:darkblue"><b>DEFINING CUSTOM FLOWS</b></p>
+
 <ul>
-<li><strong>Feedback Service</strong> is introduced as the new <strong>Service Type</strong> option under <strong>General Settings</strong>. You can use this service to submit feedback on the surveys you may have captured using your custom flows.</li>
+<li><strong>Feedback Service</strong> is introduced as the new <strong>Service Type</strong> option under <strong>General Settings</strong> for the <strong>Service Node</strong>. You can use this service to submit feedback on the surveys you may have captured using your custom flows.</li>
 </ul>
 <p><a class="glightbox" href="../images/feedback-service-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="feedback service type" src="../images/feedback-service-type.png" title="feedback service type" /></a></p>
 <ul>
