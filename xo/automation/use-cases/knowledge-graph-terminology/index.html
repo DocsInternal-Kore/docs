@@ -2860,14 +2860,13 @@ The Knowledge graph is limited to 20 thousand nodes/terms and 50 thousand FAQs.<
 <p>For example, in a Travel Assistant, you might have a first-level node called <em>Reservation</em>, which can be structured by functionality into subnodes such as: <em>Cancel and Update</em>.</p>
 <h3 id="leaf-termnode">Leaf Term/Node<a class="headerlink" href="#leaf-termnode" title="Permanent link">&para;</a></h3>
 <p>Any node at any level starting with the 2<sup>nd</sup> is called a <strong><em>Leaf Term/Node</em></strong>.</p>
-<blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong></p>
-<ul>
-<li>This hierarchical organization of nodes is for your convenience to keep related questions together.</li>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><ul><li>This hierarchical organization of nodes is for your convenience to keep related questions together.</li>
 <li>The Knowledge Graph Engine does not consider any parent-child relation while evaluating the questions for a match.</li>
-<li>The hierarchy does not influence the FAQ matching process since all the nodes are considered the same way, irrespective of their position.</li>
-</ul>
-</blockquote>
+<li>The hierarchy does not influence the FAQ matching process since all the nodes are considered the same way, irrespective of their position.</li></ul></p>
+</div>
+
 <p><a class="glightbox" href="../images/leaf-term-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="leaf term" src="../images/leaf-term-node.png" title="leaf term" /></a></p>
 <h3 id="termnode-types">Term/Node Types<a class="headerlink" href="#termnode-types" title="Permanent link">&para;</a></h3>
 <p>Functionally, there are three types of Terms/Nodes.</p>
@@ -2888,13 +2887,12 @@ The Knowledge graph is limited to 20 thousand nodes/terms and 50 thousand FAQs.<
 <h3 id="traits">Traits<a class="headerlink" href="#traits" title="Permanent link">&para;</a></h3>
 <p>A trait is a collection of typical end-user utterances that define the nature of a question. <a href="https://developer.kore.ai/docs/bots/nlp/traits/">Learn more</a>.</p>
 <p>A trait is applied to multiple terms across your Bot Ontology.</p>
-<blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong></p>
-<ul>
-<li>Traits also help you filter nodes based on associated user utterances. Thus, if the user types an utterance that is present in a trait, the assistant only searches the nodes to which the trait is applied. </li>
-<li>If the utterance is present in any other node to which the trait is not applied, the node is ignored.</li>
-</ul>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><ul><li>Traits also help you filter nodes based on associated user utterances. Thus, if the user types an utterance that is present in a trait, the assistant only searches the nodes to which the trait is applied.</li> 
+<li>If the utterance is present in any other node to which the trait is not applied, the node is ignored.</li></ul></p>
+</div>
+
 <h3 id="intents">Intents<a class="headerlink" href="#intents" title="Permanent link">&para;</a></h3>
 <p>A VA can respond to a given question with an FAQ or the execution of a Dialog Task.</p>
 <ul>

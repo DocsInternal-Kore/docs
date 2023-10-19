@@ -2869,13 +2869,18 @@
 <li>Click the <strong>+</strong> icon. A text box appears below to <strong>Add Node</strong>. For better performance, there is a restriction of 50k FAQs spread across 20k maximum allowed number of nodes.</li>
 <li>Type the name of the node in the text box and press <strong>Enter</strong>. A warning would be displayed in case you enter a duplicate node name, i.e. if a child node with the same name already exists under the parent node.</li>
 </ol>
-<blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong> This node becomes a child for the root node and can be referred to as a First-level node.
-5. Repeat steps 1 to 3 in this section to create other First-level nodes.
-6. After you create First-level nodes, create child nodes as follows:
-    * Hover over any First-level node, and click the plus icon to create its child node.
-    * You can create a child node for any level node by hovering over it and clicking the <strong>+</strong> icon.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This node becomes a child for the root node and can be referred to as a First-level node.</p></div>
+
+<ol>
+<li>Repeat steps 1 to 3 in this section to create other First-level nodes.</li>
+<li>After you create First-level nodes, create child nodes as follows:<ul>
+<li>Hover over any First-level node, and click the plus icon to create its child node.</li>
+<li>You can create a child node for any level node by hovering over it and clicking the <strong>+</strong> icon.</li>
+</ul>
+</li>
+</ol>
 <p>Follow the same process to create multiple node levels. </p>
 <p>The demo below shows you how to create nodes.
 <a class="glightbox" href="../images/add-kg-node.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="add kg node" src="../images/add-kg-node.gif" title="add kg node" /></a></p>
@@ -2907,9 +2912,11 @@
 <p><a class="glightbox" href="../images/variable-namespaces-select.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="variable namespaces select" src="../images/variable-namespaces-select.png" title="variable namespaces select" /></a></p>
 <h2 id="update-a-knowledge-graph">Update a Knowledge Graph<a class="headerlink" href="#update-a-knowledge-graph" title="Permanent link">&para;</a></h2>
 <p>Once created, there will be times when you want to make changes to the Knowledge Graph for better organization and presentation.</p>
-<blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong> Once you make any changes to the Knowledge Graph, make sure to click Train on the top-right to send the updates to the Knowledge Graph engine. If you do not train the VA, the changes are not reflected in its responses.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once you make any changes to the Knowledge Graph, make sure to click Train on the top-right to send the updates to the Knowledge Graph engine. If you do not train the VA, the changes are not reflected in its responses.</p>
+</div>
+
 <p>By default, intents added to a child node are visible for all its parent nodes in the path, up to the root node. </p>
 <p>If you do not want the intents from child nodes to be seen beyond a certain parent node, click the following icon on the <strong>Questions</strong> pane of the selected parent.</p>
 <p><a class="glightbox" href="../images/exclude-child-terms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="exclude child terms" src="../images/exclude-child-terms.png" title="exclude child terms" /></a></p>
@@ -2942,16 +2949,15 @@
 </ul>
 </li>
 </ol>
-<blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong></p>
-<ul>
-<li>If the term has child nodes, all those nodes will be deleted.
-<a class="glightbox" href="../images/child-node-deleted.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="child node deleted" src="../images/child-node-deleted.png" title="child node deleted" /></a></li>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><ul><li>If the term has child nodes, all those nodes will be deleted.</li>
+<a class="glightbox" href="../use-cases/images/child-node-deleted.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/child-node-deleted.png" alt="child node deleted"></a>
 <li>If your VA is already published, you must train it  for the deletions to be effective.</li>
 <li>If you have deleted the first level term you can selectively train to remove the related terms from the published copy.</li>
-<li>If you have deleted, say, the nth level child term, then you need to select the entire parent term for training.</li>
-</ul>
-</blockquote>
+<li>If you have deleted, say, the nth level child term, then you need to select the entire parent term for training.</li></ul></p>
+</div>
+
 <h3 id="edit-intents-and-responses">Edit Intents and Responses<a class="headerlink" href="#edit-intents-and-responses" title="Permanent link">&para;</a></h3>
 <ol>
 <li>From the nodes hierarchy, select the relevant term.</li>
@@ -2981,9 +2987,11 @@
 </ul>
 </li>
 </ol>
-<blockquote>
-<p>****<p style="color:#1338BE">NOTE</p>**** You can customize these settings in Natural Language &gt; Thresholds &amp; Configurations. See Knowledge Graph Training for details.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p> You can customize these settings in Natural Language > Thresholds & Configurations. See Knowledge Graph Training for details.</p>
+</div>
+
 <ul>
 <li><strong>Traits</strong> – Traits qualify nodes/terms even if the user utterance does not contain the term/node. Traits are also helpful in filtering the suggested intent list.</li>
 </ul>
