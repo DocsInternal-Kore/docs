@@ -2836,32 +2836,30 @@
 <h1 id="feedback-surveys"><strong>Feedback Surveys</strong><a class="headerlink" href="#feedback-surveys" title="Permanent link">&para;</a></h1>
 <p>The XO Platform allows you to design and create feedback surveys for products, services, and overall experiences using out-of-the-box templates on the web and mobile channels. </p>
 <p>You can configure a Virtual Assistant to launch these surveys at a certain point in a conversation or at the end of a conversation (when the <em>end of conversation</em> event is triggered). The <strong>NPS</strong>, <strong>CSAT</strong>, and <strong>Like/Dislike</strong> survey types are currently supported.</p>
-<blockquote>
-<p><strong>Key Feature Highlights</strong></p>
+<p><strong>Key Features</strong></p>
 <ol>
 <li>The Feedback Module is use-case and channel-agnostic. But by default, it only shows text messages. You can always add additional channel-specific prompts to collect feedback from voice channels.</li>
 <li>When a feedback survey is created on the platform, all messages are in text format. The text from the platform gets converted into a voice using the ASR and TTS engines.</li>
 <li>You can leverage channel-specific configuration to modify the feedback prompts.</li>
 <li>Feedback flows are fully customizable.</li>
-<li>The Kore.ai XO Platform lets you configure feedback in two ways:</li>
+<li>The Kore.ai XO Platform lets you configure feedback in two ways:<ul>
 <li>Using the built-in flows to collect the feedback and the new service type called <strong>feedback service</strong> to submit the feedback to the bots platform.</li>
 <li>Collecting feedback from other sources that can be pushed to the platform as part of the conversation execution.</li>
+</ul>
+</li>
 <li>Feedback Surveys get created as dialog tasks with a series of entities, service calls, and message notes. You have complete control of modifying the out-of-the-box messages, adding additional messages to specific channels, such as voice channels, and capturing the feedback on voice.</li>
 <li>You can use the automatic feedback template that the platform generates or build their flows and submit the feedback to the platform feedback service. Alternatively, it could be a hybrid approach where the feedback flow can emerge from or integrate with another flow.</li>
 <li>Once a customer responds to a Feedback Survey, the event displays on the chat transcript slider of the Conversations History Dashboard. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/feedback-analytics/">Learn more</a>.</li>
 <li>Additionally, you can filter and analyze Conversations (with feedback survey enabled) based on the Feedback Type, Response, and Score using prebuilt and custom filters. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/conversation-history-dashboard/#Prebuilt_Filters_for_Conversations_History">Learn more</a>.</li>
-<li>
-<p>The feedback response from a customer is captured and pushed to the platform for further analysis in three ways:</p>
-</li>
-<li>
-<p>By creating a <strong>Dialog</strong> to capture feedback responses/scores and generate the required analytics to derive actionable insights on the <strong>Feedback Analysis Dashboard</strong>. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/feedback-analytics/">Learn more</a>.</p>
-</li>
+<li>The feedback response from a customer is captured and pushed to the platform for further analysis in three ways:<ul>
+<li>By creating a <strong>Dialog</strong> to capture feedback responses/scores and generate the required analytics to derive actionable insights on the <strong>Feedback Analysis Dashboard</strong>. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/feedback-analytics/">Learn more</a>.</li>
 <li>By pushing feedback data to the platform using the Public API. <a href="https://developer.kore.ai/docs/bots/api-guide/feedback-survey-api/">Learn more</a>.</li>
 <li>By pushing feedback data via the Botkit. <a href="https://developer.kore.ai/docs/bots/sdks/using-the-botkit-sdk/#Feedback_Survey">Learn more</a>.</li>
+</ul>
+</li>
 <li>In addition to the primary survey question, you can configure a <strong>Follow-up Question</strong> for negative feedback to gather specific details and better understand any primary survey issues.</li>
 <li>Additionally, you can set an Acknowledgement Message to customers after they complete the survey to show appreciation and let them know that it has been received.</li>
 </ol>
-</blockquote>
 <h2 id="navigating-to-feedback-survey">Navigating to Feedback Survey<a class="headerlink" href="#navigating-to-feedback-survey" title="Permanent link">&para;</a></h2>
 <p>To navigate to the Feedback Survey feature, follow the steps below:</p>
 <ol>
@@ -2980,7 +2978,9 @@
 <p>To define the survey design, follow the steps below:</p>
 <ol>
 <li>Select the relevant option in the <strong>Add Feedback Survey</strong> window based on how you want to create the survey.</li>
-<li>If you want to create a new Feedback Survey along with a <strong>Dialog Task</strong> to collect the feedback and capture the analytics, follow the steps below:<ul>
+<li>
+<p>If you want to create a new Feedback Survey along with a <strong>Dialog Task</strong> to collect the feedback and capture the analytics, follow the steps below:</p>
+<ul>
 <li>Select <strong>Create a survey with a New Dialog</strong>.</li>
 <li>Enter the <strong>Dialog Name</strong> in the text area.
 <a class="glightbox" href="../images/enter-the-dialog-name.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="enter dialog name" src="../images/enter-the-dialog-name.png" title="enter dialog name" /></a></li>
@@ -3054,7 +3054,6 @@
 <p>After you’ve created the survey, you can view the built-in survey flow as a dialog task under <strong>Build</strong> &gt; <strong>Conversational Skills</strong> &gt; <strong>Dialog Tasks</strong> on the left menu.</p>
 <p>The <strong>Task Flow</strong> will include a combination of <strong>Entity</strong>, <strong>Message</strong>, and <strong>Service</strong> nodes to represent the survey flow.</p>
 <p>You can customize the dialog flow as per your need by changing the dialog flow definition fields.</p>
-<blockquote>
 <p><strong>Important</strong></p>
 <ul>
 <li>
@@ -3066,7 +3065,6 @@
 <a class="glightbox" href="../images/feedback-as-sub-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="feedback as sub-dialog" src="../images/feedback-as-sub-dialog.png" title="feedback as sub-dialog" /></a></p>
 </li>
 </ul>
-</blockquote>
 
 
   
