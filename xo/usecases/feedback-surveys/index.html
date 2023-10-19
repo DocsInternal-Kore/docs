@@ -17,7 +17,7 @@
     
     
       
-        <title>**Knowledge Graph Analysis** - Kore ai Docs</title>
+        <title>**Feedback Surveys** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#knowledge-graph-analysis" class="md-skip">
+        <a href="#feedback-surveys" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Knowledge Graph Analysis**
+              **Feedback Surveys**
             
           </span>
         </div>
@@ -2733,15 +2733,83 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#report-fields-for-ontology-knowledge-graphs" class="md-nav__link">
-    Report Fields for Ontology Knowledge Graphs
+  <a href="#navigating-to-feedback-survey" class="md-nav__link">
+    Navigating to Feedback Survey
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#report-fields-for-few-shot-knowledge-graphs" class="md-nav__link">
-    Report Fields for Few-Shot Knowledge Graphs
+  <a href="#feedback-template-types" class="md-nav__link">
+    Feedback Template Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Feedback Template Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nps-scale-categorization" class="md-nav__link">
+    NPS Scale Categorization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csat-score-categorization" class="md-nav__link">
+    CSAT Score Categorization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#likedislike" class="md-nav__link">
+    Like/Dislike
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback-survey-creation-and-definition" class="md-nav__link">
+    Feedback Survey Creation and Definition
+  </a>
+  
+    <nav class="md-nav" aria-label="Feedback Survey Creation and Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-define-the-survey-details" class="md-nav__link">
+    Step 1: Define the Survey Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-define-the-survey-design" class="md-nav__link">
+    Step 2: Define the Survey Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-define-launch-configuration" class="md-nav__link">
+    Step 3: Define Launch Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback-survey-dialog-flow" class="md-nav__link">
+    Feedback Survey Dialog Flow
   </a>
   
 </li>
@@ -2765,343 +2833,238 @@
 
 
 
-<h1 id="knowledge-graph-analysis"><strong>Knowledge Graph Analysis</strong><a class="headerlink" href="#knowledge-graph-analysis" title="Permanent link">&para;</a></h1>
-<p>A careful analysis of the Knowledge Graph helps in detecting errors in your questions and the path associated with them that hamper the user experience.</p>
-<p>The Knowledge Graph (KG) Diagnosis tool helps you identify any inefficiencies in your KGs and suggests possible corrective actions. These are just guidelines and you need to further analyze the recommendations before going ahead with any changes.</p>
-<p>The KG provides an option to initiate an inspection, as follows:</p>
-<ul>
-<li>This option is available only for the in-development version of the KG where there are one or more FAQs added.</li>
-<li>The analysis considers the thresholds and other configurations of the KG.</li>
-<li>The analysis issues a warning if any node contains more than 25 questions and an advisory to the effect that the training fails if there are more than 100 questions in any node.</li>
-<li>You can invoke the diagnosis, by clicking <strong>Inspect</strong> on the KG screen.
-<a class="glightbox" href="../images/KG_Inspect.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="KG Inspect" src="../images/KG_Inspect.png" title="Inspect KG" /></a></li>
-<li>
-<p>You can also add patterns as alternate questions for an FAQ to provide better coverage, which helps in detecting the right FAQs for a user question. KG Inspect helps in identifying any syntax errors that occur knowingly or unknowingly while defining patterns. 
-The platform analyzes the KG and provides a report of the analysis. The identified incorrect patterns in KG are displayed in the report.</p>
-</li>
-<li>
-<p>You have an option to <strong>Re-run</strong> the analysis or <strong>Export</strong> the report. The export option downloads the report in JSON format.
-<a class="glightbox" href="../images/re-run-analysis.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="re-run analysis" src="../images/re-run-analysis.png" title="re-run analysis" /></a></p>
-</li>
-<li>
-<p>The inspect report shows an overview of the number of issues found under various categories. Please read below to learn more.</p>
-</li>
-<li>The various categories are grouped as:<ul>
-<li><strong>Error</strong> – Errors are incorrect graph definitions that need an immediate fix.</li>
-<li><strong>Warnings</strong> – When rectified, it help improves intent detection. A maximum of 50 warnings are displayed.</li>
-<li><strong>Suggestions</strong> – When implemented, it helps in the better organization of your KG. A maximum of 10 suggestions are displayed.</li>
-</ul>
-</li>
-<li>Click each category to view the detailed report</li>
-</ul>
-<p>In the example below, the details of all the patterns with invalid syntaxes are shown:
-<a class="glightbox" href="../images/example-patterns-with-invalid-syntaxes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="example of patterns with invalid syntaxes" src="../images/example-patterns-with-invalid-syntaxes.png" title="example of patterns with invalid syntaxes" /></a></p>
+<h1 id="feedback-surveys"><strong>Feedback Surveys</strong><a class="headerlink" href="#feedback-surveys" title="Permanent link">&para;</a></h1>
+<p>The XO Platform allows you to design and create feedback surveys for products, services, and overall experiences using out-of-the-box templates on the web and mobile channels. </p>
+<p>You can configure a Virtual Assistant to launch these surveys at a certain point in a conversation or at the end of a conversation (when the <em>end of conversation</em> event is triggered). The <strong>NPS</strong>, <strong>CSAT</strong>, and <strong>Like/Dislike</strong> survey types are currently supported.</p>
 <blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong> There can be more than 50 warnings or 10 suggestions, but only the first 50/10 occurrences of the issue are listed. You must fix the same and re-run the analysis to view the next set.</p>
+<p><strong>Key Feature Highlights</strong></p>
+<ol>
+<li>The Feedback Module is use-case and channel-agnostic. But by default, it only shows text messages. You can always add additional channel-specific prompts to collect feedback from voice channels.</li>
+<li>When a feedback survey is created on the platform, all messages are in text format. The text from the platform gets converted into a voice using the ASR and TTS engines.</li>
+<li>You can leverage channel-specific configuration to modify the feedback prompts.</li>
+<li>Feedback flows are fully customizable.</li>
+<li>The Kore.ai XO Platform lets you configure feedback in two ways:</li>
+<li>Using the built-in flows to collect the feedback and the new service type called <strong>feedback service</strong> to submit the feedback to the bots platform.</li>
+<li>Collecting feedback from other sources that can be pushed to the platform as part of the conversation execution.</li>
+<li>Feedback Surveys get created as dialog tasks with a series of entities, service calls, and message notes. You have complete control of modifying the out-of-the-box messages, adding additional messages to specific channels, such as voice channels, and capturing the feedback on voice.</li>
+<li>You can use the automatic feedback template that the platform generates or build their flows and submit the feedback to the platform feedback service. Alternatively, it could be a hybrid approach where the feedback flow can emerge from or integrate with another flow.</li>
+<li>Once a customer responds to a Feedback Survey, the event displays on the chat transcript slider of the Conversations History Dashboard. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/feedback-analytics/">Learn more</a>.</li>
+<li>Additionally, you can filter and analyze Conversations (with feedback survey enabled) based on the Feedback Type, Response, and Score using prebuilt and custom filters. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/conversation-history-dashboard/#Prebuilt_Filters_for_Conversations_History">Learn more</a>.</li>
+<li>The feedback response from a customer is captured and pushed to the platform for further analysis in three ways:</li>
+<li>By creating a <strong>Dialog</strong> to capture feedback responses/scores and generate the required analytics to derive actionable insights on the <strong>Feedback Analysis Dashboard</strong>. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/feedback-analytics/">Learn more</a>.</li>
+<li>By pushing feedback data to the platform using the Public API. <a href="https://developer.kore.ai/docs/bots/api-guide/feedback-survey-api/">Learn more</a>.</li>
+<li>By pushing feedback data via the Botkit. <a href="https://developer.kore.ai/docs/bots/sdks/using-the-botkit-sdk/#Feedback_Survey">Learn more</a>.</li>
+<li>In addition to the primary survey question, you can configure a <strong>Follow-up Question</strong> for negative feedback to gather specific details and better understand any primary survey issues.</li>
+<li>Additionally, you can set an Acknowledgement Message to customers after they complete the survey to show appreciation and let them know that it has been received.</li>
+</ol>
 </blockquote>
-<h3 id="report-fields-for-ontology-knowledge-graphs">Report Fields for Ontology Knowledge Graphs<a class="headerlink" href="#report-fields-for-ontology-knowledge-graphs" title="Permanent link">&para;</a></h3>
-<p>The following table details the fields that are displayed in the report:</p>
-<table border="1.5">
-  <tr bgcolor="#ECECEC">
-   <th><strong>ISSUE TYPE</strong>
-   </th>
-   <th><strong>CATEGORY</strong>
-   </th>
-   <th><strong>DETAILS</strong>
-   </th>
-   <th><strong>SUGGESTION</strong>
-   </th>
-  </tr>
-  <tr>
-   <td>Patterns with Invalid Syntax
-   </td>
-   <td bgcolor="#fad1d0">Error
-   </td>
-   <td>
-<ul>
-
-<li>Current Path
-
-<li>Pattern
-
-<li>Error
-
-<li>Question
-</li>
-</ul>
-   </td>
-   <td>Rectify the incorrect patterns for better FAQ detection.
-   </td>
-  </tr>
-  <tr>
-   <td>Questions added to incorrect paths
-   </td>
-   <td bgcolor="#fad1d0">Error
-   </td>
-   <td>
-<ul>
-
-<li>Question
-
-<li>Path
-</li>
-</ul>
-   </td>
-   <td>Modify the path to include the terms in the question.
-   </td>
-  </tr>
-  <tr>
-   <td>Long-chain of terms with the questions present only at the last term in the chain
-   </td>
-   <td bgcolor="#FFFFED">Suggestion
-   </td>
-   <td>
-<ul>
-
-<li>Question
-
-<li>Path
-</li>
-</ul>
-   </td>
-   <td>Reduce the path by avoiding unimportant terms or merge relevant terms.
-   </td>
-  </tr>
-  <tr>
-   <td>Identical terms with a common ancestor
-   </td>
-   <td bgcolor="#FFFFED">Suggestion
-   </td>
-   <td>
-<ul>
-
-<li>Common Parent
-
-<li>Child Paths (only for the largest repeated child trees)
-</li>
-</ul>
-   </td>
-   <td>Move the child terms above their parent terms to avoid duplication
-   </td>
-  </tr>
-  <tr>
-   <td>Paths without any questions
-   </td>
-   <td bgcolor="#FFFFED">Suggestion
-   </td>
-   <td>
-<ul>
-
-<li>Path
-</li>
-</ul>
-   </td>
-   <td>Remove the path if you do not intend to add any questions to this path
-   </td>
-  </tr>
-  <tr>
-   <td>Redundant alternate questions
-   </td>
-   <td bgcolor="#FFFFED">Suggestion
-   </td>
-   <td>
-<ul>
-
-<li>Question
-
-<li>Alternate Question (multiple)
-
-<li>Path
-</li>
-</ul>
-   </td>
-   <td>Rephrase alternate questions to include wider coverage
-   </td>
-  </tr>
-  <tr>
-   <td>A large number of questions added to the root term
-   </td>
-   <td bgcolor="#FFFFED">Suggestion
-   </td>
-   <td>
-<ul>
-
-<li>Question
-
-<li>Path
-</li>
-</ul>
-   </td>
-   <td>Move the questions to the appropriate paths
-   </td>
-  </tr>
-  <tr>
-   <td>Unusually long paths
-   </td>
- <td bgcolor="#ADD8E6">Warning
-   </td>
-   <td>
-<ul>
-
-<li>Path
-</li>
-</ul>
-   </td>
-   <td>Reduce the path by avoiding unnecessary terms or merging relevant terms.
-   </td>
-  </tr>
-  <tr>
-   <td>Questions at the root node that can be moved to better paths
-   </td>
-   <td bgcolor="#ADD8E6">Warning
-   </td>
-   <td>
-<ul>
-
-<li>Question
-
-<li>Current Path
-
-<li>Suggested Path
-</li>
-</ul>
-   </td>
-   <td>Move the question to the suggested path
-   </td>
-  </tr>
-  <tr>
-   <td>Questions with common words that are not used as terms
-   </td>
-    <td bgcolor="#ADD8E6">Warning
-   </td>
-   <td>
-<ul>
-
-<li>Question (multiple)
-
-<li>Path
-
-<li>Suggested Extension
-</li>
-</ul>
-   </td>
-   <td>Extend the current path using the suggested extension
-   </td>
-  </tr>
-  <tr>
-   <td>Questions that match multiple paths
-   </td>
-   <td bgcolor="#ADD8E6">Warning
-   </td>
-   <td>
-<ul>
-
-<li>Question
-
-<li>Current path
-
-<li>Other Paths (multiple)
-</li>
-</ul>
-   </td>
-   <td>Review the paths to avoid possible ambiguity scenarios
-   </td>
-  </tr>
-  <tr>
-   <td>Identical sibling nodes
-   </td>
-   <td bgcolor="#ADD8E6">Warning
-   </td>
-   <td>
-<ul>
-
-<li>Path
-
-<li>Identical Term
-</li>
-</ul>
-   </td>
-   <td>Merge the identical terms
-   </td>
-  </tr>
-</table>
-
-<h2 id="report-fields-for-few-shot-knowledge-graphs">Report Fields for Few-Shot Knowledge Graphs<a class="headerlink" href="#report-fields-for-few-shot-knowledge-graphs" title="Permanent link">&para;</a></h2>
-<p>For Few-Shot Knowledge Graphs, nothing regarding paths and keywords requires analysis; since these are not used by the model to detect intent. The only report fields you will see when inspecting such a graph are the following: </p>
+<h2 id="navigating-to-feedback-survey">Navigating to Feedback Survey<a class="headerlink" href="#navigating-to-feedback-survey" title="Permanent link">&para;</a></h2>
+<p>To navigate to the Feedback Survey feature, follow the steps below:</p>
+<ol>
+<li>On the Bot Builder, click the <strong>Build</strong> tab.</li>
+<li>Navigate to <strong>Configurations</strong> &gt; <strong>Feedback Survey</strong> on the left navigation menu.
+<a class="glightbox" href="../images/access-feedback-survey.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="access feedback survey" src="../images/access-feedback-survey.png" title="access feedback survey" /></a></li>
+</ol>
+<h2 id="feedback-template-types">Feedback Template Types<a class="headerlink" href="#feedback-template-types" title="Permanent link">&para;</a></h2>
+<p>The Platform provides the following in-built feedback template types, to create and define a feedback survey:</p>
+<h3 id="nps-scale-categorization">NPS Scale Categorization<a class="headerlink" href="#nps-scale-categorization" title="Permanent link">&para;</a></h3>
+<p>Known as <strong><em>New Promoter Score</em></strong>, this is a standard customer experience metric that measures the experience and loyalty of customers based on their feedback response. For a single-question survey, respondents give a rating between 0 (not at all likely) and 10 (extremely likely), and based on their response, they fall into one of the following NPS score categories:</p>
 <table border="1.5">
 <tr bgcolor="#ECECEC">
-   <td><strong>ISSUE TYPE</strong>
+   <td><strong>CUSTOMER CATEGORY</strong>
    </td>
-   <td><strong>CATEGORY </strong>
+   <td><strong>NPS SCORE</strong>
    </td>
-   <td><strong>DETAILS</strong>
-   </td>
-   <td><strong>SUGGESTION</strong>
+   <td><strong>DESCRIPTION</strong>
    </td>
   </tr>
   <tr>
-   <td>Patterns with Invalid Syntax
+   <td><strong>Promoters</strong>
    </td>
-   <td bgcolor="#fad1d0">Error
+   <td>9 & 10
    </td>
-   <td>
-<ul>
-
-<li>Current Path
-
-<li>Pattern
-
-<li>Error
-
-<li>Question
-</li>
-</ul>
-   </td>
-   <td>Rectify the incorrect patterns for better FAQ detection.
+   <td>This score indicates a loyal customer who is satisfied with the conversation and is highly likely to return.
    </td>
   </tr>
   <tr>
-   <td>Paths without any questions
+   <td><strong>Passives</strong>
    </td>
-   <td bgcolor="#FFFFED">Suggestion
+   <td>6,7, & 8
    </td>
-   <td>
-<ul>
-
-<li>Path
-</li>
-</ul>
-   </td>
-   <td>Remove the path if you do not intend to add any questions to this path.
+   <td>This score represents a satisfied customer who may or may not be willing to continue the conversation and return for a service.
    </td>
   </tr>
   <tr>
-   <td>Redundant alternate questions
+   <td><strong>Detractors</strong>
    </td>
-   <td bgcolor="#FFFFED">Suggestion
+   <td>0,1,2,3,4, & 5
    </td>
-   <td>
-<ul>
-
-<li>Question
-
-<li>Alternate Question (multiple)
-
-<li>Path
-</li>
-</ul>
-   </td>
-   <td>Rephrase alternate questions to include wider coverage.
+   <td>This score indicates that the customer is unsatisfied with the conversation and has given negative feedback. As a result, the customer will mostly not return to the platform and may detract other customers by sharing their experiences.
    </td>
   </tr>
 </table>
 
-<blockquote>
-<p><strong><p style="color:#1338BE">NOTE</p></strong> Every time a KG is inspected, the following details get updated in a scenario where any FAQs are modified or any new FAQs are added:</p>
+<h3 id="csat-score-categorization">CSAT Score Categorization<a class="headerlink" href="#csat-score-categorization" title="Permanent link">&para;</a></h3>
+<p><strong>CSAT</strong> or <strong>Customer SATisfaction</strong> is a customer experience metric that measures or quantifies how happy the customer is with a Virtual Assistant interaction. The customer is asked to rate on a <strong>five-point scale</strong>, <strong>1</strong> meaning very satisfied and <strong>5</strong> meaning very unsatisfied, for a survey question like “<em>How satisfied were you with the conversation?</em>” The response score is mapped to the relevant category as shown below:</p>
+<table border="1.5">
+<tr bgcolor="#ECECEC">
+   <td><strong>CATEGORY</strong>
+   </td>
+   <td><strong>SCORE</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Very Satisfied</strong>
+   </td>
+   <td>1
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Satisfied</strong>
+   </td>
+   <td>2
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Neutral</strong>
+   </td>
+   <td>3
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Unsatisfied</strong>
+   </td>
+   <td>4
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Very Unsatisfied</strong>
+   </td>
+   <td>5
+   </td>
+  </tr>
+</table>
+
+<h3 id="likedislike">Like/Dislike<a class="headerlink" href="#likedislike" title="Permanent link">&para;</a></h3>
+<p>The customer is asked to respond to the feedback survey by clicking a <strong>Like</strong> or <strong>Dislike</strong> icon. <strong>Like</strong> or <strong>Extremely Likely</strong> denotes the customer’s positive experience and is allocated a score of 1 internally. <strong>Dislike</strong> or <strong>Extremely Unlikely</strong> indicates a negative customer experience, and is allocated a score of 0 internally.</p>
+<h2 id="feedback-survey-creation-and-definition">Feedback Survey Creation and Definition<a class="headerlink" href="#feedback-survey-creation-and-definition" title="Permanent link">&para;</a></h2>
+<p>To create a Feedback Survey on the Bot Builder, follow the steps below:</p>
+<ol>
+<li>Navigate to <strong>Build</strong> &gt; <strong>Configurations</strong> &gt; <strong>Feedback Survey</strong>.</li>
+<li>If this is your first feedback survey, click <strong>Add Feedback</strong> on the <strong>Feedback Survey</strong> screen.
+<a class="glightbox" href="../images/add-feedback.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="add feedback" src="../images/add-feedback.png" title="add feedback" /></a></li>
+</ol>
+<p>Otherwise, click <strong>New Survey</strong>.
+<a class="glightbox" href="../images/click-new-survey.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="click new survey" src="../images/click-new-survey.png" title="click new survey" /></a></p>
+<p>In the <strong>Add Feedback Survey</strong> window, define the survey details and design, and launch the survey to be visible to customers.</p>
+<p>The Feedback Survey definition and design flow steps are given below:</p>
+<h3 id="step-1-define-the-survey-details">Step 1: Define the Survey Details<a class="headerlink" href="#step-1-define-the-survey-details" title="Permanent link">&para;</a></h3>
+<p>In this section, you can define a survey name and the type you want to use. To define the survey details, follow the steps below:</p>
+<ol>
+<li>Enter the <strong>Survey Name</strong> in the relevant text area.</li>
+<li>Select the <strong>Survey Type</strong> as either <strong>NPS</strong>, <strong>CSAT</strong>, or <strong>Like/Dislike</strong>. Based on your selection, the survey definition changes.</li>
+<li>Click <strong>Next</strong> to move to the next step.
+<a class="glightbox" href="../images/click-next-add-feedback-survey.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/click-next-add-feedback-survey.png" title="image_tooltip" /></a></li>
+</ol>
+<h3 id="step-2-define-the-survey-design">Step 2: Define the Survey Design<a class="headerlink" href="#step-2-define-the-survey-design" title="Permanent link">&para;</a></h3>
+<p>You can define how to present the survey in the <strong>Survey Design</strong> stage which includes the following:</p>
 <ul>
-<li>Total checks</li>
-<li>Count of errors, warnings, suggestions</li>
-<li>Count and the list of various checkpoints</li>
+<li>Gathering the customer’s feedback using one of the out-of-the-box default templates.</li>
+<li>Defining the primary question that will be posed to the customer when the system triggers the feedback survey.</li>
+<li>Setting the follow-up questions based on the feedback conditionally.</li>
+</ul>
+<p>To define the survey design, follow the steps below:</p>
+<ol>
+<li>Select the relevant option in the <strong>Add Feedback Survey</strong> window based on how you want to create the survey.</li>
+<li>If you want to create a new Feedback Survey along with a <strong>Dialog Task</strong> to collect the feedback and capture the analytics, follow the steps below:<ul>
+<li>Select <strong>Create a survey with a New Dialog</strong>.</li>
+<li>Enter the <strong>Dialog Name</strong> in the text area.
+<a class="glightbox" href="../images/enter-the-dialog-name.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="enter dialog name" src="../images/enter-the-dialog-name.png" title="enter dialog name" /></a></li>
+<li>Set the default <strong>Primary Question</strong> to be posed to the customer for the selected survey type when it’s triggered.
+<a class="glightbox" href="../images/default-primary-question.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="default primary question" src="../images/default-primary-question.png" title="default primary question" /></a></li>
+<li>Alternatively, modify/change the <strong>Primary Question</strong> in the text area.</li>
+</ul>
+</li>
+</ol>
+<p>The <strong>Primary Question</strong> response options the customer will see are displayed below based on the selected survey type:</p>
+<p><strong>NPS</strong></p>
+<p><a class="glightbox" href="../images/nps-survey.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="nps survey" src="../images/nps-survey.png" title="NPS Survey" /></a></p>
+<p><strong>CSAT</strong></p>
+<p><a class="glightbox" href="../images/csat-survey.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="csat survey" src="../images/csat-survey.png" title="csat survey" /></a></p>
+<p><strong>Like/Dislike</strong></p>
+<p><a class="glightbox" href="../images/like-dislike-survey.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="like dislike survey" src="../images/like-dislike-survey.png" title="like dislike survey" /></a></p>
+<blockquote>
+<p><strong><p style="color:#1338BE">NOTE</p></strong> The default response names provided for <strong>CSAT</strong> and the <strong>Like/Dislike</strong> types are editable; however, the scores set in the system cannot be changed for any survey type.</p>
+</blockquote>
+<ol>
+<li>
+<p>To create your flow, select <strong>Create survey without Dialog</strong> and click <strong>Next</strong>.
+<a class="glightbox" href="../images/survey-without-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="survey without dialog" src="../images/survey-without-dialog.png" title="survey without dialog" /></a></p>
+</li>
+<li>
+<p><strong>Optional Step</strong>: To capture additional details from the customer for a negative feedback, configure the <strong>follow-up question</strong> with the steps below:</p>
+<ul>
+<li>
+<p>Enable the <strong>Follow-up Question</strong> option (default setting).
+<a class="glightbox" href="../images/follow-up-enable.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="enable follow-up" src="../images/follow-up-enable.png" title="enable follow-up" /></a></p>
+</li>
+<li>
+<p>Define when to post the follow-up question by configuring the <strong>IF condition</strong>, where you must select the conditional option from the list for <strong>User Score</strong>.
+<a class="glightbox" href="../images/configure-if-condition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure condition" src="../images/configure-if-condition.png" title="configure condition" /></a></p>
+</li>
+<li>
+<p>Next, increment or decrement the <strong>feedback score counter</strong> for the selected condition to set the validation criterion.
+<a class="glightbox" href="../images/adjust-feedback-score-counter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="adjust feedback counter" src="../images/adjust-feedback-score-counter.png" title="adjust feedback counter" /></a></p>
+</li>
+<li>
+<p>Either edit the default follow-up question in the text area provided for the <strong>THEN</strong> clause or keep it unchanged.
+<a class="glightbox" href="../images/edit-default-follow-up-question.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="edit default follow-up question" src="../images/edit-default-follow-up-question.png" title="edit default follow-up question" /></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Modify the <strong>Acknowledgement Message</strong> in the text area or retain the default message to acknowledge the customer’s effort in taking the survey.
+<a class="glightbox" href="../images/acknowledge-message-modify.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="modify acknowledgement message" src="../images/acknowledge-message-modify.png" title="modify acknowledgement message" /></a></p>
+</li>
+<li>
+<p>Click <strong>Next</strong> to move to survey launch configuration.</p>
+</li>
+</ol>
+<h3 id="step-3-define-launch-configuration">Step 3: Define Launch Configuration<a class="headerlink" href="#step-3-define-launch-configuration" title="Permanent link">&para;</a></h3>
+<p>After defining the survey, you can choose how and when to launch the survey in one of the following ways with the <strong>Launch Configuration</strong>:
+* Associate the survey with the end-of-task (conversation) event.
+* Add the survey task as a sub-dialog to other primary tasks.</p>
+<p>To configure the feedback survey launch, follow the steps below:</p>
+<ol>
+<li>
+<p>Select one of the following options:</p>
+<ul>
+<li><strong>Launch after End of Task</strong>: The dialog task is considered as the ‘<em>End of Task</em>‘ event, and the survey is triggered at the end of every conversation. When selected, <strong><em>End of Task</em></strong> (<strong>End of Conversation</strong> Event) under <strong>Intelligence</strong> &gt; <strong>Events</strong> &gt; <strong>End Of Task</strong> will be overridden and the feedback survey is launched. Through the survey dialog you’ve created in the previous step.</li>
+<li><strong>I will decide how to launch the Survey</strong>: You can manually initiate the feedback survey at any time by using the associated dialog task in the Kore.ai XO platform. A dialog task will be made available under Build → Conversational Skills. This allows you to control when the survey is launched and gather feedback at your own convenience.
+<a class="glightbox" href="../images/launch-survey-after-end-of-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="launch survey after end of task" src="../images/launch-survey-after-end-of-task.png" title="launch survey after end of task" /></a></li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Create</strong> to launch the feedback survey.</p>
+</li>
+</ol>
+<p>A success confirmation message, as shown below, is displayed with your survey details.</p>
+<p><a class="glightbox" href="../images/survey-creation-success-message.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="survey creation success" src="../images/survey-creation-success-message.png" title="survey creation success" /></a></p>
+<h2 id="feedback-survey-dialog-flow">Feedback Survey Dialog Flow<a class="headerlink" href="#feedback-survey-dialog-flow" title="Permanent link">&para;</a></h2>
+<p>After you’ve created the survey, you can view the built-in survey flow as a dialog task under <strong>Build</strong> &gt; <strong>Conversational Skills</strong> &gt; <strong>Dialog Tasks</strong> on the left menu.</p>
+<p>The <strong>Task Flow</strong> will include a combination of <strong>Entity</strong>, <strong>Message</strong>, and <strong>Service</strong> nodes to represent the survey flow.</p>
+<p>You can customize the dialog flow as per your need by changing the dialog flow definition fields.</p>
+<blockquote>
+<p><strong>Important</strong></p>
+<ul>
+<li>
+<p><strong>Feedback Service</strong> is introduced as the new <strong>Service Type</strong> option under <strong>General Settings</strong>. You can use this service to submit feedback on the surveys you may have captured using your custom flows.
+<a class="glightbox" href="../images/feedback-service-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="feedback service type" src="../images/feedback-service-type.png" title="feedback service type" /></a></p>
+</li>
+<li>
+<p>You can invoke feedback as a sub-dialog from any other point in the conversation where you would like to capture the feedback.
+<a class="glightbox" href="../images/feedback-as-sub-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="feedback as sub-dialog" src="../images/feedback-as-sub-dialog.png" title="feedback as sub-dialog" /></a></p>
+</li>
 </ul>
 </blockquote>
 
