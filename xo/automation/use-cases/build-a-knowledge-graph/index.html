@@ -2849,18 +2849,19 @@
 <li>Log in to the XO Platform and open the VA to which you want to add the Knowledge Graph.</li>
 <li>Select the <strong>Build</strong> tab from the top menu.</li>
 <li>On the left menu, select <strong>Conversation Skills</strong> and click <strong>Knowledge Graph</strong>.</li>
-<li>You will notice that there is already a Knowledge Graph with the name of your assistant.
-<a class="glightbox" href="../images/access-existing-knowledge-graph.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/access-existing-knowledge-graph.png" alt="access existing knowledge graph" title="access existing knowledge graph" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ol>
-<div class="admonition note">
+<li>
+<p>You will notice that there is already a Knowledge Graph with the name of your assistant.</p>
+<p><a class="glightbox" href="../images/access-existing-knowledge-graph.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/access-existing-knowledge-graph.png" alt="access existing knowledge graph" title="access existing knowledge graph" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>All features explained here are supported by the Few-Shot Knowledge Graph, except for the following:
 <ul><li>Few-Shot Knowledge Graphs do not require an ontology structure, but you can create one to  improve intent detection.</li> 
 <li>Default terms are not available in Few-Shot Knowledge Graphs. The only exception is when you switch from an Ontology Graph, in which case existing Default terms are stored as such until updated. Afterward, Default terms become Organizer terms and can be set as Mandatory.</li>
 <li>Lemmatization using Parts of Speech, Search in Answer, and Contextual Paths Qualification are not supported by Few-Shot Graphs. Please see the Knowledge Graph Types Comparison Table for a detailed list of supported features.</li>
 <li>Path Level and Knowledge Graph Synonyms are only supported for Mandatory Terms and for Tags.</li></ul></p>
-</div>
-
+</div></p>
+</li>
+</ol>
 <h2 id="create-the-knowledge-graph-node-structure">Create the Knowledge Graph Node Structure<a class="headerlink" href="#create-the-knowledge-graph-node-structure" title="Permanent link">&para;</a></h2>
 <p>By default, the name of the VA becomes the root node of the hierarchy and you can edit this. Create the rest of the nodes below the root node.</p>
 <p>To create nodes, follow the below steps:</p>
@@ -2868,19 +2869,19 @@
 <li>Open the Knowledge Graph.</li>
 <li>On the top left of the Knowledge Graph window, hover over the root node.</li>
 <li>Click the <strong>+</strong> icon. A text box appears below to <strong>Add Node</strong>. For better performance, there is a restriction of 50k FAQs spread across 20k maximum allowed number of nodes.</li>
-<li>Type the name of the node in the text box and press <strong>Enter</strong>. A warning would be displayed in case you enter a duplicate node name, i.e. if a child node with the same name already exists under the parent node.</li>
+<li>Type the name of the node in the text box and press <strong>Enter</strong>. A warning would be displayed in case you enter a duplicate node name, i.e. if a child node with the same name already exists under the parent node.
+    <div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>This node becomes a child for the root node and can be referred to as a First-level node.</p></div></li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This node becomes a child for the root node and can be referred to as a First-level node.</p></div>
 <ol start="5"><li>Repeat steps 1 to 3 in this section to create other First-level nodes.</li>
 <li>After you create First-level nodes, create child nodes as follows:</li>
 <ul><li>Hover over any First-level node, and click the plus icon to create its child node.</li>
 <li>You can create a child node for any level node by hovering over it and clicking the <b>+</b> icon.</li></ul></ol>
 
 <p>Follow the same process to create multiple node levels. </p>
-<p>The demo below shows you how to create nodes.
-<a class="glightbox" href="../images/add-kg-node.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-kg-node.gif" alt="add kg node" title="add kg node" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>The demo below shows you how to create nodes.</p>
+<p><a class="glightbox" href="../images/add-kg-node.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-kg-node.gif" alt="add kg node" title="add kg node" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>You can delete nodes by clicking the <strong>Delete</strong> icon on the right.</p>
 <p><a class="glightbox" href="../images/delete-kg-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/delete-kg-node.png" alt="delete kg node" title="delete kg node" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h2 id="build-the-knowledge-graph">Build the Knowledge Graph<a class="headerlink" href="#build-the-knowledge-graph" title="Permanent link">&para;</a></h2>
@@ -2899,9 +2900,11 @@
 <li>Select a task from the drop-down list. You can <strong>Add Utterance</strong> that triggers this task.</li>
 <li>If multiple utterances mean the same, <strong>Add Alternate Utterance</strong>.</li>
 <li>You can also add a <strong>Reference Id</strong>. This field can be used to add a reference to any external content used as a source for this FAQ.</li>
-<li>Click <strong>Save</strong>.</li>
-</ol>
+<li>
+<p>Click <strong>Save</strong>.</p>
 <p><a class="glightbox" href="../images/save-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/save-task.png" alt="save kg task" title="save kg task" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+</ol>
 <h3 id="manage-traits-synonyms-and-stop-words">Manage Traits, Synonyms, and Stop Words<a class="headerlink" href="#manage-traits-synonyms-and-stop-words" title="Permanent link">&para;</a></h3>
 <p>You can improve the performance of your Knowledge Graph by adding tags, synonyms, traits, and more. <a href="https://developer.kore.ai/docs/bots/nlp/knowledge-graph/">Refer here</a> to know more.</p>
 <h3 id="manage-variable-namespaces">Manage Variable Namespaces<a class="headerlink" href="#manage-variable-namespaces" title="Permanent link">&para;</a></h3>
@@ -2923,10 +2926,12 @@
 <ol>
 <li>On the Knowledge Graph, click the name of the node from which you want to move the intent. The intents associated to the node display on the right pane.</li>
 <li>Identify the intent that you want to move, and select the checkbox next to it. You can select multiple items.</li>
-<li>Drag the intent and drop it on the relevant node. The node is highlighted and the intent displays on the right pane of the node.</li>
-</ol>
+<li>
+<p>Drag the intent and drop it on the relevant node. The node is highlighted and the intent displays on the right pane of the node.</p>
 <p>The demo below shows you how this works.</p>
 <p><a class="glightbox" href="../images/move-to-new-node.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/move-to-new-node.gif" alt="move node" title="move node" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+</ol>
 <h3 id="edit-and-delete-terms">Edit and Delete Terms<a class="headerlink" href="#edit-and-delete-terms" title="Permanent link">&para;</a></h3>
 <ol>
 <li>On the nodes hierarchy from the left pane, hover over the term/node you want to edit.</li>
@@ -2944,14 +2949,13 @@
 <li><strong>Delete the FAQs along with the term</strong> – Choosing this option deletes the term and FAQs under it.</li>
 <li><strong>Delete the term and move FAQs to root term</strong> - Choosing this option deletes the term and moves the FAQs under it to the root term.</li>
 </ul>
-</li>
-</ol>
-<div class="admonition warning">
+<p><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If the term has child nodes, all those nodes will be deleted. A warning message like the one shown below is displayed before you confirm.</p>
-</div>
-
+</div></p>
 <p><a class="glightbox" href="../images/child-node-deleted.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/child-node-deleted.png" alt="child node deleted" title="child node deleted" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><li>If your VA is already published, you must train it  for the deletions to be effective.</li>
@@ -2966,12 +2970,12 @@
 <li>Hover over the intent or response to edit it and click the <strong>Edit</strong> icon.</li>
 <li>Make changes to the intent or response and click <strong>Save</strong>.</li>
 <li>
-<p>You can delete the intent using the <strong>Delete</strong> icon.
-<a class="glightbox" href="../images/child-node-deleted.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/child-node-deleted.png" alt="child node deleted" title="child node deleted" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>You can delete the intent using the <strong>Delete</strong> icon.</p>
+<p><a class="glightbox" href="../images/child-node-deleted.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/child-node-deleted.png" alt="child node deleted" title="child node deleted" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>Selecting multiple intents lets you delete them in bulk.
-<a class="glightbox" href="../images/delete-selected-intents.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/delete-selected-intents.png" alt="delete faq intent" title="delete faq intent" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Selecting multiple intents lets you delete them in bulk.</p>
+<p><a class="glightbox" href="../images/delete-selected-intents.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/delete-selected-intents.png" alt="delete faq intent" title="delete faq intent" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
 <h2 id="improve-performance">Improve Performance<a class="headerlink" href="#improve-performance" title="Permanent link">&para;</a></h2>

@@ -2849,13 +2849,12 @@
 <h2 id="the-extraction-process">The Extraction Process<a class="headerlink" href="#the-extraction-process" title="Permanent link">&para;</a></h2>
 <p>To move data using the Knowledge Extraction service to the Knowledge Graph, follow the process below:</p>
 <ol>
-<li><strong>Extracting:</strong> Extract the existing FAQ content from structured or unstructured sources of question-answer data such as PDF, web pages, and CSV files. This extraction can be done before or after creating a Knowledge Graph for the assistant you are working with. </li>
+<li><strong>Extracting:</strong> Extract the existing FAQ content from structured or unstructured sources of question-answer data such as PDF, web pages, and CSV files. This extraction can be done before or after creating a Knowledge Graph for the assistant you are working with. 
+    <div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>The Knowledge Extraction service supports a specific content structure for each source type. Refer to the <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-extraction-service/#Supported_Formats_and_Requirements">Supported formats section below for details</a></p>
+    </div></li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The Knowledge Extraction service supports a specific content structure for each source type. Refer to the <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-extraction-service/#Supported_Formats_and_Requirements">Supported formats section below for details</a></p>
-</div>
-
 <ol start="2"><li><b>Editing</b>: Upon successful data extraction, you can edit the questions and answer text before moving it to the Knowledge Graph.</li>
 <li><b>Moving</b>: You can add data to a VA before or after creating a Knowledge Graph (KG). If you try to add the extracted content to a KG before it exists, the VA automatically creates a KG with the VA’s name.</li></ol>
 
@@ -2888,11 +2887,13 @@
 <li>Select the <strong>Build</strong> top menu item.</li>
 <li>From the left menu, click <strong>Conversational Skills</strong> &gt; <strong>Knowledge Graph</strong>.</li>
 <li>Under the <strong>Extracts</strong> section, click <strong>Extract from URL</strong>.</li>
-<li>Click <strong>Browse</strong> to locate the file (PDF or CSV).</li>
-</ol>
+<li>
+<p>Click <strong>Browse</strong> to locate the file (PDF or CSV).</p>
 <p><a class="glightbox" href="../images/drag-and-drop-file.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/drag-and-drop-file.png" alt="locate file" title="locate file" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li>Click <strong>Proceed</strong>.</li>
+</li>
+<li>
+<p>Click <strong>Proceed</strong>.</p>
+</li>
 <li>For PDF files you have an option to annotate the document before extraction.</li>
 <li>After the extraction is completed successfully, a success status page is displayed.</li>
 <li><strong>Review &amp; Add</strong> the relevant questions to your Knowledge Graph, <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-extraction-service/#Add_the_Extracted_Content">.</a></li>
@@ -2912,8 +2913,8 @@
 <ol>
 <li>Select a new or previously extracted PDF file. Note that you can use a previously extracted file provided no questions from that file are added to the Knowledge Graph.</li>
 <li>
-<p>Click <strong>Annotate &amp; Extract</strong> to make annotation on a newly uploaded file.
-<a class="glightbox" href="../images/annotate-and extract-pdf.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/annotate-and extract-pdf.png" alt="annotate and extract" title="annotate and extract" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Click <strong>Annotate &amp; Extract</strong> to make annotation on a newly uploaded file.</p>
+<p><a class="glightbox" href="../images/annotate-and extract-pdf.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/annotate-and extract-pdf.png" alt="annotate and extract" title="annotate and extract" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>The PDF document is loaded into the Annotation Tool allowing you to annotate the various sections in the document.</p>
@@ -2938,8 +2939,8 @@
 <a class="glightbox" href="../images/annotate-and-extract-demo.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/annotate-and-extract-demo.gif" alt="annotate and extract" title="annotate and extract" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>Once the content is extracted, you will see a message showing you how many questions have been found and allowing you to review and add them to the Knowledge Graph.
-<a class="glightbox" href="../images/extraction-complete.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/extraction-complete.png" alt="extraction complete" title="extraction complete" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Once the content is extracted, you will see a message showing you how many questions have been found and allowing you to review and add them to the Knowledge Graph.</p>
+<p><a class="glightbox" href="../images/extraction-complete.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/extraction-complete.png" alt="extraction complete" title="extraction complete" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Choosing to <strong>Review</strong> the questions will take you to a screen where you can review extracted FAQs. This screen splits your FAQs into: <strong>All Questions</strong>, <strong>Added</strong> to KG and <strong>Not Added</strong> to the KG. 
@@ -2960,20 +2961,20 @@
 <li>Open the VA.</li>
 <li>Select the <strong>Build</strong> top menu item.</li>
 <li>From the left pane, click <strong>Conversational Skills</strong> &gt; <strong>Knowledge Graph</strong>.</li>
-<li>The <strong>Knowledge Extraction</strong> section displays the list of all extractions.</li>
-</ol>
+<li>
+<p>The <strong>Knowledge Extraction</strong> section displays the list of all extractions.</p>
 <p><a class="glightbox" href="../images/knowledge-extracton-section.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/knowledge-extracton-section.png" alt="knowledge extraction section" title="knowledge extraction sections" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
+</li>
 <li>
 <p>Click the name of a successful extract you want to edit.</p>
 </li>
 <li>
 <p>Hover over the question-answer pair to modify it and click the <strong>Edit</strong> icon.</p>
-</li>
-</ol>
 <p><a class="glightbox" href="../images/edit-question-answer-pair.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/edit-question-answer-pair.png" alt="edit question answer pair" title="edit question answer pair" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li>Make the necessary changes and click <strong>Save</strong>.</li>
+</li>
+<li>
+<p>Make the necessary changes and click <strong>Save</strong>.</p>
+</li>
 </ol>
 <h3 id="add-the-extracted-content-to-the-knowledge-graph">Add the Extracted Content to the Knowledge Graph<a class="headerlink" href="#add-the-extracted-content-to-the-knowledge-graph" title="Permanent link">&para;</a></h3>
 <p>There are two ways to add the extracted content to the Knowledge Graph.</p>
@@ -2996,15 +2997,16 @@
 <li>Select the node you want to add these Question-Answers.</li>
 <li>Click <strong>Add from Extraction</strong>. It opens the list of successful and failed extractions.</li>
 <li>Click the name of a successful extract you want to move.</li>
-<li>Select the checkboxes next to the question-answer pairs that you want to move and then click <strong>Add</strong>.</li>
-</ol>
+<li>
+<p>Select the checkboxes next to the question-answer pairs that you want to move and then click <strong>Add</strong>.</p>
 <p><a class="glightbox" href="../images/drag-question-answer-pair-to-kg.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/drag-question-answer-pair-to-kg.gif" alt="drag question answer pair to kg" title="drag question answer pair to kg" style="border: 1px solid gray; zoom:75%;"></a></p>
-<div class="admonition note">
+<p><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Once you move a question-answer pair from the extract to the knowledge graph, you cannot move it again. The platform shows a duplicate error when you try to move a question from the extract that is already present in the collection.</p>
 <p>You can make any changes to the moved content from the knowledge graph. However, if the question is modified or removed from the knowledge graph, then the developer is allowed to add it again.</p>
-</div>
-
+</div></p>
+</li>
+</ol>
 <h3 id="supported-formats-and-requirements">Supported Formats and Requirements<a class="headerlink" href="#supported-formats-and-requirements" title="Permanent link">&para;</a></h3>
 <p>The Knowledge Extraction service supports extracting FAQs only from supported CSV, PDF, and URL formats.</p>
 <p>Note that the file size must not exceed 5MB.</p>
