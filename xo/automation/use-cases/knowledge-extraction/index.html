@@ -2844,8 +2844,8 @@
 <h1 id="knowledge-graph-extraction"><strong>Knowledge Graph Extraction</strong><a class="headerlink" href="#knowledge-graph-extraction" title="Permanent link">&para;</a></h1>
 <p>The <strong>Knowledge Graph Extraction</strong> service enables you to effortlessly move your enterprise’s Frequently Asked Questions (FAQ) content into a Knowledge Graph that trains your assistant based on these questions.</p>
 <p>The feature supports the extraction of knowledge from unstructured content such as web pages and PDF documents, and structured content like CSV files.</p>
-<p>After completing the extraction, you can edit the question and answers using an easy-to-use interface and organize them under the relevant Knowledge Graph nodes.
-<a class="glightbox" href="../images/knowledge-extraction.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="knowledge extraction" src="../images/knowledge-extraction.png" title="knowledge extraction" /></a></p>
+<p>After completing the extraction, you can edit the question and answers using an easy-to-use interface and organize them under the relevant Knowledge Graph nodes.</p>
+<p><a class="glightbox" href="../images/knowledge-extraction.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/knowledge-extraction.png" alt="knowledge extraction" title="knowledge extraction" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h2 id="the-extraction-process">The Extraction Process<a class="headerlink" href="#the-extraction-process" title="Permanent link">&para;</a></h2>
 <p>To move data using the Knowledge Extraction service to the Knowledge Graph, follow the process below:</p>
 <ol>
@@ -2872,7 +2872,7 @@
 <li>Under the <strong>Extracts</strong> section, click <strong>Extract from URL</strong>.</li>
 <li>Enter a <strong>Name</strong> for the extraction.</li>
 <li>Enter the <strong>URL</strong> of the page, and then click <strong>Proceed</strong>.
-<a class="glightbox" href="../images/extract-url.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="extract url" src="../images/extract-url.png" title="extract url" /></a></li>
+<a class="glightbox" href="../images/extract-url.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/extract-url.png" alt="extract url" title="extract url" style="border: 1px solid gray; zoom:75%;"></a></li>
 <li>Once the extraction is completed successfully, a success status page appears.</li>
 <li><strong>Review &amp; Add</strong> the relevant questions to your Knowledge Graph,</li>
 </ol>
@@ -2888,8 +2888,10 @@
 <li>Select the <strong>Build</strong> top menu item.</li>
 <li>From the left menu, click <strong>Conversational Skills</strong> &gt; <strong>Knowledge Graph</strong>.</li>
 <li>Under the <strong>Extracts</strong> section, click <strong>Extract from URL</strong>.</li>
-<li>Click <strong>Browse</strong> to locate the file (PDF or CSV).
-<a class="glightbox" href="../images/drag-and-drop-file.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="locate file" src="../images/drag-and-drop-file.png" title="locate file" /></a></li>
+<li>Click <strong>Browse</strong> to locate the file (PDF or CSV).</li>
+</ol>
+<p><a class="glightbox" href="../images/drag-and-drop-file.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/drag-and-drop-file.png" alt="locate file" title="locate file" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ol>
 <li>Click <strong>Proceed</strong>.</li>
 <li>For PDF files you have an option to annotate the document before extraction.</li>
 <li>After the extraction is completed successfully, a success status page is displayed.</li>
@@ -2909,9 +2911,13 @@
 
 <ol>
 <li>Select a new or previously extracted PDF file. Note that you can use a previously extracted file provided no questions from that file are added to the Knowledge Graph.</li>
-<li>Click <strong>Annotate &amp; Extract</strong> to make annotation on a newly uploaded file.
-<a class="glightbox" href="../images/annotate-and%20extract-pdf.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="annotate and extract" src="../images/annotate-and%20extract-pdf.png" title="annotate and extract" /></a></li>
-<li>The PDF document is loaded into the Annotation Tool allowing you to annotate the various sections in the document.</li>
+<li>
+<p>Click <strong>Annotate &amp; Extract</strong> to make annotation on a newly uploaded file.
+<a class="glightbox" href="../images/annotate-and extract-pdf.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/annotate-and extract-pdf.png" alt="annotate and extract" title="annotate and extract" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>The PDF document is loaded into the Annotation Tool allowing you to annotate the various sections in the document.</p>
+</li>
 <li>To annotate, select the text and tag it as follows:<ul>
 <li><strong>Heading</strong> tags are used to identify questions. Headings are used to train the model to identify the questions and the content between two consecutive headings is treated as the answer for the preceding heading.</li>
 <li><strong>Header</strong> – Text thus marked is ignored. Text marked as Headers is used to train the model to identify and ignore such text. Random marking of texts as headers must be avoided as marking texts as headers or paragraphs as the header invalidates the backend ML model, and will not produce optimal results.</li>
@@ -2927,13 +2933,21 @@
 <li><strong>Annotation Summary</strong> – Number of annotations marked for each category for the particular page and entire document.</li>
 </ul>
 </li>
-<li>After you annotate, you can <strong>Extract</strong> the document.
-<a class="glightbox" href="../images/annotate-and-extract-demo.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="annotate and extract" src="../images/annotate-and-extract-demo.gif" title="annotate and extract" /></a></li>
-<li>Once the content is extracted, you will see a message showing you how many questions have been found and allowing you to review and add them to the Knowledge Graph.
-<a class="glightbox" href="../images/extraction-complete.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="extraction complete" src="../images/extraction-complete.png" title="extraction complete" /></a></li>
-<li>Choosing to <strong>Review</strong> the questions will take you to a screen where you can review extracted FAQs. This screen splits your FAQs into: <strong>All Questions</strong>, <strong>Added</strong> to KG and <strong>Not Added</strong> to the KG. 
-<a class="glightbox" href="../images/review-faqs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="review faqs" src="../images/review-faqs.png" title="review faqs" /></a></li>
-<li>The <strong>All Questions</strong> tab gives the questions extracted by the KG Engine as per the annotations and training. Click the name of a question or check the checkbox to select multiple ones to add to the Knowledge Graph then drag and drop them to the appropriate node..</li>
+<li>
+<p>After you annotate, you can <strong>Extract</strong> the document.
+<a class="glightbox" href="../images/annotate-and-extract-demo.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/annotate-and-extract-demo.gif" alt="annotate and extract" title="annotate and extract" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Once the content is extracted, you will see a message showing you how many questions have been found and allowing you to review and add them to the Knowledge Graph.
+<a class="glightbox" href="../images/extraction-complete.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/extraction-complete.png" alt="extraction complete" title="extraction complete" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Choosing to <strong>Review</strong> the questions will take you to a screen where you can review extracted FAQs. This screen splits your FAQs into: <strong>All Questions</strong>, <strong>Added</strong> to KG and <strong>Not Added</strong> to the KG. 
+<a class="glightbox" href="../images/review-faqs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/review-faqs.png" alt="review faqs" title="review faqs" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>The <strong>All Questions</strong> tab gives the questions extracted by the KG Engine as per the annotations and training. Click the name of a question or check the checkbox to select multiple ones to add to the Knowledge Graph then drag and drop them to the appropriate node..</p>
+</li>
 <li>If you are not satisfied with the extracted content, you can always re-annotate the document. Just click on the <strong>Annotate</strong> tab to return to the annotation tool.</li>
 <li>The same procedure mentioned above is followed for re-annotation. The following points need to be kept in mind for re-annotation:<ul>
 <li>You can re-annotate the document provided no questions from this file are added to the Knowledge Graph.</li>
@@ -2946,11 +2960,19 @@
 <li>Open the VA.</li>
 <li>Select the <strong>Build</strong> top menu item.</li>
 <li>From the left pane, click <strong>Conversational Skills</strong> &gt; <strong>Knowledge Graph</strong>.</li>
-<li>The <strong>Knowledge Extraction</strong> section displays the list of all extractions.
-<a class="glightbox" href="../images/knowledge-extracton-section.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="knowledge extraction section" src="../images/knowledge-extracton-section.png" title="knowledge extraction section" /></a></li>
-<li>Click the name of a successful extract you want to edit.</li>
-<li>Hover over the question-answer pair to modify it and click the <strong>Edit</strong> icon.
-<a class="glightbox" href="../images/edit-question-answer-pair.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="edit question answer pair" src="../images/edit-question-answer-pair.png" title="edit question answer pair" /></a></li>
+<li>The <strong>Knowledge Extraction</strong> section displays the list of all extractions.</li>
+</ol>
+<p><a class="glightbox" href="../images/knowledge-extracton-section.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/knowledge-extracton-section.png" alt="knowledge extraction section" title="knowledge extraction sections" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ol>
+<li>
+<p>Click the name of a successful extract you want to edit.</p>
+</li>
+<li>
+<p>Hover over the question-answer pair to modify it and click the <strong>Edit</strong> icon.</p>
+</li>
+</ol>
+<p><a class="glightbox" href="../images/edit-question-answer-pair.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/edit-question-answer-pair.png" alt="edit question answer pair" title="edit question answer pair" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ol>
 <li>Make the necessary changes and click <strong>Save</strong>.</li>
 </ol>
 <h3 id="add-the-extracted-content-to-the-knowledge-graph">Add the Extracted Content to the Knowledge Graph<a class="headerlink" href="#add-the-extracted-content-to-the-knowledge-graph" title="Permanent link">&para;</a></h3>
@@ -2974,9 +2996,9 @@
 <li>Select the node you want to add these Question-Answers.</li>
 <li>Click <strong>Add from Extraction</strong>. It opens the list of successful and failed extractions.</li>
 <li>Click the name of a successful extract you want to move.</li>
-<li>Select the checkboxes next to the question-answer pairs that you want to move and then click <strong>Add</strong>.
-<a class="glightbox" href="../images/drag-question-answer-pair-to-kg.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="drag question answer pair to kg" src="../images/drag-question-answer-pair-to-kg.gif" title="drag question answer pair to kg" /></a></li>
+<li>Select the checkboxes next to the question-answer pairs that you want to move and then click <strong>Add</strong>.</li>
 </ol>
+<p><a class="glightbox" href="../images/drag-question-answer-pair-to-kg.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/drag-question-answer-pair-to-kg.gif" alt="drag question answer pair to kg" title="drag question answer pair to kg" style="border: 1px solid gray; zoom:75%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Once you move a question-answer pair from the extract to the knowledge graph, you cannot move it again. The platform shows a duplicate error when you try to move a question from the extract that is already present in the collection.</p>
