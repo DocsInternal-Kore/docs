@@ -2767,6 +2767,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#dialog-task-configuration" class="md-nav__link">
+    Dialog Task Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-dialog-task" class="md-nav__link">
+    Create Dialog Task
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2793,21 +2807,19 @@
 
 <h1 id="configure-digital-forms"><strong>Configure Digital Forms</strong><a class="headerlink" href="#configure-digital-forms" title="Permanent link">&para;</a></h1>
 <p>In this How-To, we will explore a scenario in a Banking Bot, where the user can create an additional account. We will see how Digital Forms can be used to gather all the required information from the user and create the account.</p>
-<p>For details on what Digital Forms are and how it is implemented in the Kore.ai Bots platform, <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/digital-forms/">refer here</a>.</p>
+<p>For details on what Digital Forms are and how it is implemented in the Kore.ai Bots platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/digital-forms/">here</a>.</p>
 <h2 id="illustration-with-an-example"><strong>Illustration with an Example</strong><a class="headerlink" href="#illustration-with-an-example" title="Permanent link">&para;</a></h2>
 <p>Consider a Banking Bot trying to address the following scenarios:</p>
 <ol>
 <li>An already registered user wants to open an additional account.</li>
-<li>There are three types of accounts that are available, each with further options:<ul>
+<li>There are three types of accounts that are available, each with further options:</li>
 <li>Savings Account.</li>
 <li>Checking Account with an option to opt for a Cash Card and set the miniumum balance.</li>
-<li>Credit Card with an option to choose the type of card to be Platinum, Gold, Silver or Basic</li>
-</ul>
+<li>
+<p>Credit Card with an option to choose the type of card to be Platinum, Gold, Silver or Basic.</p>
+<p><a class="glightbox" href="../../images/banking-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/banking-form.png" alt="banking form" title="banking form" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Bot building knowledge.</li>
@@ -2846,49 +2858,43 @@
 <li>From the Kore.ai Bot Builder platform, open the Banking Bot.</li>
 <li>Select the <strong>Build</strong> tab from the top menu.</li>
 <li>From the left navigation menu, select <strong>Digital Skills -&gt; Digital Forms</strong> to access the Digital Forms page.</li>
-<li>
-<p>Click <strong>New Form</strong> and enter the following:</p>
-<ul>
+<li>Click <strong>New Form</strong> and enter the following:<ul>
 <li><strong>Name</strong> – name to the form, say <em>OpenAccount</em></li>
 <li><strong>Display Name</strong> for the form, say <em>Open an Account</em></li>
-<li>
-<p><strong>Description</strong> of the form.</p>
-<p><strong>Select form’s Header Style</strong>: You can choose a specific header style from the listed illustrations – the circle indicates the position of logo/icon with respect to the title of the form in the header. </p>
-<p>Click the card to select the style. If it has a logo, you can upload an image file (png or jpg) for the logo.</p>
-<p><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>During the Export of the Bot, the logo is not exported along with Digital Forms. So, while importing this Bot, you need to separately copy the logo image file and then manually reupload the logo.</p>
-</div></p>
-</li>
+<li><strong>Description</strong> of the form.
+    <strong>Select form’s Header Style</strong>: You can choose a specific header style from the listed illustrations – the circle indicates the position of logo/icon with respect to the title of the form in the header. 
+    Click the card to select the style. If it has a logo, you can upload an image file (png or jpg) for the logo.
+    <div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>During the Export of the Bot, the logo is not exported along with Digital Forms. So, while importing this Bot, you need to separately copy the logo image file and then manually reupload the logo.</p>
+    </div></li>
 </ul>
 </li>
+<li><strong>Description</strong>: Turn on the toggle to show a description of the form in the header.</li>
 <li>
-<p><strong>Description</strong>: Turn on the toggle to show a description of the form in the header.</p>
+<p><strong>Save &amp; Proceed</strong> to the next step.</p>
+<p><a class="glightbox" href="../../images/form-creation-next-step.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/form-creation-next-step.png" alt="form creation next step" title="form creation next step" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
-<li><strong>Save &amp; Proceed</strong> to the next step.</li>
 </ol>
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
 <h3 id="form-editor">Form Editor<a class="headerlink" href="#form-editor" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Form Editor opens with components on the left, and a blank form. You can drag and drop components to the form as per your requirement.</li>
 <li>By default, a <strong>Submit button</strong> is added to the form. This would trigger the submit event which would capture the user input and save in context object.</li>
 <li>Drag and drop a <strong>Text Field</strong> component onto the form.</li>
 <li>As soon as you drag and drop a component, its property settings panel will be displayed.</li>
-<li>In that panel set the following values:<ul>
+<li>
+<p>In that panel set the following values:</p>
+<ul>
 <li><strong>Display Name</strong> say <em>Name.</em></li>
 <li><strong>Name</strong> used for internal reference, say <em>accountname.</em></li>
 <li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Enter the name of the account holder</em>.</li>
+<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Enter the name of the account holder</em>.
+  <a class="glightbox" href="../../images/form-editor-panel.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/form-editor-panel.png" alt="form editor panel" title="form editor panel" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
-</ol>
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
-<ol>
-<li>Next, a selection box for the type of account to be opened. Drag and drop a <strong>Dropdown</strong> component onto the form and set the following values:<ul>
+<li>
+<p>Next, a selection box for the type of account to be opened. Drag and drop a <strong>Dropdown</strong> component onto the form and set the following values:</p>
+<ul>
 <li><strong>Display Name</strong> say <em>Type.</em></li>
 <li><strong>Name</strong> used for internal reference, say <em>accounttype.</em></li>
 <li><strong>Description</strong> of the field.</li>
@@ -2896,27 +2902,27 @@
 </ul>
 </li>
 <li>Scroll and locate <strong>Data Settings</strong>, and deselect <strong>Multi Select</strong> option.</li>
-<li>Against <strong>Dropdown values</strong> click <strong>Add Values</strong> to enter the values – <em>Checkings, Savings, Credit Card.</em> You can mark one value, <em>Savings</em>, as default. This would be selected by default at the time of execution.</li>
-</ol>
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
-<ol>
-<li>Next, for the Cash Card option when the account type is selected to be a Checkings account. Drag and drop a <strong>Toggle</strong> component onto the form and set the following values:<ul>
+<li>
+<p>Against <strong>Dropdown values</strong> click <strong>Add Values</strong> to enter the values – <em>Checkings, Savings, Credit Card.</em> You can mark one value, <em>Savings</em>, as default. This would be selected by default at the time of execution.</p>
+<p><a class="glightbox" href="../../images/data-settings-add-value.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/data-settings-add-value.png" alt="data settings add value" title="data settings add value" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Next, for the Cash Card option when the account type is selected to be a Checkings account. Drag and drop a <strong>Toggle</strong> component onto the form and set the following values:</p>
+<ul>
 <li><strong>Display Name</strong> say <em>Cash Card.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>cashcard.</em></li>
+<li><strong>Name</strong> used for internal reference, say <em>cashcard</em>.</li>
 <li><strong>Description</strong> of the field. In this case, the question, <em>Want a cash card?</em></li>
 <li><strong>Value</strong> as <em>Yes</em> when selected and <em>No</em> when deselected.</li>
 </ul>
 </li>
 <li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Checkings.</li>
-<li>Add <strong>Visibility Rules – Rule 1</strong> for the field to be <strong>Visible</strong>, select <strong>accounttype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Checkings</em> value.</li>
-</ol>
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
-<ol>
-<li>If the user opts for cash card, then the withdrawal limit needs to be set on the same. Drag and drop a <strong>Range Slider</strong> component onto the form and set the following values:<ul>
+<li>
+<p>Add <strong>Visibility Rules – Rule 1</strong> for the field to be <strong>Visible</strong>, select <strong>accounttype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Checkings</em> value.</p>
+<p><a class="glightbox" href="../../images/visibility-rules.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/visibility-rules.png" alt="visibility rules" title="visibility rules" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>If the user opts for cash card, then the withdrawal limit needs to be set on the same. Drag and drop a <strong>Range Slider</strong> component onto the form and set the following values:</p>
+<ul>
 <li><strong>Display Name</strong> say <em>Withdrawal Limit.</em></li>
 <li><strong>Name</strong> used for internal reference, say <em>withdrawallimit.</em></li>
 <li><strong>Description</strong> of the field.</li>
@@ -2928,117 +2934,112 @@
 <li>Under <strong>Data Settings</strong> you can set the <strong>Default Value</strong> to be 150, this would be pre-selected.</li>
 <li><strong>Visibility Rules</strong> would be a compound rule – account type is checkings and cash card is selected.</li>
 <li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Checkings and the Cash Card is opted.</li>
-<li>Add <strong>Visibility Rules – Rule 1</strong> field to be visible when, select, <strong>accounttype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Checkings</em> value  AND selecting <em>cashcard** **_field, _=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Yes</em> value.</li>
-<li>Switch to <strong>Advanced Mode</strong> to enter the visibility rules.</li>
-</ol>
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
-<ol>
-<li>For the Credit Card option,you need to further select the type of card. Drag and drop a <strong>Radio Button</strong> component onto the form and set the following values:<ul>
+<li>Add <strong>Visibility Rules – Rule 1</strong> field to be visible when, select, <strong>accounttype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with <em>Checkings</em> value  AND selecting <em>cashcard</em>  field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with <em>Yes</em> value.</li>
+<li>
+<p>Switch to <strong>Advanced Mode</strong> to enter the visibility rules.</p>
+<p><a class="glightbox" href="../../images/switch-to-advanced-mode.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/switch-to-advanced-mode.png" alt="switch to advanced mode" title="switch to advanced mode" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>For the Credit Card option,you need to further select the type of card. Drag and drop a <strong>Radio Button</strong> component onto the form and set the following values:</p>
+<ul>
 <li><strong>Display Name</strong> say <em>Card Type.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>cardtype.</em></li>
+<li><strong>Name</strong> used for internal reference, say <em>cardtype</em>.</li>
 <li><strong>Description</strong> of the field.</li>
 <li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Choose the type of credit card</em>.</li>
 </ul>
 </li>
-<li>Under <strong>Data Settings</strong>, set the <strong>Radio values</strong> to be <em>Platinum, Gold, Silver, _and _Basic</em>.</li>
-<li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Credit Card.
-        * Set <strong>Is visible</strong> flag to <em>Yes</em>
-        * Add <strong>Visibility Rules – Rule 1</strong> for the filed to be <strong>Visible</strong>, select <strong>accounttype</strong> <em>field, _=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Credit Card</em> value.</li>
-</ol>
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
-<ol>
-<li>Finally, the Pro-Tip, when user selects a Platinum card. Drag and drop a <strong>Pro Tip</strong> component onto the form and set the following values:<ul>
+<li>Under <strong>Data Settings</strong>, set the <strong>Radio values</strong> to be <em>Platinum, Gold, Silver, and _Basic</em>.</li>
+<li>
+<p>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Credit Card.</p>
+</li>
+<li>
+<p>Set <strong>Is visible</strong> flag to <em>Yes</em>.</p>
+</li>
+<li>
+<p>Add <strong>Visibility Rules – Rule 1</strong> for the filed to be <strong>Visible</strong>, select <strong>accounttype</strong> <em>field, _=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Credit Card</em> value.</p>
+<p><a class="glightbox" href="../../images/data-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/data-settings.png" alt="data settings" title="data settings" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Finally, the Pro-Tip, when user selects a Platinum card. Drag and drop a <strong>Pro Tip</strong> component onto the form and set the following values:</p>
+</li>
 <li>Set <strong>Display Name</strong> as <em>Platinum Tip.</em></li>
 <li><strong>Name</strong> used for internal reference, mention <em>platinumtip.</em></li>
 <li><strong>Description</strong> would be the tip you want to display, eg. <em>Additional charges will apply</em>.</li>
-</ul>
-</li>
-<li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Credit Card.<ul>
+<li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Credit Card.</li>
 <li>Set <strong>Is visible</strong> flag to <em>Yes</em></li>
-<li>Add <strong>Visibility Rules – Rule 1</strong> for the field to be <strong>Visible</strong> select <strong>accounttype</strong> <em>field, _=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Credit Card</em> value AND selecting <strong>cardtype</strong> <em>field, _=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Platinum</em> value.</li>
-</ul>
+<li>
+<p>Add <strong>Visibility Rules – Rule 1</strong> for the field to be <strong>Visible</strong> select <strong>accounttype</strong> <em>field, _=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Credit Card</em> value AND selecting <strong>cardtype</strong> <em>field, _=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Platinum</em> value.</p>
+<p><a class="glightbox" href="../../images/view-visibility-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/view-visibility-settings.png" alt="visibility settings" title="visibility settings" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.png" title="image_tooltip" /></a></p>
 <p>Your form is ready. You can toggle between Desktop View and Mobile View to see how it looks in those devices. </p>
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image9.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../../images/toggle-views.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/toggle-views.png" alt="toggle views" title="toggle views" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ol>
 <li>You can select how the VA handles the conversation when the user cancels the form. You can choose from two options:</li>
-<li><strong>Discard the task and trigger End of Task Event</strong>: This is the default option. </li>
-</ol>
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image10.png" title="image_tooltip" /></a></p>
-<ol>
-<li>Continue with this task and transition to this node: In the <strong>Select Node</strong> drop-down list, you can select any node present in the current dialog task. </li>
-</ol>
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image11.png" title="image_tooltip" /></a></p>
-<div class="admonition note">
+<li>
+<p><strong>Discard the task and trigger End of Task Event</strong>: This is the default option.</p>
+<p><a class="glightbox" href="../../images/discard-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/discard-task.png" alt="discard task" title="discard task" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Continue with this task and transition to this node: In the <strong>Select Node</strong> drop-down list, you can select any node present in the current dialog task.</p>
+<p><a class="glightbox" href="../../images/select-node-dropdown.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/select-node-dropdown.png" alt="select node dropdown" title="select node dropdown" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The target node has to be in the same dialog, you cannot make a jump to a target node outside the current dialog. The list of target nodes only shows the local nodes.
 If the target node is not present during runtime, the platform presents the error Error in continuing the conversation, and the task should get discarded.</p>
-</div>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>28. Use the **Test** button to see a preview.
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>### Dialog Task Configuration
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>We will be creating a dialog task and adding a form node to trigger the Digital Form created in the above step and use a service node to make a service call to add the new account from the form data.
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>### Create Dialog Task
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>1. Select the **Build** tab from the top menu
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2. From the left navigation menu, select **Conversational Skills -&gt; Dialog Tasks.**
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>3. Click the **+** against the **Dialog Tasks** to create a new Task
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    * Enter **IntentName**, say, _OpenAccount_
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    * **Create &amp; Proceed** to open the dialog builder page.
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>4. Retain the Intent Node default settings, and close the Intent Node.
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>5. Click the **+** next to the intent node and select the **Form** option.
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>6. From the dropdown list select the form (_OpenAccount_) we created earlier. 
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>&lt;p id=&quot;gdcalert12&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert13&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>![alt_text](images/image12.png &quot;image_tooltip&quot;)
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>7. You will be prompted to select the **Form Experience**. Kore.ai Bots platform allows you to gather user input both from the form and through conversation based on the channel.
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>8. For this use case, select _Only Form UI_ experience.
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>9. A Form Node would be added, you can customize the form name, etc.
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>10. We are changing the **Name** to _OpenAccountForm_ and **Display Name** to _Form to open account_.
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>Next, to capture the values returned by the Form Node using a Script node and displaying the same, follow the steps below:
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>1. Add a **Message Node** to the form node.
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>2. Set the **Name** to _FormMessage_ and **Display Name** to _Form Message_.
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>3. Click the **MANAGE RESPONSES** to open the message editor. 
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>&lt;p id=&quot;gdcalert13&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image13.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert14&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>![alt_text](images/image13.png &quot;image_tooltip&quot;)
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>4. Select the **JavaScript** tab and enter the following code. This code would capture from the context object, the data submitted by the user in the Form and display it accordingly. 
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>`var message;`
+</div></p>
+</li>
+<li>
+<p>Use the <strong>Test</strong> button to see a preview.</p>
+</li>
+</ol>
+<h3 id="dialog-task-configuration">Dialog Task Configuration<a class="headerlink" href="#dialog-task-configuration" title="Permanent link">&para;</a></h3>
+<p>We will be creating a dialog task and adding a form node to trigger the Digital Form created in the above step and use a service node to make a service call to add the new account from the form data.</p>
+<h3 id="create-dialog-task">Create Dialog Task<a class="headerlink" href="#create-dialog-task" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Select the <strong>Build</strong> tab from the top menu</li>
+<li>From the left navigation menu, select <strong>Conversational Skills -&gt; Dialog Tasks.</strong></li>
+<li>Click the <strong>+</strong> against the <strong>Dialog Tasks</strong> to create a new Task<ul>
+<li>Enter <strong>IntentName</strong>, say, <em>OpenAccount</em></li>
+<li><strong>Create &amp; Proceed</strong> to open the dialog builder page.</li>
+</ul>
+</li>
+<li>Retain the Intent Node default settings, and close the Intent Node.</li>
+<li>Click the <strong>+</strong> next to the intent node and select the <strong>Form</strong> option.</li>
+<li>
+<p>From the dropdown list select the form (<em>OpenAccount</em>) we created earlier.</p>
+<p><a class="glightbox" href="../../images/select-created-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/select-created-form.png" alt="select created form" title="select created form" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>You will be prompted to select the <strong>Form Experience</strong>. Kore.ai Bots platform allows you to gather user input both from the form and through conversation based on the channel.</p>
+</li>
+<li>For this use case, select <em>Only Form UI</em> experience.</li>
+<li>A Form Node would be added, you can customize the form name, etc.</li>
+<li>We are changing the <strong>Name</strong> to <em>OpenAccountForm</em> and <strong>Display Name</strong> to <em>Form to open account</em>.</li>
+</ol>
+<p>Next, to capture the values returned by the Form Node using a Script node and displaying the same, follow the steps below:</p>
+<ol>
+<li>Add a <strong>Message Node</strong> to the form node.</li>
+<li>Set the <strong>Name</strong> to <em>FormMessage</em> and <strong>Display Name</strong> to <em>Form Message</em>.</li>
+<li>
+<p>Click <strong>MANAGE RESPONSES</strong> to open the message editor.
+<a class="glightbox" href="../../images/click-manage-responses.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/click-manage-responses.png" alt="select js" title="select js" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Select the <strong>JavaScript</strong> tab and enter the following code. This code would capture from the context object, the data submitted by the user in the Form and display it accordingly. 
+<code>var message;</code></p>
+</li>
+</ol>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>message = &#39;You have opened a &#39;+context.forms.OpenAccount.accounttype+&#39; account in the name of &#39;+context.forms.OpenAccount.accountname;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>if (context.forms.OpenAccount.accounttype == &#39;Checkings&#39; &amp;&amp; context.forms.OpenAccount.cashcard == &#39;Yes&#39;)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  message = message + &#39; and opted for cash card with withdrawal limit set to &#39;+ context.forms.OpenAccount.withdrawallimit;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>if (context.forms.OpenAccount.accounttype == &#39;Credit Card&#39;)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  message = message + &#39; and opted for a &#39;+ context.forms.OpenAccount.cardtype+&#39; card&#39;;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>print(message);
 </span></code></pre></div>
-message = 'You have opened a '+context.forms.OpenAccount.accounttype+' account in the name of '+context.forms.OpenAccount.accountname;
-if (context.forms.OpenAccount.accounttype == 'Checkings' &amp;&amp; context.forms.OpenAccount.cashcard == 'Yes')
-  message = message + ' and opted for cash card with withdrawal limit set to '+ context.forms.OpenAccount.withdrawallimit;
-if (context.forms.OpenAccount.accounttype == 'Credit Card')
-  message = message + ' and opted for a '+ context.forms.OpenAccount.cardtype+' card';
-print(message);
-```</p>
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image14.png" title="image_tooltip" /></a></p>
+<a class="glightbox" href="../../images/select-javascript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/select-javascript.png" alt="select js" title="select js" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Your dialog with form is ready! <strong>Talk to bot</strong> and trigger the above dialog. The form will be displayed, enter the values and click Submit, the message would be displayed. </p>
-<p><a class="glightbox" href="../images/talk-to-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/talk-to-bot.png" alt="dialog task source" title="dialog task source" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../../images/talk-to-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/talk-to-bot.png" alt="talk to bot" title="talk to bot" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>You can use the context object as shown above it a <strong>Script</strong> or <strong>Service</strong> nodes for further processing.</p>
 <p>Click <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-add-data-into-data-tables-from-digital-forms/">here</a> to learn how to add this data to a data table.</p>
 
