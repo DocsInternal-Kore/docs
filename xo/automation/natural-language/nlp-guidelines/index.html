@@ -3002,7 +3002,7 @@ _Note that the word means _not after this point</em>. So (!forecast the weather)
 <li>Don’t use field names or their synonyms in patterns or entity patterns. Only consider up to two wildcard words between the specified words.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<p>Following are some examples of entity patterns to recognize the <em>from _and _to _flight number for an intent to _change flight</em>.</p>
+<p>Following are some examples of entity patterns to recognize the <em>from</em> and <em>to</em> flight number for an intent to <em>change flight</em>.</p>
 <p>The pattern operators defined above can be applied to entity patterns also.</p>
 <ul>
 <li>
@@ -3022,8 +3022,7 @@ patterns for entity ToFlight–  <em>to * from</em>, and <em>from to *1</em> pat
 </div>
 
 <ul>
-<li><strong>Pattern</strong>: [ word1 word2 ] *n – match against any one word or phrase as defined within […]. 
-pattern for entity ToFlight–  <em>to *1</em> pattern for entity FromFlight –  <em>[ using from ] *1</em>.
+<li><strong>Pattern</strong>: [ word1 word2 ] *n – match against any one word or phrase as defined within […] pattern for entity ToFlight–  <em>to *1</em> pattern for entity FromFlight –  <em>[ using from ] *1</em>.
 <em>ToFlight</em> &amp; <em>FromFlight</em> are captured from user utterance <em>change flight  from XYZ321 to ABC123</em> and <em>change flight  to ABC123 using XYZ321</em> but not from <em>change flight  for ABC123 using XYZ321.</em></li>
 <li><strong>Pattern</strong>: ~concept *n – pattern built using concepts. 
 pattern for entity ToFlight–  <em>to *1</em> the pattern for entity FromFlight –  <em>~from *1</em> wherefrom is a concept as (using) (from) <em>ToFlight</em>&amp; <em>FromFlight</em> are captured from user utterance <em>change flight from XYZ321 to ABC123</em> and <em>change flight  to ABC123 using XYZ321</em> but not from <em>change flight for ABC123 using XYZ321.</em></li>
@@ -3031,7 +3030,7 @@ pattern for entity ToFlight–  <em>to *1</em> the pattern for entity FromFlight
 <p>For more information on how to add patterns, refer to <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Manage_Patterns_and_Rules">Managing Patterns</a>.</p>
 <h3 id="negative-patterns">Negative Patterns<a class="headerlink" href="#negative-patterns" title="Permanent link">&para;</a></h3>
 <p>Negative patterns are used to eliminate intents detected by the Fundamental Meaning or Machine Learning models.</p>
-<p>For example, a user says <em>I was trying to Book a Flight when I faced an issue</em>. Though the machine identifies the intent as <em>Book a Flight</em>, that is not what the user wants to do. In such a case, defining <em>was trying to *</em> as a negative pattern, would ensure that the matched intent is ignored.</p>
+<p>For example, a user says <em>I was trying to Book a Flight when I faced an issue</em>. Though the machine identifies the intent as <em>Book a Flight</em>, that is not what the user wants to do. In such a case, defining <code>was trying to *</code> as a negative pattern, would ensure that the matched intent is ignored.</p>
 <h2 id="synonyms">Synonyms<a class="headerlink" href="#synonyms" title="Permanent link">&para;</a></h2>
 <p>Synonyms must be used when the words used to identify an intent/entity are used interchangeably. Synonyms are defined for both intents and entities.</p>
 <p>Each intent has a name. For example, if your intent name is <em>Guided Search</em>. There are many synonyms that a user might enter to start this task, <em>such as Search Flights,</em> or <em>Show me flights.</em></p>
@@ -3063,10 +3062,10 @@ pattern for entity ToFlight–  <em>to *1</em> the pattern for entity FromFlight
 <p>A match between the user input and synonym for entity (only for List of Values and Lookup types) identification can occur in one of the following ways:</p>
 <ul>
 <li><strong>Partial Match</strong> – This is the default behavior whereby one or more words in the input must match one or more words for a given synonym. For example, the user utterance  <em>inflight services</em> will match <em>inflight magazine..</em></li>
-<li><strong>Exact Match</strong> – Here the input must contain all the words for a given synonym. For example, <em>book inflight services _will match _add inflight services</em>. But <em>inflight services _ will not match _inflight magazine</em>. To trigger an exact match, the synonym must be enclosed within double-quotes.</li>
+<li><strong>Exact Match</strong> – Here the input must contain all the words for a given synonym. For example, <em>book inflight services</em> will match <em>add inflight services</em>. But <em>inflight services</em> will not match <em>inflight magazine</em>. To trigger an exact match, the synonym must be enclosed within double-quotes.</li>
 <li><strong>Full Match</strong> – The entire input must exactly match a given synonym word. For example, a <em>flight booking</em> should match &lt;flight booking&gt; but <em>my flight booking</em> should NOT match &lt;flight booking&gt;. Similarly, a <em>flight booking</em> should not match &lt;my flight booking&gt;. To trigger an exact match, the synonym must be enclosed within angular brackets.</li>
 </ul>
-<p><strong>Canonical Form Match</strong> – This is the default behavior wherein the user input is matched with the synonym or its canonical form. For example, <em>Book me a flight</em> will match with the synonym <em>booking request</em> since <em>book _is the canonical form of _booking</em>. To disable this behavior, prefix the synonym with a single apostrophe as <em>checking</em>. (post v7.1)</p>
+<p><strong>Canonical Form Match</strong> – This is the default behavior wherein the user input is matched with the synonym or its canonical form. For example, <em>Book me a flight</em> will match with the synonym <em>booking request</em> since <em>book</em> is the canonical form of <em>booking</em>. To disable this behavior, prefix the synonym with a single apostrophe as <em>checking</em>. (post v7.1)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Synonyms can be added to identify intents as well as entities. Entity identification is triggered only after an Intent is identified.</p>
