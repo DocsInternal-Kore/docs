@@ -3615,17 +3615,12 @@ set to 3 by default
   <tr>
    <td><a href="https://developer.kore.ai/docs/bots/nlp/advanced-nlp-configurations/#Precedence_Intents">Precedence for Intents with Ambiguous Entities</a>
    </td>
-   <td>Enable to Use Precedence, Intent Over Entity, or Entity Over Intent options for intents with ambiguous entities.
-   </td>
-   <td>FM
-   </td>
-   <td>Enable
-<p>
-Disable (default)
-<p>
-/td>
-   </td>
-   <td>
+   <td>Enable to Use Precedence, Intent Over Entity, or Entity Over Intent options for intents with ambiguous entities.</td>
+   <td>FM</td>
+   <td><ul><li>Enable</li>
+<li>Disable (default)</li></ul>
+</td>
+<td>
    </td>
   </tr>
    <tr bgcolor="#FAFAFA">
@@ -3665,14 +3660,14 @@ Disable
 <p>This configuration is employed to specify how compound words should be handled. When activated, compound words in user utterances are divided into their stem words before being considered for intent detection.</p>
 <h3 id="none-intent">None Intent<a class="headerlink" href="#none-intent" title="Permanent link">&para;</a></h3>
 <p>The Machine Learning (ML) engine is responsible for analyzing and assessing user inputs to construct and refine a model. The ML model's primary goal is to categorize user inputs into predefined intents for which it has been trained. Nonetheless, when confronted with out-of-context utterances, the ML system may erroneously attempt to associate them with the incorrect intent.</p>
-<p>To address this issue, you can prevent misclassifications by activating the "None" intent within the <strong>Training</strong> &gt; <strong>Thresholds &amp; Configurations</strong> section for various languages. The <strong>None intent</strong> serves as a temporary category that safeguards against the ML model misassigning untrained or ambiguous utterances to inappropriate intents. This safeguard is enabled by default for newly created virtual assistants.</p>
+<p>To address this issue, you can prevent misclassifications by activating the <strong>None Intent</strong> option in the <strong>Training</strong> &gt; <strong>Thresholds &amp; Configurations</strong> section for various languages. The <strong>None intent</strong> serves as a temporary category that safeguards against the ML model assigning untrained or ambiguous utterances to inappropriate intents. This safeguard is enabled by default for newly created virtual assistants.</p>
 <p>For example, for an Airlines VA, an Intent “Book Flight Ticket” is mapped. If a customer requests to “Book a Movie Ticket” the ML tries to associate the closest intent “Book Flight Ticket” (wrong intent) as the successful intent and triggers it. This error can be eliminated by enabling the None intent.</p>
 <p>Adding an extra <em>None</em> <em>Intent</em> ensures classifying random input to these intents in the VA. Once enabled, the ML Model is tuned to identify these none intents when a user utterance contains the words that are not used in the VA’s training. i.e., bot vocabulary. You can define the None Intent for the Linked Bots in a Universal Bot. For more information, see <a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/creating-a-universal-bot/#Step_3_Training">Creating a Universal Bot</a> article.</p>
 <h3 id="externalization-of-the-ml-engine">Externalization of the ML Engine<a class="headerlink" href="#externalization-of-the-ml-engine" title="Permanent link">&para;</a></h3>
 <p>In machine learning, a hyperparameter governs the learning process by controlling specific aspects of it.</p>
 <p>Hyperparameters offer the means to further tailor the behavior of your Virtual Assistants (VAs). The following list outlines the machine learning configurations that are available for this customization.</p>
 <h4 id="network-type">Network Type<a class="headerlink" href="#network-type" title="Permanent link">&para;</a></h4>
-<p>You can choose the Neural Network that you want to use. This setting is moved to the Machine Learning section post v8.1. <a href="https://developer.kore.ai/docs/bots/nlp/user-utterances/#Threshold_Configurations">Refer here for details</a>.</p>
+<p>You can choose the Neural Network that you want to use. This setting is moved to the Machine Learning section post v8.1. <a href="https://developer.kore.ai/docs/bots/nlp/user-utterances/#Threshold_Configurations">Learn more</a>.</p>
 <h4 id="epochs">Epochs<a class="headerlink" href="#epochs" title="Permanent link">&para;</a></h4>
 <p>In terms of artificial neural networks, an <strong>Epoch</strong> signifies a complete cycle through the entire training dataset. </p>
 <p>Achieving optimal performance on data that was not part of the training set typically requires multiple traversals of the training data. The quantity of epochs serves as a hyperparameter, determining the count of full passes made through the training dataset.</p>
@@ -3716,7 +3711,7 @@ Disable
 <p>If the user input has multiple sentences, multiple intent calls are made, one for each sentence. This might not be an ideal situation in some cases. For example user utterance, <em>I want to book tickets. Redirect me to Book My Show</em>. will result in a 0.6 ML score for <em>I want to book tickets</em> and <em>Redirect me to Book My Show</em> and the total ML score of 0.6.</p>
 <p>Disabling this configuration sends the original user input to ML for intent identification and results in a definite score like 0.99 for the above example.</p>
 <h3 id="multiple-intent-model">Multiple Intent Model<a class="headerlink" href="#multiple-intent-model" title="Permanent link">&para;</a></h3>
-<p>Enabling this feature creates multiple ML intent models for your VA. All the Primary Dialog Intents will be part of the Bot Level Intent Model. Separate Dialog Level ML Models are created for each of the other Dialog Tasks and Sub Dialog Tasks, consisting of all the sub-intents used in the respective task definition. <a href="https://developer.kore.ai/docs/bots/nlp/user-utterances/#Threshold_Configurations">Refer here for details</a>.</p>
+<p>Enabling this feature creates multiple ML intent models for your VA. All the Primary Dialog Intents will be part of the Bot Level Intent Model. Separate Dialog Level ML Models are created for each of the other Dialog Tasks and Sub Dialog Tasks, consisting of all the sub-intents used in the respective task definition. <a href="https://developer.kore.ai/docs/bots/nlp/user-utterances/#Threshold_Configurations">Learn more</a>.</p>
 <h3 id="lemmatization-of-kg-synonyms">Lemmatization of KG Synonyms<a class="headerlink" href="#lemmatization-of-kg-synonyms" title="Permanent link">&para;</a></h3>
 <p><strong>Lemmatization</strong>, in the field of linguistics, involves the task of consolidating the various inflected forms of a word into a single unit, which is then represented by the word's lemma or dictionary form. The incorporation of Parts of Speech information from the user's utterance during the lemmatization process can enhance the accuracy of identifying a more precise FAQ.</p>
 <p>For example,</p>
