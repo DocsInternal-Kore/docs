@@ -3025,7 +3025,7 @@ patterns for entity ToFlight–  <em>to * from</em>, and <em>from to *1</em> pat
 <li><strong>Pattern</strong>: [ word1 word2 ] *n – match against any one word or phrase as defined within […] pattern for entity ToFlight–  <em>to *1</em> pattern for entity FromFlight –  <em>[ using from ] *1</em>.
 <em>ToFlight</em> &amp; <em>FromFlight</em> are captured from user utterance <em>change flight  from XYZ321 to ABC123</em> and <em>change flight  to ABC123 using XYZ321</em> but not from <em>change flight  for ABC123 using XYZ321.</em></li>
 <li><strong>Pattern</strong>: ~concept *n – pattern built using concepts. 
-pattern for entity ToFlight–  <em>to *1</em> the pattern for entity FromFlight –  <em>~from *1</em> wherefrom is a concept as (using) (from) <em>ToFlight</em>&amp; <em>FromFlight</em> are captured from user utterance <em>change flight from XYZ321 to ABC123</em> and <em>change flight  to ABC123 using XYZ321</em> but not from <em>change flight for ABC123 using XYZ321.</em></li>
+pattern for entity ToFlight–  <em>to *1</em> the pattern for entity FromFlight –  <em>~from *1</em>, where <em>from</em> is a concept as (using) (from) <em>ToFlight</em> &amp; <em>FromFlight</em> are captured from user utterance <em>change flight from XYZ321 to ABC123</em> and <em>change flight  to ABC123 using XYZ321</em> but not from <em>change flight for ABC123 using XYZ321.</em></li>
 </ul>
 <p>For more information on how to add patterns, refer to <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Manage_Patterns_and_Rules">Managing Patterns</a>.</p>
 <h3 id="negative-patterns">Negative Patterns<a class="headerlink" href="#negative-patterns" title="Permanent link">&para;</a></h3>
