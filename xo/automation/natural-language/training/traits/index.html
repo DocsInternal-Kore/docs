@@ -2990,7 +2990,7 @@
 <li>Indirect entity extraction, e.g.: gender or age-specific words can be inferred from the text.  A phrase such as: “Seat in front of the plane with extra legroom” implies, for example, a <em>First Class</em> seat.</li>
 <li>Intent recognition, using rules. Any rule match for intent will be considered a definitive match.</li>
 <li>Identification based on keywords/phrases and their synonyms. For Example, <strong>Trait-Color: Blue</strong>– “Blue”, “Sapphire”, “Teal”; <strong>Trait-Color-Red</strong> – Red, Maroon, Crimson <strong>Trait-Status: NotWorking:</strong> “doesn’t work”, “switched off”;  <strong>Trait-Status:Working</strong>: “working”, “turned on.”</li>
-<li>Inference from a keyword or specific phrase in the sentence. There is no obvious association between certain words in the sentence and the value of the entity, but rather you need the sentence as a whole to determine the value. For example, <strong>Trait-Greeting-Emotion: Positive **– “Good Morning”, “How are you”;</strong>  Trait-Greeting-Emotion: Negative** – “I hate to say”, “I am not having trouble”.</li>
+<li>Inference from a keyword or specific phrase in the sentence. There is no obvious association between certain words in the sentence and the value of the entity, but rather you need the sentence as a whole to determine the value. For example, <strong>Trait-Greeting-Emotion: Positive</strong> – “Good Morning”, “How are you”; <strong>Trait-Greeting-Emotion: Negative</strong> – “I hate to say”, “I am not having trouble”.</li>
 </ul>
 <p>Configuring Traits involves:</p>
 <ul>
@@ -3012,7 +3012,7 @@
 <p>To access <strong>Traits</strong>, follow the steps below:</p>
 <ol>
 <li>Navigate to <strong>Build &gt; Natural Language &gt; Training &gt; Traits</strong>.
-<a class="glightbox" href="../../images/access-traits.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/access-traits.png" alt="access traits" title="access traits" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/access-traits.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/access-traits.png" alt="access traits" title="access traits" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
 <p>The following key features can be leveraged when defining Traits:</p>
 <ol>
@@ -3021,7 +3021,7 @@
 <ul>
 <li>Trait Type can be <em>ML Based</em> or <em>Pattern Based</em>. Each trait of a trait type can be trained using words, phrases, utterances, or patterns based on the type. <strong>Manage</strong> Trait Type allows you to define the training configuration. <a href="https://developer.kore.ai/docs/bots/nlp/traits/#The_ML_Model_for_Traits">See below</a> for ML-based trait configuration.</li>
 <li>A <em>Trait Type</em> can have one or more <em>Traits</em>.
-<a class="glightbox" href="../../images/trait-type-definition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/trait-type-definition.png" alt="traits type definition" title="traits type definition" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/trait-type-definition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/trait-type-definition.png" alt="traits type definition" title="traits type definition" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 <li>
@@ -3075,21 +3075,21 @@
 <ol>
 <li>
 <p>From the Traits section using the <strong>Add New Rule</strong> link.
-<a class="glightbox" href="../../images/add-new-rule-link.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/add-new-rule-link.png" alt="add new rule link" title="add new rule link" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/add-new-rule-link.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-new-rule-link.png" alt="add new rule link" title="add new rule link" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>From the Intent Node using the <strong>Rules</strong> section under the <strong>NLP Properties</strong>.
-<a class="glightbox" href="../../images/add-rules-intent-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/add-rules-intent-node.png" alt="add rules intent node" title="add rules intent node" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/add-rules-intent-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-rules-intent-node.png" alt="add rules intent node" title="add rules intent node" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Click the <strong>Rules</strong> tab for a given <strong>Intent</strong> to view the rules under <strong>Build &gt; Natural Language &gt; Training</strong>.
-<a class="glightbox" href="../../images/view-rules.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/view-rules.png" alt="view rules" title="view rules" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/view-rules.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/view-rules.png" alt="view rules" title="view rules" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
 <p>Each rule can have one or more conditions with AND as the operator. Multiple trait rules can be defined for a given intent and the intent is considered as a definite match if any one of the rules matches.</p>
 <h3 id="knowledge-graph-intents">Knowledge Graph Intents<a class="headerlink" href="#knowledge-graph-intents" title="Permanent link">&para;</a></h3>
 <p>The Knowledge Graph can also be part of the discovery process using Traits. For this, each term or node can be associated with a trait. A given term can be associated with a single Trait.</p>
-<p><a class="glightbox" href="../../images/kg-intents.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/kg-intents.png" alt="kg intents" title="kg intents" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/kg-intents.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kg-intents.png" alt="kg intents" title="kg intents" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h3 id="trait-detection">Trait Detection<a class="headerlink" href="#trait-detection" title="Permanent link">&para;</a></h3>
 <p>Only one trait from a group (trait type) will be detected and is considered as a definite match.</p>
 <p>Traits detected are included in the context object. The context is populated with unique traits identified (without reference to trait type). This information can be used in:</p>
@@ -3105,12 +3105,12 @@
 <ul>
 <li>The intent is considered as a definite match only if all the traits (one in the case of Knowledge Graph) present in a trait rule are detected.</li>
 <li>NL Analysis includes information on traits detected and the NLP Flow shows the information about traits detected.
-<a class="glightbox" href="../../images/utterance-testing-intent-detection.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/utterance-testing-intent-detection.png" alt="utterance testing intent detection" title="utterance testing intent detection" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/utterance-testing-intent-detection.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/utterance-testing-intent-detection.png" alt="utterance testing intent detection" title="utterance testing intent detection" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 <h3 id="dialog-transition">Dialog Transition<a class="headerlink" href="#dialog-transition" title="Permanent link">&para;</a></h3>
 <p>The Conversation Flow is controlled using Traits. For a Dialog, <strong>Connection Rules</strong> are defined using the Trait Context. This is done from the <strong>Connection</strong> tab under the <strong>Properties</strong> Panel for the Dialog.</p>
 <p>The Traits Context is accessed using <code>context.traits</code>. It returns an array of all traits matching the intent, hence the condition to be used is ‘<em>contains</em>'.
-<a class="glightbox" href="../../images/traits-dialog-transition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/traits-dialog-transition.png" alt="traits dialog transition" title="traits dialog transition" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/traits-dialog-transition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/traits-dialog-transition.png" alt="traits dialog transition" title="traits dialog transition" style="border: 1px solid gray; zoom:75%;"></a></p>
 
 
   
