@@ -2960,19 +2960,6 @@
     Entity Format Conversions
   </a>
   
-    <nav class="md-nav" aria-label="Entity Format Conversions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#importing-a-dataset-file" class="md-nav__link">
-    Importing a Dataset file
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -3098,15 +3085,18 @@
 You can add up to three intents (Dialog, FAQ, or Small Talk) for a test utterance. It helps in scenarios where ambiguity is by-design and should be considered as True Positive. For example, for the utterance “I need help to book a flight ticket,” the expected intent can be either “Book flight” (Dialog) or “How to book a flight?” (FAQ).</li>
 <li>The <strong>Parent Intent</strong> within that task.</li>
 <li><strong>Test Utterances</strong>: You can add multiple utterances, each on a new line.</li>
-<li>The <strong>Entity Order</strong>: Select one from the available options, depending on the intent you are working with. You can only select one item. The Entity Order selection is not available if you have added multiple intents.  </li>
-</ol>
-<p><strong>One Intent for a Test Utterance</strong><br />
+<li>
+<p>The <strong>Entity Order</strong>: Select one from the available options, depending on the intent you are working with. You can only select one item. The Entity Order selection is not available if you have added multiple intents.<br />
+/
+<strong>One Intent for a Test Utterance</strong><br />
 <a class="glightbox" href="../images/batch-testing-6-one-intent-for-a-test-utterance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-6-one-intent-for-a-test-utterance.png" alt="One Intent for a Test Utterance" title="One Intent for a Test Utterance" style="border: 1px solid gray; zoom:50%;"/></a><br />
   /
   <strong>Multiple Intents for a Test Utterance</strong><br />
 <a class="glightbox" href="../images/batch-testing-7-multiple-intents-for-a-test-utterance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-7-multiple-intents-for-a-test-utterance.png" alt="Multiple intents for a test utterance" title="Multiple intents for a test utterance" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
-<ol>
-<li>Click <strong>Save</strong> when ready.</li>
+</li>
+<li>
+<p>Click <strong>Save</strong> when ready.</p>
+</li>
 <li>Once added, your test cases are listed and ready to run. You can use the <strong>Add Manually</strong> button at the top of the list to add more test cases. The option to Generate Test cases only displays if you have enabled LLM and Generative AI for the VA.<br />
 <a class="glightbox" href="../images/batch-testing-8-add-new-case.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-8-add-new-case.png" alt="New test added" title="New test added"style="border: 1px solid gray; zoom:50%;"/></a> </li>
 </ol>
@@ -3132,6 +3122,7 @@ You can add up to three intents (Dialog, FAQ, or Small Talk) for a test utteranc
 </ol>
 <p>Once you add the test cases, they are listed within your test suite, along with any other cases you might have added manually or generated in the past. You can continue adding test cases to the suite using these two methods.</p>
 <p><a class="glightbox" href="../images/batch-testing-12-test-cases-added.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-12-test-cases-added.png" alt="test case list" title="test case list" style="border: 1px solid gray; zoom:50%;"/></a> </p>
+<p><br></p>
 <h4 id="adding-a-test-suite-by-uploading-a-test-cases-file">Adding a Test Suite by Uploading a Test Cases File<a class="headerlink" href="#adding-a-test-suite-by-uploading-a-test-cases-file" title="Permanent link">&para;</a></h4>
 <p>If you <strong>Upload a Test Cases File</strong>, you can import an array of test utterances, also known as a Dataset at once in a batch file. The Dataset file must be in a CSV or JSON format and can have a maximum of 1000 utterances. You can download the sample CSV or JSON file formats while creating the test suite.</p>
 <p><strong>Important Tip:</strong> For a Universal Bot, to create a test suite, you can add multiple intents in the CSV/JSON file using the upload method. The format includes the intents and the corresponding bot names as follows:</p>
@@ -3149,6 +3140,7 @@ You can add up to three intents (Dialog, FAQ, or Small Talk) for a test utteranc
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>}
 </span></code></pre></div>
 <p>The ability to create test suites manually is not yet available for universal bots.</p>
+<p><br></p>
 <p><strong>JSON Format for Test Suite</strong></p>
 <p>The JSON format for creating custom suites allows you to define an array of test cases where each test case should consist of an utterance to be tested, the intent against which the utterance to be tested, and optionally define the list of expected entities to be determined from the utterance. If expected intent is a child intent, then you can also include the parent intent to be considered.</p>
 <p>The sample code is given below:</p>
@@ -3297,7 +3289,12 @@ You can add up to three intents (Dialog, FAQ, or Small Talk) for a test utteranc
 <li>The order in which the entities are to be extracted can be given as: <code>"entityOrder":["TransferAmount", "PayeeName"]</code>. 
 If the order is not provided or partially provided, the platform determines the shortest route covering all the entities as the default order.</li>
 </ul>
-<table border="1">
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<table>
   <tr>
    <td>
 <strong>PROPERTY NAME</strong>
@@ -3423,7 +3420,12 @@ Sample:</li>
 <li>The order of extraction of entity value can be mentioned in the following format: <code>entity3&gt;entity4&gt;entity1</code>. 
 If the order is not provided or partially provided, the platform determines the shortest route covering all the entities as the default order.</li>
 </ul>
-<table border="1">
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<table>
   <tr>
    <td>
 <strong>COLUMN NAME</strong>
@@ -3495,7 +3497,12 @@ If the order is not provided or partially provided, the platform defines the imp
 </table>
 
 <h4 id="entity-format-conversions">Entity Format Conversions<a class="headerlink" href="#entity-format-conversions" title="Permanent link">&para;</a></h4>
-<table border="1">
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<table>
   <tr>
    <td><strong>ENTITY TYPE</strong>
    </td>
@@ -3758,7 +3765,7 @@ If the order is not provided or partially provided, the platform defines the imp
   </tr>
 </table>
 
-<h5 id="importing-a-dataset-file">Importing a Dataset file<a class="headerlink" href="#importing-a-dataset-file" title="Permanent link">&para;</a></h5>
+<p><strong>Importing a Dataset file</strong></p>
 <ol>
 <li>Click <strong>New Test Suite</strong> on the batch testing page. A dialog box to import the dataset appears.</li>
 <li>Enter a <strong>Name, Description,</strong> and choose a <strong>Dataset Type</strong> in the respective boxes for your dataset file.</li>
@@ -3777,6 +3784,7 @@ If the order is not provided or partially provided, the platform defines the imp
 <p>Before testing, it is essential to add and train your bot with a considerable number of utterances using Machine Learning.</p>
 </div>
 <p><a class="glightbox" href="../images/batch-testing-14-batch-testing-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-14-batch-testing-menu.png" alt="Build ></a> Testing &gt; Batch Testing" title="Build &gt; Testing &gt; Batch Testing" style="border: 1px solid gray; zoom:50%;"/&gt; </p>
+<p><br></p>
 <p>To run a Test Suite, follow the steps below:</p>
 <ol>
 <li>Click the desired test suite name in the <strong>Batch Testing</strong> window.<br />
@@ -3789,6 +3797,7 @@ Note that <strong>Developer Defined Utterances</strong> and <strong>Successful U
 <h4 id="execution-of-newly-created-batch-test-suites">Execution of Newly Created Batch Test Suites<a class="headerlink" href="#execution-of-newly-created-batch-test-suites" title="Permanent link">&para;</a></h4>
 <p>Once you create a new test batch test suite, by default, the system automatically initiates test run execution for both <strong><em>In-development</em></strong> and <strong><em>Published</em></strong> VA versions. This makes it convenient to assess test results while the VA is in development and once a VA is published following a production release.</p>
 <p><a class="glightbox" href="../images/batch-testing-16-batch-testing-run-publish.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-16-batch-testing-run-publish.png" alt="Execution of Newly Created Batch Test Suites" title="Execution of Newly Created Batch Test Suites" style="border: 1px solid gray; zoom:50%;"/></a> </p>
+<p><br></p>
 <h4 id="view-test-case-details">View Test Case Details<a class="headerlink" href="#view-test-case-details" title="Permanent link">&para;</a></h4>
 <p>Running a test suite will display the results as described below.</p>
 <p><strong>Note:</strong> The test case with multiple intents is considered a test case for all the intents mentioned. For example, if a test case has Intent 1 and Intent 2 as expected intents, then Intent 1 and Intent 2 are shown as covered in the batch test summary.</p>
@@ -3809,7 +3818,8 @@ Note that <strong>Developer Defined Utterances</strong> and <strong>Successful U
 </li>
 <li>Hovering over the warning/error icon will display a message suggesting the reason.</li>
 </ul>
-<p><a class="glightbox" href="../images/batch-testing-17-batch-Test-sample-result-warn.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-17-batch-Test-sample-result-warn.png" alt="Test report" title="Test report" style="border: 1px solid gray; zoom:50%;"/></a> </p>
+<p><a class="glightbox" href="../images/batch-testing-17-batch-Test-sample-result-warn.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-17-batch-Test-sample-result-warn.png" alt="Test report" title="Test report" style="border: 1px solid gray; zoom:50%;"/></a> 
+<br></p>
 <h4 id="download-a-csv-report">Download a CSV Report<a class="headerlink" href="#download-a-csv-report" title="Permanent link">&para;</a></h4>
 <p>To get a detailed analysis of the test run, click <strong>the Download</strong> icon to download the test report in CSV format. You have an option to delete the test results if needed. The top section of the report comprises the summary with the following fields:</p>
 <ul>
@@ -3836,9 +3846,9 @@ Note that <strong>Developer Defined Utterances</strong> and <strong>Successful U
 <strong>Note</strong> that when you tag multiple intents (dialog, FAQ, and small talk) to a test utterance, the test result appears as TP if the actual intents match the expected intents but also include ambiguous intents.</li>
 <li><strong>True Negative (TN):</strong> Percentage of utterances that were not expected to match any intent and they did not match. Not applicable to Small Talk.</li>
 <li><strong>False Positive (FP):</strong> Percentage of utterances that have matched an unexpected intent. In the case of Small Talk, it would be when the list of expected and actual intents are different.</li>
-<li><strong>False Negative (FN):</strong> Percentage of utterances that have not matched expected intent. In the case of Small Talk, it would be when the list of expected Small Talk intent is blank but the actual Small Talk is mapped to an intent.</li>
+<li><strong>False Negative (FN):</strong> Percentage of utterances that have not matched expected intent. In the case of Small Talk, it would be when the list of expected Small Talk intent is blank but the actual Small Talk is mapped to an intent.<br />
+<a class="glightbox" href="../images/batch-testing-18-sample-result-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-18-sample-result-2.png" alt="Sample CSV Test report" title="Sample CSV Test report" style="border: 1px solid gray; zoom:50%;"/></a> </li>
 </ul>
-<p><a class="glightbox" href="../images/batch-testing-18-sample-result-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-18-sample-result-2.png" alt="Sample CSV Test report" title="Sample CSV Test report" style="border: 1px solid gray; zoom:50%;"/></a> </p>
 <p>The report also provides detailed information on each of the test utterances and the corresponding results.</p>
 <ul>
 <li><strong>Utterances</strong>- Utterances used in the corresponding test suite.</li>
@@ -3865,8 +3875,10 @@ Note that <strong>Developer Defined Utterances</strong> and <strong>Successful U
 <p class="admonition-title">Tip</p>
 <p>For any of the batch tests, if results indicate that your bot is unable to recognize the correct intents, you can work on improving its performance by adding or modifying utterances to the Machine Learning model.</p>
 </div>
+<p><br></p>
 <h4 id="batch-test-results-for-universal-bots">Batch Test Results for Universal Bots<a class="headerlink" href="#batch-test-results-for-universal-bots" title="Permanent link">&para;</a></h4>
 <p>The XO Platform now displays Batch Test Results for Universal bots for each test run in the summary view for <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/virtual-assistants-health-and-monitoring/#NLP-_FAQs_Summary">FAQs</a>, <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/virtual-assistants-health-and-monitoring/#Dialog_Intent_Summary">Dialog Intents</a>, and <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/virtual-assistants-health-and-monitoring/#NLP-_Small_Talk_Summary">Small Talk</a> during Batch Testing. The actionable insights help understand the test coverage and NLP performance for each intent type in the Universal Bot. <a href="https://developer.kore.ai/docs/bots/analyzing-your-bot/virtual-assistants-health-and-monitoring/#NLP_Batch_Test_Results_Summary_for_Universal_Bots">Learn more</a>.</p>
+<p><br></p>
 <h4 id="view-individual-test-run-summary">View Individual Test Run Summary<a class="headerlink" href="#view-individual-test-run-summary" title="Permanent link">&para;</a></h4>
 <p>You can view the individual Batch Test Run summary of a test suite by clicking the <strong>View Summary</strong> icon of a test as shown below.</p>
 <p><a class="glightbox" href="../images/batch-testing-19-view-summary.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-19-view-summary.png" alt="View Summary" title="View Summary" style="border: 1px solid gray; zoom:50%;"/></a> </p>
