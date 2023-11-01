@@ -17,7 +17,7 @@
     
     
       
-        <title>**Users Dashboard** - Kore ai Docs</title>
+        <title>**Performance Dashboard** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#users-dashboard" class="md-skip">
+        <a href="#performance-dashboard" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Users Dashboard**
+              **Performance Dashboard**
             
           </span>
         </div>
@@ -2885,9 +2885,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#user-trends-considerations" class="md-nav__link">
-    User Trends Considerations
+  <a href="#performance-dashboard-metrics" class="md-nav__link">
+    Performance Dashboard Metrics
   </a>
+  
+    <nav class="md-nav" aria-label="Performance Dashboard Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intent-identification-rate" class="md-nav__link">
+    Intent Identification Rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goal-completion-rate" class="md-nav__link">
+    Goal Completion Rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-execution-rate" class="md-nav__link">
+    API Execution Rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-execution-rate" class="md-nav__link">
+    Script Execution Rate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2917,67 +2951,172 @@
 
 
 
-<h1 id="users-dashboard"><strong>Users Dashboard</strong><a class="headerlink" href="#users-dashboard" title="Permanent link">&para;</a></h1>
-<p>Once you have implemented a virtual assistant, you can gain actionable insights on the type of users it handles, including unique, new, and returning users, and the user trends for a given period for different conversation types, conversation statuses, channels, languages, and custom conversational tags on the Users Dashboard.</p>
-<p>This dashboard displays the trends of total users interacting with the virtual assistant, with a breakup of new and returning users, which helps understand user trends and the user retention status of your business.</p>
-<p>For example, an e-Commerce company requiring insights on user trend-based data for their mobile app can use the Users Dashboard to determine the following:</p>
-<ul>
-<li>The new users, existing users, and returning users of their app.</li>
-<li>The active users over a specific period.</li>
-<li>The new and returning users on a specific day, week, or month.</li>
-<li>The total inactive users registered on the app.</li>
-<li>The percentage of users who return and use the app “N” days after they start using it.</li>
-</ul>
-<p><strong>To view the Users dashboard, follow the steps</strong>: </p>
+<h1 id="performance-dashboard"><strong>Performance Dashboard</strong><a class="headerlink" href="#performance-dashboard" title="Permanent link">&para;</a></h1>
+<p>After you publish a Virtual Assistant (VA), you can monitor its performance using the Performance dashboard. This dashboard provides insights into metrics such as the number of intents identified, tasks completed successfully, and any service or script failures that occur during interactions. You can use these insights to identify areas where your virtual assistant needs improvement. For example, if you see that many intents are not identified, you can train the virtual assistant for those unidentified intents.</p>
+<p><strong>To view the Performance dashboard, follow the steps</strong>: </p>
 <ol>
 <li>Click the three dots on the left navigation pane and then click <strong>Analytics</strong>. <strong>The Analytics</strong> panel is displayed with the list of reports.</li>
-<li>Click <strong>Users Dashboard</strong> under the <strong>Automation</strong> section of the <strong>Analytics</strong> panel. The <strong>Users Dashboard</strong> is displayed on the right side of the page.</li>
+<li>Click <strong>Performance Dashboard</strong> under the <strong>Automation</strong> section of the <strong>Analytics</strong> panel. The <strong>Performance Dashboard</strong> is displayed on the right side of the page.</li>
 </ol>
-<p><a class="glightbox" href="../images/users-dashboard.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/users-dashboard.png" alt="Users Dashboard" title="Users Dashboard" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p><a class="glightbox" href="../images/performance-dashboard-overview.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/performance-dashboard-overview.png" alt="Performance Dashboard Overview" title="Performance Dashboard Overview" style="border: 1px solid gray; zoom:80%;"></a></p>
 <ol>
 <li>Select appropriate filters on the dashboard and click <strong>Apply</strong>.</li>
 </ol>
+<p><a class="glightbox" href="../images/performance-dashboard.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/performance-dashboard.png" alt="Performance Dashboard" title="Performance Dashboard" style="border: 1px solid gray; zoom:100%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The Users dashboard is available only post-9.3 release, i.e. post-July 24, 2022.</p>
+<p>The Performance dashboard is available only post-9.2 release, i.e. post April 09, 2022.</p>
 </div>
-<h2 id="user-trends-considerations">User Trends Considerations<a class="headerlink" href="#user-trends-considerations" title="Permanent link">&para;</a></h2>
+<h2 id="performance-dashboard-metrics">Performance Dashboard Metrics<a class="headerlink" href="#performance-dashboard-metrics" title="Permanent link">&para;</a></h2>
+<p>The Performance Dashboard provides insights to understand the virtual assistant’s NLP performance and integration metrics. The Performance Dashboard is categorized into four categories to identify how a virtual assistant performs. These categories are mentioned below:</p>
+<h3 id="intent-identification-rate">Intent Identification Rate<a class="headerlink" href="#intent-identification-rate" title="Permanent link">&para;</a></h3>
+<p>This section of the dashboard provides information on the number of intents that were classified and unclassified. An intent refers to the goal the customer has in mind when typing in a question or comment. While entity refers to the modifier the customer uses to describe an issue, intent is <em>“What they really mean”</em>. To know more about intents refer here.</p>
+<p>Below are the widgets that are used to provide insights:</p>
+<table>
+  <tr>
+   <td><strong>Metric</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Intent Identification Rate
+   </td>
+   <td>A scorecard that displays the percentage and the number of intents that were identified in a duration. It also displays the percentage increase or decrease in identifying intents from the last selected period.
+   </td>
+  </tr>
+  <tr>
+   <td>Intent Identification Trend
+   </td>
+   <td>A line chart that displays the total number of intents that were classified by the virtual assistant versus the total number of intents that were unclassified by the virtual assistant over a period of time.
+   </td>
+  </tr>
+  <tr>
+   <td>Popular Intents
+   </td>
+   <td>Displays a table with data insights on the number of times the virtual assistant identified the given intent from the user utterances in active and closed conversations.
+<p>
+The following fields are displayed:
 <ul>
-<li>If User-A has interacted with the bot on 25-Jan-2022 for the first time and the dashboard is viewed between 23-Jan-2022 to 26-Jan-2022 then this user is considered a new user.</li>
-<li>If User-B has interacted with the bot on 25-Jan-2022 for the first time and again interacted with the bot on 26-Jan-2022, and if the dashboard is viewed between 23-Jan-2022 to 26-Jan-2022, then this user is considered as:<ul>
-<li>A new user on 25-Jan-2022</li>
-<li>A returning user on 26-Jan-2022</li>
-</ul>
+
+<li><strong>Intent Name</strong>: Name of the identified intent.
+
+<li><strong>Utterance Group</strong>: The cluster name where similar utterances are grouped to which the identified intent is mapped.
+
+<li><strong>Count</strong>: The count of identified utterances.
+
+<p>
+<strong>Note</strong>: Clicking an intent name row displays a drill-down view of the relevant utterances, channel, user ID, Date and time, and chat history.
 </li>
-<li>If User-C has interacted with the bot on 21-Jan-2022 for the first time and again interacted with the bot on 26-Jan-2022, and the dashboard is viewed between 23-Jan-2022 to 26-Jan-2022, then, this user is considered as a returning user.</li>
 </ul>
-<p>The <strong>Users Dashboard</strong> provides insights on the following user trend metrics:</p>
-<ul>
-<li><strong>Total Unique Users</strong>: The total number of unique users who interacted with the virtual assistant.</li>
-<li><strong>New Users</strong>: The total number of users who have interacted with the virtual assistant for the first time in the selected period.</li>
-<li><strong>Returning Users</strong>: The total number of users who have already interacted with the virtual assistant earlier and have initiated another session in the selected period.</li>
-<li><strong>Avg. Total Unique Users Per Day</strong>: The total number of unique users who interacted with the virtual assistant in the selected period divided by the number of days in the selected period.</li>
-<li><strong>Avg. New Users Per Day</strong>: The total number of new users who interacted with the virtual assistant in the selected period divided by the number of days in the selected period.</li>
-</ul>
-<p>The key components of the Users Dashboard are:</p>
-<ul>
-<li><strong>Users Trend</strong>: The users’ trend shows the distribution of New Users, Returning Users, and Total Unique Users who have interacted with the virtual assistant over a period. This helps determine User Engagement for the selected period. </li>
-</ul>
-<p><strong>Graph- Users’ Trend for the Selected Period</strong></p>
-<p><a class="glightbox" href="../images/users-trend.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/users-trend.png" alt="Users Trend" title="Users Trend" style="border: 1px solid gray; zoom:80%;"></a></p>
-<p><strong>Users Trend Summary</strong>: This panel displays the real-time counts of the <strong>Total Unique Users</strong>, <strong>New Users</strong>, <strong>Avg. Total Unique Users Per Day</strong>, and <strong>Avg. New Users Per Day</strong>.</p>
-<p>The increment/decrement of the above user metrics’ counts is displayed as percentage values.</p>
-<ul>
-<li><strong>Returning Users</strong>: Displays the graph for the day-wise returning users (in percentage) for the selected dates and other filters. Here, Day 0 is the first time a user interacts with the virtual assistant. The returning users % is calculated for the consecutive days for the selected period. For example, in the following image, the number of users is 100% on Day 0 (first interaction) and 0% on Day 1 since none of the users who have already interacted with the virtual assistant have initiated a conversation on the same channel/browser. </li>
-</ul>
-<p><strong>Graph- Returning Users Trend for the Selected Period</strong></p>
-<p><a class="glightbox" href="../images/returning-users.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/returning-users.png" alt="Returning Users" title="Returning Users" style="border: 1px solid gray; zoom:80%;"></a></p>
-<ul>
-<li><strong>Cohort Analysis</strong>: This data visualization chart plots the weekly <strong>new users</strong> and the <strong>percentage of returning users</strong> based on the formula <strong><em>(Returning Users/New Users)*100</em></strong> on consecutive days to determine the retention rate. The Users Dashboard displays the Day N retention of daily, weekly, or monthly cohorts, within a customizable range of dates. For example, if you’re looking at the retention of daily cohorts acquired from July 13 to July 20, 2022, based on the filters selected, and the actual users returning on Day 2, the following <strong>Cohort Analysis Chart</strong> is displayed:</li>
-</ul>
-<p><a class="glightbox" href="../images/cohort-analysis.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/cohort-analysis.png" alt="Cohort Analysis" title="Cohort Analysis" style="border: 1px solid gray; zoom:80%;"></a></p>
+   </td>
+  </tr>
+  <tr>
+   <td>Popular Unidentified Utterances
+   </td>
+   <td>A table that displays the number of utterances that did not identify an intent. The utterances are grouped by their similarity. 
+   </td>
+  </tr>
+</table>
+
+<h3 id="goal-completion-rate">Goal Completion Rate<a class="headerlink" href="#goal-completion-rate" title="Permanent link">&para;</a></h3>
+<p>The goal completion metrics provide insights as to how many tasks were completed in a period by a virtual assistant. This metric shows all types of tasks which include completed tasks, abandoned tasks, incomplete tasks, and failed tasks.</p>
+<p>Listed below are the widgets that could help in providing information about these details:</p>
+<table>
+  <tr>
+   <td><strong>Metric</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Goal Completion Rate
+   </td>
+   <td>A scorecard that displays the percentage and the number of task executions that were successfully completed in a duration. It also displays the percentage increase or decrease in completing tasks from the last selected period.
+   </td>
+  </tr>
+  <tr>
+   <td>Goal Completion Trend
+   </td>
+   <td>A line chart that plots the successful and failed task executions over a period of time.
+   </td>
+  </tr>
+  <tr>
+   <td>Task Performance
+   </td>
+   <td>A table that provides insights into the number of successful and failed task executions per task for a selected duration.
+   </td>
+  </tr>
+  <tr>
+   <td>Failure Point Analysis
+   </td>
+   <td>A table that displays the number of times a task has failed at various nodes.
+   </td>
+  </tr>
+</table>
+
+<h3 id="api-execution-rate">API Execution Rate<a class="headerlink" href="#api-execution-rate" title="Permanent link">&para;</a></h3>
+<p>This section of the dashboard provides information on the number of APIs that were successfully executed and failed. While configuring a dialog task often there are needs to use a Service node that is used to make REST or SOAP requests to a third party web-services. To know more about service nodes refer here.</p>
+<p>Below are the widgets that are used to provide information about API performance:</p>
+<table>
+  <tr>
+   <td><strong>Metric</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>API Performance Rate
+   </td>
+   <td>A scorecard that displays the percentage and the number of service calls that were executed successfully. It also displays the percentage increase or decrease of APIs that were executed successfully from the last selected period.
+   </td>
+  </tr>
+  <tr>
+   <td>Service Execution Trend
+   </td>
+   <td>A line chart that plots the trend of successful and failed service execution over a period of time.
+   </td>
+  </tr>
+  <tr>
+   <td>Service Performance
+   </td>
+   <td>A table that displays the number of times a service node is executed, its status, and the average response time of executing the API.
+   </td>
+  </tr>
+</table>
+
+<h3 id="script-execution-rate">Script Execution Rate<a class="headerlink" href="#script-execution-rate" title="Permanent link">&para;</a></h3>
+<p>This section of the dashboard provides information on the number of Scripts that were successfully executed and failed. A <strong>Script</strong> allows you to write JavaScript code in a dialog task. To know more about script nodes please refer here.</p>
+<p>Below are the widgets that are used to provide information about Script performance.</p>
+<table>
+  <tr>
+   <td><strong>Metric</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Script Performance Rate
+   </td>
+   <td>A scorecard that displays the percentage and the number of scripts that were executed successfully. It also displays the percentage increase or decrease of Scripts that were executed successfully from the last selected period.
+   </td>
+  </tr>
+  <tr>
+   <td>Script Execution Trend
+   </td>
+   <td>A line chart that plots the trend of successful and failed script execution over a period of time.
+   </td>
+  </tr>
+  <tr>
+   <td>Script Performance
+   </td>
+   <td>A table that displays the number of times a script node is executed, its status, and the average response time executing the script.
+   </td>
+  </tr>
+</table>
+
 <h2 id="filter-criteria">Filter Criteria<a class="headerlink" href="#filter-criteria" title="Permanent link">&para;</a></h2>
-<p>The Users Dashboard data can be viewed based on specific filter criteria that can be selected. Learn more.</p>
+<p>The Performance Analytics Dashboard data can be viewed based on specific filter criteria that can be selected. Learn more.</p>
 
 
   
