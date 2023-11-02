@@ -3050,7 +3050,7 @@
 <h1 id="intent-discovery-beta"><strong>Intent Discovery (Beta)</strong><a class="headerlink" href="#intent-discovery-beta" title="Permanent link">&para;</a></h1>
 <p>The new Intent Discovery module helps you auto-extract popular intents from previous user conversations. It reduces the time and effort to build a virtual assistant and leads to the success of your Conversational AI Journey. This is a beta feature and is available only for the English language and Enterprise users.</p>
 <p>You can upload your historical transcripts in CSV format. After the transcripts are uploaded into the bot, the bot uses LLMs to identify the different topics, intents, or conversations between the user and the bot. It intelligently identifies all the intents available. You can review each intent to understand which conversations have resulted in identifying these intents. After the review, you can also see the underline utterances that resulted in identifying an intent. You can either add these intents as new intents for your virtual assistant or pick specific utterances and train them as utterances for your existing dialogs and FAQs. So, it helps both ways – either create new intents or enhance the training you provide to your virtual assistant.</p>
-<p><a class="glightbox" href="..images/intent-discovery-demo-diagram.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="..images/intent-discovery-demo-diagram.png" alt="Intent Discovery" title="Intent Discovery" style="border: 1px solid gray; zoom:50%;"/></a> </p>
+<p><a class="glightbox" href="../images/intent-discovery-demo-diagram.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/intent-discovery-demo-diagram.png" alt="Intent Discovery" title="Intent Discovery" style="border: 1px solid gray; zoom:50%;"/></a> </p>
 <p>The Intent Discovery journey consists of the following steps:</p>
 <ol>
 <li><a href="https://developer.kore.ai/docs/bots/intent-discovery/#Create_a_Project">Create a Project</a>: You may have many business use cases to automate. Projects help manage intent discovery for each business use case separately – a project for a specific use case.</li>
@@ -3061,45 +3061,48 @@
 <h2 id="create-a-project">Create a Project<a class="headerlink" href="#create-a-project" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Go to <strong>Build **&gt;</strong> Tools <strong>&gt;</strong> Intent Discovery**.<br />
+<p>Go to <strong>Build &gt; Tools &gt; Intent Discovery</strong>.<br />
 <a class="glightbox" href="../images/intent-discovery-home.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/intent-discovery-home.png" alt="Click Intent Discovery" title="Click Intent Discovery" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
 </li>
 <li>
 <p>Click the <strong>Create Project</strong> button.</p>
 </li>
-<li>Enter a name and a brief description of the project. Note that the character limit for Project Name is 256, and Description is 1000. Click <strong>Proceed</strong></li>
+<li>
+<p>Enter a name and a brief description of the project. Note that the character limit for Project Name is 256, and Description is 1000. Click <strong>Proceed</strong>.<br />
+<a class="glightbox" href="../images/intent-discovery-project.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/intent-discovery-project.png" alt="Project name and description" title="Project name and description" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
+</li>
+<li>
+<p>The new project is created. You see the Intent Discovery page with the header <strong>‘Projects / {{New Project’s Name}}’</strong>.<br />
+<a class="glightbox" href="../images/upload-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/upload-transcript.png" alt="Project Created" title="Project Created" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
+</li>
 </ol>
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>The new project is created. You see the Intent Discovery page with the header ‘Projects / {{New Project’s Name}}’.
-</code></pre></div>
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<p><br></p>
 <p>The Intent Discovery landing page lists all the projects with conversational insights for each project, such as the status of the project, number of sessions, intents extracted, and results in terms of added dialogs, added FAQs, trained dialogs, and trained FAQs. Note that the result will be NA for the projects for which intent extraction is incomplete.</p>
-<p>\
-The status of a project can be any of the following, displayed in the Status column:</p>
+<p>The status of a project can be any of the following, displayed in the Status column:</p>
 <ul>
 <li>No Files Uploaded</li>
 <li>Intents Not Extracted</li>
 <li>Intent Extraction In Progress</li>
 <li>Intents Extracted</li>
 </ul>
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
-<p><strong>Note</strong>: You can create <strong>a maximum of 10 projects</strong> per VA. You can change an existing project’s name and description anytime.</p>
+<p><a class="glightbox" href="../images/intent-discovery-page.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/intent-discovery-page.png" alt="Different status of project" title="Different status of project" style="border: 1px solid gray; zoom:50%;"/></a>   </p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>You can create a maximum of 10 projects per VA. You can change an existing project’s name and description anytime.</p>
+</p>
+</div>
 <h2 id="upload-transcripts">Upload Transcripts<a class="headerlink" href="#upload-transcripts" title="Permanent link">&para;</a></h2>
 <p>On the Intent Discovery page for the new project, you can see a button to initiate the upload of the transcript file(s) and a link to download a sample transcript file.</p>
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/upload-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/upload-transcript.png" alt="Upload Transcripts" title="Upload Transcripts" style="border: 1px solid gray; zoom:50%;"/></a><br />
+<br></p>
 <p>You can download the sample CSV file by clicking the link. Ensure to upload transcripts in the format specified in the sample file. Please note that <strong>all the columns in the file must be filled</strong>.</p>
 <h3 id="format-of-the-csv-transcript-file">Format of the CSV (Transcript) file<a class="headerlink" href="#format-of-the-csv-transcript-file" title="Permanent link">&para;</a></h3>
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/sample-csv-file.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/sample-csv-file.png" alt="Sample CSV File" title="Sample CSV File" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
+<p><br></p>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 <table>
   <tr>
    <td>FIELD NAME
@@ -3151,28 +3154,27 @@ The status of a project can be any of the following, displayed in the Status col
   </tr>
 </table>
 
+<p><br></p>
 <h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Number of transcripts files allowed: Up to 5 CSV files per project.</li>
 <li>Maximum size of CSV transcript file: 1MB each</li>
 </ul>
+<p><br></p>
 <h3 id="steps-to-upload-the-transcripts">Steps to upload the transcripts:<a class="headerlink" href="#steps-to-upload-the-transcripts" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Click the <strong>Upload Transcript</strong> button, and then browse and select the transcripts files (CSV format). The selected files are uploaded, and you see a prompt to manage the transcripts on the next page.</li>
-</ol>
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.png" title="image_tooltip" /></a></p>
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image9.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>If some transcript files are uploaded but No intents extracted so far, the** Manage Transcripts** button is displayed as shown in the screenshot below.
-</code></pre></div>
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image10.png" title="image_tooltip" /></a></p>
+<li>
+<p>Click the <strong>Upload Transcript</strong> button, and then browse and select the transcripts files (CSV format). The selected files are uploaded, and you see a prompt to manage the transcripts on the next page.<br />
+<a class="glightbox" href="../images/browse-for-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/browse-for-transcript.png" alt="Browse for Transcript" title="Browse for Transcript" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
+<p><a class="glightbox" href="../images/upload-transcript-confirmation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/upload-transcript-confirmation.png" alt="Transcript upload confirmation" title="Upload transcript confirmation" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
+</li>
+<li>
+<p>If some transcript files are uploaded but No intents extracted so far, the <strong>Manage Transcripts</strong> button is displayed as shown in the screenshot below.<br />
+<a class="glightbox" href="../images/manage-transcripts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/manage-transcripts.png" alt="Manage Transcript" title="Manage Transcript" style="border: 1px solid gray; zoom:50%;"/></a></p>
+</li>
+<li>
+<p>On clicking <strong>Manage Transcripts</strong>, you can see the <strong>Transcripts</strong> dialog box with the list of all the transcript files. Below details are displayed on the window:</p>
 <ol>
-<li>On clicking <strong>Manage Transcripts</strong>, you can see the <strong>Transcripts</strong> dialog box with the list of all the transcript files. Below details are displayed on the window:<ol>
 <li>File Name: Name of the transcript file uploaded</li>
 <li>Upload Time: Time of transcript upload</li>
 <li>Sessions: Count of sessions in the transcript, gets populated after the successful extraction of conversations. </li>
@@ -3185,11 +3187,9 @@ The status of a project can be any of the following, displayed in the Status col
 </ul>
 </li>
 </ol>
+<p><a class="glightbox" href="../images/transcript-list.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/transcript-list.png" alt="List of Transcripts" title="List of Transcripts" style="border: 1px solid gray; zoom:50%;"/></a></p>
 </li>
 </ol>
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image11.png" title="image_tooltip" /></a></p>
 <p>The dialog box has the provision to download a sample file using the <strong>Sample File</strong> button and upload additional transcript files by clicking the <strong>Upload Transcripts</strong> button.</p>
 <h3 id="view-conversations-in-the-transcript">View Conversations in the Transcript<a class="headerlink" href="#view-conversations-in-the-transcript" title="Permanent link">&para;</a></h3>
 <p>Upon successful upload of the transcript(s), the platform extracts the conversations from the uploaded files. You can view all the conversations, and the chat messages exchanged between the end user and the VA/agent.</p>
