@@ -3053,10 +3053,10 @@
 <p><a class="glightbox" href="../images/intent-discovery-demo-diagram.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/intent-discovery-demo-diagram.png" alt="Intent Discovery" title="Intent Discovery" style="border: 1px solid gray; zoom:50%;"/></a> </p>
 <p>The Intent Discovery journey consists of the following steps:</p>
 <ol>
-<li><a href="https://developer.kore.ai/docs/bots/intent-discovery/#Create_a_Project">Create a Project</a>: You may have many business use cases to automate. Projects help manage intent discovery for each business use case separately – a project for a specific use case.</li>
-<li><a href="https://developer.kore.ai/docs/bots/intent-discovery/#Upload_Transcripts">Upload Transcripts</a>: Upload your use case-specific historical transcripts in CSV format. Conversations are extracted from the uploaded transcripts.</li>
-<li><a href="https://developer.kore.ai/docs/bots/intent-discovery/#Extract_Conversations">Extract Intents:</a> Intents and training data are extracted from the conversations.</li>
-<li><a href="https://developer.kore.ai/docs/bots/intent-discovery/#Train_the_Utterances">Train the Utterances</a> to create new intents or add them as training data: You can add new intents as dialogs or FAQs or train them for existing dialogs or FAQs.</li>
+<li><a href="https://docsinternal-kore.github.io/docs/xo/automation/design/intent-discovery/#create-a-project">Create a Project</a>: You may have many business use cases to automate. Projects help manage intent discovery for each business use case separately – a project for a specific use case.</li>
+<li><a href="https://docsinternal-kore.github.io/docs/xo/automation/design/intent-discovery/#upload-transcripts">Upload Transcripts</a>: Upload your use case-specific historical transcripts in CSV format. Conversations are extracted from the uploaded transcripts.</li>
+<li><a href="https://docsinternal-kore.github.io/docs/xo/automation/design/intent-discovery/#extract-intents">Extract Intents:</a> Intents and training data are extracted from the conversations.</li>
+<li><a href="https://docsinternal-kore.github.io/docs/xo/automation/design/intent-discovery/#train-the-utterances">Train the Utterances</a> to create new intents or add them as training data: You can add new intents as dialogs or FAQs or train them for existing dialogs or FAQs.</li>
 </ol>
 <h2 id="create-a-project">Create a Project<a class="headerlink" href="#create-a-project" title="Permanent link">&para;</a></h2>
 <ol>
@@ -3076,7 +3076,6 @@
 <a class="glightbox" href="../images/upload-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/upload-transcript.png" alt="Project Created" title="Project Created" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
 </li>
 </ol>
-<p><br></p>
 <p>The Intent Discovery landing page lists all the projects with conversational insights for each project, such as the status of the project, number of sessions, intents extracted, and results in terms of added dialogs, added FAQs, trained dialogs, and trained FAQs. Note that the result will be NA for the projects for which intent extraction is incomplete.</p>
 <p>The status of a project can be any of the following, displayed in the Status column:</p>
 <ul>
@@ -3092,12 +3091,10 @@
 </div>
 <h2 id="upload-transcripts">Upload Transcripts<a class="headerlink" href="#upload-transcripts" title="Permanent link">&para;</a></h2>
 <p>On the Intent Discovery page for the new project, you can see a button to initiate the upload of the transcript file(s) and a link to download a sample transcript file.</p>
-<p><a class="glightbox" href="../images/upload-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/upload-transcript.png" alt="Upload Transcripts" title="Upload Transcripts" style="border: 1px solid gray; zoom:50%;"/></a><br />
-<br></p>
+<p><a class="glightbox" href="../images/upload-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/upload-transcript.png" alt="Upload Transcripts" title="Upload Transcripts" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
 <p>You can download the sample CSV file by clicking the link. Ensure to upload transcripts in the format specified in the sample file. Please note that <strong>all the columns in the file must be filled</strong>.</p>
 <h3 id="format-of-the-csv-transcript-file">Format of the CSV (Transcript) file<a class="headerlink" href="#format-of-the-csv-transcript-file" title="Permanent link">&para;</a></h3>
 <p><a class="glightbox" href="../images/sample-csv-file.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/sample-csv-file.png" alt="Sample CSV File" title="Sample CSV File" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
-<p><br></p>
 <style>
 table, th, td {
   border: 1px solid black;
@@ -3154,13 +3151,11 @@ table, th, td {
   </tr>
 </table>
 
-<p><br></p>
 <h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Number of transcripts files allowed: Up to 5 CSV files per project.</li>
 <li>Maximum size of CSV transcript file: 1MB each</li>
 </ul>
-<p><br></p>
 <h3 id="steps-to-upload-the-transcripts">Steps to upload the transcripts:<a class="headerlink" href="#steps-to-upload-the-transcripts" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -3200,7 +3195,6 @@ table, th, td {
 <p>You can delete the uploaded transcript file if the file is not required anymore, in case the upload was incorrect, or if the conversation has been extracted but the file is not useful.</p>
 <p>On hovering any row, the <strong>delete</strong> icon is displayed, which is used to delete that specific Transcript.<br />
 <a class="glightbox" href="../images/delete-transcript.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/delete-transcript.png" alt="Delete Transcript" title="Delete Transcript" style="border: 1px solid gray; zoom:50%;"/></a></p>
-<p><br></p>
 <h2 id="extract-intents">Extract Intents<a class="headerlink" href="#extract-intents" title="Permanent link">&para;</a></h2>
 <p>The next step is intent extraction. </p>
 <p>Click the <strong>Extract Intents</strong> button on the Transcripts dialog box. You can see a message about intents being extracted. This process may take a few minutes depending on the number and size of the transcript files.<br />
