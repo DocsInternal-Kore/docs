@@ -2999,6 +2999,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#agent-groups" class="md-nav__link">
+    Agent Groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-group-section-features" class="md-nav__link">
+    Agent Group Section Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-configured-groups" class="md-nav__link">
+    Pre-configured Groups
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-agent-group" class="md-nav__link">
+    Create an Agent Group
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an Agent Group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-agents-to-a-group" class="md-nav__link">
+    Add Agents to a Group
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-an-agent-group" class="md-nav__link">
+    Edit an Agent Group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-an-agent-group" class="md-nav__link">
+    Delete an Agent Group
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3020,8 +3081,8 @@
 
 <h1 id="agent-management">Agent Management<a class="headerlink" href="#agent-management" title="Permanent link">&para;</a></h1>
 <h2 id="agents">Agents<a class="headerlink" href="#agents" title="Permanent link">&para;</a></h2>
-<p>In SmartAssist, the term <strong>Agent Management</strong> refers to the management of agents (customer support representatives), supervisors, and administrators with an account within SmartAssist. To serve customers, you must add users to SmartAssist and provide them with the necessary access. You can create user profiles, assign them to voice, chat, or both channels, and specific skills or queues.</p>
-<p>You can find the <em>Agent Management</em> section by going to <strong>Contact Center &gt; AGENT &amp; SUPERVISORS &gt; Agent Management</strong>.</p>
+<p>In the Contact Center, the term <strong>Agent Management</strong> refers to the management of agents (customer support representatives), supervisors, and administrators with an account within the contact center. To serve customers, you must add users to contact center and provide them with the necessary access. You can create user profiles, assign them to voice, chat, or both channels, and specific skills or queues.</p>
+<p>You can find the <em>Agent Management</em> section by going to <strong>Contact Center &gt; AGENT &amp; SUPERVISORS &gt; Agent Management &gt; Agents</strong>.</p>
 <p><a class="glightbox" href="./images/agent-management-page-agents.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/agent-management-page-agents.png" alt="Agents Tab" title="Agents Tab" style="border: 1px solid gray; zoom:80%;"></a></p>
 <h3 id="agents-section-features">Agents Section Features<a class="headerlink" href="#agents-section-features" title="Permanent link">&para;</a></h3>
 <p>The Agents section includes the features in the table below.</p>
@@ -3041,7 +3102,7 @@
   <tr>
    <td>User
    </td>
-   <td>This is the name of the user you are viewing, as entered within their profile. Under every user’s name, SmartAssist mentions the groups that the user is part of.
+   <td>This is the name of the user you are viewing, as entered within their profile. Under every user’s name, contact center mentions the groups that the user is part of.
    </td>
   </tr>
   <tr>
@@ -3102,7 +3163,7 @@
 </table>
 
 <h3 id="add-a-user">Add a User<a class="headerlink" href="#add-a-user" title="Permanent link">&para;</a></h3>
-<p>You can add a user to SmartAssist by following the steps below:</p>
+<p>You can add a user to Contact Center by following the steps below:</p>
 <ol>
 <li>
 <p>In the Agent section, click <strong>+Add User</strong>.
@@ -3123,7 +3184,7 @@
 <ul>
 <li><em>(Optional)</em> <strong>Profile Picture</strong>: Upload the user’s profile picture here.</li>
 <li><strong>First Name **and</strong> Last Name** are mandatory fields for the user’s first and last names, respectively. Only alphanumeric characters are allowed.</li>
-<li><em>(Optional) <strong>Nick Name:</strong></em> This is a mandatory field for the user’s nickname in SmartAssist.</li>
+<li><em>(Optional) <strong>Nick Name:</strong></em> This is a mandatory field for the user’s nickname in contact center.</li>
 <li><strong>Role</strong>: Select whether the new user should be an Agent, Supervisor, or Administrator. See <a href="https://docs.kore.ai/smartassist/agent/rolemanagement-overview/">Role Management</a> for details.</li>
 <li><strong>Phone Number</strong>: This mandatory field requires a 10-digit phone number.</li>
 <li><strong>Email ID</strong>: This is a mandatory field for the user’s email address.</li>
@@ -3218,7 +3279,69 @@ Alternatively, edit the user, and on the <strong>Edit User</strong> window, clic
 <li><em>You cannot delete your own user.</em></li>
 <li><em>You cannot delete the SmartAssist account owner.</em></li>
 <li><em>Reports, dashboards, and APIs will display deleted agents as long as interactions and metrics contain data associated with the deleted agents.</em></li>
-<li><em>After deleting a user record, the respective user can no longer sign into SmartAssist. If you want to temporarily restrict users from handling customer conversations, you can turn off their access to chat and voice channels, or add them to the <a href="https://docs.kore.ai/smartassist/agent/agent-group/agent-groups/#Preconfigured_Groups">Unassigned group</a>.</em></li>
+<li><em>After deleting a user record, the respective user can no longer sign into the contact center. If you want to temporarily restrict users from handling customer conversations, you can turn off their access to chat and voice channels, or add them to the <a href="https://docs.kore.ai/smartassist/agent/agent-group/agent-groups/#Preconfigured_Groups">Unassigned group</a>.</em></li>
+</ol>
+<h2 id="agent-groups"><strong>Agent Groups</strong><a class="headerlink" href="#agent-groups" title="Permanent link">&para;</a></h2>
+<p>An <strong>Agent Group</strong> is a collection of agents based on skills, scopes, roles, functionalities, etc. Agents are assigned to groups to streamline customer service within Contact Center.</p>
+<p>To find <em>Agent Groups</em>, go to <strong>Contact Center &gt; AGENT &amp; SUPERVISORS &gt; Agent Management &gt; Agent Groups</strong>. All groups are visible on this page by default.
+<a class="glightbox" href="./images/agent-groups-tab.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/agent-groups-tab.png" alt="Delete an Agent" title="Delete an Agent" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h3 id="agent-group-section-features">Agent Group Section Features<a class="headerlink" href="#agent-group-section-features" title="Permanent link">&para;</a></h3>
+<p>The Agent Group section includes the following features: </p>
+<ul>
+<li>You can use the <strong>Search</strong> field to find a group by name. </li>
+<li>Each group item shows the <em>Group Name, Description,</em> and the <em>Number of Agents</em> it includes.</li>
+<li>Clicking any group name reveals the agents who are part of it. Each agent is listed with their name, Edit Action, Role, assigned Skills, and Queues. Learn more about <a href="https://docs.kore.ai/smartassist/getting-started/agent-management/">User Management</a>.</li>
+</ul>
+<h3 id="pre-configured-groups">Pre-configured Groups<a class="headerlink" href="#pre-configured-groups" title="Permanent link">&para;</a></h3>
+<p>There are two pre-configured groups available:</p>
+<ul>
+<li><strong>Unassigned</strong> is automatically selected in the <em>Group</em> drop down while creating a new user. The <em>Unassigned</em> group is not considered for routing interactions..</li>
+<li><strong>Default Group</strong>.</li>
+</ul>
+<h2 id="create-an-agent-group">Create an Agent Group<a class="headerlink" href="#create-an-agent-group" title="Permanent link">&para;</a></h2>
+<p>To create a new agent group, follow these steps:</p>
+<ol>
+<li>
+<p>On the _Agent Groups _page, click**Add Group**.
+<a class="glightbox" href="./images/add-group-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/add-group-button.png" alt="Add Group Button" title="Add Group Button" style="border: 1px solid gray; zoom:80%;"></a></p>
+</li>
+<li>
+<p>In the <strong>New Group</strong> window, provide the input for the following fields:</p>
+<ol>
+<li><strong>Group Name</strong> – Enter the name of the agent group.</li>
+<li><strong>Description</strong> – Enter a brief description of the group.</li>
+</ol>
+</li>
+</ol>
+<h3 id="add-agents-to-a-group">Add Agents to a Group<a class="headerlink" href="#add-agents-to-a-group" title="Permanent link">&para;</a></h3>
+<p>To add agents to a group, you either need to add a new agent to the Contact Center or edit an existing one to assign the group to them. Follow these steps to add an agent to a group:</p>
+<ol>
+<li>Go to <strong>Agents</strong> and create or edit an agent.</li>
+<li>On the <strong>profile</strong>, select the desired group.</li>
+<li><strong>Save</strong> the agent record.</li>
+</ol>
+<p>To learn more about adding or editing agents, please see <a href="https://docs.kore.ai/smartassist/getting-started/agent-management/">User Management</a>.</p>
+<p><a class="glightbox" href="./images/group-dropdown.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/group-dropdown.png" alt="Select Group" title="Select Group" style="border: 1px solid gray; zoom:60%;"></a></p>
+<h2 id="edit-an-agent-group">Edit an Agent Group<a class="headerlink" href="#edit-an-agent-group" title="Permanent link">&para;</a></h2>
+<p>To modify an agent group, follow these steps:</p>
+<ol>
+<li>
+<p>On the <strong>Agent Groups</strong> page, hover over the group that you want to edit, then click the <strong>Edit</strong> icon next to the group name;
+<a class="glightbox" href="./images/edit-group-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/edit-group-button.png" alt="Edit Group Name" title="Edit Group Name" style="border: 1px solid gray; zoom:60%;"></a></p>
+</li>
+<li>
+<p>In the <strong>Edit Group</strong> window, make the required changes;</p>
+</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>!!! <strong>Note</strong>
+   <em>You cannot change the name of the pre-configured groups: Unassigned and Default Group.</em></p>
+<h2 id="delete-an-agent-group">Delete an Agent Group<a class="headerlink" href="#delete-an-agent-group" title="Permanent link">&para;</a></h2>
+<p>To delete an agent group, follow these steps:</p>
+<ol>
+<li>On the <strong>Agent Groups</strong> page, click the <strong>Edit</strong> icon next to the group you want to delete.</li>
+<li>In the <strong>Edit Group</strong> window, click the <strong>Delete Agent Group</strong> icon at the bottom left.\
+<a class="glightbox" href="./images/delete-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/delete-button.png" alt="Delete an Agent Group" title="Delete an Agent Group" style="border: 1px solid gray; zoom:60%;"></a></li>
 </ol>
 
 
