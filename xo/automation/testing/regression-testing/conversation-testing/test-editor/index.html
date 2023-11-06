@@ -17,7 +17,7 @@
     
     
       
-        <title>Test editor - Kore ai Docs</title>
+        <title>**Test Editor** - Kore ai Docs</title>
       
     
     
@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#test-editor" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -166,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Test editor
+              **Test Editor**
             
           </span>
         </div>
@@ -2870,6 +2875,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2888,7 +2895,68 @@
 
 
 
-
+<h1 id="test-editor"><strong>Test Editor</strong><a class="headerlink" href="#test-editor" title="Permanent link">&para;</a></h1>
+<p>You can use the Test Editor to view the test cases and their metadata. This section explains the steps to access the test editor and use the available options:</p>
+<ol>
+<li>
+<p>On the <strong>Conversation Testing</strong> page, click on any <strong>Test Suite</strong> to go to the <strong>Test Editor</strong>.<br />
+<a class="glightbox" href="../images/te-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/te-img1.png" alt="Navigate to Test Editor" title="Navigate to Test Editor" style="border: 1px solid gray;"/></a></p>
+</li>
+<li>
+<p>In the <strong>Test Editor</strong>, the platform shows the validated chat along with its metadata and assertions for each test case.<br />
+<a class="glightbox" href="../images/te-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/te-img2.png" alt="Test Editor" title="Test Editor" style="border: 1px solid gray;"/></a></p>
+</li>
+<li>
+<p>To see the details, choose a test case in the right side pane – <strong>Test Suite Details</strong>, or click the test case in the Validated Chat of the left pane.<br />
+<a class="glightbox" href="../images/te-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/te-img3.png" alt="Choose a test case" title="Choose a test case" style="border: 1px solid gray;"/></a>  </p>
+<p>A  test case consists of:
+* One user input<br />
+* One or more VA responses for a user input<br />
+<a class="glightbox" href="../images/te-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/te-img4.png" alt="Test case details" title="Test case details" style="border: 1px solid gray;"/></a></p>
+</li>
+<li>
+<p>If the VA response is from a dialog intent, the following details are displayed:  </p>
+<ul>
+<li>Intent name  </li>
+<li>Node name<ul>
+<li>Error Prompt/User Prompt for Entity node. For more information, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-entity-node/#Component_Properties">Entity Node</a>.</li>
+</ul>
+</li>
+<li>Transitions</li>
+<li>User Input  </li>
+<li>Expected Output  <ul>
+<li>All the variations of the node prompt are added as expected output  </li>
+<li>If a node has more than one variation, then the OneOf operator is added by default  </li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> The OneOf operator is used to test randomization scenarios where a node can have multiple bot responses. For any node in which multiple responses are configured, the operator is activated by default. If one of the multiple responses is obtained from the VA during the test execution, then the assertion will be passed.<br />
+<a class="glightbox" href="../images/te-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/te-img5.png" alt="Response" title="Response" style="border: 1px solid gray;"/></a></p>
+</li>
+<li>
+<p>If the VA response is from <strong>FAQ/Small Talk/Standard Responses</strong>, the following details are captured:  </p>
+<ul>
+<li>Intent Name (FAQ Name, Small Talk Pattern, Standard Response)  </li>
+<li>User Input  </li>
+<li>Expected Output: It has the same details displayed as in Dialog Intent.  </li>
+<li>Assertions  <ul>
+<li>Flow (Enabled by default)  </li>
+<li>Text (Enabled by default)  </li>
+<li>
+<p>Context<br />
+<a class="glightbox" href="../images/te-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/te-img6.png" alt="Navigate to Test Editor" title="Navigate to Test Editor" style="border: 1px solid gray;"/></a>  </p>
+<p><a class="glightbox" href="../images/te-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/te-img7.png" alt="Navigate to Test Editor" title="Navigate to Test Editor" style="border: 1px solid gray;"/></a>  </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>You can export the entire test suite to your local directory as a <strong>JSON</strong> file. The downloaded test suites include the user inputs and VA responses.<br />
+<a class="glightbox" href="../images/te-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/te-img8.png" alt="Test suite operations" title="Test suite operations" style="border: 1px solid gray;"/></a>  </p>
+<p><strong>Note:</strong> You can also clone the test suite or delete it as per the requirement.</p>
+</li>
+</ol>
 
 
   
