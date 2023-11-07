@@ -17,7 +17,7 @@
     
     
       
-        <title>Test case execution summary - Kore ai Docs</title>
+        <title>**Test Case Execution Summary** - Kore ai Docs</title>
       
     
     
@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#test-case-execution-summary" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -166,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Test case execution summary
+              **Test Case Execution Summary**
             
           </span>
         </div>
@@ -2870,6 +2875,83 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#test-case-execution" class="md-nav__link">
+    Test Case Execution
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Case Execution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-assertions-execution" class="md-nav__link">
+    Test Assertions Execution
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Assertions Execution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow-assertion" class="md-nav__link">
+    Flow Assertion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-assertion" class="md-nav__link">
+    Text Assertion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-assertion" class="md-nav__link">
+    Context Assertion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#past-test-executions" class="md-nav__link">
+    Past Test Executions
+  </a>
+  
+    <nav class="md-nav" aria-label="Past Test Executions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#result-summary" class="md-nav__link">
+    Result Summary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2888,7 +2970,100 @@
 
 
 
-
+<h1 id="test-case-execution-summary"><strong>Test Case Execution Summary</strong><a class="headerlink" href="#test-case-execution-summary" title="Permanent link">&para;</a></h1>
+<p>The Test Case Execution Summary allows you to view the test case results, identify the failed test cases, and resolve the flow of the virtual assistant. It gives complete details of the overall test results and the defects found.</p>
+<p>The following sections explain the options available on the Conversation Testing to execute the test cases and interpret the results, which help analyze the performance of the test suite as a whole and the individual test cases.</p>
+<h2 id="test-case-execution">Test Case Execution<a class="headerlink" href="#test-case-execution" title="Permanent link">&para;</a></h2>
+<p>You can execute test cases on the Conversation Testing Landing Page and the individual Test Case details page. \
+Follow these steps for test execution:</p>
+<ol>
+<li>
+<p>On the <strong>Test Suite Details</strong> page, select the test suite and then click the <strong>Run Test Suite</strong> button for that specific suite.<br />
+<a class="glightbox" href="../images/tces-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img1.png" alt="Test Suite Details" title="Test Suite Details" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+<p><a class="glightbox" href="../images/tces-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img2.png" alt="Run test" title="Run test" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+<p><strong>Note:</strong> You can also execute the test cases by clicking the Run Test button on the Test Suite Details page.</p>
+</li>
+<li>
+<p>Choose the Version of the VA you want to test.  </p>
+<p><strong>Note:</strong> Ensure that you have valid authorization tokens for the VA to make the service calls that would be part of the test suite.  </p>
+<p><a class="glightbox" href="../images/tces-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img3.png" alt="Choose VA Version" title="Choose VA Version" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>You can monitor the progress of the test suite in the <strong>Result</strong> column and the status docker. The Result column displays the <strong>Passed</strong> or <strong>Failed</strong> status upon successful execution.<br />
+<a class="glightbox" href="../images/tces-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img4.png" alt="Result" title="Result" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
+<p>When a test case is executed, the test case result is determined with the features like assertions, dynamic texts, OneOf, and so on. To know more, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/testing/regression-testing/conversation-testing/test-case-assertion">Test Case Assertion</a>.</p>
+<p>The platform simulates all the user inputs against the current VA definition in sequence, as available in the test case. For every user input, the VA’s responses are captured along with the metadata. See Capture Test Suite Metadata under <a href="https://docsinternal-kore.github.io/docs/xo/automation/testing/regression-testing/conversation-testing/create-a-test-suite/#validate-test-suite">Validate Test Suite</a> to know more.</p>
+<h3 id="test-assertions-execution">Test Assertions Execution<a class="headerlink" href="#test-assertions-execution" title="Permanent link">&para;</a></h3>
+<p>The platform performs the assertions tagged to each VA response of a test case. For example, a VA’s response can have Flow, Text, and Context Assertions tagged. The platform performs all three assertions to determine their assertion results.<br />
+<a class="glightbox" href="../images/tces-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img5.png" alt="Test Assertion" title="Test Assertion" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h4 id="flow-assertion">Flow Assertion<a class="headerlink" href="#flow-assertion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>For any VA response in a test case, the assertion is determined as pass when the following conditions are true:<ul>
+<li>The Intent ID of the Expected and Actual responses is the same.</li>
+<li>The Node ID of the Expected and Actual responses is the same.</li>
+<li>The Transition(s) of the Expected and Actual responses are the same.</li>
+<li>The Prompt type (Error or User Prompt) is the same in case of Entity nodes.</li>
+</ul>
+</li>
+<li>If the above conditions are not met, the assertion is determined as Failed.</li>
+</ul>
+<h4 id="text-assertion">Text Assertion<a class="headerlink" href="#text-assertion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>For any VA response in a test case, the assertion is determined as passed when the following condition is true:<ul>
+<li>The expected and actual responses are the same (string comparison).</li>
+</ul>
+</li>
+<li>Dynamic text values are not considered when performing the comparison.</li>
+<li>In case of multiple responses in the Expected Output (when a node has multiple variations), one of the expected responses must match for the assertion to pass.</li>
+</ul>
+<h4 id="context-assertion">Context Assertion<a class="headerlink" href="#context-assertion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>For any VA response in a test case, the context assertion is determined as passed when the following conditions are true:<ul>
+<li>The expected and actual values are the same for the added context variable.</li>
+<li>A VA response has multiple context assertions and multiple context assertion results.</li>
+</ul>
+</li>
+<li>A context assertion fails if the expected value and the actual value of the variable are not the same.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note<p>The test case result is determined as Pass only when all the assertions of all the VA responses of the test case are passed.</p>
+</p>
+</div>
+<h2 id="past-test-executions">Past Test Executions<a class="headerlink" href="#past-test-executions" title="Permanent link">&para;</a></h2>
+<p>The <strong>Past Executions</strong> tab is available on the Test Suite summary page, which displays the test result summary of all past executions. The details help in referring to test executions and understanding the results.<br />
+<a class="glightbox" href="../images/tces-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img6.png" alt="Past test executions" title="Past test executions" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h3 id="result-summary">Result Summary<a class="headerlink" href="#result-summary" title="Permanent link">&para;</a></h3>
+<p>The following steps show how to access the test result summary and the details displayed.</p>
+<ol>
+<li>
+<p>Click the <strong>Result Summary</strong> button to view the summary of all the executions.<br />
+<a class="glightbox" href="../images/tces-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img7.png" alt="Result Summary button" title="Result Summary button" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Two chat panels are displayed:</p>
+<ul>
+<li><strong>Ideal Test Suite</strong> – It shows Test Cases with metadata and assertions from the test editor.</li>
+<li><strong>Test Suite Execution</strong> – It shows Test results along with the metadata and assertion results identified during Test Exec<br />
+  <a class="glightbox" href="../images/tces-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img8.png" alt="Result summary" title="Result summary" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ul>
+</li>
+<li>
+<p>The test result summary is displayed with the following details:</p>
+<ul>
+<li>Total test cases</li>
+<li>Breakdown of Passes, Failed, and Not Executed test cases</li>
+<li>Duration of test case execution</li>
+<li>The status of the Test Suite – Passed or Failed<br />
+<a class="glightbox" href="../images/tces-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img9.png" alt="Test result details" title="Test result details" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ul>
+</li>
+<li>
+<p>The test case details and their assertion result summary are also displayed.<br />
+<a class="glightbox" href="../images/tces-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img10.png" alt="Test case details and assertion result" title="Test case details and assertion result" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
 
 
   
