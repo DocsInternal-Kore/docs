@@ -3108,6 +3108,163 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#agent-settings" class="md-nav__link">
+    Agent Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answer-mode" class="md-nav__link">
+    Answer Mode
+  </a>
+  
+    <nav class="md-nav" aria-label="Answer Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voice" class="md-nav__link">
+    Voice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chats" class="md-nav__link">
+    Chats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emails" class="md-nav__link">
+    Emails
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversation-status-control" class="md-nav__link">
+    Conversation Status Control
+  </a>
+  
+    <nav class="md-nav" aria-label="Conversation Status Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversation-statuses-by-channel-live-chat-messaging-and-voice" class="md-nav__link">
+    Conversation Statuses by Channel (Live Chat, Messaging, and Voice)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-statuses-by-channel-email" class="md-nav__link">
+    Conversation Statuses by Channel (Email)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-status-configuration" class="md-nav__link">
+    Conversation Status Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-recording-control" class="md-nav__link">
+    Call Recording Control
+  </a>
+  
+    <nav class="md-nav" aria-label="Call Recording Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow-agent-to-pauseresume" class="md-nav__link">
+    Allow Agent to Pause/Resume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-virtual-assistant-dialogs-to-pauseresume" class="md-nav__link">
+    Allow Virtual Assistant Dialogs to Pause/Resume
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfers" class="md-nav__link">
+    Transfers
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transfer-to-external-contacts" class="md-nav__link">
+    Transfer to External Contacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enforce-skill-match-for-transfers" class="md-nav__link">
+    Enforce Skill Match for Transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-destinations" class="md-nav__link">
+    Transfer Destinations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skill-modification" class="md-nav__link">
+    Skill Modification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-logout" class="md-nav__link">
+    Auto Logout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snooze" class="md-nav__link">
+    Snooze
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3487,6 +3644,387 @@ A confirmation message is displayed. \
 Once enabled, the Login Prep becomes the default status for every new login for the agent. <a href="https://docs.kore.ai/smartassist/console/interacting-with-customers/#Behavior_When_Login_Prep_Status_is_Enabled">Learn more</a>.</p>
 </li>
 </ol>
+<h2 id="agent-settings"><strong>Agent Settings</strong><a class="headerlink" href="#agent-settings" title="Permanent link">&para;</a></h2>
+<p>Agent Settings let you configure the settings that apply to all agents across Contact Center.</p>
+<p>Go to <strong>Contact Center &gt; AGENT &amp; SUPERVISORS &gt; Agent Management &gt; Agent Settings</strong> to view and edit the following:</p>
+<ol>
+<li><strong>Answer Mode</strong>: These settings let you define how conversations get answered on each channel (Digital – Chats, and Emails, as well as Voice).</li>
+<li><strong>Conversation Status Control</strong>: These options let you define how conversation status behaves and the messages triggered by status changes.</li>
+<li><strong>Call Recording Control</strong>: These settings let you configure call recording behavior. If enabled, you can further enable options to allow Agents and Virtual Assistants to Pause/Resume call recording.</li>
+<li><strong>Transfers</strong>: This section lets you define settings related to External Transfers, Skill Match, and Transfer Destination Control.</li>
+<li><strong>Skill Modification</strong>: You can decide if the agents can modify skills attached to a conversation.</li>
+<li><strong>Auto Logout</strong>: Administrators can configure this setting to specify a period of inactivity that automatically logs out agents.</li>
+</ol>
+<p>These settings are grouped and presented as closed groups when first opening the Settings screen. Click any group to view its corresponding options.
+<a class="glightbox" href="./images/agent-settings-page.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/agent-settings-page.png" alt="Agent Settings Page" title="Agent Settings Page" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h2 id="answer-mode">Answer Mode<a class="headerlink" href="#answer-mode" title="Permanent link">&para;</a></h2>
+<h3 id="voice">Voice<a class="headerlink" href="#voice" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Manual</strong>: Agents must click ‘Accept’ to begin their voice interaction with the next customer.
+<a class="glightbox" href="./images/voice-configuration.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/voice-configuration.png" alt="Voice Configuration Manual" title="Voice Configuration Manual" style="border: 1px solid gray; zoom:80%;"></a></li>
+<li><strong>Auto</strong>: Calls are auto-answered. The agent does not need to click ‘Accept’. \
+<a class="glightbox" href="./images/voice-configuration-auto.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/voice-configuration-auto.png" alt="Voice Configuration Auto" title="Voice Configuration Auto" style="border: 1px solid gray; zoom:80%;"></a></li>
+</ul>
+<h3 id="chats">Chats<a class="headerlink" href="#chats" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Manual</strong>: Agents must click **_Accept _**to begin chatting with the next customer. Set the acceptance timeout for agents before a chat returns to the queue by entering the number of minutes and seconds. \
+<a class="glightbox" href="./images/chat-configuration.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/chat-configuration.png" alt="Chat Configuration Manual" title="Chat Configuration Manual" style="border: 1px solid gray; zoom:80%;"></a></p>
+</li>
+<li>
+<p><strong>Auto</strong>: Chats are auto-answered, and the agent does not need to click ‘Accept’. Set the first response timeout for agents to respond to new chats. \
+<a class="glightbox" href="./images/chat-configuration-auto.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/chat-configuration-auto.png" alt="Chat Configuration Auto" title="Chat Configuration Auto" style="border: 1px solid gray; zoom:80%;"></a></p>
+</li>
+</ul>
+<h3 id="emails">Emails<a class="headerlink" href="#emails" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Manual</strong>: Agents must click ‘<strong>Accept</strong>’ to begin their email interaction with the next customer. Set the acceptance timeout for agents before an email returns to the queue by entering the number of minutes and seconds. \
+<a class="glightbox" href="./images/email-configuration-manual.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/email-configuration-manual.png" alt="Email Configuration Manual" title="Email Configuration Manual" style="border: 1px solid gray; zoom:80%;"></a></p>
+</li>
+<li>
+<p><strong>Auto</strong>: Emails are auto-accepted, and the agent does not need to click ‘Accept’. \
+<a class="glightbox" href="./images/email-configuration-auto.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/email-configuration-auto.png" alt="Email Configuration Auto" title="Email Configuration Auto" style="border: 1px solid gray; zoom:80%;"></a></p>
+</li>
+</ul>
+<h2 id="conversation-status-control">Conversation Status Control<a class="headerlink" href="#conversation-status-control" title="Permanent link">&para;</a></h2>
+<p>The Conversation Status Control settings are available for the following channels: Live Chat, Messaging, Voice, and Emails.</p>
+<p>Different statuses apply to each channel. Watch the short demo below to see what these look like in SmartAssist, and read the following sections for details on available statuses and their configuration. \
+<a class="glightbox" href="./images/conversation-status-control-channels.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/conversation-status-control-channels.gif" alt="Conversation Status Control" title="Conversation Status Control" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h3 id="conversation-statuses-by-channel-live-chat-messaging-and-voice">Conversation Statuses by Channel (Live Chat, Messaging, and Voice)<a class="headerlink" href="#conversation-statuses-by-channel-live-chat-messaging-and-voice" title="Permanent link">&para;</a></h3>
+<p>Conversation statuses apply in certain conditions for specific channels. These are listed in the table below:</p>
+<table>
+  <tr>
+   <td><strong>Status</strong>
+   </td>
+   <td><strong>Applicability</strong>
+   </td>
+   <td><strong>Channel</strong>
+   </td>
+   <td><strong>Message</strong>
+   </td>
+   <td><strong>Variables</strong>
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2" >On Connect
+   </td>
+   <td rowspan="2" >When the agent connects
+   </td>
+   <td>Live Chat, Messaging.
+   </td>
+   <td>To User
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name Elapsed Time, Expired Time.
+   </td>
+  </tr>
+  <tr>
+   <td>Voice
+   </td>
+   <td>To User
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name
+   </td>
+  </tr>
+  <tr>
+   <td>Due Reminder For Agent
+   </td>
+   <td>If the agent’s response time is greater than the set percentile of overdue conversations.
+   </td>
+   <td>Live Chat, Messaging.
+   </td>
+   <td>To Agent
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name Elapsed Time, Expired Time.
+   </td>
+  </tr>
+  <tr>
+   <td>Agent Inactivity
+   </td>
+   <td>If the agent has not responded to an overdue conversation for the set time (in minutes and seconds).
+   </td>
+   <td>Live Chat
+   </td>
+   <td>To Agent
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name Elapsed Time, Expired Time.
+   </td>
+  </tr>
+  <tr>
+   <td>Overdue
+   </td>
+   <td>If the agent has not responded for the set amount of time (in minutes and seconds).
+   </td>
+   <td>Live Chat, Messaging.
+   </td>
+   <td>To Agent
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name Elapsed Time, Expired Time.
+   </td>
+  </tr>
+  <tr>
+   <td>Idle Reminder For Customer
+   </td>
+   <td>If the customer’s response time is greater than the set percentile of total idle customer conversations.
+   </td>
+   <td>Live Chat, Messaging.
+   </td>
+   <td>To User
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name Elapsed Time, Expired Time.
+   </td>
+  </tr>
+  <tr>
+   <td>Idle
+   </td>
+   <td>If the customer has not responded for the set amount of time (in minutes and seconds).
+   </td>
+   <td>Live Chat, Messaging.
+   </td>
+   <td>To User
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name Elapsed Time, Expired Time.
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2" >Auto Expire
+   </td>
+   <td rowspan="2" >If the customer’s response time is greater than the set amount of time (in minutes and seconds).
+   </td>
+   <td rowspan="2" >Live Chat
+   </td>
+   <td>To User
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name Elapsed Time, Expired Time.
+   </td>
+  </tr>
+  <tr>
+   <td>To Agent
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name
+   </td>
+  </tr>
+  <tr>
+   <td>On Interruption
+   </td>
+   <td>If the agent disconnects unexpectedly.
+   </td>
+   <td>Live Chat, Messaging.
+   </td>
+   <td>To User
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name Elapsed Time, Expired Time.
+   </td>
+  </tr>
+  <tr>
+   <td>On Close
+   </td>
+   <td>If the agent closes the conversation.
+   </td>
+   <td>Live Chat, Messaging.
+   </td>
+   <td>To User
+   </td>
+   <td>Agent Full Name, Agent First Name, Agent Last Name, Agent Nick Name Elapsed Time, Expired Time.
+   </td>
+  </tr>
+</table>
+
+<h3 id="conversation-statuses-by-channel-email">Conversation Statuses by Channel (Email)<a class="headerlink" href="#conversation-statuses-by-channel-email" title="Permanent link">&para;</a></h3>
+<table>
+  <tr>
+   <td><strong>Status</strong>
+   </td>
+   <td><strong>Applicability</strong>
+   </td>
+   <td><strong>Channel</strong>
+   </td>
+   <td><strong>Message</strong>
+   </td>
+   <td><strong>Variables</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Overdue
+   </td>
+   <td>If the agent has not responded for the set amount of time (in hours and minutes).
+   </td>
+   <td>Email
+   </td>
+   <td>To Agent
+   </td>
+   <td>Elapsed Time, Expired Time, Time Left to Inactivity, Time Left to Expiry.
+   </td>
+  </tr>
+  <tr>
+   <td>Due Reminder for Agent Inactivity
+   </td>
+   <td>If the agent’s response time is under the set amount of time (in hours).
+   </td>
+   <td>Email
+   </td>
+   <td>To Agent
+   </td>
+   <td>Elapsed Time, Expired Time, Time Left to Inactivity, Time Left to Expiry.
+   </td>
+  </tr>
+  <tr>
+   <td>Agent Inactivity
+   </td>
+   <td>The conversation will be moved back to Queue, once it turns overdue if the agent has not responded for the set amount of time (in hours and minutes).
+   </td>
+   <td>Email
+   </td>
+   <td>To Agent
+   </td>
+   <td>Elapsed Time, Expired Time, Time Left to Inactivity, Time Left to Expiry.
+   </td>
+  </tr>
+  <tr>
+   <td>Agent Offline
+   </td>
+   <td>If an agent gets disconnected unexpectedly, conversations will wait in queue for a set amount of time (in hours and minutes).
+   </td>
+   <td>Email
+   </td>
+   <td>To Agent
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Customer Idle
+   </td>
+   <td>If the customer has not responded for the set amount of time (in hours and minutes) since the last agent response.
+   </td>
+   <td>Email
+   </td>
+   <td>To User
+   </td>
+   <td>Elapsed Time, Expired Time, Time Left to Inactivity, Time Left to Expiry.
+   </td>
+  </tr>
+  <tr>
+   <td>Due Reminder for Auto Expiry
+   </td>
+   <td>If the customer’s response time is under the set amount of time (in hours) before Auto Expiry.
+   </td>
+   <td>Email
+   </td>
+   <td>To User
+   </td>
+   <td>Elapsed Time, Expired Time, Time Left to Inactivity, Time Left to Expiry.
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2" >Auto Expire
+   </td>
+   <td rowspan="2" >Once the conversation turns idle if the customer does not respond for the set amount of time (in hours and minutes) the interaction expires.
+   </td>
+   <td rowspan="2" >Email
+   </td>
+   <td>To User
+   </td>
+   <td>Elapsed Time, Expired Time, Time Left to Inactivity, Time Left to Expiry.
+   </td>
+  </tr>
+  <tr>
+   <td>To Agent
+   </td>
+   <td>Elapsed Time, Expired Time, Time Left to Inactivity, Time Left to Expiry.
+   </td>
+  </tr>
+  <tr>
+   <td>On Close
+   </td>
+   <td>If the conversation is closed by the agent.
+   </td>
+   <td>Email
+   </td>
+   <td>To User
+   </td>
+   <td>Elapsed Time, Expired Time, Time Left to Inactivity, Time Left to Expiry.
+   </td>
+  </tr>
+</table>
+
+<h3 id="conversation-status-configuration">Conversation Status Configuration<a class="headerlink" href="#conversation-status-configuration" title="Permanent link">&para;</a></h3>
+<p>For each status, you can configure the following:</p>
+<ol>
+<li><strong>The response time after which the status should trigger</strong>: This can be set in either as a percent value of a total or as minutes and seconds.<ol>
+<li>The statuses for which you can set a percent value are: <em>Due Reminder For Agent</em>, and <em>Idle Reminder For Customer.</em></li>
+<li>The statuses for which you can set a response time (in minutes and seconds) are: <em>Overdue, Agent Inactivity, Idle</em>, and <em>Auto Expire</em>.</li>
+<li>The statuses that do not require percentile or response time configuration are: <em>On Connect, On Interruption</em>, and <em>On Close</em>.
+<a class="glightbox" href="./images/response-status.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/response-status.png" alt="Status Configuration" title="Status Configuration" style="border: 1px solid gray; zoom:80%;"></a>
+The following applies to emails:\</li>
+<li>The statuses for which you can set a response time (in hours) are <em>Due Reminder for Agent Inactivity</em>, and <em>Due Reminder for Auto Expiry</em>.</li>
+<li>The status for which there is no response time is <em>On Close</em>.</li>
+<li>The statuses for which you can set a response time (in hours and minutes) are <em>Overdue</em>, Agent <em>Inactivity</em>, <em>Agent Offline</em>, <em>Customer Idle</em>, and <em>Auto Expire</em>.</li>
+</ol>
+</li>
+<li>
+<p><strong>The messaging goes out to either the user or the agent</strong>. Status
+Messages can be edited by clicking the Edit icon under the Message column. \
+<a class="glightbox" href="./images/status-edit.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/status-edit.png" alt="Status Edit" title="Status Edit" style="border: 1px solid gray; zoom:80%;"></a></p>
+<ol>
+<li>Each status lets you edit the message text, add variables and select the language.</li>
+</ol>
+<p><a class="glightbox" href="./images/status-pop-up.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/status-pop-up.png" alt="Status Message Dialog Box" title="Status Message Dilaog Box" style="border: 1px solid gray; zoom:40%;"></a></p>
+<ol>
+<li><strong>To add a variable</strong>, place the cursor where you want to insert the variable, click the <strong>Variable</strong> field, then select the one you need. This adds a variable placeholder in your message text, which will be replaced with contextual information once the message reaches its recipient. You can select more than one variable within the same message. \
+For example: <code>{{agentFirstName}}</code> becomes Christine Mark. \
+<a class="glightbox" href="./images/select-variables.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/select-variables.png" alt="Add Variable" title="Add Variable" style="border: 1px solid gray; zoom:80%;"></a>
+ \
+See the table in <a href="https://docs.kore.ai/smartassist/user-management/agent-settings/?preview_id=7923&amp;preview_nonce=34f3bb377c&amp;post_format=standard&amp;_thumbnail_id=-1&amp;preview=true#Conversation_Statuses_by_Channel">Conversation Statuses by Channel</a> for details on available variables.</li>
+</ol>
+</li>
+</ol>
+<p>Once you configure your Conversation Statuses and Messaging, click <strong>Save</strong> at the bottom right of the Agent Settings screen.
+<a class="glightbox" href="./images/save-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/save-button.png" alt="Save Conversation Status" title="Save Conversation Status" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h2 id="call-recording-control">Call Recording Control<a class="headerlink" href="#call-recording-control" title="Permanent link">&para;</a></h2>
+<p>By default, SmartAssist records all voice interactions. SmartAssist admins can disable call recording for all voice interactions. \
+<a class="glightbox" href="./images/call-recording-control.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/call-recording-control.png" alt="Call Recording Control" title="Call Recording Control" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h3 id="allow-agent-to-pauseresume">Allow Agent to Pause/Resume<a class="headerlink" href="#allow-agent-to-pauseresume" title="Permanent link">&para;</a></h3>
+<p>By default, the Allow Agent to Pause/Resume feature is disabled. However, admins can enable it for agents handling voice interactions, allowing them to pause the recording during the call. \
+<a class="glightbox" href="./images/allow-agent-to-pause-resume.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/allow-agent-to-pause-resume.png" alt="Allow Agents to Pause/Resume Call Recording" title="Allow Agents to Pause/Resume Call Recording" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h3 id="allow-virtual-assistant-dialogs-to-pauseresume">Allow Virtual Assistant Dialogs to Pause/Resume<a class="headerlink" href="#allow-virtual-assistant-dialogs-to-pauseresume" title="Permanent link">&para;</a></h3>
+<p>By default, the Allow Virtual Assistant to Pause/Resume feature is disabled. However, admins can enable it for virtual assistants (automation) handling voice interactions, allowing them to pause the recording when collecting <a href="https://docs.kore.ai/smartassist/history/handling-pii-data/">Personally Identifiable Information</a> (PII). \
+<a class="glightbox" href="./images/allow-virtual-assistants-to-pause-resume.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/allow-virtual-assistants-to-pause-resume.png" alt="Allow Virtual Assitant Dialogs to Pause/Resume Call Recording" title="Allow Virtual Assitant Dialogs to Pause/Resume Call Recording" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p>Recorded calls are accessible to supervisors on the Dashboard’s <a href="https://docs.kore.ai/smartassist/dashboard/interactions/#Call_Recording">Interactions</a> tab. The interactions are not recorded in the interactions tab for the duration that the recording was stopped/paused.</p>
+<p>Changes to the Call Recording Control settings are logged on the <a href="https://bots.kore.ai/admin/#_login">Kore.ai Bots Admin Console</a> &gt; Analytics &gt; <a href="https://docs.kore.ai/smartassist/bot-administration/audit-report/">Audit Report page</a>.</p>
+<h2 id="transfers">Transfers<a class="headerlink" href="#transfers" title="Permanent link">&para;</a></h2>
+<h3 id="transfer-to-external-contacts">Transfer to External Contacts<a class="headerlink" href="#transfer-to-external-contacts" title="Permanent link">&para;</a></h3>
+<p>If enabled, this option allows agents to transfer ongoing customer calls to the external contacts list, via the Agent Console. Please see <a href="https://docs.kore.ai/smartassist/console/interacting-with-customers/#Transfer_Interactions">Agent Console &gt; Transfer Interactions</a> to learn more. \
+<a class="glightbox" href="./images/transfer-to-external-contacts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/transfer-to-external-contacts.png" alt="Enable Transfer to External Contacts" title="Enable Transfer to External Contacts" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h3 id="enforce-skill-match-for-transfers">Enforce Skill Match for Transfers<a class="headerlink" href="#enforce-skill-match-for-transfers" title="Permanent link">&para;</a></h3>
+<p>If enabled, the system considers skills while finding an agent, during a queue transfer. If disabled, the system ignores skills while finding an agent, during a queue transfer. \
+<a class="glightbox" href="./images/enforce-skill-match-for-transfers.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/enforce-skill-match-for-transfers.png" alt="Enable Enforce Skill Match for Transfers" title="Enable Enforce Skill Match for Transfers" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h3 id="transfer-destinations">Transfer Destinations<a class="headerlink" href="#transfer-destinations" title="Permanent link">&para;</a></h3>
+<p>Supervisors can decide where agents can transfer interactions: </p>
+<ul>
+<li><strong>Queues &amp; Agents</strong>: Agents can transfer interactions to queues and other individual agents.</li>
+<li><strong>Queues only</strong>: Agents can transfer interactions only to queues. \
+<a class="glightbox" href="./images/transfer-destinations.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/transfer-destinations.png" alt="Transfer Destinations" title="Transfer Destinations" style="border: 1px solid gray; zoom:80%;"></a></li>
+</ul>
+<h2 id="skill-modification">Skill Modification<a class="headerlink" href="#skill-modification" title="Permanent link">&para;</a></h2>
+<p>If enabled, the system allows agents to modify skills attached to an interaction.</p>
+<p>You can select from the following options:</p>
+<ul>
+<li><strong>Live Interaction</strong>: Selecting this option lets agents modify skills from the skills bar on the Live Interaction window.</li>
+<li><strong>Transfer</strong>: Selecting this option lets agents modify skills when transferring an interaction. \
+<a class="glightbox" href="./images/skill-modification.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/skill-modification.png" alt="Skill Modification" title="Skill Modification" style="border: 1px solid gray; zoom:80%;"></a></li>
+</ul>
+<h2 id="auto-logout">Auto Logout<a class="headerlink" href="#auto-logout" title="Permanent link">&para;</a></h2>
+<p>This feature allows administrators to specify the period of inactivity after which auto logout occurs. By default, auto logout is disabled. \
+<a class="glightbox" href="./images/auto-logout.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/auto-logout.png" alt="Auto Logout" title="Auto Logout" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p>Enabling the setting allows administrators to configure the following rules:</p>
+<p><strong>Auto Logout</strong>: The period of inactivity after which auto logout occurs. The default setting is 8 hours. \
+<strong>Due Reminder for Auto Logout</strong>: The time duration before auto logout when the alert message appears. \
+<a class="glightbox" href="./images/auto-logout-configuration.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/auto-logout-configuration.png" alt="Configure Auto Logout" title="Configure Auto Logout" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h2 id="snooze">Snooze<a class="headerlink" href="#snooze" title="Permanent link">&para;</a></h2>
+<p>This feature allows agents to temporarily pause conversations that are awaiting a response from the customer or require any necessary action from the agent.</p>
+<p>By default, the snooze functionality is disabled. Administrators can turn on the <strong>Snooze</strong> toggle to enable the functionality. \
+<a class="glightbox" href="./images/enable-snooze.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/enable-snooze.png" alt="Enable Snooze" title="Enable Snooze" style="border: 1px solid gray; zoom:80%;"></a></p>
 
 
   
