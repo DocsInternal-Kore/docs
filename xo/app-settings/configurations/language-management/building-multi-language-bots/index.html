@@ -2878,6 +2878,136 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-multilingual-va" class="md-nav__link">
+    Building a Multilingual VA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-conversation-bot-language" class="md-nav__link">
+    The Conversation (Bot) Language
+  </a>
+  
+    <nav class="md-nav" aria-label="The Conversation (Bot) Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-bot-languages" class="md-nav__link">
+    Supported Bot Languages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-nlu-language" class="md-nav__link">
+    The NLU Language
+  </a>
+  
+    <nav class="md-nav" aria-label="The NLU Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-nlu-languages" class="md-nav__link">
+    Supported NLU Languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-specific-nlu-models" class="md-nav__link">
+    Language-specific NLU Models
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-multilingual-nlu-model" class="md-nav__link">
+    The Multilingual NLU Model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-enablement-options" class="md-nav__link">
+    Language Enablement Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Language Enablement Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-enabling-a-language-in-which-you-can-train-as-well" class="md-nav__link">
+    Scenario 1: Enabling a language in which you can train as well
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-enabling-a-language-using-another-language-as-nlu-language" class="md-nav__link">
+    Scenario 2: Enabling a language using another language as NLU Language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-enabling-a-language-using-the-multilingual-nlu-model" class="md-nav__link">
+    Scenario 3: Enabling a language using the Multilingual NLU model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-detection-and-selection" class="md-nav__link">
+    Language Detection and Selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Language Detection and Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language-detection" class="md-nav__link">
+    Language Detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-selection" class="md-nav__link">
+    Language Selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2898,7 +3028,7 @@
 <h1 id="getting-started-with-multilingual-virtual-assistants"><strong>Getting Started with Multilingual Virtual Assistants</strong><a class="headerlink" href="#getting-started-with-multilingual-virtual-assistants" title="Permanent link">&para;</a></h1>
 <p>Consumers are more likely to engage with virtual assistants that communicate in their preferred language. The Kore.ai XO Platform supports enabling multiple languages within an assistant without having to rebuild the definitions. The platform supports over 100 languages and you can choose to enable any of these languages for your assistant. You can start building with one language and enable additional languages as and when you need them.  </p>
 <p>This article takes you through the general context within which multilingual VAs work. It discusses language use in VA-user conversations and in NLU processes, language enablement options, as well as language detection and selection. </p>
-<h1 id="building-a-multilingual-va">Building a Multilingual VA<a class="headerlink" href="#building-a-multilingual-va" title="Permanent link">&para;</a></h1>
+<h2 id="building-a-multilingual-va">Building a Multilingual VA<a class="headerlink" href="#building-a-multilingual-va" title="Permanent link">&para;</a></h2>
 <p>If you want to build a Multilingual VA, there are a few points to keep in mind:</p>
 <ol>
 <li>There is a set of basic building blocks to a multilingual VA: the language in which it talks to users, the language in which you train it, and the process through which it detects and selects which languages to use. Please continue reading this article to learn more.</li>
@@ -2906,11 +3036,11 @@
 <li>Multilingual VAs have language-specific components and some features exhibit different behaviors compared to single language assistants. Read more about this <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/configurations/language-management/multilingual-vas-components-feature-support/">here</a>.</li>
 <li>Translation can be automated using pre-built translation services from providers such as Microsoft or Google; or custom services, including any that you may build in-house. Read <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/configurations/language-management/managing-translation-services/">here</a> to learn more.</li>
 </ol>
-<h1 id="the-conversation-bot-language">The Conversation (Bot) Language<a class="headerlink" href="#the-conversation-bot-language" title="Permanent link">&para;</a></h1>
+<h2 id="the-conversation-bot-language">The Conversation (Bot) Language<a class="headerlink" href="#the-conversation-bot-language" title="Permanent link">&para;</a></h2>
 <p>Enabling a language requires you to train the model to understand the user’s input and present the responses in the user’s language. To achieve this, the platform allows you to choose a <strong>Conversation (Bot) Language</strong> and <strong>NLU Language</strong> for every language that you would like to enable. In most cases, the Conversation Language can be the same as the NLU Language.</p>
 <p>Conversation Language is the one that users use to interact with the assistant. You can choose any of the over 100 languages as the Conversation Language. You can define the responses (prompts, messages. etc.,) in the Conversation Language. </p>
 <p>You can also use the automatic response translation feature when you or your team does not have expertise in the user’s language. You can write the responses in your preferred language and the platform will automatically translate them to the user’s language during the conversation. </p>
-<h2 id="supported-bot-languages"><strong>Supported Bot Languages</strong><a class="headerlink" href="#supported-bot-languages" title="Permanent link">&para;</a></h2>
+<h3 id="supported-bot-languages">Supported Bot Languages<a class="headerlink" href="#supported-bot-languages" title="Permanent link">&para;</a></h3>
 <p>The following are the Conversation Languages supported by the Platform:</p>
 <table border="1">
   <tr>
@@ -3219,9 +3349,9 @@
   </tr>
 </table>
 
-<h1 id="the-nlu-language">The NLU Language<a class="headerlink" href="#the-nlu-language" title="Permanent link">&para;</a></h1>
+<h2 id="the-nlu-language">The NLU Language<a class="headerlink" href="#the-nlu-language" title="Permanent link">&para;</a></h2>
 <p>The NLU Language is the one that you train the assistant with, to identify the user’s intents. The NLU model is built using the NLU Language that you choose. This language can be the same as the Conversation language or it can be any other supported language. </p>
-<h2 id="supported-nlu-languages">Supported NLU Languages<a class="headerlink" href="#supported-nlu-languages" title="Permanent link">&para;</a></h2>
+<h3 id="supported-nlu-languages">Supported NLU Languages<a class="headerlink" href="#supported-nlu-languages" title="Permanent link">&para;</a></h3>
 <p>The following are the NLU Languages supported by the platform. While most of the NLU features are supported in all languages, there are some exceptions, <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/configurations/language-management/multi-lingual-bot-behavior">see here for more details</a>.</p>
 <table border="1">
   <tr>
@@ -3310,23 +3440,23 @@
   </tr>
 </table>
 
-<h2 id="language-specific-nlu-models">Language-specific NLU Models<a class="headerlink" href="#language-specific-nlu-models" title="Permanent link">&para;</a></h2>
+<h3 id="language-specific-nlu-models">Language-specific NLU Models<a class="headerlink" href="#language-specific-nlu-models" title="Permanent link">&para;</a></h3>
 <p>The platform supports language-specific NLU models for 26 languages. These models are pre-trained to understand system entities, concepts, sentiment, etc. in specific languages. </p>
 <ul>
 <li>In most cases, the NLU Language can be the same as the Conversation Language for the 26 languages listed below. </li>
 <li>There may be cases where you can choose an NLU Language that is different from the Conversation Language. For example, you want to enable the <em>Arabic</em> language for your assistant but train using the <em>English</em> language. You can enable the automatic input translation feature to support this flow. The user input is automatically translated to the NLU Language during the conversation. </li>
 <li>These models provide a wide range of configurations for you to fully customize the model behavior. </li>
 </ul>
-<h2 id="the-multilingual-nlu-model">The Multilingual NLU Model<a class="headerlink" href="#the-multilingual-nlu-model" title="Permanent link">&para;</a></h2>
+<h3 id="the-multilingual-nlu-model">The Multilingual NLU Model<a class="headerlink" href="#the-multilingual-nlu-model" title="Permanent link">&para;</a></h3>
 <p>Multilingual NLU model is a language-agnostic model that understands over 100 languages. </p>
 <ul>
 <li>Translation of user input is not required as the model is pre-trained to understand over 100 languages </li>
 <li>As the model is language agnostic, you can train the model in any of your preferred languages or a combination of languages. </li>
 <li>This model supports fewer configurations as compared to the language-specific NLU models.</li>
 </ul>
-<h1 id="language-enablement-options">Language Enablement Options<a class="headerlink" href="#language-enablement-options" title="Permanent link">&para;</a></h1>
+<h2 id="language-enablement-options">Language Enablement Options<a class="headerlink" href="#language-enablement-options" title="Permanent link">&para;</a></h2>
 <p>The platform offers various options for you to enable additional languages. You can choose a combination of Conversation Language, NLU Language, Input Translation, and Response Translation that suits your needs.</p>
-<h2 id="scenario-1-enabling-a-language-in-which-you-can-train-as-well">Scenario 1: Enabling a language in which you can train as well<a class="headerlink" href="#scenario-1-enabling-a-language-in-which-you-can-train-as-well" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-enabling-a-language-in-which-you-can-train-as-well">Scenario 1: Enabling a language in which you can train as well<a class="headerlink" href="#scenario-1-enabling-a-language-in-which-you-can-train-as-well" title="Permanent link">&para;</a></h3>
 <p>Example</p>
 <table border="1">
   <tr>
@@ -3356,7 +3486,7 @@
 <li>The Conversation Language and the NLU Language will be the same. </li>
 <li>Input Translation and Response Translation are not required for this flow.</li>
 </ul>
-<h2 id="scenario-2-enabling-a-language-using-another-language-as-nlu-language">Scenario 2: Enabling a language using another language as NLU Language<a class="headerlink" href="#scenario-2-enabling-a-language-using-another-language-as-nlu-language" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-2-enabling-a-language-using-another-language-as-nlu-language">Scenario 2: Enabling a language using another language as NLU Language<a class="headerlink" href="#scenario-2-enabling-a-language-using-another-language-as-nlu-language" title="Permanent link">&para;</a></h3>
 <p>Example</p>
 <table border="1">
   <tr>
@@ -3397,7 +3527,7 @@
 <li>Input Translation is required for this flow to translate the user’s input to the NLU Language. </li>
 <li>You will need to enable the Response Translation option if the responses are defined in a language other than the conversation language.</li>
 </ul>
-<h2 id="scenario-3-enabling-a-language-using-the-multilingual-nlu-model">Scenario 3: Enabling a language using the Multilingual NLU model<a class="headerlink" href="#scenario-3-enabling-a-language-using-the-multilingual-nlu-model" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-3-enabling-a-language-using-the-multilingual-nlu-model">Scenario 3: Enabling a language using the Multilingual NLU model<a class="headerlink" href="#scenario-3-enabling-a-language-using-the-multilingual-nlu-model" title="Permanent link">&para;</a></h3>
 <p>Example</p>
 <table border="1">
   <tr>
@@ -3438,9 +3568,9 @@
 <li>Input Translation is not required for this flow as the multi-lingual model understands over 100 languages. </li>
 <li>You will need to enable the Response Translation option if the responses are defined in a language other than the conversation language.</li>
 </ul>
-<h1 id="language-detection-and-selection">Language Detection and Selection<a class="headerlink" href="#language-detection-and-selection" title="Permanent link">&para;</a></h1>
+<h2 id="language-detection-and-selection">Language Detection and Selection<a class="headerlink" href="#language-detection-and-selection" title="Permanent link">&para;</a></h2>
 <p>Multilingual virtual assistants auto-detect and switch language based on the user’s utterance. An exception to this rule is when the user is expected to enter a value against an entity and the user input satisfies that entity’s criteria.</p>
-<h2 id="language-detection">Language Detection<a class="headerlink" href="#language-detection" title="Permanent link">&para;</a></h2>
+<h3 id="language-detection">Language Detection<a class="headerlink" href="#language-detection" title="Permanent link">&para;</a></h3>
 <p>There are three ways an assistant can detect the language based upon the user utterance:</p>
 <ul>
 <li><strong>By Default</strong>: Kore.ai’s platform uses its own language detection algorithm to detect language from the user utterance. This is the default setting and the end user’s language will be detected by the platform.</li>
@@ -3450,7 +3580,7 @@
 </ul>
 <p>The assistant continues to communicate with the user in the same language. If the user switches to another enabled language anytime later, the assistant changes to the new language automatically.</p>
 <p>If the assistant fails to detect a user’s language with high confidence, it requests the user to select a preferred language from the list of enabled options.</p>
-<h2 id="language-selection">Language Selection<a class="headerlink" href="#language-selection" title="Permanent link">&para;</a></h2>
+<h3 id="language-selection">Language Selection<a class="headerlink" href="#language-selection" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>The virtual assistant identifies user language from every utterance. In case a change is detected, it will get a confirmation from the user regarding the switch and will proceed as per the user response.  These standard responses can be customized using the getCurrentOptions utility, <a href="https://developer.kore.ai/docs/bots/advanced-topics/koreutil-libraries/#koreUtilgetCurrentOptions">see here for more</a>.  </p>
