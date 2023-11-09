@@ -3073,63 +3073,62 @@
 </li>
 </ul>
 <p>For example, you can PUT a value into the session using the <code>UserSession</code> variable where the key is defined as <code>fullName</code> based on the GET from the two <code>UserContext</code> variables.</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>var name = UserContext.get(&quot;firstName&quot;)+UserContext.get(&quot;lastName&quot;);
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>var name = UserContext.get(&quot;firstName&quot;)+UserContext.get(&quot;lastName&quot;);
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>UserSession.put(&quot;fullName&quot;) = name;
 </span></code></pre></div>
-* <strong>UserSession</strong> – A key/value pair that you can define for this specific user for all assistants in an enterprise. </p>
-<div class="language-text highlight"><pre><span></span><code>For example, you may want to store a user location to make it available to all assistants, such as a user home address for commerce, transportation, and home delivery services.
-
-You can persist default location data as **HomeLocation (UserSession)** with the following JavaScript code:
-
-```
-var location = {
-&quot;title&quot;: labels[location],
-&quot;value&quot;: {
-&quot;latitude&quot;: location.latitude,
-&quot;longitude&quot;: request.location.longitude
-}
-};
-UserSession.put(&#39;HomeLocation&#39;, location, &#39;20000&#39;);
-```
-</code></pre></div>
+<ul>
+<li><strong>UserSession</strong> – A key/value pair that you can define for this specific user for all assistants in an enterprise. </li>
+</ul>
+<p>For example, you may want to store a user location to make it available to all assistants, such as a user home address for commerce, transportation, and home delivery services. </p>
+<p>You can persist default location data as <strong>HomeLocation (UserSession)</strong> with the following JavaScript code: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>var location = {
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&quot;title&quot;: labels[location],
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&quot;value&quot;: {
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>&quot;latitude&quot;: location.latitude,
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>&quot;longitude&quot;: request.location.longitude
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>}
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>};
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>UserSession.put(&#39;HomeLocation&#39;, location, &#39;20000&#39;);
+</span></code></pre></div>
 <ul>
 <li>
 <p><strong>BotUserSession</strong> – A key/value pair that you can define to a specific bot based on the inputs by a specific user. For example, you may want to persist a user location for more than one task of a Bot. </p>
 <p>For a travel bot, the user may be able to book a flight and a hotel based on the same home and destination addresses. </p>
-<p>For example, you can persist the default home and destination data as <strong>HomeLocation (BotUserSession)</strong> and <strong>DestinationLocation (BotUserSession)</strong> with the following JavaScript code: </p>
-<p><code>var homelocation = {
-"title": labels[request.sourceLocation],
-"value": {
-"latitude": request.sourceLocation.latitude,
-"longitude": request.sourceLocation.longitude
-}
-};
-BotUserSession.put('HomeLocation', homelocation, '20000');
-var destlocation = {
-"title": labels[request.destLocation],
-"value": {
-"latitude": request.destLocation.latitude,
-"longitude": request.destLocation.longitude
-}
-};
-  BotUserSession.put('DestinationLocation', destlocation, '20000');</code></p>
+<p>For example, you can persist the default home and destination data as <strong>HomeLocation (BotUserSession)</strong> and <strong>DestinationLocation (BotUserSession)</strong> with the following JavaScript code:</p>
 </li>
 </ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>var homelocation = {
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>&quot;title&quot;: labels[request.sourceLocation],
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>&quot;value&quot;: {
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>&quot;latitude&quot;: request.sourceLocation.latitude,
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>&quot;longitude&quot;: request.sourceLocation.longitude
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>}
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>};
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>BotUserSession.put(&#39;HomeLocation&#39;, homelocation, &#39;20000&#39;);
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>var destlocation = {
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>&quot;title&quot;: labels[request.destLocation],
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>&quot;value&quot;: {
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>&quot;latitude&quot;: request.destLocation.latitude,
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>&quot;longitude&quot;: request.destLocation.longitude
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>}
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>};
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>BotUserSession.put(&#39;DestinationLocation&#39;, destlocation, &#39;20000&#39;);
+</span></code></pre></div>
 <h2 id="standard-keys">Standard Keys<a class="headerlink" href="#standard-keys" title="Permanent link">&para;</a></h2>
 <p>In addition to session and context keys, there are Kore.ai variable placeholders for reusable data. Select one of:</p>
 <p><strong><em>labels</em></strong> – Used to return the friendly label in place of a GUID. For example, when user data is requested from a web service API, the ID of a project or workspace returned is a GUID. You can use the <code>_labels_</code> key to show the user-friendly name of the GUID to the end-user instead of the GUID. In Kore.ai, a drop-down control stores the response for the <code>_labels_</code> key as, for example: </p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>{
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    &quot;_labels_&quot;: {
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        &quot;15379386734832&quot;: &quot;roadlabs.com&quot;,
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        &quot;26377329985341&quot;: &quot;Test Project&quot;,
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        &quot;workspace&quot;: &quot;roadlabs.com&quot;,
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        &quot;project&quot;: &quot;Test Project&quot;
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    },
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    &quot;_fields_&quot;: {
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        &quot;workspace&quot;: &quot;15379386734832&quot;,
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>        &quot;project&quot;: &quot;26377329985341&quot;
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    }
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>{
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    &quot;_labels_&quot;: {
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        &quot;15379386734832&quot;: &quot;roadlabs.com&quot;,
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        &quot;26377329985341&quot;: &quot;Test Project&quot;,
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        &quot;workspace&quot;: &quot;roadlabs.com&quot;,
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        &quot;project&quot;: &quot;Test Project&quot;
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    },
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    &quot;_fields_&quot;: {
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        &quot;workspace&quot;: &quot;15379386734832&quot;,
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>        &quot;project&quot;: &quot;26377329985341&quot;
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    }
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>}
 </span></code></pre></div>
 <p>To use the <code>_labels_</code> key in a response:</p>
 
