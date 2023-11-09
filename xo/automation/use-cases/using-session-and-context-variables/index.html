@@ -3031,6 +3031,8 @@
 
 <h2 id="session-variable-types">Session Variable Types<a class="headerlink" href="#session-variable-types" title="Permanent link">&para;</a></h2>
 <p>The following types of session variables are available on the XO Platform:</p>
+<ul>
+<li>
 <p><strong>EnterpriseContext</strong> – A key/value pair available to all assistants and all users in an enterprise. For example, with the GitHub bot, a user will need to access one or more enterprise repositories. You can persist the repository data as <strong>Gitrepository (Enterprise Context)</strong> with the following JavaScript code: </p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>var userRepository = {
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&quot;title&quot;: _labels_[repository],
@@ -3038,7 +3040,7 @@
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>};
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>EnterpriseContext.put(&#39;Gitrepository&#39;, userRepository, 200000);
 </span></code></pre></div>
-<ul>
+</li>
 <li>
 <p><strong>BotContext</strong> – A key/value pair available to all users of this specific bot. For example, you may want to set up a default currency for financial transactions for a session based on a user’s location. You can persist the default currency data as <strong>currency (Bot Context)</strong> with the following JavaScript code:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>var defaultCurrency = { TODO Custom JavaScript for location-based currency }
@@ -3070,15 +3072,13 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <p>For example, you can PUT a value into the session using the <code>UserSession</code> variable where the key is defined as <code>fullName</code> based on the GET from the two <code>UserContext</code> variables.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>var name = UserContext.get(&quot;firstName&quot;)+UserContext.get(&quot;lastName&quot;);
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>UserSession.put(&quot;fullName&quot;) = name;
 </span></code></pre></div>
-<ul>
-<li><strong>UserSession</strong> – A key/value pair that you can define for this specific user for all assistants in an enterprise. </li>
-</ul>
+</li>
+<li>
+<p><strong>UserSession</strong> – A key/value pair that you can define for this specific user for all assistants in an enterprise. </p>
 <p>For example, you may want to store a user location to make it available to all assistants, such as a user home address for commerce, transportation, and home delivery services. </p>
 <p>You can persist default location data as <strong>HomeLocation (UserSession)</strong> with the following JavaScript code: </p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>var location = {
@@ -3090,13 +3090,11 @@
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>};
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>UserSession.put(&#39;HomeLocation&#39;, location, &#39;20000&#39;);
 </span></code></pre></div>
-<ul>
+</li>
 <li>
 <p><strong>BotUserSession</strong> – A key/value pair that you can define to a specific bot based on the inputs by a specific user. For example, you may want to persist a user location for more than one task of a Bot. </p>
 <p>For a travel bot, the user may be able to book a flight and a hotel based on the same home and destination addresses. </p>
 <p>For example, you can persist the default home and destination data as <strong>HomeLocation (BotUserSession)</strong> and <strong>DestinationLocation (BotUserSession)</strong> with the following JavaScript code:</p>
-</li>
-</ul>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>var homelocation = {
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>&quot;title&quot;: labels[request.sourceLocation],
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>&quot;value&quot;: {
@@ -3114,6 +3112,8 @@
 </span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>};
 </span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>BotUserSession.put(&#39;DestinationLocation&#39;, destlocation, &#39;20000&#39;);
 </span></code></pre></div>
+</li>
+</ul>
 <h2 id="standard-keys">Standard Keys<a class="headerlink" href="#standard-keys" title="Permanent link">&para;</a></h2>
 <p>In addition to session and context keys, there are Kore.ai variable placeholders for reusable data. Select one of:</p>
 <p><strong><em>labels</em></strong> – Used to return the friendly label in place of a GUID. For example, when user data is requested from a web service API, the ID of a project or workspace returned is a GUID. You can use the <code>_labels_</code> key to show the user-friendly name of the GUID to the end-user instead of the GUID. In Kore.ai, a drop-down control stores the response for the <code>_labels_</code> key as, for example: </p>
