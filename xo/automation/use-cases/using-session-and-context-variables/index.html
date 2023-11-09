@@ -3036,7 +3036,7 @@
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&quot;title&quot;: _labels_[repository],
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>&quot;value&quot;: repository
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>};
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>`EnterpriseContext.put(&#39;Gitrepository&#39;, userRepository, 200000);
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>EnterpriseContext.put(&#39;Gitrepository&#39;, userRepository, 200000);
 </span></code></pre></div>
 <ul>
 <li>
@@ -3118,7 +3118,7 @@ var destlocation = {
 <h2 id="standard-keys">Standard Keys<a class="headerlink" href="#standard-keys" title="Permanent link">&para;</a></h2>
 <p>In addition to session and context keys, there are Kore.ai variable placeholders for reusable data. Select one of:</p>
 <p><strong><em>labels</em></strong> – Used to return the friendly label in place of a GUID. For example, when user data is requested from a web service API, the ID of a project or workspace returned is a GUID. You can use the <code>_labels_</code> key to show the user-friendly name of the GUID to the end-user instead of the GUID. In Kore.ai, a drop-down control stores the response for the <code>_labels_</code> key as, for example: </p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>{
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>{
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    &quot;_labels_&quot;: {
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        &quot;15379386734832&quot;: &quot;roadlabs.com&quot;,
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        &quot;26377329985341&quot;: &quot;Test Project&quot;,
@@ -3131,8 +3131,9 @@ var destlocation = {
 </span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    }
 </span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>}
 </span></code></pre></div>
-<code>To use the</code><em>labels</em>` key in a response: </p>
-<p><code>print('&lt;;a href="https://app.asana.com/0/' + workspace.id + '/' + id + '/f" target="_blank"&gt;' + title + '&amp;lt;/a&gt; in workspace '+_labels_[workspace.id]);</code></p>
+<p>To use the <code>_labels_</code> key in a response:</p>
+
+<p><code>print('&lt;a href="https://app.asana.com/0/' + workspace.id + '/' + id + '/f" target="_blank"&gt;' + title + '&lt;/a&gt; in workspace '+_labels_[workspace.id]);</code></p>
 <ul><li><b>_tenant_</b> – Used to return the tenant for the enterprise when defined. For example, <i>JIRA</i> requires a tenant for URLs, such as <b>myteam</b>, in <code>https://myteam.atlassian.net/browse/RTM-1978</code>. You can use the <code>_tenant_</code> key to build a link in a task response such as: <code>var title = request.fields.issuetype.name + ' <a href ="https://' + _tenant_ + '/browse/' + response.key + '" target = "_blank">' + request.fields.summary + '</a>  has been created.';</code></li>
 <li><b>_fields_</b> – Used to return an action task field input provided by the end-user that is not part of a payload response. For example, in a <i>JIRA</i> action task, the end-user is prompted to enter a workspace name. You can use the <code>_fields_</code> key to store the end-user input as: 
 <code>_fields_["workspace"]</code></li>
