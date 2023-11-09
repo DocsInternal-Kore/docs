@@ -3116,7 +3116,8 @@
 </ul>
 <h2 id="standard-keys">Standard Keys<a class="headerlink" href="#standard-keys" title="Permanent link">&para;</a></h2>
 <p>In addition to session and context keys, there are Kore.ai variable placeholders for reusable data. Select one of:</p>
-<p><strong><em>labels</em></strong> – Used to return the friendly label in place of a GUID. For example, when user data is requested from a web service API, the ID of a project or workspace returned is a GUID. You can use the <code>_labels_</code> key to show the user-friendly name of the GUID to the end-user instead of the GUID. In Kore.ai, a drop-down control stores the response for the <code>_labels_</code> key as, for example: </p>
+<ul><li><b>_labels_</b> – Used to return the friendly label in place of a GUID. For example, when user data is requested from a web service API, the ID of a project or workspace returned is a GUID. You can use the `_labels_` key to show the user-friendly name of the GUID to the end-user instead of the GUID. In Kore.ai, a drop-down control stores the response for the `_labels_` key as, for example:
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>{
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    &quot;_labels_&quot;: {
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        &quot;15379386734832&quot;: &quot;roadlabs.com&quot;,
@@ -3130,6 +3131,7 @@
 </span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    }
 </span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>}
 </span></code></pre></div>
+</li></ul>
 <p>To use the <code>_labels_</code> key in a response:</p>
 
 <p><code>print('&lt;a href="https://app.asana.com/0/' + workspace.id + '/' + id + '/f" target="_blank"&gt;' + title + '&lt;/a&gt; in workspace '+_labels_[workspace.id]);</code></p>
