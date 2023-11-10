@@ -17,7 +17,7 @@
     
     
       
-        <title>**Add and Enable a New Language API** - Kore ai Docs</title>
+        <title>**Export Batch Test Suite API** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#add-and-enable-a-new-language-api" class="md-skip">
+        <a href="#export-batch-test-suite-api" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Add and Enable a New Language API**
+              **Export Batch Test Suite API**
             
           </span>
         </div>
@@ -2885,8 +2885,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#path-parameters" class="md-nav__link">
-    Path Parameters
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
   </a>
   
 </li>
@@ -2931,8 +2931,8 @@
 
 
 
-<h1 id="add-and-enable-a-new-language-api"><strong>Add and Enable a New Language API</strong><a class="headerlink" href="#add-and-enable-a-new-language-api" title="Permanent link">&para;</a></h1>
-<p>To initiate the addition and enablement of a new language for a virtual assistant.</p>
+<h1 id="export-batch-test-suite-api"><strong>Export Batch Test Suite API</strong><a class="headerlink" href="#export-batch-test-suite-api" title="Permanent link">&para;</a></h1>
+<p>To export the test cases of a given Batch Test Suite and get a link to download the file once the export is completed.</p>
 <table>
   <tr>
    <td><strong>Method</strong>
@@ -2943,7 +2943,7 @@
   <tr>
    <td><strong>Endpoint</strong>
    </td>
-   <td><code>https://{{host}}/api/{{version-Id}}/public/bot/{{botId}}/language</code>
+   <td><code>https://{host}/api/public/bot/{botId}/testsuite/{testSuiteName}/export</code>
    </td>
   </tr>
   <tr>
@@ -2966,64 +2966,19 @@ See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_
    <td>
 <ul>
 
-<li>Bot Builder: Language Configuration
+<li>Bot Builder: Batch Tests Management
 
-<li>Admin Console: Language Settings > Language Management
+<li>Admin Console: Batch Tests Management
 </li>
 </ul>
    </td>
   </tr>
 </table>
 
-<h2 id="path-parameters">Path Parameters<a class="headerlink" href="#path-parameters" title="Permanent link">&para;</a></h2>
+<h2 id="query-parameters">Query Parameters<a class="headerlink" href="#query-parameters" title="Permanent link">&para;</a></h2>
 <table>
   <tr>
    <td><strong>PARAMETER</strong>
-   </td>
-   <td><strong>DESCRIPTION</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>host
-   </td>
-   <td>The environment URL. For example, <code>https://bots.kore.ai</code>.
-   </td>
-  </tr>
-</table>
-
-<h2 id="sample-request">Sample Request<a class="headerlink" href="#sample-request" title="Permanent link">&para;</a></h2>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">curl</span><span class="w"> </span><span class="mi">-</span><span class="err">X</span><span class="w"> </span><span class="err">POST</span><span class="w"> </span><span class="err">\</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//{{host}}/api/{{version-Id}}/public/bot/{{botId}}/language \</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="mi">-</span><span class="err">H</span><span class="w"> </span><span class="err">&#39;Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="err">&#39;</span><span class="w"> </span><span class="err">\</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="mi">-</span><span class="err">H</span><span class="w"> </span><span class="err">&#39;au</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="err">YOUR_JWT_ACCESS_TOKEN&#39;</span><span class="w"> </span><span class="err">\</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="mi">-</span><span class="err">d</span><span class="w"> </span><span class="err">&#39;</span><span class="p">[</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nt">&quot;enableLanguage&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">&quot;langDefinitionMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">&quot;baseLanguage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;language_code&quot;</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;advancedConfig/fileUpload&quot;</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">&quot;fileId&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">&quot;preferredData&quot;</span><span class="p">:{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">&quot;Training&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nt">&quot;Faqs&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nt">&quot;ontology&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nt">&quot;smalltalk&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nt">&quot;traits&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">},</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nt">&quot;multiLingualConfigurations&quot;</span><span class="p">:{</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nt">&quot;nluLanguage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;language_code&quot;</span><span class="p">,</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nt">&quot;inputTranslation&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nt">&quot;responseTranslation&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="p">}]</span><span class="err">&#39;</span>
-</span></code></pre></div>
-<h2 id="body-parameters">Body Parameters<a class="headerlink" href="#body-parameters" title="Permanent link">&para;</a></h2>
-<table>
-  <tr>
-   <td><strong>PARAMETER</strong>
-   </td>
-   <td><strong>SUB-PARAMETER</strong>
    </td>
    <td><strong>DESCRIPTION</strong>
    </td>
@@ -3031,124 +2986,48 @@ See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_
    </td>
   </tr>
   <tr>
-   <td>enableLanguage
+   <td><strong>host</strong>
    </td>
-   <td>
-   </td>
-   <td>The language to be enabled based on the language code.
+   <td>The environment URL. For example, <code>https://bots.kore.ai</code>
    </td>
    <td>Required
    </td>
   </tr>
   <tr>
-   <td>langDefinitionMode
+   <td><strong>BotID</strong>
    </td>
-   <td>
-   </td>
-   <td>
+   <td>The <em>Bot ID</em> or <em>Stream ID</em> can be accessed under <strong>General Settings</strong> on the Bot Builder.
    </td>
    <td>Required
    </td>
   </tr>
   <tr>
-   <td>
+   <td><strong>testSuiteName</strong>
    </td>
-   <td>langDefinitionMode.baseLanguage
-   </td>
-   <td>Base language of the Virtual Assistant.
-   </td>
-   <td>Optional
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>langDefinitionMode.type
-   </td>
-   <td>Type of language enablement <strong>Basic</strong>, <strong>advancedConfig</strong>, or <strong>fileUpload</strong>.
-   </td>
-   <td>Optional
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>langDefinitionMode.fileId
-   </td>
-   <td>The <strong>file ID</strong> for handling the file upload if the <strong>fileUpload</strong> language enablement is selected.
-   </td>
-   <td>Optional
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>langDefinitionMode.preferredData
-   </td>
-   <td>If the <strong>advancedConfig</strong> language enablement is selected, the True/False configuration setting for “training”, “faqs”, “ontology”, “Smalltalk” and “traits” keys should be included.
-   </td>
-   <td>Optional
-   </td>
-  </tr>
-  <tr>
-   <td>multiLingualConfigurations
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>multiLingualConfigurations.nluLanguage
-   </td>
-   <td>Refers to the language code of the bot language.
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>multiLingualConfigurations.inputTranslation
-   </td>
-   <td>Refers to True/False setting for the input language translation to English.
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>multiLingualConfigurations.responseTranslation
-   </td>
-   <td>Refers to the True/False setting for the response language translation to English.
+   <td>The name of the test suite created on the Bot Builder for the export.
+<p>
+Note: Only Custom Batch Test Suites can be exported.
    </td>
    <td>Required
    </td>
   </tr>
 </table>
 
+<h2 id="sample-request">Sample Request<a class="headerlink" href="#sample-request" title="Permanent link">&para;</a></h2>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">curl</span><span class="w"> </span><span class="mi">-</span><span class="err">X</span><span class="w"> </span><span class="err">POST</span><span class="w"> </span><span class="err">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//{host}/api/public/bot/{botId}/testsuite/{testSuiteName}/export \</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="mi">-</span><span class="err">H</span><span class="w"> </span><span class="err">&#39;au</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="p">{{</span><span class="err">YOUR_JWT_ACCESS_TOKEN</span><span class="p">}}</span><span class="err">&#39;</span><span class="w"> </span><span class="err">\</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="mi">-</span><span class="err">H</span><span class="w"> </span><span class="err">&#39;bo</span><span class="kc">t</span><span class="mi">-</span><span class="err">la</span><span class="kc">n</span><span class="err">guage</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">la</span><span class="kc">n</span><span class="err">guage</span><span class="mi">-</span><span class="err">code</span><span class="p">}</span><span class="err">&#39;</span><span class="w"> </span><span class="err">\</span>
+</span></code></pre></div>
+<h2 id="body-parameters">Body Parameters<a class="headerlink" href="#body-parameters" title="Permanent link">&para;</a></h2>
+<p>No body parameters are passed.</p>
 <h2 id="sample-response">Sample Response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h2>
-<p>For success case:</p>
 <p>```json
-[{
-"message": "Enabled language successfully",
-"configurationDetails": {
-"dialogs":3,
-"alerts":0,
-"actions":0,
-"knowledgetTasks":0,
-"smallTalk":1,
-"panels":0,
-"widgets":0
-}
-}]</p>
-<h1 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h1>
-<p><a href="/docs/xo/apis/bot-export.md">How to generate the JWT Token</a>.</p>
+{
+    "downloadUrl": {{downloadURL}},
+    "name": "Batch Test Name",
+    "description": "Batch Test Description"
+}</p>
 
 
   

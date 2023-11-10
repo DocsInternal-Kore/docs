@@ -17,7 +17,7 @@
     
     
       
-        <title>**Add and Enable a New Language API** - Kore ai Docs</title>
+        <title>**Get Batch Test Suites API** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#add-and-enable-a-new-language-api" class="md-skip">
+        <a href="#get-batch-test-suites-api" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Add and Enable a New Language API**
+              **Get Batch Test Suites API**
             
           </span>
         </div>
@@ -2931,19 +2931,19 @@
 
 
 
-<h1 id="add-and-enable-a-new-language-api"><strong>Add and Enable a New Language API</strong><a class="headerlink" href="#add-and-enable-a-new-language-api" title="Permanent link">&para;</a></h1>
-<p>To initiate the addition and enablement of a new language for a virtual assistant.</p>
+<h1 id="get-batch-test-suites-api"><strong>Get Batch Test Suites API</strong><a class="headerlink" href="#get-batch-test-suites-api" title="Permanent link">&para;</a></h1>
+<p>To get the list of Batch Test Suites available for a bot.</p>
 <table>
   <tr>
    <td><strong>Method</strong>
    </td>
-   <td>POST
+   <td>GET
    </td>
   </tr>
   <tr>
    <td><strong>Endpoint</strong>
    </td>
-   <td><code>https://{{host}}/api/{{version-Id}}/public/bot/{{botId}}/language</code>
+   <td><code>https://{host}/api/public/bot/{botId}/testsuite?skip={skip}&limit={limit}</code>
    </td>
   </tr>
   <tr>
@@ -2966,9 +2966,9 @@ See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_
    <td>
 <ul>
 
-<li>Bot Builder: Language Configuration
+<li>Bot Builder: Batch Tests Management
 
-<li>Admin Console: Language Settings > Language Management
+<li>Admin Console: Batch Tests Management
 </li>
 </ul>
    </td>
@@ -2982,173 +2982,379 @@ See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_
    </td>
    <td><strong>DESCRIPTION</strong>
    </td>
+   <td><strong>MANDATE</strong>
+   </td>
   </tr>
   <tr>
-   <td>host
+   <td><strong>host</strong>
    </td>
-   <td>The environment URL. For example, <code>https://bots.kore.ai</code>.
+   <td>The environment URL. For example, <code>https://bots.kore.ai</code>
+   </td>
+   <td>Required
+   </td>
+  </tr>
+  <tr>
+   <td><strong>BotID</strong>
+   </td>
+   <td>Bot ID or Stream ID. You can access it from the General Settings page of the bot.
+   </td>
+   <td>Required
+   </td>
+  </tr>
+  <tr>
+   <td><strong>skip</strong>
+   </td>
+   <td>Number of records to skip before fetching.
+   </td>
+   <td>Optional
+   </td>
+  </tr>
+  <tr>
+   <td><strong>limit</strong>
+   </td>
+   <td>The number of records to fetch.
+   </td>
+   <td>Optional
    </td>
   </tr>
 </table>
 
 <h2 id="sample-request">Sample Request<a class="headerlink" href="#sample-request" title="Permanent link">&para;</a></h2>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">curl</span><span class="w"> </span><span class="mi">-</span><span class="err">X</span><span class="w"> </span><span class="err">POST</span><span class="w"> </span><span class="err">\</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//{{host}}/api/{{version-Id}}/public/bot/{{botId}}/language \</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="mi">-</span><span class="err">H</span><span class="w"> </span><span class="err">&#39;Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="err">&#39;</span><span class="w"> </span><span class="err">\</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="mi">-</span><span class="err">H</span><span class="w"> </span><span class="err">&#39;au</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="err">YOUR_JWT_ACCESS_TOKEN&#39;</span><span class="w"> </span><span class="err">\</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="mi">-</span><span class="err">d</span><span class="w"> </span><span class="err">&#39;</span><span class="p">[</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nt">&quot;enableLanguage&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">&quot;langDefinitionMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">&quot;baseLanguage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;language_code&quot;</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;advancedConfig/fileUpload&quot;</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">&quot;fileId&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">&quot;preferredData&quot;</span><span class="p">:{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">&quot;Training&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nt">&quot;Faqs&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nt">&quot;ontology&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nt">&quot;smalltalk&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nt">&quot;traits&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">},</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nt">&quot;multiLingualConfigurations&quot;</span><span class="p">:{</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nt">&quot;nluLanguage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;language_code&quot;</span><span class="p">,</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nt">&quot;inputTranslation&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nt">&quot;responseTranslation&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="p">}]</span><span class="err">&#39;</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">curl</span><span class="w"> </span><span class="mi">-</span><span class="err">X</span><span class="w"> </span><span class="err">GET</span><span class="w"> </span><span class="err">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//{host}/api/public/bot/{botId}/testsuite?skip={skip}&amp;limit={limit} \</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="mi">--</span><span class="err">header</span><span class="w"> </span><span class="err">&#39;au</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">jw</span><span class="kc">t</span><span class="mi">-</span><span class="kc">t</span><span class="err">oke</span><span class="kc">n</span><span class="p">}</span><span class="err">&#39;</span><span class="w"> </span><span class="err">\</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="mi">--</span><span class="err">header</span><span class="w"> </span><span class="err">&#39;bo</span><span class="kc">t</span><span class="mi">-</span><span class="err">la</span><span class="kc">n</span><span class="err">guage</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">la</span><span class="kc">n</span><span class="err">guage</span><span class="mi">-</span><span class="err">code</span><span class="p">}</span><span class="err">&#39;</span>
 </span></code></pre></div>
 <h2 id="body-parameters">Body Parameters<a class="headerlink" href="#body-parameters" title="Permanent link">&para;</a></h2>
-<table>
-  <tr>
-   <td><strong>PARAMETER</strong>
-   </td>
-   <td><strong>SUB-PARAMETER</strong>
-   </td>
-   <td><strong>DESCRIPTION</strong>
-   </td>
-   <td><strong>MANDATE</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>enableLanguage
-   </td>
-   <td>
-   </td>
-   <td>The language to be enabled based on the language code.
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td>langDefinitionMode
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>langDefinitionMode.baseLanguage
-   </td>
-   <td>Base language of the Virtual Assistant.
-   </td>
-   <td>Optional
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>langDefinitionMode.type
-   </td>
-   <td>Type of language enablement <strong>Basic</strong>, <strong>advancedConfig</strong>, or <strong>fileUpload</strong>.
-   </td>
-   <td>Optional
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>langDefinitionMode.fileId
-   </td>
-   <td>The <strong>file ID</strong> for handling the file upload if the <strong>fileUpload</strong> language enablement is selected.
-   </td>
-   <td>Optional
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>langDefinitionMode.preferredData
-   </td>
-   <td>If the <strong>advancedConfig</strong> language enablement is selected, the True/False configuration setting for “training”, “faqs”, “ontology”, “Smalltalk” and “traits” keys should be included.
-   </td>
-   <td>Optional
-   </td>
-  </tr>
-  <tr>
-   <td>multiLingualConfigurations
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>multiLingualConfigurations.nluLanguage
-   </td>
-   <td>Refers to the language code of the bot language.
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>multiLingualConfigurations.inputTranslation
-   </td>
-   <td>Refers to True/False setting for the input language translation to English.
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>multiLingualConfigurations.responseTranslation
-   </td>
-   <td>Refers to the True/False setting for the response language translation to English.
-   </td>
-   <td>Required
-   </td>
-  </tr>
-</table>
-
+<p>No body parameters are passed.</p>
 <h2 id="sample-response">Sample Response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h2>
-<p>For success case:</p>
 <p>```json
-[{
-"message": "Enabled language successfully",
-"configurationDetails": {
-"dialogs":3,
-"alerts":0,
-"actions":0,
-"knowledgetTasks":0,
-"smallTalk":1,
-"panels":0,
-"widgets":0
-}
-}]</p>
-<h1 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h1>
-<p><a href="/docs/xo/apis/bot-export.md">How to generate the JWT Token</a>.</p>
+{
+    "count": 36,
+    "moreAvailable": true,
+    "ts-2xxxxxxc-exx0-5fxx-bxx2-3xxxxxxxxxxf": {
+        "testSuiteType": "custom",
+        "name": "sdsa",
+        "description": "dfgfd",
+        "results": [
+            {
+                "_id": "ts-2xxxxxxc-exx0-5fxx-bxx2-3xxxxxxxxxxf",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 0,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 0,
+                    "failure": 2,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 2,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "0.00",
+                "precision": "0.00",
+                "f1_score": "0.00"
+            },
+            {
+                "_id": "tx-e1xxxxxx-8cxx-5xx4-8xx8-ecxxxxxxxxxd",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 0,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 0,
+                    "failure": 2,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 2,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "0.00",
+                "precision": "0.00",
+                "f1_score": "0.00"
+            },
+            {
+                "_id": "tx-0xxxxxx9-4xx9-5xxa-9xx5-c8xxxxxxxxxx",
+                "version": "inDevelopment"
+            },
+            {
+                "_id": "tx-a1xxxxxx-6xx3-5xx2-8xxa-35xxxxxxxxxx",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 0,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 0,
+                    "failure": 2,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 2,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "0.00",
+                "precision": "0.00",
+                "f1_score": "0.00"
+            },
+            {
+                "_id": "tx-1axxxxxx-0axx-54xx-8xxc-8fxxxxxxxxb",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 0,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 0,
+                    "failure": 2,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 2,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "0.00",
+                "precision": "0.00",
+                "f1_score": "0.00"
+            },
+            {
+                "_id": "tx-8xxxxxxa-3xx2-5xxe-98xx-83xxxxxxxxxx",
+                "version": "inDevelopment"
+            },
+            {
+                "_id": "tx-2bxxxxxx-abxx-5xxb-9xx9-75xxxxxxxxxx",
+                "version": "inDevelopment"
+            },
+            {
+                "_id": "tx-7xxxxxx0-2xx5-5xx4-b3xx-8fxxxxxxxxxx",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 1,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 1,
+                    "success": 1,
+                    "failure": 1,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 0,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "0.50",
+                "precision": "1.00",
+                "f1_score": "0.67"
+            }
+        ]
+    },
+    "Last100sentences": {
+        "testSuiteType": "prebuilt",
+        "results": [
+            {
+                "_id": "tx-dbxxxxxx-4xx5-5xx2-8xxc-baxxxxxxxxxx",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 0,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 0,
+                    "failure": 3,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 3,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "0.00",
+                "precision": "0.00",
+                "f1_score": "0.00"
+            },
+            {
+                "_id": "tx-8xxxxxx0-exxa-5xx6-8xx9-ddxxxxxxxxxx",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 0,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 0,
+                    "failure": 3,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 3,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "0.00",
+                "precision": "0.00",
+                "f1_score": "0.00"
+            },
+            {
+                "_id": "tx-7xxxxxx6-6xxa-5xxa-axx8-7xxxxxxxxxxa",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 0,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 0,
+                    "failure": 3,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 3,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "0.00",
+                "precision": "0.00",
+                "f1_score": "0.00"
+            },
+            {
+                "_id": "tx-2xxxxxx5-1exx-5xx4-8xx7-2xxxxxxxxxx4",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 0,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 0,
+                    "failure": 3,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 3,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "0.00",
+                "precision": "0.00",
+                "f1_score": "0.00"
+            },
+            {
+                "_id": "tx-4xxxxxx4-exx5-5xxf-8xx4-2xxxxxxxxxx9",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 3,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 3,
+                    "failure": 0,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 0,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "1.00",
+                "precision": "1.00",
+                "f1_score": "1.00"
+            },
+            {
+                "_id": "tx-0xxxxxxb-exx4-5xx9-bxx2-dxxxxxxxxxxa",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 2,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 2,
+                    "failure": 0,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 0,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "1.00",
+                "precision": "1.00",
+                "f1_score": "1.00"
+            }
+        ]
+    },
+    "AllMlUtterances": {
+        "testSuiteType": "prebuilt",
+        "results": [
+            {
+                "_id": "tx-exxxxxx5-1xx7-59xx-8xxa-c6xxxxxxxxxx",
+                "version": "inDevelopment"
+            },
+            {
+                "_id": "tx-2xxxxxx9-1xx2-5xxc-axx0-a8xxxxxxxxxx",
+                "version": "inDevelopment"
+            },
+            {
+                "_id": "tx-1xxxxxx2-8xxc-5xx4-bxx9-7xxxxxxxxxx7",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 2,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 2,
+                    "failure": 0,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 0,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "1.00",
+                "precision": "1.00",
+                "f1_score": "1.00"
+            },
+            {
+                "_id": "tx-c1xxxxxx-fexx-5axx-8xx8-79xxxxxxxxxx",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 2,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 2,
+                    "failure": 0,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 0,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "1.00",
+                "precision": "1.00",
+                "f1_score": "1.00"
+            },
+            {
+                "_id": "tx-3xxxxxx6-9xx3-5xx9-8xxc-eexxxxxxxxxx",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 2,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 2,
+                    "failure": 0,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 0,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "1.00",
+                "precision": "1.00",
+                "f1_score": "1.00"
+            },
+            {
+                "_id": "tx-8exxxxxx-cbxx-5xxb-axx0-15xxxxxxxxxx",
+                "version": "inDevelopment",
+                "results": {
+                    "TP": 2,
+                    "TN": 0,
+                    "FP": 0,
+                    "FN": 0,
+                    "success": 2,
+                    "failure": 0,
+                    "totalEntitiesCount": 0,
+                    "matchedEntitiesCount": 0,
+                    "failedUtteranceCount": 0,
+                    "failedEntitiesCount": 0
+                },
+                "recall": "1.00",
+                "precision": "1.00",
+                "f1_score": "1.00"
+            }
+        ]
+    }
+}</p>
 
 
   
