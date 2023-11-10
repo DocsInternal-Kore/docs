@@ -17,7 +17,7 @@
     
     
       
-        <title>**Using the Asana Action Templates** - Kore ai Docs</title>
+        <title>**Configuring the Azure OpenAI Action** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-the-asana-action-templates" class="md-skip">
+        <a href="#configuring-the-azure-openai-action" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Using the Asana Action Templates**
+              **Configuring the Azure OpenAI Action**
             
           </span>
         </div>
@@ -2885,50 +2885,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#asana-actions" class="md-nav__link">
-    Asana Actions
+  <a href="#authorizations-supported" class="md-nav__link">
+    Authorizations Supported
   </a>
   
-    <nav class="md-nav" aria-label="Asana Actions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-an-azure-openai-app" class="md-nav__link">
+    Step 1: Create an Azure OpenAI App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-enable-the-azure-openai-action" class="md-nav__link">
+    Step 2: Enable the Azure OpenAI Action
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Enable the Azure OpenAI Action">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-task-by-id" class="md-nav__link">
-    Get Task by ID
+  <a href="#pre-authorize-the-integration" class="md-nav__link">
+    Pre-authorize the Integration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#find-tasks-created-by-a-user" class="md-nav__link">
-    Find Tasks Created by a User
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#find-tasks-assigned-to-a-user" class="md-nav__link">
-    Find Tasks Assigned to a User
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list-all-projects" class="md-nav__link">
-    List All Projects
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list-all-users" class="md-nav__link">
-    List All Users
+  <a href="#allow-the-end-user-to-authorize" class="md-nav__link">
+    Allow the End User to Authorize
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-install-the-azure-openai-action-templates" class="md-nav__link">
+    Step 3: Install the Azure OpenAI Action Templates
+  </a>
   
 </li>
       
@@ -2951,433 +2951,180 @@
 
 
 
-<h1 id="using-the-asana-action-templates"><strong>Using the Asana Action Templates</strong><a class="headerlink" href="#using-the-asana-action-templates" title="Permanent link">&para;</a></h1>
-<p>You can use the <strong>Prebuilt Action Templates</strong> from your Asana integration to auto-create dialog tasks and test them using the <strong>Talk to Bot</strong> option.</p>
-<p>Steps to create a dialog task using Asana action templates:</p>
+<h1 id="configuring-the-azure-openai-action"><strong>Configuring the Azure OpenAI Action</strong><a class="headerlink" href="#configuring-the-azure-openai-action" title="Permanent link">&para;</a></h1>
+<p>The XO Platform lets you easily connect with the Azure OpenAI instance to find answers to your general queries. The Platform supports all common actions on Azure with ready-to-use pre-built dialog templates.</p>
+<p>This article explains how to authorize and enable the <strong>Azure OpenAI</strong> action and install the pre-built templates.</p>
+<h2 id="authorizations-supported">Authorizations Supported<a class="headerlink" href="#authorizations-supported" title="Permanent link">&para;</a></h2>
+<p>The Kore.ai XO Platform supports basic authentication, allowing Azure OpenAI integration to exchange data. For more information, read the <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/bot-authentication/" target="_blank">Bot Authorization Overview</a> article.</p>
+<p>The Kore.ai XO Platform supports the following authorization types for the Azure OpenAI integration:</p>
+<ul>
+<li><strong>Pre-Authorize the Integration</strong> – To make the integration process smoother for developers and customers, you can pre-authorize it by providing the necessary authorization credentials to obtain the access token.</li>
+<li><strong>Allow Users to Authorize the Integration</strong> – This method requires the end user to provide credentials during the conversation for authorization. This authorization process involves requesting permission for Kore.ai’s Azure OpenAI app to access an access token at runtime. To learn more about Azure OpenAI account types, see <a href="https://azure.microsoft.com/en-us/products/cognitive-services/openai-service" target="_blank">Azure OpenAI Service</a>.</li>
+</ul>
+<h2 id="step-1-create-an-azure-openai-app">Step 1: Create an Azure OpenAI App<a class="headerlink" href="#step-1-create-an-azure-openai-app" title="Permanent link">&para;</a></h2>
+<p><strong>Prerequisites</strong>:</p>
+<p>Before enabling the Azure OpenAI action, complete the following prerequisites:</p>
+<ul>
+<li>If you don’t have Azure OpenAI account credentials, create a developer account in Azure OpenAI and note down login credentials. Use the <a href="https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview" target="_blank">Azure OpenAI Service Documentation</a> for more information.</li>
+<li>Copy the <em>API Key</em>, <em>User Sub Domain</em>, and <em>Deployment ID</em> values and keep them for future use to enable the integration.</li>
+</ul>
+<p>Create an Azure OpenAI Service app and configure it on the Kore.ai XO Platform to establish a communication channel between Azure OpenAI and the Kore.ai XO Platform.</p>
+<p>Steps to create an Azure OpenAI service:</p>
 <ol>
-<li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong>.</li>
 <li>
-<p>Click <strong>Create a Dialog Task</strong>.<br />
-<a class="glightbox" href="../images/asana-template-img1-create_dailog_task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img1-create_dailog_task.png" alt="Create dialog task" title="Create dialog task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>Log in to the <a href="https://portal.azure.com/" target="_blank">Azure portal</a>, and search for Azure OpenAI from the portal menu.<br />
+<a class="glightbox" href="../images/configure-azure-img1-azure-openai-app.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img1-azure-openai-app.png" alt="Login to Azure portal" title="Login to Azure portal" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>On the Dialog Task pop-up, under the <strong>Integration</strong>, select the <strong>Asana</strong> option to view the action templates.<br />
-<a class="glightbox" href="../images/asana-action-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-action-img12.png" alt="Select Asana action template" title="Select Asana action template" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Note</strong>: If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the <strong>Actions</strong> page to configure an integration for your VA. For more information, see <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/configurations/integrations/actions/actions" target="_blank">Actions Overview</a>.  </p>
-<p><a class="glightbox" href="../images/asana-template-img3-create_dialog_new.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img3-create_dialog_new.png" alt="Explore integrations" title="Explore integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>On the Cognitive Services Azure OpenAI page, click <strong>Create</strong>.
+<a class="glightbox" href="../images/configure-azure-img2-azure-create.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img2-azure-create.png" alt="Cognitive Services Azure OpenAI" title="Cognitive Services Azure OpenAI" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
-</ol>
-<h2 id="asana-actions">Asana Actions<a class="headerlink" href="#asana-actions" title="Permanent link">&para;</a></h2>
-<p>The following Asana action is supported in the latest version of the XO Platform:</p>
-<table border="1">
-  <tr>
-   <td><strong>Supported Actions</strong>
-   </td>
-   <td><strong>Description</strong>
-   </td>
-   <td><strong>Method</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Get a Task by ID
-   </td>
-   <td>Retrieves a task from the Asana integration using the task ID.
-   </td>
-   <td>GET
-   </td>
-  </tr>
-  <tr>
-   <td>Find Tasks Created By a User
-   </td>
-   <td>Retrieves tasks created by a user from the Asana integration.
-   </td>
-   <td>GET
-   </td>
-  </tr>
-  <tr>
-   <td>Find Tasks Assigned to User
-   </td>
-   <td>Retrieves tasks assigned to a user from the Asana integration.
-   </td>
-   <td>GET
-   </td>
-  </tr>
-  <tr>
-   <td>List All Projects
-   </td>
-   <td>Shows all projects in the Asana integration.
-   </td>
-   <td>POST
-   </td>
-  </tr>
-  <tr>
-   <td>List All Users
-   </td>
-   <td>Shows all users in the Asana integration.
-   </td>
-   <td>POST
-   </td>
-  </tr>
-</table>
-
-<h3 id="get-task-by-id"><strong>Get Task by ID</strong><a class="headerlink" href="#get-task-by-id" title="Permanent link">&para;</a></h3>
-<p>Steps to fetch a task with ID from the Asana integration:</p>
+<li>
+<p>Fill in the following required details:</p>
 <ol>
-<li>Refer to the <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/configurations/integrations/actions/asana/configuring-the-asana-action/#step-2-install-the-asana-action-templates" target="_blank">Installing the Asana Templates</a> section to install this template.</li>
-<li>
-<p>The <em>Get Task by Id</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/asana-action-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-action-img13.png" alt="Dialog task is added" title="Dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<ol>
-<li><strong>getTaskById</strong>: A user intent to fetch a task with ID from the Asana space.</li>
-<li><strong>taskId</strong> – An entity node for entering the task ID.</li>
-<li>
-<p><strong>getTaskByIdService</strong> – A bot action service to fetch the task with the ID from the Asana integration. Click the <strong>Plus **icon to expand to view the getTaskByIdService bot action component properties. In the **Component Properties</strong> window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/asana_template-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana_template-img5.png" alt="Edit request" title="Edit request" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/asana_template-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana_template-img6.png" alt="Add Response" title="Add Response" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Sample Response</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        &quot;data&quot;: {
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>            &quot;gid&quot;: &quot;1204307990977944&quot;,
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            &quot;assignee&quot;: {
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                &quot;gid&quot;: &quot;1204191722074650&quot;,
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                &quot;name&quot;: &quot;Alan Walker&quot;
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            },
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            &quot;created_at&quot;: &quot;2023-03-31T11:11:44.658Z&quot;,
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            &quot;created_by&quot;: {
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                &quot;gid&quot;: &quot;1204191722074650&quot;,
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                &quot;name&quot;: &quot;Alan Walker&quot;
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            },
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>            &quot;name&quot;: &quot;NEW TASK&quot;,
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            &quot;notes&quot;: &quot;The description&quot;,
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>            &quot;permalink_url&quot;: &quot;https://app.asana.com/0/1xx60369/1XXX944&quot;,
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>            &quot;projects&quot;: [
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>                {
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                    &quot;gid&quot;: &quot;1204191735460369&quot;,
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                    &quot;name&quot;: &quot;Int1&quot;
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                }
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>            ],
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            &quot;workspace&quot;: {
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>                &quot;gid&quot;: &quot;21968248715756&quot;,
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                &quot;name&quot;: &quot;xyz.com&quot;
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>            }
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        }
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    } 
-</span></code></pre></div>
-</li>
-<li>
-<p><strong>getTaskByIdMessage</strong> – A message node with script to display responses to find tasks with ID. </p>
-</li>
+<li>Select an existing <strong>Resource Group</strong> or create a new one.</li>
+<li>Select the <strong>Region</strong>. For example, select the <em>South Central US</em> region.</li>
+<li>Enter the <strong>Name</strong> of the Azure OpenAI service. For example, enter <em>PlatformInegration</em>.</li>
+<li>Select the <strong>Pricing Tier</strong> option. For example, select the <em>Standard</em> option.<br />
+<a class="glightbox" href="../images/configure-azure-img3-create-azure-app.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img3-create-azure-app.png" alt="Create Azure OpenAI service - provide required details" title="Create Azure OpenAI service - provide required details" style="border: 1px solid gray;zoom:50%;"/></a></li>
 </ol>
 </li>
 <li>
-<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
-</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>Follow the prompts in the VA console to find a task with ID on Asana.</li>
-<li>
-<p>Enter the task ID when prompted by the VA as shown below:<br />
-<a class="glightbox" href="../images/asana_template-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana_template-img7.png" alt="Enter Task ID" title="Enter Task ID" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>Click <strong>Next</strong> and then click <strong>Review + Submit</strong>.</p>
 </li>
 <li>
-<p>You will notice that a task is found with the ID on Asana. Expand and click the <strong>View Task</strong> button.<br />
-<a class="glightbox" href="../images/asana_template-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana_template-img8.png" alt="Task found with ID" title="Task found with ID" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>Once the Validation Passed message appears, click <strong>Create</strong>.<br />
+<a class="glightbox" href="../images/configure-azure-img4-create-app.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img4-create-app.png" alt="Create Azure OpenAI app" title="Create Azure OpenAI app" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>You can view the task on Asana.<br />
-<a class="glightbox" href="../images/asana_template-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana_template-img9.png" alt="View task" title="View task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>The Azure OpenAI service is now initialized and deployed in the portal with an endpoint URL and API Keys. Click <strong>Go to Resource</strong> to view the app details.<br />
+<a class="glightbox" href="../images/configure-azure-img5-go-to-resource.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img5-go-to-resource.png" alt="View app details" title="View app details" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>In the Overview page, copy the <strong>User Domain Name</strong> as shown below.<br />
+<a class="glightbox" href="../images/configure-azure-img6-azure-user-domain.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img6-azure-user-domain.png" alt="Copy User Domain name" title="Copy User Domain name" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>In the Left Navigation Pane, select the <strong>Keys and Endpoints</strong> menu and click <strong>Show Keys</strong>, and then copy the <strong>API Key</strong> as shown below.<br />
+<a class="glightbox" href="../images/configure-azure-img7-azure-api-key.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img7-azure-api-key.png" alt="Copy API Key" title="Copy API Key" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>In the Left Navigation Pane, select <strong>Model Deployments</strong> and create a new deployment. For example, enter the model name as <em>PlatformDeploy</em> and select the Model as <em>text-davinci-001</em>. Click <strong>Save</strong>.<br />
+<a class="glightbox" href="../images/configure-azure-img8-azure-deploy-model.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img8-azure-deploy-model.png" alt="Select Model and Save" title="Select Model and Save" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Copy the <strong>Model Name</strong> of the newly created deployment as shown below.<br />
+<a class="glightbox" href="../images/configure-azure-img9-azure-deploy-model1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img9-azure-deploy-model1.png" alt="Copy model name" title="Copy model name" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>You can also copy the Azure OpenAI service credentials from the <strong>Azure OpenAI Studio &gt; Playground &gt; GPT- 3 &gt; View Code</strong>, as shown below.<br />
+<a class="glightbox" href="../images/configure-azure-img10-azure-chatgpt-playground.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img10-azure-chatgpt-playground.png" alt="Copy Azure OpenAI service credentials" title="Copy Azure OpenAI service credentials" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ol>
-<h3 id="find-tasks-created-by-a-user"><strong>Find Tasks Created by a User</strong><a class="headerlink" href="#find-tasks-created-by-a-user" title="Permanent link">&para;</a></h3>
-<p>Steps to fetch tasks created by a user from the Asana integration:</p>
+<h2 id="step-2-enable-the-azure-openai-action">Step 2: Enable the Azure OpenAI Action<a class="headerlink" href="#step-2-enable-the-azure-openai-action" title="Permanent link">&para;</a></h2>
+<p>Once you have created an Azure OpenAI service and copied the required credentials, you can enable the integration.</p>
+<p>Steps to enable the Azure OpenAI action:</p>
 <ol>
-<li>Refer to the <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/configurations/integrations/actions/asana/configuring-the-asana-action/#step-2-install-the-asana-action-templates" target="_blank">Installing the Asana Templates</a> section to install this template.</li>
-<li>
-<p>The <em>Find Tasks Created by User</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/asana-template-img10-find_tasks.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img10-find_tasks.png" alt="Add dialog task to find tasks" title="Add dialog task to find tasks" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong>.</li>
+<li>Once you click the <strong>Actions</strong> menu, all integrations are shown in the Available region. Select the <strong>Azure OpenAI</strong> action.<br />
+<a class="glightbox" href="../images/configure-azure-img11-azure-action.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img11-azure-action.png" alt="Integrations" title="Integrations" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="pre-authorize-the-integration">Pre-authorize the Integration<a class="headerlink" href="#pre-authorize-the-integration" title="Permanent link">&para;</a></h3>
+<p><strong>Basic Auth:</strong> You can authorize the integration using your credentials. The developer authorization lets you authorize the integration with the preconfigured Kore.ai app with the Basic Auth option.</p>
+<p>Steps to authorize the Azure OpenAI action using developer credentials:</p>
 <ol>
-<li><strong>findTasksCreatedByUser</strong>: A user intent to retrieve tasks created by a user from the Asana space.</li>
-<li><strong>workSpaceId</strong> – An entity node for entering the workspace ID of your Asana account.</li>
-<li><strong>userId</strong> – An entity node for entering the user ID of your Asana account.</li>
+<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong> and select the <strong>Azure OpenAI</strong> action.</li>
+<li>In the Configurations dialog, select the <strong>Authorization</strong> tab.</li>
 <li>
-<p><strong>findCreatedTasksService</strong> – A bot action service to find tasks created by a user from the Asana integration. Click the <strong>Plus</strong> icon to expand to view the findCreatedTasksService bot action component properties. In the <strong>Component Properties</strong> window, to add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/asana-template-img11-find_tasks2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img11-find_tasks2.png" alt="Bot action service created" title="Bot action service created" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Sample Response</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        &quot;data&quot;: [
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>            {
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                &quot;gid&quot;: &quot;1204325494675011&quot;,
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                &quot;assignee&quot;: {
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                    &quot;gid&quot;: &quot;12041917XXX0&quot;,
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>                    &quot;name&quot;: &quot;Alan Walker&quot;
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                },
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>                &quot;created_at&quot;: &quot;2023-04-03T20:32:00.270Z&quot;,
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>                &quot;created_by&quot;: {
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>                    &quot;gid&quot;: &quot;1204191722074650&quot;,
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>                    &quot;name&quot;: &quot;Alan Walker&quot;
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>                },
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                &quot;name&quot;: &quot;30Apr NEW TASK&quot;,
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                &quot;notes&quot;: &quot;The description&quot;,
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>                &quot;Permalink_url&quot;: &quot;https://app.asana.com/0/12XX369/1XXX11&quot;,
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>                &quot;projects&quot;: [
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>                    {
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>                        &quot;gid&quot;: &quot;1204191735460369&quot;,
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>                        &quot;name&quot;: &quot;Int1&quot;
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>                    }
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>                ],
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>                &quot;workspace&quot;: {
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>                    &quot;gid&quot;: &quot;21968248715756&quot;,
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>                    &quot;name&quot;: &quot;xyz.com&quot;
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>                }
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>            },
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>            {
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>                &quot;gid&quot;: &quot;1204326178006294&quot;,
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>                &quot;assignee&quot;: {
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>                    &quot;gid&quot;: &quot;1204191722074650&quot;,
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>                    &quot;name&quot;: &quot;Alan Walker&quot;
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>                },
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>                &quot;created_at&quot;: &quot;2023-04-03T22:28:25.171Z&quot;,
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>                &quot;created_by&quot;: {
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>                    &quot;gid&quot;: &quot;1204191722074650&quot;,
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>                    &quot;name&quot;: &quot;Alan Walker&quot;
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>                },
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>                &quot;name&quot;: &quot;30Apr NEW TASK&quot;,
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>                &quot;notes&quot;: &quot;The description&quot;,
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>                &quot;permalink_url&quot;: &quot;https://app.asana.com/0/1XXX9/12XXX294&quot;,
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>                &quot;projects&quot;: [
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>                    {
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>                        &quot;gid&quot;: &quot;1204191735460369&quot;,
-</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>                        &quot;name&quot;: &quot;Int1&quot;
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>                    }
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>                ],
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>                &quot;workspace&quot;: {
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>                    &quot;gid&quot;: &quot;21968248715756&quot;,
-</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>                    &quot;name&quot;: &quot;xyz.com&quot;
-</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>                }
-</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>            }
-</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>        ]
-</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>    } 
-</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>}
-</span></code></pre></div>
+<p>Enter the following details:</p>
+<ol>
+<li>
+<p><strong>Authorization Type</strong> – Select the <strong>Pre-authorize the Integration</strong> option, and then select the <strong>Basic Auth</strong> option.<br />
+<a class="glightbox" href="../images/configure-azure-img12-azure-openai-config-change.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img12-azure-openai-config-change.png" alt="Authorization Type-Basic Auth" title="Authorization Type-Basic Auth" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>API Key</strong> – The secret API key of your Azure OpenAI service, which you copied in Step 1.<br />
+<strong>Note</strong>: The Platform uses the configured API Key to authorize and generate the suggestions from OpenAI.</p>
+</li>
+<li>
+<p><strong>User Sub Domain</strong> – The domain name of the Azure OpenAI service, which you copied in Step 1.</p>
+</li>
+<li><strong>Deployment ID</strong> – The deployment ID/model name of the Azure OpenAI service, which you copied in Step 1.<br />
+<strong>Note</strong>: You can enter the deployment ID for <em>ChatGPT-3</em> or <em>ChatGPT-3.5</em> model to configure the GPT model for the Azure Open AI integration</li>
+</ol>
+</li>
+<li>
+<p>Click <strong>Enable</strong>. When you configure the action for the first time, the Integration Successful pop-up is displayed.<br />
+<a class="glightbox" href="../images/configure-azure-img13-azure-action6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img13-azure-action6.png" alt="Enable Integration" title="Enable Integration" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+<p><strong>Note</strong>: The Azure OpenAI action is moved from Available to Configured region.</p>
+</li>
+</ol>
+<h3 id="allow-the-end-user-to-authorize">Allow the End User to Authorize<a class="headerlink" href="#allow-the-end-user-to-authorize" title="Permanent link">&para;</a></h3>
+<p>You can authorize the integration at a user level with their login credentials. The user authorization process involves requesting permission for Kore.ai’s Azure OpenAI app to access an access token at runtime. You can also use the basic auth profile to let a user configure the integration at runtime.</p>
+<p>Steps to authorize an Azure OpenAI action at a user level:</p>
+<ol>
+<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong> and select the <strong>Azure OpenAI</strong> action in the <strong>Available Actions</strong> region.</li>
+<li>In the <strong>Configurations</strong> dialog, select the <strong>Authorization</strong> tab.</li>
+<li>
+<p>Enter the following details:</p>
+<ol>
+<li><strong>Authorization Type</strong> – Select the <strong>Allow Users to Authorize the Integration</strong> option, and then select the <strong>Basic Auth</strong> option.</li>
+<li>Create your authorization profile to obtain an access token and use it to complete integration without using Kore.ai’s Azure OpenAI app for authorization.</li>
+<li>
+<p>Click the <strong>Select Authorization</strong> drop-down and select the <strong>Create New</strong> option.<br />
+<a class="glightbox" href="../images/configure-azure-img14-azure-action2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img14-azure-action2.png" alt="Create new authorization" title="Create new authorization" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Select the type of authorization mechanism. For example, select the API Key option.<br />
+<a class="glightbox" href="../images/configure-azure-img15-open-ai-api-key1-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img15-open-ai-api-key1-1.png" alt="Select authorization mechanism" title="Select authorization mechanism" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+<p>To create Basic Auth profiles, see <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/bot-authentication/" target="_blank">Bot Authorization Overview</a>.</p>
+</li>
+<li>
+<p>Enter the following authentication credentials for the Basic Auth mechanism:</p>
+<ul>
+<li><em>Name</em> – Enter the name for the Basic Auth profile.</li>
+<li>Select <em>Yes; some tasks will have tenancy URLs, and the user must provide the URLs to authenticate successfully</em>.</li>
+<li><em>Base URL</em> – Enter the base tenant URL for the Azure OpenAI instance.</li>
+<li><em>Authorization Check URL</em> – Enter the authorization check URL for your Azure OpenAI instance.</li>
+<li><em>Description</em> – Enter the description of the basic authentication profile.</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Save Auth</strong> to save the authorization profile.<br />
+<a class="glightbox" href="../images/configure-azure-img16-azure-action3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img16-azure-action3.png" alt="Save Authorization" title="Save authorization" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Select the new Authorization Profile you created to complete integration.</p>
 </li>
 </ol>
 </li>
 <li>
-<p><strong>createdTaskMessage</strong> – A message node with script to display responses to find tasks by a user.</p>
-</li>
-<li>Click the <strong>Train</strong> tab to complete the Dialog task training.</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>
-<p>Follow the prompts in the VA console to find tasks created with user ID on Asana as shown below:<br />
-<a class="glightbox" href="../images/asana-template-img12-find_tasks5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img12-find_tasks5.png" alt="Find tasks with user ID" title="Find tasks with user ID" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Enter the user ID when prompted by the VA as shown below:<br />
-<a class="glightbox" href="../images/asana-template-img13-find_tasks6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img13-find_tasks6.png" alt="Enter user ID" title="Enter user ID" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>You will notice that a task is found with the ID on Asana. Expand and click the <strong>View Task</strong> button.</p>
-</li>
-<li>You can view the task on Asana.<br />
-<a class="glightbox" href="../images/asana_template-img14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana_template-img14.png" alt="View task" title="View task" style="border: 1px solid gray;zoom:50%;"/></a></li>
-</ol>
-<h3 id="find-tasks-assigned-to-a-user"><strong>Find Tasks Assigned to a User</strong><a class="headerlink" href="#find-tasks-assigned-to-a-user" title="Permanent link">&para;</a></h3>
-<p>Steps to fetch tasks created by a user from the Asana integration:</p>
-<ol>
-<li>Refer to the <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/configurations/integrations/actions/asana/configuring-the-asana-action/#step-2-install-the-asana-action-templates" target="_blank">Installing the Asana Templates</a> section to install this template.</li>
-<li>
-<p>The <em>FindTasks Assigned to a User</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/asana-template-img15-find_task_assigned.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img15-find_task_assigned.png" alt="Dialog task to find task assigned to user is added" title="Dialog task to find task assigned to user is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
-<li><strong>findTasksAssignedToUser</strong>: A user intent to retrieve tasks assigned to a user from the Asana space.</li>
-<li><strong>workSpaceId</strong> – An entity node for entering the workspace ID of your Asana account.</li>
-<li><strong>userId</strong> – An entity node for entering the user ID of your Asana account.</li>
-<li>
-<p><strong>findAssignedTasksService</strong> – A bot action service to fetch the assigned tasks to a user from the Asana integration. Click the <strong>Plus</strong> icon to expand to view the findAssignedTasksService bot action component properties. In the <strong>Component Properties</strong> window, to add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/asana-template-img16-find_task_assigned1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img16-find_task_assigned1.png" alt="Bot action service created" title="Bot action service created" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Sample Response</strong>  </p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>        &quot;data&quot;: [
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>            {
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>                &quot;gid&quot;: &quot;1204325494675011&quot;,
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>                &quot;assignee&quot;: {
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>                    &quot;gid&quot;: &quot;1204191722074650&quot;,
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>                    &quot;name&quot;: &quot;Alan Walker&quot;
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                },
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>                &quot;created_at&quot;: &quot;2023-04-03T20:32:00.270Z&quot;,
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>                &quot;created_by&quot;: {
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>                    &quot;gid&quot;: &quot;1204191722074650&quot;,
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>                    &quot;name&quot;: &quot;Alan Walker&quot;
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>                },
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>                &quot;name&quot;: &quot;30Apr NEW TASK&quot;,
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>                &quot;notes&quot;: &quot;The description&quot;,
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>                &quot;Permalink_url&quot;: &quot;https://app.asana.com/0/1X69/1XX1&quot;,
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>                &quot;projects&quot;: [
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>                    {
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>                        &quot;gid&quot;: &quot;1204191735460369&quot;,
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>                        &quot;name&quot;: &quot;Int1&quot;
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>                    }
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>                ],
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>                &quot;workspace&quot;: {
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>                    &quot;gid&quot;: &quot;21968248715756&quot;,
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>                    &quot;name&quot;: &quot;xyz.com&quot;
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>                }
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>            },
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>            {
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>                &quot;gid&quot;: &quot;1204326178006294&quot;,
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>                &quot;assignee&quot;: {
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>                    &quot;gid&quot;: &quot;1204191722074650&quot;,
-</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>                    &quot;name&quot;: &quot;Alan Walker&quot;
-</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>                },
-</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>                &quot;created_at&quot;: &quot;2023-04-03T22:28:25.171Z&quot;,
-</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>                &quot;created_by&quot;: {
-</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>                    &quot;gid&quot;: &quot;1204191722074650&quot;,
-</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>                    &quot;name&quot;: &quot;Alan Walker&quot;
-</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>                },
-</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>                &quot;name&quot;: &quot;30Apr NEW TASK&quot;,
-</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>                &quot;notes&quot;: &quot;The description&quot;,
-</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>                &quot;permalink_url&quot;: &quot;https://app.asana.com/0/1369/1294&quot;,
-</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>                &quot;projects&quot;: [
-</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>                    {
-</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>                        &quot;gid&quot;: &quot;1204191735460369&quot;,
-</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>                        &quot;name&quot;: &quot;Int1&quot;
-</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>                    }
-</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>                ],
-</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>                &quot;workspace&quot;: {
-</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>                    &quot;gid&quot;: &quot;21968248715756&quot;,
-</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>                    &quot;name&quot;: &quot;xyz.com&quot;
-</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>                }
-</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>            }
-</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>        ]
-</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>    } 
-</span></code></pre></div>
+<p>Click <strong>Enable</strong>. When you configure the action for the first time, the Integration Successful pop-up is displayed.<br />
+<a class="glightbox" href="../images/configure-azure-img17-azure-action5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img17-azure-action5.png" alt="Enable integration" title="Enable integration" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ol>
-</li>
-<li>
-<p><strong>assignedTaskMessage</strong> – A message node with script to display responses to find tasks assigned to the user.</p>
-</li>
-<li>Click the <strong>Train</strong> tab to complete the Dialog task training.</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>
-<p>Follow the prompts in the VA console to find a task with ID on Asana as shown below:<br />
-<a class="glightbox" href="../images/asana-template-img17-find_task_assigned3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img17-find_task_assigned3.png" alt="Find task" title="Find task" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Enter the user ID when prompted by the VA as shown below:<br />
-<a class="glightbox" href="../images/asana-template-img18-find_task_assigned4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img18-find_task_assigned4.png" alt="Enter task ID" title="Enter task ID" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>You will notice that a task is found with the ID on Asana. Expand and click the <strong>View Task</strong> button.</p>
-</li>
-</ol>
-<h3 id="list-all-projects"><strong>List All Projects</strong><a class="headerlink" href="#list-all-projects" title="Permanent link">&para;</a></h3>
-<p>Steps to retrieve all projects from the Asana integration:</p>
+<h2 id="step-3-install-the-azure-openai-action-templates">Step 3: Install the Azure OpenAI Action Templates<a class="headerlink" href="#step-3-install-the-azure-openai-action-templates" title="Permanent link">&para;</a></h2>
+<p>Once you have configured an Azure OpenAI integration, you can explore and install action templates.</p>
+<p>Steps to install action templates:</p>
 <ol>
-<li>Refer to the <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/configurations/integrations/actions/asana/configuring-the-asana-action/#step-2-install-the-asana-action-templates" target="_blank">Installing the Asana Templates</a> section to install this template.</li>
 <li>
-<p>The <em>List All Projects</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/asana-template-img19-list_all_projects.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img19-list_all_projects.png" alt="Dialog task for listing tasks" title="Dialog task for listing tasks" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
-<li><strong>listAllProjects</strong>: A user intent to retrieve tasks assigned to a user from the Asana space.</li>
-<li>
-<p><strong>listAllProjectsService</strong> – A bot action service to retrieve all projects from the Asana integration. Click the <strong>Plus</strong> icon to expand to view the listAllProjectsService bot action component properties. In the <strong>Component Properties</strong> window, to add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/asana-template-img20-list_all_projects1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img20-list_all_projects1.png" alt="Bot action service for listing tasks" title="Bot action service for listing tasks" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Sample Response</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        &quot;data&quot;: [
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>            {
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>                &quot;gid&quot;: &quot;1190334540433515&quot;,
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>                &quot;created_at&quot;: &quot;2020-08-24T13:09:10.888Z&quot;,
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>                &quot;due_on&quot;: null,
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>                &quot;name&quot;: &quot;integration&quot;,
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>                &quot;owner&quot;: {
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>                    &quot;gid&quot;: &quot;1190337001098545&quot;,
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>                    &quot;name&quot;: &quot;Alan&quot;
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>                },
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>                &quot;permalink_url&quot;: &quot;https://app.asana.com/0/1xx5/1xx5&quot;,
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>                &quot;workspace&quot;: {
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>                    &quot;gid&quot;: &quot;21968248715756&quot;,
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>                    &quot;name&quot;: &quot;xyz.com&quot;
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>                }
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>            },
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>            {
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>                &quot;gid&quot;: &quot;1199516117757228&quot;,
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>                &quot;created_at&quot;: &quot;2021-01-07T14:21:04.105Z&quot;,
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>                &quot;due_on&quot;: null,
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>                &quot;name&quot;: &quot;test&quot;,
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>                &quot;owner&quot;: {
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>                    &quot;gid&quot;: &quot;1190339858363088&quot;,
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>                    &quot;name&quot;: &quot;John Doe&quot;
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>                },
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>                &quot;permalink_url&quot;: &quot;https://app.asana.com/0/1xx8/1xx8&quot;,
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>                &quot;workspace&quot;: {
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>                    &quot;gid&quot;: &quot;21968248715756&quot;,
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>                    &quot;name&quot;: &quot;xyz.com&quot;
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>                }
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>            }
-</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>        ]
-</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>    }
-</span></code></pre></div>
-</li>
-</ol>
+<p>On the Integration Successful dialog, click the Explore Templates button to view the templates.<br />
+<a class="glightbox" href="../images/configure-azure-img18-azure-action6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img18-azure-action6.png" alt="Explore Templates" title="Explore Templates" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p><strong>listProjectMessage</strong> – A message node with script to display responses to find all projects..</p>
-</li>
-<li>Click the <strong>Train</strong> tab to complete the Dialog task training.</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>
-<p>Follow the prompts in the VA console to view all projects on Asana as shown below:<br />
-<a class="glightbox" href="../images/asana-template-img21-list_all_projects2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img21-list_all_projects2.png" alt="VA prompt to list projects" title="VA prompt to list projects" style="border: 1px solid gray;zoom:50%;"/></a> </p>
+<p>In the Integration Templates dialog, click the <strong>Install</strong> button to begin the installation.<br />
+<a class="glightbox" href="../images/configure-azure-img19-azure-action7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img19-azure-action7.png" alt="Begin installation" title="Begin installation" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>You will notice that all projects are found on Asana. Expand and click the **View Project **button.</p>
-</li>
-</ol>
-<h3 id="list-all-users"><strong>List All Users</strong><a class="headerlink" href="#list-all-users" title="Permanent link">&para;</a></h3>
-<p>Steps to retrieve all users from the Asana integration:</p>
-<ol>
-<li>Refer to the <a href="https://developer.kore.ai/integrations/configuring-the-asana-action/#Step_2_Install_the_Asana_Action_Templates" target="_blank">Installing the Asana Templates</a> section to install this template.</li>
-<li>
-<p>The <em>List All Users</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/asana-template-img22list_all_users.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img22list_all_users.png" alt="Dialog task to list users" title="Dialog task to list users" style="border: 1px solid gray;zoom:50%;"/></a> </p>
-<ol>
-<li><strong>listAllUsers</strong>: A user intent to retrieve tasks assigned to a user from the Asana space.</li>
-<li>
-<p><strong>listAllUsersService</strong> – A bot action service to find all users from the Asana integration. Click the <strong>Plus</strong> icon to expand to view the listAllUsersService bot action component properties. In the <strong>Component Properties</strong> window, to add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/asana-template-img23-list_all_users1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img23-list_all_users1.png" alt="Bot action service to find users" title="Bot action service to find users" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p><strong>Sample Response</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>        &quot;data&quot;: [
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>            {
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>                &quot;gid&quot;: &quot;11xxxx674034&quot;,
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>                &quot;email&quot;: &quot;alan.walker@xyz.com&quot;,
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>                &quot;name&quot;: &quot;Alan Walker&quot;,
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>                &quot;workspaces&quot;: [
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>                    {
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>                        &quot;gid&quot;: &quot;219xxx756&quot;,
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>                        &quot;name&quot;: &quot;xyz.com&quot;
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>                    }
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>                ]
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>            }
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        ]
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    }
-</span></code></pre></div>
-</li>
-</ol>
+<p>Once the templates are installed, a dialog task is auto-created.</p>
 </li>
 <li>
-<p><strong>listAllUsersMessage</strong> – A message node with script to display responses to find all projects.</p>
-</li>
-<li>Click the <strong>Train</strong> tab to complete the Dialog task training.</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>
-<p>Follow the prompts in the VA console to view all users on Asana as shown below:<br />
-<a class="glightbox" href="../images/asana-template-img24-list_all_users2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/asana-template-img24-list_all_users2.png" alt="Prompt in VA" title="Prompt in VA" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>When you create a dialog task, you can also select the task from the Azure OpenAI action templates and click <strong>Proceed</strong>. For example, select the General Query task.<br />
+<a class="glightbox" href="../images/configure-azure-img20-azure-action9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img20-azure-action9.png" alt="Select task" title="Select task" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>You will notice that all users are found on Asana. Expand and click the <strong>View User</strong> button.</p>
+<p>Once you click <strong>Proceed</strong>, the dialog task is auto-created, and the canvas opens with all required entity nodes, service nodes, and message scripts.<br />
+<a class="glightbox" href="../images/configure-azure-img21-azure-action10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img21-azure-action10.png" alt="Task auto created" title="Task auto created" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ol>
 
