@@ -17,7 +17,7 @@
     
     
       
-        <title>**Hours of Operation** - Kore ai Docs</title>
+        <title>**Default Flows** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hours-of-operation" class="md-skip">
+        <a href="#default-flows" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Hours of Operation**
+              **Default Flows**
             
           </span>
         </div>
@@ -2895,63 +2895,109 @@
 
 
 
-<h1 id="hours-of-operation"><strong>Hours of Operation</strong><a class="headerlink" href="#hours-of-operation" title="Permanent link">&para;</a></h1>
-<p>The <strong>Hours of Operation</strong> feature helps set the standard hours when agents are available for customers based on business operating hours, non-operating hours, and holidays.</p>
-<p>In <strong>Contact Center,</strong> you can define the standard working hours for each day of the week and set the non-working hours for weekends and public holidays in different time zones.  <a href="https://docs.kore.ai/smartassist/default-agent-flows/default-flows-2/">Default Flows</a> are handled by SmartAssist based on your configuration for <strong>Hours of Operation</strong>,</p>
-<p>You can reach the Hours of Operation feature by going to <strong>Contact Center &gt; Configurations &gt; Hours of Operation</strong>.
-<img src="../images/hours-of-operation-page.png" alt="
-Hours of Operation Page" title="Hours of Operation Page" style="border: 1px solid gray; zoom:80%;"></p>
-<p>The Hours of Operation section displays the following details:</p>
-<ul>
-<li>A <strong>Name</strong> for each configuration;</li>
-<li><strong>Actions</strong>: Here is where you can <strong>Edit</strong> or <strong>Delete</strong> a configuration.</li>
-<li><strong>Timezone</strong>: Lists the timezone for which the hours of operation are configured;</li>
-<li><strong>Special</strong> Days: Lists any configured special days or holidays.</li>
-</ul>
-<h1 id="add-hours-of-operation">Add Hours of Operation<a class="headerlink" href="#add-hours-of-operation" title="Permanent link">&para;</a></h1>
-<p>To add <strong>Hours of Operation</strong>, follow these steps:</p>
+<h1 id="default-flows"><strong>Default Flows</strong><a class="headerlink" href="#default-flows" title="Permanent link">&para;</a></h1>
+<p>The <strong>Default Flows</strong> feature lets you customize experiences for common events like welcome, transfer, or an unknown Intent.</p>
+<p>Here, you can configure the interaction flow based on the customer’s behavior in two scenarios:</p>
 <ol>
-<li>
-<p>Click <strong>+ Add New</strong> to add a new <strong>Hours of Operation</strong> entry.
-<img src="../images/add-new.png" alt="
-Add Hours of Operation" title="Add Hours of Operation" style="border: 1px solid gray; zoom:80%;"></p>
+<li><strong>Off-Working Hours</strong>: When the customer tries to connect to an agent during off-working hours.</li>
+<li><strong>No Agents Available</strong>: When agents with specific skills, as required by the customer, are unavailable.</li>
+</ol>
+<p>The contact center module provides inbuilt <strong>Phone and Chat Experience</strong> flows for these scenarios. However, you can change the default flow and the message to the customer based on the current conversation channel.</p>
+<p>To start, go to <strong>Contact Center &gt; Configuration &gt; Default Flows</strong>.
+<img src="../images/default-flows-page.png" alt="
+Default Flows Page" title="Default Flows Page" style="border: 1px solid gray; zoom:80%;"></p>
+<h1 id="phone-experiences">Phone Experiences<a class="headerlink" href="#phone-experiences" title="Permanent link">&para;</a></h1>
+<p>The following sections describe configuring the default flows for a phone experience.</p>
+<h2 id="off-working-hours">Off-Working Hours<a class="headerlink" href="#off-working-hours" title="Permanent link">&para;</a></h2>
+<p>This flow plays a voice message to the caller who tries to reach an agent during off-working or non-business hours. Off-working hours are considered those that are outside of your configured <a href="https://docs.kore.ai/smartassist/settings/hours-of-operation-2/">Hours of Operation</a>.</p>
+<p>To configure the <strong>Off Working Hours **flow, click the **Off Working Hours</strong> tile in the **Phone Experiences **section.</p>
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<p>In the <strong>Off Working Hours for Calls **panel, a text area displays the default message a customer hears while attempting to reach a live voice agent during off-working hours. You can edit this message by clicking the **Edit **icon on the top right. You can **choose the message language</strong> by clicking on one of the language selection buttons. </p>
+<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<h2 id="no-agents-available">No Agents Available<a class="headerlink" href="#no-agents-available" title="Permanent link">&para;</a></h2>
+<p>You can set the message played to the customer if the available online agents don’t have the required skills.</p>
+<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<p>To configure the <strong>No Agents Available</strong> flow, click the <strong>No Agents Available</strong> tile under <strong>Phone Experiences</strong>.</p>
+<p>In the <strong>No Online Agents with needed skill</strong> panel, use the text area to configure the message to be played to callers when no agent is available. You can edit this message by clicking the <strong>Edit **icon on the top right. You can **choose the message language</strong> by clicking on one of the language selection buttons. </p>
+<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
+<h1 id="chat-experiences">Chat Experiences<a class="headerlink" href="#chat-experiences" title="Permanent link">&para;</a></h1>
+<p>The following sections describe the default flows configuration for a chat experience.</p>
+<h2 id="off-working-hours_1">Off Working Hours<a class="headerlink" href="#off-working-hours_1" title="Permanent link">&para;</a></h2>
+<p>The **Off Working Hours **flow sets the auto-response message during non-business hours for automated and live chats. To configure this feature, follow these steps:</p>
+<ol>
+<li>Click the <strong>Off Working Hours</strong> tile under <strong>Chat Experiences</strong>. </li>
+<li>In the **Off Working Hours for Chats **panel, you can define the messages displayed during off-working hours (based on the <a href="https://docs.kore.ai/smartassist/settings/hours-of-operation-2/">hours of operation</a>) when a customer attempts to reach a live chat agent. </li>
+</ol>
+<p>You can define messages for the following scenarios:</p>
+<h3 id="messaging-chat-channels">Messaging Chat Channels<a class="headerlink" href="#messaging-chat-channels" title="Permanent link">&para;</a></h3>
+<p>This feature lets you customize the auto-response message during off-working hours. To use this option, follow these steps:</p>
+<ol>
+<li>Use the text area to configure the message to be played to callers when no agent is available. You can <strong>choose the message language</strong> by clicking on one of the language selection buttons. </li>
+<li>You can edit the message and configure the next action by clicking the **Edit **icon on the top right. \</li>
+</ol>
+<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
+<ol>
+<li>The **After that **section defines what happens after the message is displayed to the customer. Select one of the following options:<ol>
+<li><strong>End Chat</strong> ends the chat conversation.</li>
+<li><strong>Add to Queue</strong> adds the customer to the waiting queue of an agent.</li>
+</ol>
 </li>
-<li>
-<p>In the <strong>New Hours of Operation</strong> panel, configure the following fields:</p>
+<li>**Save **when done. \</li>
+</ol>
+<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
+<h3 id="if-live-chat">If Live Chat<a class="headerlink" href="#if-live-chat" title="Permanent link">&para;</a></h3>
+<p>You can set the message to the customer when they interact on a live chat channel. To configure, follow these steps:</p>
 <ol>
-<li><strong>Name:</strong> Add a name to identify the <strong>Hours of Operation</strong> profile. For example, <em>Official Working Hours</em>.</li>
-<li><strong>Time Zone:</strong> Select the time zone for which these hours apply.</li>
-<li><strong>Work Days, Holidays, and Special Days</strong>: Configure the days and hours of operation per day, and set up holidays and special days as follows:</li>
+<li>Use the text area to configure the message to be played to callers when no agent is available. You can <strong>choose the message language</strong> by clicking on one of the language selection buttons. </li>
+<li>You can edit the message and configure the next action by clicking the **Edit **icon on the top right. \</li>
+</ol>
+<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.png" title="image_tooltip" /></a></p>
+<ol>
+<li>The **After that **section defines what happens after the message is displayed to the customer. Select one of the following options:<ol>
+<li><strong>End Chat</strong> ends the chat conversation.</li>
+<li>**End Chat with Email Deflection **ends the chat conversation and deflects it to the Email channel. This option lets you configure the email message sent to the customer if their conversation is deflected. <ol>
+<li>You can <strong>choose the message language</strong> by clicking on one of the language selection buttons. </li>
+<li>You can <strong>configure the email subject and format the body text</strong> using the formatting toolbar.</li>
 </ol>
 </li>
 </ol>
-<h2 id="standard-hours">Standard Hours<a class="headerlink" href="#standard-hours" title="Permanent link">&para;</a></h2>
-<p>Set the standard working hours explicitly or opt for the pre-selected hours (9 AM to 6 PM). By default, the weekdays are open, and weekends are closed. The status for Saturday or Sunday can be enabled or disabled using the toggle.
-<img src="../images/new-hours-of-operation.png" alt="
-New Hours of Operation" title="New Hours of Operation" style="border: 1px solid gray; zoom:80%;"></p>
-<h2 id="holidays-and-special-days">Holidays and Special Days<a class="headerlink" href="#holidays-and-special-days" title="Permanent link">&para;</a></h2>
-<p>Set the Date, Name, Period, Start Work Time, and End Work Time for holidays or special days.</p>
-<p>To add a new entry, click the <strong>+ Add New</strong> button.
-<img src="../images/holidays-and-special-days.png" alt="
-Add Holidays & Special Days" title="Add Holidays & Special Days" style="border: 1px solid gray; zoom:80%;"></p>
-<ul>
-<li>Enter the <strong>Date</strong> of the holiday or special day;</li>
-<li>Enter a <strong>Name</strong>;</li>
-<li>Toggle the <strong>Period</strong> to either <em>Partial</em> or <em>Full</em>. When set to <em>Partial</em>, you can adjust the working hours for the day. When set to <em>Full</em>, the day is considered a holiday.</li>
-<li>To add more hours of operation for holidays and special days, click <strong>+ Add Another</strong>.</li>
-<li>To delete an entry, click the <strong>Delete (bin)</strong> icon next to it.</li>
-<li>Click **Save.
-<img src="../images/configure-holiday-hours.png" alt="
-Configure Holiday Hours" title="Configure Holiday Hours" style="border: 1px solid gray; zoom:80%;"></li>
-</ul>
-<h1 id="edit-hours-of-operation">Edit Hours of Operation<a class="headerlink" href="#edit-hours-of-operation" title="Permanent link">&para;</a></h1>
-<p>To edit <strong>Hours of Operation</strong>, click the corresponding <strong>Edit</strong> icon under <em>Actions</em>.
-<img src="../images/edit-button.png" alt="
-Edit Hours of Operation" title="Edit Hours of Operation" style="border: 1px solid gray; zoom:80%;"></p>
-<h1 id="delete-hours-of-operation">Delete Hours of Operation<a class="headerlink" href="#delete-hours-of-operation" title="Permanent link">&para;</a></h1>
-<p>To delete an <strong>Hours of Operation</strong> entry, click the corresponding <strong>Delete</strong> icon under <em>Actions</em>. You will be asked to confirm your choice.
-<img src="../images/delete-button.png" alt="
-Delete Hours of Operation" title="Delete Hours of Operation" style="border: 1px solid gray; zoom:80%;"></p>
+</li>
+<li>**Save **when done. \</li>
+</ol>
+<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image9.png" title="image_tooltip" /></a></p>
+<h2 id="no-agents-available_1">No Agents Available<a class="headerlink" href="#no-agents-available_1" title="Permanent link">&para;</a></h2>
+<p>You can set the message displayed to the customer if the available online agents don’t have the required skills.</p>
+<p>To get started, click the <strong>No agents Available</strong> tile under <strong>Chat Experiences</strong>.</p>
+<p>In the <strong>No Online Agents with needed skill</strong> window, define what to do if the skills a customer requires do not match any online agent. Here you can configure the following:</p>
+<h3 id="messaging-chat-channels_1">Messaging Chat Channels<a class="headerlink" href="#messaging-chat-channels_1" title="Permanent link">&para;</a></h3>
+<p>This section is where you can define the message displayed when the customer comes from a chat channel that supports async messaging. </p>
+<p>Use the text area to configure the message to be displayed when no agent is available. You can edit the message and choose the message language by clicking the **Edit **icon on the top right. </p>
+<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image10.png" title="image_tooltip" /></a></p>
+<h3 id="live-chat-channels">Live Chat Channels<a class="headerlink" href="#live-chat-channels" title="Permanent link">&para;</a></h3>
+<p>If the customer comes from a live chat channel and SmartAssist determines that no available agent matches the required skills, then the customer will see the message configured in this section.</p>
+<p>Use the text area to configure the message to be displayed when no agent is available. You can edit the message and choose the message language by clicking the **Edit **icon on the top right. </p>
+<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image11.png" title="image_tooltip" /></a></p>
+<p>Once completing any of these default flows, click **Save **to save your changes.</p>
 
 
   
