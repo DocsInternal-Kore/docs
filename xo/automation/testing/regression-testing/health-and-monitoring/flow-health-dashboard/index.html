@@ -3006,9 +3006,9 @@
 <p><strong>Note</strong>: The Flow Health Dashboard is available on the XO Platform version 10.0, released on Jan 21<sup>st</sup>, 2023.</p>
 <h3 id="use-case-scenario">Use-Case Scenario<a class="headerlink" href="#use-case-scenario" title="Permanent link">&para;</a></h3>
 <p>In this article, the Hotel Booking virtual assistant is used as an example to understand the flow of transitions and test results analysis. The Hotel Booking VA has the <em>Search A Hotel</em>, <em>Book a Hotel, Get User Data, Show User Data, and Raise Complain</em> dialog intents with various test cases in the test suites in the Conversation Testing module.</p>
-<p>A transition shows how a user intent is transferred from one node to another node in a dialog task. A transition is a flow of intent between two nodes. It has a <strong>From</strong> node and a <strong>To</strong> node.  For example, <strong>“Book a Hotel”</strong> is a user intent in a dialog task. A <strong>city</strong> is an entity node in the dialog flow to which the <strong>book a hotel</strong> user intent is transitioned, and then it transitions to the <strong>state</strong> node. From the <strong>state</strong> node, it transitions to <strong>country</strong> and <strong>reservemessage</strong> nodes. Therefore, in the <strong>Book a Hotel</strong> task, you have four transitions in total. For more information, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-user-intent-node/">User Intent</a>.<br />
+<p>A transition shows how a user intent is transferred from one node to another node in a dialog task. A transition is a flow of intent between two nodes. It has a <strong>From</strong> node and a <strong>To</strong> node.  For example, <strong>“Book a Hotel”</strong> is a user intent in a dialog task. A <strong>city</strong> is an entity node in the dialog flow to which the <strong>book a hotel</strong> user intent is transitioned, and then it transitions to the <strong>state</strong> node. From the <strong>state</strong> node, it transitions to <strong>country</strong> and <strong>reservemessage</strong> nodes. Therefore, in the <strong>Book a Hotel</strong> task, you have four transitions in total. For more information, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-user-intent-node/" target="_blank">User Intent</a>.<br />
 <a class="glightbox" href="../images/fh-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img1.png" alt="Use case - book a hotel" title="Use case - book a hotel" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p>Once you record a conversation flow, save it and run it in the <em>Conversation Testing</em> module.  The conversation testing module helps in knowing how a dialog task performs. For example, if you have a <strong>Get User Data</strong> dialog task and want to see how this dialog task is performing, you can create a <strong>Show User Data</strong> test suite with various test cases. Run the <strong>Show User Data</strong> test suite and see whether it was completed <em>successfully</em>, <em>failed</em>, <em>paused</em>, or <em>not executed</em>. For more information, see the <a href="https://docsinternal-kore.github.io/docs/xo/automation/testing/regression-testing/conversation-testing/conversation-testing-landing-page/">Conversation Testing</a> article.</p>
+<p>Once you record a conversation flow, save it and run it in the <em>Conversation Testing</em> module.  The conversation testing module helps in knowing how a dialog task performs. For example, if you have a <strong>Get User Data</strong> dialog task and want to see how this dialog task is performing, you can create a <strong>Show User Data</strong> test suite with various test cases. Run the <strong>Show User Data</strong> test suite and see whether it was completed <em>successfully</em>, <em>failed</em>, <em>paused</em>, or <em>not executed</em>. For more information, see the <a href="../../conversation-testing/conversation-testing-landing-page/" target="_blank">Conversation Testing</a> article.</p>
 <p>The test suite results are tracked in the <em>Conversation Testing,</em> and the analytics for test suites are displayed in the <strong>Flow Health</strong> dashboard.  </p>
 <h2 id="how-to-use-the-flow-health-dashboard">How to Use the Flow Health Dashboard<a class="headerlink" href="#how-to-use-the-flow-health-dashboard" title="Permanent link">&para;</a></h2>
 <p>To access the <strong>Flow Health Dashboard</strong>, follow these steps:</p>
@@ -3028,10 +3028,10 @@
 <ul>
 <li><strong>Pass</strong> – Total Number of test cases passed across all test suites.</li>
 <li><strong>Fail</strong> – Total Number of Test cases failed across all test suites.</li>
-<li><strong>Not Executed</strong> – Total Number of Test cases aborted or not executed before execution across all test suites.</li>
-</ul>
-<p><a class="glightbox" href="../images/fh-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img3.png" alt="Flow Metrics" title="Flow Metrics" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
+<li>
+<p><strong>Not Executed</strong> – Total Number of Test cases aborted or not executed before execution across all test suites.<br />
+  <a class="glightbox" href="../images/fh-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img3.png" alt="Flow Metrics" title="Flow Metrics" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
 <li>
 <p>Click the <strong>View Test Suites</strong> link to view all the test suites that are considered in the VA with the following details:</p>
 <ol>
@@ -3065,7 +3065,7 @@
 <li>
 <p>Click the <strong>X</strong> icon to close the Intent Details window.</p>
 </li>
-</ol>
+</ul>
 <h2 id="flow-dashboard-components">Flow Dashboard Components<a class="headerlink" href="#flow-dashboard-components" title="Permanent link">&para;</a></h2>
 <p>The key components of the Flow Health dashboard include transition coverage and intent summary panels for the test suites. The details on the available panels are explained below.</p>
 <h2 id="dialog-intent-summary">Dialog Intent Summary<a class="headerlink" href="#dialog-intent-summary" title="Permanent link">&para;</a></h2>
@@ -3088,16 +3088,16 @@
 <li><strong>Task Name</strong> – The name of the dialog intent. </li>
 <li><strong>From Node</strong> – The <strong>From</strong> node where the conversation starts to transition.</li>
 <li><strong>To Node</strong> – The <strong>To</strong> node from where the conversation is transferred to.</li>
-<li><strong>Status</strong> – The <strong>Status</strong> of the transition  – covered or not covered.  </li>
+<li><strong>Status</strong> – The <strong>Status</strong> of the transition  – covered or not covered.<br />
+<a class="glightbox" href="../images/fh-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img10.png" alt="Dialog Transition" title="Dialog Transition" style="border: 1px solid gray;zoom:50%;"/></a></li>
 </ol>
-<p><a class="glightbox" href="../images/fh-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img10.png" alt="Dialog Transition" title="Dialog Transition" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
 <p>Click the <a class="glightbox" href="../images/fh-tilda-icon.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-tilda-icon.png"></a> icon beside <strong>Not Covered</strong> percentage to view missed transitions.<br />
 <a class="glightbox" href="../images/fh-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img11.png" alt="Missed Transitions" title="Missed Transitions" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>Create a new test suite and record missed transitions to cover them. For more information, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/testing/regression-testing/conversation-testing/conversation-testing-landing-page/">Conversation Testing</a>.</p>
+<p>Create a new test suite and record missed transitions to cover them. For more information, see <a href="../../conversation-testing/conversation-testing-landing-page/" target="_blank">Conversation Testing</a>.</p>
 </li>
 <li>
 <p>Click the <a class="glightbox" href="../images/fh-down-icon.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-down-icon.png"></a> icon to search and filter the dialog intent tasks for which you want to see the transitions coverage. You can filter transitions using the <em>From Node</em>, <em>To Node,</em> and <em>Coverage Status</em> filters.  </p>
@@ -3113,10 +3113,8 @@
 <p>The percentage of test results analysis is displayed as follows: </p>
 <ul>
 <li><strong>Total Test Cases</strong> – Shows the total number of test cases in a test suite.</li>
-<li>
-<p><strong>Pass, Fail, or Not Executed</strong> – Shows the count and percentage of test case results that have passed, failed, or not executed.  </p>
-<p><a class="glightbox" href="../images/fh-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img13.png" alt="Conversation test result analysis" title="Conversation test result analysis" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
+<li><strong>Pass, Fail, or Not Executed</strong> – Shows the count and percentage of test case results that have passed, failed, or not executed.<br />
+  <a class="glightbox" href="../images/fh-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img13.png" alt="Conversation test result analysis" title="Conversation test result analysis" style="border: 1px solid gray;zoom:50%;"/></a></li>
 </ul>
 <h3 id="view-intent-summary">View Intent Summary<a class="headerlink" href="#view-intent-summary" title="Permanent link">&para;</a></h3>
 <p>The View Intent Summary shows how well test cases are covering and performing at the intent level, making it easier to identify the most important failing and less-covered intents.</p>
@@ -3150,7 +3148,7 @@
 <a class="glightbox" href="../images/fh-img19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img19.png" alt="Sample execution result" title="Sample execution result" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>Text assertion fails because there is a mismatch between the <em>Expected</em> and <em>Actual</em> output. For more information, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/testing/regression-testing/conversation-testing/test-case-assertion">Test Case Assertion</a>. </p>
+<p>Text assertion fails because there is a mismatch between the <em>Expected</em> and <em>Actual</em> output. For more information, see <a href="../../conversation-testing/test-case-assertion" target="_blank">Test Case Assertion</a>. </p>
 </li>
 <li>
 <p>Click the <strong>X</strong> icon to close the Intent Details window.</p>
@@ -3163,7 +3161,7 @@
 <p><strong>FAQ Intent Details Window</strong></p>
 <p>This window gives the drill-down view of the FAQ-level details for the selected test suite. The primary objective here is to help users know the top-performing and low-performing FAQs to identify issues proactively and work on fixing them accordingly.<br />
 <a class="glightbox" href="../images/fh-img21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img21.png" alt="FAQ intent details" title="FAQ intent details" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p>For more information, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/testing/regression-testing/health-and-monitoring/flow-health-dashboard/#view-intent-summary">View Intent Summary</a> section.</p>
+<p>For more information, see <a href="#view-intent-summary">View Intent Summary</a> section.</p>
 <ul>
 <li><strong>Intent Name</strong>: The name of the dialog intent.</li>
 <li><strong>Path</strong>: The node path in the Knowledge Graph.</li>
@@ -3180,7 +3178,7 @@
 <p><strong>Small Talk Intent Details Window</strong></p>
 <p>Click <strong>View Intent Summary</strong> to view the <strong>Small Talk Details</strong> window that gives the drill-down view of the Small Talk level details for the selected test suite. The primary objective here is to help users know the top-performing and low-performing intents to identify issues proactively and fix them accordingly.<br />
 <a class="glightbox" href="../images/fh-img23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fh-img23.png" alt="Small talk intent details" title="Small talk intent details" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p>For more information, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/testing/regression-testing/health-and-monitoring/flow-health-dashboard/#view-intent-summary">View Intent Summary</a> section.</p>
+<p>For more information, see <a href="#view-intent-summary">View Intent Summary</a> section.</p>
 <ul>
 <li><strong>Intent Name</strong>: The intent name captured in the Small Talk interaction.</li>
 <li><strong>Group</strong>: The group to which the Small Talk interaction is mapped.</li>
