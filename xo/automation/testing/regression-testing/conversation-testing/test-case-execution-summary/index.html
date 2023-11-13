@@ -2993,39 +2993,51 @@ Follow these steps for test execution:</p>
 <a class="glightbox" href="../images/tces-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img4.png" alt="Result" title="Result" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ol>
-<p>When a test case is executed, the test case result is determined with the features like assertions, dynamic texts, OneOf, and so on. To know more, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/testing/regression-testing/conversation-testing/test-case-assertion">Test Case Assertion</a>.</p>
-<p>The platform simulates all the user inputs against the current VA definition in sequence, as available in the test case. For every user input, the VA’s responses are captured along with the metadata. See Capture Test Suite Metadata under <a href="https://docsinternal-kore.github.io/docs/xo/automation/testing/regression-testing/conversation-testing/create-a-test-suite/#validate-test-suite">Validate Test Suite</a> to know more.</p>
+<p>When a test case is executed, the test case result is determined with the features like assertions, dynamic texts, OneOf, and so on. To know more, see <a href="../test-case-assertion" target="_blank">Test Case Assertion</a>.</p>
+<p>The platform simulates all the user inputs against the current VA definition in sequence, as available in the test case. For every user input, the VA’s responses are captured along with the metadata. See Capture Test Suite Metadata under <a href="../create-a-test-suite/#validate-test-suite" target="_blank">Validate Test Suite</a> to know more.</p>
 <h3 id="test-assertions-execution">Test Assertions Execution<a class="headerlink" href="#test-assertions-execution" title="Permanent link">&para;</a></h3>
 <p>The platform performs the assertions tagged to each VA response of a test case. For example, a VA’s response can have Flow, Text, and Context Assertions tagged. The platform performs all three assertions to determine their assertion results.<br />
 <a class="glightbox" href="../images/tces-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/tces-img5.png" alt="Test Assertion" title="Test Assertion" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <h4 id="flow-assertion">Flow Assertion<a class="headerlink" href="#flow-assertion" title="Permanent link">&para;</a></h4>
 <ul>
-<li>For any VA response in a test case, the assertion is determined as pass when the following conditions are true:<ul>
+<li>
+<p>For any VA response in a test case, the assertion is determined as pass when the following conditions are true:</p>
+<ul>
 <li>The Intent ID of the Expected and Actual responses is the same.</li>
 <li>The Node ID of the Expected and Actual responses is the same.</li>
 <li>The Transition(s) of the Expected and Actual responses are the same.</li>
 <li>The Prompt type (Error or User Prompt) is the same in case of Entity nodes.</li>
 </ul>
 </li>
-<li>If the above conditions are not met, the assertion is determined as Failed.</li>
+<li>
+<p>If the above conditions are not met, the assertion is determined as Failed.</p>
+</li>
 </ul>
 <h4 id="text-assertion">Text Assertion<a class="headerlink" href="#text-assertion" title="Permanent link">&para;</a></h4>
 <ul>
-<li>For any VA response in a test case, the assertion is determined as passed when the following condition is true:<ul>
+<li>
+<p>For any VA response in a test case, the assertion is determined as passed when the following condition is true:</p>
+<ul>
 <li>The expected and actual responses are the same (string comparison).</li>
 </ul>
 </li>
-<li>Dynamic text values are not considered when performing the comparison.</li>
+<li>
+<p>Dynamic text values are not considered when performing the comparison.</p>
+</li>
 <li>In case of multiple responses in the Expected Output (when a node has multiple variations), one of the expected responses must match for the assertion to pass.</li>
 </ul>
 <h4 id="context-assertion">Context Assertion<a class="headerlink" href="#context-assertion" title="Permanent link">&para;</a></h4>
 <ul>
-<li>For any VA response in a test case, the context assertion is determined as passed when the following conditions are true:<ul>
+<li>
+<p>For any VA response in a test case, the context assertion is determined as passed when the following conditions are true:</p>
+<ul>
 <li>The expected and actual values are the same for the added context variable.</li>
 <li>A VA response has multiple context assertions and multiple context assertion results.</li>
 </ul>
 </li>
-<li>A context assertion fails if the expected value and the actual value of the variable are not the same.</li>
+<li>
+<p>A context assertion fails if the expected value and the actual value of the variable are not the same.</p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note<p>The test case result is determined as Pass only when all the assertions of all the VA responses of the test case are passed.</p>
