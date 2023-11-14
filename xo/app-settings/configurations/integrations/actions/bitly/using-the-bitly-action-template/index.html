@@ -17,7 +17,7 @@
     
     
       
-        <title>Using the bitly action template - Kore ai Docs</title>
+        <title>**Using the Bitly Action Template** - Kore ai Docs</title>
       
     
     
@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-the-bitly-action-template" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -166,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using the bitly action template
+              **Using the Bitly Action Template**
             
           </span>
         </div>
@@ -2870,6 +2875,36 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bitly-actions" class="md-nav__link">
+    Bitly Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Bitly Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-query" class="md-nav__link">
+    General Query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2888,7 +2923,101 @@
 
 
 
+<h1 id="using-the-bitly-action-template"><strong>Using the Bitly Action Template</strong><a class="headerlink" href="#using-the-bitly-action-template" title="Permanent link">&para;</a></h1>
+<p>You can use the <strong>Prebuilt Action Templates **from your Bitly integration to auto-create dialog tasks and test them using the **Talk to Bot</strong> option.</p>
+<p>Steps to create a dialog task using Bitly action templates:</p>
+<ol>
+<li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong>.</li>
+<li>
+<p>Click <strong>Create Dialog Task</strong>.<br />
+<a class="glightbox" href="../images/bitly-tem-img1-create-dailog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-tem-img1-create-dailog-task.png" alt="Create Dialog Task" title="Create Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>On the Dialog Task pop-up, under the <strong>Integration</strong>, select the <strong>Bitly</strong> option to view the action templates.<br />
+<a class="glightbox" href="../images/bitly-action-img11-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img11-tem-img2.png" alt="Integration-Bitly" title="Integration-Bitly" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+<p><strong>Note</strong>: If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the <strong>Actions</strong> page to configure an integration for your VA. For more information, see <a href="../../actions/" target="_blank">Actions Overview</a>.  </p>
+<p><a class="glightbox" href="../images/bitly-tem-img3-create-dialog-new.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-tem-img3-create-dialog-new.png" alt="Explore Integrations" title="Explore Integrations" style="border: 1px solid gray;zoom:50%;"/></a> </p>
+</li>
+</ol>
+<h2 id="bitly-actions">Bitly Actions<a class="headerlink" href="#bitly-actions" title="Permanent link">&para;</a></h2>
+<p>The following Bitly action is supported:</p>
+<table border="1">
+  <tr>
+   <td><strong>Supported Actions</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Method</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Short an URL
+   </td>
+   <td>Shortens any long URL.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+</table>
 
+<h3 id="general-query">General Query<a class="headerlink" href="#general-query" title="Permanent link">&para;</a></h3>
+<p>Steps to shorten the URL in the Bitly integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-bitly-action/#step-2-install-the-bitly-action-templates" target="_blank">Installing the Bitly templates</a> section to install this template.</li>
+<li>
+<p>The <em>Short URL</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/bitly-action-img12-tem-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img12-tem-img4.png" alt="Dialog task added" title="Dialog task added" style="border: 1px solid gray;zoom:50%;"/></a> </p>
+<ol>
+<li><strong>shortUrl</strong>: A user intent to shorten an URL.</li>
+<li><strong>longURL</strong> – An entity node to enter a long URL.</li>
+<li><strong>shortUrlService</strong>– A bot action service to send a query in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>generalQueryService</em> bot action component properties.</li>
+<li>
+<p>In the <strong>Component Properties</strong> window, click the <strong>Edit Request</strong> link to edit the request parameters, as shown below.<br />
+<a class="glightbox" href="../images/bitly-tem-img5-short-url.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-tem-img5-short-url.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+<p><strong>Sample Request</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    &quot;long_url&quot;: &quot;https://en.wikipedia.org/wiki/Constantine_V&quot;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>}
+</span></code></pre></div></p>
+</li>
+<li>
+<p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button.<br />
+    <a class="glightbox" href="../images/bitly-tem-img6-short-url.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-tem-img6-short-url.png" alt="Add Response" title="Add Response" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+<p><strong>Sample Response</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;created_at&quot;: &quot;2023-08-25T08:38:00+0000&quot;,
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&quot;id&quot;: &quot;bit.ly/3E8Nec6&quot;,
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&quot;link&quot;: &quot;https://bit.ly/3E8Nec6&quot;,
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&quot;custom_bitlinks&quot;: [],
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>&quot;long_url&quot;: &quot;https://en.wikipedia.org/wiki/Constantine_V&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&quot;archived&quot;: false,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&quot;tags&quot;: [],
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&quot;deeplinks&quot;: [],
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>&quot;references&quot;: {
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>&quot;group&quot;: &quot;https://api-ssl.bitly.com/v4/groups/Bn448WZsE7j&quot;
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>}
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>}
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>generalQueryMessage</strong> – A message node with the script to display the query in the Bitly system.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to resolve a general query.</li>
+<li>
+<p>Enter a long URL when prompted by the VA, as shown below.<br />
+<a class="glightbox" href="../images/bitly-tem-img7-short-url.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-tem-img7-short-url.png" alt="Enter long url" title="Enter long url" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+</li>
+<li>
+<p>You will notice that the long URL is shortened. Click <strong>View Stats</strong> to view URL statistics in the Bitly instance.<br />
+<a class="glightbox" href="../images/bitly-tem-img8-short-url.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-tem-img8-short-url.png" alt="View Stats" title="View Stats" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
 
 
   
