@@ -17,7 +17,7 @@
     
     
       
-        <title>**Using the BambooHR Templates** - Kore ai Docs</title>
+        <title>**Configuring the Bitly Action** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-the-bamboohr-templates" class="md-skip">
+        <a href="#configuring-the-bitly-action" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Using the BambooHR Templates**
+              **Configuring the Bitly Action**
             
           </span>
         </div>
@@ -2885,64 +2885,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bamboo-hr-actions" class="md-nav__link">
-    Bamboo HR Actions
+  <a href="#authorizations-supported" class="md-nav__link">
+    Authorizations Supported
   </a>
   
-    <nav class="md-nav" aria-label="Bamboo HR Actions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-the-bitly-action" class="md-nav__link">
+    Enable the Bitly Action
+  </a>
+  
+    <nav class="md-nav" aria-label="Enable the Bitly Action">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-an-employee" class="md-nav__link">
-    Create an Employee
+  <a href="#pre-authorize-the-integration" class="md-nav__link">
+    Pre-authorize the Integration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#get-employee-by-id" class="md-nav__link">
-    Get Employee by ID
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list-all-employees" class="md-nav__link">
-    List All Employees
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-an-employee" class="md-nav__link">
-    Update an Employee
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-all-time-off-requests" class="md-nav__link">
-    Get All Time Off Requests
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-a-list-of-who-is-out" class="md-nav__link">
-    Get a List of Who is Out
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-a-request-status" class="md-nav__link">
-    Update a Request Status
+  <a href="#allow-end-users-to-authorize" class="md-nav__link">
+    Allow End Users to Authorize
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-the-bitly-action-templates" class="md-nav__link">
+    Step 2: Install the Bitly Action Templates
+  </a>
   
 </li>
       
@@ -2965,421 +2944,123 @@
 
 
 
-<h1 id="using-the-bamboohr-templates"><strong>Using the BambooHR Templates</strong><a class="headerlink" href="#using-the-bamboohr-templates" title="Permanent link">&para;</a></h1>
-<p>You can use the <strong>Prebuilt Action Templates</strong> from your BambooHR integration to auto create dialog tasks and test them using the <strong>Talk to Bot</strong> option.</p>
-<p>Steps to create a dialog task using the BambooHR action templates:</p>
+<h1 id="configuring-the-bitly-action"><strong>Configuring the Bitly Action</strong><a class="headerlink" href="#configuring-the-bitly-action" title="Permanent link">&para;</a></h1>
+<p>The Kore.ai XO Platform lets you easily connect with your Bitly instance to shorten any long URLs. <a href="https://bitly.com/" target="_blank">Learn more about Bitly</a>.</p>
+<p>This document explains how to authorize and enable the Bitly action and install the pre-built templates.</p>
+<h2 id="authorizations-supported">Authorizations Supported<a class="headerlink" href="#authorizations-supported" title="Permanent link">&para;</a></h2>
+<p>The Kore.ai XO Platform supports API key authentication to allow Bitly integration to exchange data. For more information, read the <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/bot-authentication/" target="_blank">Bot Authorization Overview</a> article.</p>
+<p>The Kore.ai XO Platform supports the following authorization types for the Bitly integration:</p>
+<ul>
+<li><strong>Pre-Authorize the Integration</strong> – To make the integration process smoother for developers and customers, you can pre-authorize it by providing the necessary authorization credentials to obtain the access token.</li>
+<li><strong>Allow Users to Authorize the Integration</strong> – This method requires the end user to provide credentials during the conversation for authorization. This authorization process involves requesting permission for Kore.ai’s Bitly app to access an access token at runtime. To learn more about Bitly, see <a href="https://dev.bitly.com/docs/getting-started/authentication/" target="_blank">Bitly Documentation</a>.</li>
+</ul>
+<h2 id="enable-the-bitly-action">Enable the Bitly Action<a class="headerlink" href="#enable-the-bitly-action" title="Permanent link">&para;</a></h2>
+<p><strong>Prerequisites</strong></p>
+<p>Before enabling the Bitly action, complete the following prerequisites:</p>
+<ul>
+<li>If you don’t have Bitly account credentials, create an account in the <a href="https://dev.bitly.com/" target="_blank">Bitly Developer</a> console and note down the login credentials. See <a href="https://dev.bitly.com/docs/getting-started/authentication/" target="_blank">Bitly Documentation</a> for more information.</li>
+<li>Create a custom app on the Bitly admin page.</li>
+<li>Copy your Bitly account’s personal access token and keep it for future use.</li>
+</ul>
+<h3 id="pre-authorize-the-integration">Pre-authorize the Integration<a class="headerlink" href="#pre-authorize-the-integration" title="Permanent link">&para;</a></h3>
+<p><strong>Basic Auth</strong></p>
+<p>You can authorize the integration using your credentials. The developer authorization lets you authorize the integration with the preconfigured Kore.ai app with the <strong>Basic Auth</strong> option.</p>
+<p>Steps to authorize an Bitly action using developer credentials:</p>
 <ol>
-<li>Go to <strong>Build &gt; Conversation Skills</strong> and then click the <strong>Dialog Tasks</strong>.</li>
+<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong>.</li>
 <li>
-<p>Click the <strong>Create a Dialog Task</strong> to create a new task.<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img1-create-dailog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img1-create-dailog-task.png" alt="Create new task" title="Create new task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>Select the <strong>Bitly</strong> from the list of <strong>Available</strong> actions.<br />
+<a class="glightbox" href="../images/bitly-action-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img1.png" alt="Bitly" title="Bitly" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>On the Dialog Task pop-up, under the Integration, select the BambooHR option to view the action templates.<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img2.png" alt="Select BambooHR" title="Select BambooHR" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>In the <strong>Configurations</strong> dialog, select the <strong>Authorization</strong> tab.</p>
 </li>
-</ol>
-<p><strong>Note</strong>: If you have not configured any integration for your virtual assistant, you will see the Explore Integrations option. Once you click this option, you will be redirected to the Actions page to configure an integration for your VA. For more information, see <a href="../../actions/" target="_blank">Actions Overview</a>.<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img3-explore-integrations.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img3-explore-integrations.png" alt="Explore integrations" title="Explore integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<h2 id="bamboo-hr-actions">Bamboo HR Actions<a class="headerlink" href="#bamboo-hr-actions" title="Permanent link">&para;</a></h2>
-<p>The following BambooHR actions are supported:</p>
-<table border="1">
-  <tr>
-   <td><strong>Supported Actions</strong>
-   </td>
-   <td><strong>Description</strong>
-   </td>
-   <td><strong>Method</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Create an employee
-   </td>
-   <td>Creates an employee in the BambooHR system.
-   </td>
-   <td>POST
-   </td>
-  </tr>
-  <tr>
-   <td>Get employee by ID
-   </td>
-   <td>Find an employee using the employee ID.
-   </td>
-   <td>GET
-   </td>
-  </tr>
-  <tr>
-   <td>List all employee
-   </td>
-   <td>Retrieves all employees from the BambooHR system.
-   </td>
-   <td>GET
-   </td>
-  </tr>
-  <tr>
-   <td>Update an employee
-   </td>
-   <td>Updates an employee details in the BambooHR system.
-   </td>
-   <td>POST
-   </td>
-  </tr>
-  <tr>
-   <td>Get all time off requests
-   </td>
-   <td>Retrieves all time off requests from the BambooHR system.
-   </td>
-   <td>GET
-   </td>
-  </tr>
-  <tr>
-   <td>Get a list of who is out
-   </td>
-   <td>Find employees who are out on company holidays and for a period of time sorted by date.
-   </td>
-   <td>GET
-   </td>
-  </tr>
-  <tr>
-   <td>Update a request status
-   </td>
-   <td>Updates a time off request’s status in the BambooHR system.
-   </td>
-   <td>POST
-   </td>
-  </tr>
-</table>
-
-<h3 id="create-an-employee">Create an Employee<a class="headerlink" href="#create-an-employee" title="Permanent link">&para;</a></h3>
-<p>Steps to create an employee in the BambooHR integration:</p>
+<li>
+<p>Enter the following details:</p>
 <ol>
-<li>Refer to the <a href="../configuring-the-bamboohr-action/#Step_2_Install_the_BambooHR_Action_Templates" target="_blank">Installing the BambooHR templates</a> section to install this template.</li>
 <li>
-<p>The Create an Employee dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img4-create-employee.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img4-create-employee.png" alt="Create Employee dialog task" title="Create Employee dialog task" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
-<li><strong>createEmployee</strong> – A user intent to create an employee.</li>
-<li><strong>companyDomain</strong>, <strong>firstName</strong>, and <strong>lastName</strong> – Entity nodes for gathering the required employee details.</li>
-<li><strong>createEmployeeService</strong> – A bot action service to create an employee in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>createEmployeeService</em> bot action component properties.</li>
-<li>
-<p>In the <strong>Component Properties</strong> window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img5-create-employee.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img5-create-employee.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Sample Request</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{  
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;firstName&quot;:&quot;Alen&quot;,
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&quot;lastName&quot;:&quot;walker&quot;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>}
-</span></code></pre></div>
+<p><strong>Authorization Type</strong> – Select the <strong>Pre-authorize the Integration</strong> option, and then select the <strong>Basic Auth</strong> option.<br />
+<a class="glightbox" href="../images/bitly-action-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img2.png" alt="Auth type-Basic Auth" title="Auth type-Basic auth" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p><strong>createEmployeeMessage</strong> – A message node with script to display responses for various scenarios.</p>
+<p><strong>Personal Access Token</strong> – Enter the access token of your Bitly account.<br />
+<a class="glightbox" href="../images/bitly-action-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img3.png" alt="Enter access token" title="Enter access token" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
-<li>Click the <strong>Train</strong> tab to complete the Dialog task training.</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>Follow the prompts in the VA console to create an employee as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img6-create-employee1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img6-create-employee1.png" alt="Employee creation" title="Employee creation" style="border: 1px solid gray;zoom:50%;"/></a></li>
+<li>
+<p>Click <strong>Save</strong>. When you configure the action for the first time, the Integration Successful pop-up is displayed.<br />
+<strong>Note</strong>: The Bitly action is moved from <em>Available</em> to <em>Configured</em> region on the Actions page.</p>
+</li>
 </ol>
 </li>
 <li>
-<p>Click View Employee to view employee details in the BambooHR:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img7-create-employee2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img7-create-employee2.png" alt="Employee details" title="Employee details" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>You can also click the <strong>Skip for Now</strong> button to install the Dialog Task templates later. To learn how to use action templates, read the <a href="../using-the-bitly-action-template/" target="_blank">Using the Bitly action templates</a> article.<br />
+<a class="glightbox" href="../images/bitly-action-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img5.png" alt="Skip for now" title="Skip for now" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
 </li>
 </ol>
-<h3 id="get-employee-by-id">Get Employee by ID<a class="headerlink" href="#get-employee-by-id" title="Permanent link">&para;</a></h3>
-<p>Steps to find an employee by ID from the BambooHR integration:</p>
+<h3 id="allow-end-users-to-authorize">Allow End Users to Authorize<a class="headerlink" href="#allow-end-users-to-authorize" title="Permanent link">&para;</a></h3>
+<p>You can authorize the integration at a user level with their login credentials. The user authorization process involves requesting permission for Kore.ai’s Bitly app to access an access token at runtime. You can also use the basic auth profile to let a user configure the integration at runtime.</p>
+<p>Steps to authorize an Bitly action at a user level:</p>
+<ol>
+<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong> and select the <strong>Bitly</strong> action.</li>
+<li>In the Configurations dialog, select the <strong>Authorization</strong> tab.</li>
+<li>
+<p>Enter the following details:</p>
 <ol>
 <li>
-<p>Refer to the <a href="../configuring-the-bamboohr-action/#Step_2_Install_the_BambooHR_Action_Templates" target="_blank">Installing the BambooHR templates</a> section to install this template.</p>
+<p><strong>Authorization Type</strong> – Select the <strong>Allow Users to Authorize the Integration</strong> option, and then select the <strong>Basic Auth</strong> option.<br />
+<a class="glightbox" href="../images/bitly-action-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img6.png" alt="Auth type" title="Auth type" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>The <em>Get Employee by ID</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img8-get-employee.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img8-get-employee.png" alt="Get Employee ID task" title="Get Employee ID task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>Create your authorization profile to obtain an access token and use it to complete integration without using Kore.ai’s Bitly app for authorization. To create a profile, click the <strong>Select Authorization</strong> drop-down and select the <strong>Create New</strong> option.</p>
+</li>
+<li>
+<p>Select the type of authorization mechanism. For example, select the <strong>API Key</strong> option. To create Basic Auth profiles, see <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/bot-authentication/" target="_blank">Bot Authorization Overview</a>.<br />
+<a class="glightbox" href="../images/bitly-action-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img7.png" alt="Auth mechanism-API key" title="Auth mechanism-API key" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Enter the following authentication credentials for the Basic Auth mechanism:</p>
 <ol>
-<li><strong>getEmployeeByID</strong> – A user intent to find an employee by ID.</li>
-<li><strong>companyDomain</strong> and <strong>id</strong>– Entity nodes for gathering the required employee details.</li>
-<li><strong>getEmployeeByIdService</strong> – A bot action service to find an employee by an ID from an external integration. Click the **Plus **icon to expand to view the <em>getEmployeeByIdService</em> bot action component properties.</li>
+<li><strong>Name</strong> – Enter the name for the Basic Auth profile.</li>
+<li>Select <strong>Yes</strong>; some tasks will have tenancy URLs, and the user must provide the URLs to authenticate successfully.</li>
+<li><strong>Base URL</strong> – Enter the base tenant URL for the Bitly instance.</li>
+<li><strong>Authorization Check URL</strong> – Enter the authorization check URL for your Bitly instance.</li>
 <li>
-<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img9-get-employee1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img9-get-employee1.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Sample Request</strong>:  </p>
-<div class="language-text highlight"><pre><span></span><code>{
-&quot;id&quot;: &quot;114&quot;,
-&quot;firstName&quot;: &quot;Alen&quot;,
-&quot;lastName&quot;: &quot;walker&quot;
-}
-</code></pre></div>
+<p><strong>Description</strong> – Enter the description of the basic authentication profile.<br />
+<a class="glightbox" href="../images/bitly-action-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img8.png" alt="Basic auth credentials" title="Basic auth credentials" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p><strong>getEmployeeMessage</strong> – A message node with script to display responses for various scenarios.</p>
+<p>Click <strong>Save Auth</strong> to save the authorization profile.</p>
 </li>
-<li>Click the <strong>Train</strong> tab to complete the Dialog task training.</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>Follow the prompts in the VA console to find an employee as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img10-get-employee2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img10-get-employee2.png" alt="Find an employee" title="Find an employee" style="border: 1px solid gray;zoom:50%;"/></a></li>
-</ol>
-</li>
-<li>
-<p>Click View Employee to view employee details in the BambooHR.</p>
-</li>
-</ol>
-<h3 id="list-all-employees">List All Employees<a class="headerlink" href="#list-all-employees" title="Permanent link">&para;</a></h3>
-<p>Steps to view all employees in the BambooHR integration:</p>
-<ol>
-<li>Refer to the <a href="../configuring-the-bamboohr-action/#Step_2_Install_the_BambooHR_Action_Templates" target="_blank">Installing the BambooHR templates</a> section to install this template.</li>
-<li>
-<p>The <em>List All Employees</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img11-list-employees.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img11-list-employees.png" alt="List all employees" title="List all employees" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
-<li><strong>listAllEmployees</strong> – A user intent to create an employee.</li>
-<li><strong>companyDomain</strong> – Entity nodes for gathering the required employee details.</li>
-<li><strong>listAllEmployeesService</strong> – A bot action service to fetch all employees from an external integration. Click the **Plus **icon to expand to view the <em>listAllEmployeesService</em> bot action component properties.</li>
-<li>
-<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img12-list-employees1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img12-list-employees1.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Sample Request</strong>:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{  
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    &quot;fields&quot;: [ 
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    &quot;firstName&quot;, 
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    &quot;lastName&quot; 
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>] }
-</span></code></pre></div></p>
-<p>To add one or more responses, scroll down and click <strong>Add Response</strong>.  </p>
-<p><strong>Sample Response</strong>:<br />
-  <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{ 
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  &quot;title&quot;: &quot;Report&quot;,
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  &quot;fields&quot;: [ 
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  { 
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  &quot;id&quot;: &quot;firstName&quot;, 
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  &quot;type&quot;: &quot;text&quot;, 
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  &quot;name&quot;: &quot;First Name&quot; 
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  }, 
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  { 
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  &quot;id&quot;: &quot;lastName&quot;, 
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  &quot;type&quot;: &quot;text&quot;, 
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  &quot;name&quot;: &quot;Last Name&quot; 
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  } 
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>  ], 
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>  &quot;employees&quot;: [ 
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>  { 
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  &quot;id&quot;: &quot;112&quot;, 
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  &quot;firstName&quot;: &quot;John&quot;, 
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>  &quot;lastName&quot;: &quot;Smith&quot; 
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>  }, 
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>  { 
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  &quot;id&quot;: &quot;113&quot;, 
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>  &quot;firstName&quot;: &quot;Harry&quot;, 
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>  &quot;lastName&quot;: &quot;Anthony&quot; 
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>  }, 
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>  { 
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>  &quot;id&quot;: &quot;114&quot;, 
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>  &quot;firstName&quot;: &quot;Alen&quot;, 
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>  &quot;lastName&quot;: &quot;walker&quot; 
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>  } 
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>] }
-</span></code></pre></div></p>
-</li>
-<li>
-<p><strong>listAllEmployeesMessage</strong> – A message node with script to display responses for various scenarios.</p>
-</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>Follow the prompts in the VA console to view all employees as shown below:
-<a class="glightbox" href="../images/bamboo-hr-tem-img13-list-employees2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img13-list-employees2.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a></li>
+<li>Select the new <strong>Authorization Profile</strong>, which you created to complete integration.</li>
+<li>Click <strong>Save</strong>. When you configure the action for the first time, the <strong>Integration Successful</strong> pop-up is displayed.</li>
 </ol>
 </li>
 </ol>
-<h3 id="update-an-employee">Update an Employee<a class="headerlink" href="#update-an-employee" title="Permanent link">&para;</a></h3>
-<p>Steps to update an employee in the BambooHR integration:</p>
-<ol>
-<li>Refer to the <a href="../configuring-the-bamboohr-action/#Step_2_Install_the_BambooHR_Action_Templates" target="_blank">Installing the BambooHR templates</a> section to install this template.</li>
-<li>
-<p>The <em>Update an Employee</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img14-update-employee.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img14-update-employee.png" alt="Update Employee dialog task" title="Update Employee dialog task" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
-<li><strong>updateEmployee</strong> – A user intent to update an employee.</li>
-<li><strong>companyDomain</strong>, <strong>id</strong>, <strong>chooseField</strong>, <strong>firstName</strong>, and <strong>lastName</strong> – Entity nodes for gathering the required employee details.</li>
-<li>
-<p><strong>updateEmployeeScript</strong> – A bot action service to update an employee in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>updateEmployeeScript</em> bot action component properties.<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img15-update-employee1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img15-update-employee1.png" alt="View component properties" title="View component properties" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p><strong>updateEmployeeService</strong> – A bot action service to update an employee in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>updateEmployeeService</em> bot action component properties.</p>
-</li>
-<li>
-<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img16-update-employee2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img16-update-employee2.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Sample Request</strong>:<br />
-  <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{ 
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  &quot;firstName&quot;:&quot;Alen&quot;, 
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  &quot;lastName&quot;:&quot;walker&quot; 
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>}
-</span></code></pre></div></p>
-</li>
-<li>
-<p><strong>getEmployeeByIdService</strong> – A bot action service to find an employee by an ID from an external integration. Click the Plus icon to expand to view the getEmployeeByIdService bot action component properties.</p>
-</li>
-<li><strong>updateEmployeeMessage</strong> – A message node with script to display responses for various scenarios.</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>Follow the prompts in the VA console to update an employee as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img17-update-employee3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img17-update-employee3.png" alt="Update employee" title="Update employee" style="border: 1px solid gray;zoom:50%;"/></a></li>
-</ol>
-</li>
-<li>
-<p>Click View Employee to view employee details in the BambooHR.</p>
 </li>
 </ol>
-<h3 id="get-all-time-off-requests">Get All Time Off Requests<a class="headerlink" href="#get-all-time-off-requests" title="Permanent link">&para;</a></h3>
-<p>Steps to fetch all time off requests from the BambooHR integration:</p>
+<h2 id="step-2-install-the-bitly-action-templates">Step 2: Install the Bitly Action Templates<a class="headerlink" href="#step-2-install-the-bitly-action-templates" title="Permanent link">&para;</a></h2>
+<p>Once you have configured the Bitly integration, you can explore and install action templates.</p>
+<p>Steps to install action templates:</p>
 <ol>
-<li>Refer to the <a href="../configuring-the-bamboohr-action/#Step_2_Install_the_BambooHR_Action_Templates" target="&quot;_blank">Installing the BambooHR templates</a> section to install this template.</li>
 <li>
-<p>The Get All Time Off Requests dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img18-get-time-off.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img18-get-time-off.png" alt="Get Time Off Request dialog" title="Get Time Off Request dialog" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
-<li><strong>getTimeoffRequests</strong> – A user intent to get time off requests.</li>
-<li><strong>companyDomain</strong>, <strong>startDate</strong>, and <strong>endDate</strong>– Entity nodes for gathering the required employee details**getTimeoffRequestsService** – A bot action service to fetch time off requests in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>getTimeoffRequestsService</em> bot action component properties.</li>
-<li>
-<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img19-get-time-off1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img19-get-time-off1.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a><br />
-To add one or more requests, scroll down and click <strong>+Add Response</strong>.  </p>
-<p><strong>Sample Response</strong>:<br />
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>  [ 
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    { 
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    &quot;id&quot;: &quot;1649&quot;, 
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    &quot;employeeId&quot;: &quot;112&quot;, 
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    &quot;status&quot;: { 
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    &quot;lastChanged&quot;: &quot;2022-12-22&quot;, 
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    &quot;lastChangedByUserId&quot;: &quot;2385&quot;, 
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    &quot;status&quot;: &quot;approved&quot; 
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    }, 
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    &quot;name&quot;: &quot;Mark Anderson&quot;, 
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    &quot;start&quot;: &quot;2022-12-14&quot;, 
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    &quot;end&quot;: &quot;2022-12-15&quot;, 
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    &quot;created&quot;: &quot;2022-12-22&quot;, 
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    &quot;type&quot;: { 
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    &quot;id&quot;: &quot;83&quot;, 
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    &quot;name&quot;: &quot;Vacation&quot;, 
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    &quot;icon&quot;: &quot;palm-trees&quot; 
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    }, 
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    &quot;amount&quot;: { 
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    &quot;unit&quot;: &quot;hours&quot;, 
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    &quot;amount&quot;: &quot;16&quot; 
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    }, 
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    &quot;actions&quot;: { 
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    &quot;view&quot;: true, 
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    &quot;edit&quot;: true, 
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    &quot;cancel&quot;: false, 
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    &quot;approve&quot;: false, 
-</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    &quot;deny&quot;: false, 
-</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    &quot;bypass&quot;: false 
-</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>    }, 
-</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>    &quot;dates&quot;: { 
-</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>    &quot;2022-12-14&quot;: &quot;8&quot;, 
-</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>    &quot;2022-12-15&quot;: &quot;8&quot; 
-</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>    }, 
-</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>    &quot;notes&quot;: {} 
-</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>    }, 
-</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>    { 
-</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>    &quot;id&quot;: &quot;1650&quot;, 
-</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>    &quot;employeeId&quot;: &quot;112&quot;, 
-</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>    &quot;status&quot;: { 
-</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>    &quot;lastChanged&quot;: &quot;2022-12-22&quot;, 
-</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>    &quot;lastChangedByUserId&quot;: &quot;2385&quot;, 
-</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>    &quot;status&quot;: &quot;requested&quot; 
-</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>    }, 
-</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>    &quot;name&quot;: &quot;John Smith&quot;, 
-</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>    &quot;start&quot;: &quot;2022-12-12&quot;, 
-</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>    &quot;end&quot;: &quot;2022-12-13&quot;, 
-</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>    &quot;created&quot;: &quot;2022-12-22&quot;, 
-</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>    &quot;type&quot;: { 
-</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>    &quot;id&quot;: &quot;85&quot;, 
-</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>    &quot;name&quot;: &quot;Allan Walker&quot;, 
-</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>    &quot;icon&quot;: &quot;sales&quot; 
-</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>    }, 
-</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>    &quot;amount&quot;: { 
-</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>    &quot;unit&quot;: &quot;hours&quot;, 
-</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>    &quot;amount&quot;: &quot;16&quot; 
-</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>    }, 
-</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>    &quot;actions&quot;: { 
-</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>    &quot;view&quot;: true, 
-</span><span id="__span-4-60"><a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>    &quot;edit&quot;: true, 
-</span><span id="__span-4-61"><a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>    &quot;cancel&quot;: true, 
-</span><span id="__span-4-62"><a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>    &quot;approve&quot;: true, 
-</span><span id="__span-4-63"><a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>    &quot;deny&quot;: true, 
-</span><span id="__span-4-64"><a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>    &quot;bypass&quot;: true 
-</span><span id="__span-4-65"><a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>    }, 
-</span><span id="__span-4-66"><a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>    &quot;dates&quot;: { 
-</span><span id="__span-4-67"><a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>    &quot;2022-12-12&quot;: &quot;8&quot;, 
-</span><span id="__span-4-68"><a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>    &quot;2022-12-13&quot;: &quot;8&quot; 
-</span><span id="__span-4-69"><a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>    }, 
-</span><span id="__span-4-70"><a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>    &quot;notes&quot;: {} 
-</span><span id="__span-4-71"><a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>    } 
-</span><span id="__span-4-72"><a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>    ]   
-</span></code></pre></div></p>
+<p>On the Integration Successful dialog, click the <strong>Explore Templates</strong> button to view the templates.<br />
+<a class="glightbox" href="../images/bitly-action-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img9.png" alt="Explore Templates" title="Explore Templates" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p><strong>getTimeoffRequestsMessage</strong> – A message node with script to display responses for various scenarios.</p>
-</li>
-<li>Click the Talk to Bot icon to test and debug the dialog task.</li>
-<li>Follow the prompts in the VA console to get all time off requests as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img20-get-time-off2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img20-get-time-off2.png" alt="Get all time off requests" title="Get all time off requests" style="border: 1px solid gray;zoom:50%;"/></a></li>
-</ol>
-</li>
-</ol>
-<h3 id="get-a-list-of-who-is-out">Get a List of Who is Out<a class="headerlink" href="#get-a-list-of-who-is-out" title="Permanent link">&para;</a></h3>
-<p>Steps to get a list of who is out from the BambooHR integration:</p>
-<ol>
-<li>Refer to the <a href="../configuring-the-bamboohr-action/#Step_2_Install_the_BambooHR_Action_Templates" target="_blank">Installing the BambooHR templates</a> section to install this template.</li>
-<li>
-<p>The <em>Get a List of Who Is Out</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img21-get-who-out.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img21-get-who-out.png" alt="Get a list of Who is Out dialog task" title="Get a list of Who is Out dialog task" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
-<li><strong>getListWhoisOut</strong> – A user intent to get a list of who is out.</li>
-<li><strong>companyDomain</strong> – Entity nodes for gathering the required employee details.</li>
-<li><strong>getListWhoOutService</strong> – A bot action service to get a list who is out in an external integration. Click the <strong>Plus</strong> icon to expand to view the <strong>getListWhoOutService</strong> bot action component properties.</li>
-<li>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img22-get-who-out.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img22-get-who-out.png" alt="Request" title=Request" style="border: 1px solid gray;zoom:50%;"/></a></li>
-<li><strong>getListWhoIsOutMessage</strong> – A message node with script to display responses for various scenarios.</li>
-</ol>
+<p>In the Integration Templates dialog, click the <strong>Install</strong> button for a template to begin the installation.<br />
+<a class="glightbox" href="../images/bitly-action-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img10.png" alt="Install Template" title="Install Template" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</p>
+<p>Once the template is installed, click the <strong>Go to Dialog</strong> button to view the dialog task.</p>
 </li>
-<li>Follow the prompts in the VA console to get a list of who is out.</li>
-</ol>
-<h3 id="update-a-request-status">Update a Request Status<a class="headerlink" href="#update-a-request-status" title="Permanent link">&para;</a></h3>
-<p>Steps to update a request status in the BambooHR integration:</p>
-<ol>
-<li>Refer to the <a href="../configuring-the-bamboohr-action/#Step_2_Install_the_BambooHR_Action_Templates" target="_blank">Installing the BambooHR templates</a> section to install this template.</li>
+<li>A dialog task is automatically created for each installed template.</li>
 <li>
-<p>The <em>Update a Request Status</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img23-update-request-status.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img23-update-request-status.png" alt="Update Request Status dialog task" title="Update Request Status dialog task" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
-<li><strong>updateRequestStatus</strong> – A user intent to update a request.</li>
-<li><strong>companyDomain</strong>, <strong>requestID</strong>, and <strong>requestStatus</strong> – Entity nodes for gathering the required employee details.</li>
-<li>
-<p><strong>updateRequestStatusScript</strong> – A bot action service to update a request in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>updateRequestStatusScript</em> bot action component properties.<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img24-update-request-status.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img24-update-request-status.png" alt="Update Request Status script" title="Update Request Status script" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>Alternatively, you can create a new dialog task and select the Bitly integration to select the dialog task from the templates and click <strong>Proceed</strong>. For example, select the <strong>Short an Url</strong> task.<br />
+<a class="glightbox" href="../images/bitly-action-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img11.png" alt="Create task and select integration" title="Create task and select integration" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p><strong>updateRequestStatusService</strong> – A bot action service to update an employee in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>updateRequestService</em> bot action component properties.</p>
-</li>
-<li>
-<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img25-update-request-status.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img25-update-request-status.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Sample Request</strong>:<br />
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>{ 
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&quot;status&quot;: &quot;approved&quot;, 
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&quot;note&quot;: &quot;Have fun!&quot; 
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>}
-</span></code></pre></div></p>
-</li>
-<li>
-<p><strong>updateRequestStatusMessage</strong> – A message node with script to display responses for various scenarios.</p>
-</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>Follow the prompts in the VA console to update a request as shown below:<br />
-<a class="glightbox" href="../images/bamboo-hr-tem-img26-update-request-status.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bamboo-hr-tem-img26-update-request-status.png" alt="Update Request" title="Update Request" style="border: 1px solid gray;zoom:50%;"/></a></li>
-</ol>
+<p>Once you click <strong>Proceed</strong>, the dialog task is auto-created, and the canvas opens with all required entity nodes, service nodes, and message scripts.<br />
+<a class="glightbox" href="../images/bitly-action-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bitly-action-img12.png" alt="Dialog create dand canvas opens" title="Dialog create dand canvas opens" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ol>
 
