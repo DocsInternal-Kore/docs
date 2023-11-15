@@ -17,7 +17,7 @@
     
     
       
-        <title>**Delete Batch Test Suite Execution API** - Kore ai Docs</title>
+        <title>**Get Extraction Questions – KG** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#delete-batch-test-suite-execution-api" class="md-skip">
+        <a href="#get-extraction-questions-kg" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Delete Batch Test Suite Execution API**
+              **Get Extraction Questions – KG**
             
           </span>
         </div>
@@ -2885,6 +2885,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#path-parameters" class="md-nav__link">
+    Path Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#query-parameters" class="md-nav__link">
     Query Parameters
   </a>
@@ -2931,19 +2938,19 @@
 
 
 
-<h1 id="delete-batch-test-suite-execution-api"><strong>Delete Batch Test Suite Execution API</strong><a class="headerlink" href="#delete-batch-test-suite-execution-api" title="Permanent link">&para;</a></h1>
-<p>To delete a specific execution of a Batch Test Suite.</p>
+<h1 id="get-extraction-questions-kg"><strong>Get Extraction Questions – KG</strong><a class="headerlink" href="#get-extraction-questions-kg" title="Permanent link">&para;</a></h1>
+<p>To get the list of KG Extraction Questions.</p>
 <table>
   <tr>
    <td><strong>Method</strong>
    </td>
-   <td>DELETE
+   <td>GET
    </td>
   </tr>
   <tr>
    <td><strong>Endpoint</strong>
    </td>
-   <td><code>https://{host}/api/public/bot/{botId}/testsuite/{testSuiteName}/{testRunId}</code>
+   <td><code>https://{{host}}/api/public/stream/{{streamId}}/qna/{{ExtractionId}}/questions?limit=&offset=</code>
    </td>
   </tr>
   <tr>
@@ -2955,7 +2962,7 @@
   <tr>
    <td><strong>Authorization</strong>
    </td>
-   <td><code>auth: {{JWT}}</code>
+   <td><code>auth: {{YOUR_JWT_ACCESS_TOKEN}}</code>
 <p>
 See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_JWT_Token">How to generate the JWT Token</a>.
    </td>
@@ -2966,16 +2973,16 @@ See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_
    <td>
 <ul>
 
-<li>Bot Builder: Batch Tests Management
+<li>Bot Builder: Manage Knowledge Graph
 
-<li>Admin Console: Batch Tests Management
+<li>Admin Console: Manage Knowledge Graph
 </li>
 </ul>
    </td>
   </tr>
 </table>
 
-<h2 id="query-parameters">Query Parameters<a class="headerlink" href="#query-parameters" title="Permanent link">&para;</a></h2>
+<h2 id="path-parameters">Path Parameters<a class="headerlink" href="#path-parameters" title="Permanent link">&para;</a></h2>
 <table>
   <tr>
    <td><strong>PARAMETER</strong>
@@ -2994,43 +3001,78 @@ See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_
    </td>
   </tr>
   <tr>
-   <td><strong>BotID</strong>
+   <td><strong>streamId</strong>
    </td>
-   <td><em>Bot ID</em> or <em>Stream ID</em> can be accessed under <strong>General Settings</strong> on the Bot Builder.
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td><strong>testSuiteName</strong>
-   </td>
-   <td>Name of the test suite on the Bot Builder.
+   <td>The <em>Stream ID</em> that can be accessed under <strong>General Settings</strong>
+<p>
+on the Bot Builder.
    </td>
    <td>Required
    </td>
   </tr>
   <tr>
-   <td><strong>testRunId</strong>
+   <td><strong>ExtractionId</strong>
    </td>
-   <td>The unique identifier of an execution result obtained by running the <a href="https://developer.kore.ai/docs/bots/api-guide/batch-test-execution-api/">test execution API</a>.
+   <td>The <em>ExtractionId</em> used to identify the extraction of the questions.
    </td>
    <td>Required
    </td>
   </tr>
 </table>
 
+<h2 id="query-parameters">Query Parameters<a class="headerlink" href="#query-parameters" title="Permanent link">&para;</a></h2>
+<table>
+  <tr>
+   <td><strong>PARAMETER</strong>
+   </td>
+   <td><strong>DESCRIPTION</strong>
+   </td>
+   <td><strong>MANDATE</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>limit</strong>
+   </td>
+   <td>The number of records to be fetched. The default count is 50.
+   </td>
+   <td>Optional
+   </td>
+  </tr>
+  <tr>
+   <td><strong>offset</strong>
+   </td>
+   <td>The number of records to be skipped. The default count is 0.
+   </td>
+   <td>Optional
+   </td>
+  </tr>
+</table>
+
 <h2 id="sample-request">Sample Request<a class="headerlink" href="#sample-request" title="Permanent link">&para;</a></h2>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">curl</span><span class="w"> </span><span class="mi">--</span><span class="err">loca</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="mi">--</span><span class="err">reques</span><span class="kc">t</span><span class="w"> </span><span class="err">DELETE</span><span class="w"> </span><span class="err">\</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">     </span><span class="err">&#39;h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//{host}/api/public/bot/{botId}/testsuite/{testSuiteName}/{testRunId}&#39; \</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="mi">--</span><span class="err">header</span><span class="w"> </span><span class="err">&#39;au</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">YOUR_JWT_ACCESS_TOKEN</span><span class="p">}</span><span class="err">&#39;</span><span class="w"> </span><span class="err">\</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="mi">--</span><span class="err">header</span><span class="w"> </span><span class="err">&#39;bo</span><span class="kc">t</span><span class="mi">-</span><span class="err">la</span><span class="kc">n</span><span class="err">guage</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">la</span><span class="kc">n</span><span class="err">guage</span><span class="mi">-</span><span class="err">code</span><span class="p">}</span><span class="err">&#39;</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">curl</span><span class="w"> </span><span class="mi">--</span><span class="err">loca</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">&#39;h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//{{host}}/api/public/stream/{{streamId}}/qna/{{ExtractionId}}/questions?limit=20&amp;offset=0&#39; \</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="mi">--</span><span class="err">header</span><span class="w"> </span><span class="err">&#39;au</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="p">{{</span><span class="err">YOUR_JWT_ACCESS_TOKEN</span><span class="p">}}</span><span class="err">&#39;</span><span class="w"> </span><span class="err">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="mi">--</span><span class="err">header</span><span class="w"> </span><span class="err">&#39;Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="err">&#39;</span>
 </span></code></pre></div>
 <h2 id="body-parameters">Body Parameters<a class="headerlink" href="#body-parameters" title="Permanent link">&para;</a></h2>
 <p>No body parameters are passed.</p>
 <h2 id="sample-response">Sample Response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h2>
 <p>```json
 {
-    "message": "Test Result Removed Successfully"
+    "extractions": [
+        {
+            "_id": "qna-64xxxxxx-axx5-5xx1-b2xx-exxxxxxxxxxa",
+            "status": true,
+            "question": "Am I going to be charged for this security feature?",
+            "answer": "As of now, this service is free of charge and is a security measure for your online account safety.",
+            "language": "en",
+            "kEId": "ke-xxxxx-xxx-xxx-xxx-xxxxx",
+            "createdBy": "u-xxxxx-xxx-xxxx-xxx-xxxxx",
+            "streamId": "st-xxxxx-xxx-xxx-xxx-xxxxx",
+            "createdOn": "2020-01-03T06:59:19.472Z",
+            "modifiedOn": "2020-01-03T06:59:19.472Z",
+            "__v": 0
+        }
+    ]
 }</p>
 
 

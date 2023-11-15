@@ -17,7 +17,7 @@
     
     
       
-        <title>**Delete Batch Test Suite Execution API** - Kore ai Docs</title>
+        <title>**ML Utterances Export API** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#delete-batch-test-suite-execution-api" class="md-skip">
+        <a href="#ml-utterances-export-api" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Delete Batch Test Suite Execution API**
+              **ML Utterances Export API**
             
           </span>
         </div>
@@ -2931,19 +2931,19 @@
 
 
 
-<h1 id="delete-batch-test-suite-execution-api"><strong>Delete Batch Test Suite Execution API</strong><a class="headerlink" href="#delete-batch-test-suite-execution-api" title="Permanent link">&para;</a></h1>
-<p>To delete a specific execution of a Batch Test Suite.</p>
+<h1 id="ml-utterances-export-api"><strong>ML Utterances Export API</strong><a class="headerlink" href="#ml-utterances-export-api" title="Permanent link">&para;</a></h1>
+<p>To export the ML utterances of a bot by creating a <em>request ID</em> to generate the download link of the bot using the <a href="https://developer.kore.ai/docs/bots/api-guide/ml-utterances-export-status-api/">ML Utterance Export Status API</a>.</p>
 <table>
   <tr>
    <td><strong>Method</strong>
    </td>
-   <td>DELETE
+   <td>POST
    </td>
   </tr>
   <tr>
    <td><strong>Endpoint</strong>
    </td>
-   <td><code>https://{host}/api/public/bot/{botId}/testsuite/{testSuiteName}/{testRunId}</code>
+   <td><code>https://{{host}}/api/public/bot/{{BotID}}/mlexport</code>
    </td>
   </tr>
   <tr>
@@ -2966,9 +2966,9 @@ See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_
    <td>
 <ul>
 
-<li>Bot Builder: Batch Tests Management
+<li>Bot Builder: Utterances Export
 
-<li>Admin Console: Batch Tests Management
+<li>Admin Console: Test > Utterances Export and Train
 </li>
 </ul>
    </td>
@@ -2994,25 +2994,9 @@ See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_
    </td>
   </tr>
   <tr>
-   <td><strong>BotID</strong>
+   <td><strong>BotId</strong>
    </td>
    <td><em>Bot ID</em> or <em>Stream ID</em> can be accessed under <strong>General Settings</strong> on the Bot Builder.
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td><strong>testSuiteName</strong>
-   </td>
-   <td>Name of the test suite on the Bot Builder.
-   </td>
-   <td>Required
-   </td>
-  </tr>
-  <tr>
-   <td><strong>testRunId</strong>
-   </td>
-   <td>The unique identifier of an execution result obtained by running the <a href="https://developer.kore.ai/docs/bots/api-guide/batch-test-execution-api/">test execution API</a>.
    </td>
    <td>Required
    </td>
@@ -3020,17 +3004,29 @@ See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_
 </table>
 
 <h2 id="sample-request">Sample Request<a class="headerlink" href="#sample-request" title="Permanent link">&para;</a></h2>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">curl</span><span class="w"> </span><span class="mi">--</span><span class="err">loca</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="mi">--</span><span class="err">reques</span><span class="kc">t</span><span class="w"> </span><span class="err">DELETE</span><span class="w"> </span><span class="err">\</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">     </span><span class="err">&#39;h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//{host}/api/public/bot/{botId}/testsuite/{testSuiteName}/{testRunId}&#39; \</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="mi">--</span><span class="err">header</span><span class="w"> </span><span class="err">&#39;au</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">YOUR_JWT_ACCESS_TOKEN</span><span class="p">}</span><span class="err">&#39;</span><span class="w"> </span><span class="err">\</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="mi">--</span><span class="err">header</span><span class="w"> </span><span class="err">&#39;bo</span><span class="kc">t</span><span class="mi">-</span><span class="err">la</span><span class="kc">n</span><span class="err">guage</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">la</span><span class="kc">n</span><span class="err">guage</span><span class="mi">-</span><span class="err">code</span><span class="p">}</span><span class="err">&#39;</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">curl</span><span class="w"> </span><span class="mi">-</span><span class="err">X</span><span class="w"> </span><span class="err">POST</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">&#39;h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//{{host}}/api/public/bot/{{bot_id}}/mlexport?state=configured&amp;=&amp;type=csv&#39; \</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="mi">-</span><span class="err">H</span><span class="w"> </span><span class="err">&#39;au</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="p">{{</span><span class="err">YOUR_JWT_ACCESS_TOKEN</span><span class="p">}}</span><span class="err">&#39;</span><span class="w"> </span><span class="err">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="mi">-</span><span class="err">H</span><span class="w"> </span><span class="err">&#39;co</span><span class="kc">ntent</span><span class="mi">-</span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span><span class="err">&#39;</span>
 </span></code></pre></div>
 <h2 id="body-parameters">Body Parameters<a class="headerlink" href="#body-parameters" title="Permanent link">&para;</a></h2>
 <p>No body parameters are passed.</p>
 <h2 id="sample-response">Sample Response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h2>
 <p>```json
 {
-    "message": "Test Result Removed Successfully"
+    "status": "IN_PROGRESS",
+    "percentageComplete": 0,
+    "streamId": "st-22184e1f-e116-5ed4-8741-7aec3be466d7",
+    "jobType": "ML_UTTERANCE",
+    "action": "EXPORT",
+    "countOfDockStatuses": 1,
+    "createdBy": "u-8214dc3a-c749-5d23-b8ad-2a21bfa396ca",
+    "fileType": "CSV",
+    "statusLogs": [],
+    "_id": "ds-db32ec69-7f80-5873-890a-576fe585965f",
+    "lMod": "2023-07-26T13:15:04.000Z",
+    "createdOn": "2023-07-26T13:15:04.983Z",
+    "requestedTime": "2023-07-26T13:15:04.984Z",
+    "__v": 0
 }</p>
 
 
