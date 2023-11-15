@@ -17,7 +17,7 @@
     
     
       
-        <title>Using the dhl action templates - Kore ai Docs</title>
+        <title>**Using the DHL Action Templates** - Kore ai Docs</title>
       
     
     
@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-the-dhl-action-templates" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -166,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using the dhl action templates
+              **Using the DHL Action Templates**
             
           </span>
         </div>
@@ -2870,6 +2875,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dhl-actions" class="md-nav__link">
+    DHL Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="DHL Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#track-shipment" class="md-nav__link">
+    Track Shipment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-locations" class="md-nav__link">
+    Find Locations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2888,7 +2930,456 @@
 
 
 
+<h1 id="using-the-dhl-action-templates"><strong>Using the DHL Action Templates</strong><a class="headerlink" href="#using-the-dhl-action-templates" title="Permanent link">&para;</a></h1>
+<p>You can use the <strong>Prebuilt Action Templates</strong> from your DHL integration to auto-create dialog tasks and test them using the <strong>Talk to Bot</strong> option.</p>
+<p>Steps to create a dialog task using the DHL action templates:</p>
+<ol>
+<li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong>.</li>
+<li>
+<p>Click <strong>Create a Dialog Task</strong>.<br />
+<a class="glightbox" href="../images/dhl-tem-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-tem-img1.png" alt="Create a Dialog Task" title="Create a Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>On the Dialog Task pop-up, under the Integration, select the DHL option to view the action templates.</p>
+</li>
+<li>
+<p>Select any of the dialog task templates and click <strong>Proceed</strong>. For example, select the <strong>Track Shipment</strong> item.<br />
+<a class="glightbox" href="../images/dhl-action-img11-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-action-img11-tem-img2.png" alt="Select Dialog Task" title="Select Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the Actions page to configure an integration for your VA. For more information, see <a href="../../actions/" target="_blank">Actions Overview</a>.<br />
+<a class="glightbox" href="../images/dhl-tem-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-tem-img3.png" alt="Explore integrations" title="Explore integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
+<h2 id="dhl-actions">DHL Actions<a class="headerlink" href="#dhl-actions" title="Permanent link">&para;</a></h2>
+<p>The following DHL actions are supported:</p>
+<table border="1">
+  <tr>
+   <td><strong>Supported Tasks</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Method</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Track Shipment
+   </td>
+   <td>Tracks the shipment using the DHL tracking ID.
+   </td>
+   <td>GET
+   </td>
+  </tr>
+  <tr>
+   <td>Find locations
+   </td>
+   <td>Retrieves locations using the country code and postal code from the DHL system.
+   </td>
+   <td>GET
+   </td>
+  </tr>
+</table>
 
+<h3 id="track-shipment">Track Shipment<a class="headerlink" href="#track-shipment" title="Permanent link">&para;</a></h3>
+<p>Steps to track the shipment using the DHL tracking ID:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-dhl-action/#step-2-install-the-dhl-action-templates" target="_blank">Installing the DHL Action templates</a> section to install this template.</li>
+<li>
+<p>The <strong>Track Shipment</strong> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/dhl-action-img12-tem-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-action-img12-tem-img4.png" alt="Dialog task added" title="Dialog task added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>trackShipment</strong>: A user intent to track a shipment using the DHL ID.</li>
+<li><strong>trackingNumber</strong> – Entity nodes for entering the tracking number.</li>
+<li><strong>trackShipmentService</strong> – A bot action service to find places from an external integration using the place name. Click the Plus icon to expand to view the <strong>trackShipmentService</strong> bot action component properties.</li>
+<li>
+<p>(Optional)In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/dhl-tem-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-tem-img5.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>To add one or more responses, scroll down and click the +Add Response button:<br />
+<a class="glightbox" href="../images/dhl-tem-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-tem-img6.png" alt="Response" title="Response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;shipments&quot;: [
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>{
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&quot;id&quot;: &quot;7777777770&quot;,
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&quot;service&quot;: &quot;express&quot;,
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>&quot;origin&quot;: {
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&quot;address&quot;: {
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>&quot;addressLocality&quot;: &quot;-&quot;
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>},
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>&quot;servicePoint&quot;: {
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>&quot;url&quot;: &quot;http://www.dhl.com/en/country_profile.html&quot;,
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>&quot;label&quot;: &quot;Origin Service Area&quot;
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>}
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>},
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>&quot;destination&quot;: {
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>&quot;address&quot;: {
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>&quot;addressLocality&quot;: &quot;-&quot;
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>},
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>&quot;servicePoint&quot;: {
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>&quot;url&quot;: &quot;http://www.dhl.com/en/country_profile.html&quot;,
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>&quot;label&quot;: &quot;Destination Service Area&quot;
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>}
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>},
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>&quot;status&quot;: {
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>&quot;timestamp&quot;: &quot;2023-05-23T12:30:00&quot;,
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>&quot;location&quot;: {
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>&quot;address&quot;: {
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>&quot;addressLocality&quot;: &quot;NUERNBERG - GERMANY&quot;
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>}
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>},
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>&quot;statusCode&quot;: &quot;transit&quot;,
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>&quot;status&quot;: &quot;transit&quot;,
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>&quot;description&quot;: &quot;Arrived at DHL Delivery Facility NUERNBERG - GERMANY&quot;
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>},
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>&quot;details&quot;: {
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>&quot;proofOfDelivery&quot;: {
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>&quot;signatureUrl&quot;: &quot;https://proview.dhl.com/proview/adhocnotify?id=vasdsasss&quot;,
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>&quot;documentUrl&quot;: &quot;https://proview.dhl.com/proview/adhocnotify?id=vQg5&quot;
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>},
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>&quot;proofOfDeliverySignedAvailable&quot;: false
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>},
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>&quot;events&quot;: [
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>{
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>&quot;timestamp&quot;: &quot;2023-05-23T12:30:00&quot;,
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>&quot;location&quot;: {
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>&quot;address&quot;: {
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>&quot;addressLocality&quot;: &quot;NUERNBERG - GERMANY&quot;
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>}
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>},
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>&quot;description&quot;: &quot;Arrived at DHL Delivery Facility NUERNBERG - GERMANY&quot;
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>},
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>{
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>&quot;description&quot;: &quot;Shipment picked up&quot;
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>}
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>]
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>}
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>]
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>trackShipmentMessage</strong> – A message node with the script to display responses.</p>
+</li>
+<li>Click the <strong>Train</strong> tab to complete the Dialog task training.</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to track shipment, as shown below.<br />
+<a class="glightbox" href="../images/dhl-tem-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-tem-img7.png" alt="VA console prompt to track shipment" title="VA console prompt to track shipment" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+</li>
+</ol>
+<h3 id="find-locations">Find Locations<a class="headerlink" href="#find-locations" title="Permanent link">&para;</a></h3>
+<p>Steps to find DHL locations using the country and postal codes:</p>
+<ol>
+<li>Refer to the <a href="https://developer.kore.ai/integrations/configuring-the-dhl-action/#step-2-install-the-dhl-action-templates" target="_blank">Installing the DHL Action templates</a> section to install this template.</li>
+<li>
+<p>The <strong>Find Locations</strong> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/dhl-tem-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-tem-img8.png" alt="Dialog task added" title="Dialog task added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>findLocations</strong>: A user intent to find locations using the coordinates.</li>
+<li><strong>countryCode</strong> and <strong>postalCode</strong> – Entity node for entering the country and postal codes.</li>
+<li><strong>findLocationsService</strong> – A bot action service to find locations using a country and postal code from an external integration. Click the Plus icon to expand to view the <strong>findLocationsService</strong> bot action component properties.</li>
+<li>
+<p>(Optional)In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/dhl-tem-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-tem-img9.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>To add one or more responses, scroll down and click the +Add Response button:<br />
+<a class="glightbox" href="../images/dhl-tem-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-tem-img10.png" alt="Response" title="Response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;locations&quot;: [
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>{
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&quot;url&quot;: &quot;/locations/HYD102&quot;,
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&quot;location&quot;: {
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>&quot;ids&quot;: [
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>{
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&quot;locationId&quot;: &quot;HYD102&quot;,
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&quot;provider&quot;: &quot;express&quot;
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>],
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>&quot;keyword&quot;: &quot;&quot;,
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>&quot;keywordId&quot;: &quot;&quot;,
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>&quot;type&quot;: &quot;servicepoint&quot;
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>},
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>&quot;name&quot;: &quot;Madhapur Office, HYDERABAD&quot;,
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>&quot;distance&quot;: 1076,
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>&quot;place&quot;: {
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>&quot;address&quot;: {
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>&quot;countryCode&quot;: &quot;IN&quot;,
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>&quot;postalCode&quot;: &quot;500081&quot;,
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>&quot;addressLocality&quot;: &quot;HYDERABAD&quot;,
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>&quot;streetAddress&quot;: &quot;H.No.2-52/1, Plot No.12 Opp Kasanigr Hotel,&quot;
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>},
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>&quot;geo&quot;: {
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>&quot;latitude&quot;: 17.441049,
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>&quot;longitude&quot;: 78.392052
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>}
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>},
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>&quot;openingHours&quot;: [
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>{
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Monday&quot;
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>},
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>{
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Tuesday&quot;
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>},
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>{
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Wednesday&quot;
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>},
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>{
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Thursday&quot;
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>},
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>{
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Friday&quot;
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>},
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>{
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Saturday&quot;
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>}
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>],
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>&quot;closurePeriods&quot;: [],
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>&quot;serviceTypes&quot;: [
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>&quot;express:drop-off-easy&quot;,
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>&quot;express:drop-off&quot;,
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>&quot;express:drop-off-account&quot;,
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>&quot;express:pick-up&quot;,
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>&quot;express:drop-off-prelabeled&quot;
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>],
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>&quot;averageCapacityDayOfWeek&quot;: []
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>},
+</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>{
+</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>&quot;url&quot;: &quot;/locations/HYD112&quot;,
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>&quot;location&quot;: {
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>&quot;ids&quot;: [
+</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>{
+</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>&quot;locationId&quot;: &quot;HYD112&quot;,
+</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>&quot;provider&quot;: &quot;express&quot;
+</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>}
+</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>],
+</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>&quot;keyword&quot;: &quot;&quot;,
+</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>&quot;keywordId&quot;: &quot;&quot;,
+</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>&quot;type&quot;: &quot;servicepoint&quot;
+</span><span id="__span-1-84"><a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>},
+</span><span id="__span-1-85"><a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>&quot;name&quot;: &quot;Gachibowli Office, HYDERABAD&quot;,
+</span><span id="__span-1-86"><a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>&quot;distance&quot;: 1840,
+</span><span id="__span-1-87"><a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>&quot;place&quot;: {
+</span><span id="__span-1-88"><a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>&quot;address&quot;: {
+</span><span id="__span-1-89"><a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>&quot;countryCode&quot;: &quot;IN&quot;,
+</span><span id="__span-1-90"><a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>&quot;postalCode&quot;: &quot;500032&quot;,
+</span><span id="__span-1-91"><a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>&quot;addressLocality&quot;: &quot;HYDERABAD&quot;,
+</span><span id="__span-1-92"><a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a>&quot;streetAddress&quot;: &quot;Shop No.1, First floor House no. 2-48/T2, Gachibowli&quot;
+</span><span id="__span-1-93"><a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>},
+</span><span id="__span-1-94"><a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a>&quot;geo&quot;: {
+</span><span id="__span-1-95"><a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a>&quot;latitude&quot;: 17.435879,
+</span><span id="__span-1-96"><a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a>&quot;longitude&quot;: 78.366746
+</span><span id="__span-1-97"><a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>}
+</span><span id="__span-1-98"><a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a>},
+</span><span id="__span-1-99"><a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a>&quot;openingHours&quot;: [
+</span><span id="__span-1-100"><a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a>{
+</span><span id="__span-1-101"><a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-102"><a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-103"><a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Monday&quot;
+</span><span id="__span-1-104"><a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a>},
+</span><span id="__span-1-105"><a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a>{
+</span><span id="__span-1-106"><a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-107"><a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-108"><a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Tuesday&quot;
+</span><span id="__span-1-109"><a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a>},
+</span><span id="__span-1-110"><a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a>{
+</span><span id="__span-1-111"><a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-112"><a id="__codelineno-1-112" name="__codelineno-1-112" href="#__codelineno-1-112"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-113"><a id="__codelineno-1-113" name="__codelineno-1-113" href="#__codelineno-1-113"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Wednesday&quot;
+</span><span id="__span-1-114"><a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a>},
+</span><span id="__span-1-115"><a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a>{
+</span><span id="__span-1-116"><a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-117"><a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-118"><a id="__codelineno-1-118" name="__codelineno-1-118" href="#__codelineno-1-118"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Thursday&quot;
+</span><span id="__span-1-119"><a id="__codelineno-1-119" name="__codelineno-1-119" href="#__codelineno-1-119"></a>},
+</span><span id="__span-1-120"><a id="__codelineno-1-120" name="__codelineno-1-120" href="#__codelineno-1-120"></a>{
+</span><span id="__span-1-121"><a id="__codelineno-1-121" name="__codelineno-1-121" href="#__codelineno-1-121"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-122"><a id="__codelineno-1-122" name="__codelineno-1-122" href="#__codelineno-1-122"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-123"><a id="__codelineno-1-123" name="__codelineno-1-123" href="#__codelineno-1-123"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Friday&quot;
+</span><span id="__span-1-124"><a id="__codelineno-1-124" name="__codelineno-1-124" href="#__codelineno-1-124"></a>},
+</span><span id="__span-1-125"><a id="__codelineno-1-125" name="__codelineno-1-125" href="#__codelineno-1-125"></a>{
+</span><span id="__span-1-126"><a id="__codelineno-1-126" name="__codelineno-1-126" href="#__codelineno-1-126"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-127"><a id="__codelineno-1-127" name="__codelineno-1-127" href="#__codelineno-1-127"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-128"><a id="__codelineno-1-128" name="__codelineno-1-128" href="#__codelineno-1-128"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Saturday&quot;
+</span><span id="__span-1-129"><a id="__codelineno-1-129" name="__codelineno-1-129" href="#__codelineno-1-129"></a>}
+</span><span id="__span-1-130"><a id="__codelineno-1-130" name="__codelineno-1-130" href="#__codelineno-1-130"></a>],
+</span><span id="__span-1-131"><a id="__codelineno-1-131" name="__codelineno-1-131" href="#__codelineno-1-131"></a>&quot;closurePeriods&quot;: [],
+</span><span id="__span-1-132"><a id="__codelineno-1-132" name="__codelineno-1-132" href="#__codelineno-1-132"></a>&quot;serviceTypes&quot;: [
+</span><span id="__span-1-133"><a id="__codelineno-1-133" name="__codelineno-1-133" href="#__codelineno-1-133"></a>&quot;express:drop-off-easy&quot;,
+</span><span id="__span-1-134"><a id="__codelineno-1-134" name="__codelineno-1-134" href="#__codelineno-1-134"></a>&quot;express:drop-off&quot;,
+</span><span id="__span-1-135"><a id="__codelineno-1-135" name="__codelineno-1-135" href="#__codelineno-1-135"></a>&quot;express:drop-off-account&quot;,
+</span><span id="__span-1-136"><a id="__codelineno-1-136" name="__codelineno-1-136" href="#__codelineno-1-136"></a>&quot;express:pick-up&quot;,
+</span><span id="__span-1-137"><a id="__codelineno-1-137" name="__codelineno-1-137" href="#__codelineno-1-137"></a>&quot;express:drop-off-prelabeled&quot;
+</span><span id="__span-1-138"><a id="__codelineno-1-138" name="__codelineno-1-138" href="#__codelineno-1-138"></a>],
+</span><span id="__span-1-139"><a id="__codelineno-1-139" name="__codelineno-1-139" href="#__codelineno-1-139"></a>&quot;averageCapacityDayOfWeek&quot;: []
+</span><span id="__span-1-140"><a id="__codelineno-1-140" name="__codelineno-1-140" href="#__codelineno-1-140"></a>},
+</span><span id="__span-1-141"><a id="__codelineno-1-141" name="__codelineno-1-141" href="#__codelineno-1-141"></a>{
+</span><span id="__span-1-142"><a id="__codelineno-1-142" name="__codelineno-1-142" href="#__codelineno-1-142"></a>&quot;url&quot;: &quot;/locations/HYD119&quot;,
+</span><span id="__span-1-143"><a id="__codelineno-1-143" name="__codelineno-1-143" href="#__codelineno-1-143"></a>&quot;location&quot;: {
+</span><span id="__span-1-144"><a id="__codelineno-1-144" name="__codelineno-1-144" href="#__codelineno-1-144"></a>&quot;ids&quot;: [
+</span><span id="__span-1-145"><a id="__codelineno-1-145" name="__codelineno-1-145" href="#__codelineno-1-145"></a>{
+</span><span id="__span-1-146"><a id="__codelineno-1-146" name="__codelineno-1-146" href="#__codelineno-1-146"></a>&quot;locationId&quot;: &quot;HYD119&quot;,
+</span><span id="__span-1-147"><a id="__codelineno-1-147" name="__codelineno-1-147" href="#__codelineno-1-147"></a>&quot;provider&quot;: &quot;express&quot;
+</span><span id="__span-1-148"><a id="__codelineno-1-148" name="__codelineno-1-148" href="#__codelineno-1-148"></a>}
+</span><span id="__span-1-149"><a id="__codelineno-1-149" name="__codelineno-1-149" href="#__codelineno-1-149"></a>],
+</span><span id="__span-1-150"><a id="__codelineno-1-150" name="__codelineno-1-150" href="#__codelineno-1-150"></a>&quot;keyword&quot;: &quot;&quot;,
+</span><span id="__span-1-151"><a id="__codelineno-1-151" name="__codelineno-1-151" href="#__codelineno-1-151"></a>&quot;keywordId&quot;: &quot;&quot;,
+</span><span id="__span-1-152"><a id="__codelineno-1-152" name="__codelineno-1-152" href="#__codelineno-1-152"></a>&quot;type&quot;: &quot;servicepoint&quot;
+</span><span id="__span-1-153"><a id="__codelineno-1-153" name="__codelineno-1-153" href="#__codelineno-1-153"></a>},
+</span><span id="__span-1-154"><a id="__codelineno-1-154" name="__codelineno-1-154" href="#__codelineno-1-154"></a>&quot;name&quot;: &quot;Kothaguda X Roads,HYDERABAD&quot;,
+</span><span id="__span-1-155"><a id="__codelineno-1-155" name="__codelineno-1-155" href="#__codelineno-1-155"></a>&quot;distance&quot;: 2332,
+</span><span id="__span-1-156"><a id="__codelineno-1-156" name="__codelineno-1-156" href="#__codelineno-1-156"></a>&quot;place&quot;: {
+</span><span id="__span-1-157"><a id="__codelineno-1-157" name="__codelineno-1-157" href="#__codelineno-1-157"></a>&quot;address&quot;: {
+</span><span id="__span-1-158"><a id="__codelineno-1-158" name="__codelineno-1-158" href="#__codelineno-1-158"></a>&quot;countryCode&quot;: &quot;IN&quot;,
+</span><span id="__span-1-159"><a id="__codelineno-1-159" name="__codelineno-1-159" href="#__codelineno-1-159"></a>&quot;postalCode&quot;: &quot;500084&quot;,
+</span><span id="__span-1-160"><a id="__codelineno-1-160" name="__codelineno-1-160" href="#__codelineno-1-160"></a>&quot;addressLocality&quot;: &quot;HYDERABAD&quot;,
+</span><span id="__span-1-161"><a id="__codelineno-1-161" name="__codelineno-1-161" href="#__codelineno-1-161"></a>&quot;streetAddress&quot;: &quot;Shop No.5, 1st Flr, Satya Towers Satya Towers,H.No.2-17, Kothaguda X Roads&quot;
+</span><span id="__span-1-162"><a id="__codelineno-1-162" name="__codelineno-1-162" href="#__codelineno-1-162"></a>},
+</span><span id="__span-1-163"><a id="__codelineno-1-163" name="__codelineno-1-163" href="#__codelineno-1-163"></a>&quot;geo&quot;: {
+</span><span id="__span-1-164"><a id="__codelineno-1-164" name="__codelineno-1-164" href="#__codelineno-1-164"></a>&quot;latitude&quot;: 17.4588091,
+</span><span id="__span-1-165"><a id="__codelineno-1-165" name="__codelineno-1-165" href="#__codelineno-1-165"></a>&quot;longitude&quot;: 78.3672857
+</span><span id="__span-1-166"><a id="__codelineno-1-166" name="__codelineno-1-166" href="#__codelineno-1-166"></a>}
+</span><span id="__span-1-167"><a id="__codelineno-1-167" name="__codelineno-1-167" href="#__codelineno-1-167"></a>},
+</span><span id="__span-1-168"><a id="__codelineno-1-168" name="__codelineno-1-168" href="#__codelineno-1-168"></a>&quot;openingHours&quot;: [
+</span><span id="__span-1-169"><a id="__codelineno-1-169" name="__codelineno-1-169" href="#__codelineno-1-169"></a>{
+</span><span id="__span-1-170"><a id="__codelineno-1-170" name="__codelineno-1-170" href="#__codelineno-1-170"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-171"><a id="__codelineno-1-171" name="__codelineno-1-171" href="#__codelineno-1-171"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-172"><a id="__codelineno-1-172" name="__codelineno-1-172" href="#__codelineno-1-172"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Monday&quot;
+</span><span id="__span-1-173"><a id="__codelineno-1-173" name="__codelineno-1-173" href="#__codelineno-1-173"></a>},
+</span><span id="__span-1-174"><a id="__codelineno-1-174" name="__codelineno-1-174" href="#__codelineno-1-174"></a>{
+</span><span id="__span-1-175"><a id="__codelineno-1-175" name="__codelineno-1-175" href="#__codelineno-1-175"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-176"><a id="__codelineno-1-176" name="__codelineno-1-176" href="#__codelineno-1-176"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-177"><a id="__codelineno-1-177" name="__codelineno-1-177" href="#__codelineno-1-177"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Tuesday&quot;
+</span><span id="__span-1-178"><a id="__codelineno-1-178" name="__codelineno-1-178" href="#__codelineno-1-178"></a>},
+</span><span id="__span-1-179"><a id="__codelineno-1-179" name="__codelineno-1-179" href="#__codelineno-1-179"></a>{
+</span><span id="__span-1-180"><a id="__codelineno-1-180" name="__codelineno-1-180" href="#__codelineno-1-180"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-181"><a id="__codelineno-1-181" name="__codelineno-1-181" href="#__codelineno-1-181"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-182"><a id="__codelineno-1-182" name="__codelineno-1-182" href="#__codelineno-1-182"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Wednesday&quot;
+</span><span id="__span-1-183"><a id="__codelineno-1-183" name="__codelineno-1-183" href="#__codelineno-1-183"></a>},
+</span><span id="__span-1-184"><a id="__codelineno-1-184" name="__codelineno-1-184" href="#__codelineno-1-184"></a>{
+</span><span id="__span-1-185"><a id="__codelineno-1-185" name="__codelineno-1-185" href="#__codelineno-1-185"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-186"><a id="__codelineno-1-186" name="__codelineno-1-186" href="#__codelineno-1-186"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-187"><a id="__codelineno-1-187" name="__codelineno-1-187" href="#__codelineno-1-187"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Thursday&quot;
+</span><span id="__span-1-188"><a id="__codelineno-1-188" name="__codelineno-1-188" href="#__codelineno-1-188"></a>},
+</span><span id="__span-1-189"><a id="__codelineno-1-189" name="__codelineno-1-189" href="#__codelineno-1-189"></a>{
+</span><span id="__span-1-190"><a id="__codelineno-1-190" name="__codelineno-1-190" href="#__codelineno-1-190"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-191"><a id="__codelineno-1-191" name="__codelineno-1-191" href="#__codelineno-1-191"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-192"><a id="__codelineno-1-192" name="__codelineno-1-192" href="#__codelineno-1-192"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Friday&quot;
+</span><span id="__span-1-193"><a id="__codelineno-1-193" name="__codelineno-1-193" href="#__codelineno-1-193"></a>},
+</span><span id="__span-1-194"><a id="__codelineno-1-194" name="__codelineno-1-194" href="#__codelineno-1-194"></a>{
+</span><span id="__span-1-195"><a id="__codelineno-1-195" name="__codelineno-1-195" href="#__codelineno-1-195"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-196"><a id="__codelineno-1-196" name="__codelineno-1-196" href="#__codelineno-1-196"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-197"><a id="__codelineno-1-197" name="__codelineno-1-197" href="#__codelineno-1-197"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Saturday&quot;
+</span><span id="__span-1-198"><a id="__codelineno-1-198" name="__codelineno-1-198" href="#__codelineno-1-198"></a>}
+</span><span id="__span-1-199"><a id="__codelineno-1-199" name="__codelineno-1-199" href="#__codelineno-1-199"></a>],
+</span><span id="__span-1-200"><a id="__codelineno-1-200" name="__codelineno-1-200" href="#__codelineno-1-200"></a>&quot;closurePeriods&quot;: [],
+</span><span id="__span-1-201"><a id="__codelineno-1-201" name="__codelineno-1-201" href="#__codelineno-1-201"></a>&quot;serviceTypes&quot;: [
+</span><span id="__span-1-202"><a id="__codelineno-1-202" name="__codelineno-1-202" href="#__codelineno-1-202"></a>&quot;express:drop-off-easy&quot;,
+</span><span id="__span-1-203"><a id="__codelineno-1-203" name="__codelineno-1-203" href="#__codelineno-1-203"></a>&quot;express:drop-off&quot;,
+</span><span id="__span-1-204"><a id="__codelineno-1-204" name="__codelineno-1-204" href="#__codelineno-1-204"></a>&quot;express:drop-off-account&quot;,
+</span><span id="__span-1-205"><a id="__codelineno-1-205" name="__codelineno-1-205" href="#__codelineno-1-205"></a>&quot;express:pick-up&quot;,
+</span><span id="__span-1-206"><a id="__codelineno-1-206" name="__codelineno-1-206" href="#__codelineno-1-206"></a>&quot;express:drop-off-prelabeled&quot;
+</span><span id="__span-1-207"><a id="__codelineno-1-207" name="__codelineno-1-207" href="#__codelineno-1-207"></a>],
+</span><span id="__span-1-208"><a id="__codelineno-1-208" name="__codelineno-1-208" href="#__codelineno-1-208"></a>&quot;averageCapacityDayOfWeek&quot;: []
+</span><span id="__span-1-209"><a id="__codelineno-1-209" name="__codelineno-1-209" href="#__codelineno-1-209"></a>},
+</span><span id="__span-1-210"><a id="__codelineno-1-210" name="__codelineno-1-210" href="#__codelineno-1-210"></a>{
+</span><span id="__span-1-211"><a id="__codelineno-1-211" name="__codelineno-1-211" href="#__codelineno-1-211"></a>&quot;url&quot;: &quot;/locations/HYD109&quot;,
+</span><span id="__span-1-212"><a id="__codelineno-1-212" name="__codelineno-1-212" href="#__codelineno-1-212"></a>&quot;location&quot;: {
+</span><span id="__span-1-213"><a id="__codelineno-1-213" name="__codelineno-1-213" href="#__codelineno-1-213"></a>&quot;ids&quot;: [
+</span><span id="__span-1-214"><a id="__codelineno-1-214" name="__codelineno-1-214" href="#__codelineno-1-214"></a>{
+</span><span id="__span-1-215"><a id="__codelineno-1-215" name="__codelineno-1-215" href="#__codelineno-1-215"></a>&quot;locationId&quot;: &quot;HYD109&quot;,
+</span><span id="__span-1-216"><a id="__codelineno-1-216" name="__codelineno-1-216" href="#__codelineno-1-216"></a>&quot;provider&quot;: &quot;express&quot;
+</span><span id="__span-1-217"><a id="__codelineno-1-217" name="__codelineno-1-217" href="#__codelineno-1-217"></a>}
+</span><span id="__span-1-218"><a id="__codelineno-1-218" name="__codelineno-1-218" href="#__codelineno-1-218"></a>],
+</span><span id="__span-1-219"><a id="__codelineno-1-219" name="__codelineno-1-219" href="#__codelineno-1-219"></a>&quot;keyword&quot;: &quot;&quot;,
+</span><span id="__span-1-220"><a id="__codelineno-1-220" name="__codelineno-1-220" href="#__codelineno-1-220"></a>&quot;keywordId&quot;: &quot;&quot;,
+</span><span id="__span-1-221"><a id="__codelineno-1-221" name="__codelineno-1-221" href="#__codelineno-1-221"></a>&quot;type&quot;: &quot;servicepoint&quot;
+</span><span id="__span-1-222"><a id="__codelineno-1-222" name="__codelineno-1-222" href="#__codelineno-1-222"></a>},
+</span><span id="__span-1-223"><a id="__codelineno-1-223" name="__codelineno-1-223" href="#__codelineno-1-223"></a>&quot;name&quot;: &quot;Jubilee Hills Office, HYDERABAD&quot;,
+</span><span id="__span-1-224"><a id="__codelineno-1-224" name="__codelineno-1-224" href="#__codelineno-1-224"></a>&quot;distance&quot;: 2909,
+</span><span id="__span-1-225"><a id="__codelineno-1-225" name="__codelineno-1-225" href="#__codelineno-1-225"></a>&quot;place&quot;: {
+</span><span id="__span-1-226"><a id="__codelineno-1-226" name="__codelineno-1-226" href="#__codelineno-1-226"></a>&quot;address&quot;: {
+</span><span id="__span-1-227"><a id="__codelineno-1-227" name="__codelineno-1-227" href="#__codelineno-1-227"></a>&quot;countryCode&quot;: &quot;IN&quot;,
+</span><span id="__span-1-228"><a id="__codelineno-1-228" name="__codelineno-1-228" href="#__codelineno-1-228"></a>&quot;postalCode&quot;: &quot;500033&quot;,
+</span><span id="__span-1-229"><a id="__codelineno-1-229" name="__codelineno-1-229" href="#__codelineno-1-229"></a>&quot;addressLocality&quot;: &quot;HYDERABAD&quot;,
+</span><span id="__span-1-230"><a id="__codelineno-1-230" name="__codelineno-1-230" href="#__codelineno-1-230"></a>&quot;streetAddress&quot;: &quot;Plot No.243, Rd No.36 Jubilee Hills,&quot;
+</span><span id="__span-1-231"><a id="__codelineno-1-231" name="__codelineno-1-231" href="#__codelineno-1-231"></a>},
+</span><span id="__span-1-232"><a id="__codelineno-1-232" name="__codelineno-1-232" href="#__codelineno-1-232"></a>&quot;geo&quot;: {
+</span><span id="__span-1-233"><a id="__codelineno-1-233" name="__codelineno-1-233" href="#__codelineno-1-233"></a>&quot;latitude&quot;: 17.432275,
+</span><span id="__span-1-234"><a id="__codelineno-1-234" name="__codelineno-1-234" href="#__codelineno-1-234"></a>&quot;longitude&quot;: 78.407039
+</span><span id="__span-1-235"><a id="__codelineno-1-235" name="__codelineno-1-235" href="#__codelineno-1-235"></a>}
+</span><span id="__span-1-236"><a id="__codelineno-1-236" name="__codelineno-1-236" href="#__codelineno-1-236"></a>},
+</span><span id="__span-1-237"><a id="__codelineno-1-237" name="__codelineno-1-237" href="#__codelineno-1-237"></a>&quot;openingHours&quot;: [
+</span><span id="__span-1-238"><a id="__codelineno-1-238" name="__codelineno-1-238" href="#__codelineno-1-238"></a>{
+</span><span id="__span-1-239"><a id="__codelineno-1-239" name="__codelineno-1-239" href="#__codelineno-1-239"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-240"><a id="__codelineno-1-240" name="__codelineno-1-240" href="#__codelineno-1-240"></a>&quot;closes&quot; : &quot;21:00:00&quot;,
+</span><span id="__span-1-241"><a id="__codelineno-1-241" name="__codelineno-1-241" href="#__codelineno-1-241"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Monday&quot;
+</span><span id="__span-1-242"><a id="__codelineno-1-242" name="__codelineno-1-242" href="#__codelineno-1-242"></a>},
+</span><span id="__span-1-243"><a id="__codelineno-1-243" name="__codelineno-1-243" href="#__codelineno-1-243"></a>{
+</span><span id="__span-1-244"><a id="__codelineno-1-244" name="__codelineno-1-244" href="#__codelineno-1-244"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-245"><a id="__codelineno-1-245" name="__codelineno-1-245" href="#__codelineno-1-245"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-246"><a id="__codelineno-1-246" name="__codelineno-1-246" href="#__codelineno-1-246"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Tuesday&quot;
+</span><span id="__span-1-247"><a id="__codelineno-1-247" name="__codelineno-1-247" href="#__codelineno-1-247"></a>},
+</span><span id="__span-1-248"><a id="__codelineno-1-248" name="__codelineno-1-248" href="#__codelineno-1-248"></a>{
+</span><span id="__span-1-249"><a id="__codelineno-1-249" name="__codelineno-1-249" href="#__codelineno-1-249"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-250"><a id="__codelineno-1-250" name="__codelineno-1-250" href="#__codelineno-1-250"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-251"><a id="__codelineno-1-251" name="__codelineno-1-251" href="#__codelineno-1-251"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Wednesday&quot;
+</span><span id="__span-1-252"><a id="__codelineno-1-252" name="__codelineno-1-252" href="#__codelineno-1-252"></a>},
+</span><span id="__span-1-253"><a id="__codelineno-1-253" name="__codelineno-1-253" href="#__codelineno-1-253"></a>{
+</span><span id="__span-1-254"><a id="__codelineno-1-254" name="__codelineno-1-254" href="#__codelineno-1-254"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-255"><a id="__codelineno-1-255" name="__codelineno-1-255" href="#__codelineno-1-255"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-256"><a id="__codelineno-1-256" name="__codelineno-1-256" href="#__codelineno-1-256"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Thursday&quot;
+</span><span id="__span-1-257"><a id="__codelineno-1-257" name="__codelineno-1-257" href="#__codelineno-1-257"></a>},
+</span><span id="__span-1-258"><a id="__codelineno-1-258" name="__codelineno-1-258" href="#__codelineno-1-258"></a>{
+</span><span id="__span-1-259"><a id="__codelineno-1-259" name="__codelineno-1-259" href="#__codelineno-1-259"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-260"><a id="__codelineno-1-260" name="__codelineno-1-260" href="#__codelineno-1-260"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-261"><a id="__codelineno-1-261" name="__codelineno-1-261" href="#__codelineno-1-261"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Friday&quot;
+</span><span id="__span-1-262"><a id="__codelineno-1-262" name="__codelineno-1-262" href="#__codelineno-1-262"></a>},
+</span><span id="__span-1-263"><a id="__codelineno-1-263" name="__codelineno-1-263" href="#__codelineno-1-263"></a>{
+</span><span id="__span-1-264"><a id="__codelineno-1-264" name="__codelineno-1-264" href="#__codelineno-1-264"></a>&quot;opens&quot;: &quot;09:00:00&quot;,
+</span><span id="__span-1-265"><a id="__codelineno-1-265" name="__codelineno-1-265" href="#__codelineno-1-265"></a>&quot;closes&quot;: &quot;21:00:00&quot;,
+</span><span id="__span-1-266"><a id="__codelineno-1-266" name="__codelineno-1-266" href="#__codelineno-1-266"></a>&quot;dayOfWeek&quot;: &quot;http://schema.org/Saturday&quot;
+</span><span id="__span-1-267"><a id="__codelineno-1-267" name="__codelineno-1-267" href="#__codelineno-1-267"></a>}
+</span><span id="__span-1-268"><a id="__codelineno-1-268" name="__codelineno-1-268" href="#__codelineno-1-268"></a>],
+</span><span id="__span-1-269"><a id="__codelineno-1-269" name="__codelineno-1-269" href="#__codelineno-1-269"></a>&quot;closurePeriods&quot;: [],
+</span><span id="__span-1-270"><a id="__codelineno-1-270" name="__codelineno-1-270" href="#__codelineno-1-270"></a>&quot;serviceTypes&quot;: [
+</span><span id="__span-1-271"><a id="__codelineno-1-271" name="__codelineno-1-271" href="#__codelineno-1-271"></a>&quot;express:drop-off-easy&quot;,
+</span><span id="__span-1-272"><a id="__codelineno-1-272" name="__codelineno-1-272" href="#__codelineno-1-272"></a>&quot;express:drop-off&quot;,
+</span><span id="__span-1-273"><a id="__codelineno-1-273" name="__codelineno-1-273" href="#__codelineno-1-273"></a>&quot;express:drop-off-account&quot;,
+</span><span id="__span-1-274"><a id="__codelineno-1-274" name="__codelineno-1-274" href="#__codelineno-1-274"></a>&quot;express:pick-up&quot;,
+</span><span id="__span-1-275"><a id="__codelineno-1-275" name="__codelineno-1-275" href="#__codelineno-1-275"></a>&quot;express:drop-off-prelabeled&quot;
+</span><span id="__span-1-276"><a id="__codelineno-1-276" name="__codelineno-1-276" href="#__codelineno-1-276"></a>],
+</span><span id="__span-1-277"><a id="__codelineno-1-277" name="__codelineno-1-277" href="#__codelineno-1-277"></a>&quot;averageCapacityDayOfWeek&quot;: []
+</span><span id="__span-1-278"><a id="__codelineno-1-278" name="__codelineno-1-278" href="#__codelineno-1-278"></a>}
+</span><span id="__span-1-279"><a id="__codelineno-1-279" name="__codelineno-1-279" href="#__codelineno-1-279"></a>]
+</span><span id="__span-1-280"><a id="__codelineno-1-280" name="__codelineno-1-280" href="#__codelineno-1-280"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>getLocationsbyCoordinatesMessage</strong> – A message node with the script to display responses.</p>
+</li>
+<li>Click the <strong>Train</strong> tab to complete the Dialog task training.</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to find the location using the country and postal codes, as shown below.<br />
+<a class="glightbox" href="../images/dhl-action-img11-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-action-img11-tem-img2.png" alt="VA console prompt to find location" title="VA console prompt to find location" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+</li>
+<li>
+<p>To view the location details, click and expand the desired item in the results.<br />
+<a class="glightbox" href="../images/dhl-action-img12-tem-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dhl-action-img12-tem-img4.png" alt="View location details" title="View location details" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
 
 
   
