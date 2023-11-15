@@ -17,7 +17,7 @@
     
     
       
-        <title>Using the confluence action templates - Kore ai Docs</title>
+        <title>**Using the Confluence Action Templates** - Kore ai Docs</title>
       
     
     
@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-the-confluence-action-templates" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -166,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using the confluence action templates
+              **Using the Confluence Action Templates**
             
           </span>
         </div>
@@ -2870,6 +2875,36 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#confluence-actions" class="md-nav__link">
+    Confluence Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Confluence Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-content" class="md-nav__link">
+    Create Content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2888,7 +2923,336 @@
 
 
 
+<h1 id="using-the-confluence-action-templates"><strong>Using the Confluence Action Templates</strong><a class="headerlink" href="#using-the-confluence-action-templates" title="Permanent link">&para;</a></h1>
+<p>You can use the <strong>Prebuilt Action Templates **from your Confluence integration to auto-create dialog tasks and test them using the **Talk to Bot</strong> option.</p>
+<p>Steps to create a dialog task using Confluence action templates:</p>
+<ol>
+<li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong>.</li>
+<li>
+<p>Click <strong>Create a Dialog Task</strong>.<br />
+<a class="glightbox" href="../images/confluence-tem-img1-create-dailog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/confluence-tem-img1-create-dailog-task.png" alt="Create a Dialog Task" title="Create a Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>On the Dialog Task pop-up, under the <strong>Integration</strong>, select the <strong>Confluence</strong> option to view the action templates.<br />
+<a class="glightbox" href="../images/confluence-action-img13-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/confluence-action-img13-tem-img2.png" alt="Integration ></a> Confluence" title="Integration &gt; Confluence" style="border: 1px solid gray;zoom:50%;"/&gt;  </p>
+</li>
+</ol>
+<p><strong>Note</strong>: If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the <strong>Actions</strong> page to configure an integration for your VA. For more information, see <a href="../../actions/" target="_blank">Actions Overview</a>.<br />
+  <a class="glightbox" href="../images/conflu-tem-img3-create-dialog-new.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/conflu-tem-img3-create-dialog-new.png" alt="Explore integrations" title="Explore integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h2 id="confluence-actions">Confluence Actions<a class="headerlink" href="#confluence-actions" title="Permanent link">&para;</a></h2>
+<p>The following Confluence action is supported in the latest version of the XO Platform:</p>
+<table border="1">
+  <tr>
+   <td><strong>Supported Actions</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Method</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Create Content
+   </td>
+   <td>Creates content in the Confluence space.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+</table>
 
+<h3 id="create-content"><strong>Create Content</strong><a class="headerlink" href="#create-content" title="Permanent link">&para;</a></h3>
+<p>Steps to create content using the Confluence integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-confluence-action/#step-2-install-the-confluence-action-templates" target="_blank">Installing the Confluence Templates</a> section to install this template.</li>
+<li>
+<p>The <em>createContent</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/confluence-action-img14-tem-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/confluence-action-img14-tem-img4.png" alt="Dialog added" title="Dialog added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>createContent</strong>: A user intent to create content in the Confluence space.</li>
+<li><strong>contentType</strong>, <strong>spaceKey,</strong> <strong>contentTitle</strong>, and <strong>contentBody</strong> – Entity nodes for entering the required details to create content.</li>
+<li>
+<p><strong>getResourceIdService</strong> – A bot action service to fetch the resource ID from the Confluence integration. Click the <strong>Plus</strong> icon to expand to view the getResouceIdService bot action component properties. In the <strong>Component Properties</strong> window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/confluence-tem-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/confluence-tem-img5.png" alt="Request" title="Request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;title&quot;: &quot;Page 1&quot;,
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&quot;type&quot;: &quot;page&quot;,
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&quot;space&quot;: {
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&quot;key&quot;: &quot;SFPWP&quot;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>},
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&quot;status&quot;: &quot;current&quot;,
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>&quot;body&quot;: {
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>&quot;storage&quot;: {
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>&quot;value&quot;: &quot;Here is the value of this body&quot;,
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>&quot;representation&quot;: &quot;storage&quot;
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>}
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>}
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>}
+</span></code></pre></div>
+<p>To add one or more responses, scroll down and click the +Add Response button:<br />
+<a class="glightbox" href="../images/confluence-tem-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/confluence-tem-img6.png" alt="Response" title="Response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response</strong></p>
+<p><code>```
+{
+"id": "21004299",
+"type": "page",
+"status": "current",
+"title": "Page 1",
+"space": {
+"id": 196612,
+"key": "SFPWP",
+"name": "Space For Playing with Postman",
+"type": "global",
+"status": "current",
+"_expandable": {
+"settings": "/rest/api/space/SFPWP/settings",
+"metadata": "",
+"operations": "",
+"lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=SFPWP",
+"identifiers": "",
+"permissions": "",
+"icon": "",
+"description": "",
+"theme": "/rest/api/space/SFPWP/theme",
+"history": "",
+"homepage": "/rest/api/content/196695"
+},
+"_links": {
+"webui": "/spaces/SFPWP",
+"self": "https://xyz.atlassian.net/wiki/rest/api/space/SFPWP"
+}
+},
+"history": {
+"latest": true,
+"createdBy": {
+"type": "known",
+"accountId": "632852448b75455be45293bd",
+"accountType": "atlassian",
+"email": "alan.walker@xyz.com",
+"publicName": "alan.walker",
+"profilePicture": {
+"path": "/wiki/aa-avatar/632852448b75455be45293bd",
+"width": 48,
+"height": 48,
+"isDefault": false
+},
+"displayName": "alan.walker",
+"isExternalCollaborator": false,
+"_expandable": {
+"operations": "",
+"personalSpace": ""
+},
+"_links": {
+"self": "https://purushottam1.atlassian.net/wiki/rest/api/user?accountId=632852448b75455be45293bd"
+}
+},
+"createdDate": "2023-07-11T11:29:38.860Z",
+"_expandable": {
+"lastUpdated": "",
+"previousVersion": "",
+"lastOwnedBy": "",
+"contributors": "",
+"nextVersion": "",
+"ownedBy": ""
+},
+"_links": {
+"self": "https://purushottam1.atlassian.net/wiki/rest/api/content/21004299/history"
+}
+},
+"version": {
+"by": {
+"type": "known",
+"accountId": "632852448b75455be45293bd",
+"accountType": "atlassian",
+"email": "alan.walker@xyz.com",
+"publicName": "alan.walker",
+"profilePicture": {
+"path": "/wiki/aa-avatar/632852448b75455be45293bd",
+"width": 48,
+"height": 48,
+"isDefault": false
+},
+"displayName": "alan.walker",
+"isExternalCollaborator": false,
+"_expandable": {
+"operations": "",
+"personalSpace": ""
+},
+"_links": {
+"self": "https://purushottam1.atlassian.net/wiki/rest/api/user?accountId=632852448b75455be45293bd"
+}
+},
+"when": "2023-07-11T11:29:38.860Z",
+"friendlyWhen": "just a moment ago",
+"message": "",
+"number": 1,
+"minorEdit": false,
+"ncsStepVersion": "1",
+"ncsStepVersionSource": "ncs-ack",
+"confRev": "confluence$content$21004299.4",
+"contentTypeModified": false,
+"_expandable": {
+"collaborators": "",
+"content": "/rest/api/content/21004299"
+},
+"_links": {
+"self": "https://purushottam1.atlassian.net/wiki/rest/api/content/21004299/version/1"
+}
+},
+"ancestors": [
+{
+"id": "196695",
+"type": "page",
+"status": "current",
+"title": "Space For Playing with Postman",
+"macroRenderedOutput": {},
+"extensions": {
+"position": 435
+},
+"_expandable": {
+"container": "/rest/api/space/SFPWP",
+"metadata": "",
+"restrictions": "/rest/api/content/196695/restriction/byOperation",
+"history": "/rest/api/content/196695/history",
+"body": "",
+"version": "",
+"descendants": "/rest/api/content/196695/descendant",
+"space": "/rest/api/space/SFPWP",
+"childTypes": "",
+"schedulePublishInfo": "",
+"operations": "",
+"schedulePublishDate": "",
+"children": "/rest/api/content/196695/child",
+"ancestors": ""
+},
+"_links": {
+"self": "https://purushottam1.atlassian.net/wiki/rest/api/content/196695",
+"tinyui": "/x/VwAD",
+"editui": "/pages/resumedraft.action?draftId=196695",
+"webui": "/spaces/SFPWP/overview"
+}
+}
+],
+"container": {
+"id": 196612,
+"key": "SFPWP",
+"name": "Space For Playing with Postman",
+"type": "global",
+"status": "current",
+"history": {
+"createdBy": {
+"type": "known",
+"accountId": "632852448b75455be45293bd",
+"accountType": "atlassian",
+"email": "alan.walker@xyz.com",
+"publicName": "alan.walker",
+"profilePicture": {
+"path": "/wiki/aa-avatar/632852448b75455be45293bd",
+"width": 48,
+"height": 48,
+"isDefault": false
+"
+},
+"displayName": "alan.walker",
+"isExternalCollaborator": false,
+"_expandable": {
+"operations": "",
+"personalSpace": ""
+},
+"_links": {
+"self": "https://xyz.atlassian.net/wiki/rest/api/user?accountId=632852448b75455be45293bd"
+}
+},
+"createdDate": "2022-11-21T13:02:10.295Z"
+},
+"_expandable": {
+"settings": "/rest/api/space/SFPWP/settings",
+"metadata": "",
+"operations": "",
+"lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=SFPWP",
+"identifiers": "",
+"permissions": "",
+"icon": "",
+"description": "",
+"theme": "/rest/api/space/SFPWP/theme",
+"homepage": "/rest/api/content/196695"
+},
+"_links": {
+"webui": "/spaces/SFPWP",
+"self": "https://xyz.atlassian.net/wiki/rest/api/space/SFPWP
+},
+"macroRenderedOutput": {},
+"body": {
+"storage": {
+"value": "Here is the value of this body",
+"representation": "storage",
+"embeddedContent": [],
+"_expandable": {
+"content": "/rest/api/content/21004299"
+}
+},
+"_expandable": {
+"editor": "",
+"atlas_doc_format": "",
+"view": "",
+"export_view": "",
+"styled_view": "",
+"dynamic": "",
+"editor2": "",
+"anonymous_export_view": ""
+}
+},
+"extensions": {
+"position": 3472
+},
+"_expandable": {
+"childTypes": "",
+"schedulePublishInfo": "",
+"metadata": "",
+"operations": "",
+"schedulePublishDate": "",
+"children": "/rest/api/content/21004299/child",
+"restrictions": "/rest/api/content/21004299/restriction/byOperation",
+"descendants": "/rest/api/content/21004299/descendant"
+},
+"_links": {
+"editui": "/pages/resumedraft.action?draftId=21004299",
+"webui": "/spaces/SFPWP/pages/21004299/storage+ddd",
+"context": "/wiki",
+"self": "https://xyz.atlassian.net/wiki/rest/api/content/21004299",
+"tinyui": "/x/C4BAAQ",
+"collection": "/rest/api/content",
+"base": "https://xyz.atlassian.net/wiki"
+}
+}</code></p>
+</li>
+<li>
+<p><strong>createContentService</strong> – A bot action service to create content in the Confluence space. Click the <strong>Plus **icon to expand to view the createContentService bot action component properties. In the **Component Properties</strong> window, click the <strong>Edit Request</strong> link to edit the request parameters.</p>
+</li>
+<li><strong>createContentMessage</strong> – A message node with the script to display responses for creating content.</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>
+<p>Follow the prompts in the VA console to create content on Confluence as shown below:<br />
+<a class="glightbox" href="../images/confluence-tem-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/confluence-tem-img7.png" alt="VA console prompt to create content" title="VA console prompt to create content" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Enter a title and body details when prompted by the VA as shown below:<br />
+<a class="glightbox" href="../images/confluence-tem-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/confluence-tem-img8.png" alt="VA console prompt to enter title and body" title="VA console prompt to enter title and body" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>You will notice that content is created with the title and body on Confluence. Expand and click the <strong>View Content</strong> button.<br />
+<a class="glightbox" href="../images/confluence-tem-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/confluence-tem-img9.png" alt="Content created, expand to view" title="Content created, expand to view" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>You can view the page on Confluence.<br />
+<a class="glightbox" href="../images/confluence-tem-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/confluence-tem-img10.png" alt="View page in Confluence" title="View page in Confluence" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
 
 
   
