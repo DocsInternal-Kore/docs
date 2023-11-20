@@ -17,7 +17,7 @@
     
     
       
-        <title>Using the jira action templates - Kore ai Docs</title>
+        <title>**Using the JIRA Action Templates** - Kore ai Docs</title>
       
     
     
@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-the-jira-action-templates" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -166,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using the jira action templates
+              **Using the JIRA Action Templates**
             
           </span>
         </div>
@@ -2870,6 +2875,64 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jira-actions" class="md-nav__link">
+    JIRA Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="JIRA Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-issue" class="md-nav__link">
+    Create an Issue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-issue-by-key" class="md-nav__link">
+    Get an Issue by Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-issues" class="md-nav__link">
+    Get All Issues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-an-issue" class="md-nav__link">
+    Update an Issue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-an-issue" class="md-nav__link">
+    Delete an Issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2888,7 +2951,588 @@
 
 
 
+<h1 id="using-the-jira-action-templates"><strong>Using the JIRA Action Templates</strong><a class="headerlink" href="#using-the-jira-action-templates" title="Permanent link">&para;</a></h1>
+<p>You can use the <strong>Prebuilt Action Templates</strong> from your JIRA integration to auto-create dialog tasks and test them using the <strong>Talk to Bot</strong> option.</p>
+<p>Step to create a dialog task using the JIRA action templates:</p>
+<ol>
+<li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong>.</li>
+<li>
+<p>Click <strong>Create a Dialog Task</strong>.<br />
+<a class="glightbox" href="../images/jira-tem-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img1.png" alt="Create a Dialog Task" title="Create a Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>On the Dialog Task pop-up, under the Integration, select the Jira option to view the action templates.<br />
+<a class="glightbox" href="../images/jira-action-img14-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-action-img14-tem-img2.png" alt="Integration - JIRA" title="Integration - JIRA" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the Actions page to configure an integration for your VA. For more information, see <a href="../../actions/" target="_blank">Actions Overview</a>.<br />
+<a class="glightbox" href="../images/jira-tem-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img3.png" alt="Explore Integrations" title="Explore Integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
+<h2 id="jira-actions">JIRA Actions<a class="headerlink" href="#jira-actions" title="Permanent link">&para;</a></h2>
+<p>The following Freshdesk actions are supported in this release:</p>
+<table border="1">
+  <tr>
+   <td><strong>Supported Tasks</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Method</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Create an Issue
+   </td>
+   <td>Creates an issue in the JIRA system.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+  <tr>
+   <td>Get an Issue by ID
+   </td>
+   <td>Fetch an issue details with ID from the JIRA system.
+   </td>
+   <td>GET
+   </td>
+  </tr>
+  <tr>
+   <td>Get all issues
+   </td>
+   <td>Retrieves all issues from the JIRA system.
+   </td>
+   <td>GET
+   </td>
+  </tr>
+  <tr>
+   <td>Update an Issue
+   </td>
+   <td>Updates an issue in the JIRA system.
+   </td>
+   <td>PUT
+   </td>
+  </tr>
+  <tr>
+   <td>Delete an issue
+   </td>
+   <td>Deletes an issue from the JIRA system.
+   </td>
+   <td>GET
+   </td>
+  </tr>
+</table>
 
+<h3 id="create-an-issue">Create an Issue<a class="headerlink" href="#create-an-issue" title="Permanent link">&para;</a></h3>
+<p>Steps to create an issue in the JIRA integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-jira-action/#step-2-install-the-jira-action-templates" target="_blank">Installing the JIRA templates </a>section to install this template.</li>
+<li>
+<p>The <em>Create an issue</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/jira-tem-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img4.png" alt="Create an issue dialog task is added" title="Create an issue dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>createIssue</strong> – A user intent to create an issue.</li>
+<li><strong>projectKey</strong>, <strong>summary</strong>, and <strong>issueTypeName</strong> – Entity nodes for creating the issue in the JIRA system.</li>
+<li><strong>getResourceIdService</strong> – A bot action service to get a resource ID of a JIRA site.</li>
+<li><strong>createIssueService</strong> – A bot action service to create an issue in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>createIssueService</em> bot action component properties.</li>
+<li>
+<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/jira-tem-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img5.png" alt="Edit Request" title="Edit Request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;fields&quot;: {
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&quot;summary&quot;: &quot;messaging module is not working&quot;,
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&quot;issuetype&quot;: {
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&quot;name&quot;: &quot;Bug&quot;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>},
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&quot;project&quot;: {
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>&quot;key&quot;: &quot;DFJIIP&quot;
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>}
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>}
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>}
+</span></code></pre></div>
+<p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button:</p>
+<p><strong>Sample Response</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;id&quot;: &quot;10000&quot;,
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&quot;key&quot;: &quot;ED-24&quot;,
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/issue/10000&quot;,
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&quot;transition&quot;: {
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>&quot;status&quot;: 200,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&quot;errorCollection&quot;: {
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&quot;errorMessages&quot;: [],
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&quot;errors&quot;: {}
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>createdIssueInfoService</strong> – A bot action service to gather more details about an issue in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>createdIssueInfoService</em> bot action component properties.</p>
+</li>
+<li><strong>createIssueMessage</strong> – A message node with the script to display responses for various scenarios.</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to create an issue as shown below:<br />
+<a class="glightbox" href="../images/jira-tem-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img6.png" alt="VA prompt to create issue" title="VA prompt to create issue" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="get-an-issue-by-key">Get an Issue by Key<a class="headerlink" href="#get-an-issue-by-key" title="Permanent link">&para;</a></h3>
+<p>Steps to find an issue using the key in the JIRA integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-jira-action/#step-2-install-the-jira-action-templates" target="_blank">Installing the JIRA templates </a>section to install this template.</li>
+<li>
+<p>The <em>Get Issues by Key</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/jira-tem-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img7.png" alt="Get Issues by Key dialog task is added" title="Get Issues by Key dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>getIssuebyKey</strong> – A user intent to find an issue by key.</li>
+<li><strong>issueKey</strong> – Entity nodes for gathering the required issue details.</li>
+<li><strong>getResourceIdService</strong> – A bot action service to get a resource ID of a JIRA site.</li>
+<li><strong>getIssuebyKeyService</strong> – A bot action service to find an issue in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>getIssuebyKeyService</em> bot action component properties.</li>
+<li>
+<p>In the Component Properties window, to add one or more responses, scroll down and click <strong>+Add Response</strong>:<br />
+<a class="glightbox" href="../images/jira-tem-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img8.png" alt="Add response" title="Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>{
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&quot;id&quot;: &quot;10002&quot;,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&quot;type&quot;: {
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&quot;id&quot;: &quot;10000&quot;,
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>&quot;name&quot;: &quot;Dependent&quot;,
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>&quot;inward&quot;: &quot;depends on&quot;,
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>&quot;outward&quot;: &quot;is depended by&quot;
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>},
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>&quot;inwardIssue&quot;: {
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>&quot;id&quot;: &quot;10004&quot;,
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>&quot;key&quot;: &quot;PR-3&quot;,
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/issue/PR-3&quot;,
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>&quot;fields&quot;: {
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>&quot;status&quot;: {
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>&quot;iconUrl&quot;: &quot;https://your-domain.atlassian.net/images/icons/statuses/open.png&quot;,
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>&quot;name&quot;: &quot;Open&quot;
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>}
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>}
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>}
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>}
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>],
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>&quot;worklog&quot;: [
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>{
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/issue/10010/worklog/10000&quot;,
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>&quot;author&quot;: {
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>&quot;accountId&quot;: &quot;5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>&quot;displayName&quot;: &quot;Mia Krystof&quot;,
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>&quot;active&quot;: false
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>},
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>&quot;updateAuthor&quot;: {
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>&quot;accountId&quot;: &quot;5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>&quot;displayName&quot;: &quot;Mia Krystof&quot;,
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>&quot;active&quot;: false
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>},
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>&quot;comment&quot;: {
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>&quot;type&quot;: &quot;doc&quot;,
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>&quot;version&quot;: 1,
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>&quot;content&quot;: [
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>{
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>&quot;type&quot;: &quot;paragraph&quot;,
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>&quot;content&quot;: [
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>{       
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>&quot;type&quot;: &quot;text&quot;,
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>&quot;text&quot;: &quot;I did some work here.&quot;
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>}
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>] }
+</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>] },
+</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>&quot;updated&quot;: &quot;2021-01-18T23:45:00.000+0000&quot;,
+</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>&quot;visibility&quot;: {
+</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>&quot;type&quot;: &quot;group&quot;,
+</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>&quot;value&quot;: &quot;jira-developers&quot;,
+</span><span id="__span-2-55"><a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>&quot;identifier&quot;: &quot;276f955c-63d7-42c8-9520-92d01dca0625&quot;
+</span><span id="__span-2-56"><a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>},
+</span><span id="__span-2-57"><a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>&quot;started&quot;: &quot;2021-01-17T12:34:00.000+0000&quot;,
+</span><span id="__span-2-58"><a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>&quot;timeSpent&quot;: &quot;3h 20m&quot;,
+</span><span id="__span-2-59"><a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>&quot;timeSpentSeconds&quot;: 12000,
+</span><span id="__span-2-60"><a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>&quot;id&quot;: &quot;100028&quot;,
+</span><span id="__span-2-61"><a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>&quot;issueId&quot;: &quot;10002&quot;
+</span><span id="__span-2-62"><a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>}
+</span><span id="__span-2-63"><a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>],
+</span><span id="__span-2-64"><a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>&quot;updated&quot;: 1,
+</span><span id="__span-2-65"><a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>&quot;timetracking&quot;: {
+</span><span id="__span-2-66"><a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>&quot;originalEstimate&quot;: &quot;10m&quot;,
+</span><span id="__span-2-67"><a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>&quot;remainingEstimate&quot;: &quot;3m&quot;,
+</span><span id="__span-2-68"><a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>&quot;timeSpent&quot;: &quot;6m&quot;,
+</span><span id="__span-2-69"><a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>&quot;originalEstimateSeconds&quot;: 600,
+</span><span id="__span-2-70"><a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>&quot;remainingEstimateSeconds&quot;: 200,
+</span><span id="__span-2-71"><a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>&quot;timeSpentSeconds&quot;: 400
+</span><span id="__span-2-72"><a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a>}
+</span><span id="__span-2-73"><a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a>}
+</span><span id="__span-2-74"><a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>getIssuebyKeyMessage</strong> – A message node with script to display responses for various scenarios.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to find an issue by key as shown below:<br />
+<a class="glightbox" href="../images/jira-tem-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img9.png" alt="VA prompt to find issue by key" title="VA prompt to find issue by key" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="get-all-issues">Get All Issues<a class="headerlink" href="#get-all-issues" title="Permanent link">&para;</a></h3>
+<p>Steps to view all issues in the JIRA integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-jira-action/#step-2-install-the-jira-action-templates" target="_blank">Installing the JIRA templates </a>section to install this template.</li>
+<li>
+<p>The <strong>Get All Issues</strong> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/jira-tem-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img10.png" alt="Get All Issuesdialog task is added" title="Get All Issuesdialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>getAllIssues</strong> – A user intent to view all issues.</li>
+<li><strong>getResourceIdService</strong> – A bot action service to get a resource ID of a JIRA site.</li>
+<li><strong>getAllIssuesService</strong> – A bot action service to fetch all issues from an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>getAllIssuesService</em> bot action component properties.</li>
+<li>
+<p>In the Component Properties window, to add one or more responses, scroll down and click <strong>+Add Response</strong>.<br />
+<a class="glightbox" href="../images/jira-tem-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img11.png" alt="Add response" title="Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&quot;expand&quot;: &quot;names,schema&quot;,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>&quot;startAt&quot;: 0,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>&quot;maxResults&quot;: 50,
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>&quot;total&quot;: 1,
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>&quot;issues&quot;: [
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>{
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&quot;expand&quot;: &quot;&quot;,
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>&quot;id&quot;: &quot;10002&quot;,
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/issue/10002&quot;,
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>&quot;key&quot;: &quot;ED-1&quot;,
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>&quot;fields&quot;: {
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>&quot;watcher&quot;: {
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/issue/EX-1/watchers&quot;,
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>&quot;isWatching&quot;: false,
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>&quot;watchCount&quot;: 1,
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>&quot;watchers&quot;: [
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>{
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>&quot;accountId&quot;: &quot;5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>&quot;displayName&quot;: &quot;Mia Krystof&quot;,
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>&quot;active&quot;: false
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>}
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>] },
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>&quot;attachment&quot;: [
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>{
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>&quot;id&quot;: 10000,
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/attachments/10000&quot;,
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>&quot;filename&quot;: &quot;picture.jpg&quot;,
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>&quot;author&quot;: {
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>&quot;key&quot;: &quot;&quot;,
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>&quot;accountId&quot;: &quot;5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>&quot;accountType&quot;: &quot;atlassian&quot;,
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>&quot;name&quot;: &quot;&quot;,
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>&quot;avatarUrls&quot;: {
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>&quot;48x48&quot;: &quot;https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=48&amp;s=48&quot;,
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>&quot;24x24&quot;: &quot;https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=24&amp;s=24&quot;,
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>&quot;16x16&quot;: &quot;https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=16&amp;s=16&quot;,
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>&quot;32x32&quot;: &quot;https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=32&amp;s=32&quot;
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>},
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>&quot;displayName&quot;: &quot;Mia Krystof&quot;,
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>&quot;active&quot;: false
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>},
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>&quot;created&quot;: &quot;2023-02-28T09:45:11.830+0000&quot;,
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>&quot;size&quot;: 23123,
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>&quot;mimeType&quot;: &quot;image/jpeg&quot;,
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>&quot;content&quot;: &quot;https://your-domain.atlassian.net/jira/rest/api/3/attachment/content/10000&quot;,
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>&quot;thumbnail&quot;: &quot;https://your-domain.atlassian.net/jira/rest/api/3/attachment/thumbnail/10000&quot;
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>}
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>],
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>&quot;sub-tasks&quot;: [
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>{
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>&quot;id&quot;: &quot;10000&quot;,
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>&quot;type&quot;: {
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>&quot;id&quot;: &quot;10000&quot;,
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>&quot;name&quot;: &quot;&quot;,
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>&quot;inward&quot;: &quot;Parent&quot;,
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>&quot;outward&quot;: &quot;Sub-task&quot;
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>},
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>&quot;outwardIssue&quot;: {
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>&quot;id&quot;: &quot;10003&quot;,
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>&quot;key&quot;: &quot;ED-2&quot;,
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/issue/ED-2&quot;,
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>&quot;fields&quot;: {
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>&quot;status&quot;: {
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>&quot;iconUrl&quot;: &quot;https://your-domain.atlassian.net/images/icons/statuses/open.png&quot;,
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>&quot;name&quot;: &quot;Open&quot;
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>}
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>}
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>}
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>}
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>],
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>&quot;description&quot;: {
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>&quot;type&quot;: &quot;doc&quot;,
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>&quot;version&quot;: 1,
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>&quot;content&quot;: [
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>{
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>&quot;type&quot;: &quot;paragraph&quot;,
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>&quot;content&quot;: [
+</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>{
+</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a>&quot;type&quot;: &quot;text&quot;,
+</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a>&quot;text&quot;: &quot;Main order flow broken&quot;
+</span><span id="__span-3-84"><a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a>}
+</span><span id="__span-3-85"><a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a>] }
+</span><span id="__span-3-86"><a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a>] },
+</span><span id="__span-3-87"><a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a>&quot;project&quot;: {
+</span><span id="__span-3-88"><a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/project/EX&quot;,
+</span><span id="__span-3-89"><a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a>&quot;id&quot;: &quot;10000&quot;,
+</span><span id="__span-3-90"><a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a>&quot;key&quot;: &quot;EX&quot;,
+</span><span id="__span-3-91"><a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a>&quot;name&quot;: &quot;Example&quot;,
+</span><span id="__span-3-92"><a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a>&quot;avatarUrls&quot;: {
+</span><span id="__span-3-93"><a id="__codelineno-3-93" name="__codelineno-3-93" href="#__codelineno-3-93"></a>&quot;48x48&quot;: &quot;https://your-domain.atlassian.net/secure/projectavatar?size=large&amp;pid=10000&quot;,
+</span><span id="__span-3-94"><a id="__codelineno-3-94" name="__codelineno-3-94" href="#__codelineno-3-94"></a>&quot;24x24&quot;: &quot;https://your-domain.atlassian.net/secure/projectavatar?size=small&amp;pid=10000&quot;,
+</span><span id="__span-3-95"><a id="__codelineno-3-95" name="__codelineno-3-95" href="#__codelineno-3-95"></a>&quot;16x16&quot;: &quot;https://your-domain.atlassian.net/secure/projectavatar?size=xsmall&amp;pid=10000&quot;,
+</span><span id="__span-3-96"><a id="__codelineno-3-96" name="__codelineno-3-96" href="#__codelineno-3-96"></a>&quot;32x32&quot;: &quot;https://your-domain.atlassian.net/secure/projectavatar?size=medium&amp;pid=10000&quot;
+</span><span id="__span-3-97"><a id="__codelineno-3-97" name="__codelineno-3-97" href="#__codelineno-3-97"></a>},
+</span><span id="__span-3-98"><a id="__codelineno-3-98" name="__codelineno-3-98" href="#__codelineno-3-98"></a>&quot;projectCategory&quot;: {
+</span><span id="__span-3-99"><a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/projectCategory/10000&quot;,
+</span><span id="__span-3-100"><a id="__codelineno-3-100" name="__codelineno-3-100" href="#__codelineno-3-100"></a>&quot;id&quot;: &quot;10000&quot;,
+</span><span id="__span-3-101"><a id="__codelineno-3-101" name="__codelineno-3-101" href="#__codelineno-3-101"></a>&quot;name&quot;: &quot;FIRST&quot;,
+</span><span id="__span-3-102"><a id="__codelineno-3-102" name="__codelineno-3-102" href="#__codelineno-3-102"></a>&quot;description&quot;: &quot;First Project Category&quot;
+</span><span id="__span-3-103"><a id="__codelineno-3-103" name="__codelineno-3-103" href="#__codelineno-3-103"></a>},
+</span><span id="__span-3-104"><a id="__codelineno-3-104" name="__codelineno-3-104" href="#__codelineno-3-104"></a>&quot;simplified&quot;: false,
+</span><span id="__span-3-105"><a id="__codelineno-3-105" name="__codelineno-3-105" href="#__codelineno-3-105"></a>&quot;style&quot;: &quot;classic&quot;,
+</span><span id="__span-3-106"><a id="__codelineno-3-106" name="__codelineno-3-106" href="#__codelineno-3-106"></a>&quot;insight&quot;: {
+</span><span id="__span-3-107"><a id="__codelineno-3-107" name="__codelineno-3-107" href="#__codelineno-3-107"></a>&quot;totalIssueCount&quot;: 100,
+</span><span id="__span-3-108"><a id="__codelineno-3-108" name="__codelineno-3-108" href="#__codelineno-3-108"></a>&quot;lastIssueUpdateTime&quot;: &quot;2023-02-28T09:45:09.984+0000&quot;
+</span><span id="__span-3-109"><a id="__codelineno-3-109" name="__codelineno-3-109" href="#__codelineno-3-109"></a>}
+</span><span id="__span-3-110"><a id="__codelineno-3-110" name="__codelineno-3-110" href="#__codelineno-3-110"></a>},
+</span><span id="__span-3-111"><a id="__codelineno-3-111" name="__codelineno-3-111" href="#__codelineno-3-111"></a>&quot;comment&quot;: [
+</span><span id="__span-3-112"><a id="__codelineno-3-112" name="__codelineno-3-112" href="#__codelineno-3-112"></a>{
+</span><span id="__span-3-113"><a id="__codelineno-3-113" name="__codelineno-3-113" href="#__codelineno-3-113"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/issue/10010/comment/10000&quot;,
+</span><span id="__span-3-114"><a id="__codelineno-3-114" name="__codelineno-3-114" href="#__codelineno-3-114"></a>&quot;id&quot;: &quot;10000&quot;,
+</span><span id="__span-3-115"><a id="__codelineno-3-115" name="__codelineno-3-115" href="#__codelineno-3-115"></a>&quot;author&quot;: {
+</span><span id="__span-3-116"><a id="__codelineno-3-116" name="__codelineno-3-116" href="#__codelineno-3-116"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-117"><a id="__codelineno-3-117" name="__codelineno-3-117" href="#__codelineno-3-117"></a>&quot;accountId&quot;: &quot;5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-118"><a id="__codelineno-3-118" name="__codelineno-3-118" href="#__codelineno-3-118"></a>&quot;displayName&quot;: &quot;Mia Krystof&quot;,
+</span><span id="__span-3-119"><a id="__codelineno-3-119" name="__codelineno-3-119" href="#__codelineno-3-119"></a>&quot;active&quot;: false
+</span><span id="__span-3-120"><a id="__codelineno-3-120" name="__codelineno-3-120" href="#__codelineno-3-120"></a>},
+</span><span id="__span-3-121"><a id="__codelineno-3-121" name="__codelineno-3-121" href="#__codelineno-3-121"></a>&quot;body&quot;: {
+</span><span id="__span-3-122"><a id="__codelineno-3-122" name="__codelineno-3-122" href="#__codelineno-3-122"></a>&quot;type&quot;: &quot;doc&quot;,
+</span><span id="__span-3-123"><a id="__codelineno-3-123" name="__codelineno-3-123" href="#__codelineno-3-123"></a>&quot;version&quot;: 1,
+</span><span id="__span-3-124"><a id="__codelineno-3-124" name="__codelineno-3-124" href="#__codelineno-3-124"></a>&quot;content&quot;: [
+</span><span id="__span-3-125"><a id="__codelineno-3-125" name="__codelineno-3-125" href="#__codelineno-3-125"></a>{
+</span><span id="__span-3-126"><a id="__codelineno-3-126" name="__codelineno-3-126" href="#__codelineno-3-126"></a>&quot;type&quot;: &quot;paragraph&quot;,
+</span><span id="__span-3-127"><a id="__codelineno-3-127" name="__codelineno-3-127" href="#__codelineno-3-127"></a>&quot;content&quot;: [
+</span><span id="__span-3-128"><a id="__codelineno-3-128" name="__codelineno-3-128" href="#__codelineno-3-128"></a>{
+</span><span id="__span-3-129"><a id="__codelineno-3-129" name="__codelineno-3-129" href="#__codelineno-3-129"></a>&quot;type&quot;: &quot;text&quot;,
+</span><span id="__span-3-130"><a id="__codelineno-3-130" name="__codelineno-3-130" href="#__codelineno-3-130"></a>&quot;text&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;
+</span><span id="__span-3-131"><a id="__codelineno-3-131" name="__codelineno-3-131" href="#__codelineno-3-131"></a>}
+</span><span id="__span-3-132"><a id="__codelineno-3-132" name="__codelineno-3-132" href="#__codelineno-3-132"></a>] }
+</span><span id="__span-3-133"><a id="__codelineno-3-133" name="__codelineno-3-133" href="#__codelineno-3-133"></a>] },
+</span><span id="__span-3-134"><a id="__codelineno-3-134" name="__codelineno-3-134" href="#__codelineno-3-134"></a>&quot;updateAuthor&quot;: {
+</span><span id="__span-3-135"><a id="__codelineno-3-135" name="__codelineno-3-135" href="#__codelineno-3-135"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-136"><a id="__codelineno-3-136" name="__codelineno-3-136" href="#__codelineno-3-136"></a>&quot;accountId&quot;: &quot;5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-137"><a id="__codelineno-3-137" name="__codelineno-3-137" href="#__codelineno-3-137"></a>&quot;displayName&quot;: &quot;Mia Krystof&quot;,
+</span><span id="__span-3-138"><a id="__codelineno-3-138" name="__codelineno-3-138" href="#__codelineno-3-138"></a>&quot;active&quot;: false
+</span><span id="__span-3-139"><a id="__codelineno-3-139" name="__codelineno-3-139" href="#__codelineno-3-139"></a>},
+</span><span id="__span-3-140"><a id="__codelineno-3-140" name="__codelineno-3-140" href="#__codelineno-3-140"></a>&quot;created&quot;: &quot;2021-01-17T12:34:00.000+0000&quot;,
+</span><span id="__span-3-141"><a id="__codelineno-3-141" name="__codelineno-3-141" href="#__codelineno-3-141"></a>&quot;updated&quot;: &quot;2021-01-18T23:45:00.000+0000&quot;,
+</span><span id="__span-3-142"><a id="__codelineno-3-142" name="__codelineno-3-142" href="#__codelineno-3-142"></a>&quot;visibility&quot;: {
+</span><span id="__span-3-143"><a id="__codelineno-3-143" name="__codelineno-3-143" href="#__codelineno-3-143"></a>&quot;type&quot;: &quot;role&quot;,
+</span><span id="__span-3-144"><a id="__codelineno-3-144" name="__codelineno-3-144" href="#__codelineno-3-144"></a>&quot;value&quot;: &quot;Administrators&quot;,
+</span><span id="__span-3-145"><a id="__codelineno-3-145" name="__codelineno-3-145" href="#__codelineno-3-145"></a>&quot;identifier&quot;: &quot;Administrators&quot;
+</span><span id="__span-3-146"><a id="__codelineno-3-146" name="__codelineno-3-146" href="#__codelineno-3-146"></a>}
+</span><span id="__span-3-147"><a id="__codelineno-3-147" name="__codelineno-3-147" href="#__codelineno-3-147"></a>}
+</span><span id="__span-3-148"><a id="__codelineno-3-148" name="__codelineno-3-148" href="#__codelineno-3-148"></a>],
+</span><span id="__span-3-149"><a id="__codelineno-3-149" name="__codelineno-3-149" href="#__codelineno-3-149"></a>&quot;issuelinks&quot;: [
+</span><span id="__span-3-150"><a id="__codelineno-3-150" name="__codelineno-3-150" href="#__codelineno-3-150"></a>{
+</span><span id="__span-3-151"><a id="__codelineno-3-151" name="__codelineno-3-151" href="#__codelineno-3-151"></a>&quot;id&quot;: &quot;10001&quot;,
+</span><span id="__span-3-152"><a id="__codelineno-3-152" name="__codelineno-3-152" href="#__codelineno-3-152"></a>&quot;type&quot;: {
+</span><span id="__span-3-153"><a id="__codelineno-3-153" name="__codelineno-3-153" href="#__codelineno-3-153"></a>&quot;id&quot;: &quot;10000&quot;,
+</span><span id="__span-3-154"><a id="__codelineno-3-154" name="__codelineno-3-154" href="#__codelineno-3-154"></a>&quot;name&quot;: &quot;Dependent&quot;,
+</span><span id="__span-3-155"><a id="__codelineno-3-155" name="__codelineno-3-155" href="#__codelineno-3-155"></a>&quot;inward&quot;: &quot;depends on&quot;,
+</span><span id="__span-3-156"><a id="__codelineno-3-156" name="__codelineno-3-156" href="#__codelineno-3-156"></a>&quot;outward&quot;: &quot;is depended by&quot;
+</span><span id="__span-3-157"><a id="__codelineno-3-157" name="__codelineno-3-157" href="#__codelineno-3-157"></a>},
+</span><span id="__span-3-158"><a id="__codelineno-3-158" name="__codelineno-3-158" href="#__codelineno-3-158"></a>&quot;outwardIssue&quot;: {
+</span><span id="__span-3-159"><a id="__codelineno-3-159" name="__codelineno-3-159" href="#__codelineno-3-159"></a>&quot;id&quot;: &quot;10004L&quot;,
+</span><span id="__span-3-160"><a id="__codelineno-3-160" name="__codelineno-3-160" href="#__codelineno-3-160"></a>&quot;key&quot;: &quot;PR-2&quot;,
+</span><span id="__span-3-161"><a id="__codelineno-3-161" name="__codelineno-3-161" href="#__codelineno-3-161"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/issue/PR-2&quot;,
+</span><span id="__span-3-162"><a id="__codelineno-3-162" name="__codelineno-3-162" href="#__codelineno-3-162"></a>&quot;fields&quot;: {
+</span><span id="__span-3-163"><a id="__codelineno-3-163" name="__codelineno-3-163" href="#__codelineno-3-163"></a>&quot;status&quot;: {
+</span><span id="__span-3-164"><a id="__codelineno-3-164" name="__codelineno-3-164" href="#__codelineno-3-164"></a>&quot;iconUrl&quot;: &quot;https://your-domain.atlassian.net/images/icons/statuses/open.png&quot;,
+</span><span id="__span-3-165"><a id="__codelineno-3-165" name="__codelineno-3-165" href="#__codelineno-3-165"></a>&quot;name&quot;: &quot;Open&quot;
+</span><span id="__span-3-166"><a id="__codelineno-3-166" name="__codelineno-3-166" href="#__codelineno-3-166"></a>}
+</span><span id="__span-3-167"><a id="__codelineno-3-167" name="__codelineno-3-167" href="#__codelineno-3-167"></a>}
+</span><span id="__span-3-168"><a id="__codelineno-3-168" name="__codelineno-3-168" href="#__codelineno-3-168"></a>}
+</span><span id="__span-3-169"><a id="__codelineno-3-169" name="__codelineno-3-169" href="#__codelineno-3-169"></a>},
+</span><span id="__span-3-170"><a id="__codelineno-3-170" name="__codelineno-3-170" href="#__codelineno-3-170"></a>{   
+</span><span id="__span-3-171"><a id="__codelineno-3-171" name="__codelineno-3-171" href="#__codelineno-3-171"></a>&quot;id&quot;: &quot;10002&quot;,
+</span><span id="__span-3-172"><a id="__codelineno-3-172" name="__codelineno-3-172" href="#__codelineno-3-172"></a>&quot;type&quot;: {
+</span><span id="__span-3-173"><a id="__codelineno-3-173" name="__codelineno-3-173" href="#__codelineno-3-173"></a>&quot;id&quot;: &quot;10000&quot;,
+</span><span id="__span-3-174"><a id="__codelineno-3-174" name="__codelineno-3-174" href="#__codelineno-3-174"></a>&quot;name&quot;: &quot;Dependent&quot;,
+</span><span id="__span-3-175"><a id="__codelineno-3-175" name="__codelineno-3-175" href="#__codelineno-3-175"></a>&quot;inward&quot;: &quot;depends on&quot;,
+</span><span id="__span-3-176"><a id="__codelineno-3-176" name="__codelineno-3-176" href="#__codelineno-3-176"></a>&quot;outward&quot;: &quot;is depended by&quot;
+</span><span id="__span-3-177"><a id="__codelineno-3-177" name="__codelineno-3-177" href="#__codelineno-3-177"></a>},
+</span><span id="__span-3-178"><a id="__codelineno-3-178" name="__codelineno-3-178" href="#__codelineno-3-178"></a>&quot;inwardIssue&quot;: {
+</span><span id="__span-3-179"><a id="__codelineno-3-179" name="__codelineno-3-179" href="#__codelineno-3-179"></a>&quot;id&quot;: &quot;10004&quot;,
+</span><span id="__span-3-180"><a id="__codelineno-3-180" name="__codelineno-3-180" href="#__codelineno-3-180"></a>&quot;key&quot;: &quot;PR-3&quot;,
+</span><span id="__span-3-181"><a id="__codelineno-3-181" name="__codelineno-3-181" href="#__codelineno-3-181"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/issue/PR-3&quot;,
+</span><span id="__span-3-182"><a id="__codelineno-3-182" name="__codelineno-3-182" href="#__codelineno-3-182"></a>&quot;fields&quot;: {
+</span><span id="__span-3-183"><a id="__codelineno-3-183" name="__codelineno-3-183" href="#__codelineno-3-183"></a>&quot;status&quot;: {
+</span><span id="__span-3-184"><a id="__codelineno-3-184" name="__codelineno-3-184" href="#__codelineno-3-184"></a>&quot;iconUrl&quot;: &quot;https://your-domain.atlassian.net/images/icons/statuses/open.png&quot;,
+</span><span id="__span-3-185"><a id="__codelineno-3-185" name="__codelineno-3-185" href="#__codelineno-3-185"></a>&quot;name&quot;: &quot;Open&quot;
+</span><span id="__span-3-186"><a id="__codelineno-3-186" name="__codelineno-3-186" href="#__codelineno-3-186"></a>}
+</span><span id="__span-3-187"><a id="__codelineno-3-187" name="__codelineno-3-187" href="#__codelineno-3-187"></a>}
+</span><span id="__span-3-188"><a id="__codelineno-3-188" name="__codelineno-3-188" href="#__codelineno-3-188"></a>}
+</span><span id="__span-3-189"><a id="__codelineno-3-189" name="__codelineno-3-189" href="#__codelineno-3-189"></a>}
+</span><span id="__span-3-190"><a id="__codelineno-3-190" name="__codelineno-3-190" href="#__codelineno-3-190"></a>],
+</span><span id="__span-3-191"><a id="__codelineno-3-191" name="__codelineno-3-191" href="#__codelineno-3-191"></a>&quot;worklog&quot;: [
+</span><span id="__span-3-192"><a id="__codelineno-3-192" name="__codelineno-3-192" href="#__codelineno-3-192"></a>{
+</span><span id="__span-3-193"><a id="__codelineno-3-193" name="__codelineno-3-193" href="#__codelineno-3-193"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/issue/10010/worklog/10000&quot;,
+</span><span id="__span-3-194"><a id="__codelineno-3-194" name="__codelineno-3-194" href="#__codelineno-3-194"></a>&quot;author&quot;: {
+</span><span id="__span-3-195"><a id="__codelineno-3-195" name="__codelineno-3-195" href="#__codelineno-3-195"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-196"><a id="__codelineno-3-196" name="__codelineno-3-196" href="#__codelineno-3-196"></a>&quot;accountId&quot;: &quot;5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-197"><a id="__codelineno-3-197" name="__codelineno-3-197" href="#__codelineno-3-197"></a>&quot;displayName&quot;: &quot;Mia Krystof&quot;,
+</span><span id="__span-3-198"><a id="__codelineno-3-198" name="__codelineno-3-198" href="#__codelineno-3-198"></a>&quot;active&quot;: false
+</span><span id="__span-3-199"><a id="__codelineno-3-199" name="__codelineno-3-199" href="#__codelineno-3-199"></a>},
+</span><span id="__span-3-200"><a id="__codelineno-3-200" name="__codelineno-3-200" href="#__codelineno-3-200"></a>&quot;updateAuthor&quot;: {
+</span><span id="__span-3-201"><a id="__codelineno-3-201" name="__codelineno-3-201" href="#__codelineno-3-201"></a>&quot;self&quot;: &quot;https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-202"><a id="__codelineno-3-202" name="__codelineno-3-202" href="#__codelineno-3-202"></a>&quot;accountId&quot;: &quot;5b10a2844c20165700ede21g&quot;,
+</span><span id="__span-3-203"><a id="__codelineno-3-203" name="__codelineno-3-203" href="#__codelineno-3-203"></a>&quot;displayName&quot;: &quot;Mia Krystof&quot;,
+</span><span id="__span-3-204"><a id="__codelineno-3-204" name="__codelineno-3-204" href="#__codelineno-3-204"></a>&quot;active&quot;: false
+</span><span id="__span-3-205"><a id="__codelineno-3-205" name="__codelineno-3-205" href="#__codelineno-3-205"></a>},
+</span><span id="__span-3-206"><a id="__codelineno-3-206" name="__codelineno-3-206" href="#__codelineno-3-206"></a>&quot;comment&quot;: {
+</span><span id="__span-3-207"><a id="__codelineno-3-207" name="__codelineno-3-207" href="#__codelineno-3-207"></a>&quot;type&quot;: &quot;doc&quot;,
+</span><span id="__span-3-208"><a id="__codelineno-3-208" name="__codelineno-3-208" href="#__codelineno-3-208"></a>&quot;version&quot;: 1,
+</span><span id="__span-3-209"><a id="__codelineno-3-209" name="__codelineno-3-209" href="#__codelineno-3-209"></a>&quot;content&quot;: [
+</span><span id="__span-3-210"><a id="__codelineno-3-210" name="__codelineno-3-210" href="#__codelineno-3-210"></a>{
+</span><span id="__span-3-211"><a id="__codelineno-3-211" name="__codelineno-3-211" href="#__codelineno-3-211"></a>&quot;type&quot;: &quot;paragraph&quot;,
+</span><span id="__span-3-212"><a id="__codelineno-3-212" name="__codelineno-3-212" href="#__codelineno-3-212"></a>&quot;content&quot;: [
+</span><span id="__span-3-213"><a id="__codelineno-3-213" name="__codelineno-3-213" href="#__codelineno-3-213"></a>{
+</span><span id="__span-3-214"><a id="__codelineno-3-214" name="__codelineno-3-214" href="#__codelineno-3-214"></a>&quot;type&quot;: &quot;text&quot;,
+</span><span id="__span-3-215"><a id="__codelineno-3-215" name="__codelineno-3-215" href="#__codelineno-3-215"></a>&quot;text&quot;: &quot;I did some work here.&quot;
+</span><span id="__span-3-216"><a id="__codelineno-3-216" name="__codelineno-3-216" href="#__codelineno-3-216"></a>}
+</span><span id="__span-3-217"><a id="__codelineno-3-217" name="__codelineno-3-217" href="#__codelineno-3-217"></a>] }
+</span><span id="__span-3-218"><a id="__codelineno-3-218" name="__codelineno-3-218" href="#__codelineno-3-218"></a>] },
+</span><span id="__span-3-219"><a id="__codelineno-3-219" name="__codelineno-3-219" href="#__codelineno-3-219"></a>&quot;updated&quot;: &quot;2021-01-18T23:45:00.000+0000&quot;,
+</span><span id="__span-3-220"><a id="__codelineno-3-220" name="__codelineno-3-220" href="#__codelineno-3-220"></a>&quot;visibility&quot;: {
+</span><span id="__span-3-221"><a id="__codelineno-3-221" name="__codelineno-3-221" href="#__codelineno-3-221"></a>&quot;type&quot;: &quot;group&quot;,
+</span><span id="__span-3-222"><a id="__codelineno-3-222" name="__codelineno-3-222" href="#__codelineno-3-222"></a>&quot;value&quot;: &quot;jira-developers&quot;,
+</span><span id="__span-3-223"><a id="__codelineno-3-223" name="__codelineno-3-223" href="#__codelineno-3-223"></a>&quot;identifier&quot;: &quot;276f955c-63d7-42c8-9520-92d01dca0625&quot;
+</span><span id="__span-3-224"><a id="__codelineno-3-224" name="__codelineno-3-224" href="#__codelineno-3-224"></a>},
+</span><span id="__span-3-225"><a id="__codelineno-3-225" name="__codelineno-3-225" href="#__codelineno-3-225"></a>&quot;started&quot;: &quot;2021-01-17T12:34:00.000+0000&quot;,
+</span><span id="__span-3-226"><a id="__codelineno-3-226" name="__codelineno-3-226" href="#__codelineno-3-226"></a>&quot;timeSpent&quot;: &quot;3h 20m&quot;,
+</span><span id="__span-3-227"><a id="__codelineno-3-227" name="__codelineno-3-227" href="#__codelineno-3-227"></a>&quot;timeSpentSeconds&quot;: 12000,
+</span><span id="__span-3-228"><a id="__codelineno-3-228" name="__codelineno-3-228" href="#__codelineno-3-228"></a>&quot;id&quot;: &quot;100028&quot;,
+</span><span id="__span-3-229"><a id="__codelineno-3-229" name="__codelineno-3-229" href="#__codelineno-3-229"></a>&quot;issueId&quot;: &quot;10002&quot;
+</span><span id="__span-3-230"><a id="__codelineno-3-230" name="__codelineno-3-230" href="#__codelineno-3-230"></a>}
+</span><span id="__span-3-231"><a id="__codelineno-3-231" name="__codelineno-3-231" href="#__codelineno-3-231"></a>],
+</span><span id="__span-3-232"><a id="__codelineno-3-232" name="__codelineno-3-232" href="#__codelineno-3-232"></a>&quot;updated&quot;: 1,
+</span><span id="__span-3-233"><a id="__codelineno-3-233" name="__codelineno-3-233" href="#__codelineno-3-233"></a>&quot;timetracking&quot;: {
+</span><span id="__span-3-234"><a id="__codelineno-3-234" name="__codelineno-3-234" href="#__codelineno-3-234"></a>&quot;originalEstimate&quot;: &quot;10m&quot;,
+</span><span id="__span-3-235"><a id="__codelineno-3-235" name="__codelineno-3-235" href="#__codelineno-3-235"></a>&quot;remainingEstimate&quot;: &quot;3m&quot;,
+</span><span id="__span-3-236"><a id="__codelineno-3-236" name="__codelineno-3-236" href="#__codelineno-3-236"></a>&quot;timeSpent&quot;: &quot;6m&quot;,
+</span><span id="__span-3-237"><a id="__codelineno-3-237" name="__codelineno-3-237" href="#__codelineno-3-237"></a>&quot;originalEstimateSeconds&quot;: 600,
+</span><span id="__span-3-238"><a id="__codelineno-3-238" name="__codelineno-3-238" href="#__codelineno-3-238"></a>&quot;remainingEstimateSeconds&quot;: 200,
+</span><span id="__span-3-239"><a id="__codelineno-3-239" name="__codelineno-3-239" href="#__codelineno-3-239"></a>&quot;timeSpentSeconds&quot;: 400
+</span><span id="__span-3-240"><a id="__codelineno-3-240" name="__codelineno-3-240" href="#__codelineno-3-240"></a>}
+</span><span id="__span-3-241"><a id="__codelineno-3-241" name="__codelineno-3-241" href="#__codelineno-3-241"></a>}
+</span><span id="__span-3-242"><a id="__codelineno-3-242" name="__codelineno-3-242" href="#__codelineno-3-242"></a>}
+</span><span id="__span-3-243"><a id="__codelineno-3-243" name="__codelineno-3-243" href="#__codelineno-3-243"></a>],
+</span><span id="__span-3-244"><a id="__codelineno-3-244" name="__codelineno-3-244" href="#__codelineno-3-244"></a>&quot;warningMessages&quot;: [
+</span><span id="__span-3-245"><a id="__codelineno-3-245" name="__codelineno-3-245" href="#__codelineno-3-245"></a>&quot;The value &#39;bar&#39; does not exist for the field &#39;foo&#39;.&quot;
+</span><span id="__span-3-246"><a id="__codelineno-3-246" name="__codelineno-3-246" href="#__codelineno-3-246"></a>] }
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>getAllIssuesMessage</strong> – A message node with the script to display responses for various scenarios.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to view all issues as shown below:<br />
+<a class="glightbox" href="../images/jira-tem-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img12.png" alt="VA prompt to view all issues" title="VA prompt to view all issues" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="update-an-issue">Update an Issue<a class="headerlink" href="#update-an-issue" title="Permanent link">&para;</a></h3>
+<p>Steps to update an issue in the JIRA integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-jira-action/#step-2-install-the-jira-action-templates" target="_blank">Installing the JIRA templates </a>section to install this template.</li>
+<li>
+<p>The <strong>Update an Issue</strong> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/jira-tem-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img13.png" alt="Update an Issue dialog task is added" title="Update an Issue dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>updateIssue</strong> – A user intent to update an issue.</li>
+<li><strong>issueKey</strong>, <strong>chooseField</strong>, <strong>updatedSummary</strong>, and <strong>newLabel</strong> – Entity nodes for updating the issue details.</li>
+<li>
+<p><strong>prepareUpdateIssuePayloadScript</strong> – A bot action service to update an issue in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>prepareUpdateIssuePayloadScript</em> bot action component properties.<br />
+<a class="glightbox" href="../images/jira-tem-img14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img14.png" alt="prepareUpdateIssuePayloadScript" title="prepareUpdateIssuePayloadScript" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>getResourceIdService</strong> – A bot action service to get a resource ID of a JIRA site.</p>
+</li>
+<li><strong>updateIssueService</strong> – A bot action service to update an issue in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>updateIssueService</em> bot action component properties.</li>
+<li>
+<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/jira-tem-img15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img15.png" alt="Edit Request" title="Edit Request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&quot;update&quot;: {
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&quot;summary&quot;: [
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>{
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>&quot;set&quot;: &quot;The updated summary&quot;
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>}
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>],
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>&quot;labels&quot;: {
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>&quot;add&quot;: &quot;Label_to_add_without_space&quot;
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>}
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>}
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>getIssuebyKeyService</strong> – A bot action service to update an issue in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>getIssuebyKeyService</em> bot action component properties.</p>
+</li>
+<li><strong>updateIssueMessage</strong> – A message node with the script to display responses for various scenarios.</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to update an issue as shown below:<br />
+<a class="glightbox" href="../images/jira-tem-img16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img16.png" alt="VA prompt to update an issue" title="VA prompt to update an issue" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="delete-an-issue">Delete an Issue<a class="headerlink" href="#delete-an-issue" title="Permanent link">&para;</a></h3>
+<p><strong>Note</strong>: You can delete an issue only if the JIRA admin or owner of the JIRA project assigns you the permission to delete it. Otherwise, you will not be able to perform this action.</p>
+<p>Steps to delete an issue in the JIRA integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-jira-action/#step-2-install-the-jira-action-templates" target="_blank">Installing the JIRA templates </a>section to install this template.</li>
+<li>
+<p>The <em>Delete an Issue</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/jira-tem-img17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img17.png" alt="Delete an Issue dialog task is added" title="Delete an Issue dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>deleteIssue</strong> – A user intent to delete an issue.</li>
+<li><strong>issueKey</strong> – Entity node to gather key to delete an issue.</li>
+<li><strong>getResourceIdService</strong> – A bot action service to delete a resource ID for an issue in an external integration.</li>
+<li><strong>deleteIssueService</strong> – A bot action service to delete an issue in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>deleteIssueService</em> bot action component properties.</li>
+<li>
+<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/jira-tem-img18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/jira-tem-img18.png" alt="Edit request" title="Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>deleteIssueMessage – A message node with the script to display responses for various scenarios.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to delete an issue.</li>
+</ol>
 
 
   
