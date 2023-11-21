@@ -17,7 +17,7 @@
     
     
       
-        <title>Using the openai actions templates - Kore ai Docs</title>
+        <title>**Using the OpenAI Action Templates** - Kore ai Docs</title>
       
     
     
@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-the-openai-action-templates" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -166,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using the openai actions templates
+              **Using the OpenAI Action Templates**
             
           </span>
         </div>
@@ -2870,6 +2875,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openai-actions" class="md-nav__link">
+    OpenAI Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenAI Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-answers-from-context" class="md-nav__link">
+    Generate Answers from Context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-skills-from-resume" class="md-nav__link">
+    Extract Skills from Resume
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2888,7 +2930,188 @@
 
 
 
+<h1 id="using-the-openai-action-templates"><strong>Using the OpenAI Action Templates</strong><a class="headerlink" href="#using-the-openai-action-templates" title="Permanent link">&para;</a></h1>
+<p>You can use the <strong>Prebuilt Action Templates **from your OpenAI integration to auto-create dialog tasks and test them using the **Talk to Bot</strong> option.</p>
+<p>Steps to create a dialog task using OpenAI action templates:</p>
+<ol>
+<li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong>.</li>
+<li>
+<p>Click <strong>Create a Dialog Task</strong>.<br />
+<a class="glightbox" href="../images/open-ai-tem-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img1.png" alt="Create a dialog task" title="Create a dialog task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>On the Dialog Task pop-up, under the <strong>Integration</strong>, select the <strong>OpenAI</strong> option to view the action templates.<br />
+<a class="glightbox" href="../images/open-ai-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img2.png" alt="Integration -- OpenAI" title="Integration -- OpenAI" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+</li>
+</ol>
+<p><strong>Note</strong>: If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the <strong>Actions</strong> page to configure an integration for your VA. For more information, see <a href="../../actions" target="_blank">Actions Overview</a>.<br />
+  <a class="glightbox" href="../images/open-ai-tem-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img3.png" alt="Explore Integrations" title="Explore Integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h2 id="openai-actions">OpenAI Actions<a class="headerlink" href="#openai-actions" title="Permanent link">&para;</a></h2>
+<p>The following OpenAI actions are supported in this release:</p>
+<table border="1">
+  <tr>
+   <td><strong>Supported Actions</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Method</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Generate Answers from Context
+   </td>
+   <td>Generates answers for your questions based on the given context.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+  <tr>
+   <td>Extract Skills from resume
+   </td>
+   <td>Extracts skills from your resume using the content that is provided as an input.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+</table>
 
+<h3 id="generate-answers-from-context"><strong>Generate Answers from Context</strong><a class="headerlink" href="#generate-answers-from-context" title="Permanent link">&para;</a></h3>
+<p>Steps to generate answers from context task using the OpenAI integration:</p>
+<ol>
+<li>Refer to the<a href="../configuring-the-openai-action/#step-2-install-the-openai-action-templates" target="_blank"> Installing the OpenAI templates</a> section to install this template.</li>
+<li>
+<p>The <em>Generate answers from context</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/open-ai-tem-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img4.png" alt="Generate answers from context dialog task is added" title="Generate answers from context dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ul>
+<li><strong>answerGeneration</strong> - A user intent to generate answers.</li>
+<li><strong>paragraph</strong> and <strong>question</strong> – Entity nodes for gathering the required answer generation details.</li>
+<li><strong>answerGenerationService</strong> – A bot action service to generate answers from the context in an external integration. Click the <strong>Plus</strong> icon to expand to view the answerGenerationService bot action component properties.</li>
+<li>
+<p>In the <strong>Component Properties</strong> window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/open-ai-tem-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img5.png" alt="Edit request" title="Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;model&quot;: &quot;text-davinci-003&quot;,
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&quot;prompt&quot;: &quot;Context: This policy applies to exempt employees who are required to relocate because they are being permanently transferred (for no less than 12 months) at the Company&#39;s request to a location within the Company (within the United States [including possessions and territories] and Canada) that is at least fifty (50) miles farther from their residence than their former job location.Reimbursement for relocation will be limited to expenses enumerated below incurred by the employee and legally-recognized, immediate family members who currently live with the employee.Eligibility must be approved by the supervising manager, functional Vice President and Human Resources Department.Prior written approval is required for exceptions to this policy, either in determining eligibility or extent of coverage.This prior written approval must be obtained from the Human Resources Department.Benefits under the plan will cease if the employee resigns his/her employment or is terminated for cause, including for poor performance.In addition, if an employee resigns from his/her employment, or is terminated for cause, including for poor performance, within 12 months of having been transferred, the employee will be required to reimburse the Company for relocation expenses paid for by the Company under this policy.In order to address the financial concerns you may have regarding a move, the Company has put together the following relocation package of up to a maximum of $20,000, inclusive of tax gross-up.Included in this package are some items that may help to address some personal concerns you may also have.Nothing in this policy should be construed as a contract for employment for any period of time or as altering the at-will nature of the employment relationship.The Company has the right to terminate employees for any or no reason at all, at any time.This plan is administered by the Human Resources Department.The Company will not be responsible for any action taken which is beyond the scope of this plan. Q: How much maximum relocation reimbursement can i avail under this policy?&#39;&quot;,
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&quot;temperature&quot;: 0,
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&quot;max_tokens&quot;: 256,
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>&quot;top_p&quot;: 1,
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&quot;frequency_penalty&quot;: 0,
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>&quot;presence_penalty&quot;: 0
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>}
+</span></code></pre></div>
+<p><strong>Note</strong>: You can enter a maximum of 1500 words with no line breaks, single or double quotes in the content.</p>
+<p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
+<a class="glightbox" href="../images/open-ai-tem-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img6.png" alt="Add response" title="Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;id&quot;: &quot;cmpl-6f2Q0ZeQIOoSpX428wUr3rp7T7zgc&quot;,
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&quot;object&quot;: &quot;text_completion&quot;,
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&quot;created&quot;: 1675238764,
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&quot;model&quot;: &quot;text-davinci-003&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>&quot;choices&quot;: [
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>{
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&quot;text&quot;: &quot;\n\nA: Under this policy, you can avail a maximum relocation reimbursement of up to $20,000, inclusive of tax gross-up.&quot;,
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&quot;index&quot;: 0,
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>&quot;logprobs&quot;: null,
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>&quot;finish_reason&quot;: &quot;stop&quot;
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>}
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>],
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>&quot;usage&quot;: {
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>&quot;prompt_tokens&quot;: 396,
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>&quot;completion_tokens&quot;: 30,
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>&quot;total_tokens&quot;: 426
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>}
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>answerGenerationMessage</strong> – A message node with script to display responses for various scenarios.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>
+<p>Follow the prompts in the VA console to generate answers from context as shown below:<br />
+<a class="glightbox" href="../images/open-ai-tem-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img7.png" alt="VA prompt to generate answer from context" title="VA prompt to generate answer from context" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Enter a question based on context when prompted by the VA as shown below:<br />
+<a class="glightbox" href="../images/open-ai-tem-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img8.png" alt="Enter question" title="Enter question" style="border: 1px solid gray;zoom:50%;"/></a>     </p>
+</li>
+<li>
+<p>You will notice an answer is generated from the context for your question.</p>
+</li>
+</ol>
+<h3 id="extract-skills-from-resume"><strong>Extract Skills from Resume</strong><a class="headerlink" href="#extract-skills-from-resume" title="Permanent link">&para;</a></h3>
+<p>Steps to extract skills from the resume using OpenAI integration:</p>
+<ol>
+<li>Refer to the<a href="../configuring-the-openai-action/#step-2-install-the-openai-action-templates" target="_blank"> Installing the OpenAI templates</a> section to install this template.</li>
+<li>
+<p>The <em>Extract Skills from resume</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/open-ai-tem-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img9.png" alt="Extract Skills from resume dialog task is added" title="Extract Skills from resume dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ul>
+<li><strong>extractSkills</strong> - A user intent to extract skills from the resume content.</li>
+<li><strong>resume</strong> – Entity nodes for extracting the skills.</li>
+<li><strong>extractSkillsService</strong> – A bot action script to extract skills from the resume content in an OpenAI integration. Click the <strong>Plus</strong> icon to expand to view the extractSkillsService bot action component properties.</li>
+<li>
+<p>In the <strong>Component Properties</strong> window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/open-ai-tem-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img10.png" alt="Edit request" title="Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&quot;model&quot;: &quot;text-davinci-002&quot;,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&quot;prompt&quot;: &quot;Worked on a leaflet Efficient Multi-camera Positioning. Researched, designed and developed a system that uses AI plus Mathematical techniques to assist users in producing on-stage video content using various Machine Learning and Deep Learning algorithms and frameworks like Tensorflow, NumPy, Pandas, Scikit-Learn, etc. Worked on application software development and NLP analysis at a Global-level Project. Used KMeans Clustering Algorithm for Customer Request Analytics on a data consisting of more than million text words.Worked on two project leaflets that were built and deployed using Python and Tensorflow. The first one was a Neural Network based approach for text-to-speech (TTS) synthesis that can generate real-time voice cloning (speech audio) in the voice of different speakers. The second model involves the use of object detection and pose estimation to count the number of workout steps done. Worked as Research Intern mainly on design and prototype of advanced automated aerated system using normal mobile application and Wi-Fi technology. In this project, sensor coding and a flexible Automated Aerated System using Arduino micro-controller and NodeMCU ESP8266 Wi-Fi Module was proposed and implemented.&quot;,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&quot;temperature&quot;: 0.7,
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&quot;stop&quot;: &quot;Q:&quot;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>}
+</span></code></pre></div>
+<p><strong>Note</strong>: You can enter a maximum of 1500 words with no line breaks, single or double quotes in the content.</p>
+<p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
+<a class="glightbox" href="../images/open-ai-tem-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img11.png" alt="Add response" title="Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&quot;id&quot;: &quot;cmpl-6U8OZ4pJmLgGliKfCgfBjzgUgEV5Q&quot;,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>&quot;object&quot;: &quot;text_completion&quot;,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>&quot;created&quot;: 1672640131,
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>&quot;model&quot;: &quot;text-davinci-002&quot;,
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>&quot;choices&quot;: [
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>{
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&quot;text&quot;: &quot;\n\n-Advanced automated aerated system-Wi-Fi technology-ESP8266 Wi-Fi module-Personal Computer-Database&quot;,
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>&quot;index&quot;: 0,
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>&quot;logprobs&quot;: null,
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>&quot;finish_reason&quot;: &quot;stop&quot;
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>}
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>],
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>&quot;usage&quot;: {
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>&quot;prompt_tokens&quot;: 163,
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>&quot;completion_tokens&quot;: 27,
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>&quot;total_tokens&quot;: 190
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>}
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>extractSkillsMessage</strong> – A message node with script to display responses for various scenarios.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to extract skills.</li>
+<li>
+<p>Enter the resume content when prompted by the VA.<br />
+<a class="glightbox" href="../images/open-ai-tem-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img12.png" alt="Enter resume content" title="Enter resume content" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>The VA now extracts the skills based on the resume content entered.<br />
+<a class="glightbox" href="../images/open-ai-tem-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-ai-tem-img13.png" alt="Extracted Skills from resume content" title="Extracted Skills from resume content" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
 
 
   
