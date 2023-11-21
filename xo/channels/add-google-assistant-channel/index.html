@@ -2923,7 +2923,7 @@
 <li>
 <p>Click the <strong>Modify languages in Settings</strong> option to update the languages in which your actions are displayed.</p>
 </li>
-<li>Go back by clicking on the **Overview **tab on top of the page.</li>
+<li>Go back by clicking on the <strong>Overview</strong> tab on top of the page.</li>
 <li>Now click <strong>Decide how your Action is invoked</strong> under the <strong>Quick Setup</strong>. This opens up the <strong>Develop</strong> tab.</li>
 <li>Now proceed to the <strong>Invocation</strong> option on the left pane. Provide a name that users use to invoke your actions.</li>
 <li>Click <strong>Save</strong> on the top-left of the page. You may review other options available.
@@ -2933,44 +2933,44 @@
 <ol>
 <li>Next, you must define Actions. Actions are the tasks that you intend your project to fulfill. Click <strong>Actions</strong> on the left pane and click <strong>Add Your First Action</strong>. A new window with options to either build a custom intent or to choose built-in intents is displayed. Choose an appropriate option as per your requirement.</li>
 <li><em>Actions on Google</em> will redirect you to the <strong>Dialogflow</strong> application for defining the action definition. If you are new to Dialogflow, you are requested to register on Dialogflow. Once your Dialogflow account is set up, you are redirected to the Console of Dialogflow to create a new Agent. Click <strong>Create</strong> to complete the creation of a new agent.</li>
-<li>Once your agent is created, click <strong>Intents</strong> on the left pane. Dialogflow will add two intents by default viz. <strong>Default Fallback Intent</strong> and <strong>Default Welcome Intent.</strong><ol>
+<li>Once your agent is created, click <strong>Intents</strong> on the left pane. Dialogflow will add two intents by default viz. <strong>Default Fallback Intent</strong> and <strong>Default Welcome Intent.</strong><ul>
 <li><strong>Default Fallback Intent</strong> is used to respond to any user input that does not match any of the other intents defined in the intent.</li>
 <li><strong>Default Welcome Intent</strong> is used to respond to the user on the first input. If no other intent is created in Dialogflow, these two intents will be used to address all user inputs.</li>
-</ol>
+</ul>
 </li>
 <li>As you expect your Kore.ai assistant to fulfill all your user requests, you must turn on <em>Webhook</em> C_alls_ for both these intents. Once enabled, Dialogflow will route all user requests reaching any of these two intents to your Kore.ai assistant.</li>
 <li>Select <strong>Default Fallback Intent</strong> to open the intent details and go to the end of the page. Under the <strong>Fulfillment</strong> section, turn on the toggle to <strong>Enable webhook call for this intent</strong> option. Click <strong>Save</strong> to update your changes.</li>
-<li>Go back to the** Intents** on the left pane, select <strong>Default Welcome Intent</strong> to open the intent details, and go to the end of the page. Under the <strong>Fulfillment</strong> section, turn on the toggle to <strong>Enable webhook call for this intent</strong> option.</li>
+<li>Go back to the <strong>Intents</strong> on the left pane, select <strong>Default Welcome Intent</strong> to open the intent details, and go to the end of the page. Under the <strong>Fulfillment</strong> section, turn on the toggle to <strong>Enable webhook call for this intent</strong> option.</li>
 <li>Click <strong>Save</strong> to update your changes.
 <a class="glightbox" href="../images/google_assistant2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_assistant2.png" alt="enable google assistant" title="enable google assistant" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
 <h1 id="step-3-enable-fulfillment">Step 3: Enable Fulfillment<a class="headerlink" href="#step-3-enable-fulfillment" title="Permanent link">&para;</a></h1>
 <ol>
-<li>Next, Enable Fulfillment. To configure the webhook integration between your Dialogflow agent and Kore.ai assistant, click the <strong>Fulfillment</strong> option on the left pane and enable the <strong>Webhook</strong> toggle switch.<ol>
-<li>Open the assistantin the Kore.ai XO Platform and access the <strong>Channel Enablement</strong> option and select the <strong>Google Assistant</strong> channel.</li>
-<li>Go to the <strong>Configurations</strong> tab and copy the <strong>Webhook URL</strong> provided there and update it in the <strong>URL</strong> field in the **Fulfillment **section of Dialogflow.</li>
-<li>From the <strong>Configurations</strong> tab of the Google Assistant channel page on the builder, copy the <strong>Access Token</strong>. This token must be added as a header key in the Dialogflow Fulfillment screen.</li>
+<li>Next, Enable Fulfillment. To configure the webhook integration between your Dialogflow agent and Kore.ai assistant, click the <strong>Fulfillment</strong> option on the left pane and enable the <strong>Webhook</strong> toggle switch.<ul>
+<li>Open the assistant in the Kore.ai XO Platform and access the <strong>Channel Enablement</strong> option and select the <strong>Google Assistant</strong> channel.</li>
+<li>Go to the <strong>Configurations</strong> tab and copy the <strong>Webhook URL</strong> provided there and update it in the <strong>URL</strong> field in the <strong>Fulfillment</strong> section of Dialogflow.
+<em>. From the **Configurations*</em> tab of the Google Assistant channel page on the builder, copy the <strong>Access Token</strong>. This token must be added as a header key in the Dialogflow Fulfillment screen.</li>
 <li>Under the <strong>Webhook</strong> option of the <strong>Fulfillment</strong> section, add the key as <strong>Access-token</strong> and update the copied access token as the value for this key.</li>
-</ol>
+</ul>
 </li>
 <li>Go to the end of the page and click <strong>Save</strong>.
 <a class="glightbox" href="../images/google_assistant3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_assistant3.png" alt="enable fulfillment" title="enable fulfillment" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
 <h1 id="step-4-test-using-simulator">Step 4: Test using Simulator<a class="headerlink" href="#step-4-test-using-simulator" title="Permanent link">&para;</a></h1>
 <ol>
-<li>Your configurations to enable the channel are all set up now. <strong>Actions on Google</strong> provides a built-in simulator to test your assistant. For this, you must first enable few additional options of your Google account’s <a href="https://myaccount.google.com/activitycontrols">Activity Controls</a> as per the details provided <a href="https://developers.google.com/actions/dialogflow/first-app?hl=en#preview_the_app">here</a>.<ol>
+<li>Your configurations to enable the channel are all set up now. <strong>Actions on Google</strong> provides a built-in simulator to test your assistant. For this, you must first enable few additional options of your Google account’s <a href="https://myaccount.google.com/activitycontrols">Activity Controls</a> as per the details provided <a href="https://developers.google.com/actions/dialogflow/first-app?hl=en#preview_the_app">here</a>.<ul>
 <li>After you have configured these controls, in the Dialogflow console, click <strong>Integrations</strong> on the left pane and then click the <strong>Google Assistant</strong>. A popup window with Google Assistant’s integration settings is displayed. Review the required settings and then click <strong>Test</strong> at the bottom of the window.</li>
 <li>This redirects you back to the Google Action Console and opens up the test tab. Now, you can start testing your assistant using Google’s in-built emulator.</li>
-</ol>
+</ul>
 </li>
-<li>Once you have configured the integration and tested your assistant, you must deploy your bot for making it available to potential users. Proceed to the <strong>Deploy</strong> on the top and furnish all the required information and submit for release by clicking **Save **on the top-right of the page. Your action will be available on Google Assistant Explore only after your release submission is approved.</li>
+<li>Once you have configured the integration and tested your assistant, you must deploy your bot for making it available to potential users. Proceed to the <strong>Deploy</strong> on the top and furnish all the required information and submit for release by clicking <strong>Save</strong> on the top-right of the page. Your action will be available on Google Assistant Explore only after your release submission is approved.</li>
 <li>Proceed to the <strong>Configurations</strong> tab on the Google Assistant channel page to continue with the channel setup process.</li>
 </ol>
 <h1 id="step-5-enable-the-channel">Step 5: Enable the channel<a class="headerlink" href="#step-5-enable-the-channel" title="Permanent link">&para;</a></h1>
 <ol>
 <li>In the XO Platform, select the assistant you want to add the channel to.</li>
 <li>Go to <strong>Deploy &gt; Channels &gt; Google Assistant</strong>.</li>
-<li>Go to the **Configuration **tab, select Yes and Save your change to enable the channel.
+<li>Go to the <strong>Configuration</strong> tab, select Yes and Save your change to enable the channel.
 <a class="glightbox" href="../images/google_assistant4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_assistant4.png" alt="deploy google assistant" title="deploy google assistant" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
 <p>After the channel is enabled and all configurations are verified, you can optionally publish the assistant to make it available for end-users, with the new channel. Learn more about<a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/"> Publishing your Virtual Assistant</a>.</p>
