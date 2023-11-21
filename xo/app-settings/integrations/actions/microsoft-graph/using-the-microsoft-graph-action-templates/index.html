@@ -17,7 +17,7 @@
     
     
       
-        <title>Using the microsoft graph action templates - Kore ai Docs</title>
+        <title>**Using the Microsoft Graph Action Templates** - Kore ai Docs</title>
       
     
     
@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-the-microsoft-graph-action-templates" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -166,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using the microsoft graph action templates
+              **Using the Microsoft Graph Action Templates**
             
           </span>
         </div>
@@ -2870,6 +2875,64 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-graph-actions" class="md-nav__link">
+    Microsoft Graph Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft Graph Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-events" class="md-nav__link">
+    List All Events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-to-do-tasks-lists" class="md-nav__link">
+    List All To-Do (Tasks) Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-event" class="md-nav__link">
+    Create an Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-to-do-tasks-list" class="md-nav__link">
+    Create a To-do (Tasks) List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-an-email" class="md-nav__link">
+    Send an Email
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2888,7 +2951,628 @@
 
 
 
+<h1 id="using-the-microsoft-graph-action-templates"><strong>Using the Microsoft Graph Action Templates</strong><a class="headerlink" href="#using-the-microsoft-graph-action-templates" title="Permanent link">&para;</a></h1>
+<p>You can use the <strong>Prebuilt Action Templates</strong> from your Microsoft Graph integration to auto-create dialog tasks and test them using the <strong>Talk to Bot</strong> option.</p>
+<p>Steps to create a dialog task using Microsoft Graph action templates:</p>
+<ol>
+<li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong>.</li>
+<li>
+<p>Click <strong>Create a Dialog Task</strong>.<br />
+<a class="glightbox" href="../images/ms-graph-tem-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img1.png" alt="Create a Dialog Task" title="Create a Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>On the Dialog Task pop-up, under the Integration, select the <strong>Microsoft Graph</strong> option to view the action templates.<br />
+<a class="glightbox" href="../images/ms-graph-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img2.png" alt="Integration - Microsoft Graph" title="Integration - Microsoft Graph" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the Actions page to configure an integration for your VA. For more information, see <a href="../../actions/" target="_blank">Actions Overview</a>.<br />
+<a class="glightbox" href="../images/ms-graph-tem-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img3.png" alt="Explore Integrations" title="Explore Integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
+<h2 id="microsoft-graph-actions">Microsoft Graph Actions<a class="headerlink" href="#microsoft-graph-actions" title="Permanent link">&para;</a></h2>
+<p>The following Microsoft Graph actions are supported:</p>
+<table border="1">
+  <tr>
+   <td><strong>Supported Tasks</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Method</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>List all events
+   </td>
+   <td>Retrieves all events from the Microsoft Graph system.
+   </td>
+   <td>GET
+   </td>
+  </tr>
+  <tr>
+   <td>List all to-do lists
+   </td>
+   <td>Retrieves all to-do list items from the Microsoft Graph system.
+   </td>
+   <td>GET
+   </td>
+  </tr>
+  <tr>
+   <td>Create a to-do list
+   </td>
+   <td>Create a to-do list in the Microsoft Graph system.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+  <tr>
+   <td>Create an event
+   </td>
+   <td>Creates an event in the Microsoft Graph system.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+  <tr>
+   <td>Send an Email
+   </td>
+   <td>Sends an email to the user from the Microsoft Graph system.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+</table>
 
+<h3 id="list-all-events">List All Events<a class="headerlink" href="#list-all-events" title="Permanent link">&para;</a></h3>
+<p>Steps to view all events in the Microsoft Graph integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-microsoft-graph-action/#step-2-install-the-microsoft-graph-action-templates" target="_blank">Installing the Microsoft Graph templates</a> section to install this template.</li>
+<li>
+<p>The <em>List All Events</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/ms-graph-tem-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img4.png" alt="List All Events dialog task is added" title="List All Events dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>listallEvents</strong> – A user intent to view all events.</li>
+<li><strong>listAllEventsService</strong> – A bot action service to view all events in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>listAllEventsService</em> bot action component properties.</li>
+<li>
+<p>In the <strong>Component Properties</strong> window, To add one or more responses, scroll down and click <strong>+Add Response</strong>.<br />
+<a class="glightbox" href="../images/ms-graph-tem-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img5.png" alt="Add Response" title="Add Response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>`{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/$metadata#users(&#39;purushottamKumar1215%40outlook.com&#39;)/events&quot;,
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&quot;value&quot;: [
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>{
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+TybdcNQAAG8nV2w==\&quot;&quot;,
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgBGAAADiea_kiTHkkGyRB2nztFSRQcA72QERTxLykaU1e_TybdcNQAAAgENAAAA72QERTxLykaU1e_TybdcNQAAABvMY3kAAAA=&quot;,
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&quot;createdDateTime&quot;: &quot;2022-12-09T07:08:07.7644246Z&quot;,
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>&quot;lastModifiedDateTime&quot;: &quot;2022-12-09T07:08:08.0300829Z&quot;,
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>&quot;changeKey&quot;: &quot;72QERTxLykaU1e+TybdcNQAAG8nV2w==&quot;,
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>&quot;categories&quot;: [],
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>&quot;transactionId&quot;: null,
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>&quot;originalStartTimeZone&quot;: &quot;India Standard Time&quot;,
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>&quot;originalEndTimeZone&quot;: &quot;India Standard Time&quot;,
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>&quot;iCalUId&quot;: &quot;040000008200E00074C5B7101A82E008000000003CEC5EFD9C0BD9010000000000000000100000005885E42DB5DA6C4990A52975F77CAD8A&quot;,
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>&quot;reminderMinutesBeforeStart&quot;: 15,
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>&quot;isReminderOn&quot;: true,
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>&quot;hasAttachments&quot;: false,
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>&quot;subject&quot;: &quot;event test&quot;,
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>&quot;bodyPreview&quot;: &quot;&quot;,
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>&quot;importance&quot;: &quot;normal&quot;,
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>&quot;sensitivity&quot;: &quot;normal&quot;,
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>&quot;isAllDay&quot;: false,
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>&quot;isCancelled&quot;: false,
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>&quot;isOrganizer&quot;: true,
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>&quot;responseRequested&quot;: true,
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>&quot;seriesMasterId&quot;: null,
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>&quot;showAs&quot;: &quot;busy&quot;,
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>&quot;type&quot;: &quot;singleInstance&quot;,
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>&quot;webLink&quot;: &quot;https://outlook.live.com/owa/?itemid=AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgBGAAADiea%2BkiTHkkGyRB2nztFSRQcA72QERTxLykaU1e%2BTybdcrl=1&amp;path=/calendar/item&quot;,
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>&quot;onlineMeetingUrl&quot;: null,
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>&quot;isOnlineMeeting&quot;: false,
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>&quot;onlineMeetingProvider&quot;: &quot;unknown&quot;,
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>&quot;allowNewTimeProposals&quot;: true,
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>&quot;occurrenceId&quot;: null,
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>&quot;isDraft&quot;: false,
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>&quot;hideAttendees&quot;: false,
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>&quot;responseStatus&quot;: {
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>&quot;response&quot;: &quot;organizer&quot;,
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>&quot;time&quot;: &quot;0001-01-01T00:00:00Z&quot;
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>},
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>&quot;body&quot;: {
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>&quot;contentType&quot;: &quot;html&quot;,
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>&quot;content&quot;: &quot;\r\n\r\n&amp;lt;!--&quot;
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>},
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>&quot;start&quot;: {
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>&quot;dateTime&quot;: &quot;2022-12-10T04:30:00.0000000&quot;,
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>&quot;timeZone&quot;: &quot;UTC&quot;
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>},
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>&quot;end&quot;: {
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>&quot;dateTime&quot;: &quot;2022-12-10T05:10:00.0000000&quot;,
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>&quot;timeZone&quot;: &quot;UTC&quot;
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>},
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>&quot;location&quot;: {
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>&quot;displayName&quot;: &quot;&quot;,
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>&quot;locationType&quot;: &quot;default&quot;,
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>&quot;uniqueIdType&quot;: &quot;unknown&quot;,
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>&quot;address&quot;: {},
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>&quot;coordinates&quot;: {}
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>},
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>&quot;locations&quot;: [],
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>&quot;recurrence&quot;: null,
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>&quot;attendees&quot;: [
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>{
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>&quot;type&quot;: &quot;required&quot;,
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>&quot;status&quot;: {
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>&quot;response&quot;: &quot;none&quot;,
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>&quot;time&quot;: &quot;0001-01-01T00:00:00Z&quot;
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>},
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>&quot;name&quot;: &quot;tanmay.agrawal@kore.com &quot;,
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>&quot;address&quot;: &quot;tanmay.agrawal@kore.com &quot;
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>}
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>},
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>{
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>&quot;type&quot;: &quot;required&quot;,
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>&quot;status&quot;: {
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>&quot;response&quot;: &quot;none&quot;,
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>&quot;time&quot;: &quot;0001-01-01T00:00:00Z&quot;
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>},
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>&quot;name&quot;: &quot; purushottam.kumar@kore.com&quot;,
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>&quot;address&quot;: &quot; purushottam.kumar@kore.com&quot;
+</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>}
+</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>}
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>],
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>&quot;organizer&quot;: {
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>&quot;name&quot;: &quot;Purushottam Kumar&quot;,
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>&quot;address&quot;: &quot;purushottamKumar1215@outlook.com&quot;
+</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>}
+</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>},
+</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>&quot;onlineMeeting&quot;: null,
+</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>&quot;calendar@odata.associationLink&quot;: &quot;https://graph.microsoft.com/v1.0/users(&#39;purushottamKumar1215@outlook.com&#39;)/calendars(&#39;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAERTxLykaU1e_&#39;)/$ref&quot;,
+</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>&quot;calendar@odata.navigationLink&quot;: &quot;https://graph.microsoft.com/v1.0/users&quot;
+</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>},
+</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>{
+</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+TybdcNQAACgSHcw==\&quot;&quot;,
+</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgBGAAADiea_kiTHkkGyRB2nztAA=&quot;,
+</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>&quot;createdDateTime&quot;: &quot;2022-11-10T06:01:05.8265067Z&quot;,
+</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>&quot;lastModifiedDateTime&quot;: &quot;2022-11-10T06:01:06.3275042Z&quot;,
+</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>&quot;changeKey&quot;: &quot;72QERTxLykaU1e+TybdcNQAACgSHcw==&quot;,
+</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>&quot;categories&quot;: [],
+</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>&quot;transactionId&quot;: null,
+</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>&quot;originalStartTimeZone&quot;: &quot;India Standard Time&quot;,
+</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>&quot;originalEndTimeZone&quot;: &quot;India Standard Time&quot;,
+</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>&quot;iCalUId&quot;: &quot;040000008200E00074C5B7101A82E008000000003A2221D2C9F4D8010000000000000000100000003A24283C5796EB4AB4442F1ECBF05FF7&quot;,
+</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>&quot;reminderMinutesBeforeStart&quot;: 15,
+</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>&quot;isReminderOn&quot;: true,
+</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>&quot;hasAttachments&quot;: false,
+</span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>&quot;subject&quot;: &quot;My event 1&quot;,
+</span><span id="__span-0-111"><a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a>&quot;bodyPreview&quot;: &quot;&quot;,
+</span><span id="__span-0-112"><a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a>&quot;importance&quot;: &quot;normal&quot;,
+</span><span id="__span-0-113"><a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a>&quot;sensitivity&quot;: &quot;normal&quot;,
+</span><span id="__span-0-114"><a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a>&quot;isAllDay&quot;: false,
+</span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>&quot;isCancelled&quot;: false,
+</span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a>&quot;isOrganizer&quot;: true,
+</span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a>&quot;responseRequested&quot;: true,
+</span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a>&quot;seriesMasterId&quot;: null,
+</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a>&quot;showAs&quot;: &quot;busy&quot;,
+</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a>&quot;type&quot;: &quot;singleInstance&quot;,
+</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a>&quot;webLink&quot;: &quot;https://outlook.live.com/owa/?itemid=AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgBGAAADiea%2BkiTybdcxvsurl=1&amp;path=/calendar/item&quot;,
+</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a>&quot;onlineMeetingUrl&quot;: null,
+</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a>&quot;isOnlineMeeting&quot;: false,
+</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a>&quot;onlineMeetingProvider&quot;: &quot;unknown&quot;,
+</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a>&quot;allowNewTimeProposals&quot;: true,
+</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a>&quot;occurrenceId&quot;: null,
+</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a>&quot;isDraft&quot;: false,
+</span><span id="__span-0-128"><a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a>&quot;hideAttendees&quot;: false,
+</span><span id="__span-0-129"><a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a>&quot;responseStatus&quot;: {
+</span><span id="__span-0-130"><a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a>&quot;response&quot;: &quot;organizer&quot;,
+</span><span id="__span-0-131"><a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a>&quot;time&quot;: &quot;0001-01-01T00:00:00Z&quot;
+</span><span id="__span-0-132"><a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a>},
+</span><span id="__span-0-133"><a id="__codelineno-0-133" name="__codelineno-0-133" href="#__codelineno-0-133"></a>&quot;body&quot;: {
+</span><span id="__span-0-134"><a id="__codelineno-0-134" name="__codelineno-0-134" href="#__codelineno-0-134"></a>&quot;contentType&quot;: &quot;html&quot;,
+</span><span id="__span-0-135"><a id="__codelineno-0-135" name="__codelineno-0-135" href="#__codelineno-0-135"></a>&quot;content&quot;: &quot;\r\n&quot;
+</span><span id="__span-0-136"><a id="__codelineno-0-136" name="__codelineno-0-136" href="#__codelineno-0-136"></a>},
+</span><span id="__span-0-137"><a id="__codelineno-0-137" name="__codelineno-0-137" href="#__codelineno-0-137"></a>&quot;start&quot;: {
+</span><span id="__span-0-138"><a id="__codelineno-0-138" name="__codelineno-0-138" href="#__codelineno-0-138"></a>&quot;dateTime&quot;: &quot;2022-11-09T18:42:00.0000000&quot;,
+</span><span id="__span-0-139"><a id="__codelineno-0-139" name="__codelineno-0-139" href="#__codelineno-0-139"></a>&quot;timeZone&quot;: &quot;UTC&quot;
+</span><span id="__span-0-140"><a id="__codelineno-0-140" name="__codelineno-0-140" href="#__codelineno-0-140"></a>},
+</span><span id="__span-0-141"><a id="__codelineno-0-141" name="__codelineno-0-141" href="#__codelineno-0-141"></a>&quot;end&quot;: {
+</span><span id="__span-0-142"><a id="__codelineno-0-142" name="__codelineno-0-142" href="#__codelineno-0-142"></a>&quot;dateTime&quot;: &quot;2022-11-09T19:25:00.0000000&quot;,
+</span><span id="__span-0-143"><a id="__codelineno-0-143" name="__codelineno-0-143" href="#__codelineno-0-143"></a>&quot;timeZone&quot;: &quot;UTC&quot;
+</span><span id="__span-0-144"><a id="__codelineno-0-144" name="__codelineno-0-144" href="#__codelineno-0-144"></a>},
+</span><span id="__span-0-145"><a id="__codelineno-0-145" name="__codelineno-0-145" href="#__codelineno-0-145"></a>&quot;location&quot;: {
+</span><span id="__span-0-146"><a id="__codelineno-0-146" name="__codelineno-0-146" href="#__codelineno-0-146"></a>&quot;displayName&quot;: &quot;&quot;,
+</span><span id="__span-0-147"><a id="__codelineno-0-147" name="__codelineno-0-147" href="#__codelineno-0-147"></a>&quot;locationType&quot;: &quot;default&quot;,
+</span><span id="__span-0-148"><a id="__codelineno-0-148" name="__codelineno-0-148" href="#__codelineno-0-148"></a>&quot;uniqueIdType&quot;: &quot;unknown&quot;,
+</span><span id="__span-0-149"><a id="__codelineno-0-149" name="__codelineno-0-149" href="#__codelineno-0-149"></a>&quot;address&quot;: {},
+</span><span id="__span-0-150"><a id="__codelineno-0-150" name="__codelineno-0-150" href="#__codelineno-0-150"></a>&quot;coordinates&quot;: {}
+</span><span id="__span-0-151"><a id="__codelineno-0-151" name="__codelineno-0-151" href="#__codelineno-0-151"></a>},
+</span><span id="__span-0-152"><a id="__codelineno-0-152" name="__codelineno-0-152" href="#__codelineno-0-152"></a>&quot;locations&quot;: [],
+</span><span id="__span-0-153"><a id="__codelineno-0-153" name="__codelineno-0-153" href="#__codelineno-0-153"></a>&quot;recurrence&quot;: null,
+</span><span id="__span-0-154"><a id="__codelineno-0-154" name="__codelineno-0-154" href="#__codelineno-0-154"></a>&quot;attendees&quot;: [
+</span><span id="__span-0-155"><a id="__codelineno-0-155" name="__codelineno-0-155" href="#__codelineno-0-155"></a>{
+</span><span id="__span-0-156"><a id="__codelineno-0-156" name="__codelineno-0-156" href="#__codelineno-0-156"></a>&quot;type&quot;: &quot;required&quot;,
+</span><span id="__span-0-157"><a id="__codelineno-0-157" name="__codelineno-0-157" href="#__codelineno-0-157"></a>&quot;status&quot;: {
+</span><span id="__span-0-158"><a id="__codelineno-0-158" name="__codelineno-0-158" href="#__codelineno-0-158"></a>&quot;response&quot;: &quot;none&quot;,
+</span><span id="__span-0-159"><a id="__codelineno-0-159" name="__codelineno-0-159" href="#__codelineno-0-159"></a>&quot;time&quot;: &quot;0001-01-01T00:00:00Z&quot;
+</span><span id="__span-0-160"><a id="__codelineno-0-160" name="__codelineno-0-160" href="#__codelineno-0-160"></a>},
+</span><span id="__span-0-161"><a id="__codelineno-0-161" name="__codelineno-0-161" href="#__codelineno-0-161"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-0-162"><a id="__codelineno-0-162" name="__codelineno-0-162" href="#__codelineno-0-162"></a>&quot;name&quot;: &quot;aa@gmail.com &quot;,
+</span><span id="__span-0-163"><a id="__codelineno-0-163" name="__codelineno-0-163" href="#__codelineno-0-163"></a>&quot;address&quot;: &quot;aa@gmail.com &quot;
+</span><span id="__span-0-164"><a id="__codelineno-0-164" name="__codelineno-0-164" href="#__codelineno-0-164"></a>}
+</span><span id="__span-0-165"><a id="__codelineno-0-165" name="__codelineno-0-165" href="#__codelineno-0-165"></a>},
+</span><span id="__span-0-166"><a id="__codelineno-0-166" name="__codelineno-0-166" href="#__codelineno-0-166"></a>{
+</span><span id="__span-0-167"><a id="__codelineno-0-167" name="__codelineno-0-167" href="#__codelineno-0-167"></a>&quot;type&quot;: &quot;required&quot;,
+</span><span id="__span-0-168"><a id="__codelineno-0-168" name="__codelineno-0-168" href="#__codelineno-0-168"></a>&quot;status&quot;: {
+</span><span id="__span-0-169"><a id="__codelineno-0-169" name="__codelineno-0-169" href="#__codelineno-0-169"></a>&quot;response&quot;: &quot;none&quot;,
+</span><span id="__span-0-170"><a id="__codelineno-0-170" name="__codelineno-0-170" href="#__codelineno-0-170"></a>&quot;time&quot;: &quot;0001-01-01T00:00:00Z&quot;
+</span><span id="__span-0-171"><a id="__codelineno-0-171" name="__codelineno-0-171" href="#__codelineno-0-171"></a>},
+</span><span id="__span-0-172"><a id="__codelineno-0-172" name="__codelineno-0-172" href="#__codelineno-0-172"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-0-173"><a id="__codelineno-0-173" name="__codelineno-0-173" href="#__codelineno-0-173"></a>&quot;name&quot;: &quot; bb@yahoo.com&quot;,
+</span><span id="__span-0-174"><a id="__codelineno-0-174" name="__codelineno-0-174" href="#__codelineno-0-174"></a>&quot;address&quot;: &quot; bb@yahoo.com&quot;
+</span><span id="__span-0-175"><a id="__codelineno-0-175" name="__codelineno-0-175" href="#__codelineno-0-175"></a>}
+</span><span id="__span-0-176"><a id="__codelineno-0-176" name="__codelineno-0-176" href="#__codelineno-0-176"></a>}
+</span><span id="__span-0-177"><a id="__codelineno-0-177" name="__codelineno-0-177" href="#__codelineno-0-177"></a>],
+</span><span id="__span-0-178"><a id="__codelineno-0-178" name="__codelineno-0-178" href="#__codelineno-0-178"></a>&quot;organizer&quot;: {
+</span><span id="__span-0-179"><a id="__codelineno-0-179" name="__codelineno-0-179" href="#__codelineno-0-179"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-0-180"><a id="__codelineno-0-180" name="__codelineno-0-180" href="#__codelineno-0-180"></a>&quot;name&quot;: &quot;Purushottam Kumar&quot;,
+</span><span id="__span-0-181"><a id="__codelineno-0-181" name="__codelineno-0-181" href="#__codelineno-0-181"></a>&quot;address&quot;: &quot;purushottamKumar1215@outlook.com&quot;
+</span><span id="__span-0-182"><a id="__codelineno-0-182" name="__codelineno-0-182" href="#__codelineno-0-182"></a>}
+</span><span id="__span-0-183"><a id="__codelineno-0-183" name="__codelineno-0-183" href="#__codelineno-0-183"></a>},
+</span><span id="__span-0-184"><a id="__codelineno-0-184" name="__codelineno-0-184" href="#__codelineno-0-184"></a>&quot;onlineMeeting&quot;: null,
+</span><span id="__span-0-185"><a id="__codelineno-0-185" name="__codelineno-0-185" href="#__codelineno-0-185"></a>&quot;calendar@odata.associationLink&quot;: &quot;https://graph.microsoft.com/v1.0/users(&#39;_TybdcNQAAAgk9AAAA&#39;)/$ref&quot;,
+</span><span id="__span-0-186"><a id="__codelineno-0-186" name="__codelineno-0-186" href="#__codelineno-0-186"></a>&quot;calendar@odata.navigationLink&quot;: &quot;https://graph.microsoft.com/v1.0/users(&#39;alan@abc.com&#39;)/calendars(&#39;AQMkADAwATNiZmYAZC01N2E2LTYERTxLykaU1e_TybQERTxLykaU1e_TybdcNQAAAgk9AAAA&#39;)&quot;
+</span><span id="__span-0-187"><a id="__codelineno-0-187" name="__codelineno-0-187" href="#__codelineno-0-187"></a>}
+</span><span id="__span-0-188"><a id="__codelineno-0-188" name="__codelineno-0-188" href="#__codelineno-0-188"></a>],
+</span><span id="__span-0-189"><a id="__codelineno-0-189" name="__codelineno-0-189" href="#__codelineno-0-189"></a>&quot;@odata.nextLink&quot;: &quot;https://graph.microsoft.com/v1.0/me/events?%24top=10&amp;%24skip=10&quot;
+</span><span id="__span-0-190"><a id="__codelineno-0-190" name="__codelineno-0-190" href="#__codelineno-0-190"></a>}
+</span><span id="__span-0-191"><a id="__codelineno-0-191" name="__codelineno-0-191" href="#__codelineno-0-191"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>listAllEventstMessage</strong> – A message node with the script to display responses for various events.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>
+<p>Follow the prompts in the VA console to view all events as shown below:<br />
+<a class="glightbox" href="../images/ms-graph-tem-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img6.png" alt="VA prompt to view all events" title="VA prompt to view all events" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>You can now view events in the Microsoft Graph system.</p>
+</li>
+</ol>
+<h3 id="list-all-to-do-tasks-lists">List All To-Do (Tasks) Lists<a class="headerlink" href="#list-all-to-do-tasks-lists" title="Permanent link">&para;</a></h3>
+<p>Steps to view all to-do lists in the Microsoft Graph integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-microsoft-graph-action/#step-2-install-the-microsoft-graph-action-templates" target="_blank">Installing the Microsoft Graph templates </a>section to install this template.</li>
+<li>
+<p>The <em>List All Todo Lists</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/ms-graph-tem-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img7.png" alt="List All Todo Lists dialog task is added" title="List All Todo Lists dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>listAllToDolists</strong> – A user intent to view all to-do lists.</li>
+<li><strong>listAllToDoListService</strong> – A bot action service to get all the to do lists and send an an email from an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>listAllToDoListService</em> bot action component properties.</li>
+<li>
+<p>In the Component Properties window, to add one or more responses, scroll down and click <strong>+Add Response</strong>:<br />
+<a class="glightbox" href="../images/ms-graph-tem-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img8.png" alt="Add response" title="Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/$metadata#users(&#39;purushottamkumar1215%40outlook.com&#39;)/todo/lists&quot;,
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&quot;value&quot;: [
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>{
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+TybdcNQAAHgSugA==\&quot;&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>&quot;displayName&quot;: &quot;Tasks&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&quot;isOwner&quot;: true,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&quot;isShared&quot;: false,
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&quot;wellknownListName&quot;: &quot;defaultList&quot;,
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgAuAAADiea_kiTHkkGyRB2nztFSRQEA72QERTxLykaU1e_TybdcNQAAAgESAAAA&quot;
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>},
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>{
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+TybdcNQAAHgSugg==\&quot;&quot;,
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>&quot;displayName&quot;: &quot;create List from bot&quot;,
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>&quot;isOwner&quot;: true,
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>&quot;isShared&quot;: false,
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>&quot;wellknownListName&quot;: &quot;none&quot;,
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgAuAAADiea_kiTHkkGyRB2nztFSRQEA72QERTxLykaU1e_TybdcNQAAAAe9TR8AAAA=&quot;
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>},
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>{
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+TybdcNQAAHgSuhA==\&quot;&quot;,
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>&quot;displayName&quot;: &quot;myList1&quot;,
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>&quot;isOwner&quot;: true,
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>&quot;isShared&quot;: false,
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>&quot;wellknownListName&quot;: &quot;none&quot;,
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgAuAAADiea_kiTHkkGyRB2nztFSRQEA72QERTxLykaU1e_TybdcNQAAAAe9TSAAAAA=&quot;
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>},
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>{
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+TybdcNQAAHgSuhg==\&quot;&quot;,
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>&quot;displayName&quot;: &quot;Postman created list&quot;,
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>&quot;isOwner&quot;: true,
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>&quot;isShared&quot;: false,
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>&quot;wellknownListName&quot;: &quot;none&quot;,
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgAuAAADiea_kiTHkkGyRB2nztFSRQEA72QERTxLykaU1e_TybdcNQAAAmBlAAAA&quot;
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>},
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>{
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+TybdcNQAAHgSuiA==\&quot;&quot;,
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>&quot;displayName&quot;: &quot;Postman created list3&quot;,
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>&quot;isOwner&quot;: true,
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>&quot;isShared&quot;: false,
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>&quot;wellknownListName&quot;: &quot;none&quot;,
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgAuAAADiea_kiTHkkGyRB2nztFSRQEA72QERTxLykaU1e_TybdcNQAAAAe9TR4AAAA=&quot;
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>},
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>{
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+TybdcNQAAHgSuig==\&quot;&quot;,
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>&quot;displayName&quot;: &quot;Task11&quot;,
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>&quot;isOwner&quot;: true,
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>&quot;isShared&quot;: false,
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>&quot;wellknownListName&quot;: &quot;none&quot;,
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgAuAAADiea_kiTHkkGyRB2nztFSRQEA72QERTxLykaU1e_TybdcNQAAAmBkAAAA&quot;
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>},
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>{
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+TybdcNQAAAAAh3w==\&quot;&quot;,
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>&quot;displayName&quot;: &quot;Flagged Emails&quot;,
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>&quot;isOwner&quot;: true,
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>&quot;isShared&quot;: false,
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>&quot;wellknownListName&quot;: &quot;flaggedEmails&quot;,
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgAuAAADiea_kiTHkkGyRB2nztFSRQEA72QERTxLykaU1e_TybdcNQAAAmBhAAAA&quot;
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>}
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>]
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>listAllTodoListsMessage</strong> – A message node with script to display responses for various to-do lists.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>
+<p>Follow the prompts in the VA console to view all to-do lists as shown below.<br />
+<a class="glightbox" href="../images/ms-graph-tem-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img9.png" alt="VA prompt to view All Todo Lists" title="VA prompt to view All Todo Lists" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>You can now view all to-do lists in the Microsoft Graph system.</p>
+</li>
+</ol>
+<h3 id="create-an-event">Create an Event<a class="headerlink" href="#create-an-event" title="Permanent link">&para;</a></h3>
+<p>Steps to create an event in the Microsoft Graph integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-microsoft-graph-action/#step-2-install-the-microsoft-graph-action-templates" target="_blank">Installing the Microsoft Graph templates </a>section to install this template.</li>
+<li>
+<p>The <em>Create an Event</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/ms-graph-tem-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img10.png" alt="Create an Event dialog task is added" title="Create an Event dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>createEvent</strong> – A user intent to create an event.</li>
+<li><strong>eventSubject</strong>, <strong>startDate</strong>, <strong>startTime</strong>, <strong>endDate</strong>, <strong>endTime</strong>, and <strong>attendeesEmailAddresses</strong> – Entity nodes for gathering the required event details</li>
+<li><strong>getMailboxSettingsService</strong> – A bot action service to fetch information about the mailbox and user’s time zone from an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>getMailboxSettingsService</em> bot action component properties.</li>
+<li><strong>entityFormatterScript</strong> – A script to format all email entities of event attendees.</li>
+<li><strong>createEventService</strong> – A bot action service to create an event in an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>createEventService</em> bot action component properties.</li>
+<li>
+<p>In the <strong>Component Properties</strong> window, click <strong>Edit Request</strong> to modify the request parameters.<br />
+<a class="glightbox" href="../images/ms-graph-tem-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img11.png" alt="Edit request" title="Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>`{
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&quot;subject&quot;: &quot;My event 1&quot;,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&quot;start&quot;: {
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&quot;dateTime&quot;: &quot;2022-11-09T11:45&quot;,
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&quot;timeZone&quot;: &quot;India Standard Time&quot;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>},
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>&quot;end&quot;: {
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>&quot;dateTime&quot;: &quot;2022-11-09T11:50&quot;,
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>&quot;timeZone&quot;: &quot;India Standard Time&quot;
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>},
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>&quot;attendees&quot;: [
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>{
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>&quot;address&quot;: &quot;purushottam.kumar@gmail.com&quot;
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>}
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>}
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>] }
+</span></code></pre></div>
+<p>To add one or more responses, scroll down and click <strong>+Add Response</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/$metadata#users(&#39;purushottamKumar1215%40outlook.com&#39;)/events/$entity&quot;,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+TybdcNQAAKxxx==\&quot;&quot;,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgBGAAADiea_kiTHkkGyRB2nztFSRQcA72QERTxLykaU1e_=&quot;,
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>&quot;createdDateTime&quot;: &quot;2022-12-28T14:53:39.8527171Z&quot;,
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>&quot;lastModifiedDateTime&quot;: &quot;2022-12-28T14:53:40.5291771Z&quot;,
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>&quot;changeKey&quot;: &quot;72QERTxLykaU1e+Tybdcxxxxxxxx==&quot;,
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&quot;categories&quot;: [],
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>&quot;transactionId&quot;: null,
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>&quot;originalStartTimeZone&quot;: &quot;India Standard Time&quot;,
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>&quot;originalEndTimeZone&quot;: &quot;India Standard Time&quot;,
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>&quot;iCalUId&quot;: &quot;040000008200E00074C5B7101A82E008000000001D9B0A2CCC1AD901000000000000&quot;,
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>&quot;reminderMinutesBeforeStart&quot;: 15,
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>&quot;isReminderOn&quot;: true,
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>&quot;hasAttachments&quot;: false,
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>&quot;subject&quot;: &quot;My event 1&quot;,
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>&quot;bodyPreview&quot;: &quot;&quot;,
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>&quot;importance&quot;: &quot;normal&quot;,
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>&quot;sensitivity&quot;: &quot;normal&quot;,
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>&quot;isAllDay&quot;: false,
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>&quot;isCancelled&quot;: false,
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>&quot;isOrganizer&quot;: true,
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>&quot;responseRequested&quot;: true,
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>&quot;seriesMasterId&quot;: null,
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>&quot;showAs&quot;: &quot;busy&quot;,
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>&quot;type&quot;: &quot;singleInstance&quot;,
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>&quot;webLink&quot;: &quot;https://outlook.live.com/owa/?itemid=AQMkADAwATNiZmYAZC01N2E2LTYyZDYtpath=/calendar/item&quot;,
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>&quot;onlineMeetingUrl&quot;: null,
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>&quot;isOnlineMeeting&quot;: false,
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>&quot;onlineMeetingProvider&quot;: &quot;unknown&quot;,
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>&quot;allowNewTimeProposals&quot;: true,
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>&quot;occurrenceId&quot;: null,
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>&quot;isDraft&quot;: false,
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>&quot;hideAttendees&quot;: false,
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>&quot;responseStatus&quot;: {
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>&quot;response&quot;: &quot;organizer&quot;,
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>&quot;time&quot;: &quot;0001-01-01T00:00:00Z&quot;
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>},
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>&quot;body&quot;: {
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>&quot;contentType&quot;: &quot;html&quot;,
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>&quot;content&quot;: &quot;
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>},
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>&quot;start&quot;: {
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>&quot;dateTime&quot;: &quot;2022-11-09T11:45:00.0000000&quot;,
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>&quot;timeZone&quot;: &quot;India Standard Time&quot;
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>},
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>&quot;end&quot;: {
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>&quot;dateTime&quot;: &quot;2022-11-09T11:50:00.0000000&quot;,
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>&quot;timeZone&quot;: &quot;India Standard Time&quot;
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>},
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>&quot;location&quot;: {
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>&quot;displayName&quot;: &quot;&quot;,
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>&quot;locationType&quot;: &quot;default&quot;,
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>&quot;uniqueIdType&quot;: &quot;unknown&quot;,
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>&quot;address&quot;: {},
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>&quot;coordinates&quot;: {}
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>},
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>&quot;locations&quot;: [],
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>&quot;recurrence&quot;: null,
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>&quot;attendees&quot;: [
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>{
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>&quot;type&quot;: &quot;required&quot;,
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>&quot;status&quot;: {
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>&quot;response&quot;: &quot;none&quot;,
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>&quot;time&quot;: &quot;0001-01-01T00:00:00Z&quot;
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>},
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>&quot;name&quot;: &quot;alanr@abc.com&quot;,
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>&quot;address&quot;: &quot;alan@abc.com&quot;
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>}
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>}
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>],
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>&quot;organizer&quot;: {
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>&quot;name&quot;: &quot;Alan Smith&quot;,
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>&quot;address&quot;: &quot;alan@outlook.com&quot;
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>}
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>},
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>&quot;onlineMeeting&quot;: null
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>createEventMessage</strong> – A message node with the script to display responses to create events.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>
+<p>Follow the prompts in the VA console to create an event as shown below.<br />
+<a class="glightbox" href="../images/ms-graph-tem-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img12.png" alt="VA prompt to create an event" title="VA prompt to create an event" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>You can now view this event in the Microsoft Graph system.</p>
+</li>
+</ol>
+<h3 id="create-a-to-do-tasks-list">Create a To-do (Tasks) List<a class="headerlink" href="#create-a-to-do-tasks-list" title="Permanent link">&para;</a></h3>
+<p>Steps to create a to-do list in the Microsoft Graph integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-microsoft-graph-action/#step-2-install-the-microsoft-graph-action-templates" target="_blank">Installing the Microsoft Graph templates </a>section to install this template.</li>
+<li>
+<p>The <em>create a todo list</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/ms-graph-tem-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img13.png" alt="Create a Todo list dialog task is added" title="Create a Todo List dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>createTodolist</strong> – A user intent to create a task list.</li>
+<li><strong>listName</strong> – An entity node to gather the name of the todo list.</li>
+<li><strong>createTodolistService</strong> – A bot action service to create a todo list in an external integration. Click the Plus icon to expand to view the <em>createTodoListService</em> bot action component properties.</li>
+<li>
+<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below.<br />
+<a class="glightbox" href="../images/ms-graph-tem-img14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img14.png" alt="Edit request" title="Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&quot;displayName&quot;: &quot;Postman created list3&quot;
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>}
+</span></code></pre></div>
+<p>To add one or more responses, scroll down and click <strong>+Add Response</strong>.</p>
+<p><strong>Sample Response</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>{
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/$metadata#users(&#39;purushottamkumar1215%40outlook.com&#39;)/todo/lists/$entity&quot;,
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&quot;@odata.etag&quot;: &quot;W/\&quot;72QERTxLykaU1e+Tybdcxsxxxxx==\&quot;&quot;,
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>&quot;displayName&quot;: &quot;Postman created list3 (1)&quot;,
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>&quot;isOwner&quot;: true,
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>&quot;isShared&quot;: false,
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>&quot;wellknownListName&quot;: &quot;none&quot;,
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>&quot;id&quot;: &quot;AQMkADAwATNiZmYAZC01N2E2LTYyZDYtMDACLTAwCgAuAAADiea_kiTHkkGyRB2nztFSRQEA72QERTxLykaU1e_A=&quot;
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>createTodolistMessage</strong> – A message node with the script to display responses to create to-do lists.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>
+<p>Follow the prompts in the VA console to create a todo list as shown below.<br />
+<a class="glightbox" href="../images/ms-graph-tem-img15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img15.png" alt="VA prompt to create todo list" title="VA prompt to create todo list" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>You can now view this todo list in the Microsoft Graph system.</p>
+</li>
+</ol>
+<h3 id="send-an-email">Send an Email<a class="headerlink" href="#send-an-email" title="Permanent link">&para;</a></h3>
+<p>Steps to send email from the Microsoft Graph integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-microsoft-graph-action/#step-2-install-the-microsoft-graph-action-templates" target="_blank">Installing the Microsoft Graph templates </a>section to install this template.</li>
+<li>
+<p>The <em>Send email</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/ms-graph-tem-img16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img16.png" alt="Send EMail dialog task is added" title="Send EMail dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>sendEmail</strong> -: A user intent to send an email.</li>
+<li><strong>mailSubject</strong>, <strong>mailContent</strong>, and <strong>receipentsEmailAddresses</strong>– Entity nodes for sending the email to users.</li>
+<li><strong>prepareEmailIdsScript</strong> – A bot action service to fetch email ID in an external integration.</li>
+<li><strong>sendEmailService</strong> – A bot action service to send email from an external integration. Click the Plus icon to expand to view the sendEmailService bot action component properties.</li>
+<li>
+<p>In the Component Properties window, click the <strong>Edit Request</strong> link to modify the request parameters as shown below:<br />
+<a class="glightbox" href="../images/ms-graph-tem-img17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img17.png" alt="Edit request" title="Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&quot;message&quot;: {
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&quot;subject&quot;: &quot;Testing MS graph&quot;,
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>&quot;body&quot;: {
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>&quot;contentType&quot;: &quot;Text&quot;,
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>&quot;content&quot;: &quot;Integration is working fine&quot;
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>},
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>&quot;toRecipients&quot;: [
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>{
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>&quot;address&quot;: &quot;alan@abc.com&quot;
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>}
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>},
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>{
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>&quot;emailAddress&quot;: {
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>&quot;address&quot;: &quot;john@abc.com&quot;
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>}
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>}
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>] }
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>sendMailMessage</strong>– A message node with the script to display responses to send emails.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to send an email, as shown below.<br />
+<a class="glightbox" href="../images/ms-graph-tem-img18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-tem-img18.png" alt="VA prompt to send email" title="VA prompt to send email" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
 
 
   
