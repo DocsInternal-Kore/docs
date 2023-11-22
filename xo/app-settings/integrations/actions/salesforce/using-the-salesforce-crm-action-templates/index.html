@@ -17,7 +17,7 @@
     
     
       
-        <title>Using the salesforce crm action templates - Kore ai Docs</title>
+        <title>**Using the Salesforce CRM Action Templates** - Kore ai Docs</title>
       
     
     
@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-the-salesforce-crm-action-templates" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -166,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using the salesforce crm action templates
+              **Using the Salesforce CRM Action Templates**
             
           </span>
         </div>
@@ -2870,6 +2875,78 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#salesforce-crm-actions" class="md-nav__link">
+    Salesforce CRM Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Salesforce CRM Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-lead" class="md-nav__link">
+    Create a Lead
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-a-lead" class="md-nav__link">
+    Update a Lead
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-a-lead" class="md-nav__link">
+    Delete a Lead
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-leads" class="md-nav__link">
+    List All Leads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-a-lead-by-id" class="md-nav__link">
+    View a Lead By ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-leads" class="md-nav__link">
+    Search Leads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-opportunity" class="md-nav__link">
+    Create an Opportunity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2888,7 +2965,596 @@
 
 
 
+<h1 id="using-the-salesforce-crm-action-templates"><strong>Using the Salesforce CRM Action Templates</strong><a class="headerlink" href="#using-the-salesforce-crm-action-templates" title="Permanent link">&para;</a></h1>
+<p>You can use the <strong>Prebuilt Action Templates</strong> from your Salesforce integration to auto create dialog tasks and test them using the <strong>Talk to Bot</strong> option.</p>
+<p>Steps to create a dialog task using Salesforce action templates:</p>
+<ol>
+<li>Go to <strong>Build &gt; Conversation Skills</strong> and then click the <strong>Dialog Tasks</strong>.</li>
+<li>
+<p>Click the <strong>Create a Dialog Task</strong> to create a new task.<br />
+<a class="glightbox" href="../images/salesforce-action-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img1.png" alt="Create a Dialog Task" title="Create a Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>On the Dialog Task pop-up, under the <strong>Integration</strong>, select the <strong>Salesforce</strong> option to view the action templates.<br />
+<a class="glightbox" href="../images/salesforce-action-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img2.png" alt="Integration - Salesforce" title="Integration - Salesforce" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
+<p><strong>Note</strong>:
+If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the <strong>Actions</strong> page to configure an integration for your VA. For more information, see <a href="../../actions/" target="_blank">Actions Overview</a>.</p>
+<h2 id="salesforce-crm-actions">Salesforce CRM Actions<a class="headerlink" href="#salesforce-crm-actions" title="Permanent link">&para;</a></h2>
+<p>The following Salesforce CRM actions are supported in this release:</p>
+<table border="1">
+  <tr>
+   <td><strong>Supported Actions</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Method</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Create a Lead
+   </td>
+   <td>Creates a new marketing lead in the CRM.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+  <tr>
+   <td>Create an Opportunity
+   </td>
+   <td>Creates a new opportunity in the CRM.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+  <tr>
+   <td>Update a Lead
+   </td>
+   <td>Updates the lead with changes
+   </td>
+   <td>PATCH
+   </td>
+  </tr>
+  <tr>
+   <td>View a Lead By ID
+   </td>
+   <td>Retrieves the lead details.
+   </td>
+   <td>GET
+   </td>
+  </tr>
+  <tr>
+   <td>List All Leads
+   </td>
+   <td>Retrieves all leads from the CRM
+   </td>
+   <td>GET
+   </td>
+  </tr>
+  <tr>
+   <td>Search Leads
+   </td>
+   <td>Searches all leads that matches with the keyword
+   </td>
+   <td>GET
+   </td>
+  </tr>
+  <tr>
+   <td>Delete a Lead
+   </td>
+   <td>Deletes a lead
+   </td>
+   <td>DELETE
+   </td>
+  </tr>
+</table>
 
+<h3 id="create-a-lead"><strong>Create a Lead</strong><a class="headerlink" href="#create-a-lead" title="Permanent link">&para;</a></h3>
+<p>Steps to create a new lead in the Salesforce CRM:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-salesforce-crm-action/#step-2-install-the-salesforce-action-templates" target="_blank">Installing the Salesforce CRM Action Templates</a> section to install this template.</li>
+<li>
+<p>The <em>Create a Lead</em> dialog task is added with the following components:</p>
+<ol>
+<li><strong>Createlead</strong> - A user intent to create a lead.</li>
+<li><strong>firstName</strong>, <strong>lastName</strong>, and <strong>companyName</strong> – Entity nodes for gathering the required lead details.</li>
+<li>
+<p><strong>CreateLeadService</strong> – A bot action service to create a lead in an external integration. Click the <strong>Plus</strong> icon to expand to view the createLeadService bot action component properties.<br />
+<a class="glightbox" href="../images/salesforce-action-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img4.png" alt="createLeadService bot action component properties" title="createLeadService bot action component properties" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>In the <strong>Component Properties</strong> window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/salesforce-action-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img5.png" alt="Edit request" title="Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;attributes&quot;: {
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&quot;type&quot;: &quot;Lead&quot;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>},
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&quot;LastName&quot;: &quot;Doe&quot;,
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>&quot;FirstName&quot;: &quot;John&quot;,
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&quot;Salutation&quot;: &quot;Mr.&quot;,
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>&quot;Title&quot;: null,
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>&quot;Company&quot;: &quot;ABC&quot;,
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>&quot;Street&quot;: null,
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>&quot;City&quot;: null,
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>&quot;State&quot;: null,
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>&quot;PostalCode&quot;: null,
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>&quot;Country&quot;: null,
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>&quot;Latitude&quot;: null,
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>&quot;Longitude&quot;: null,
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>&quot;GeocodeAccuracy&quot;: null,
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>&quot;Phone&quot;: null,
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>&quot;MobilePhone&quot;: &quot;93445667xx&quot;,
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>&quot;Fax&quot;: null,
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>&quot;Email&quot;: null,
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>&quot;Website&quot;: null,
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>&quot;Description&quot;: null,
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>&quot;LeadSource&quot;: null,
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>&quot;Status&quot;: &quot;Open - Not Contacted&quot;,
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>&quot;Industry&quot;: null,
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>&quot;Rating&quot;: null,
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>&quot;AnnualRevenue&quot;: null,
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>&quot;NumberOfEmployees&quot;: null,
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>&quot;OwnerId&quot;: &quot;0055g00000ECRvPAAX&quot;,
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>&quot;IsConverted&quot;: false,
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>&quot;IsUnreadByOwner&quot;: false,
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>&quot;Jigsaw&quot;: null,
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>&quot;CleanStatus&quot;: &quot;Pending&quot;,
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>&quot;CompanyDunsNumber&quot;: null,
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>&quot;IndividualId&quot;: null,
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>&quot;SICCode__c&quot;: null,
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>&quot;ProductInterest__c&quot;: null,
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>&quot;Primary__c&quot;: null,
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>&quot;CurrentGenerators__c&quot;: null,
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>&quot;NumberofLocations__c&quot;: null
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>}
+</span></code></pre></div>
+<p>To add one or more responses scroll down and click the <strong>+Add Response</strong> button:<br />
+<a class="glightbox" href="../images/salesforce-action-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img6.png" alt="Add response" title="Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;id&quot;: &quot;00Q5g00000DZ0d4EAD&quot;,
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&quot;success&quot;: true,
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&quot;errors&quot;: [] 
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>subDomainService</strong> – A bot action service to fetch subdomain in an external integration. Click the <strong>Plus</strong> icon to expand to view the subDomainService bot action component properties.<br />
+<a class="glightbox" href="../images/salesforce-action-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img7.png" alt="subDomainService bot action component properties" title="subDomainService bot action component properties" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>createLeadMessage</strong> – A message node with script to display responses for various scenarios. </p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task</li>
+<li>
+<p>Follow the prompts in the VA console to create a lead as shown below:<br />
+<a class="glightbox" href="../images/salesforce-action-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img8.png" alt="VA prompts to create a lead" title="VA prompts to create a lead" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Enter all lead details when prompted by the VA as shown below:<br />
+<a class="glightbox" href="../images/salesforce-action-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img9.png" alt="Enter lead details" title="Enter lead details" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>The new lead is created in Salesforce CRM.<br />
+<a class="glightbox" href="../images/salesforce-action-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img10.png" alt="New lead created" title="New lead created" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Click the <strong>View Lead</strong> button to view the lead details in Salesforce CRM.<br />
+<a class="glightbox" href="../images/salesforce-action-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img11.png" alt="View lead details" title="View lead details" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
+<h3 id="update-a-lead"><strong>Update a Lead</strong><a class="headerlink" href="#update-a-lead" title="Permanent link">&para;</a></h3>
+<p>Steps to update an existing lead in Salesforce CRM:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-salesforce-crm-action/#step-2-install-the-salesforce-action-templates" target="_blank">Installing the Salesforce CRM Action Templates</a> section to install this template.</li>
+<li>
+<p>The <em>Update a Lead</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/salesforce-action-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img12.png" alt="Update a Lead dialog task is added" title="Update a Lead dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>Update lead</strong> - A user intent to update a lead.</li>
+<li><strong>Id</strong>, <strong>AskOptions</strong>, <strong>LeadStatus</strong>, <strong>Title</strong>, and <strong>MobilePhone</strong> – Entity nodes for updating the lead details.</li>
+<li>
+<p><strong>updateLeadScript</strong> – A bot action script to update a lead in an external integration. Click the <strong>Plus</strong> icon to expand to view the updateLeadScript bot action component properties.<br />
+<a class="glightbox" href="../images/salesforce-action-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img13.png" alt="updateLeadScript bot action component properties" title="updateLeadScript bot action component properties" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>updateLeadService</strong> – A bot action service to update a lead in an external integration. Click the <strong>Plus</strong> icon to expand to view the updateLeadService bot action component properties.</p>
+</li>
+<li><strong>subDomainService</strong> – A bot action service to fetch subdomain in an external integration. Click the <strong>Plus</strong> icon to expand to view the subDomainService bot action component properties.</li>
+<li><strong>updateLeadMessage</strong> – A message node with script to display responses for various scenarios. </li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to update a lead.</li>
+<li>Enter all lead details when prompted by the VA</li>
+<li>The existing lead is updated in Salesforce CRM. </li>
+<li>Click the <strong>View Lead</strong> button to view the lead details in Salesforce CRM.<br />
+<a class="glightbox" href="../images/salesforce-action-img14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img14.png" alt="uView lead details" title="View lead details" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="delete-a-lead"><strong>Delete a Lead</strong><a class="headerlink" href="#delete-a-lead" title="Permanent link">&para;</a></h3>
+<p>Steps to delete a lead in Salesforce CRM:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-salesforce-crm-action/#step-2-install-the-salesforce-action-templates" target="_blank">Installing the Salesforce CRM Action Templates</a> section to install this template.</li>
+<li>
+<p>The <em>Delete Lead</em> dialog task is added for the Salesforce CRM with the following components:<br />
+<a class="glightbox" href="../images/salesforce-action-img15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img15.png" alt="Delete Lead dialog task is added" title="Delete Lead dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>Delete Lead</strong> - A user intent to delete lead.</li>
+<li><strong>ID</strong> – Entity nodes for entering the lead ID.</li>
+<li>
+<p><strong>deleteLeadService</strong> – A bot action script to delete a lead in an external integration. Click the <strong>Plus</strong> icon to expand to view the deleteLeadService bot action component properties.<br />
+<a class="glightbox" href="../images/salesforce-action-img16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img16.png" alt="deleteLeadService bot action component properties" title="deleteLeadService bot action component properties" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>deleteLeadMessage</strong> – A message node with script to display responses for various scenarios</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task</li>
+<li>Follow the prompts in the VA console to delete a lead as shown below:<br />
+<a class="glightbox" href="../images/salesforce-action-img17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img17.png" alt="VA prompt to delete a lead" title="VA prompt to delete a lead" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="list-all-leads"><strong>List All Leads</strong><a class="headerlink" href="#list-all-leads" title="Permanent link">&para;</a></h3>
+<p>Steps to view all leads in Salesforce CRM:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-salesforce-crm-action/#step-2-install-the-salesforce-action-templates" target="_blank">Installing the Salesforce CRM Action Templates</a> section to install this template.</li>
+<li>
+<p>The <em>List All Leads</em> dialog task is added for the Salesforce CRM with the following components:<br />
+<a class="glightbox" href="../images/salesforce-action-img18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img18.png" alt="List All Leads dialog task is added" title="List All Leads dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>List All Lead</strong> - A user intent to list all leads.</li>
+<li>
+<p><strong>listAllLeadsService</strong> – A bot action script to view all leads in an external integration. Click the <strong>Plus</strong> icon to expand to view the listAllLeadsService bot action component properties.<br />
+<a class="glightbox" href="../images/salesforce-action-img19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img19.png" alt="listAllLeadsService bot action component properties" title="listAllLeadsService bot action component properties" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>Sample Response:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&quot;objectDescribe&quot;: {
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&quot;activateable&quot;: false,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&quot;associateEntityType&quot;: null,
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&quot;associateParentEntity&quot;: null,
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>&quot;createable&quot;: true,
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>&quot;custom&quot;: false,
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>&quot;customSetting&quot;: false,
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>&quot;deepCloneable&quot;: false,
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>&quot;deletable&quot;: true,
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>&quot;deprecatedAndHidden&quot;: false,
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>&quot;feedEnabled&quot;: true,
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>&quot;hasSubtypes&quot;: false,
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>&quot;isInterface&quot;: false,
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>&quot;isSubtype&quot;: false,
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>&quot;keyPrefix&quot;: &quot;00Q&quot;,
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>&quot;label&quot;: &quot;Lead&quot;,
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>&quot;labelPlural&quot;: &quot;Leads&quot;,
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>&quot;layoutable&quot;: true,
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>&quot;mergeable&quot;: true,
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>&quot;mruEnabled&quot;: true,
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>&quot;name&quot;: &quot;Lead&quot;,
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>&quot;queryable&quot;: true,
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>&quot;replicateable&quot;: true,
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>&quot;retrieveable&quot;: true,
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>&quot;searchable&quot;: true,
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>&quot;triggerable&quot;: true,
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>&quot;undeletable&quot;: true,
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>&quot;updateable&quot;: true,
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>&quot;urls&quot;: {
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>&quot;compactLayouts&quot;: &quot;/services/data/v52.0/sobjects/Lead/describe/compactLayouts&quot;,
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>&quot;rowTemplate&quot;: &quot;/services/data/v52.0/sobjects/Lead/{ID}&quot;,
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>&quot;approvalLayouts&quot;: &quot;/services/data/v52.0/sobjects/Lead/describe/approvalLayouts&quot;,
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>&quot;listviews&quot;: &quot;/services/data/v52.0/sobjects/Lead/listviews&quot;,
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>&quot;describe&quot;: &quot;/services/data/v52.0/sobjects/Lead/describe&quot;,
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>&quot;quickActions&quot;: &quot;/services/data/v52.0/sobjects/Lead/quickActions&quot;,
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>&quot;layouts&quot;: &quot;/services/data/v52.0/sobjects/Lead/describe/layouts&quot;,
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>&quot;sobject&quot;: &quot;/services/data/v52.0/sobjects/Lead&quot;
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>}
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>},
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>&quot;recentItems&quot;: [
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>{
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>&quot;attributes&quot;: {
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000DYz3xxxx&quot;
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>},
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>&quot;Id&quot;: &quot;00Q5g00000DYz3xxxD&quot;,
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>&quot;Name&quot;: &quot;Hogya, Tanmay&quot;
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>},
+</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>{
+</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>&quot;attributes&quot;: {
+</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000ENUBxxxx&quot;
+</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>},
+</span><span id="__span-2-55"><a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>&quot;Id&quot;: &quot;00Q5g00000ENUBxxxx&quot;,
+</span><span id="__span-2-56"><a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>&quot;Name&quot;: &quot;Smith, Steve&quot;
+</span><span id="__span-2-57"><a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>},
+</span><span id="__span-2-58"><a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>{
+</span><span id="__span-2-59"><a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>&quot;attributes&quot;: {
+</span><span id="__span-2-60"><a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-2-61"><a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000DZ5xxxT&quot;
+</span><span id="__span-2-62"><a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>},
+</span><span id="__span-2-63"><a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>&quot;Id&quot;: &quot;00Q5g00000DZ5xxxxT&quot;,
+</span><span id="__span-2-64"><a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>&quot;Name&quot;: &quot;Doe, John&quot;
+</span><span id="__span-2-65"><a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>}
+</span><span id="__span-2-66"><a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>] }
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>subDomainService</strong> – A bot action service to fetch subdomain in an external integration. Click the <strong>Plus</strong> icon to expand to view the subDomainService bot action component properties.</p>
+</li>
+<li><strong>listAllLeadsMessage</strong>– A message node with script to display responses for various scenarios.</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task</li>
+<li>Follow the prompts in the VA console to view all leads as shown below:<br />
+<a class="glightbox" href="../images/salesforce-action-img20.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img20.png" alt="VA prompts to view all leads" title="VA prompt to view all leads" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="view-a-lead-by-id"><strong>View a Lead By ID</strong><a class="headerlink" href="#view-a-lead-by-id" title="Permanent link">&para;</a></h3>
+<p>Steps to view all leads in Salesforce CRM:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-salesforce-crm-action/#step-2-install-the-salesforce-action-templates" target="_blank">Installing the Salesforce CRM Action Templates</a> section to install this template.</li>
+<li>
+<p>The <em>View Lead by Id</em> dialog task is added for the Salesforce CRM with the following components:<br />
+<a class="glightbox" href="../images/salesforce-action-img21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img21.png" alt="View Lead by Id dialog task is added" title="View Lead by Id dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>View Lead by Id</strong> - A user intent to view a lead using ID.</li>
+<li><strong>ID</strong> – Entity nodes for entering the lead ID.</li>
+<li>
+<p><strong>viewLeadbyIdService</strong> – A bot action script to view a lead using ID in an external integration. Click the <strong>Plus</strong> icon to expand to view the listAllLeadsService bot action component properties and click the <strong>+ Add Response</strong> link.<br />
+<a class="glightbox" href="../images/salesforce-action-img22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img22.png" alt="Add response" title="Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>Sample Response:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&quot;attributes&quot;: {
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000DYz3mEAD&quot;
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>},
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>&quot;Id&quot;: &quot;00Q5g00000DYz3mEAD&quot;,
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>&quot;IsDeleted&quot;: false,
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&quot;MasterRecordId&quot;: null,
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>&quot;LastName&quot;: &quot;Doe&quot;,
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>&quot;FirstName&quot;: &quot;John&quot;,
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>&quot;Salutation&quot;: &quot;Mr.&quot;,
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>&quot;Name&quot;: &quot;John Doe&quot;,
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>&quot;Title&quot;: null,
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>&quot;Company&quot;: &quot;Kore&quot;,
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>&quot;Street&quot;: null,
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>&quot;City&quot;: null,
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>&quot;State&quot;: null,
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>&quot;PostalCode&quot;: null,
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>&quot;Country&quot;: null,
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>&quot;Latitude&quot;: null,
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>&quot;Longitude&quot;: null,
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>&quot;GeocodeAccuracy&quot;: null,
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>&quot;Address&quot;: null,
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>&quot;Phone&quot;: null,
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>&quot;MobilePhone&quot;: &quot;9344566xxx&quot;,
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>&quot;Fax&quot;: null,
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>&quot;Email&quot;: null,
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>&quot;Website&quot;: null,
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>&quot;PhotoUrl&quot;: &quot;/services/images/photo/00Q5g00000DYz3mxxx&quot;,
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>&quot;Description&quot;: null,
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>&quot;LeadSource&quot;: null,
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>&quot;Status&quot;: &quot;Open - Not Contacted&quot;,
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>&quot;Industry&quot;: null,
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>&quot;Rating&quot;: null,
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>&quot;AnnualRevenue&quot;: null,
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>&quot;NumberOfEmployees&quot;: null,
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>&quot;OwnerId&quot;: &quot;0055g00000ECRvxxxX&quot;,
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>&quot;IsConverted&quot;: false,
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>&quot;ConvertedDate&quot;: null,
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>&quot;ConvertedAccountId&quot;: null,
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>&quot;ConvertedContactId&quot;: null,
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>&quot;ConvertedOpportunityId&quot;: null,
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>&quot;IsUnreadByOwner&quot;: false,
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>&quot;CreatedDate&quot;: &quot;2022-08-30T06:49:28.000+0000&quot;,
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>&quot;CreatedById&quot;: &quot;0055g00000ECRVXXXX&quot;,
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>&quot;LastModifiedDate&quot;: &quot;2022-08-30T11:25:21.000+0000&quot;,
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>&quot;LastModifiedById&quot;: &quot;0055g00000ECRvPAAX&quot;,
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>&quot;SystemModstamp&quot;: &quot;2022-08-30T11:25:21.000+0000&quot;,
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>&quot;LastActivityDate&quot;: null,
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>&quot;LastViewedDate&quot;: &quot;2022-08-30T11:26:32.000+0000&quot;,
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>&quot;LastReferencedDate&quot;: &quot;2022-08-30T11:26:32.000+0000&quot;,
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>&quot;Jigsaw&quot;: null,
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>&quot;JigsawContactId&quot;: null,
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>&quot;CleanStatus&quot;: &quot;Pending&quot;,
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>&quot;CompanyDunsNumber&quot;: null,
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>&quot;DandbCompanyId&quot;: null,
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>&quot;EmailBouncedReason&quot;: null,
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>&quot;EmailBouncedDate&quot;: null,
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>&quot;IndividualId&quot;: null,
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>&quot;SICCode__c&quot;: null,
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>&quot;ProductInterest__c&quot;: null,
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>&quot;Primary__c&quot;: null,
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>&quot;CurrentGenerators__c&quot;: null,
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>&quot;NumberofLocations__c&quot;: null
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>subDomainService</strong> – A bot action service to fetch subdomain in an external integration. Click the <strong>Plus</strong> icon to expand to view the subDomainService bot action component properties.</p>
+</li>
+<li><strong>viewLeadbyIdMessage</strong> – A message node with script to display responses for various scenarios.</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task</li>
+<li>Follow the prompts in the VA console to view a lead by ID as shown below:<br />
+<a class="glightbox" href="../images/salesforce-action-img23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img23.png" alt="VA prompts to view lead by id" title="VA prompts to view lead by id" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="search-leads"><strong>Search Leads</strong><a class="headerlink" href="#search-leads" title="Permanent link">&para;</a></h3>
+<p>Steps to search all leads in Salesforce CRM:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-salesforce-crm-action/#step-2-install-the-salesforce-action-templates" target="_blank">Installing the Salesforce CRM Action Templates</a> section to install this template.</li>
+<li>
+<p>The <em>Search Leads</em> dialog task is added for the Salesforce CRM with the following components:<br />
+<a class="glightbox" href="../images/salesforce-action-img24.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img24.png" alt="Search Leads dialog task is added" title="Search Leads dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>Search Leads</strong> - A user intent to search leads.</li>
+<li><strong>Keyword</strong> – Entity nodes for entering the keywords for the searching leads.</li>
+<li>
+<p><strong>searchLeadsService</strong> – A bot action script to search leads in an external integration. Click the <strong>Plus</strong> icon to expand to view the searchLeadsService bot action component properties and click the <strong>+Add Response</strong> link.<br />
+<a class="glightbox" href="../images/salesforce-action-img25.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img25.png" alt="Add response" title="Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>Sample Response:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&quot;searchRecords&quot;: [
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>{
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>&quot;attributes&quot;: {
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000ENk9xxxxT&quot;
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>},
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>&quot;Id&quot;: &quot;00Q5g00000ENk9xxxT&quot;
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>},
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>{
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>&quot;attributes&quot;: {
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000DZ52HEAT&quot;
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>},
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>&quot;Id&quot;: &quot;00Q5g00000DZ52HEAT&quot;
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>},
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>{
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>&quot;attributes&quot;: {
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000ENnKlEAL&quot;
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>},
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>&quot;Id&quot;: &quot;00Q5g00000ENnKlEAL&quot;
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>},
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>{
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>&quot;attributes&quot;: {
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000ENnKgEAL&quot;
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>},
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>&quot;Id&quot;: &quot;00Q5g00000ENnKgEAL&quot;
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>},
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>{
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>&quot;attributes&quot;: {
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000ENcKqEAL&quot;
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>},
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>&quot;Id&quot;: &quot;00Q5g00000ENcKqEAL&quot;
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>},
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>{
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>&quot;attributes&quot;: {
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000ENcKlEAL&quot;
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>},
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>&quot;Id&quot;: &quot;00Q5g00000ENcKlEAL&quot;
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>},
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>{
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>&quot;attributes&quot;: {
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000ENcKgEAL&quot;
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>},
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>&quot;Id&quot;: &quot;00Q5g00000ENcKgEAL&quot;
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>},
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>{
+</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>&quot;attributes&quot;: {
+</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000ENcHDEA1&quot;
+</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>},
+</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>&quot;Id&quot;: &quot;00Q5g00000ENcHDEA1&quot;
+</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>},
+</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>{
+</span><span id="__span-4-60"><a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>&quot;attributes&quot;: {
+</span><span id="__span-4-61"><a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>&quot;type&quot;: &quot;Lead&quot;,
+</span><span id="__span-4-62"><a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>&quot;url&quot;: &quot;/services/data/v52.0/sobjects/Lead/00Q5g00000ENXzXEAX&quot;
+</span><span id="__span-4-63"><a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>},
+</span><span id="__span-4-64"><a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>&quot;Id&quot;: &quot;00Q5g00000ENXzXEAX&quot;
+</span><span id="__span-4-65"><a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>}
+</span><span id="__span-4-66"><a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>] }
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>subDomainService</strong> – A bot action service to fetch subdomain in an external integration. Click the <strong>Plus</strong> icon to expand to view the subDomainService bot action component properties.</p>
+</li>
+<li><strong>searchLeadsMessage</strong> – A message node with script to display responses for various scenarios. </li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task</li>
+<li>Follow the prompts in the VA console to view all leads as shown below:<br />
+<a class="glightbox" href="../images/salesforce-action-img26.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img26.png" alt="VA prompt to view all leads" title="VA prompt to view all leads" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="create-an-opportunity"><strong>Create an Opportunity</strong><a class="headerlink" href="#create-an-opportunity" title="Permanent link">&para;</a></h3>
+<p>Steps to create a new opportunity in Salesforce CRM:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-salesforce-crm-action/#step-2-install-the-salesforce-action-templates" target="_blank">Installing the Salesforce CRM Action Templates</a> section to install this template.</li>
+<li>
+<p>The <em>Create Opportunity</em> dialog task is added for the Salesforce CRM with the following components:<br />
+<a class="glightbox" href="../images/salesforce-action-img27.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img27.png" alt="Create Opportunity dialog task is added" title="Create Opportunity dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>Create Opportunity</strong> - A user intent to create an opportunity.</li>
+<li><strong>Opportunity Name</strong>, <strong>Closed Date</strong>, and <strong>Stage of Opportunity</strong> – Entity nodes for gathering the required opportunity details.</li>
+<li><strong>CreateOpportunityService</strong> – A bot action script to create an opportunity in an external integration. Click the <strong>Plus</strong> icon to expand to view the createOpportunityService bot action component properties.</li>
+<li>
+<p>In the <strong>Component Properties</strong> window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/salesforce-action-img28.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img28.png" alt="Edit request" title="Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>Sample Request:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>{
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&quot;attributes&quot;: {
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&quot;type&quot;: &quot;Opportunity&quot;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>},
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>“Name”: “Project Charlie”,
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>“CloseDate”: “2022-08-31”,
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>“StageName”: “Prospecting”
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>}
+</span></code></pre></div>
+<p>To add one or more responses scroll down and click the <strong>+Add Response</strong> button:<br />
+<a class="glightbox" href="../images/salesforce-action-img29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img29.png" alt="Add response" title="Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response:</strong></p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&quot;id&quot;: &quot;0065g00000O4bgDAAR&quot;,
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&quot;success&quot;: true,
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>&quot;errors&quot;: [] }
+</span></code></pre></div>
+    6. <strong>subDomainService</strong> – A bot action service to add subdomain in an external integration. Click the <strong>Plus</strong> icon to expand to view the subDomainService bot action component properties.
+    7.  <strong>createOpportunityMessage</strong> – A message node with script to display responses for various scenarios. </p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task</li>
+<li>
+<p>Follow the prompts in the VA console to create an opportunity as shown below:<br />
+<a class="glightbox" href="../images/salesforce-action-img30.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img30.png" alt="VA prompts to create opportunity" title="VA prompts to Create Opportunity" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Enter all opportunity details when prompted by the VA.</p>
+</li>
+<li>
+<p>The new opportunity is created in Salesforce CRM. Click the <strong>Chevron</strong> icon to expand the new opportunity.<br />
+<a class="glightbox" href="../images/salesforce-action-img31.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img31.png" alt="Expand the new opportunity" title="Expand the new opportunity" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Click the <strong>View Opportunity</strong> button to view the opportunity details in Salesforce CRM.<br />
+<a class="glightbox" href="../images/salesforce-action-img32.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img32.png" alt="View opportunity details" title="View opportunity details" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
 
 
   

@@ -2977,6 +2977,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cancel-an-ongoing-batch-test-execution" class="md-nav__link">
+    Cancel an Ongoing Batch Test Execution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#view-test-case-details" class="md-nav__link">
     View Test Case Details
   </a>
@@ -3782,6 +3789,42 @@ Note that <strong>Developer Defined Utterances</strong> and <strong>Successful U
 <h4 id="execution-of-newly-created-batch-test-suites">Execution of Newly Created Batch Test Suites<a class="headerlink" href="#execution-of-newly-created-batch-test-suites" title="Permanent link">&para;</a></h4>
 <p>Once you create a new test batch test suite, by default, the system automatically initiates test run execution for both <strong><em>In-development</em></strong> and <strong><em>Published</em></strong> VA versions. This makes it convenient to assess test results while the VA is in development and once a VA is published following a production release.</p>
 <p><a class="glightbox" href="../images/batch-testing-16-batch-testing-run-publish.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-16-batch-testing-run-publish.png" alt="Execution of Newly Created Batch Test Suites" title="Execution of Newly Created Batch Test Suites" style="border: 1px solid gray; zoom:50%;"/></a> </p>
+<h4 id="cancel-an-ongoing-batch-test-execution">Cancel an Ongoing Batch Test Execution<a class="headerlink" href="#cancel-an-ongoing-batch-test-execution" title="Permanent link">&para;</a></h4>
+<p>You can cancel an ongoing batch test execution in either <strong><em>Published</em></strong> or <strong><em>In-Development</em></strong> mode. This feature allows you to make changes, intervene, or start another batch test suite execution without waiting for the ongoing test run to complete.</p>
+<p><strong>Steps to Cancel an Ongoing Batch Test Execution:</strong></p>
+<ol>
+<li>Navigate to <strong>Build</strong> &gt; <strong>Testing</strong> &gt; <strong>Batch Testing</strong> on the Bot Builder.</li>
+<li>
+<p>When the required test suite is running, click the <strong>Cancel</strong> icon.<br />
+<a class="glightbox" href="../images/batch-testing-cancel-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-cancel-img1.png" alt="Click Cancel" title="Click Cancel" style="border: 1px solid gray; zoom:50%;"/></a> </p>
+</li>
+<li>
+<p>Click <strong>Confirm</strong> in the confirmation dialog.<br />
+<a class="glightbox" href="../images/batch-testing-cancel-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-cancel-img2.png" alt="Confirm" title="Confirm" style="border: 1px solid gray; zoom:50%;"/></a></p>
+</li>
+</ol>
+<p>The test execution is canceled, and a confirmation message is displayed.</p>
+<p><strong>Important Considerations</strong></p>
+<ul>
+<li>For a canceled batch test suite, you cannot download the test results CSV file.</li>
+<li>An orange <strong>Warning</strong> icon indicates that the test suite execution is canceled.</li>
+<li>A red <strong>Warning</strong> icon indicates a failed batch test due to an unexpected technical error.<br />
+<a class="glightbox" href="../images/batch-testing-cancel-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-cancel-img3.png" alt="Warning - Failed batch test" title="Warning - Failed batch test" style="border: 1px solid gray; zoom:50%;"/></a> </li>
+</ul>
+<p><strong>Error Scenarios</strong></p>
+<p>You cannot cancel a batch test run in the following scenarios:</p>
+<ol>
+<li>
+<p>When another batch test execution/cancelation is in progress.<br />
+<a class="glightbox" href="../images/batch-testing-cancel-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-cancel-img4.png" alt="Another batch test execution/cancelation is in progress" title="Another batch test execution/cancelation is in progress" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
+<p><strong>Solution</strong>: Wait for one test suite execution or cancellation to complete before initiating the process for another.When you try to cancel a batch test run in the <strong><em>Published</em></strong> mode without publishing the VA.  </p>
+</li>
+<li>
+<p>When you try to cancel a batch test run in the <strong><em>Published</em></strong> mode without publishing the VA.<br />
+<a class="glightbox" href="../images/batch-testing-cancel-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-cancel-img5.png" alt="Batch test is in Published mode" title="Batch test is in Published mode" style="border: 1px solid gray; zoom:50%;"/></a>  </p>
+<p><strong>Solution</strong>: First, train and publish the VA before canceling the batch test run in Published mode.</p>
+</li>
+</ol>
 <h4 id="view-test-case-details">View Test Case Details<a class="headerlink" href="#view-test-case-details" title="Permanent link">&para;</a></h4>
 <p>Running a test suite will display the results as described below.</p>
 <p><strong>Note:</strong> The test case with multiple intents is considered a test case for all the intents mentioned. For example, if a test case has Intent 1 and Intent 2 as expected intents, then Intent 1 and Intent 2 are shown as covered in the batch test summary.</p>
