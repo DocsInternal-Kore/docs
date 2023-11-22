@@ -17,7 +17,7 @@
     
     
       
-        <title>**Configuring the Salesforce CRM Action** - Kore ai Docs</title>
+        <title>Using the salesforce crm action templates - Kore ai Docs</title>
       
     
     
@@ -93,11 +93,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#configuring-the-salesforce-crm-action" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -171,7 +166,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Configuring the Salesforce CRM Action**
+              Using the salesforce crm action templates
             
           </span>
         </div>
@@ -2875,57 +2870,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#authorizations-supported" class="md-nav__link">
-    Authorizations Supported
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-enable-the-salesforce-crm-action" class="md-nav__link">
-    Step 1: Enable the Salesforce CRM Action
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 1: Enable the Salesforce CRM Action">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pre-authorize-the-integration" class="md-nav__link">
-    Pre-authorize the Integration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#allow-end-user-to-authorize" class="md-nav__link">
-    Allow End User to Authorize
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-install-the-salesforce-action-templates" class="md-nav__link">
-    Step 2: Install the Salesforce Action Templates
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2944,194 +2888,7 @@
 
 
 
-<h1 id="configuring-the-salesforce-crm-action"><strong>Configuring the Salesforce CRM Action</strong><a class="headerlink" href="#configuring-the-salesforce-crm-action" title="Permanent link">&para;</a></h1>
-<p>The XO Platform lets you easily integrate with <a href="https://www.salesforce.com/in/?ir=1">Salesforce CRM</a> to power your conversations to create leads, opportunities, and other functions.</p>
-<p><strong>Watch a Short Video on Salesforce Integrations Actions</strong></p>
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/761445731?h=4082a8bdfe" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
-<p>This article explains how to authorize and enable the <strong>Salesforce CRM</strong> action and install the pre-built templates.</p>
-<h2 id="authorizations-supported">Authorizations Supported<a class="headerlink" href="#authorizations-supported" title="Permanent link">&para;</a></h2>
-<p>The Kore.ai XO Platform supports OAuth 2.0 authentication to allow a Salesforce integration to exchange data. For more information, see <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/setting-up-authorization-using-oauth-v2/" target="_blank">Setting Up Authorization Using OAuth v2</a> article. </p>
-<p>The Kore.ai XO Platform supports the following authorization types for the Salesforce CRM integration:</p>
-<ul>
-<li><strong>Pre-Authorize the Integration</strong> – To make the integration process smoother for developers and customers, you can pre-authorize it by providing the necessary authorization credentials to obtain the access token. </li>
-<li><strong>Allow Users to Authorize the Integration</strong> – This method requires the end user to provide credentials during the conversation for authorization. This authorization process involves requesting permission for Kore.ai’s Salesforce app to access an access token at runtime.</li>
-</ul>
-<p><strong>NOTE</strong>: The Salesforce CRM integration can be authorized only for the _Developer _and _Enterprise _editions because Rest API integration is enabled for these editions. You cannot authorize Salesforce’s _Trial _edition. To learn more about Salesforce account types, see <a href="https://help.salesforce.com/s/articleView?id=sf.accounts.htm&amp;type=5" target="_blank">Salesforce documentation</a>.</p>
-<table border="1">
-  <tr>
-   <td><strong>Authorization Type</strong>
-   </td>
-   <td><strong>OAuth – System</strong>
-   </td>
-   <td><strong>OAuth – Custom</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Pre-authorize the Integration
-   </td>
-   <td>Yes
-   </td>
-   <td>Yes
-   </td>
-  </tr>
-  <tr>
-   <td>Allow Users to Authorize the Integration
-   </td>
-   <td>Yes
-   </td>
-   <td>Yes
-   </td>
-  </tr>
-</table>
-
-<h2 id="step-1-enable-the-salesforce-crm-action">Step 1: Enable the Salesforce CRM Action<a class="headerlink" href="#step-1-enable-the-salesforce-crm-action" title="Permanent link">&para;</a></h2>
-<p><strong>Prerequisites</strong>:</p>
-<p>Before enabling the Salesforce CRM actions, complete the following prerequisites:</p>
-<ul>
-<li>Create a developer account in the Salesforce CRM and note down login credentials. Use the <a href="https://help.salesforce.com/s/" target="_blank">Salesforce CRM’s Help Center</a> for more information.</li>
-<li>Copy the Client ID, Client Secret Key, Authorization URL, and Call back URL and keep them ready to enable the Salesforce CRM integration.</li>
-</ul>
-<p>Steps to enable the Salesforce action:</p>
-<ol>
-<li>Go to <strong>Build &gt; Integrations</strong> and select the <strong>Actions</strong> menu item.</li>
-<li>Once you click the <strong>Actions</strong> menu, all integrations are shown in the <strong>Available</strong> region. Select the <strong>Salesforce</strong> action.<br />
-<a class="glightbox" href="../images/salesforce-action-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img1.png" alt="Actions - Salesforce" title="Actions - Salesforce" style="border: 1px solid gray;zoom:50%;"/></a></li>
-</ol>
-<h3 id="pre-authorize-the-integration">Pre-authorize the Integration<a class="headerlink" href="#pre-authorize-the-integration" title="Permanent link">&para;</a></h3>
-<p><strong>OAuth</strong></p>
-<p>You can authorize the integration using developer credentials. The developer authorization lets you authorize the integration with preconfigured Kore.ai’s app or use the custom authorization profile to let a developer configure the integration. </p>
-<p>Steps to authorize a Salesforce action using developer credentials:</p>
-<ol>
-<li>Go to <strong>Build &gt; Integrations</strong> and select the <strong>Actions</strong> menu item.</li>
-<li>Select the <strong>Salesforce</strong> action in the <strong>Available Actions</strong> region.</li>
-<li>In the <strong>Configurations</strong> dialog, select the <strong>Authorization</strong> tab </li>
-<li>
-<p><strong>Authorization Type</strong> – Select the <strong>Pre-authorize the Integration</strong> option, and then select the <strong><em>OAuth</em></strong> option.<br />
-<a class="glightbox" href="../images/salesforce-action-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img2.png" alt="Auth type - OAuth" title="Auth type - OAuth" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p><strong>System Authorization</strong></p>
-<p>Pre-authorize Salesforce CRM integration with the necessary authorization credentials to obtain the token to access external services.</p>
-<ul>
-<li>
-<p>Select the <strong>System</strong> card to enable the Kore.ai’s preconfigured Salesforce app and click <strong>Authorize</strong>.<br />
-<a class="glightbox" href="../images/salesforce-action-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img3.png" alt="Kore.ai’s preconfigured Salesforce app" title="Kore.ai’s preconfigured Salesforce app" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Once you click <strong>Authorize</strong>, you are redirected to “login.salesfore.com”</p>
-</li>
-<li>Enter your developer account credentials to successfully connect with your Salesforce Account</li>
-<li>Click the <strong>Allow Access</strong> button to use Kore.ai’s app to fetch the access token to complete the authorization.</li>
-</ul>
-<p><strong>Custom Authorization</strong></p>
-<p>Create your own custom authorization profile to obtain an access token and use it to complete integration without using Kore.ai’s Salesforce app for authorization.</p>
-<ul>
-<li>Select the <strong>Custom</strong> to enable the custom authorization profile.</li>
-<li>
-<p>Click the <strong>Select Authorization</strong> drop-down and select the <strong>Create New</strong> option.<br />
-<a class="glightbox" href="../images/salesforce-action-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img4.png" alt="Create new auth" title="Create new auth" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Select the type of authorization mechanism. For example, select the <strong>OAuth v2</strong> option. To create custom OAuth profiles, see <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/bot-oauthv2-clientcredentials/" target="_blank">Setting Up Authorization Using OAuth v2</a>.<br />
-<a class="glightbox" href="../images/salesforce-action-img.5png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img.5png" alt="Auth mechanism - OAuth V2" title="Auth mechanism - OAuth V2" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Enter the following authentication credentials for the OAuth v2 mechanism:</p>
-<ul>
-<li>Call back URL</li>
-<li>Identity Provider Name</li>
-<li>Client ID</li>
-<li>Client Secret</li>
-<li>Authorization URL</li>
-<li>Token Request URL</li>
-<li>Scope</li>
-<li>Refresh Token URL</li>
-</ul>
-<p><a class="glightbox" href="../images/salesforce-action-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img6.png" alt="Auth credentials" title="Auth credentials" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Click <strong>Save Auth</strong> to save Authorization Profile</p>
-</li>
-<li>Select the new <strong>Authorization Profile,</strong> which you created to enable integration</li>
-<li>
-<p>Once click <strong>Authorize</strong>, you are navigated to “login.salesfore.com”<br />
-<a class="glightbox" href="../images/salesforce-action-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img7.png" alt="Authorize" title="Authorize" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Enter login credentials to successfully connect with your Salesforce Account</p>
-</li>
-<li>Click the <strong>Allow Access</strong> button if prompted to let your custom app fetch the access token to complete the authorization.</li>
-<li>Once the authorization is successful, you will see a success message.</li>
-<li>Click <strong>Enable</strong>. When you configure the action for the first time, the <strong>Integration Successful</strong>  pop-up is displayed.<br />
-<a class="glightbox" href="../images/salesforce-action-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img8.png" alt="Integration successful" title="Integration successful" style="border: 1px solid gray;zoom:50%;"/></a></li>
-</ul>
-</li>
-</ol>
-<p><strong>Note</strong>: You will notice the Salesforce action is moved from <em>Available</em> to <em>Configured</em> region.</p>
-<h3 id="allow-end-user-to-authorize">Allow End User to Authorize<a class="headerlink" href="#allow-end-user-to-authorize" title="Permanent link">&para;</a></h3>
-<p>You can authorize the integration at a user level with their login credentials. The user authorization process involves requesting permission for Kore.ai’s Salesforce app to access an access token at runtime. You can also use the custom authorization profile to fetch the access token based on user credentials. </p>
-<p>Steps to authorize a Salesforce action at a user level:</p>
-<ol>
-<li>Go to <strong>Build &gt; Integrations</strong> and select the <strong>Actions</strong> menu item.</li>
-<li>Select the <strong>Salesforce</strong> action in the <strong>Available Actions</strong> region.</li>
-<li>In the Configurations dialog, select the <strong>Authorization</strong> tab </li>
-<li>
-<p><strong>Authorization Type</strong> – Select the <strong>Allow Users to Authorize the Integration</strong> option, and then select <strong><em>OAuth</em></strong> option.<br />
-<a class="glightbox" href="../images/salesforce-action-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img9.png" alt="Auth type - OAuth" title="Auth type - OAuth" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p><strong>System Authorization</strong></p>
-<p>The end user has to provide credentials during the conversation to authorize users for Salesforce CRM integration to obtain the access token.</p>
-<ul>
-<li>
-<p>Select the <strong>System</strong> card to enable the Kore.ai’s preconfigured Salesforce app.<br />
-<a class="glightbox" href="../images/salesforce-action-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img10.png" alt="Kore.ai’s preconfigured Salesforce app" title="Kore.ai’s preconfigured Salesforce app" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Once you click the <strong>Enable</strong> button, a link is sent to the end user to authorize integration.</p>
-</li>
-<li>Click on the link and enter the login credentials to allow the user to authorize the integration.</li>
-</ul>
-<p><strong>Custom Authorization</strong></p>
-<p>Create your own custom authorization profile to obtain an access token and use it to complete integration without using Kore.ai’s Salesforce app for authorization.</p>
-<ul>
-<li>Select the <strong>Custom</strong> to enable the custom authorization profile.</li>
-<li>Click the <strong>Select Authorization</strong> drop-down and select the <strong>Create New</strong> option. Follow the instructions in the <a href="#pre-authorize-the-integration">Custom Authorization </a>section.</li>
-<li>
-<p>You can also select an existing authorization profile as shown below:<br />
-<a class="glightbox" href="../images/salesforce-action-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img11.png" alt="Select an existing authorization profile" title="Select an existing authorization profile" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Once you click the <strong>Enable</strong> button, the user will see the authorize option during the runtime execution.<br />
-<a class="glightbox" href="../images/salesforce-action-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img12.png" alt="Enable" title="Enable" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="step-2-install-the-salesforce-action-templates">Step 2: Install the Salesforce Action Templates<a class="headerlink" href="#step-2-install-the-salesforce-action-templates" title="Permanent link">&para;</a></h2>
-<p>Once you have configured a Salesforce CRM Integration, you can explore and install action templates.</p>
-<p>Steps to install action templates:</p>
-<ol>
-<li>
-<p>On the Integration Successful dialog, click the <strong>Explore Templates</strong> button to view the templates.<br />
-<a class="glightbox" href="../images/salesforce-action-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img13.png" alt="Explore templates" title="Explore templates" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>In the Integration Templates dialog, click the <strong>Install</strong> button to begin the installation.<br />
-<a class="glightbox" href="../images/salesforce-action-img14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img14.png" alt="Begin installation" title="Begin installation" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Once the template is installed, click the <strong>Go to Dialog</strong> button to open the dialog task.</p>
-</li>
-<li>
-<p>Once all templates are installed, a dialog task for each template is auto-created.<br />
-<a class="glightbox" href="../images/salesforce-action-img15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img15.png" alt="Dialog tasks for each template" title="Dialog tasks for each template" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>You can also select the desired dialog task from the templates and click <strong>Proceed</strong>. For example, select the <strong>Create a Lead</strong> task.<br />
-<a class="glightbox" href="../images/salesforce-action-img16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/salesforce-action-img16.png" alt="Select desired dialog task and proceed" title="Select desired dialog task and proceed" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Once you click <strong>Proceed</strong>, the dialog task is auto-created and the canvas opens with all required entity nodes, service nodes, and message scripts.</p>
-</li>
-</ol>
 
 
   
