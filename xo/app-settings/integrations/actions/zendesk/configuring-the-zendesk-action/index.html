@@ -17,7 +17,7 @@
     
     
       
-        <title>**Using the Twilio Action Templates** - Kore ai Docs</title>
+        <title>**Configuring the Zendesk Action** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-the-twilio-action-templates" class="md-skip">
+        <a href="#configuring-the-zendesk-action" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Using the Twilio Action Templates**
+              **Configuring the Zendesk Action**
             
           </span>
         </div>
@@ -2885,36 +2885,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#twilio-verify-actions" class="md-nav__link">
-    Twilio Verify Actions
+  <a href="#authorizations-supported" class="md-nav__link">
+    Authorizations Supported
   </a>
   
-    <nav class="md-nav" aria-label="Twilio Verify Actions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-enable-the-zendesk-action" class="md-nav__link">
+    Step 1: Enable the Zendesk Action
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Enable the Zendesk Action">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#send-sms" class="md-nav__link">
-    Send SMS
+  <a href="#pre-authorize-the-integration" class="md-nav__link">
+    Pre-authorize the Integration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#start-verification" class="md-nav__link">
-    Start Verification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verification-check" class="md-nav__link">
-    Verification Check
+  <a href="#allow-end-user-to-authorize" class="md-nav__link">
+    Allow End User to Authorize
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-the-zendesk-action-templates" class="md-nav__link">
+    Step 2: Install the Zendesk Action Templates
+  </a>
   
 </li>
       
@@ -2937,251 +2944,159 @@
 
 
 
-<h1 id="using-the-twilio-action-templates"><strong>Using the Twilio Action Templates</strong><a class="headerlink" href="#using-the-twilio-action-templates" title="Permanent link">&para;</a></h1>
-<p>You can use the <strong>Prebuilt Action Templates</strong> from your Twilio Verify integration to auto-create dialog tasks and test them using the <strong>Talk to Bot</strong> option.</p>
-<p>Steps to create a dialog task using the Twilio Verify action templates:</p>
-<ol>
-<li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong>.</li>
-<li>
-<p>Click <strong>Create a Dialog Task</strong>.<br />
-<a class="glightbox" href="../images/twilio-tem-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img1.png" alt="Create a Dialog Task" title="Create a Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>On the Dialog Task pop-up, under the Integration, select the Twilio Verify option to view the action templates.<br />
-<a class="glightbox" href="../images/twilio-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img2.png" alt="Integration - Twilio Verify" title="Integration - Twilio Verify" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the <strong>Actions</strong> page to configure an integration for your VA. For more information, see <a href="../../actions/" target="_blank">Actions Overview</a>.<br />
-<a class="glightbox" href="../images/twilio-tem-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img3.png" alt="Explore integrations" title="Explore integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-</ol>
-<h2 id="twilio-verify-actions">Twilio Verify Actions<a class="headerlink" href="#twilio-verify-actions" title="Permanent link">&para;</a></h2>
-<p>The following Twilio Verify actions are supported in this release:</p>
+<h1 id="configuring-the-zendesk-action"><strong>Configuring the Zendesk Action</strong><a class="headerlink" href="#configuring-the-zendesk-action" title="Permanent link">&para;</a></h1>
+<p>The XO Platform lets you easily connect with your Zendesk instance to create, view, update, search, and delete tickets using the pre-built templates. <a href="https://developer.zendesk.com/documentation/" target="_blank">Learn more about Zendesk</a>.</p>
+<p>This article explains how to authorize and enable the <strong>Zendesk</strong> action and install the pre-built templates.</p>
+<h2 id="authorizations-supported">Authorizations Supported<a class="headerlink" href="#authorizations-supported" title="Permanent link">&para;</a></h2>
+<p>The Kore.ai XO Platform allows you to integrate with Zendesk using basic authorization. For more information, see <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/bot-authentication/" target="_blank">Bot Authorization Overview</a>.</p>
+<p>The Kore.ai XO Platform supports the following authorization types for the Zendesk integration:</p>
+<ul>
+<li><strong>Pre-Authorize the Integration</strong> – To make the integration process smoother for developers and customers, you can pre-authorize it by providing the necessary authorization credentials to obtain the access token.</li>
+<li><strong>Allow Users to Authorize the Integration</strong> – This method requires the end user to provide credentials during the conversation for authorization. This authorization process involves requesting permission for Kore.ai’s Zendesk app to access an access token at runtime. To learn more about Zendesk account types, see <a href="https://developer.zendesk.com/documentation/" target="_blank">Zendesk documentation</a>.</li>
+</ul>
 <table border="1">
   <tr>
-   <td><strong>Supported Tasks</strong>
+   <td>
+<strong>Authorization Type</strong>
    </td>
-   <td><strong>Description</strong>
-   </td>
-   <td><strong>Method</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Send SMS
-   </td>
-   <td>Sends the SMS to the registered phone number.
-   </td>
-   <td>POST
+   <td><strong>Basic OAuth</strong>
    </td>
   </tr>
   <tr>
-   <td>Start Verification
+   <td>Pre-authorize the Integration
    </td>
-   <td>Starts the verification of the phone number registered in Twilio.
-   </td>
-   <td>POST
+   <td>Yes
    </td>
   </tr>
   <tr>
-   <td>Verification Check
+   <td>Allow Users to Authorize the Integration
    </td>
-   <td>Checks whether the verification is successful or unsuccessful.
-   </td>
-   <td>POST
+   <td>Yes
    </td>
   </tr>
 </table>
 
-<h3 id="send-sms">Send SMS<a class="headerlink" href="#send-sms" title="Permanent link">&para;</a></h3>
-<p>Steps to send an sms to a phone number using the Twilio Verify integration:</p>
+<h2 id="step-1-enable-the-zendesk-action">Step 1: Enable the Zendesk Action<a class="headerlink" href="#step-1-enable-the-zendesk-action" title="Permanent link">&para;</a></h2>
+<p><strong>Prerequisites</strong>:</p>
+<p>Before enabling the Zendesk action, complete the following prerequisites:</p>
+<ul>
+<li>If you already have Zendesk account credentials, then enter it. Otherwise, create a developer account in Zendesk and note down login credentials. Use the <a href="https://developer.zendesk.com/documentation/" target="_blank">Zendesk Developer Documentation</a> for more information.</li>
+<li>Copy the User sub domain, username/email, password, and API token of your Zendesk account and keep them ready to enable the integration.</li>
+</ul>
+<p>Steps to enable the Zendesk action:</p>
 <ol>
-<li>Refer to the <a href="../configuring-the-twilio-action/#step-2-install-the-twilio-verify-action-templates" target="_blank">Installing the Twilio Verify Templates</a> section to install this template.</li>
-<li>
-<p>The <em>Send SMS</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/twilio-tem-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img4.png" alt="Send SMS dialog task is added" title="Send SMS dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<li>Go to <strong>Build &gt; Integrations</strong> and select the <strong>Actions</strong> menu item.</li>
+<li>Once you click the <strong>Actions</strong> menu, all integrations are shown in the <strong>Available</strong> region. Select the <strong>Zendesk</strong> action.<br />
+<a class="glightbox" href="../images/zendesk-action-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img1.png" alt="Actions - Zendesk" title="Actions - Zendesk" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h3 id="pre-authorize-the-integration">Pre-authorize the Integration<a class="headerlink" href="#pre-authorize-the-integration" title="Permanent link">&para;</a></h3>
+<p><strong>Basic OAuth</strong></p>
+<p>You can authorize the integration using your credentials. The developer authorization lets you authorize the integration with the preconfigured Kore.ai app with the Basic OAuth option.</p>
+<p>Steps to authorize a Zendesk action using developer credentials:</p>
 <ol>
-<li><strong>sendSms</strong> – A user intent to send SMS.</li>
-<li><strong>accountSid</strong>, <strong>twilioNumber</strong>, <strong>receiverNumber</strong>, and <strong>message</strong> – Entity nodes for gathering the required for sending SMS.</li>
-<li><strong>sendSmsService</strong> – A bot action service to send sms from an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>sendSmsService</em> bot action component properties.</li>
+<li>Go to <strong>Build &gt; Integrations</strong> and select the <strong>Actions</strong> menu item.</li>
+<li>Select the <strong>Zendesk</strong> action in the <strong>Available Actions</strong> region.</li>
+<li>In the <strong>Configurations</strong> dialog, select the <strong>Authorization</strong> tab </li>
 <li>
-<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/twilio-tem-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img5.png" alt="Send SMS - Edit request" title="Send SMS - Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p><strong>Sample Request</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Body = {{message}}
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>From ={{twilioNumber}}
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>To={{receiverNumber}}
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>}
-</span></code></pre></div>
-<p>To add one or more response, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/twilio-tem-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img6.png" alt="Send SMS - Add response" title="Send SMS - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p><strong>Sample Response</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;body&quot;: &quot;Sent from your Twilio trial account - Hi Kore&quot;,
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&quot;num_segments&quot;: &quot;1&quot;,
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&quot;direction&quot;: &quot;outbound-api&quot;,
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&quot;from&quot;: &quot;{{twilioNumber}}&quot;,
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>&quot;date_updated&quot;: &quot;Thu, 22 Dec 2022 08:09:10 +0000&quot;,
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&quot;price&quot;: null,
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&quot;error_message&quot;: null,
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&quot;uri&quot;: &quot;/2010-04-01/Accounts/AC6bae65f877f2488c902f57cexxxxx/Messages/SMbec6459143755dc1f76b123a2xxxxx.json&quot;,
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>&quot;account_sid&quot;: &quot;AC6bae65f877f2488c902f57ce1fxxxxx&quot;,
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>&quot;num_media&quot;: &quot;0&quot;,
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>&quot;to&quot;: &quot;{{receiverNumber}}&quot;,
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>&quot;date_created&quot;: &quot;Thu, 22 Dec 2022 08:09:10 +0000&quot;,
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>&quot;status&quot;: &quot;queued&quot;,
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>&quot;sid&quot;: &quot;SMbec6459143755dc1f76b123a2xxxxxx&quot;,
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>&quot;date_sent&quot;: null,
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>&quot;messaging_service_sid&quot;: null,
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>&quot;error_code&quot;: null,
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>&quot;price_unit&quot;: &quot;USD&quot;,
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>&quot;api_version&quot;: &quot;2010-04-01&quot;,
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>&quot;subresource_uris&quot;: {
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>&quot;media&quot;: &quot;/2010-04-01/Accounts/AC6bae65f877f2488c902f57xxxxxxx/Messages/SMbec6459143755dc1f76b123a2xxxxxx/Media.json&quot;
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>}
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>}
-</span></code></pre></div>
+<p>Enter the following details:</p>
+<ol>
+<li>
+<p><strong>Authorization Type</strong> – Select the <strong>Pre-authorize the Integration</strong> option, and then select the <strong><em>Basic Auth</em></strong> option.<br />
+<a class="glightbox" href="../images/zendesk-action-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img2.png" alt="Auth type - Basic auth" title="Auth type - Basic auth" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p><strong>sendSmsMessage</strong> – A message node with the script to display responses for various scenarios.</p>
+<p><strong>User Sub Domain</strong> – The instance name of the Zendesk account.</p>
+</li>
+<li>
+<p><strong>Username or Email</strong> – The username or email of the Zendesk account.<br />
+<strong>Note</strong>: You must enter <strong>/token</strong> after the email address to authenticate the Zendesk account. For example, <code>john@example.com/token</code>.</p>
+</li>
+<li>
+<p><strong>API Token</strong> – The password token of the Zendesk account.<br />
+<a class="glightbox" href="../images/zendesk-action-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img3.png" alt="Details to authorize the integration" title="Details to authorize the integration" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Click <strong>Save</strong>. When you configure the action for the first time, the <strong>Integration Successful</strong>  pop-up is displayed.<br />
+<a class="glightbox" href="../images/zendesk-action-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img4.png" alt="Integration successful" title="Integration successful" style="border: 1px solid gray;zoom:50%;"/></a><br />
+<strong>Note</strong>: The Zendesk action is moved from <em>Available</em> to <em>Configured</em> region.</p>
+</li>
+<li>
+<p>You can also click the <strong>Skip for Now</strong> button to install the Dialog Task templates later. To learn how to use action templates, read the <a href="../using-the-zendesk-action-templates/" target="_blank">Using the Zendesk action templates</a> article.<br />
+<a class="glightbox" href="../images/zendesk-action-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img5.png" alt="Skip for now" title="Skip for now" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="allow-end-user-to-authorize">Allow End User to Authorize<a class="headerlink" href="#allow-end-user-to-authorize" title="Permanent link">&para;</a></h3>
+<p>You can authorize the integration at a user level with their login credentials. The user authorization process involves requesting permission for Kore.ai’s Zendesk app to access an access token at runtime. You can also use the basic auth profile to let a user configure the integration at runtime.</p>
+<p>Steps to authorize a Zendesk action at a user level:</p>
+<ol>
+<li>Go to <strong>Build &gt; Integrations</strong> and select the <strong>Actions</strong> menu item.</li>
+<li>Select the <strong>Zendesk</strong> action in the <strong>Available Actions</strong> region.</li>
+<li>In the Configurations dialog, select the <strong>Authorization</strong> tab.</li>
+<li>
+<p>Enter the following details:</p>
+<ol>
+<li>Select the type of authorization mechanism. For example, select the <strong>Basic Auth</strong> option. To create Basic Auth profiles, see <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/bot-authentication/" target="_blank">Bot Authorization Overview </a>.</li>
+<li>
+<p>Create your authorization profile to obtain an access token and use it to complete integration without using Kore.ai’s Zendesk app for authorization.</p>
+<ol>
+<li>
+<p>Click the <strong>Select Authorization</strong> drop-down and select the <strong>Create New</strong> option<br />
+<a class="glightbox" href="../images/zendesk-action-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img6.png" alt="Create new auth" title="Create new auth" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>Authorization Type</strong> – Select the <strong>Allow Users to Authorize the Integration</strong> option, and then select the <strong><em>Basic Auth</em></strong> option.</p>
+</li>
+<li>
+<p>Enter the following authentication credentials for the Basic Auth mechanism:</p>
+<ul>
+<li><strong>Name</strong> – Enter the name for the Basic Auth profile.</li>
+<li>Select the option – <strong>Yes, some tasks will have tenancy URLs and the user will need to provide that to successfully authenticate.</strong></li>
+<li><strong>Base URL</strong> – Enter the base tenant URL for Zendesk instance.</li>
+<li><strong>Authorization Check URL</strong> – Enter the authorization check URL for your Zendesk instance.</li>
+<li><strong>Description</strong> – Enter the description of the basic authentication profile.<br />
+<a class="glightbox" href="../images/zendesk-action-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img7.png" alt="Authentication credentials" title="Authentication credentials" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ul>
+</li>
+<li>
+<p>Click **Save Auth**to save authorization profile.</p>
 </li>
 </ol>
 </li>
 <li>
-<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
-</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>Follow the prompts in the VA console to send sms.</li>
-<li>
-<p>Enter an sms message when prompted by the VA as shown below:<br />
-<a class="glightbox" href="../images/twilio-tem-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img7.png" alt="VA prompt to Send SMS" title="VA prompt to Send SMS" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p><strong>Note</strong>: You must add the country code before the receiver's phone number to deliver the SMS. For example, to send an SMS to a phone number in the United States, add the country code as +1.</p>
-</li>
-<li>
-<p>You will notice an sms is sent to the number from the Twilio number.</p>
-</li>
-</ol>
-<h3 id="start-verification">Start Verification<a class="headerlink" href="#start-verification" title="Permanent link">&para;</a></h3>
-<p>Steps to start verification of a phone service using Twilio Verify integration:</p>
-<ol>
-<li>Refer to the <a href="../configuring-the-twilio-action/#step-2-install-the-twilio-verify-action-templates" target="_blank">Installing the Twilio Verify Templates</a> section to install this template.</li>
-<li>
-<p>The <em>Start Verification</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/twilio-tem-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img8.png" alt="Start Verification dialog task is added" title="Start Verification dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
-<li><strong>startVerifcation</strong> – A user intent to start verification of the service.</li>
-<li><strong>serviceSid</strong>, <strong>receiverNumber</strong>, and <strong>channel</strong> – Entity nodes to gather required details to start the verification process.</li>
-<li><strong>startVerificationService</strong> – A bot action service to start verification in a Twilio integration. Click the <strong>Plus</strong> icon to expand to view the <em>startVerificationService</em> bot action component properties.</li>
-<li>
-<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/twilio-tem-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img9.png" alt="Start Verification - Edit request" title="Start Verification - Edit Request" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p><strong>Sample Request</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>To ={{receiverNumber}}
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Channel={{channel}}
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>}
-</span></code></pre></div>
-<p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/twilio-tem-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img10.png" alt="Start Verification - Add response" title="Start Verification - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p><strong>Sample Response</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&quot;status&quot;: &quot;pending&quot;,
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>&quot;payee&quot;: null,
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>&quot;date_updated&quot;: &quot;2022-12-22T08:19:45Z&quot;,
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>&quot;send_code_attempts&quot;: [
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>{
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>&quot;attempt_sid&quot;: &quot;VL0dc72d3662674769417ddba8cxxxxxx&quot;,
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&quot;channel&quot;: &quot;sms&quot;,
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>&quot;time&quot;: &quot;2022-12-22T08:19:45.268Z&quot;
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>}
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>],
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>&quot;account_sid&quot;: &quot;AC6bae65f877f2488c902f57cexxxxx&quot;,
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>&quot;to&quot;: &quot;+{{receiverNumber}}&quot;,
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>&quot;amount&quot;: null,
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>&quot;valid&quot;: false,
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>&quot;lookup&quot;: {
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>&quot;carrier&quot;: null
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>},
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>&quot;url&quot;: &quot;https://verify.twilio.com/v2/Services/VAd8fb32402129918fda43xxxxxx/Verifications/VEdfa1ba866cc6de52c811402bbxxxxxx&quot;,
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>&quot;sid&quot;: &quot;VEdfa1ba866cc6de52c811402bbxxxxx&quot;,
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>&quot;date_created&quot;: &quot;2022-12-22T08:19:45Z&quot;,
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>&quot;service_sid&quot;: &quot;VAd8fb32402129918fda4368184xxxxx&quot;,
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>&quot;channel&quot;: &quot;sms&quot;
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>}
-</span></code></pre></div>
-</li>
-<li>
-<p><strong>startVerificationMessage</strong> – A message node with the script to display responses for various scenarios.</p>
+<p>Select the new <strong>Authorization Profile</strong> which you created to complete integration.</p>
 </li>
 </ol>
 </li>
 <li>
-<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
-</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>Follow the prompts in the VA console to start verification.</li>
-<li>
-<p>Enter the phone numbers when prompted by the VA.<br />
-<a class="glightbox" href="../images/twilio-tem-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img11.png" alt="VA prompt to Start Verification" title="VA prompt to Start Verification" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>The VA now starts the verification process based on the phone numbers entered.</p>
+<p>Click <strong>Save</strong>. When you configure the action for the first time, the <strong>Integration Successful</strong>  pop-up is displayed.</p>
 </li>
 </ol>
-<h3 id="verification-check">Verification Check<a class="headerlink" href="#verification-check" title="Permanent link">&para;</a></h3>
-<p>Steps to check the verification of a phone service using Twilio Verify integration:</p>
+<h2 id="step-2-install-the-zendesk-action-templates">Step 2: Install the Zendesk Action Templates<a class="headerlink" href="#step-2-install-the-zendesk-action-templates" title="Permanent link">&para;</a></h2>
+<p>Once you have configured a Zendesk integration, you can explore and install action templates.</p>
+<p>Steps to install action templates:
+1. On the Integration Successful dialog, click the <strong>Explore Templates</strong> button to view the templates.<br />
+<a class="glightbox" href="../images/zendesk-action-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img8.png" alt="Explore templates" title="Explore templates" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <ol>
-<li>Refer to the <a href="../configuring-the-twilio-action/#step-2-install-the-twilio-verify-action-templates" target="_blank">Installing the Twilio Verify Templates</a> section to install this template.</li>
 <li>
-<p>The <em>Verification Check</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/twilio-tem-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img12.png" alt="Verification Check dialog task is added" title="Verification Check dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<ol>
-<li><strong>verificationCheck</strong> – A user intent to check verification of the service.</li>
-<li><strong>serviceSid</strong>, <strong>receiverNumber</strong>, and <strong>code</strong> – Entity nodes to gather required details to check the verification process.</li>
-<li><strong>verificationCheckService</strong> – A bot action service to check the verification in a Twilio integration. Click the <strong>Plus</strong> icon to expand to view the <em>verificationCheckService</em> bot action component properties.</li>
-<li>
-<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/twilio-tem-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img13.png" alt="Verification Check - Edit request" title="Verification Check - Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p><strong>Sample Request</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>To ={{receiverNumber}}
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Code={{code}}
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>}
-</span></code></pre></div>
-<p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/twilio-tem-img14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img14.png" alt="Verification Check - Add response" title="Verification Check - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p><strong>Sample Response</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>{
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&quot;status&quot;: &quot;approved&quot;,
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&quot;payee&quot;: null,
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>&quot;date_updated&quot;: &quot;2022-12-22T08:22:47Z&quot;,
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>&quot;account_sid&quot;: &quot;AC6bae65f877f2488c902f57xxxxx&quot;,
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>&quot;to&quot;: &quot;{{receiverNumber}}&quot;,
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>&quot;amount&quot;: null,
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>&quot;valid&quot;: true,
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>&quot;sid&quot;: &quot;VEdfa1ba866cc6de52c811402xxxx&quot;,
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>&quot;date_created&quot;: &quot;2022-12-22T08:19:45Z&quot;,
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>&quot;service_sid&quot;: &quot;VAd8fb32402129918fda43681xxxxx&quot;,
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>&quot;channel&quot;: &quot;sms&quot;
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>}
-</span></code></pre></div>
+<p>In the Integration Templates dialog, click the <strong>Install</strong> button to begin the installation.<br />
+<a class="glightbox" href="../images/zendesk-action-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img9.png" alt="Begin installation" title="Begin installation" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p><strong>verificationCheckMessage</strong> – A message node with the script to display responses for various scenarios.</p>
-</li>
-</ol>
+<p>Once the template is installed, click the <strong>Go to Dialog</strong> button to view the dialog task.</p>
 </li>
 <li>
-<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
-</li>
-<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
-<li>Follow the prompts in the VA console to check verification.</li>
-<li>
-<p>Enter the phone numbers when prompted by the VA.<br />
-<a class="glightbox" href="../images/twilio-tem-img15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img15.png" alt="VA prompt - Enter phone number" title="VA prompt - Enter phone number" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>Once all templates are installed, a dialog task for each template is auto-created.<br />
+<a class="glightbox" href="../images/zendesk-action-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img10.png" alt="Dialog tasks for each installed template are auto-created" title="Dialog tasks for each installed template are auto-created" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>The VA now checks the verification based on the phone numbers entered.</p>
+<p>You can also select the desired dialog task from the templates and click <strong>Proceed</strong>. For example, select the <strong>Create a Ticket</strong> task.<br />
+<a class="glightbox" href="../images/zendesk-action-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img11.png" alt="Select the desired dialog task from the templates and Proceed" title="Select the desired dialog task from the templates and Proceed" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Once you click <strong>Proceed</strong>, the dialog task is auto-created and the canvas opens with all required entity nodes, service nodes, and message scripts.<br />
+<a class="glightbox" href="../images/zendesk-action-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img12.png" alt="Dialog task is auto-created and the canvas opens" title="Dialog task is auto-created and the canvas opens" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ol>
 
