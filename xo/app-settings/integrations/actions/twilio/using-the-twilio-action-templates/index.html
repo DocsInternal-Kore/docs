@@ -17,7 +17,7 @@
     
     
       
-        <title>Using the twilio action templates - Kore ai Docs</title>
+        <title>**Using the Twilio Action Templates** - Kore ai Docs</title>
       
     
     
@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-the-twilio-action-templates" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -166,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using the twilio action templates
+              **Using the Twilio Action Templates**
             
           </span>
         </div>
@@ -2870,6 +2875,50 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#twilio-verify-actions" class="md-nav__link">
+    Twilio Verify Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Twilio Verify Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send-sms" class="md-nav__link">
+    Send SMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-verification" class="md-nav__link">
+    Start Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-check" class="md-nav__link">
+    Verification Check
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2888,7 +2937,251 @@
 
 
 
+<h1 id="using-the-twilio-action-templates"><strong>Using the Twilio Action Templates</strong><a class="headerlink" href="#using-the-twilio-action-templates" title="Permanent link">&para;</a></h1>
+<p>You can use the <strong>Prebuilt Action Templates</strong> from your Twilio Verify integration to auto-create dialog tasks and test them using the <strong>Talk to Bot</strong> option.</p>
+<p>Steps to create a dialog task using the Twilio Verify action templates:</p>
+<ol>
+<li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong>.</li>
+<li>
+<p>Click <strong>Create a Dialog Task</strong>.<br />
+<a class="glightbox" href="../images/twilio-tem-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img1.png" alt="Create a Dialog Task" title="Create a Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>On the Dialog Task pop-up, under the Integration, select the Twilio Verify option to view the action templates.<br />
+<a class="glightbox" href="../images/twilio-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img2.png" alt="Integration - Twilio Verify" title="Integration - Twilio Verify" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the <strong>Actions</strong> page to configure an integration for your VA. For more information, see <a href="../../actions/" target="_blank">Actions Overview</a>.<br />
+<a class="glightbox" href="../images/twilio-tem-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img3.png" alt="Explore integrations" title="Explore integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ol>
+<h2 id="twilio-verify-actions">Twilio Verify Actions<a class="headerlink" href="#twilio-verify-actions" title="Permanent link">&para;</a></h2>
+<p>The following Twilio Verify actions are supported in this release:</p>
+<table border="1">
+  <tr>
+   <td><strong>Supported Tasks</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Method</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Send SMS
+   </td>
+   <td>Sends the SMS to the registered phone number.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+  <tr>
+   <td>Start Verification
+   </td>
+   <td>Starts the verification of the phone number registered in Twilio.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+  <tr>
+   <td>Verification Check
+   </td>
+   <td>Checks whether the verification is successful or unsuccessful.
+   </td>
+   <td>POST
+   </td>
+  </tr>
+</table>
 
+<h3 id="send-sms">Send SMS<a class="headerlink" href="#send-sms" title="Permanent link">&para;</a></h3>
+<p>Steps to send an sms to a phone number using the Twilio Verify integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-twilio-action/#step-2-install-the-twilio-verify-action-templates" target="_blank">Installing the Twilio Verify Templates</a> section to install this template.</li>
+<li>
+<p>The <em>Send SMS</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/twilio-tem-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img4.png" alt="Send SMS dialog task is added" title="Send SMS dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>sendSms</strong> – A user intent to send SMS.</li>
+<li><strong>accountSid</strong>, <strong>twilioNumber</strong>, <strong>receiverNumber</strong>, and <strong>message</strong> – Entity nodes for gathering the required for sending SMS.</li>
+<li><strong>sendSmsService</strong> – A bot action service to send sms from an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>sendSmsService</em> bot action component properties.</li>
+<li>
+<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/twilio-tem-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img5.png" alt="Send SMS - Edit request" title="Send SMS - Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Body = {{message}}
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>From ={{twilioNumber}}
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>To={{receiverNumber}}
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>}
+</span></code></pre></div>
+<p>To add one or more response, scroll down and click the <strong>+Add Response</strong> button:<br />
+<a class="glightbox" href="../images/twilio-tem-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img6.png" alt="Send SMS - Add response" title="Send SMS - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;body&quot;: &quot;Sent from your Twilio trial account - Hi Kore&quot;,
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&quot;num_segments&quot;: &quot;1&quot;,
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&quot;direction&quot;: &quot;outbound-api&quot;,
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&quot;from&quot;: &quot;{{twilioNumber}}&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>&quot;date_updated&quot;: &quot;Thu, 22 Dec 2022 08:09:10 +0000&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&quot;price&quot;: null,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&quot;error_message&quot;: null,
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&quot;uri&quot;: &quot;/2010-04-01/Accounts/AC6bae65f877f2488c902f57cexxxxx/Messages/SMbec6459143755dc1f76b123a2xxxxx.json&quot;,
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>&quot;account_sid&quot;: &quot;AC6bae65f877f2488c902f57ce1fxxxxx&quot;,
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>&quot;num_media&quot;: &quot;0&quot;,
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>&quot;to&quot;: &quot;{{receiverNumber}}&quot;,
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>&quot;date_created&quot;: &quot;Thu, 22 Dec 2022 08:09:10 +0000&quot;,
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>&quot;status&quot;: &quot;queued&quot;,
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>&quot;sid&quot;: &quot;SMbec6459143755dc1f76b123a2xxxxxx&quot;,
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>&quot;date_sent&quot;: null,
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>&quot;messaging_service_sid&quot;: null,
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>&quot;error_code&quot;: null,
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>&quot;price_unit&quot;: &quot;USD&quot;,
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>&quot;api_version&quot;: &quot;2010-04-01&quot;,
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>&quot;subresource_uris&quot;: {
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>&quot;media&quot;: &quot;/2010-04-01/Accounts/AC6bae65f877f2488c902f57xxxxxxx/Messages/SMbec6459143755dc1f76b123a2xxxxxx/Media.json&quot;
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>}
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>sendSmsMessage</strong> – A message node with the script to display responses for various scenarios.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to send sms.</li>
+<li>
+<p>Enter an sms message when prompted by the VA as shown below:<br />
+<a class="glightbox" href="../images/twilio-tem-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img7.png" alt="VA prompt to Send SMS" title="VA prompt to Send SMS" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Note</strong>: You must add the country code before the receiver's phone number to deliver the SMS. For example, to send an SMS to a phone number in the United States, add the country code as +1.
+7. You will notice an sms is sent to the number from the Twilio number.</p>
+</li>
+</ol>
+<h3 id="start-verification">Start Verification<a class="headerlink" href="#start-verification" title="Permanent link">&para;</a></h3>
+<p>Steps to start verification of a phone service using Twilio Verify integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-twilio-action/#step-2-install-the-twilio-verify-action-templates" target="_blank">Installing the Twilio Verify Templates</a> section to install this template.</li>
+<li>
+<p>The <em>Start Verification</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/twilio-tem-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img8.png" alt="Start Verification dialog task is added" title="Start Verification dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>startVerifcation</strong> – A user intent to start verification of the service.</li>
+<li><strong>serviceSid</strong>, <strong>receiverNumber</strong>, and <strong>channel</strong> – Entity nodes to gather required details to start the verification process.</li>
+<li><strong>startVerificationService</strong> – A bot action service to start verification in a Twilio integration. Click the <strong>Plus</strong> icon to expand to view the <em>startVerificationService</em> bot action component properties.</li>
+<li>
+<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/twilio-tem-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img9.png" alt="Start Verification - Edit request" title="Start Verification - Edit Request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>To ={{receiverNumber}}
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Channel={{channel}}
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>}
+</span></code></pre></div>
+<p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
+<a class="glightbox" href="../images/twilio-tem-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img10.png" alt="Start Verification - Add response" title="Start Verification - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&quot;status&quot;: &quot;pending&quot;,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>&quot;payee&quot;: null,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>&quot;date_updated&quot;: &quot;2022-12-22T08:19:45Z&quot;,
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>&quot;send_code_attempts&quot;: [
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>{
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>&quot;attempt_sid&quot;: &quot;VL0dc72d3662674769417ddba8cxxxxxx&quot;,
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&quot;channel&quot;: &quot;sms&quot;,
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>&quot;time&quot;: &quot;2022-12-22T08:19:45.268Z&quot;
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>}
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>],
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>&quot;account_sid&quot;: &quot;AC6bae65f877f2488c902f57cexxxxx&quot;,
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>&quot;to&quot;: &quot;+{{receiverNumber}}&quot;,
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>&quot;amount&quot;: null,
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>&quot;valid&quot;: false,
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>&quot;lookup&quot;: {
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>&quot;carrier&quot;: null
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>},
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>&quot;url&quot;: &quot;https://verify.twilio.com/v2/Services/VAd8fb32402129918fda43xxxxxx/Verifications/VEdfa1ba866cc6de52c811402bbxxxxxx&quot;,
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>&quot;sid&quot;: &quot;VEdfa1ba866cc6de52c811402bbxxxxx&quot;,
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>&quot;date_created&quot;: &quot;2022-12-22T08:19:45Z&quot;,
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>&quot;service_sid&quot;: &quot;VAd8fb32402129918fda4368184xxxxx&quot;,
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>&quot;channel&quot;: &quot;sms&quot;
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>startVerificationMessage</strong> – A message node with the script to display responses for various scenarios.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to start verification.</li>
+<li>
+<p>Enter the phone numbers when prompted by the VA.<br />
+<a class="glightbox" href="../images/twilio-tem-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img11.png" alt="VA prompt to Start Verification" title="VA prompt to Start Verification" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>The VA now starts the verification process based on the phone numbers entered.</p>
+</li>
+</ol>
+<h3 id="verification-check">Verification Check<a class="headerlink" href="#verification-check" title="Permanent link">&para;</a></h3>
+<p>Steps to check the verification of a phone service using Twilio Verify integration:</p>
+<ol>
+<li>Refer to the <a href="../configuring-the-twilio-action/#step-2-install-the-twilio-verify-action-templates" target="_blank">Installing the Twilio Verify Templates</a> section to install this template.</li>
+<li>
+<p>The <em>Verification Check</em> dialog task is added with the following components:<br />
+<a class="glightbox" href="../images/twilio-tem-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img12.png" alt="Verification Check dialog task is added" title="Verification Check dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<ol>
+<li><strong>verificationCheck</strong> – A user intent to check verification of the service.</li>
+<li><strong>serviceSid</strong>, <strong>receiverNumber</strong>, and <strong>code</strong> – Entity nodes to gather required details to check the verification process.</li>
+<li><strong>verificationCheckService</strong> – A bot action service to check the verification in a Twilio integration. Click the <strong>Plus</strong> icon to expand to view the <em>verificationCheckService</em> bot action component properties.</li>
+<li>
+<p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
+<a class="glightbox" href="../images/twilio-tem-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img13.png" alt="Verification Check - Edit request" title="Verification Check - Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Request</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>To ={{receiverNumber}}
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Code={{code}}
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>}
+</span></code></pre></div>
+<p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
+<a class="glightbox" href="../images/twilio-tem-img14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img14.png" alt="Verification Check - Add response" title="Verification Check - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><strong>Sample Response</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>{
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&quot;status&quot;: &quot;approved&quot;,
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&quot;payee&quot;: null,
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>&quot;date_updated&quot;: &quot;2022-12-22T08:22:47Z&quot;,
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>&quot;account_sid&quot;: &quot;AC6bae65f877f2488c902f57xxxxx&quot;,
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>&quot;to&quot;: &quot;{{receiverNumber}}&quot;,
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>&quot;amount&quot;: null,
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>&quot;valid&quot;: true,
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>&quot;sid&quot;: &quot;VEdfa1ba866cc6de52c811402xxxx&quot;,
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>&quot;date_created&quot;: &quot;2022-12-22T08:19:45Z&quot;,
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>&quot;service_sid&quot;: &quot;VAd8fb32402129918fda43681xxxxx&quot;,
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>&quot;channel&quot;: &quot;sms&quot;
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>verificationCheckMessage</strong> – A message node with the script to display responses for various scenarios.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Train</strong> tab to complete the Dialog task training.</p>
+</li>
+<li>Click the <strong>Talk to Bot</strong> icon to test and debug the dialog task.</li>
+<li>Follow the prompts in the VA console to check verification.</li>
+<li>
+<p>Enter the phone numbers when prompted by the VA.<br />
+<a class="glightbox" href="../images/twilio-tem-img15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img15.png" alt="VA prompt - Enter phone number" title="VA prompt - Enter phone number" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>The VA now checks the verification based on the phone numbers entered.</p>
+</li>
+</ol>
 
 
   
