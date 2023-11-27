@@ -17,7 +17,7 @@
     
     
       
-        <title>**Adding the Mattermost Channel** - Kore ai Docs</title>
+        <title>**Adding the Google Chat Channel** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adding-the-mattermost-channel" class="md-skip">
+        <a href="#adding-the-google-chat-channel" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Adding the Mattermost Channel**
+              **Adding the Google Chat Channel**
             
           </span>
         </div>
@@ -2885,62 +2885,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#webhook-based-integration" class="md-nav__link">
-    WebHook based Integration
+  <a href="#step-1-enable-the-google-chat-api" class="md-nav__link">
+    Step 1: Enable the Google Chat API
   </a>
-  
-    <nav class="md-nav" aria-label="WebHook based Integration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-setup-outgoing-webhook" class="md-nav__link">
-    Step 1: Setup Outgoing Webhook
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-setup-incoming-webhook" class="md-nav__link">
-    Step 2: Setup Incoming Webhook
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#websocket-based-integration" class="md-nav__link">
-    WebSocket based Integration
+  <a href="#step-2-set-up-the-api-in-google-cloud" class="md-nav__link">
+    Step 2: Set Up the API in Google Cloud
   </a>
-  
-    <nav class="md-nav" aria-label="WebSocket based Integration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-enable-personal-access-tokens" class="md-nav__link">
-    Step 1: Enable Personal Access Tokens
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-create-an-account-to-be-provisioned-as-a-bot" class="md-nav__link">
-    Step 2: Create an Account to be Provisioned as a Bot
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#xo-platform-channel-configuration" class="md-nav__link">
-    XO Platform Channel Configuration
+  <a href="#step-3-create-api-keys" class="md-nav__link">
+    Step 3: Create API Keys
   </a>
   
 </li>
@@ -2964,114 +2924,100 @@
 
 
 
-<h1 id="adding-the-mattermost-channel"><strong>Adding the Mattermost Channel</strong><a class="headerlink" href="#adding-the-mattermost-channel" title="Permanent link">&para;</a></h1>
-<p>You can connect Kore.ai assistants to your Mattermost account using either:</p>
+<h1 id="adding-the-google-chat-channel"><strong>Adding the Google Chat Channel</strong><a class="headerlink" href="#adding-the-google-chat-channel" title="Permanent link">&para;</a></h1>
+<p>Adding Google Chat as a channel to your Kore.ai assistant allows end-users to chat with it using Google Chat. This article shows you how to set it up.</p>
+<h2 id="step-1-enable-the-google-chat-api">Step 1: Enable the Google Chat API<a class="headerlink" href="#step-1-enable-the-google-chat-api" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Log into <a href="https://console.developers.google.com/projectselector2/apis/dashboard?pli=1">Google Cloud.</a></li>
+<li>
+<p>Click <strong>Library</strong>, in the left side menu.
+<a class="glightbox" href="../images/google_chat.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat.png" alt="Library" title="Library" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Search and select the <strong>Google Chat API</strong>.
+<a class="glightbox" href="../images/google_chat1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat1.png" alt="Google Chat" title="Google Chat" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click <strong>Enable</strong>.</p>
+</li>
+<li>On enabling the API, you are redirected to the <strong>Overview</strong> page of the <strong>Google Chat API</strong>.
+<a class="glightbox" href="../images/google_chat2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat2.png" alt="Google Chat API" title="Google Chat API" style="border: 1px solid gray; zoom:70%;"></a></li>
+</ol>
+<h2 id="step-2-set-up-the-api-in-google-cloud">Step 2: Set Up the API in Google Cloud<a class="headerlink" href="#step-2-set-up-the-api-in-google-cloud" title="Permanent link">&para;</a></h2>
+<p>To set up the Google Chat API, you need to create credentials first, then configure its details and functionality, as follows:</p>
+<ol>
+<li>
+<p>From the Credentials page, click <strong>Create credentials</strong> and select <strong>Service account</strong>.
+<a class="glightbox" href="../images/google_chat3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat3.png" alt="create credentials" title="create credentials" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Provide a name for your service account, service account description, and click <strong>Create and Continue</strong>.
+<a class="glightbox" href="../images/google_chat4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat4.png" alt="Library" title="Library" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Once the service account is created there are 2 optional steps:</p>
 <ul>
-<li><a href="/docs/xo/channels/add-mattermost-channel/#webhook-based-integration">Webhook based integration</a></li>
-<li><a href="/docs/xo/channels/add-mattermost-channel/#websocket-based-integration">WebSocket based integration</a>.</li>
+<li><em>Grant this service account access to project</em></li>
+<li><em>Grant users access to this service account</em></li>
 </ul>
-<p>Before you begin, ensure that you have access to the administrative functions of your Mattermost account.</p>
-<h2 id="webhook-based-integration">WebHook based Integration<a class="headerlink" href="#webhook-based-integration" title="Permanent link">&para;</a></h2>
-<h3 id="step-1-setup-outgoing-webhook">Step 1: Setup Outgoing Webhook<a class="headerlink" href="#step-1-setup-outgoing-webhook" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Login to your Mattermost account</li>
-<li>
-<p>From the <strong>Main Menu</strong> choose <strong>Integrations</strong>.
-<a class="glightbox" href="../images/mattermost.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mattermost.png" alt="main menu" title="main menu" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Select the <strong>Outgoing Webhooks</strong> menu and click <strong>Add Outgoing Webhook</strong>.
-<a class="glightbox" href="../images/mattermost1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mattermost1.png" alt="add outgoing webhook" title="add outoging webhook" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>Click on the <strong>Done</strong> button.
+<a class="glightbox" href="../images/google_chat5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat5.png" alt="grant users" title="grant users" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Provide required information as per the below image.</p>
+<p>Go to the <strong>Configurations</strong> section and provide all the required details like:</p>
 <ul>
-<li>Enter your preferred values for <strong>Title</strong>, <strong>Description</strong> and <strong>Bot Name fields</strong>.</li>
-<li>Choose <em>application/json</em> as <strong>Content Type</strong>.</li>
-<li>If you would like your bot to be available only for a specific channel, then choose the required channel from the <strong>Channel</strong> dropdown.</li>
-<li>Provide your Kore.ai assistant Name in the <strong>Trigger Words</strong> field.</li>
-<li>Copy the <strong>Callback URL</strong> for the Kore VA (located in the <strong>XO Platform &gt; Deploy &gt; Channels &gt; Mattermost</strong>)  and provide it in the Callback URLs field.</li>
-<li>
-<p>Click on <strong>Save</strong> to complete the Outgoing Webhook setup.
-<a class="glightbox" href="../images/mattermost2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mattermost2.png" alt="save mattermost configuration " title="save mattermost configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>You will be redirected to the confirmation page with the Token displayed.</p>
-</li>
-<li>Copy this Token and provide it in the ‘Outgoing Webhook Token’ field present in the XO Platform Channel Configurations section.
-<a class="glightbox" href="../images/mattermost3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mattermost3.png" alt="copy outgoing webhook token" title="copy outoging webhook token" style="border: 1px solid gray; zoom:70%;"></a></li>
+<li>App name</li>
+<li>Avatar URL</li>
+<li>Description
+<a class="glightbox" href="../images/google_chat6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat6.png" alt="configurations" title="configurations" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ul>
 </li>
-</ol>
-<h3 id="step-2-setup-incoming-webhook">Step 2: Setup Incoming Webhook<a class="headerlink" href="#step-2-setup-incoming-webhook" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Select the ‘<strong>Incoming Webhooks</strong>’ menu and click ‘<strong>Add Incoming Webhook</strong>’.</li>
 <li>
-<p>Provide required information as per the below image.</p>
+<p>Under <strong>Functionality</strong> choose both <strong>Receive one-to-one messages</strong> and <strong>Join spaces and group conversations</strong> options.
+<a class="glightbox" href="../images/google_chat7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat7.png" alt="Library" title="Library" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Under <strong>Connection Settings</strong>:</p>
 <ul>
-<li>Enter your preferred values for <strong>Title</strong>, <strong>Description</strong> and <strong>Username</strong> fields.</li>
-<li>Choose a default <strong>Channel</strong>. Kore.ai VAs always respond back in the channel from which the user input is received.</li>
-<li>Do not select the <strong>Lock to this channel</strong> option.
-<a class="glightbox" href="../images/mattermost4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mattermost4.png" alt="choose default channel" title="choose default channel" style="border: 1px solid gray; zoom:70%;"></a></li>
+<li>Select the <strong>App URL</strong> option.</li>
+<li>Go to the Kore.ai <strong>XO Platform &gt;</strong> <strong>Select VA &gt; Deploy &gt; Channels &gt; Google Chat &gt; Configurations</strong> and copy the <strong>Webhook URL</strong>.</li>
+<li>Go back to <strong>Connections Settings in Google Cloud</strong> and paste the Webhook URL</li>
 </ul>
+</li>
+<li>Select the appropriate option under <strong>Permissions</strong>.
+<a class="glightbox" href="../images/google_chat8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat8.png" alt="permissions" title="permissions" style="border: 1px solid gray; zoom:70%;"></a></li>
+</ol>
+<p>Next, we will be configuring the API keys that the XO Platform will use to connect to Google Chat.</p>
+<h2 id="step-3-create-api-keys">Step 3: Create API Keys<a class="headerlink" href="#step-3-create-api-keys" title="Permanent link">&para;</a></h2>
+<p>Once your service account has been created, you need to manage the keys corresponding to your API, as follows:</p>
+<ol>
+<li>
+<p>Navigate to the <strong>Credentials **page and click on **Manage service accounts</strong>.
+<a class="glightbox" href="../images/google_chat9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat9.png" alt="Manage Service" title="Manage Service" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Click on <strong>Save</strong> to complete the Incoming Webhook setup.</p>
-</li>
-<li>You would be redirected to the confirmation page along with the URL associated with this newly created incoming webhook.</li>
-<li>Copy this URL and provide it in the ‘Incoming Webhook URL’ field in the Kore Bot Channel Configurations section.
-<a class="glightbox" href="../images/mattermost5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mattermost5.png" alt="provide incoming webhook" title="provide incoming webhook" style="border: 1px solid gray; zoom:70%;"></a></li>
-</ol>
-<h2 id="websocket-based-integration">WebSocket based Integration<a class="headerlink" href="#websocket-based-integration" title="Permanent link">&para;</a></h2>
-<h3 id="step-1-enable-personal-access-tokens">Step 1: Enable Personal Access Tokens<a class="headerlink" href="#step-1-enable-personal-access-tokens" title="Permanent link">&para;</a></h3>
-<p>To enable a WebSocket connection, you would need to create a Mattermost account to be provisioned as a bot.</p>
-<ol>
-<li>First, enable usage of Personal Access Tokens to allow your Mattermost users to generate personal access tokens.</li>
-<li>Personal access tokens are used to authenticate and provide full access to an account.<ul>
-<li>Login to Mattermost from an account that has access to <em>System Console</em>.</li>
-<li>Go to <strong>System Console &gt; Integrations &gt; Integrations Management</strong>.</li>
-<li>Locate the <strong>Enable Personal Access Tokens</strong> setting, set it to <strong>true</strong>, and <strong>Save</strong>.
-<a class="glightbox" href="../images/mattermost6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mattermost6.png" alt="enable personal access tokens" title="enable personal access tokens" style="border: 1px solid gray; zoom:70%;"></a></li>
-</ul>
-</li>
-</ol>
-<h3 id="step-2-create-an-account-to-be-provisioned-as-a-bot">Step 2: Create an Account to be Provisioned as a Bot<a class="headerlink" href="#step-2-create-an-account-to-be-provisioned-as-a-bot" title="Permanent link">&para;</a></h3>
-<ol>
-<li>From your Mattermost account, go to <strong>Integrations &gt; Bot Accounts &gt; Add Bot Account</strong>.</li>
-<li>
-<p>Configure the Bot’s details:</p>
-<ul>
-<li>Choose a <strong>Username</strong>.</li>
-<li>Add an <strong>Icon</strong>, a <strong>Display Name</strong>.and a <strong>Description</strong>.</li>
-<li>Choose the <strong>Member</strong> role.</li>
-<li>Select <strong>additional permissions</strong> for the account:<ul>
-<li><strong><em>post:all</em></strong> to allow the bot to post to all Mattermost channels including direct messages.</li>
-<li><strong>post:channels</strong>: to allow the bot to post to all Mattermost public channels, but not in direct messages or private channels.</li>
-</ul>
-</li>
-<li>Click <strong>Create Bot Account</strong> to complete the setup.
-<a class="glightbox" href="../images/mattermost7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mattermost7.png" alt="create bot account" title="create bot account" style="border: 1px solid gray; zoom:70%;"></a></li>
-</ul>
+<p>From the Manage service accounts page click the <strong>Actions **button corresponding to your newly created account, then on **Manage keys</strong>.
+<a class="glightbox" href="../images/google_chat10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat10.png" alt="Manage Keys" title="Manage Keys" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>A success page will be shown to you next, where you will also find the access token you can use to connect to this assistant.
-<a class="glightbox" href="../images/mattermost8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mattermost8.png" alt="success page" title="success page" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>From the **Manage Keys **page click on **Add Key **button, select **Create new key **from the drop down, select the JSON option, and click on **Create **button.
+<a class="glightbox" href="../images/google_chat11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat11.png" alt="create new key" title="create new key" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 </ol>
-<h2 id="xo-platform-channel-configuration">XO Platform Channel Configuration<a class="headerlink" href="#xo-platform-channel-configuration" title="Permanent link">&para;</a></h2>
-<p>To configure the XO Platform channel, after having completed the setup in Mattermost, please follow the steps below:</p>
+<p>A JSON file will be generated and you need to copy the _client_email, and private_key _that needs to be input into the XO Platform. .</p>
+<h1 id="step-4-configure-the-google-chat-channel">Step 4: Configure the Google Chat Channel<a class="headerlink" href="#step-4-configure-the-google-chat-channel" title="Permanent link">&para;</a></h1>
+<p>In the XO Platform, select the VA you’re working with, then go to Deploy &gt; Channels &gt; Google Chat &gt; Configurations.</p>
 <ol>
-<li>In the XO Platform, select the Assistant that you are working with.</li>
-<li>Go to <strong>Deploy &gt; Channels &gt; Mattermost</strong>.</li>
-<li>Select the <strong>Configuration</strong> tab and provide the following details, which you have just generated in Mattermost:<ul>
-<li>Outgoing Webhook Token.</li>
-<li>Incoming Webhook URL.</li>
-</ul>
-</li>
-<li>Select <strong>Yes</strong> to enable the channel.</li>
-<li>Click <strong>Save</strong> to save your configuration.
-<a class="glightbox" href="../images/mattermost9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mattermost9.png" alt="enable mattermost" title="enable mattermost" style="border: 1px solid gray; zoom:70%;"></a></li>
+<li>Enter the following configuration details:<ol>
+<li><strong>Client Email</strong> – Copy the value of the <em>client_email</em> field present in the credentials JSON file of your Service Account and enter it here.</li>
+<li><strong>Private Key</strong> – Copy the value of the <em>private_key</em> field present in the credentials JSON file of your Service Account and enter it here</li>
 </ol>
+</li>
+<li>Select the <strong>Yes</strong> and click <strong>Save</strong> to enable Google Chat channel.</li>
+</ol>
+<p><a class="glightbox" href="../images/google_chat12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/google_chat12.png" alt="save channel" title="save channel" style="border: 1px solid gray; zoom:70%;"></a></p>
 <p>After the channel is enabled and all configurations are verified, you can optionally publish the assistant to make it available for end-users, with the new channel. Learn more about<a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/"> Publishing your Virtual Assistant</a>.</p>
 <p>To learn more about working with Channels within the Kore.ai XO Platform, please see<a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/"> Channel Enablement.</a></p>
 
