@@ -17,7 +17,7 @@
     
     
       
-        <title>**RCS Business Messaging** - Kore ai Docs</title>
+        <title>**Adding the WhatsApp Business Messaging Channel** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rcs-business-messaging" class="md-skip">
+        <a href="#adding-the-whatsapp-business-messaging-channel" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **RCS Business Messaging**
+              **Adding the WhatsApp Business Messaging Channel**
             
           </span>
         </div>
@@ -2885,30 +2885,125 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#request-access" class="md-nav__link">
-    Request Access
+  <a href="#adding-the-whatsapp-channel-using-infobip-application" class="md-nav__link">
+    Adding the WhatsApp Channel using Infobip Application
   </a>
+  
+    <nav class="md-nav" aria-label="Adding the WhatsApp Channel using Infobip Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-whatsapp-message-logs-on-infobip" class="md-nav__link">
+    Viewing WhatsApp Message Logs on Infobip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messaging-templates" class="md-nav__link">
+    Messaging Templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publish-the-assistant" class="md-nav__link">
-    Publish the Assistant
+  <a href="#adding-the-whatsapp-channel-using-gupshup-application" class="md-nav__link">
+    Adding the WhatsApp Channel Using GupShup Application
   </a>
+  
+    <nav class="md-nav" aria-label="Adding the WhatsApp Channel Using GupShup Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-gupshup-application" class="md-nav__link">
+    Step 1: Create a GupShup Application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-the-channel-enablement" class="md-nav__link">
+    Step 2: Configure the Channel Enablement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2a-create-a-new-whatsapp-business-account" class="md-nav__link">
+    Step 2(a): Create a new WhatsApp Business Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2b-set-up-the-waba-parameters-on-the-platform" class="md-nav__link">
+    Step 2(b): Set up the WABA Parameters on the Platform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2c-configure-the-callback-urlwebhook-url" class="md-nav__link">
+    Step 2(c): Configure the Callback URL/Webhook URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-secure-the-integration" class="md-nav__link">
+    Step 3: Secure the Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messaging-templates_1" class="md-nav__link">
+    Messaging Templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-for-whatsapp-pay" class="md-nav__link">
+    Support for WhatsApp Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#events" class="md-nav__link">
-    Events
+  <a href="#adding-the-whatsapp-channel-using-karix-application" class="md-nav__link">
+    Adding the WhatsApp Channel Using Karix Application
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding the WhatsApp Channel Using Karix Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#launch-the-bot-agent" class="md-nav__link">
-    Launch the Bot Agent
+        
+          <li class="md-nav__item">
+  <a href="#configuration-steps" class="md-nav__link">
+    Configuration Steps
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2931,123 +3026,292 @@
 
 
 
-<h1 id="rcs-business-messaging"><strong>RCS Business Messaging</strong><a class="headerlink" href="#rcs-business-messaging" title="Permanent link">&para;</a></h1>
-<p><strong>RCS Business Messaging</strong> is the evolution of mobile messaging, increasing and improving the ways in which people and businesses communicate. It provides brands with the opportunity to increase their engagement with customers by making use of business messaging using assistants and artificial intelligence (AI). <strong>Google RBM</strong> allows companies to send visually rich messages that encourage customers to interact.</p>
-<p>Below are the steps involved in setting up the channel on Kore.ai and launching the agent on RBM: (This channel support was introduced in ver7.1 of the platform)</p>
+<h1 id="adding-the-whatsapp-business-messaging-channel"><strong>Adding the WhatsApp Business Messaging Channel</strong><a class="headerlink" href="#adding-the-whatsapp-business-messaging-channel" title="Permanent link">&para;</a></h1>
+<h2 id="adding-the-whatsapp-channel-using-infobip-application">Adding the WhatsApp Channel using Infobip Application<a class="headerlink" href="#adding-the-whatsapp-channel-using-infobip-application" title="Permanent link">&para;</a></h2>
+<p>To complete this procedure, you must already have an <strong>Infobip</strong> account. This is one of the messaging providers for enabling <strong>WhatsApp Business Messaging</strong> on the Kore Platform.</p>
+<p>Steps to configure <strong>Infobip</strong>:</p>
 <ol>
-<li>Request access to enable Google RBM as channel.</li>
-<li>Publish the assistant for the business to initiate the testing process.</li>
-<li>Launch the agent when the bot agent testing is completed.</li>
-<li>Initiate conversations with end-users when the agent is launched.</li>
-</ol>
-<h2 id="request-access">Request Access<a class="headerlink" href="#request-access" title="Permanent link">&para;</a></h2>
-<p><strong>To request access to enable Google RCS Business messaging as a channel</strong></p>
-<ol>
-<li>From the XO Platform platform, open the assistant that you want to enable Google RCS Business Messaging</li>
-<li>Navigate to <strong>Channels</strong> and locate the <strong>RCS Business Messaging</strong> from the Channel Listing.</li>
-<li>Click on the RCB icon to open the RCB Channel Configuration page.</li>
-<li>Select the <strong>Configurations</strong> tab.</li>
-<li>See <strong>Request Access</strong> to <em>Yes</em></li>
-<li>Click <strong>Save</strong> button.</li>
-<li>You will receive an email from Kore.ai support team for details required to create a Bot Agent on Google RCS Business Messaging.</li>
-<li>Fill the form and send it back to the id provided therein.</li>
-</ol>
-<h2 id="publish-the-assistant">Publish the Assistant<a class="headerlink" href="#publish-the-assistant" title="Permanent link">&para;</a></h2>
-<p><strong>Create an App and Publish the assistant for the business to initiate the testing process</strong> A Bot Agent (on Google RCS) will be created by the Kore.ai support team based on inputs received from you. You will be notified of its creation. Follow the below steps to Publish the assistant:</p>
-<ol>
+<li>Login to the <strong>Infobip</strong> developer portal.</li>
 <li>
-<p><strong>Create App, Enable Event and Publish the assistant</strong>– This is required for the platform to receive a notification when a new user opts into talking to the bot via Google RCS.</p>
+<p>On the left navigation menu, click the <strong>Channels and Numbers</strong> option and select the <strong>WhatsApp</strong> channel on the <strong>Channel Essentials</strong> panel.
+<a class="glightbox" href="../images/whatsapp.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp.png" alt="infobib" title="infobib" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>To configure a new number for the <strong>Infobip</strong> and <strong>WhatsApp</strong> messaging platforms’ integration, follow one of the steps given below:</p>
 <ul>
+<li>Scan the QR code under <strong>Overview</strong> &gt; <strong>Connect</strong> on the <strong>WhatsApp</strong> page on the Infobip portal using the camera or QR scanner on your mobile device.</li>
 <li>
-<p><strong>Create an App</strong> on the Kore.ai XO Platform platform from <strong>API Extensions</strong> &gt; <strong>API Scopes</strong> and enable the following scope: “<em>RCS Message Events</em>”.
-<a class="glightbox" href="../images/rcs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/rcs.png" alt="create rcs app" title="create rcs app" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>From <strong>Natural Language</strong> &gt; <strong>Default Conversation</strong> &gt; <strong>Event Handlers</strong>, configure the following events:</p>
-<ul>
-<li>RCS Opt-In: action to be taken once the user Opts-in for the RCS Messaging,</li>
-<li>RCS Opt-Out: action to be taken when the user Opts-out of the RCS Messaging.
-<a class="glightbox" href="../images/rcs1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/rcs1.png" alt="rcs messaging" title="rcs messaging" style="border: 1px solid gray; zoom:70%;"></a></li>
-</ul>
+<p>Follow the instructions for steps 2 and 3 shown in the image below.
+<a class="glightbox" href="../images/whatsapp1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp1.png" alt="infobib integration" title="infobib integration" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p><strong>Publish</strong> the channel.</p>
+<p>Alternatively, add the number shown on the screen of the Infobip sender to your WhatsApp contacts.
+<a class="glightbox" href="../images/whatsapp2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp2.png" alt="infobib sender" title="infobib sender" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
-<li>Trigger opt-in and/or broadcast requests:</li>
-<li><strong>Trigger opt-in</strong>: Every time a new user opts in to use Google RCS, platform needs to be informed about this new user. To inform the platform, call the <strong>msgevents API</strong> with the below details: <em>Method</em>: <code>POST</code> <em>Request Headers</em>: <code>auth : &amp;lt;JWT&gt;</code> <em>Request Payload</em>:</li>
-</ul>
-<p><code>`{ \
-     "event" : "opt-in", \
-        "eventDetails":{ \
-        "users" : ["&amp;lt;Mobile number with country code&gt;"] // Ex: +919030132231 \
-  } \
- }`</code>
-* <strong>Broadcast Request</strong>: To send alert or broadcast messages for an already opted-in user, you can call the <strong>msgevents API</strong> with the below details: <em>Method</em>: <code>POST</code> <em>Request Headers</em>: <code>auth : &amp;lt;JWT&gt;</code> <em>Request Payload</em>: \
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>`{ \
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> &quot;event&quot; : &quot;broadcast&quot;, \
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>     &quot;eventDetails&quot;:{ \
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      &quot;identity&quot; : [&quot;&amp;lt;Mobile number with country code&gt;&quot;] // Ex: +919030132231 \
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> &quot;message&quot;: { \
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>       &quot;contentMessage&quot;: { \
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        &quot;text&quot;: &quot;&quot; \
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    } \
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>   } \
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   } \
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  }`
-</span></code></pre></div>
-3. <strong>Test Access</strong>: From the <strong>Channels **-&gt; **RCS Messaging</strong> page, on the <strong>Configurations</strong> tab, you will be able to see:
-* WebHook URL: set to the URL captured in the request form in Step 1
-* Opt-in URL: configured to send the opt-in messages to the platform.
-4. Publishing the channel will allow test numbers to talk to the assistant. The channel still needs to be launched for access by users as elaborated in the next section.
-5. The <strong>RCS Business Messaging OptOut</strong> event will be invoked when the user sends the message as configured in the RCS Opt-Out event. The platform will notify the business that the user has Opted out of receiving messages through the webhook URL (The URL is captured in Step 1). Any request to send messages to the users that have opted-out will be rejected. After having opted out, if the user continues conversing with the bot agent (without explicitly opting in again) standard message will be triggered. The message can be managed from the Events section in the XO Platform.</p>
-</li>
-</ol>
-<h2 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h2>
-<p>The webhook URL provided by you at Step 1 will receive the following events so that the business can take appropriate action:</p>
-<ul>
-<li>When user opts out of receiving notifications: \
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>`{&quot;event&quot;:&quot;USER_OPTED_OUT&quot;, \
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;userIdentity&quot;:&quot;&amp;lt;Mobile number with country code&gt;&quot;}`
-</span></code></pre></div></li>
-<li>When a device that does not support RCS (OR) the bot agent is not launched receives an <code>opt-in</code> or <code>broadcast</code> request:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> `{&quot;event&quot;:&quot;RCS_NOT_SUPPORTED_IN_TARGET_DEVICE&quot;, \
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&quot;userIdentity&quot;:&quot;&amp;lt;Mobile number with country code&gt;&quot;, \
-</span></code></pre></div>
-"message":"This operation is blocked because the RBM agent has not launched and the recipient has not been invited and accepted the invitation to become a tester." \
-}`</li>
-<li>When user sends a message to the bot agent after opting out to receive messages: \
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>`{&quot;event&quot;:&quot;OPTED_OUT_USER_ATTEMPTS_TO_MESSAGE&quot;, \
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&quot;userIdentity&quot;:&quot;&amp;lt;Mobile number with country code&gt;&quot;}`
-</span></code></pre></div></li>
-<li>When business tries to broadcast message to the user who opted out to receive messages: \
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>`{&quot;event&quot;:&quot;BROADCAST_ATTEMPT_TO_OPTED_OUT_USER&quot;, \
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&quot;userIdentity&quot;:&quot;&amp;lt;Mobile number with country code&gt;&quot;}`
-</span></code></pre></div></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Publishing the channel will allow test numbers to talk to the assistant. The channel still needs to be launched for access by users.</p>
+<p>The mobile number should have the country code preceded by a plus (+) sign to activate the <strong>Infobip</strong> and <strong>WhatsApp</strong> connections.</p>
 </div>
+</li>
+<li>
+<p>Once the number is associated, select the <strong>Senders</strong> tab to view or edit the numbers for <strong>WhatsApp</strong> messaging.
+<a class="glightbox" href="../images/whatsapp3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp3.png" alt="infobib connection" title="infobib connection" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click the <strong>ellipses</strong> icon under <strong>Action</strong> and select <strong>Edit Configuration</strong>.
+<a class="glightbox" href="../images/whatsapp4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp4.png" alt="edit infobib configuration" title="edit infobib configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>On the <strong>Edit Configuration</strong> page, click the <strong>edit</strong> icon, add the <strong>URL for incoming messages</strong> (copy the Webhook URL from the Kore Platform under <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>WhatsApp Business Messaging</strong> &gt; <strong>Configurations</strong> tab) and click <strong>Back</strong>.
+<a class="glightbox" href="../images/whatsapp5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp5.png" alt="deploy infobib" title="deploy infobib " style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Next, to add Infobip’s <strong>Base URL</strong>, follow these steps:</p>
 <ul>
-<li>The RCS Business Messaging OptOut event will be invoked when the user sends the message "OPT-OUT" to the bot agent (see below for details).</li>
-<li>The platform will notify the business that the user has Opted out of receiving messages through the webhook URL. The URL is captured in Step 1.</li>
-<li>Any request to send messages to the users that have opted-out will be rejected.</li>
-<li>After having opted out, if the user continues conversing with the bot agent (without explicitly opting in again) standard message will be triggered. The message can be managed from the Events section in the XO Platform.</li>
+<li>On the Kore.ai Platform, click the <strong>Virtual Assistants</strong> tab, and select the published virtual assistant to add the <strong>WhatsApp Business Message</strong> channel.</li>
 </ul>
-<h2 id="launch-the-bot-agent">Launch the Bot Agent<a class="headerlink" href="#launch-the-bot-agent" title="Permanent link">&para;</a></h2>
-<p>After having verified your bot agent, you can launch for end users by following the steps below:</p>
-<ol>
-<li>On the XO Platform, from the <strong>Channels</strong> open the <strong>RCS Business Messaging</strong> page.</li>
-<li>Navigate to <strong>Configurations</strong> tab</li>
-<li>Set <strong>Launch Bot</strong> agent to <em>Yes</em></li>
-<li>Click  <strong>Save</strong> button.</li>
-<li>Kore.ai support team will contact you with a <strong>questionnaire</strong> which will be submitted to Google RCS Business Messaging team for approval on your behalf.</li>
-<li>A <strong>consent email</strong> will be sent to the brand employee (as mentioned by you in the request form filled in step 1) by Kore.ai Support and the response will be forwarded to the Google RCS team.</li>
-<li>Once Google RCS Business Messaging team reviews the Bot Agent and approves, you will receive a confirmation email from Kore.ai support team.</li>
-<li>Your VA’s users can now start using the RCS Messaging by opting for the same.</li>
+<p><a class="glightbox" href="../images/whatsapp6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp6.png" alt="infobib sender" title="infobib sender" style="border: 1px solid gray; zoom:70%;"></a></p>
+<ul>
+<li>Under <strong>Deploy</strong> &gt; <strong>Channels</strong>, click <strong>WhatsApp Business Messaging</strong>.</li>
+<li>
+<p>On the <strong>WhatsApp Business Messaging</strong> panel, click the <strong>Configurations</strong> tab and provide inputs for the following fields:</p>
+<ul>
+<li><strong>Messaging Partner</strong> – Select <strong>Infobip</strong> from the dropdown list.</li>
+<li><strong>Phone Number</strong> – Copy and paste the number displayed on the <strong>Infobip</strong> portal for your account under the <strong>Connect</strong> section (please refer to step 3). The Platform now supports <strong>adding multiple phone numbers on the WhatsApp Messaging Channel</strong> for the same Virtual Assistant. The Virtual Assistant responds to only the source number from which it receives the message rather than a common phone number. <a href="https://developer.kore.ai/docs/bots/channel-enablement/whatsapp-messaging-channel-support-for-multiple-phone-numbers/">Learn more</a>.</li>
+<li>
+<p><strong>Base URL</strong>: Copy the Base URL from this page. This URL will be used on Kore.ai to send the messages when the <strong>WhatsApp Business Messaging</strong> channel is enabled.
+<a class="glightbox" href="../images/whatsapp7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp7.png" alt="infobib messaging partner" title="infobib messaging partner" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p><strong>Username and Password</strong>: The username and password of the <strong>Infobip</strong> account holder. Infobip’s API requires authentication and uses the basic authorization for sending and receiving messages over the API with these values.</p>
+</li>
+<li><strong>Webhook URL</strong>: Copy the webhook URL provided in the configuration tab and update the same on the <strong>Infobip developer portal</strong> for Infobip to send the received messages from the subscriber (WhatsApp Business Messaging).</li>
+</ul>
+<p><a class="glightbox" href="../images/whatsapp8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp8.png" alt="infobib API" title="infobib API" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Select <strong>Yes</strong> to enable the <strong>WhatsApp Business Messaging</strong> channel.</p>
+</li>
+<li>Click <strong>Save</strong> to complete the integration setup.
+<a class="glightbox" href="../images/whatsapp9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp9.png" alt="save infobib configuration" title="save infobib configuration" style="border: 1px solid gray; zoom:70%;"></a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re using the development sandbox on <strong>Infobip</strong>, once the channel is enabled and published, you will need to send messages in the format “<strong><em>[Keyword on infobip]</em></strong> <strong>(User input)</strong>” For example, “Kore Hi”.</p>
+</div>
+</li>
 </ol>
-<p>After the channel is enabled and all configurations are verified, you can optionally publish the assistant to make it available for end-users, with the new channel. Learn more about <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/">Publishing your Virtual Assistant</a>.</p>
-<p>To learn more about working with Channels within the Kore.ai XO Platform, please see<a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/"> Channel Enablement.</a></p>
+<h3 id="viewing-whatsapp-message-logs-on-infobip">Viewing WhatsApp Message Logs on Infobip<a class="headerlink" href="#viewing-whatsapp-message-logs-on-infobip" title="Permanent link">&para;</a></h3>
+<p>Once you’ve sent a message to <strong>Infobip</strong> using the <strong>WhatsApp Business Messaging</strong> channel, you can track the text, Virtual Assistant responses, delivery status, and errors (if any) on your <strong>Infobip</strong> account under <strong>Channels and Numbers</strong> &gt; <strong>Channel Essentials</strong> &gt; <strong>WhatsApp</strong> &gt; <strong>Overview</strong> &gt; <strong>View Logs</strong>.</p>
+<p><a class="glightbox" href="../images/whatsapp10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp10.png" alt="view infobib logs" title="view infobib logs" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p><a class="glightbox" href="../images/whatsapp11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp11.png" alt="infobib errors" title="infobib errors" style="border: 1px solid gray; zoom:70%;"></a></p>
+<h3 id="messaging-templates">Messaging Templates<a class="headerlink" href="#messaging-templates" title="Permanent link">&para;</a></h3>
+<p>WhatsApp for business communications supports the following messaging types for the Infobip channel:</p>
+<ul>
+<li><strong>Templates</strong>: Formatted, non-editable, and pre-registered messages approved by WhatsApp.</li>
+<li><strong>Free-Form texts</strong>: Free-flowing text messages.</li>
+</ul>
+<p>The Kore.ai XO Platform now supports public APIs for WhatsApp templates on the Infobip channel. These templates can be used during virtual assistant conversations to structure the messages exchanged. Since global UI/rich template formats are not supported, the bot designer should register the required templates with Infobip and get them approved.</p>
+<p>The Platform automatically decides the payload to be sent to the channels after parsing Advanced Messages (JS) that include one of the following:</p>
+<ul>
+<li><strong>String</strong>: A free-form text message template is used if the JS result is a string.</li>
+<li><strong>Object</strong>: A message template is used if the JS result is an object.</li>
+</ul>
+<p><strong>Additional Information</strong></p>
+<ul>
+<li>To learn more about creating and managing templates, please refer to this <a href="https://www.infobip.com/docs/whatsapp/manage-connection#manage-templates-manage-senders">link</a>.</li>
+<li>To know more about various message types and the structure of templates, please refer to this <a href="https://www.infobip.com/docs/whatsapp/message-types#guidelines-amp-best-practices">link</a>.</li>
+<li>To learn more about sending template messages, please refer to this <a href="https://www.infobip.com/docs/api/channels/whatsapp/whatsapp-outbound-messages/send-whatsapp-template-message">link</a>.</li>
+</ul>
+<h2 id="adding-the-whatsapp-channel-using-gupshup-application">Adding the WhatsApp Channel Using GupShup Application<a class="headerlink" href="#adding-the-whatsapp-channel-using-gupshup-application" title="Permanent link">&para;</a></h2>
+<p>The Platform supports integration with <strong>GupShup</strong> to enable WhatsApp business as a channel. In this integration, the platform provides a Webhook URL to be called by GupShup during a conversation to enable events and exchange messages.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The important steps in completing this channel enablement are as follows:</p>
+</div>
+<ol>
+<li><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-whatsapp-business-messaging-channel/#Step_1_Create_a_GupShup_Application">Create a GupShup Application</a>. \</li>
+<li>
+<p><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-whatsapp-business-messaging-channel/#Step_2_Configure_the_Channel_Enablement">Configure the Channel Enablement</a>.</p>
+</li>
+<li>
+<p><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-whatsapp-business-messaging-channel/#Step_2a_Create_a_new_WhatsApp_Business_Account">Create a WABA (WhatsApp Business Account)</a>.</p>
+</li>
+<li><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-whatsapp-business-messaging-channel/#Step_2b_Set_up_the_WABA_Parameters_on_the_Platform">Set up the WABA Parameters on the Platform</a>.</li>
+<li>
+<p><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-whatsapp-business-messaging-channel/#Step_2c_Configure_the_Callback_URLWebhook_URL">Configure the Callback URL/Webhook URL</a>.</p>
+</li>
+<li>
+<p><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-whatsapp-business-messaging-channel/#Step_3_Secure_the_Integration">Secure the Integration</a>.</p>
+</li>
+</ol>
+<h3 id="step-1-create-a-gupshup-application">Step 1: Create a GupShup Application<a class="headerlink" href="#step-1-create-a-gupshup-application" title="Permanent link">&para;</a></h3>
+<p>The first step in the WhatsApp Messaging Channel integration is to create a GupShup application, To create an app, follow the steps below:</p>
+<ol>
+<li>
+<p>Log in to the <a href="https://www.gupshup.io/whatsapp/dashboard">GupShup portal</a> and navigate to the <strong>Dashboard → WhatsApp</strong> section.
+<a class="glightbox" href="../images/whatsapp12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp12.png" alt="save gupshup application" title="save gupshup application" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click the <strong>+ Create App</strong> button.
+<a class="glightbox" href="../images/whatsapp13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp13.png" alt="create gupshup app" title="create gupshup app" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>On the <strong>Create App</strong> screen, click <strong>Access API</strong> to select the app type.
+<a class="glightbox" href="../images/whatsapp14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp14.png" alt="access gupshup api" title="access gupshup api" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Provide a unique name for the application and click <strong>Submit</strong>.
+<a class="glightbox" href="../images/whatsapp15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp15.png" alt="submit gupshup app" title="submit gupshup app" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>For <strong><em>Step 2: Onboard your Users</em></strong>, click <strong>Next</strong>.
+<a class="glightbox" href="../images/whatsapp16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp16.png" alt="onboard gupshup " title="onboard gupshup " style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+</ol>
+<h3 id="step-2-configure-the-channel-enablement">Step 2: Configure the Channel Enablement<a class="headerlink" href="#step-2-configure-the-channel-enablement" title="Permanent link">&para;</a></h3>
+<p>To send messages to your GupShup users on the WhatsApp Business Messaging Channel, follow the steps below:</p>
+<h3 id="step-2a-create-a-new-whatsapp-business-account">Step 2(a): Create a new WhatsApp Business Account<a class="headerlink" href="#step-2a-create-a-new-whatsapp-business-account" title="Permanent link">&para;</a></h3>
+<p>Once you have created a GupShup app, you need to create a <strong>WABA</strong> to set up the integration with a number. To create a WABA, follow the steps below:</p>
+<ol>
+<li>Navigate to the WhatsApp Dashboard on your GupShup Developer Console.</li>
+<li>
+<p>Click the <strong>Go Live</strong> button of the desired app in the list.
+<a class="glightbox" href="../images/whatsapp17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp17.png" alt="enable gupshup app" title="enable gupshup app" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>On the <strong>Let’s Get Started</strong> window, select the <strong>New Number</strong> option under <strong>Managed onboarding with Gupshup</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Proceed</strong>.
+<a class="glightbox" href="../images/whatsapp18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp18.png" alt="add gupshup number" title="add gupshup number" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Enter your details to set up your WhatsApp Business account and click <strong>Next</strong>.</p>
+</li>
+<li>Follow all the instructions on the screen to <strong>Setup the WhatsApp Account, Get WhatsApp Approvals</strong>, and <strong>Complete Verification</strong>.</li>
+<li>Once the account is verified with your <em>Facebook Business ID</em>, the <strong>WABA ID</strong>, <strong>Mobile number</strong>, and <strong>Password</strong> are displayed.</li>
+</ol>
+<h3 id="step-2b-set-up-the-waba-parameters-on-the-platform">Step 2(b): Set up the WABA Parameters on the Platform<a class="headerlink" href="#step-2b-set-up-the-waba-parameters-on-the-platform" title="Permanent link">&para;</a></h3>
+<p>To integrate your GupShup service using the WBM channel to the Kore.ai XO Platform, follow the steps below:</p>
+<ol>
+<li>Copy the <strong>Mobile number</strong>, <strong>WABA ID</strong>, and the <strong>Password</strong> from the GupShup WhatsApp Dashboard.</li>
+<li>On the Kore.ai Bot Builder, navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>WhatsApp Business Messaging</strong> (under <strong>Enterprise Channels</strong>).</li>
+<li>Click the <strong>Configurations</strong> tab on the <strong>WhatsApp Business Messaging</strong> window.</li>
+<li>Select <strong>GupShup</strong> from the dropdown list for <strong>Messaging Partner</strong>.</li>
+<li>Paste the copied values for <strong>Mobile number</strong>, <strong>WABA ID</strong>, and &lt;b.Password in the respective input fields.
+<a class="glightbox" href="../images/whatsapp19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp19.png" alt="add gupshup WABA ID" title="add gupshup WABA ID" style="border: 1px solid gray; zoom:70%;"></a></li>
+</ol>
+<h3 id="step-2c-configure-the-callback-urlwebhook-url">Step 2&copy;: Configure the Callback URL/Webhook URL<a class="headerlink" href="#step-2c-configure-the-callback-urlwebhook-url" title="Permanent link">&para;</a></h3>
+<p>To link to your bot on the Kore.ai Platform to receive inbound messages/events, you must configure the <strong>Callback/Webhook URL</strong> on your <strong>GupShup WhatsApp Dashboard</strong>.</p>
+<p>To set up the <strong>Callback URL</strong>, follow the steps below:</p>
+<ol>
+<li>On the Kore.ai Bot Builder, navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>WhatsApp Business Messaging</strong> (under <strong>Enterprise Channels</strong>).</li>
+<li>Click the <strong>Configurations</strong> tab on the <strong>WhatsApp Business Messaging</strong> window.</li>
+<li>
+<p>Ensure you have selected <strong>GupShup</strong> for the <strong>Messaging Partner</strong> field. Click <strong>Copy</strong> to copy the <strong>Webhook URL</strong>.
+<a class="glightbox" href="../images/whatsapp20.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp20.png" alt="enter gupshup webhook" title="enter gupshup webhook" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Navigate to your <strong>GupShup WhatsApp Dashboard</strong>.</p>
+</li>
+<li>Click the <strong>Settings</strong> icon for your app of type <strong>Access API</strong>.</li>
+</ol>
+<p><a class="glightbox" href="../images/whatsapp21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp21.png" alt="enter gupshup settings" title="enter gupshup settings" style="border: 1px solid gray; zoom:70%;"></a></p>
+<ol>
+<li>On the <strong>Settings</strong> page, scroll down to the **Test Access API and set callback URL **section.</li>
+<li>Click the <strong>Callback URL / Link your Bot</strong> tab.</li>
+<li>
+<p>Turn on the toggle switch and paste the <strong>Webhook URL</strong> you copied from the Bot Builder in the <strong>Enter your Callback URL</strong> input field.
+<a class="glightbox" href="../images/whatsapp22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp22.png" alt="test gupshup api" title="test gupshup api" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click <strong>Set</strong>.</p>
+<p>Refer to this <a href="https://www.gupshup.io/developer/docs/bot-platform/guide/whatsapp-api-documentation#setupcallbackURL">link</a> for more information on setting up the Callback/Webhook URL on the Gupshup Dashboard.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Contact the Gupshup customer support team to help configure the Kore.ai webhook URL on GupShup and enable inbound messages to the bot.</p>
+</div>
+</li>
+<li>
+<p>Once the callback is set successfully on the Kore.ai XO Platform <strong>WhatsApp Business Messaging</strong> window, follow the steps below:</p>
+<ul>
+<li>(Optional) Enable the <strong>Associate an App</strong> option, if required, and follow the configuration steps.</li>
+<li>Select <strong>YES</strong> for the <strong>Enable Channel</strong> option.</li>
+<li>Click <strong>Save</strong>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="step-3-secure-the-integration">Step 3: Secure the Integration<a class="headerlink" href="#step-3-secure-the-integration" title="Permanent link">&para;</a></h3>
+<p>The Webhook URL used on the WhatsApp Business Messaging Channel for GupShup is a public URL that may cause security vulnerabilities. The Kore.ai XO Platform enforces an authentication mechanism by securing the webhook URL and associating it with a Kore.ai App. The <strong>Associate an App</strong> feature is used for this purpose.</p>
+<p>This feature is available under <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>WhatsApp Business Messaging</strong> &gt; <strong>Configurations</strong>.</p>
+<p><a class="glightbox" href="../images/whatsapp23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp23.png" alt="secure gupshup integration" title="secure gupshup integration" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p><strong>How it Works</strong></p>
+<p>When <strong>Associate an App</strong> is enabled, the following happens:</p>
+<ol>
+<li>The URL is called by <strong>GupShup</strong> (the Callback URL you configure under Settings) where the channel passes the authorization token as the header information.</li>
+<li>The Platform checks for the JWT Token of the associated app in the Header and accepts the Webhook API call(s).</li>
+<li>However, if the Token is missing, the Platform rejects the incoming API call(s) and responds with an error code.</li>
+</ol>
+<p>Once you enable <strong>Associate an App</strong>, you must manually select an app and configure it for the GupShup app (by clicking <strong>Copy</strong> and pasting the <em>Client ID</em> and <em>Client Secret</em> (shown above) from the Kore.ai XO Platform).</p>
+<p><strong>Note</strong>: This channel configuration is not a part of the Bot Import/Export feature. The user should manually enable the channel for the target Bot. The integration flow remains the same even with the <strong>App Association</strong> feature.</p>
+<h3 id="messaging-templates_1"><strong>Messaging Templates</strong><a class="headerlink" href="#messaging-templates_1" title="Permanent link">&para;</a></h3>
+<p>As part of the GupShup WhatsApp channel integration, the Platform supports the following Gupshup outbound message types to provide an engaging, interactive end-user experience:</p>
+<ul>
+<li><strong>Templates:</strong> WhatsApp-approved, pre-formatted messages that are not editable.</li>
+<li><strong>Free-flowing</strong>: Messages that support all media types are known as “free-form.”</li>
+</ul>
+<p>You may have to switch between these message types depending on the timing and initiation of the chat.</p>
+<p>Whether you are messaging clients inside the messaging window determines the type of message you send. When messaging customers outside of this window, you must follow pre-approved message template rules. <a href="https://docs.gupshup.io/docs/message-types-templates#message-templates">Learn more</a>.</p>
+<p>The Kore.ai XO Platform supports public APIs for the above WhatsApp Outbound Templates on the GupShup channel. These templates can be used during virtual assistant conversations to structure the messages exchanged.</p>
+<h3 id="support-for-whatsapp-pay"><strong>Support for WhatsApp Pay</strong><a class="headerlink" href="#support-for-whatsapp-pay" title="Permanent link">&para;</a></h3>
+<p>The XO Platform supports WhatsApp Pay, a digital payment service that enables instant money transfers between banks through mobile devices using the Unified Payments Interface (UPI) system for the GupShup channel. GupShup, as a WhatsApp Business integration provider, supports outbound message types <strong>Order Details [Text]</strong> and** Order Status** templates, which are also supported on the XO Platform via APIs.</p>
+<p><strong>How it Works</strong></p>
+<ol>
+<li>When the end user completes the transaction using the WhatsApp Pay template rendered on the WhatsApp channel, the Platform receives an inbound message.</li>
+<li>The Inbound message is in the form of a JSON Object containing payment details and their respective status.</li>
+<li>The Platform automatically decides the payload to be sent to the channels after parsing Advanced Messages (JS) that include one of the following:<ul>
+<li><strong>String</strong>: A free-form text message template is used if the JS result is a string.</li>
+<li><strong>Object</strong>: A message template is used if the JS result is an object.</li>
+</ul>
+</li>
+<li>The Platform accepts this JSON object format as the **Composite **entity type and stores it in the context object under the respective entity.</li>
+</ol>
+<p>An example of a success payload is given below:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> {
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   &quot;waNumber&quot;: &quot;919XXXXXXXX3&quot;,
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   &quot;mobile&quot;: &quot;919XXXXXXXX&quot;,
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  &quot;interactive&quot;: &quot;{\&quot;payment\&quot;:{\&quot;transaction_id\&quot;:\&quot;31706099xxxx\&quot;,\&quot;reference_id\&quot;:\&quot;fastag091-12xx\&quot;,\&quot;total_amount\&quot;:{\&quot;offset\&quot;:100,\&quot;value\&quot;:300},\&quot;currency\&quot;:\&quot;INR\&quot;,\&quot;transaction_type\&quot;:\&quot;upi\&quot;,\&quot;status\&quot;:\&quot;success\&quot;},\&quot;type\&quot;:\&quot;payment\&quot;}&quot;,
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  &quot;name&quot;: &quot;ɹɐʞsxxxxx sxxxxxɹɥS&quot;,
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  &quot;type&quot;: &quot;interactive&quot;,
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  &quot;timestamp&quot;: &quot;1687160320000&quot;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>}
+</span></code></pre></div>
+<h2 id="adding-the-whatsapp-channel-using-karix-application">Adding the WhatsApp Channel Using Karix Application<a class="headerlink" href="#adding-the-whatsapp-channel-using-karix-application" title="Permanent link">&para;</a></h2>
+<p>To integrate <strong>Karix</strong> to your <em>WhatsApp Business Messaging</em> channel and enable it for a bot, you’ll need to perform the following setup under the <strong>Configuration</strong> tab.</p>
+<p><strong>Note</strong>: To complete this procedure, you must already have a _Karix _account. This is one of the messaging provider for enabling WhatsApp Business Messaging.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Gather the following details from the <strong>Karix support team</strong>.<ul>
+<li>Vendor</li>
+<li>Account Key</li>
+<li>From</li>
+</ul>
+</li>
+<li>Copy the <em>Webhook URL</em> from the <strong>Kore.ai Platform</strong> and share it with the <strong>Karix support team</strong>. The Karix support team will need to configure this URL on their platform for a successful handshake between <em>Kore.ai</em> and <em>Karix</em>.</li>
+</ol>
+<h3 id="configuration-steps">Configuration Steps<a class="headerlink" href="#configuration-steps" title="Permanent link">&para;</a></h3>
+<p>On the WhatsApp Business Messaging platform, follow the below steps:</p>
+<ol>
+<li>Select <em>Karix</em> from the list for <strong>Messaging Partner</strong>.</li>
+<li>Enter the <strong>Phone Number</strong> to map to the WhatsApp Business Messaging channel.</li>
+<li>Provide the <strong>Account Key</strong> you’ve received from the Karix support team.</li>
+<li>Provide the **Webhook URL ** shared with the Karix support team.</li>
+<li>Select <strong>Yes</strong> for <strong>Enable Channel</strong>.</li>
+<li>Click <strong>Save</strong>.
+<a class="glightbox" href="../images/whatsapp24.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp24.png" alt="configure karix" title="configure karix" style="border: 1px solid gray; zoom:70%;"></a></li>
+</ol>
 
 
   
