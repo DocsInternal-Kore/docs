@@ -2988,7 +2988,7 @@
 <p>By using <strong>NL analysis</strong>, you can see whether the intent was identified or not by an external NLU engine. This works from all the workflows that provide the NLP analysis. For example – <strong><a href="#talk-to-bot">Talk to Bot</a>, <a href="#utterance-testing">Utterance Testing</a>, <a href="#batch-testing">Batch Testing</a>, <a href="#health-and-monitoring">Health and Monitoring</a></strong>, and <strong><a href="#nlp-insights">NLP Insights</a></strong>.</p>
 <p>See the following sections to understand more details.</p>
 <h2 id="utterance-testing">Utterance Testing<a class="headerlink" href="#utterance-testing" title="Permanent link">&para;</a></h2>
-<p><a href="../../../automation/testing/testing-your-bot-with-nlp" target="_blank">Utterance Testing</a> also provides NLP Analysis. The <strong>Matched Intents</strong> and <strong>Fields/Entities</strong> tables that provide an easy way to update training data like synonyms, patterns, etc are not displayed if the Intent is identified on the external NLU engine.</p>
+<p><a href="../../../../automation/testing/testing-your-bot-with-nlp" target="_blank">Utterance Testing</a> also provides NLP Analysis. The <strong>Matched Intents</strong> and <strong>Fields/Entities</strong> tables that provide an easy way to update training data like synonyms, patterns, etc are not displayed if the Intent is identified on the external NLU engine.</p>
 <ul>
 <li>
 <p>If the intent is detected by an external engine, the utterance is not sent to the Kore.ai NLP engine.<br />
@@ -3014,7 +3014,7 @@
 <p class="admonition-title">Note<p>There is no common base to compare the scores of all the engines, hence scores sent by the external NLU are not considered.</p>
 </p>
 </div>
-<p>For any intent detected by the external NLU, it should be considered that the thresholds have been met and in the ‘<strong>Matched Intent Score</strong>’ column, this is indicated as <em>ExtNLU (without any score against it)</em> in place of ML, FM, or KG scores. This can be viewed in the downloaded CSV under NLU of Batch Testing. To know more, see <a href="../../../automation/testing/regression-testing/batch-testing" target="_blank">Batch Testing</a>.</p>
+<p>For any intent detected by the external NLU, it should be considered that the thresholds have been met and in the ‘<strong>Matched Intent Score</strong>’ column, this is indicated as <em>ExtNLU (without any score against it)</em> in place of ML, FM, or KG scores. This can be viewed in the downloaded CSV under NLU of Batch Testing. To know more, see <a href="../../../../automation/testing/regression-testing/batch-testing" target="_blank">Batch Testing</a>.</p>
 <p><a class="glightbox" href="../images/external-nlu-test-and-debug-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img9.png" alt="ExtNLU Matched intent score" title="ExtNLU Matched intent score" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p>If the ExtNLU returns multiple intents, the thresholds met for all those intents are considered and accordingly the test result is concluded.</p>
 <h2 id="health-and-monitoring">Health and Monitoring<a class="headerlink" href="#health-and-monitoring" title="Permanent link">&para;</a></h2>
@@ -3024,7 +3024,7 @@
 </p>
 </div>
 <p><a class="glightbox" href="../images/external-nlu-test-and-debug-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img10.png" alt="Intents and Entities identified by External NLU" title="Intents and Entities identified by External NLU" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p>For more information, see <a href="../../../../automation/testing/regression-testing/health-and-monitoring/virtual-assistants-health-and-monitoring/" target="_blank">Virtual Assistant Health and Monitoring</a>.</p>
+<p>For more information, see <a href="../../../../automation/testing/regression-testing/health-and-monitoring/virtual-assistants-health-and-monitoring.md" target="_blank">Virtual Assistant Health and Monitoring</a>.</p>
 <h2 id="nlp-insights">NLP Insights<a class="headerlink" href="#nlp-insights" title="Permanent link">&para;</a></h2>
 <p>NLP Insights have Intent Identified, Intent Not Identified utterances and their NLP analysis details captured. You can view the details of all the failed External NLU API calls in the debug logs of NLP Insights.</p>
 <p><a class="glightbox" href="../images/external-nlu-test-and-debug-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img11.png" alt="Failed External NLU API calls" title="Failed External NLU API calls" style="border: 1px solid gray;zoom:50%;"/></a></p>
