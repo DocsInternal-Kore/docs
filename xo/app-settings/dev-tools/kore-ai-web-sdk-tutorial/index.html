@@ -2991,16 +2991,14 @@ To get started, you will need to build a bot to run in the test application, and
 <li>Client Secret</li>
 </ol>
 </li>
-<li>
-<p>Click <strong>Save</strong>.<br />
-  Now that the bot is created and defined for the Web/Mobile Client channel, you are ready to publish and deploy your bot.<br />
-  !!! note</p>
-<div class="language-text highlight"><pre><span></span><code>By default, the Travel Sample Planning bot is configured with **Target Audience** set to **Enterprise Users** on the **Build** tab in the **Configurations -&gt; General Settings. **Optionally, you can define this bot for **General Public** use. Once this bot is published, the **Target Audience** cannot be changed.
+<li>Click <strong>Save</strong>.<br />
+  Now that the bot is created and defined for the Web/Mobile Client channel, you are ready to publish and deploy your bot.  </li>
+</ol>
+<p>!!! note</p>
+<div class="language-text highlight"><pre><span></span><code>    By default, the Travel Sample Planning bot is configured with **Target Audience** set to **Enterprise Users** on the **Build** tab in the **Configurations -&gt; General Settings. **Optionally, you can define this bot for **General Public** use. Once this bot is published, the **Target Audience** cannot be changed.
 </code></pre></div>
-</li>
-<li>
-<p>On the <strong>Deploy</strong> tab, click <strong>Bot Management -&gt; Publish</strong>.</p>
-</li>
+<ol>
+<li>On the <strong>Deploy</strong> tab, click <strong>Bot Management -&gt; Publish</strong>.</li>
 <li>On <strong>Publish</strong> page, select all tasks, and then click <strong>Proceed</strong>.</li>
 <li>Enter a comment and <strong>Confirm</strong> publish.<br />
   After an enterprise developer publishes a bot, it must be approved and assigned to the users for use.</li>
@@ -3067,9 +3065,11 @@ To get started, you will need to build a bot to run in the test application, and
 <p>Ensure that in kore-config.js you set the audience for your bot. Choose one of the following:</p>
 <ol>
 <li>
-<p><code>"isAnonymous": &lt; <strong>false </strong>&gt;;</code> if bot is deployed for the <strong>enterprise users</strong>, and then set <code>botOptions.userIdentity = '<strong>&lt;</strong> <strong>Your email ID &gt;</strong>';</p>
-<p><strong>– or –</strong></code>
-            2. <code>"isAnonymous": &lt; <strong>true </strong>&gt;;</code> if bot is deployed for <strong>Consumer Use</strong></p>
+<p><code>"isAnonymous": &lt; <strong>false </strong>&gt;;</code> if bot is deployed for the <strong>enterprise users</strong>, and then set <code>botOptions.userIdentity = '<strong>&lt;</strong> <strong>Your email ID &gt;</strong>'</code>;</p>
+<p><strong>– or –</strong></p>
+</li>
+<li>
+<p><code>"isAnonymous": &lt; <strong>true </strong>&gt;;</code> if bot is deployed for <strong>Consumer Use</strong></p>
 </li>
 </ol>
 </li>
@@ -3077,18 +3077,18 @@ To get started, you will need to build a bot to run in the test application, and
 </li>
 <li>
 <p>This step is valid for older Web SDK file downloaded <span style="text-decoration:underline;">before ver7.2</span> of the platform i.e. <span style="text-decoration:underline;">before Feb 2020</span></p>
-<p>Open the index.html file from the …/SDKApp/sdk/UI folder using a text editor:
-1. Update the following lines to add the path to the UI folder:</p>
-<div class="language-text highlight"><pre><span></span><code>```
-&lt;script src=&quot;libs/jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;libs/jquery.tmpl.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;libs/jquery-ui.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;link href=&quot;libs/jquery-ui.min.css&quot; rel=&quot;stylesheet&quot;&gt;&lt;/link&gt;
-&lt;script src=&quot;chatWindow.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;link href=&quot;chatWindow.css&quot; rel=&quot;stylesheet&quot;&gt;&lt;/link&gt;
-```
-</code></pre></div>
+<p>Open the index.html file from the …/SDKApp/sdk/UI folder using a text editor:</p>
 <ol>
+<li>
+<p>Update the following lines to add the path to the UI folder:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;script src=&quot;libs/jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;script src=&quot;libs/jquery.tmpl.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&lt;script src=&quot;libs/jquery-ui.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&lt;link href=&quot;libs/jquery-ui.min.css&quot; rel=&quot;stylesheet&quot;&gt;&lt;/link&gt;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&lt;script src=&quot;chatWindow.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>&lt;link href=&quot;chatWindow.css&quot; rel=&quot;stylesheet&quot;&gt;&lt;/link&gt;
+</span></code></pre></div>
+</li>
 <li>
 <p>Update the following parameters to run as local host</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>“clientSecret”: “{client secret}”
@@ -3113,9 +3113,11 @@ To get started, you will need to build a bot to run in the test application, and
 <p>Choose one of the following:</p>
 <ul>
 <li>
-<p><code>"isAnonymous": &lt; <strong>false </strong>&gt;;</code> if bot is deployed for the <strong>enterprise users</strong>, and then set <code>botOptions.userIdentity = '<strong>&lt;</strong> <strong>Your email ID &gt;</strong>';</p>
-<p><strong>– or –</strong></code>
-            * <code>"isAnonymous": &lt; <strong>true </strong>&gt;;</code> if bot is deployed for <strong>Consumer Use</strong></p>
+<p><code>"isAnonymous": &lt; <strong>false </strong>&gt;;</code> if bot is deployed for the <strong>enterprise users</strong>, and then set <code>botOptions.userIdentity = '<strong>&lt;</strong> <strong>Your email ID &gt;</strong>'</code>;</p>
+<p><strong>– or –</strong></p>
+</li>
+<li>
+<p><code>"isAnonymous": &lt; <strong>true </strong>&gt;;</code> if bot is deployed for <strong>Consumer Use</strong></p>
 </li>
 </ul>
 </li>
@@ -3206,8 +3208,8 @@ For example, a user may have started the conversation with the bot using an anon
 <h3 id="some-commonly-encountered-errors">Some commonly encountered errors<a class="headerlink" href="#some-commonly-encountered-errors" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>A wrong URL is given in index.html, users see a 404 error. Double check the URL. URL changes depending on whether you are hosting the bot on your own web SDK or on Kore’s web SDK. If its Kore web SDK, then the URL is <code>http://demo.kore.net:3000/users/sts 7</code>.
-    If you are hosting on your in-house web SDK, then provide the respective URL.</p>
+<p>A wrong URL is given in index.html, users see a 404 error. Double check the URL. URL changes depending on whether you are hosting the bot on your own web SDK or on Kore’s web SDK. If its Kore web SDK, then the URL is <code>http://demo.kore.net:3000/users/sts 7</code>.</p>
+<p>If you are hosting on your in-house web SDK, then provide the respective URL.</p>
 </li>
 <li>
 <p>missing/Invalid jwt.sub(): This error occurs for enterprise Bots, when the user’s email id is not given in the index.html file. Provide users identity as shown below in index.html</p>
