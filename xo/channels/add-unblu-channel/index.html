@@ -2895,17 +2895,18 @@ For a detailed document on the implementation, <a href="https://developer.kore.a
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   serverUrl: &quot;&lt;your-unblu-host&gt;&quot;
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        * `  })`
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  ```
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    * In the following Script tag, add Unblu host URL and the API key: `&amp;lt;script type=&quot;text/javascript&quot; defer=&quot;defer&quot; src=&quot;&amp;lt;your-unblu-host&gt;/unblu/visitor.js?x-unblu-apikey=&amp;lt;your-unblu-apikey&gt;&quot;&gt;&amp;lt;/script&gt;`
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>The entire Unblu SDK HTML file would look like this: \
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>In the following Script tag, add Unblu host URL and the API key: `&amp;lt;script type=&quot;text/javascript&quot; defer=&quot;defer&quot; src=&quot;&amp;lt;your-unblu-host&gt;/unblu/visitor.js?x-unblu-apikey=&amp;lt;your-unblu-apikey&gt;&quot;&gt;&amp;lt;/script&gt;`
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>The entire Unblu SDK HTML file would look like this: \
 </span></code></pre></div>
 <!DOCTYPE html>
-<p><html></p>
-<p><head></p>
-<p><meta name="unblu:named-area" content="\<your-namedArea-Id>" /></p>
-<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+<p><html>
+<head>
+   <meta name="unblu:named-area" content="\<your-namedArea-Id>" />
+ <br />
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script></p>
 <script src="<your-unblu-host>/unblu/js-api/v2/visitor/visitor-api.min.js"></script>
-
 <script>
    function setVisitorData(engagementType, visitorData) {
       return Promise.resolve(JSON.stringify({ name: "John", about: "Tester" }));
@@ -2918,8 +2919,6 @@ For a detailed document on the implementation, <a href="https://developer.kore.a
       .initialize().then(function (api) {
         console.log("API initialized successfully!");
         api.setNewConversationInterceptor(setVisitorData);
-
-
             }).catch(e => {
                 console.log("------error : ", e);
                 if (e.type === 'INITIALIZATION_TIMEOUT') {
@@ -2929,10 +2928,9 @@ For a detailed document on the implementation, <a href="https://developer.kore.a
                 } else {
                  // show generic error message
                  }
-           });
-
+           }
+           );
 </script>
-
 <script type="text/javascript" defer="defer"
 src="<your-unblu-host>/unblu/visitor.js?x-unblu-apikey=<your-unblu-apikey>"></script>
 <p> <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
@@ -3064,27 +3062,25 @@ src="<your-unblu-host>/unblu/visitor.js?x-unblu-apikey=<your-unblu-apikey>"></sc
  "authInfo" : null,
  "propagated" : false
  }
-}
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>## Special Notes
+}</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>## Special Notes
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>There are multiple functionalities that can be achieved by the integration of Unblu channel with Kore.ai assistant
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>* When mapping a named area to a bot, _multiple named areas_ can be mapped. This way a single Kore.ai assistant has the ability to accept Unblu dialog offer requests from different origins like SDKs or namedAreas.
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>* Also, the named area mapping is optional if you are enabling the Unblu channel for a single Kore.ai assistant.
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>* You can redirect user conversations to agents by adding an _agent transfer_ node in the dialog flow, note that you need not enable the Agent Transfer or BotKit specifically for this Channel. Having an agent transfer node is sufficient.
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>* The user information for each message from Unblu is available in the `usercontext.customData` and you can use it for further processing. This information includes _deviceInfo_, _authInfo_, _joinedTime_ of the user. [See here for how to use context object](https://developer.kore.ai/docs/bots/bot-builder-tool/context-object/).
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>## Using Unblu supported message templates
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>By default, the following message templates are used – Button/multi-choice, List template. You can override templates like card message, List message, multi-choice/Button message.
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>Following is a code example for how to use the above mentioned templates, change it to suit your requirements:
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>**Card Template**:
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>`var unbluCardTemplate = {`
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>* When mapping a named area to a bot, _multiple named areas_ can be mapped. This way a single Kore.ai assistant has the ability to accept Unblu dialog offer requests from different origins like SDKs or namedAreas.
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>* Also, the named area mapping is optional if you are enabling the Unblu channel for a single Kore.ai assistant.
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>* You can redirect user conversations to agents by adding an _agent transfer_ node in the dialog flow, note that you need not enable the Agent Transfer or BotKit specifically for this Channel. Having an agent transfer node is sufficient.
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>* The user information for each message from Unblu is available in the `usercontext.customData` and you can use it for further processing. This information includes _deviceInfo_, _authInfo_, _joinedTime_ of the user. [See here for how to use context object](https://developer.kore.ai/docs/bots/bot-builder-tool/context-object/).
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>## Using Unblu supported message templates
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>By default, the following message templates are used – Button/multi-choice, List template. You can override templates like card message, List message, multi-choice/Button message.
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>Following is a code example for how to use the above mentioned templates, change it to suit your requirements:
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>**Card Template**:
 </span></code></pre></div>
+<code>var unbluCardTemplate = {</code>
     "<span class="arithmatex">\(_type": "CardPostMessageData",
     "type": "CARD",
     "imageUrl": "data:image/png;base64,",
@@ -3113,11 +3109,10 @@ src="<your-unblu-host>/unblu/visitor.js?x-unblu-apikey=<your-unblu-apikey>"></sc
       }
     ]
   };</p>
-<p>print(JSON.stringify(unbluCardTemplate));
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>**List Template**:
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>`var unbluListTemplate = {`
+<p>print(JSON.stringify(unbluCardTemplate));</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>**List Template**:
 </span></code></pre></div>
+<code>var unbluListTemplate = {</code>
     "<span class="arithmatex">\(_type": "ListPostMessageData",
     "type": "LIST",
     "header": {
@@ -3174,12 +3169,11 @@ src="<your-unblu-host>/unblu/visitor.js?x-unblu-apikey=<your-unblu-apikey>"></sc
       }
     ]
 }
-print(JSON.stringify(unbluListTemplate));
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>**Multi Choice Template**:
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a> \
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>`var unbluMultiChoiceTemplate =  {`
+print(JSON.stringify(unbluListTemplate)
+);</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>**Multi Choice Template**:
 </span></code></pre></div>
+<code>var unbluMultiChoiceTemplate =  {</code>
     "<span class="arithmatex">\(_type": "MultichoiceQuestionPostMessageData",
     "type": "MULTICHOICE_QUESTION",
     "text": "Choose one of the options",
@@ -3200,6 +3194,7 @@ print(JSON.stringify(unbluListTemplate));
     ]
   };
 print(JSON.stringify(unbluMultiChoiceTemplate));</p>
+<p>```</p>
 
 
   
