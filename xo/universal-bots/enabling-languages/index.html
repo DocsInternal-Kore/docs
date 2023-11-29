@@ -17,7 +17,7 @@
     
     
       
-        <title>**Defining a Universal Bot** - Kore ai Docs</title>
+        <title>**Enabling Additional Languages for the Universal Bot** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#defining-a-universal-bot" class="md-skip">
+        <a href="#enabling-additional-languages-for-the-universal-bot" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Defining a Universal Bot**
+              **Enabling Additional Languages for the Universal Bot**
             
           </span>
         </div>
@@ -2786,55 +2786,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bot-behavior" class="md-nav__link">
-    Bot Behavior
+  <a href="#enable-language" class="md-nav__link">
+    Enable Language
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#standard-bots-vs-universal-bots" class="md-nav__link">
-    Standard Bots vs. Universal Bots
-  </a>
-  
-    <nav class="md-nav" aria-label="Standard Bots vs. Universal Bots">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enabled-features-and-configurations" class="md-nav__link">
-    Enabled Features and Configurations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#event-management" class="md-nav__link">
-    Event Management
-  </a>
-  
-    <nav class="md-nav" aria-label="Event Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#end-of-conversation" class="md-nav__link">
-    End of Conversation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    Next Steps
+  <a href="#customizing-default-dialog" class="md-nav__link">
+    Customizing Default Dialog
   </a>
   
 </li>
@@ -2858,441 +2818,54 @@
 
 
 
-<h1 id="defining-a-universal-bot"><strong>Defining a Universal Bot</strong><a class="headerlink" href="#defining-a-universal-bot" title="Permanent link">&para;</a></h1>
-<p>Kore.ai’s Universal Bots facilitate a scalable, modular approach to bot building by linking several standard individual bots into one.</p>
-<ul>
-<li><strong>Modularity</strong>: Build separate bots that address domain-specific issues and then integrate them to optimally interoperate.</li>
-<li><strong>Scalability</strong>: Start building bots that address key use cases and keep adding additional bots to address more use cases.</li>
-</ul>
-<p>Before starting with<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/creating-a-universal-bot/"> creating a Universal Bot</a>, let us understand how Universal Bots work and how they differ from Standard Bots.</p>
-<h3 id="bot-behavior"><strong>Bot Behavior</strong><a class="headerlink" href="#bot-behavior" title="Permanent link">&para;</a></h3>
-<p>Universal bot responses vary with the number of bots and tasks that match the user intent along with their relevance (exact matches or suggestions). The Natural Language Processing (NLP) engine processes the utterances sent to the linked bots, detects the user intents, and ranks them based on relevance. As a developer, you can test and train the bot responses as explained in<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/creating-a-universal-bot/#Testing_a_User_Utterance"> Test the Universal Bot</a>.</p>
-<p>Following the table shows how universal bot responses operate in various possible NLP outcomes:</p>
-<table>
-  <tr>
-   <td><strong>NLP Outcome</strong>
-   </td>
-   <td><strong>Bot Response</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Only one exact match found from any of the linked bots
-   </td>
-   <td>Executes the task with the exact match
-   </td>
-  </tr>
-  <tr>
-   <td>Exact matches found in more than one linked bot
-   </td>
-   <td>Tries to match the invocation names from the user utterance with the bot results, else prompts the user to select one.
-   </td>
-  </tr>
-  <tr>
-   <td>Exact matches found with two or more tasks of a single linked bot
-   </td>
-   <td>Disambiguates using the current bot context, else prompts the user to select one.
-   </td>
-  </tr>
-  <tr>
-   <td>Suggestions found in more than one linked bot
-   </td>
-   <td>Evaluates the individual scores and executes the winning intent based on the P&R settings.
-   </td>
-  </tr>
-  <tr>
-   <td>Suggestions found with two or more tasks of a single linked bot
-   </td>
-   <td>Executes the winning intent based on the P&R settings.
-   </td>
-  </tr>
-  <tr>
-   <td>Only one suggestion found
-   </td>
-   <td>Shows the suggestion to the user asking if they would like to select it
-   </td>
-  </tr>
-  <tr>
-   <td>No exact match or suggestion found
-   </td>
-   <td>Checks for intent in the Universal Bot – small talk or fallback bot
-   </td>
-  </tr>
-</table>
-
-<h3 id="standard-bots-vs-universal-bots"><strong>Standard Bots vs. Universal Bots</strong><a class="headerlink" href="#standard-bots-vs-universal-bots" title="Permanent link">&para;</a></h3>
-<p>Universal Bots connect multiple Standard Bots into a single bot. They support most Standard Bot features with a few exceptions.</p>
-<h4 id="enabled-features-and-configurations"><strong>Enabled Features and Configurations</strong><a class="headerlink" href="#enabled-features-and-configurations" title="Permanent link">&para;</a></h4>
-<p>This section assumes that you understand the fundamentals of<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/bot-creation/defining-a-standard-bot/"> standard bots</a>. Details relevant to the Universal Bots alone are listed here. We recommend you to refer to the relevant standard bot documentation for help with the basics.</p>
-<p>The <strong>Feature</strong> column entries in the following table provide URLs to the standard bot documentation.</p>
-<p>The <em>Learn more</em> links in the <strong>Description</strong> column refer to the universal bot documentation.</p>
-<table>
-  <tr>
-   <td><strong>Feature</strong>
-   </td>
-   <td><strong>Description</strong>
-   </td>
-  </tr>
-  <tr>
-   <td colspan="2" >
-<h5><strong>Natural Language</strong></h5>
-
-
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/test-your-bot/testing-your-bot-with-nlp/">Testing</a>
-   </td>
-   <td>Since the universal bot links together standard bots, the Natural Language Processing (NLP) settings are optimized to accurately recognize the relevant bot and intent. You can test and train the universal bot like a standard bot with small differences. When you train the task it happens at the linked bot level.<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/creating-a-universal-bot/#Step_4_Test_the_Universal_Bot"> Learn more</a>.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/test-your-bot/testing-your-bot-with-nlp/">Training</a>
-<p>
-(UB 2.0)
-   </td>
-   <td>Post ver7.3 of the platform, the Universal Bot 2.0 can be trained, the approach is slightly different from the standard bots.<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/training-a-universal-bot/"> Learn more</a>.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-dialog/#Standard_Responses">Standard Responses</a>
-   </td>
-   <td>The universal bot will hold a limited set of standard responses that are relevant to bot level functions like greetings. Go to <strong>Natural</strong> <strong>Language -> Default Conversation</strong>, to access the <strong>Standard Responses</strong> section to edit the relevant standard responses.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/test-your-bot/batch-testing/batch-testing/">Batch Testing</a>
-   </td>
-   <td>Universal bots only support testing <em>Custom-defined utterances</em> and not <em>Developer-defined utterances</em> and <em>Succesful user utterances</em>.
-<p>
-The <em>Custom-defined utterances</em> test suites remain similar to the standard bots’ except that the JSON Dataset file that you upload should contain a bot name along with the intent and input for every test case. Also, the downloaded batch test report shows the results with corresponding bot names.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-dialog/#Default_Dialog">Default Dialog</a>
-   </td>
-   <td>Universal bots come with a default dialog task that gets triggered for unidentified intents. You can customize this task or import a new one.<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/customizing-the-universal-bots-default-dialog-task/#Default_Dialog_Task"> Learn more</a>.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/bot-intelligence/event-based-bot-actions/">Event-Based Bot Actions</a>
-   </td>
-   <td>With ver8.0, you can choose different tasks from the linked bots for various events.<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/customizing-the-universal-bots-default-dialog-task/#Event_Handlers"> Learn more</a>.
-   </td>
-  </tr>
-  <tr>
-   <td>Help
-   </td>
-   <td>When a user types <strong>Help</strong> during a chat, a standard bot responds with the list of tasks that it can perform, allowing the user to select a task name to execute.
-<p>
-When it comes to Universal bots, if a user types <strong>Help</strong>, the bot responds with the names of linked bots. The user cannot select or execute a task from the list.
-   </td>
-  </tr>
-  <tr>
-   <td colspan="2" >
-<h5><strong>Channel Configuration</strong></h5>
-
-
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/">All</a>
-   </td>
-   <td>Universal bots do not obtain the channel configurations of the linked bots and need an independent channel configuration. You can set up new channels for the universal bot independent of the linked bot channels. The published tasks in the linked bots execute from the universal bot channels.<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/creating-a-universal-bot/#"> Learn more</a>.
-   </td>
-  </tr>
-  <tr>
-   <td colspan="2" >
-<h5><strong>Settings</strong></h5>
-
-
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/bot-settings/general-settings/">General Settings</a>
-   </td>
-   <td>Universal and standard bots share the same general settings.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/advanced-topics/multi-lingual/building-multi-language-bots/">Language Management</a>
-   </td>
-   <td>Universal bots do not obtain the enabled languages of the linked bots. You must enable default and additional languages explicitly for the universal bot. But when user utterances are made in an enabled language, the universal bot routes it to only those linked bot tasks that support the language. For example, if German is enabled for the universal bot and a user utters in German, the NLP engine looks for all the linked bot tasks that support German and sends the utterance to those tasks.<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/enabling-additional-languages-for-the-universal-bot/"> Learn more</a>.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/advanced-topics/collaborative-development/sharing-bots-for-development/">Developer Collaboration</a>
-   </td>
-   <td>Works similar to standard bots. Once you share a Universal Bot with other developers, they can link and unlink bots.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/advanced-topics/bot-management/viewing-the-bot-change-log/">Change Logs</a>
-   </td>
-   <td>Universal bot change logs record all the changes applicable to the standard bots, plus the following:
+<h1 id="enabling-additional-languages-for-the-universal-bot"><strong>Enabling Additional Languages for the Universal Bot</strong><a class="headerlink" href="#enabling-additional-languages-for-the-universal-bot" title="Permanent link">&para;</a></h1>
+<p>Like standard bots, you can enable more than one language for universal bots, but the functionality is completely different.</p>
+<p>When you enable a new language for a standard bot, you need to upload language packs consisting of the entire bot definitions. Whereas to enable a new language for a universal bot, you just need to set up the corresponding default dialog.</p>
+<p>Universal bots do not obtain the enabled languages of the linked bots. You must enable default and additional languages for the universal bot. When user utterances are made in an enabled language, the universal bot routes it to only those linked bot tasks that have the same language enabled. For example, if German is enabled for the universal bot and a user utters in German, the NLP engine looks for all the linked bot tasks that support German and sends the utterance only to those tasks.</p>
+<div class="language-text highlight"><pre><span></span><code>If a user interacts with the universal bot in a non-enabled language, it sends a standard response in the default language requesting the user to interact in one of the supported languages. Also, if none of the linked tasks have a relevant response, the bot triggers the language-specific default dialog.
+</code></pre></div>
+<p><strong>Before you Begin</strong></p>
+<p>This article assumes that you understand the fundamentals of multi-language bots in Kore.ai and therefore focuses on the aspects specific to the universal bots. For the fundamentals of multi-language bots in the Bots Builder, refer to<a href="https://developer.kore.ai/docs/bots/advanced-topics/multi-lingual/building-multi-language-bots/"> Building Multi-Language Bots</a>.</p>
+<h3 id="enable-language"><strong>Enable Language</strong><a class="headerlink" href="#enable-language" title="Permanent link">&para;</a></h3>
+<p>Follow these steps to enable an additional language for a universal bot:</p>
 <ol>
-
-<li>Linking of a bot
-
-<li>Un-linking of the bot
-
-<li>Change to default dialog
-
-<li>Publishing of default dialog
+<li>Open the universal bot for which you want to configure new language.</li>
+<li>Select the <strong>Build</strong> tab from the top menu.</li>
+<li>
+<p>From the left menu select <strong>Configurations -&gt; Languages</strong>. 
+    <a class="glightbox" href="../images/ub_languages.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ub_languages.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Click the <strong>Add Language</strong> button from the top right.</p>
+</li>
+<li>
+<p>On the Add Language window, click **Configure **next to the language you want to.
+    !!! note</p>
+<p>The language would be enabled only for the Universal Bot, ensure that this language is enabled and published in the linked bots as well. </p>
+</li>
+<li>
+<p>Under the <strong>Language Selection Time Frame</strong> (scroll down to view this option) select one of these options:</p>
+<ul>
+<li><strong>Lifetime</strong>: The auto-detected language or the language preference selected by the user will be set as the user’s preferred language.</li>
+<li><strong>Per Session</strong>: Detects the user’s language at the beginning of every session and responds accordingly.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>If the language cannot be determined with high confidence, the bot requests the users to select their preferred language. The default language is used to communicate with the user during language preference selection.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
 </li>
 </ol>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/bot-settings/bot-management/bot-management-2/">Import & Export bot</a>
-<p>
-(supported from ver7.1)
-   </td>
-   <td>Like standard bots, you can export and import the published and unpublished universal bots. Since universal bots deal with linked bots the following need to be taken care of:
-<ul>
-
-<li><span style="text-decoration:underline;">Export of a universal bot</span> – only the reference to the linked bot (reference id) will be included not the entire linked bot definition;
-
-<li><span style="text-decoration:underline;">Import of the universal bot</span> – in the environment where the bot is being imported to, the platform checks for the bots with reference id matching the linked bot. If found they are automatically linked to the imported universal bot. Also you should have permissions for the linke bot, else it will not be linked. Ensure that you import the linked bots before importing the universal bot.
-</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/bot-settings/bot-management/bot-management-2/#Deleting_a_Bot">Delete bot</a>
-   </td>
-   <td>Like standard bots, you can delete the unpublished universal bots.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/bot-settings/bot-management/using-bot-variables/">Variable Management</a>
-<p>
-(UB 2.0)
-   </td>
-   <td>Like standard bots, you can define global and content variables in universal bots. In addition, you can choose whether or not the variables can be propagated to the linked bots.
-   </td>
-  </tr>
-  <tr>
-   <td colspan="2" >
-<h5><strong>API Extensions</strong></h5>
-
-
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/sdks/using-the-botkit-sdk/">SDK toolkit</a>
-   </td>
-   <td>Enabled with the following events – on message, on hook, on event, on alert
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-agent-transfer-node/">Agent Transfer</a>
-   </td>
-   <td>Agent Transfer can be configured for a Universal Bot. The Agent Node needs to be added in default dialog and addition of any subsequent nodes after the agent node is not allowed.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-web-hook-node/">WebHook Node</a>
-   </td>
-   <td>Multiple webhook nodes can be placed in the default dialog. When a webhook node is reached during the conversation, the platform invokes the BotKit similar to that of a Standard Bot.
-   </td>
-  </tr>
-  <tr>
-   <td>SDK as Channel
-   </td>
-   <td>Enabled
-   </td>
-  </tr>
-  <tr>
-   <td colspan="2" >
-<h5><strong>Analyze</strong></h5>
-
-
-   </td>
-  </tr>
-  <tr>
-   <td>Chat History
-   </td>
-   <td>All the Universal Bot chats get recorded. Any initiated training will affect the individual linked bot.
-   </td>
-  </tr>
-  <tr>
-   <td colspan="2" >
-<h5><strong>Publish</strong></h5>
-
-
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/#Publishing_Tasks">All</a>
-   </td>
-   <td>You can select one or more linked bots and publish the Universal Bot.<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/creating-a-universal-bot/#Step_6_Publishing"> Learn more about the publish flow</a>.
-   </td>
-  </tr>
-</table>
-
-<h3 id="event-management"><strong>Event Management</strong><a class="headerlink" href="#event-management" title="Permanent link">&para;</a></h3>
-<p>Let us see the behavior of Universal Bots for the following BotKit events in Linked Bots:</p>
-<ul>
-<li>End of Conversation (<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/defining-universal-bots/#eoc">see below</a>)</li>
-<li>On Message</li>
-<li>Agent</li>
-<li>Webhook</li>
-<li>Event</li>
-<li>Alert Events</li>
-</ul>
-<p>When a child bot is in context i.e., a task from a child bot is in progress, then the events related to the child bots will be triggered based on the configurations set up by the developer:</p>
-<ul>
-<li>If an event is enabled in child bot, then the event will be forwarded to child bot BotKit</li>
-<li>If an event is not enabled in child bot and<ul>
-<li>if that event is enabled in Universal bot, then the event will be sent to Universal bot BotKit</li>
-<li>if that event is not enabled in Universal bot as well, then the event will not be forwarded to any BotKit.</li>
-</ul>
-</li>
-</ul>
-<p>Following table summarises the above scenarios and behavior:</p>
-<table>
-  <tr>
-   <td><strong>Event Name</strong>
-   </td>
-   <td><strong>Child Bot Status</strong>
-   </td>
-   <td><strong>Universal Bot Status</strong>
-   </td>
-   <td><strong>Expected Behavior</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>On Message
-   </td>
-   <td>Enabled
-   </td>
-   <td>–
-   </td>
-   <td>Event sent to child bot BotKit
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>Disabled
-   </td>
-   <td>Enabled
-   </td>
-   <td>Event sent to Universal BotKit
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>Disabled
-   </td>
-   <td>Disabled
-   </td>
-   <td>Invalid scenario. The event does not trigger in this case
-   </td>
-  </tr>
-  <tr>
-   <td>All other events
-   </td>
-   <td>Enabled
-   </td>
-   <td>–
-   </td>
-   <td>Event sent to child bot BotKit
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>Disabled
-   </td>
-   <td>Enabled
-   </td>
-   <td>Event sent to Universal BotKit
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>Disabled
-   </td>
-   <td>Disabled
-   </td>
-   <td>Same as the current behavior. E.g. dialog reaches Webhook node but ‘on Hook’ event is not enabled
-   </td>
-  </tr>
-</table>
-
-<h4 id="end-of-conversation"><strong>End of Conversation</strong><a class="headerlink" href="#end-of-conversation" title="Permanent link">&para;</a></h4>
-<p>The following table depicts the bot behavior for the end of the conversation event:</p>
-<table>
-  <tr>
-   <td><strong>Conversation ends</strong>
-   </td>
-   <td><strong>End of Conversation Event in Universal Bot</strong>
-   </td>
-   <td><strong>End of Conversation Event in Linked Bot</strong>
-   </td>
-   <td><strong>Behavior</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Universal Bot
-   </td>
-   <td>Enabled
-   </td>
-   <td>Enabled or Disabled
-   </td>
-   <td>Trigger event in Universal Bot
-   </td>
-  </tr>
-  <tr>
-   <td>Universal Bot
-   </td>
-   <td>Disabled
-   </td>
-   <td>Enabled or Disabled
-   </td>
-   <td>No event triggered
-   </td>
-  </tr>
-  <tr>
-   <td>Linked Bot
-   </td>
-   <td>Enabled or Disabled
-   </td>
-   <td>Enabled
-   </td>
-   <td>Tigger event in Linked Bot
-   </td>
-  </tr>
-  <tr>
-   <td>Linked Bot
-   </td>
-   <td>Enabled
-   </td>
-   <td>Disabled
-   </td>
-   <td>Tigger event in Universal Bot
-   </td>
-  </tr>
-  <tr>
-   <td>Linked Bot
-   </td>
-   <td>Disabled
-   </td>
-   <td>Disabled
-   </td>
-   <td>Event not triggered
-   </td>
-  </tr>
-</table>
-
-<h2 id="next-steps"><strong>Next Steps</strong><a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<ul>
-<li>You can start creating your Universal Bots by<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/creating-a-universal-bot/"> referring here</a>.</li>
-<li>You can learn about training the Universal Bots from<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/training-a-universal-bot/#Invocation_Names"> here</a>.</li>
-</ul>
+<h3 id="customizing-default-dialog"><strong>Customizing Default Dialog</strong><a class="headerlink" href="#customizing-default-dialog" title="Permanent link">&para;</a></h3>
+<p>If the Kore.ai NLP engine cannot recognize the user intent, the universal bot responds to the users with the default dialog. You must create language-specific versions of the default dialog for each enabled language so that such bot responses go in the users’ preferred language. Otherwise, the universal bot responds applies the default bot language regardless of the user’s preferred language. \
+ Follow these steps to open the language-specific default dialog:</p>
+<ol>
+<li>Open the universal bot whose language-specific default dialog you want to change.</li>
+<li>On the top-right side of the bot window, click the name of the current bot language, and select any of the enabled languages. It switches the bot language as per your selection.</li>
+</ol>
+<p>Once you switch the language, go to the Default Dialog of the bot and make the necessary changes as explained in the<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/customizing-the-universal-bots-default-dialog-task/"> Customizing the Default Dialog</a> article.</p>
 
 
   
