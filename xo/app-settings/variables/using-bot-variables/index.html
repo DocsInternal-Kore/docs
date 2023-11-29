@@ -17,7 +17,7 @@
     
     
       
-        <title>**Kore.ai Web SDK Tutorial** - Kore ai Docs</title>
+        <title>**Using Bot Variables** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#koreai-web-sdk-tutorial" class="md-skip">
+        <a href="#using-bot-variables" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Kore.ai Web SDK Tutorial**
+              **Using Bot Variables**
             
           </span>
         </div>
@@ -2278,50 +2278,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#web-sdk-tutorial-overview" class="md-nav__link">
-    Web SDK Tutorial Overview
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-and-running-the-koreai-web-sdk" class="md-nav__link">
-    Installing and Running the Kore.ai Web SDK
-  </a>
-  
-    <nav class="md-nav" aria-label="Installing and Running the Kore.ai Web SDK">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#passing-data-via-websdk" class="md-nav__link">
-    Passing data via webSDK
+  <a href="#restricting-sensitive-data-with-environment-variables" class="md-nav__link">
+    Restricting Sensitive Data with Environment Variables
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#passing-mapped-identities" class="md-nav__link">
-    Passing Mapped Identities
+      
+        <li class="md-nav__item">
+  <a href="#content-variables" class="md-nav__link">
+    Content Variables
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-meta-tags-via-websdk" class="md-nav__link">
-    Custom Meta Tags via webSDK
+      
+        <li class="md-nav__item">
+  <a href="#defining-bot-variables-and-securing-them" class="md-nav__link">
+    Defining Bot Variables and Securing Them
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#some-commonly-encountered-errors" class="md-nav__link">
-    Some commonly encountered errors
+      
+        <li class="md-nav__item">
+  <a href="#entering-language-specific-values" class="md-nav__link">
+    Entering Language-Specific Values
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#using-environment-variables" class="md-nav__link">
+    Using Environment Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-the-environment-variable" class="md-nav__link">
+    Updating the Environment Variable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-content-variables" class="md-nav__link">
+    Using Content Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-and-exporting" class="md-nav__link">
+    Importing and Exporting
+  </a>
   
 </li>
       
@@ -2344,283 +2359,182 @@
 
 
 
-<h1 id="koreai-web-sdk-tutorial"><strong>Kore.ai Web SDK Tutorial</strong><a class="headerlink" href="#koreai-web-sdk-tutorial" title="Permanent link">&para;</a></h1>
-<p>This tutorial is an end-to-end walkthrough for setting up and running an instance of the Kore.ai Bots Web SDK which is a collection of libraries that you can use to integrate Kore.ai bots with your own web applications.</p>
-<h2 id="web-sdk-tutorial-overview">Web SDK Tutorial Overview<a class="headerlink" href="#web-sdk-tutorial-overview" title="Permanent link">&para;</a></h2>
-<p>In this tutorial, you will install a Kore.ai sample bot, a test application to host the bot, and then a JSON Web Token (JWT) generation web service using your local host server to communicate between the bot on your local server and the Kore.ai Bots Platform.
-The following list describes the general steps you will take to install and configure the Web SDK.</p>
+<h1 id="using-bot-variables"><strong>Using Bot Variables</strong><a class="headerlink" href="#using-bot-variables" title="Permanent link">&para;</a></h1>
+<p><strong>Bot variables</strong> help you capture values that are commonly used by different tasks, nodes, and other bot elements. You can configure a bot variable as a key-value pair once in the bot settings and substitute key with value at runtime during the conversation flow. By capturing frequently used values in a single place, bot variables provide the advantages of reusability and consistency. For example, let’s say you are testing a flight booking bot using a staging endpoint. If you configure the endpoint as a variable, it helps you to call the API from several places quickly. When you want to change the staging endpoint to production while publishing the bot, it is easy. Similarly, variables can be used to externalize content for messages and prompts from the dialog flow definition. Kore.ai platform allows bot developers to define two types of variables – Environment and Content.</p>
+<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<p>Environment Variables are global, reusable components which can be used in multiple places to define the bot configuration. Every Environment Variable is a key-value pair. The Variable Keys can be used at various places in the bot configuration. The platform will resolve/replace the Variable Keys with Variables Values during the conversation. Some of the typical use cases where a developer can use environment variables are:</p>
+<ul>
+<li>To manage the bot across environments having different endpoint URLs. The bot can be exported and imported based on the environment, and the infrastructure team will need to modify only the variable configuration file.</li>
+<li>To manage <strong>Conditions</strong> in the <strong>Dialog Node</strong> Transitions. Only the left-hand side of the transition condition uses Environment Variables. The right-hand side of the transition conditions does not use Environment Variables</li>
+<li>To define and manage the bot response that is repeated within the bot configuration as variables.</li>
+<li>Authorization Token</li>
+<li>Channel-related tokens and URLs</li>
+</ul>
+<p>Post the release of v8.1 of the platform, for <span style="text-decoration:underline;">on-prem installations</span>, multiple value sets can be stored for these environment variables using Collections, <a href="../collections" target="_blank">refer here for more</a>.</p>
+<h3 id="restricting-sensitive-data-with-environment-variables">Restricting Sensitive Data with Environment Variables<a class="headerlink" href="#restricting-sensitive-data-with-environment-variables" title="Permanent link">&para;</a></h3>
+<p>During the virtual assistant definition, developers may create <strong>environment variables</strong> for sensitive data like credentials/keys. These variables are useful for connecting to other systems using service nodes or as a part of authorization profiles. However, environment variables are visible to all the developers with shared access to the virtual assistant, especially when its definition is exported.</p>
+<p>The latest Kore.ai XO Platform release introduces the <strong>Secure Variable</strong> feature for environment variables, which encrypts the added variable when enabled. This makes only the encrypted variable value visible to others and not the original value.</p>
+<p><strong>Important Considerations</strong></p>
+<ul>
+<li>The <strong>secure variable</strong> is encrypted in the database and does not require any encryption key.</li>
+<li>The original value is used only internally for all service calls, language translation, etc. while executing the virtual assistant definition.</li>
+<li>During the export of a secure variable through <strong>Bot</strong> or <strong>environment variables</strong> import, it has an empty value, so the original value is not available in plain text.</li>
+</ul>
+<p><strong>Leveraging Encrypted Environment Variable Values for Additional Modules</strong></p>
+<p>You can use the encrypted environment variable values in the following modules in addition to the other supported modules:</p>
+<ul>
+<li><strong>Channel Configuration</strong>: While configuring channels under <strong>Deploy</strong> &gt; <strong>Channels</strong>, you can use encrypted/regular environment variable values for all the fields including access token, access key, app ID, URLs, etc.</li>
+<li>
+<p><strong>Languages</strong>: Under <strong>Build</strong> &gt; <strong>Configurations</strong> &gt; <strong>Languages</strong> &gt; <strong>Translation Configurations</strong>, while configuring the translation engine, you can use the regular/encrypted environment variable value (type <code>{{env.environment variable name}}</code>) to set up the encrypted variable name as the access key as follows:</p>
+<ul>
+<li>
+<p>The <strong>Access Key</strong> field for Google Translator or Microsoft Translator.<br />
+<a class="glightbox" href="../images/env-and-content-variables-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img1.png" alt="Translation Configurations - Access Key" title="Translation Configurations - Access Key" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>The <strong>Value</strong> field in the <strong>Configure Translation Engine</strong> panel for Custom Translation Engine Configurations.<br />
+<a class="glightbox" href="../images/env-and-content-variables-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img2.png" alt="Configure Translation Engine - Value" title="Configure Translation Engine - Value" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>Authorization Profiles</strong> – You can use encrypted/regular environment variables on the following fields while defining a new authorization mechanism for all types of authorizations:</p>
+<ul>
+<li><strong>Authorization Check URL</strong>, <strong>Field Key</strong> for form field, and <strong>Field Key</strong> and <strong>Field Value Authorization Fields</strong> for Authorization Type <em>Basic Auth</em>. <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/setting-up-authorization-using-basic-auth/" target="_blank">Learn more</a>.</li>
+<li><strong>Client Id</strong>, <strong>Client Secret Key</strong>, and <strong>Authorization URL</strong> for Authorization Type <em>Oauth V2</em>. <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/setting-up-authorization-using-oauth-v2/" target="_blank">Learn more</a>.</li>
+<li><strong>Client Id</strong>, <strong>Client Secret Key</strong>, <strong>Token Request URL</strong>, <strong>Scope</strong>, and <strong>Refresh Token URL</strong> for Authorization Type <em>Oauth V2 Client Credentials</em>.</li>
+<li><strong>Consumer Key</strong>, <strong>Consumer Secret</strong>, <strong>Request Token Link</strong>, <strong>Access Token Link</strong>, and <strong>User Authorization Link</strong> for Authorization Type <em>Oauth V1</em>. <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/setting-up-authorization-using-oauth-v1/" target="_blank">Learn more</a>.</li>
+<li><strong>Authorization Check URL</strong> and <strong>Field Key</strong> (for Form Field) for Authorization Type <em>API Key</em>. <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/setting-up-authorization-using-an-api-key/" target="_blank">Learn more</a>.</li>
+<li><strong>Field Key</strong> for Form Field, <strong>Token URL</strong>, <strong>Field Key</strong>, and <strong>Field Value</strong> for Authorization Field, and <strong>Refresh Token URL</strong> for Authorization Type <em>Oauth V2 Password Grant Type</em>. <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/setting-up-authorization-using-oauth-v2-password-grant/" target="_blank">Learn more</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The availability of the environment variables has been extended to the <strong>Field Key</strong> and <strong>Field Value</strong> parameters.<br />
+<a class="glightbox" href="../images/env-and-content-variables-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img3.png" alt="Field Key and Field Value" title="Field Key and Field Value" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h3 id="content-variables">Content Variables<a class="headerlink" href="#content-variables" title="Permanent link">&para;</a></h3>
+<p>Bot building essentially requires extensive content management efforts. When it comes to multi-language bots, it also involves tedious coordination efforts between the developers and globally-distributed content authors or copyright team. Content variables enable you to overcome that by abstracting bot flow development efforts from authoring or editing the content. Using Content Variables, programmers can avoid hard-coding the bot content, such as prompts, messages, or any data presented to the user, into bot components, and instead point to specific variables in centrally managed Content Variables files for each bot language. You can export the language-specific content variable files to content editors, without exposing any bot configurations. The writers can author the content in the exported file, which you can import back into the bot.</p>
+<h3 id="defining-bot-variables-and-securing-them">Defining Bot Variables and Securing Them<a class="headerlink" href="#defining-bot-variables-and-securing-them" title="Permanent link">&para;</a></h3>
+<p>Enabling the <strong>secure variable</strong> setting after defining an Environment (Bot) Variable, encrypts and securely stores credentials set as environment variables. To add a Bot variable, follow the steps below:</p>
 <ol>
-<li><strong>Build the Bot to be integrated</strong> – For this tutorial, you will install the <em>Travel Planning Sample</em> bot that uses open APIs to get flight and location information, along with weather reports.</li>
-<li><strong>Configure Web/Mobile Client channel</strong> – To use the <em>Travel Planning Sample</em> bot with the Web SDK, you must configure the bot for the Web/Mobile Client channel.</li>
-<li><strong>Create a new Client App</strong> – When you configure the Web/Mobile Client channel for the <em>Travel Planning Sample</em> bot, you must create a client app and select the JWT signing algorithm used to generate the authentication tokens.</li>
-<li><strong>Publish the bot</strong> – After you have configured the <em>Travel Planning Sample</em> bot, you must publish the bot which sends the bot to the Bots Admin for approval.</li>
-<li><strong>Approve and Deploy the bot</strong> – In the Bots Admin Console, the published bot and tasks must be approved to deploy.</li>
-<li><strong>Download and install Node.js</strong> – You will need to install Node.js used to host the JWT token generation web service for the Web SDK to communicate between the bot in the test application and the Kore.ai Bots Platform.</li>
-<li><strong>Download and uncompress the test application</strong> –  The test application, <a href="https://s3.amazonaws.com/static-kore/downloads/SDKApp.zip" target="_blank">SDKApp</a> is used to simulate your application that will host the Kore.ai bot as a channel on a web page using your computer local host server.</li>
-<li><strong>Download and uncompress the Kore.ai Web SDK</strong> – The Web SDK contains the libraries used to communicate and run the bot in the test application using the Web/Mobile Client channel. You will need to configure settings in the index.html file for your computer.</li>
-<li><strong>Start your application and view the bot in a web browser</strong> – In a <strong>Terminal</strong> window, you will start the JWT service, and then view the bot in a web browser.</li>
-</ol>
-<p>Now let us see detailed step by step implementation.</p>
-<h2 id="installing-and-running-the-koreai-web-sdk">Installing and Running the Kore.ai Web SDK<a class="headerlink" href="#installing-and-running-the-koreai-web-sdk" title="Permanent link">&para;</a></h2>
-<p>This section provides detailed steps on how to run a Kore.ai sample bot using the Web SDK and a test application running on your computer local host server.
-To get started, you will need to build a bot to run in the test application, and then configure the bot to run in the Web/Mobile Client channel.</p>
-<ol>
-<li>Log on to Bot Builder, and click the <strong>down-arrow</strong> next to the  <strong>+New Bot</strong> and select <strong>Install Sample Bots.</strong></li>
-<li>Hover over <strong>Travel Planning Sample</strong>, and then click <strong>Install</strong>.</li>
-<li>The Travel Planning Sample installed successfully message is displayed and the sample bot is added to your <strong>Bots</strong> left-hand navigation menu.</li>
-</ol>
-<p>In this next section, you will define the Web/Mobile Client channel for the Travel Planning Sample bot by creating a new client app and defining channel settings. <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-webmobile-client-channel/" target="_blank">See here</a> for a detailed explanation of the steps.</p>
-<ol>
-<li>On the bot builder top menu, select the <strong>Deploy</strong> tab</li>
-<li>From the left menu, click <strong>Integrations &gt; Web/Mobile SDK</strong>.</li>
-<li>In the <strong>Select App</strong> drop-down list, click <strong>Create App</strong>. The <strong>Create Client App</strong> dialog is displayed.</li>
-<li>In the <strong>Name</strong> field, enter a name for your app, for example, My SDK Client App.</li>
-<li>In the <strong>JWT Signing Algorithms</strong> section, select <strong>HS256</strong> to generate the authentication tokens.</li>
-<li>Click <strong>Next -&gt; Done</strong>.</li>
-<li>The <strong>Web/Mobile Client Channel</strong> page is displayed with the following JWT credentials, make a note of all these details. We will be using them later in the Web SDK setup:<ol>
-<li>Bot Name</li>
-<li>Bot ID</li>
-<li>Client ID</li>
-<li>Client Secret</li>
-</ol>
+<li>Open the VA for which you want to add the variables.</li>
+<li>Navigate to <strong>Build</strong> &gt; <strong>Configurations</strong> &gt; <strong>Environment Variables</strong> on the left menu for Environment Variables or <strong>Content Variables</strong> to add Content Variables.</li>
+<li>
+<p>In the <strong>Add Variable</strong> panel, provide the following details:</p>
+<ul>
+<li><strong>Variable Name</strong>: Enter the environment variable name. For example, user credentials.</li>
+<li><strong>Value</strong>: Enter the environment variable value that is encrypted.</li>
+<li><strong>Notes (optional)</strong>: Any tip/note describing the environment variable.</li>
+<li><strong>Group (optional)</strong>: The name of the group to which the environment variable is mapped.</li>
+<li>Assign a <strong>Namespace</strong> if enabled (<a href="../../managing-namespace">refer here for more</a>){:target="_blank"}.</li>
+</ul>
+</li>
+<li>
+<p>Enable the <strong>secure variable</strong> by switching to the <strong>Enabled</strong> state (<strong>Disabled</strong> is the default setting).<br />
+<a class="glightbox" href="../images/env-and-content-variables-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img4.png" alt="Enable Secure variable" title="Enable Secure variable" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
 <p>Click <strong>Save</strong>.<br />
-  Now that the bot is created and defined for the Web/Mobile Client channel, you are ready to publish and deploy your bot.  </p>
-<div class="admonition note">
-<p class="admonition-title">Note<p>By default, the Travel Sample Planning bot is configured with <strong>Target Audience</strong> set to <strong>Enterprise Users</strong> on the <strong>Build</strong> tab in the <strong>Configurations -&gt; General Settings.</strong> Optionally, you can define this bot for <strong>General Public</strong> use. Once this bot is published, the <strong>Target Audience</strong> cannot be changed.</p>
-</p>
-</div>
-</li>
-<li>
-<p>On the <strong>Deploy</strong> tab, click <strong>Bot Management -&gt; Publish</strong>.</p>
-</li>
-<li>On <strong>Publish</strong> page, select all tasks, and then click <strong>Proceed</strong>.</li>
-<li>Enter a comment and <strong>Confirm</strong> publish.<br />
-  After an enterprise developer publishes a bot, it must be approved and assigned to the users for use.</li>
-<li>
-<p>Complete one of the following bot deployments in the Bots Admin Console depending if your bot <strong>Target Audience</strong> is set to <strong>Enterprise Users</strong> or <strong>General Public</strong>. Complete one of the following:</p>
-<ol>
-<li>In the Bots Admin Console, in the <strong>Bots Management</strong> module, on the <strong>Enterprise Bots</strong> page, click the <strong>Ellipses</strong>  icon for the Travel Planning Sample bot that you want to deploy, and then click <strong>Manage bot tasks</strong>. The <strong>Manage Bot Tasks</strong> dialog is displayed.</li>
-<li>In the <strong>Bot tasks</strong> field, click the <strong>Expand</strong> <a class="glightbox" href="../images/web-mobile-sdk-imgarrow.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/web-mobile-sdk-imgarrow.png" style="border: 1px solid gray;zoom:50%;"/></a> icon to display the available and deployed tasks, select all tasks for this bot, and then click <strong>Confirm</strong>.</li>
-<li>In the <strong>Manage bots tasks</strong> dialog, click <strong>Confirm</strong>. The Bot status changed successfully message is displayed.</li>
-<li>On the <strong>Enterprise Bots</strong> page, click the <strong>Ellipses</strong> icon for theTravel Planning Sample bot that you want to assign the users to, and then click <strong>Bot &amp; task assignments</strong>.</li>
-<li>The <strong>Bot &amp; task assignments</strong> dialog is displayed. Assign the bot to your users, for all tasks, including yourself.</li>
-</ol>
-<p>Now it is time to download, uncompress, install and configure the software packages required for the Web SDK and a test application to run the bot locally on your local host server.</p>
-</li>
-<li>
-<p>To download and install node.js on your computer, go to <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a>, and then select your OS as .pkg for Mac, and .msi for Windows.</p>
-</li>
-<li>In a <strong>Terminal</strong> window, run the <code>node -v</code> command to verify installation and version, for example, <code>v6.10.2</code>.</li>
-<li>Locate the <strong>SDKApp/sdk</strong> folder of your <span style="text-decoration:underline;">web server hosting the app</span> where you want to integrate the Kore bot. For this tutorial, to download the test application and JWT web service, click <a href="https://s3.amazonaws.com/static-kore/downloads/SDKApp.zip" target="_blank">SDKApp</a>, and unzip it.</li>
-<li>To download the Kore.ai Web SDK, go to <a href="https://github.com/Koredotcom/web-kore-sdk" target="_blank">https://github.com/Koredotcom/web-kore-sdk</a>, and then click <strong>Download</strong>. Extract all files to the …/SDKApp/sdk folder mentioned in step above. Check for the release compatibility from the <a href="https://developer.kore.ai/docs/bots/whats-new/whats-new-in-this-release-bot-builder/#SDK_Versions" target="_blank">release notes</a>.</li>
-<li>
-<p>From the Bot Builder <strong>Web/Mobile Client Channel</strong> page on the <strong>Deploy -&gt; Channels</strong> menu, copy the following (as mentioned in step 8 above):</p>
-<ol>
-<li>clientSecret</li>
-<li>clientId</li>
-<li>Bot Name</li>
-</ol>
-</li>
-<li>
-<p>For ver7.2 of the platform, the Web SDK repo structure has undergone a major change. The steps would vary based on which repo you are using.</p>
-<ol>
-<li>
-<p>Follow this step for the latest Web SDK file downloaded <span style="text-decoration:underline;">after ver7.2</span> of the platform i.e. <span style="text-decoration:underline;">after Feb 2020.</span></p>
-<ol>
-<li>
-<p>Open the index.html file from the …/SDKApp/sdk/UI folder using a text editor. Update the following lines to add the path to the UI folder:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&amp;lt;script src=&quot;libs/jquery.js&quot; type=&quot;text/javascript&quot;&gt;&amp;lt;/script&gt;
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&amp;lt;script src=&quot;libs/jquery.tmpl.min.js&quot; type=&quot;text/javascript&quot;&gt;&amp;lt;/script&gt;
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&amp;lt;script src=&quot;libs/jquery-ui.min.js&quot; type=&quot;text/javascript&quot;&gt;&amp;lt;/script&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&amp;lt;link href=&quot;libs/jquery-ui.min.css&quot; rel=&quot;stylesheet&quot;&gt;&amp;lt;/link&gt;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&amp;lt;script src=&quot;chatWindow.js&quot; type=&quot;text/javascript&quot;&gt;&amp;lt;/script&gt;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>&amp;lt;link href=&quot;chatWindow.css&quot; rel=&quot;stylesheet&quot;&gt;&amp;lt;/link&gt;
-</span></code></pre></div>
-</li>
-<li>
-<p>Open the kore-config.js and update the botOptions parameters botInfo, clientId and clientSecret, and your email id as userIdentity.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&quot;clientSecret&quot;: &quot;{client secret}&quot;
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$.ajax({
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>url: &quot;[http://localhost:3000/api/users/getJWT](http://localhost:3000/api/users/getJWT)&quot;,
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    //this is sample url of a localhost. 
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    //This should include the url where you are hosting 
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>the bot.
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>botOptions.userIdentity = &#39; &#39;;
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    // Provide users email id here
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>botOptions.clientId= &quot;{client id} &quot;;
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    // secure client-id
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>_botOptions.botInfo= {name:&quot;{bot name}&quot;,&quot;id&quot;:&quot;{bot id&quot;};
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    // Kore bot name is case sensitive
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>})
-</span></code></pre></div>
-<p>The JWTUrl refers to the location where your app (where you want the Kore.ai Bot to be integrated) is hosted. For this tutorial, we are using the JWT server (as setup in step 19) and hence using the same here.</p>
-</li>
-<li>
-<p>Ensure that in kore-config.js you set the audience for your bot. Choose one of the following:</p>
-<ol>
-<li>
-<p><code>"isAnonymous": &lt; <strong>false </strong>&gt;;</code> if bot is deployed for the <strong>enterprise users</strong>, and then set <code>botOptions.userIdentity = '<strong>&lt;</strong> <strong>Your email ID &gt;</strong>'</code>;</p>
-<p><strong>– or –</strong></p>
-</li>
-<li>
-<p><code>"isAnonymous": &lt; <strong>true </strong>&gt;;</code> if bot is deployed for <strong>Consumer Use</strong></p>
+<a class="glightbox" href="../images/env-and-content-variables-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img5.png" alt="Save the variable" title="Save the variable" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ol>
+<p>The environment variable and its encrypted value appear in the list.<br />
+<a class="glightbox" href="../images/env-and-content-variables-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img6.png" alt="Environment variable and its encrypted value appear" title="Environment variable and its encrypted value appear" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h3 id="entering-language-specific-values">Entering Language-Specific Values<a class="headerlink" href="#entering-language-specific-values" title="Permanent link">&para;</a></h3>
+<p>To add language-specific values for content variables, you first need to switch the bot language. You can switch the language by clicking the name of the currently-enabled language from the top-right corner of the bot’s page and then selecting another language as follows:</p>
+<p><a class="glightbox" href="../images/env-and-content-variables-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img7.png" alt="Select language" title="Select language" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>After switching the language, go to <strong>Build &gt; Configurations &gt; Content Variables</strong> page and click the <strong>edit</strong> icon next to the relevant variable. Replace the text in the <strong>Value</strong> field in the enabled language.</p>
+<h3 id="using-environment-variables">Using Environment Variables<a class="headerlink" href="#using-environment-variables" title="Permanent link">&para;</a></h3>
+<p>You can invoke an environment variable in plain text mode (Standard editor) using the following syntax: <code>{{env.variableName}}</code> If you are using it in JavaScript mode, it is <em>env.variableName</em> Here’s an example from a bot that uses two environment variables called <em>botType</em> and <em>parameters</em> to determine different bot environments such as development, testing, and production. The following script node in one of the bot’s tasks captures the <em>base URL</em> of the bot, depending on the current bot environment.</p>
+<p><a class="glightbox" href="../images/env-and-content-variables-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img8.png" alt="Script to capture Base URL of bot" title="Script to capture Base URL of bot" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>The URL in the following service node changes based on the captured URL</p>
+<p><a class="glightbox" href="../images/env-and-content-variables-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img9.png" alt="URL changes based on the captured URL" title="URL changes based on the captured URL" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h3 id="updating-the-environment-variable">Updating the Environment Variable<a class="headerlink" href="#updating-the-environment-variable" title="Permanent link">&para;</a></h3>
+<p>For on-premise deployments, the user can update the encryption key/secured variable value with a new one. To edit the value, follow these steps:</p>
+<ol>
+<li>
+<p>Click the <strong>Edit</strong> icon of the secure variable listing.<br />
+<a class="glightbox" href="../images/env-and-content-variables-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img10.png" alt="Click Edit icon corresponding to variable to be updated" title="Click Edit icon corresponding to variable to be updated" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
+<li>
+<p>In the <strong>Edit Environment Variable</strong> panel, click the <strong>Edit</strong> icon next to the <strong>Value</strong> textbox.<br />
+<a class="glightbox" href="../images/env-and-content-variables-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img11.png" alt="Edit Environment Variable - Click Edit" title="Edit Environment Variable - Click Edit" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p>Enter the new variable value to be encrypted and click <strong>Done</strong>.</p>
+</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>The new encrypted secure variable value is updated in the list as shown below:
+<a class="glightbox" href="../images/env-and-content-variables-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img12.png" alt="secure variable value is updated" title="secure variable value is updated" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h3 id="using-content-variables">Using Content Variables<a class="headerlink" href="#using-content-variables" title="Permanent link">&para;</a></h3>
+<p>You can invoke a content variable in plain text mode (Standard editor) using the following syntax. <code>{{content.variableName}}</code> If you are using it in JavaScript mode, it is <em>content.variableName</em> Here’s an entity node of a multi-language flight booking bot that captures the source airport of the users. It uses a content variable instead of a hard-coded user prompt.</p>
+<p><a class="glightbox" href="../images/env-and-content-variables-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img13.png" alt="Entity node containing content variable" title="Entity node containing content variable" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>When the bot reaches this node as a part of the user interaction, the user prompt changes depending on the language of the interaction (provided you entered the respective variable values for all the enabled languages).</p>
+<h3 id="importing-and-exporting">Importing and Exporting<a class="headerlink" href="#importing-and-exporting" title="Permanent link">&para;</a></h3>
+<p>You can import and export bot variables between bots.</p>
+<ol>
+<li>On any of the Bot Variables page accessible from <strong>Build &gt; Configurations -&gt; (Environment/Content) Variables</strong>,</li>
+<li>Click the <strong>ellipses next to Add Variables</strong></li>
+<li>
+<p><em>To Import</em>: Select <strong>Import</strong> to import variables from a JSON or CSV file</p>
+<ol>
+<li>Since the import will replace the existing variables, you are advised to take a backup of the same.</li>
+<li>After taking a Backup, <strong>Proceed</strong> with the Import</li>
+<li>Select a JSON or CSV file to import (see below for the file format)</li>
 </ol>
 </li>
 <li>
-<p>This step is valid for older Web SDK file downloaded <span style="text-decoration:underline;">before ver7.2</span> of the platform i.e. <span style="text-decoration:underline;">before Feb 2020</span></p>
-<p>Open the index.html file from the …/SDKApp/sdk/UI folder using a text editor:</p>
+<p><em>To Export</em>: From <strong>Export</strong> select the preferred format for the export file:</p>
 <ol>
-<li>
-<p>Update the following lines to add the path to the UI folder:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;script src=&quot;libs/jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;script src=&quot;libs/jquery.tmpl.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&lt;script src=&quot;libs/jquery-ui.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&lt;link href=&quot;libs/jquery-ui.min.css&quot; rel=&quot;stylesheet&quot;&gt;&lt;/link&gt;
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&lt;script src=&quot;chatWindow.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>&lt;link href=&quot;chatWindow.css&quot; rel=&quot;stylesheet&quot;&gt;&lt;/link&gt;
-</span></code></pre></div>
+<li>Bot variables are exported in the form of a JSON, CSV file based upon your selection.</li>
+<li>This file includes both environment and content variables.</li>
+</ol>
 </li>
-<li>
-<p>Update the following parameters to run as local host</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>“clientSecret”: “{client secret}”
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$.ajax({
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>url: “http://localhost:3000/api/users/getJWT”,
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    //this is sample url of a local host. 
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    //This should include the url where you are hosting the bot.
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>botOptions.userIdentity = ‘ ‘;
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    // Provide users email id here
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>botOptions.clientId= &quot;{client id} &quot;;
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    // secure client-id
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>_botOptions.botInfo= {name:&quot;{bot name}&quot;,&quot;id&quot;:&quot;{bot id&quot;};
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    // Kore bot name is case sensitive
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>})
-</span></code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The URL mentioned in the above code snippet, refers to the location where your app (where you want the Kore.ai Bot to be integrated) is hosted. For this tutorial, we are using the JWT server (as setup in step 15) and hence using the same here.</p>
-</div>
-</li>
-<li>
-<p>Choose one of the following:</p>
+</ol>
+<p><a class="glightbox" href="../images/env-and-content-variables-img14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img14.png" alt="Bot variable import/export" title="Bot variable import/export" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>The <strong>Bot Variable file</strong> contains the following information, the same needs to be present in your Import file. CSV files need a header row. You are advised to refer to the Export (or backup) file and use the same format for the Import file.</p>
 <ul>
+<li><strong>key</strong> (mandatory) – name of the variable</li>
 <li>
-<p><code>"isAnonymous": &lt; <strong>false </strong>&gt;;</code> if bot is deployed for the <strong>enterprise users</strong>, and then set <code>botOptions.userIdentity = '<strong>&lt;</strong> <strong>Your email ID &gt;</strong>'</code>;</p>
-<p><strong>– or –</strong></p>
-</li>
-<li>
-<p><code>"isAnonymous": &lt; <strong>true </strong>&gt;;</code> if bot is deployed for <strong>Consumer Use</strong></p>
-</li>
+<p><strong>scope</strong>  – the scope of the variable corresponds to the Setup Option at the time of variable declaration (if not provided will be set to prePopulated) and can be</p>
+<ul>
+<li>prePopulated,</li>
+<li>askOnInstall, or</li>
+<li>hidden</li>
 </ul>
 </li>
-</ol>
-</li>
-</ol>
+<li>
+<p><strong>value</strong> – the value of the variables</p>
 </li>
 <li>
-<p>Save your changes.
-    You are ready to start the JWT token generation service and access the test application with the configured Web SDK in your local web browser.</p>
-</li>
-<li>
-<p>Go to home directory <code>cd SDKApp</code></p>
-</li>
-<li>
-<p>Install dependencies using the following command</p>
-<p><code>npm install</code></p>
-<p><a class="glightbox" href="../images/web-mobile-sdk-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/web-mobile-sdk-img1.png" alt="Install dependencies" title="Install dependencies" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Start SDKApp</p>
-<p><code>node startServer.js</code></p>
-</li>
-<li>
-<p>Access the application in any browser using localhost:3000</p>
-</li>
-</ol>
-<h3 id="passing-data-via-websdk">Passing data via webSDK<a class="headerlink" href="#passing-data-via-websdk" title="Permanent link">&para;</a></h3>
-<p>You can pass additional information of the user accessing the channel by adding the custom data at <strong>botInfo</strong> inside the index.html file.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>botOptions.botInfo = {name: &quot;Banking Bot&quot;, 
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>                              &quot;_id&quot;: &quot;&lt;bot_id&gt;&quot;, 
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>                              customData: &quot;value&quot;
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>              };
-</span></code></pre></div>
-<p>Details like phone number, address, or location, etc., are examples of data that can be passed inside the <span style="text-decoration:underline;">customData</span>.</p>
-<p><code>customData</code> can be accessed from <code>lastMessage</code> under the <code>BotUserSession</code> of the context object. This data will be specific to the user using webSDK and will last for the user session.</p>
-<p>Multiple values can also be added to the <code>customData</code> in the <code>index.html</code> file as key-value pairs:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>botOptions.botInfo = {name:&quot;&lt;bot_name&gt;&quot;,
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                      &quot;_id&quot;:&quot;&lt;bot_id&quot;,
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>                      customData:{&quot;name&quot;:&quot;John&quot;,
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>                                  &quot;age&quot;:30,
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>                                   &quot;cars&quot;: {&quot;car1&quot;:&quot;Ford&quot;,
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>                                            &quot;car2&quot;:&quot;BMW&quot;,
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>                                            &quot;car3&quot;:&quot;Fiat&quot;
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>                                             }
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>                                   }
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>                           };
-</span></code></pre></div>
-<p><a class="glightbox" href="../images/web-mobile-sdk-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/web-mobile-sdk-img2.png" alt="BotUserSession of the context object" title="BotUserSession of the context object" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<h3 id="passing-mapped-identities">Passing Mapped Identities<a class="headerlink" href="#passing-mapped-identities" title="Permanent link">&para;</a></h3>
-<p>The Web/Mobile SDKs support the passing of mapped identities of the users when they switch from one identity to another while interacting with the bot. This process allows the users to continue any ongoing conversation initiated using a previous identity.
-For example, a user may have started the conversation with the bot using an anonymous or randomly generated identity. After exchanging a few messages, the user may become an authenticated or known user by logging into your website or any application. At this point, the user’s known identity can be passed to the bot from the SDK as part of the ‘<a href="https://developer.kore.ai/docs/bots/sdks/user-authorization-and-assertion/#About_JWT" target="_blank">JWT Grant API</a>’ call using the parameter identityToMerge. The Platform uses this information to merge the user identities and allows the user to resume an ongoing conversation using the new known identity.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a> &quot;iat&quot;: 1611810186883,
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a> &quot;exp&quot;: 1611813786.883,
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a> &quot;aud&quot;: &quot;https://idproxy.kore.com/authorize&quot;,
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a> &quot;iss&quot;: &quot;cs-d3042d3e-7da4-55da-a94d-783349270cc0&quot;,
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a> &quot;sub&quot;: &quot;knowuser1@test.com&quot;,
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a> &quot;isAnonymous&quot;: &quot;false&quot;,
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a> &quot;identityToMerge&quot;: &quot;anonymoususer1@test.com&quot;
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>}
-</span></code></pre></div>
-<p>The following scenarios describe the bot behavior when dealing with the new identity and merged identity:</p>
+<p><strong>variableType</strong> (if not set will default to env)-</p>
 <ul>
-<li>When both the new and merged identities are not present in the system, then the new identity is created and a new conversation is started using new identity</li>
-<li>When the new identity is present but the merged identity is not present in the system, then the conversation is started or continued (in case of an active session) using new identity</li>
-<li>When the merged identity is present but the new identity is not present in the system, then the new identity is created and the conversation is continued using the new identity. All references to the merged identity are replaced with the new identity and the merged identity is removed.</li>
-<li>When both the merged identity and the new identity are present in the system and the new identity does not have an active session, then the conversation is continued using the new identity. All references to the merged identity are replaced with the new identity and the merged identity is removed.</li>
-<li>When both the merged identity and the new identity are present in the system and both have an active session, then the merged identity’s conversation is continued using the new identity. All references to the merged identity are replaced with the new identity and the merged identity is removed. The active session of the new identity is marked as “Drop-off” and closed</li>
+<li>env for Environment and</li>
+<li>locale for Content Variable</li>
 </ul>
-<p>Due to the above-mentioned behavior in the user identity following changes can be seen:</p>
-<ul>
-<li>Analytics and Chat History will be updated associating all the sessions related to the merged identity with the new identity</li>
-<li>The sessions data is updated replacing the merged identity with the new identity</li>
-<li>The Billing Session tracking merged identity’s conversation will be marked as new identity</li>
+</li>
+<li>
+<p><strong>audioTag</strong> -for the player details in case IVR enabled</p>
+</li>
+<li><strong>group</strong> – group name</li>
+<li><strong>hint</strong> – description of the variable</li>
+<li><strong>propagateVAlue</strong> – true or false</li>
+<li><strong>Namespace</strong> – the namespace associated to the variable</li>
+<li><strong>Language-specific variable</strong></li>
 </ul>
-<h3 id="custom-meta-tags-via-websdk">Custom Meta Tags via webSDK<a class="headerlink" href="#custom-meta-tags-via-websdk" title="Permanent link">&para;</a></h3>
-<p>With the release of ver8.0 of the platform, you can directly add Custom Meta Tags from all supported internal channels (Web SDK/IVR / IVRVoice / Webhook channels). You can define Session, User, and Message level meta-tags. These tags will be added to the Conversation Session as soon as it is created.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>botOptions.botInfo = {name:&quot;&lt;bot_name&gt;&quot;, &quot;_id&quot;:&quot;&lt;bot_id&quot;,
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>                           customData :{&quot;name&quot;:&quot;John&quot;},
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>                           &quot;metaTags&quot;: { 
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>                                 &quot;messageLevelTags&quot;: [{ &quot;name&quot;: &quot;tag1&quot;, value: &quot;message&quot;}],
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>                                 &quot;sessionLevelTags&quot;: [{ &quot;name&quot;: &quot;tag2&quot;, value: &quot;session&quot;}],
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>                                 &quot;userLevelTags&quot;: [{ &quot;name&quot;: &quot;tag3&quot;, value: &quot;user&quot;}]
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>                                 }  
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>                          };
-</span></code></pre></div>
-<h3 id="some-commonly-encountered-errors">Some commonly encountered errors<a class="headerlink" href="#some-commonly-encountered-errors" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>A wrong URL is given in index.html, users see a 404 error. Double check the URL. URL changes depending on whether you are hosting the bot on your own web SDK or on Kore’s web SDK. If its Kore web SDK, then the URL is <code>http://demo.kore.net:3000/users/sts 7</code>.</p>
-<p>If you are hosting on your in-house web SDK, then provide the respective URL.</p>
-</li>
-<li>
-<p>missing/Invalid jwt.sub(): This error occurs for enterprise Bots, when the user’s email id is not given in the index.html file. Provide users identity as shown below in index.html</p>
-<p><code>botOptions.userIdentity = 'x@gmail.com';// Provide users email id here.</code></p>
-</li>
-<li>
-<p>Not found: User sees this error when either wrong clientID or no clientID is given. Check the correct ClientID from Bot – API Extensions option</p>
-<p><code>botOptions.clientId = "{clientID}"; // secure client-id</code></p>
-</li>
-<li>
-<p>error verifying the jwt: the Wrong clientSecret is given in index.html: Check the correct clientSecret you get from Bot – API Extensions option</p>
-<p><code>"clientSecret": "{clientSecret}" //provide clientSecret here</code></p>
-</li>
-</ul>
-<p>After you install and test the Web SDK using the test application and your local host server, you can use the same concept to install and configure the Web SDK in your own enterprise application. You will just need to reconfigure the file paths and URLs in the index.html file of the Web SDK to point to your website and servers, and configure a Kore.ai bot for the Web/Mobile Client channel with JWT credentials for your enterprise.</p>
+<p><strong>Sample CSV file</strong>:</p>
+<p><a class="glightbox" href="../images/env-and-content-variables-img15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img15.png" alt="Sample CSV file" title="Sample CSV file" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+<p><strong>Sample JSON file</strong>:</p>
+<p>```
+[
+  {"key":"hosturl",
+   "value":"<a href="https://bots.kore.ai">https://bots.kore.ai</a>",
+   "hint":"This is the URL of environment which can be used across the endpoints configured in the bot",
+   "audioTag":"",
+   "variableType":"env",
+   "scope":"prePopulated",
+   "group":"URLS"}
+]</p>
 
 
   
