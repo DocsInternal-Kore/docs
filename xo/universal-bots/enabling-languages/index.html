@@ -2822,8 +2822,10 @@
 <p>Like standard bots, you can enable more than one language for universal bots, but the functionality is completely different.</p>
 <p>When you enable a new language for a standard bot, you need to upload language packs consisting of the entire bot definitions. Whereas to enable a new language for a universal bot, you just need to set up the corresponding default dialog.</p>
 <p>Universal bots do not obtain the enabled languages of the linked bots. You must enable default and additional languages for the universal bot. When user utterances are made in an enabled language, the universal bot routes it to only those linked bot tasks that have the same language enabled. For example, if German is enabled for the universal bot and a user utters in German, the NLP engine looks for all the linked bot tasks that support German and sends the utterance only to those tasks.</p>
-<div class="language-text highlight"><pre><span></span><code>If a user interacts with the universal bot in a non-enabled language, it sends a standard response in the default language requesting the user to interact in one of the supported languages. Also, if none of the linked tasks have a relevant response, the bot triggers the language-specific default dialog.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a user interacts with the universal bot in a non-enabled language, it sends a standard response in the default language requesting the user to interact in one of the supported languages. Also, if none of the linked tasks have a relevant response, the bot triggers the language-specific default dialog.</p>
+</div>
 <p><strong>Before you Begin</strong></p>
 <p>This article assumes that you understand the fundamentals of multi-language bots in Kore.ai and therefore focuses on the aspects specific to the universal bots. For the fundamentals of multi-language bots in the Bots Builder, refer to<a href="https://developer.kore.ai/docs/bots/advanced-topics/multi-lingual/building-multi-language-bots/"> Building Multi-Language Bots</a>.</p>
 <h3 id="enable-language"><strong>Enable Language</strong><a class="headerlink" href="#enable-language" title="Permanent link">&para;</a></h3>
@@ -2838,11 +2840,13 @@
 <li>
 <p>Click the <strong>Add Language</strong> button from the top right.</p>
 </li>
-<li>
-<p>On the Add Language window, click **Configure **next to the language you want to.
-    !!! note</p>
+<li>On the Add Language window, click **Configure **next to the language you want to.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The language would be enabled only for the Universal Bot, ensure that this language is enabled and published in the linked bots as well. </p>
-</li>
+</div>
+<ol>
 <li>
 <p>Under the <strong>Language Selection Time Frame</strong> (scroll down to view this option) select one of these options:</p>
 <ul>
