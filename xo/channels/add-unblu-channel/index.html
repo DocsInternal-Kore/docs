@@ -2819,6 +2819,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#special-notes" class="md-nav__link">
+    Special Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-unblu-supported-message-templates" class="md-nav__link">
+    Using Unblu supported message templates
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2889,312 +2903,296 @@ For a detailed document on the implementation, <a href="https://developer.kore.a
 </li>
 </ul>
 <p>Locate the following section and populate the apiKey and serverUrl fields with the above-mentioned values. \</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>window.unblu.api
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>.configure({
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   apiKey: &quot;&lt;your-unblu-apikey&gt;&quot;,
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   serverUrl: &quot;&lt;your-unblu-host&gt;&quot;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        * `  })`
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  ```
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>In the following Script tag, add Unblu host URL and the API key: `&amp;lt;script type=&quot;text/javascript&quot; defer=&quot;defer&quot; src=&quot;&amp;lt;your-unblu-host&gt;/unblu/visitor.js?x-unblu-apikey=&amp;lt;your-unblu-apikey&gt;&quot;&gt;&amp;lt;/script&gt;`
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>The entire Unblu SDK HTML file would look like this: \
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  {
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    window.unblu.api
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    .configure({
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>       apiKey: &quot;&lt;your-unblu-apikey&gt;&quot;,
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>       serverUrl: &quot;&lt;your-unblu-host&gt;&quot;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            * `  }
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            )`
 </span></code></pre></div>
-<!DOCTYPE html>
-<p><html>
-<head>
-   <meta name="unblu:named-area" content="\<your-namedArea-Id>" />
- <br />
-<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script></p>
-<script src="<your-unblu-host>/unblu/js-api/v2/visitor/visitor-api.min.js"></script>
-<script>
-   function setVisitorData(engagementType, visitorData) {
-      return Promise.resolve(JSON.stringify({ name: "John", about: "Tester" }));
-       }
-     window.unblu.api
-      .configure({
-         apiKey: "<your-unblu-apikey>",
-         serverUrl: "<your-unblu-host>"
-       })
-      .initialize().then(function (api) {
-        console.log("API initialized successfully!");
-        api.setNewConversationInterceptor(setVisitorData);
-            }).catch(e => {
-                console.log("------error : ", e);
-                if (e.type === 'INITIALIZATION_TIMEOUT') {
-                  //retry
-                 } else if (e.type === 'UNSUPPORTED_BROWSER') {
-                  // display unsupported browser dialog
-                } else {
-                 // show generic error message
-                 }
-           }
-           );
-</script>
-<script type="text/javascript" defer="defer"
-src="<your-unblu-host>/unblu/visitor.js?x-unblu-apikey=<your-unblu-apikey>"></script>
-<p> <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head></p>
-<body>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
-<p></html>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>You can access the Visitor Data from the `usercontext.customData`  along with the user information for each message from Unblu,
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Following is the structure of the `usercontext.customData \
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>`
+\</p>
+<p>In the following Script tag, add Unblu host URL and the API key: <code>&amp;lt;script type="text/javascript" defer="defer" src="&amp;lt;your-unblu-host&gt;/unblu/visitor.js?x-unblu-apikey=&amp;lt;your-unblu-apikey&gt;"&gt;&amp;lt;/script&gt;</code></p>
+<p>The entire Unblu SDK HTML file would look like this:
+\</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;!DOCTYPE html&gt;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&lt;html&gt;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&lt;head&gt;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   &lt;meta name=&quot;unblu:named-area&quot; content=&quot;&lt;your-namedArea-Id&gt;&quot; /&gt;
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   &lt;script src=&quot;https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js&quot;&gt;&lt;/script&gt;
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>   &lt;script src=&quot;&lt;your-unblu-host&gt;/unblu/js-api/v2/visitor/visitor-api.min.js&quot;&gt;&lt;/script&gt;
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a> &lt;script&gt;
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>   function setVisitorData(engagementType, visitorData) {
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      return Promise.resolve(JSON.stringify({ name: &quot;John&quot;, about: &quot;Tester&quot; }));
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>       }
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>     window.unblu.api
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>      .configure({
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>         apiKey: &quot;&lt;your-unblu-apikey&gt;&quot;,
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>         serverUrl: &quot;&lt;your-unblu-host&gt;&quot;
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>       })
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>      .initialize().then(function (api) {
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        console.log(&quot;API initialized successfully!&quot;);
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        api.setNewConversationInterceptor(setVisitorData);
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>            }).catch(e =&gt; {
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>                console.log(&quot;------error : &quot;, e);
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>                if (e.type === &#39;INITIALIZATION_TIMEOUT&#39;) {
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>                  //retry
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>                 } else if (e.type === &#39;UNSUPPORTED_BROWSER&#39;) {
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>                  // display unsupported browser dialog
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>                } else {
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>                 // show generic error message
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>                 }
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>           }
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>           );
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>&lt;/script&gt;
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>&lt;script type=&quot;text/javascript&quot; defer=&quot;defer&quot;
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>src=&quot;&lt;your-unblu-host&gt;/unblu/visitor.js?x-unblu-apikey=&lt;your-unblu-apikey&gt;&quot;&gt;&lt;/script&gt;
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>&lt;/head&gt;
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>&lt;body&gt;
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>&lt;/body&gt;
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>&lt;/html&gt;
 </span></code></pre></div>
-{
-"timestamp" : 1594113137065.0,
-"eventType" : "bot.dialog.opened",
-"accountId" : "wZvcAnbBSpOps9oteH-Oxw",
-"dialogToken" : "qG8dFE7ZQPW1p6qcI293hQ-c-QY7P7MNqTCuM6FHT-m-FSQ",
-"dialogType" : "ONBOARDING",
-"counterpartPerson" : {
-   "type" : "PersonData",
-   "id" : "xZHnVmhxQNKvyf5ybxyLoQ",
-   "accountId" : "wZvcAnbBSpOps9oteH-Oxw",
-   "personSource" : "VIRTUAL",
-   "sourceId" : "awhFjUq1RQCvdMDoV5OW2Q",
-   "sourceData" : null,
-   "firstName" : null,
-   "lastName" : null,
-   "username" : null,
-   "nickname" : null,
-   "displayName" : "Visitor - xZHnV",
-   "personType" : "VISITOR",
-   "authorizationRole" : "ANONYMOUS_USER",
-   "email" : null,
-   "phone" : null,
-   "teamId" : null,
-   "teamName" : null,
-   "avatar" : null
-   },
-"conversation" : {
-   "type" : "ConversationData",
-   "id" : "qG8dFE7ZQPW1p6qcI293hQ",
-   "accountId" : "wZvcAnbBSpOps9oteH-Oxw",
-   "topic" : null,
-   "recipient" : {
-   "type" : "NamedAreaData",
-   "id" : "WkUGFqcORCCor3bxHa3I5A",
-   "accountId" : "wZvcAnbBSpOps9oteH-Oxw",
-   "displayName" : "testlocal",
-   "avatar" : null
-  },
-"participants" : [
- {
-   "type" : "ParticipantData",
-   "state" : "ACTIVE",
-   "personId" : "yb8ALAiGQOWlCoBahUCfgQ",
-   "connectedViaExternalMessenger" : false,
-   "hidden" : true
- }
- ],
- "assigneePersonId" : null,
- "contextPersonId" : "xZHnVmhxQNKvyf5ybxyLoQ",
- "state" : "ONBOARDING",
- "initialEngagementType" : "CHAT_REQUEST",
- "locale" : "en",
- "tokboxSessionId" : null,
- "visitorData" : "{\"name\":\"John\",\"about\":\"Tester\"}",
- "conversationTemplateId" : "R6W3x2uzQ1KXzARnIqdNZw",
- "links" : [
- {
-   "type" : "OPEN_IN_VISITOR_DESK",
-   "url" : "<a href="https://kore.dev.unblu-test.com/unblu/visitordesk/#/conversation/qG8dFE7ZQPW1p6qcI293hQ">https://kore.dev.unblu-test.com/unblu/visitordesk/#/conversation/qG8dFE7ZQPW1p6qcI293hQ</a>"
- },
- {
-  "type" : "OPEN_IN_AGENT_DESK",
-  "url" : "<a href="https://kore.dev.unblu-test.com/unblu/desk/#/conversation/qG8dFE7ZQPW1p6qcI293hQ">https://kore.dev.unblu-test.com/unblu/desk/#/conversation/qG8dFE7ZQPW1p6qcI293hQ</a>"
- },
-{
-  "type" : "OPEN_IN_AGENT_SINGLE_VIEW",
-  "url" : "<a href="https://kore.dev.unblu-test.com/unblu/single/#/conversation/qG8dFE7ZQPW1p6qcI293hQ">https://kore.dev.unblu-test.com/unblu/single/#/conversation/qG8dFE7ZQPW1p6qcI293hQ</a>"
- }
- ],
- "externalMessengerChannelId" : null,
- "sourceId" : null,
- "configuration" : null,
- "text" : null
-},
-"presencePersonInfo" : {
-  "id" : "OuG04Q0WSFe3-iaIA1GlLw",
-  "creationTimestamp" : 1594112743472.0,
-  "modificationTimestamp" : 1594112743472.0,
-  "accountId" : "wZvcAnbBSpOps9oteH-Oxw",
-  "joinedTimestamp" : 1594112743472.0,
-  "leftTimestamp" : null,
-  "personId" : "xZHnVmhxQNKvyf5ybxyLoQ",
-  "deviceInfo" : {
-    "id" : "fx7Q8qZyQXmnf62xpoePWg",
-    "creationTimestamp" : 1594112743454.0,
-    "modificationTimestamp" : 1594112743454.0,
-    "accountId" : "wZvcAnbBSpOps9oteH-Oxw",
-    "osName" : "Ubuntu",
-    "osVersion" : "Other",
-    "browserName" : "Chromium",
-    "browserVersion" : "81.0",
-    "userAgent" : null,
-    "screenWidth" : null,
-    "screenHeight" : null,
-    "screenPixelRatio" : null,
-    "type" : "DESKTOP",
-    "identifier" : "awhFjUq1RQCvdMDoV5OW2Q",
-    "identifierSource" : "COOKIE",
-    "pushToken" : null,
-    "ownerPersonId" : "xZHnVmhxQNKvyf5ybxyLoQ"
-  },
- "touchTimestamp" : 1594113153628.0,
- "impersonationType" : "NONE",
- "impersonatedFromUserId" : null,
- "impersonatedFromAccountId" : null,
- "additionalInfo" : null,
- "authInfo" : null,
- "propagated" : false
- }
-}</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>## Special Notes
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>There are multiple functionalities that can be achieved by the integration of Unblu channel with Kore.ai assistant
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>* When mapping a named area to a bot, _multiple named areas_ can be mapped. This way a single Kore.ai assistant has the ability to accept Unblu dialog offer requests from different origins like SDKs or namedAreas.
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>* Also, the named area mapping is optional if you are enabling the Unblu channel for a single Kore.ai assistant.
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>* You can redirect user conversations to agents by adding an _agent transfer_ node in the dialog flow, note that you need not enable the Agent Transfer or BotKit specifically for this Channel. Having an agent transfer node is sufficient.
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>* The user information for each message from Unblu is available in the `usercontext.customData` and you can use it for further processing. This information includes _deviceInfo_, _authInfo_, _joinedTime_ of the user. [See here for how to use context object](https://developer.kore.ai/docs/bots/bot-builder-tool/context-object/).
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>## Using Unblu supported message templates
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>By default, the following message templates are used – Button/multi-choice, List template. You can override templates like card message, List message, multi-choice/Button message.
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>Following is a code example for how to use the above mentioned templates, change it to suit your requirements:
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>**Card Template**:
+<p>You can access the Visitor Data from the <code>usercontext.customData</code>  along with the user information for each message from Unblu,</p>
+<p>Following is the structure of the <code>usercontext.customData \</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&quot;timestamp&quot; : 1594113137065.0,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&quot;eventType&quot; : &quot;bot.dialog.opened&quot;,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&quot;accountId&quot; : &quot;wZvcAnbBSpOps9oteH-Oxw&quot;,
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&quot;dialogToken&quot; : &quot;qG8dFE7ZQPW1p6qcI293hQ-c-QY7P7MNqTCuM6FHT-m-FSQ&quot;,
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>&quot;dialogType&quot; : &quot;ONBOARDING&quot;,
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>&quot;counterpartPerson&quot; : {
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>   &quot;type&quot; : &quot;PersonData&quot;,
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>   &quot;id&quot; : &quot;xZHnVmhxQNKvyf5ybxyLoQ&quot;,
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>   &quot;accountId&quot; : &quot;wZvcAnbBSpOps9oteH-Oxw&quot;,
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>   &quot;personSource&quot; : &quot;VIRTUAL&quot;,
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>   &quot;sourceId&quot; : &quot;awhFjUq1RQCvdMDoV5OW2Q&quot;,
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>   &quot;sourceData&quot; : null,
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>   &quot;firstName&quot; : null,
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>   &quot;lastName&quot; : null,
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>   &quot;username&quot; : null,
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>   &quot;nickname&quot; : null,
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>   &quot;displayName&quot; : &quot;Visitor - xZHnV&quot;,
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>   &quot;personType&quot; : &quot;VISITOR&quot;,
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>   &quot;authorizationRole&quot; : &quot;ANONYMOUS_USER&quot;,
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>   &quot;email&quot; : null,
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>   &quot;phone&quot; : null,
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>   &quot;teamId&quot; : null,
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>   &quot;teamName&quot; : null,
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>   &quot;avatar&quot; : null
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>   },
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>&quot;conversation&quot; : {
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>   &quot;type&quot; : &quot;ConversationData&quot;,
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>   &quot;id&quot; : &quot;qG8dFE7ZQPW1p6qcI293hQ&quot;,
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>   &quot;accountId&quot; : &quot;wZvcAnbBSpOps9oteH-Oxw&quot;,
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>   &quot;topic&quot; : null,
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>   &quot;recipient&quot; : {
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>   &quot;type&quot; : &quot;NamedAreaData&quot;,
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>   &quot;id&quot; : &quot;WkUGFqcORCCor3bxHa3I5A&quot;,
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>   &quot;accountId&quot; : &quot;wZvcAnbBSpOps9oteH-Oxw&quot;,
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>   &quot;displayName&quot; : &quot;testlocal&quot;,
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>   &quot;avatar&quot; : null
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>  },
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>&quot;participants&quot; : [
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a> {
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>   &quot;type&quot; : &quot;ParticipantData&quot;,
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>   &quot;state&quot; : &quot;ACTIVE&quot;,
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>   &quot;personId&quot; : &quot;yb8ALAiGQOWlCoBahUCfgQ&quot;,
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>   &quot;connectedViaExternalMessenger&quot; : false,
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>   &quot;hidden&quot; : true
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a> }
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a> ],
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a> &quot;assigneePersonId&quot; : null,
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a> &quot;contextPersonId&quot; : &quot;xZHnVmhxQNKvyf5ybxyLoQ&quot;,
+</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a> &quot;state&quot; : &quot;ONBOARDING&quot;,
+</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a> &quot;initialEngagementType&quot; : &quot;CHAT_REQUEST&quot;,
+</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a> &quot;locale&quot; : &quot;en&quot;,
+</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a> &quot;tokboxSessionId&quot; : null,
+</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a> &quot;visitorData&quot; : &quot;{\&quot;name\&quot;:\&quot;John\&quot;,\&quot;about\&quot;:\&quot;Tester\&quot;}&quot;,
+</span><span id="__span-2-55"><a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a> &quot;conversationTemplateId&quot; : &quot;R6W3x2uzQ1KXzARnIqdNZw&quot;,
+</span><span id="__span-2-56"><a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a> &quot;links&quot; : [
+</span><span id="__span-2-57"><a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a> {
+</span><span id="__span-2-58"><a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>   &quot;type&quot; : &quot;OPEN_IN_VISITOR_DESK&quot;,
+</span><span id="__span-2-59"><a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>   &quot;url&quot; : &quot;https://kore.dev.unblu-test.com/unblu/visitordesk/#/conversation/qG8dFE7ZQPW1p6qcI293hQ&quot;
+</span><span id="__span-2-60"><a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a> },
+</span><span id="__span-2-61"><a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a> {
+</span><span id="__span-2-62"><a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>  &quot;type&quot; : &quot;OPEN_IN_AGENT_DESK&quot;,
+</span><span id="__span-2-63"><a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>  &quot;url&quot; : &quot;https://kore.dev.unblu-test.com/unblu/desk/#/conversation/qG8dFE7ZQPW1p6qcI293hQ&quot;
+</span><span id="__span-2-64"><a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a> },
+</span><span id="__span-2-65"><a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>{
+</span><span id="__span-2-66"><a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>  &quot;type&quot; : &quot;OPEN_IN_AGENT_SINGLE_VIEW&quot;,
+</span><span id="__span-2-67"><a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>  &quot;url&quot; : &quot;https://kore.dev.unblu-test.com/unblu/single/#/conversation/qG8dFE7ZQPW1p6qcI293hQ&quot;
+</span><span id="__span-2-68"><a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a> }
+</span><span id="__span-2-69"><a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a> ],
+</span><span id="__span-2-70"><a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a> &quot;externalMessengerChannelId&quot; : null,
+</span><span id="__span-2-71"><a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a> &quot;sourceId&quot; : null,
+</span><span id="__span-2-72"><a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a> &quot;configuration&quot; : null,
+</span><span id="__span-2-73"><a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a> &quot;text&quot; : null
+</span><span id="__span-2-74"><a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>},
+</span><span id="__span-2-75"><a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a>&quot;presencePersonInfo&quot; : {
+</span><span id="__span-2-76"><a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a>  &quot;id&quot; : &quot;OuG04Q0WSFe3-iaIA1GlLw&quot;,
+</span><span id="__span-2-77"><a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a>  &quot;creationTimestamp&quot; : 1594112743472.0,
+</span><span id="__span-2-78"><a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a>  &quot;modificationTimestamp&quot; : 1594112743472.0,
+</span><span id="__span-2-79"><a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a>  &quot;accountId&quot; : &quot;wZvcAnbBSpOps9oteH-Oxw&quot;,
+</span><span id="__span-2-80"><a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>  &quot;joinedTimestamp&quot; : 1594112743472.0,
+</span><span id="__span-2-81"><a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a>  &quot;leftTimestamp&quot; : null,
+</span><span id="__span-2-82"><a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a>  &quot;personId&quot; : &quot;xZHnVmhxQNKvyf5ybxyLoQ&quot;,
+</span><span id="__span-2-83"><a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a>  &quot;deviceInfo&quot; : {
+</span><span id="__span-2-84"><a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a>    &quot;id&quot; : &quot;fx7Q8qZyQXmnf62xpoePWg&quot;,
+</span><span id="__span-2-85"><a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a>    &quot;creationTimestamp&quot; : 1594112743454.0,
+</span><span id="__span-2-86"><a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a>    &quot;modificationTimestamp&quot; : 1594112743454.0,
+</span><span id="__span-2-87"><a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a>    &quot;accountId&quot; : &quot;wZvcAnbBSpOps9oteH-Oxw&quot;,
+</span><span id="__span-2-88"><a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a>    &quot;osName&quot; : &quot;Ubuntu&quot;,
+</span><span id="__span-2-89"><a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a>    &quot;osVersion&quot; : &quot;Other&quot;,
+</span><span id="__span-2-90"><a id="__codelineno-2-90" name="__codelineno-2-90" href="#__codelineno-2-90"></a>    &quot;browserName&quot; : &quot;Chromium&quot;,
+</span><span id="__span-2-91"><a id="__codelineno-2-91" name="__codelineno-2-91" href="#__codelineno-2-91"></a>    &quot;browserVersion&quot; : &quot;81.0&quot;,
+</span><span id="__span-2-92"><a id="__codelineno-2-92" name="__codelineno-2-92" href="#__codelineno-2-92"></a>    &quot;userAgent&quot; : null,
+</span><span id="__span-2-93"><a id="__codelineno-2-93" name="__codelineno-2-93" href="#__codelineno-2-93"></a>    &quot;screenWidth&quot; : null,
+</span><span id="__span-2-94"><a id="__codelineno-2-94" name="__codelineno-2-94" href="#__codelineno-2-94"></a>    &quot;screenHeight&quot; : null,
+</span><span id="__span-2-95"><a id="__codelineno-2-95" name="__codelineno-2-95" href="#__codelineno-2-95"></a>    &quot;screenPixelRatio&quot; : null,
+</span><span id="__span-2-96"><a id="__codelineno-2-96" name="__codelineno-2-96" href="#__codelineno-2-96"></a>    &quot;type&quot; : &quot;DESKTOP&quot;,
+</span><span id="__span-2-97"><a id="__codelineno-2-97" name="__codelineno-2-97" href="#__codelineno-2-97"></a>    &quot;identifier&quot; : &quot;awhFjUq1RQCvdMDoV5OW2Q&quot;,
+</span><span id="__span-2-98"><a id="__codelineno-2-98" name="__codelineno-2-98" href="#__codelineno-2-98"></a>    &quot;identifierSource&quot; : &quot;COOKIE&quot;,
+</span><span id="__span-2-99"><a id="__codelineno-2-99" name="__codelineno-2-99" href="#__codelineno-2-99"></a>    &quot;pushToken&quot; : null,
+</span><span id="__span-2-100"><a id="__codelineno-2-100" name="__codelineno-2-100" href="#__codelineno-2-100"></a>    &quot;ownerPersonId&quot; : &quot;xZHnVmhxQNKvyf5ybxyLoQ&quot;
+</span><span id="__span-2-101"><a id="__codelineno-2-101" name="__codelineno-2-101" href="#__codelineno-2-101"></a>  },
+</span><span id="__span-2-102"><a id="__codelineno-2-102" name="__codelineno-2-102" href="#__codelineno-2-102"></a> &quot;touchTimestamp&quot; : 1594113153628.0,
+</span><span id="__span-2-103"><a id="__codelineno-2-103" name="__codelineno-2-103" href="#__codelineno-2-103"></a> &quot;impersonationType&quot; : &quot;NONE&quot;,
+</span><span id="__span-2-104"><a id="__codelineno-2-104" name="__codelineno-2-104" href="#__codelineno-2-104"></a> &quot;impersonatedFromUserId&quot; : null,
+</span><span id="__span-2-105"><a id="__codelineno-2-105" name="__codelineno-2-105" href="#__codelineno-2-105"></a> &quot;impersonatedFromAccountId&quot; : null,
+</span><span id="__span-2-106"><a id="__codelineno-2-106" name="__codelineno-2-106" href="#__codelineno-2-106"></a> &quot;additionalInfo&quot; : null,
+</span><span id="__span-2-107"><a id="__codelineno-2-107" name="__codelineno-2-107" href="#__codelineno-2-107"></a> &quot;authInfo&quot; : null,
+</span><span id="__span-2-108"><a id="__codelineno-2-108" name="__codelineno-2-108" href="#__codelineno-2-108"></a> &quot;propagated&quot; : false
+</span><span id="__span-2-109"><a id="__codelineno-2-109" name="__codelineno-2-109" href="#__codelineno-2-109"></a> }
+</span><span id="__span-2-110"><a id="__codelineno-2-110" name="__codelineno-2-110" href="#__codelineno-2-110"></a>}
 </span></code></pre></div>
-<code>var unbluCardTemplate = {</code>
-    "<span class="arithmatex">\(_type": "CardPostMessageData",
-    "type": "CARD",
-    "imageUrl": "data:image/png;base64,",
-    "imageAltText": "test image",
-    "title": "Title",
-    "body": "This is the **body text** with markdown",
-    "bodyTextType": "MARKDOWN",
-    "actions": [
-      {
-        "\)</span>_type": "MessageAction",
-        "actionType": "LINK_INTERNAL",
-        "label": "Unblu homepage",
-        "value": "<a href="https://unblu.com">https://unblu.com</a>"
-      },
-      {
-        "<span class="arithmatex">\(_type": "MessageAction",
-        "actionType": "LINK_EXTERNAL",
-        "label": "Wikipedia",
-        "value": "https://www.wikipedia.org/"
-      },
-      {
-        "\)</span>_type": "MessageAction",
-        "actionType": "REPLY_MESSAGE",
-        "label": "More info",
-        "value": "Could you provide me with more info?"
-      }
-    ]
-  };</p>
-<p>print(JSON.stringify(unbluCardTemplate));</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>**List Template**:
+<h2 id="special-notes">Special Notes<a class="headerlink" href="#special-notes" title="Permanent link">&para;</a></h2>
+<p>There are multiple functionalities that can be achieved by the integration of Unblu channel with Kore.ai assistant</p>
+<ul>
+<li>When mapping a named area to a bot, <em>multiple named areas</em> can be mapped. This way a single Kore.ai assistant has the ability to accept Unblu dialog offer requests from different origins like SDKs or namedAreas.</li>
+<li>Also, the named area mapping is optional if you are enabling the Unblu channel for a single Kore.ai assistant.</li>
+<li>You can redirect user conversations to agents by adding an <em>agent transfer</em> node in the dialog flow, note that you need not enable the Agent Transfer or BotKit specifically for this Channel. Having an agent transfer node is sufficient.</li>
+<li>The user information for each message from Unblu is available in the <code>usercontext.customData</code> and you can use it for further processing. This information includes <em>deviceInfo</em>, <em>authInfo</em>, <em>joinedTime</em> of the user. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/context-object/">See here for how to use context object</a>.</li>
+</ul>
+<h2 id="using-unblu-supported-message-templates">Using Unblu supported message templates<a class="headerlink" href="#using-unblu-supported-message-templates" title="Permanent link">&para;</a></h2>
+<p>By default, the following message templates are used – Button/multi-choice, List template. You can override templates like card message, List message, multi-choice/Button message.</p>
+<p>Following is a code example for how to use the above mentioned templates, change it to suit your requirements:</p>
+<p><strong>Card Template</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>`var unbluCardTemplate = {`
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    &quot;$_type&quot;: &quot;CardPostMessageData&quot;,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    &quot;type&quot;: &quot;CARD&quot;,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    &quot;imageUrl&quot;: &quot;data:image/png;base64,&quot;,
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    &quot;imageAltText&quot;: &quot;test image&quot;,
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    &quot;title&quot;: &quot;Title&quot;,
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    &quot;body&quot;: &quot;This is the **body text** with markdown&quot;,
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    &quot;bodyTextType&quot;: &quot;MARKDOWN&quot;,
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    &quot;actions&quot;: [
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>      {
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        &quot;$_type&quot;: &quot;MessageAction&quot;,
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        &quot;actionType&quot;: &quot;LINK_INTERNAL&quot;,
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        &quot;label&quot;: &quot;Unblu homepage&quot;,
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        &quot;value&quot;: &quot;https://unblu.com&quot;
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>      },
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>      {
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        &quot;$_type&quot;: &quot;MessageAction&quot;,
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        &quot;actionType&quot;: &quot;LINK_EXTERNAL&quot;,
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        &quot;label&quot;: &quot;Wikipedia&quot;,
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>        &quot;value&quot;: &quot;https://www.wikipedia.org/&quot;
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>      },
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>      {
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>        &quot;$_type&quot;: &quot;MessageAction&quot;,
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        &quot;actionType&quot;: &quot;REPLY_MESSAGE&quot;,
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>        &quot;label&quot;: &quot;More info&quot;,
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>        &quot;value&quot;: &quot;Could you provide me with more info?&quot;
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>      }
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    ]
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>  };
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>print(JSON.stringify(unbluCardTemplate));
 </span></code></pre></div>
-<code>var unbluListTemplate = {</code>
-    "<span class="arithmatex">\(_type": "ListPostMessageData",
-    "type": "LIST",
-    "header": {
-      "\)</span>_type": "MessageHeader",
-      "imageUrl": "data:image/png;base64,",
-      "imageAltText": "test image",
-      "title": "Title",
-      "body": "This is the <strong>body text</strong> with markdown",
-      "bodyTextType": "MARKDOWN"
-    },
-    "items": [
-      {
-        "<span class="arithmatex">\(_type": "PostListMessageCardItemData",
-        "imageUrl": "data:image/png;base64,",
-        "imageAltText": "test image",
-        "title": "Title",
-        "body": "This is the **body text** with markdown",
-        "bodyTextType": "MARKDOWN",
-        "action": null
-      },
-      {
-        "\)</span>_type": "PostListMessageCardItemData",
-        "imageUrl": "data:image/png;base64,",
-        "imageAltText": "test image",
-        "title": "Title",
-        "body": "This is the <strong>body text</strong> with markdown",
-        "bodyTextType": "MARKDOWN",
-        "action": {
-          "<span class="arithmatex">\(_type": "MessageAction",
-          "actionType": "LINK_INTERNAL",
-          "label": "Unblu homepage",
-          "value": "https://unblu.com"
-        }
-      }
-    ],
-    "actions": [
-      {
-        "\)</span>_type": "MessageAction",
-        "actionType": "LINK_INTERNAL",
-        "label": "Unblu homepage",
-        "value": "<a href="https://unblu.com">https://unblu.com</a>"
-      },
-      {
-        "<span class="arithmatex">\(_type": "MessageAction",
-        "actionType": "LINK_EXTERNAL",
-        "label": "Wikipedia",
-        "value": "https://www.wikipedia.org/"
-      },
-      {
-        "\)</span>_type": "MessageAction",
-        "actionType": "REPLY_MESSAGE",
-        "label": "More info",
-        "value": "Could you provide me with more info?"
-      }
-    ]
-}
-print(JSON.stringify(unbluListTemplate)
-);</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>**Multi Choice Template**:
+<p><strong>List Template</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>`var unbluListTemplate = {`
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    &quot;$_type&quot;: &quot;ListPostMessageData&quot;,
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    &quot;type&quot;: &quot;LIST&quot;,
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    &quot;header&quot;: {
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>      &quot;$_type&quot;: &quot;MessageHeader&quot;,
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>      &quot;imageUrl&quot;: &quot;data:image/png;base64,&quot;,
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>      &quot;imageAltText&quot;: &quot;test image&quot;,
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>      &quot;title&quot;: &quot;Title&quot;,
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>      &quot;body&quot;: &quot;This is the **body text** with markdown&quot;,
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>      &quot;bodyTextType&quot;: &quot;MARKDOWN&quot;
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    },
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    &quot;items&quot;: [
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>      {
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        &quot;$_type&quot;: &quot;PostListMessageCardItemData&quot;,
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        &quot;imageUrl&quot;: &quot;data:image/png;base64,&quot;,
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        &quot;imageAltText&quot;: &quot;test image&quot;,
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        &quot;title&quot;: &quot;Title&quot;,
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        &quot;body&quot;: &quot;This is the **body text** with markdown&quot;,
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        &quot;bodyTextType&quot;: &quot;MARKDOWN&quot;,
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        &quot;action&quot;: null
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>      },
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>      {
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        &quot;$_type&quot;: &quot;PostListMessageCardItemData&quot;,
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>        &quot;imageUrl&quot;: &quot;data:image/png;base64,&quot;,
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>        &quot;imageAltText&quot;: &quot;test image&quot;,
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>        &quot;title&quot;: &quot;Title&quot;,
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>        &quot;body&quot;: &quot;This is the **body text** with markdown&quot;,
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>        &quot;bodyTextType&quot;: &quot;MARKDOWN&quot;,
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>        &quot;action&quot;: {
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>          &quot;$_type&quot;: &quot;MessageAction&quot;,
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>          &quot;actionType&quot;: &quot;LINK_INTERNAL&quot;,
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>          &quot;label&quot;: &quot;Unblu homepage&quot;,
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>          &quot;value&quot;: &quot;https://unblu.com&quot;
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>        }
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>      }
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>    ],
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>    &quot;actions&quot;: [
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>      {
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>        &quot;$_type&quot;: &quot;MessageAction&quot;,
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>        &quot;actionType&quot;: &quot;LINK_INTERNAL&quot;,
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>        &quot;label&quot;: &quot;Unblu homepage&quot;,
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>        &quot;value&quot;: &quot;https://unblu.com&quot;
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>      },
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>      {
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>        &quot;$_type&quot;: &quot;MessageAction&quot;,
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>        &quot;actionType&quot;: &quot;LINK_EXTERNAL&quot;,
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>        &quot;label&quot;: &quot;Wikipedia&quot;,
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>        &quot;value&quot;: &quot;https://www.wikipedia.org/&quot;
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>      },
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>      {
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>        &quot;$_type&quot;: &quot;MessageAction&quot;,
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>        &quot;actionType&quot;: &quot;REPLY_MESSAGE&quot;,
+</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>        &quot;label&quot;: &quot;More info&quot;,
+</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>        &quot;value&quot;: &quot;Could you provide me with more info?&quot;
+</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>      }
+</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>    ]
+</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>}
+</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>print(JSON.stringify(unbluListTemplate)
+</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>);
 </span></code></pre></div>
-<code>var unbluMultiChoiceTemplate =  {</code>
-    "<span class="arithmatex">\(_type": "MultichoiceQuestionPostMessageData",
-    "type": "MULTICHOICE_QUESTION",
-    "text": "Choose one of the options",
-    "textType": "MARKDOWN",
-    "options": [
-      {
-        "\)</span>_type": "MultichoiceQuestionOption",
-        "label": "Option 1",
-        "value": "1",
-        "primary": true
-      },
-      {
-        "$_type": "MultichoiceQuestionOption",
-        "label": "Option 2",
-        "value": "2",
-        "primary": false
-      }
-    ]
-  };
-print(JSON.stringify(unbluMultiChoiceTemplate));</p>
-<p>```</p>
+<p><strong>Multi Choice Template</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>`var unbluMultiChoiceTemplate =  {`
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    &quot;$_type&quot;: &quot;MultichoiceQuestionPostMessageData&quot;,
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    &quot;type&quot;: &quot;MULTICHOICE_QUESTION&quot;,
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    &quot;text&quot;: &quot;Choose one of the options&quot;,
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    &quot;textType&quot;: &quot;MARKDOWN&quot;,
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    &quot;options&quot;: [
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>      {
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        &quot;$_type&quot;: &quot;MultichoiceQuestionOption&quot;,
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        &quot;label&quot;: &quot;Option 1&quot;,
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        &quot;value&quot;: &quot;1&quot;,
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        &quot;primary&quot;: true
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>      },
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>      {
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>        &quot;$_type&quot;: &quot;MultichoiceQuestionOption&quot;,
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        &quot;label&quot;: &quot;Option 2&quot;,
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>        &quot;value&quot;: &quot;2&quot;,
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>        &quot;primary&quot;: false
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>      }
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    ]
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  };
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>print(JSON.stringify(unbluMultiChoiceTemplate));
+</span></code></pre></div>
 
 
   
@@ -3293,5 +3291,5 @@ print(JSON.stringify(unbluMultiChoiceTemplate));</p>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
