@@ -17,7 +17,7 @@
     
     
       
-        <title>**Adding the LivePerson Channel** - Kore ai Docs</title>
+        <title>**Add RingCentral Engage as a Channel** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adding-the-liveperson-channel" class="md-skip">
+        <a href="#add-ringcentral-engage-as-a-channel" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Adding the LivePerson Channel**
+              **Add RingCentral Engage as a Channel**
             
           </span>
         </div>
@@ -3271,36 +3271,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1-create-a-liveperson-account" class="md-nav__link">
-    Step 1: Create A LivePerson Account
+  <a href="#add-the-host-url" class="md-nav__link">
+    Add the Host URL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-add-a-skill-in-liveperson" class="md-nav__link">
-    Step 2: Add a skill in LivePerson
+  <a href="#generate-api-access-token" class="md-nav__link">
+    Generate API Access Token
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-add-a-user-in-liveperson" class="md-nav__link">
-    Step 3: Add a user in LivePerson
+  <a href="#setup-webhook-configuration" class="md-nav__link">
+    Setup Webhook Configuration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-configure-the-channel-in-the-xo-platform" class="md-nav__link">
-    Step 4: Configure the Channel in the XO Platform
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-verify-the-liveperson-channel-integration" class="md-nav__link">
-    Step 5: Verify the LivePerson Channel Integration
+  <a href="#subscribe-to-events-for-message-delivery" class="md-nav__link">
+    Subscribe to events for message delivery
   </a>
   
 </li>
@@ -3324,123 +3317,75 @@
 
 
 
-<h1 id="adding-the-liveperson-channel"><strong>Adding the LivePerson Channel</strong><a class="headerlink" href="#adding-the-liveperson-channel" title="Permanent link">&para;</a></h1>
-<p>The Kore.ai XO Platform lets you easily connect with the LivePerson channel to quickly identify your customers’ intent and power your conversational experiences.</p>
-<p>To add LivePerson as a channel to your Kore.ai assistant, you must add a bot user in LivePerson and set up the integration. Adding the LivePerson channel to your Kore.ai VA allows end-users to interact with your assistant using their <em>LivePerson</em> account.</p>
+<h1 id="add-ringcentral-engage-as-a-channel"><strong>Add RingCentral Engage as a Channel</strong><a class="headerlink" href="#add-ringcentral-engage-as-a-channel" title="Permanent link">&para;</a></h1>
+<p>To set up <strong>RingCentral Engage</strong> as a channel, you must complete the following steps:</p>
+<h2 id="add-the-host-url">Add the Host URL<a class="headerlink" href="#add-the-host-url" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Copy-paste the <strong>HOST URL</strong> from <strong>RingCentral Engage</strong> to the Kore.ai platform.</li>
+<li>Provide it in the <strong>Channels → RingCentral Engage → Config</strong>.</li>
+</ol>
+<h2 id="generate-api-access-token">Generate API Access Token<a class="headerlink" href="#generate-api-access-token" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Login to your <strong>RingCentral Engage</strong> developer account. The URL specific to your company will be available after creating a paid account with RingCentral Engage.</li>
+<li>Navigate to the <strong>Admin</strong> section and click the code snippet icon on the left navigation menu.</li>
+<li>
+<p>Select <strong>API Access Tokens</strong>.
+<a class="glightbox" href="../images/ringcentral.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral.png" alt="RingCentral Engage integration" title="RinCentral Engage integration" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>If there are any tokens present already, you can use them or click <strong>ADD</strong> to generate a new <em>API Token</em>.
+<a class="glightbox" href="../images/ringcentral1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral1.png" alt="RingCentral access token" title="RinCentral access token" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+</ol>
+<p><a class="glightbox" href="../images/ringcentral2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral2.png" alt="RingCentral api token" title="RinCentral api token" style="border: 1px solid gray; zoom:70%;"></a></p>
+<ol>
+<li>Provide a <strong>Name</strong> for your API Token.</li>
+<li>Select <strong>Agent</strong> from the drop-down list.</li>
+<li>Click <strong>Save</strong>.</li>
+<li>
+<p>Navigate to the _API Tokens _screen and click on the <strong>Edit</strong> icon to land on the screen shown below where the generated _API Access Token _appears.
+<a class="glightbox" href="../images/ringcentral3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral3.png" alt="access token" title="access token" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Copy and provide the generated** API Access Token <strong>under **Channels → RingCentral Engage → Config</strong> on the Kore.ai platform.</p>
+</li>
+</ol>
+<h2 id="setup-webhook-configuration">Setup Webhook Configuration<a class="headerlink" href="#setup-webhook-configuration" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Once the <em>API Token</em> has been generated, navigate to <strong>Admin -&gt; Webhooks</strong>. Click the <strong>code snippet</strong> icon on the left navigation menu, and select <strong>Webhooks</strong>.
+<a class="glightbox" href="../images/ringcentral4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral4.png" alt="webhook  " title="webhook" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>If any webhook configurations are present already, you can use them or click <strong>ADD</strong> to generate a new webhook configuration.
+<a class="glightbox" href="../images/ringcentral5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral5.png" alt="webhook configuration" title="webhook configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+</ol>
+<p><a class="glightbox" href="../images/ringcentral6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral6.png" alt="new webhook configuration" title="new webhook configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
+<ol>
+<li>Select the <strong>API Access Token</strong> generated.</li>
+<li>Copy the <strong>URL</strong> from the Kore.ai platform under the <strong>RingCentral Engage</strong> channel and paste it to the above webhook configuration screen.</li>
+<li>Provide a **Name **for the configuration.</li>
+<li>The <em>Verification Token</em> will be generated automatically.</li>
+<li>Copy the <strong>verification token</strong> and paste it in the <strong>Channels → RinCentral Engage → Config</strong> section of the Kore.ai platform.</li>
+<li>
+<p>Provide any unique <strong>“Secret Key”</strong> of your choice.
+<a class="glightbox" href="../images/ringcentral7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral7.png" alt="secret key" title="secret key" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Select the Channel you prefer or select all the channels if the message is to be delivered on all the channels.</p>
+</li>
+</ol>
+<p>Please refer to this <a href="https://support.ringcentral.com/engagedigital/admin/configure-entry-points.html">link</a> for more information on how to configure channels.</p>
+<h2 id="subscribe-to-events-for-message-delivery">Subscribe to events for message delivery<a class="headerlink" href="#subscribe-to-events-for-message-delivery" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Select the <strong>content. imported</strong> event under the **Subscriptions **section.</li>
+<li>Click <strong>Save.</strong></li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A LivePerson account with administrator credentials is required to complete this configuration.</p>
+<p>Make sure to check the Active option before you save. This will establish a handshake between RingCentral Engage and Kore.ai platform by sending a 200 code to RingCentral on successful connection establishment.</p>
 </div>
-<p>Steps to enable the LivePerson channel:</p>
-<h2 id="step-1-create-a-liveperson-account">Step 1: Create A LivePerson Account<a class="headerlink" href="#step-1-create-a-liveperson-account" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Go to the LivePerson account setup page and create a standard or an enterprise account. For more information, see <a href="https://developers.liveperson.com/get-started-with-automation.html#access-the-conversational-ai-applications">LivePerson documentation</a>.</li>
-<li>
-<p>On the Login page, log in with your admin account credentials as shown below.
-<a class="glightbox" href="../images/liveperson_channel1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel1.png" alt="live persen credentials" title="live persen credentials" style="border: 1px solid gray; zoom:70%; "></a></p>
-</li>
-<li>
-<p>Click <strong>Next</strong> and enter your Login Name and password, then click Sign-in.</p>
-</li>
-<li>You are redirected to the Agent Workspace, as shown below.
-<a class="glightbox" href="../images/liveperson_channel2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel2.png" alt="agent Workspace" title="agent Workspace" style="border: 1px solid gray; zoom:70%;"></a></li>
-</ol>
-<h2 id="step-2-add-a-skill-in-liveperson">Step 2: Add a skill in LivePerson<a class="headerlink" href="#step-2-add-a-skill-in-liveperson" title="Permanent link">&para;</a></h2>
-<p>Once you have created an account, you must add a skill that you want to assign to an agent in LivePerson.</p>
-<p>Steps to add a skill to an agent in LivePerson:</p>
-<ol>
-<li>Sign in to your LivePerson account as an administrator and then select the <strong>Manage Users</strong> tab.</li>
-<li>
-<p>In the <strong>Manage Users &amp; Skills</strong> tab, click <strong>Add Skill</strong> to create a new skill.
-<a class="glightbox" href="../images/liveperson_channel3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel3.png" alt="manage users" title="manage users" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>On the Skills page, click <strong>+Add Skill</strong> (at the bottom bar) and enter the details of the required skills.</p>
-</li>
-<li>Enter skill name as . For example, if your <em>Kore.ai VA name</em> is <strong>weather bot</strong>, then the skill name must be <strong>weather_skill</strong>.</li>
-<li>Enter a <strong>Description</strong> for the skill, and then unselect the check box – <strong>Conversation assigned to skill can be transferred to other skills</strong>.</li>
-<li>
-<p>Click <strong>Save</strong> to save the skill.
-<a class="glightbox" href="../images/liveperson_channel4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel4.png" alt="skills" title="skills" style="border: 1px solid gray; zoom:70%; "></a></p>
-</li>
-<li>
-<p>Read more about <a href="https://knowledge.liveperson.com/admin-settings-skills-groups-connect-visitors-to-agents-by-skills.html/">creating skills in LivePerson</a>.</p>
-</li>
-</ol>
-<h2 id="step-3-add-a-user-in-liveperson">Step 3: Add a user in LivePerson<a class="headerlink" href="#step-3-add-a-user-in-liveperson" title="Permanent link">&para;</a></h2>
-<p>Create a user and generate API keys that you can use to configure the LivePerson channel for this user.</p>
-<p>Steps to add a user in LivePerson:</p>
-<ol>
-<li>
-<p>Sign in to the LivePerson admin account, and then go to <strong>Manage Users &amp; Skills</strong> and click <strong>Add User</strong>.
-<a class="glightbox" href="../images/liveperson_channel4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel4.png" alt="manage skills" title="manage skills" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>On the Add User page, select the <strong>User Type</strong> as <em>Bot</em>.</p>
-</li>
-<li>
-<p>Enter a <em>Login Name</em>, <em>Email</em>, <em>Nickname</em>, <em>Employee ID</em>, and <em>Name</em>. (The nickname and name are displayed on the screen in the user chat.) <a class="glightbox" href="../images/liveperson_channel5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel5.png" alt="nickname details" title="nickname details" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>Provide a <strong>URL</strong> for the bot avatar.</p>
-</li>
-<li>Choose the Login method as <strong>API Key</strong>, and select the <strong>Generate API Key</strong> option from the <strong>API key</strong> drop-down list to generate a new API key.
-<a class="glightbox" href="../images/liveperson_channel6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel6.png" alt="generate API Key" title="generate API Key" style="border: 1px solid gray; "></a></li>
-<li>Copy the <strong>App key</strong>, <strong>Secret</strong>, <strong>Access Token</strong>, and <strong>Access Token Secret</strong>, and enter them in the kore.ai <strong>Configurations</strong> tab of the LivePerson Channel page. For more information, see <a href="/docs/xo/channels/add-live-person-channel/#step-4-configure-the-channel-in-the-xo-platform">Step 4 – Configure the LivePerson Channel in the XO Platform</a> section.</li>
-<li>Select Agent from the <strong>Assignment</strong> drop-down list, set <strong>Max no. live chats</strong> as <strong>Unlimited</strong>, and then select the skill created in the previous step from the <strong>Skills</strong> drop-down list.
-<a class="glightbox" href="../images/liveperson_channel7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel7.png" alt="assignment" title="assignment" style="border: 1px solid gray; zoom:70%;"></a></li>
-<li>Click <strong>Save</strong>. For further information, see <a href="https://knowledge.liveperson.com/admin-settings-create-and-manage-users.html#Adding%20a%20user">Create and manage users</a> and <a href="https://developers.liveperson.com/tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html#step-11-create-a-bot-user">Create a bot</a> user within LivePerson’s documentation.</li>
-</ol>
-<h2 id="step-4-configure-the-channel-in-the-xo-platform">Step 4: Configure the Channel in the XO Platform<a class="headerlink" href="#step-4-configure-the-channel-in-the-xo-platform" title="Permanent link">&para;</a></h2>
-<p>Configure the LivePerson channel to start communication with the kore.ai XO Platform.</p>
-<p>Steps to configure the LivePerson channel:</p>
-<ol>
-<li>In the XO Platform, select the assistant you’re working with, then go to <strong>Deploy &gt; Channels &gt; LivePerson</strong>.</li>
-<li>Go to the Configurations tab. In the <strong>Account ID</strong> field, enter your LivePerson account ID.
-In the <strong>Login Name</strong> field, enter the Login Name of the bot user from your LivePerson account.</li>
-<li>
-<p>Under <strong>Interaction Options</strong>, select how you would like the XO Platform to interact with LivePerson – via <strong>Chat Agent API</strong>, <strong>Messaging Agent SDK</strong>, or both.
-<a class="glightbox" href="../images/liveperson_channel8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel8.png" alt="chat agent API " title="chat agent API" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>Enter the details of the <strong>API Key</strong>, <strong>Secret</strong>, <strong>Access Token</strong>, and <strong>Access Token Secret</strong> values of your LivePerson user account, which you copied in <a href="/docs/xo/channels/add-live-person-channel/#step-3-add-a-user-in-liveperson">Step 3</a>.
-<a class="glightbox" href="../images/liveperson_channel9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel9.png" alt="access token" title="access token" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>In the <strong>Enable Channel</strong> section, select <strong>Yes</strong> to activate the channel, and then click <strong>Save</strong> to complete the user creation process.</p>
-</li>
-</ol>
-<p>After the channel is enabled and all configurations are verified, you can optionally publish the assistant to make it available for end-users with the new channel. Learn more about <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/">Publishing your Virtual Assistant</a>.</p>
-<p>To learn more about working with Channels within the Kore.ai XO Platform, please see <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/">Channel Enablement.</a></p>
-<h2 id="step-5-verify-the-liveperson-channel-integration">Step 5: Verify the LivePerson Channel Integration<a class="headerlink" href="#step-5-verify-the-liveperson-channel-integration" title="Permanent link">&para;</a></h2>
-<p>Once the LivePerson channel is enabled, you can verify the integration by publishing the campaign with the skills you created in LivePerson and embedding the LivePerson code snippet in the WebServer or Web Page where the kore.ai XO Platform is hosted.</p>
-<p>Steps to verify the LivePerson channel integration:</p>
-<ol>
-<li>Sign in to the LivePerson account with your admin user credentials.</li>
-<li>
-<p>Go to the <strong>Manage Campaigns and Engagements</strong> page and click the <strong>Live Messaging on your site</strong> link, as shown below.
-<a class="glightbox" href="../images/liveperson_channel10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel10.png" alt="manage campaigns" title="manage campaigns" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>On the Live Messaging page, go to the <strong>Engagement Settings</strong> area, select the <strong>Skill</strong> you created in <a href="#step-2-add-a-skill-in-liveperson">step 2</a>, and then click <strong>Next</strong>.
-<a class="glightbox" href="../images/liveperson_channel11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel11.png" alt="Engagement Settings" title="Engagement Settings" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>Click <strong>Next</strong> four times to select the <strong>Engagement Studio</strong>, <strong>Theme</strong>, <strong>Entry points</strong>, and <strong>Behavioral targeting library</strong> options, and then click Publish as shown below.
-<a class="glightbox" href="../images/liveperson_channel12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel12.png" alt="Engagement Studio" title="Engagement Studio" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>Once the LivePerson campaign is published, go to <strong>Manage Campaigns and Engagements &gt; Campaign Builder &gt; Data Sources</strong>, as shown below.
-<a class="glightbox" href="../images/liveperson_channel13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel13.png" alt="manage campaigns" title="manage campaigns" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>On the Data Sources page, select the <strong>Web card</strong> and click <strong>Edit</strong>.
-<a class="glightbox" href="../images/liveperson_channel14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel14.png" alt="data sources" title="data sources" style="border: 1px solid gray; zoom:50%;"></a></li>
-<li>On the Web Tag page, copy the <strong>embed code</strong> and paste it into the html page you use to interact with the Kore.ai XO Platform Virtual Assistant (VA).
-<a class="glightbox" href="../images/liveperson_channel15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel15.png" alt="embed code" title="embed code" style="border: 1px solid gray; zoom:70%;"></a></li>
-<li>Send a message from the <em>LivePerson Chat</em> console to the kore.ai XO platform VA for which you have enabled the LivePerson channel.</li>
-<li>In the XO Platform, once you receive a message from the <strong>LivePerson Agent</strong> console, you can send a response to start communication between the two systems, as shown below.
-<a class="glightbox" href="../images/liveperson_channel10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/liveperson_channel10.png" alt="liveperson agent console" title="liveperson agent console" style="border: 1px solid gray; zoom:70%;"></a></li>
-</ol>
 
 
   
