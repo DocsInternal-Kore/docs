@@ -3187,7 +3187,7 @@
 
 <p>See the <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/knowledge-ai/knowledge-graph-overview/#compare-knowledge-graph-types">Knowledge Graph Types Comparison Table</a> for a detailed list of supported features.</p>
 
-<p>Also, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/knowledge-ai/knowledge-graph-training/#training-configuration">Training Configuration</a> below for training setup details.</p>
+<p>Also, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/knowledge-ai/knowledge-graph-training/#training-configuration">Training Configuration</a> for training setup details.</p>
 
 <h2 id="knowledge-graph-engine-capabilities">Knowledge Graph Engine Capabilities<a class="headerlink" href="#knowledge-graph-engine-capabilities" title="Permanent link">&para;</a></h2>
 <p>The following are the overall capabilities of the Knowledge Graph Engine:</p>
@@ -3201,26 +3201,23 @@
 </ul>
 <h2 id="faq-detection-steps">FAQ Detection Steps<a class="headerlink" href="#faq-detection-steps" title="Permanent link">&para;</a></h2>
 <p>Here are the steps that the Knowledge Graph Engine takes when detecting FAQs:</p>
-<ul>
-<li><strong>Step 1: Extract Nodes</strong>: The KG engine processes the user utterance to extract the term (ontology nodes) present in the graph. It also takes into consideration the synonyms, traits, and tags associated with the terms.</li>
-<li><strong>Step 2: Query Graph</strong>: The KG engine fetches all the paths that consist of the extracted nodes.</li>
-<li><strong>Step 3: Shortlist Paths</strong>: All the paths consisting of 50% or more matching terms with the user utterance are shortlisted for further processing.</li>
-</ul>
+<ol>
+<li><strong>Extract Nodes</strong>: The KG engine processes the user utterance to extract the term (ontology nodes) present in the graph. It also takes into consideration the synonyms, traits, and tags associated with the terms.</li>
+<li><strong>Query Graph</strong>: The KG engine fetches all the paths that consist of the extracted nodes.</li>
+<li><strong>Shortlist Paths</strong>: All the paths consisting of 50% or more matching terms with the user utterance are shortlisted for further processing.</li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Patch coverage computation doesn't consider the root node.</p></div>
 
-<ul>
-<li><strong>Step 4: Filter with Traits</strong>: If traits are defined in the Knowledge Graph, paths shortlisted in the above step are further filtered based on the confidence score of a classification algorithm in user utterance. </li>
-<li><strong>Step 5: Send to Ranker</strong>: The KG engine then sends the shortlisted paths to the Ontology Ranker Program.</li>
-<li><strong>Step 6: Score based on Cosine Similarity</strong>: The Ontology Ranker makes use of user-defined synonyms, lemma forms of word, n-grams, stop words, to compute the cosine similarity between the user utterance and the shortlisted questions. Paths are ranked in non-increasing order of cosine similarity score.</li>
-<li><strong>Step 7: Qualify Matches</strong>: The Ontology Ranker then qualifies the paths as follows:<ul>
-<li>Paths with score &gt;= upper_threshold are qualified as an answer (definitive match).</li>
-<li>Paths with lower_threshold &gt; score &gt; upper_threshold are marked as suggestions (probable match).</li>
-<li>Paths with a score &gt; lower_threshold are ignored.</li>
-</ul>
-</li>
-</ul>
+<ol start="4"><li><b>Filter with Traits</b>: If traits are defined in the Knowledge Graph, paths shortlisted in the above step are further filtered based on the confidence score of a classification algorithm in user utterance.</li>
+<li><b>Send to Ranker</b>: The KG engine then sends the shortlisted paths to the Ontology Ranker Program.</li>
+<li><b>Score based on Cosine Similarity</b>: The Ontology Ranker makes use of user-defined synonyms, lemma forms of word, n-grams, stop words, to compute the cosine similarity between the user utterance and the shortlisted questions. Paths are ranked in non-increasing order of cosine similarity score.</li>
+<li><b>Qualify Matches</b>: The Ontology Ranker then qualifies the paths as follows:</li>
+<ul><li>Paths with score >= upper_threshold are qualified as an answer (definitive match).</li>
+<li>Paths with lower_threshold > score > upper_threshold are marked as suggestions (probable match).</li>
+<li>Paths with a score > lower_threshold are ignored.</li></ul></ol>
+
 <h2 id="training-guidelines">Training Guidelines<a class="headerlink" href="#training-guidelines" title="Permanent link">&para;</a></h2>
 <p>From the Knowledge Graph, follow these steps to build and train the corresponding Knowledge Graph:</p>
 <ol>
