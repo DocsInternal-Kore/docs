@@ -3068,6 +3068,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#traits" class="md-nav__link">
+    Traits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    Context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-words" class="md-nav__link">
+    Stop Words
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3191,9 +3212,7 @@
 <ol>
 <li>On the top left of the VA’s Knowledge Graph, <strong>hover over the node/term</strong> for which you want to add synonyms.</li>
 <li>Click the <strong>gear icon</strong> to open the Settings window.</li>
-<li>
-<p>To add <strong>synonyms</strong>, do the following:</p>
-<ul>
+<li>To add <strong>synonyms</strong>, do the following:<ul>
 <li>To add local synonyms, type them in the box under <strong>Path Level Synonyms</strong>.
 <a class="glightbox" href="../../images/path-level-synonyms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/path-level-synonyms.png" alt="path level synonyms" title="path level synonyms" style="border: 1px solid gray; zoom:75%;"></a></li>
 <li>To add Global synonyms, click <strong>Edit</strong> then <strong>Add</strong> under <strong>Knowledge Graph Synonyms</strong> and enter them.
@@ -3208,13 +3227,33 @@
 </ol>
 <p></ul>
 4. You can use <b>Bot Synonyms</b> in the identification of KG terms. This option can be enabled either from the <a href="https://developer.kore.ai/docs/bots/nlp/knowledge-graph/#Threshold_Configurations">Threshold and Configurations</a> or from <b>More Options</b> &gt; <b>Manage Synonyms</b>.</p>
-<div class="language-text highlight"><pre><span></span><code>Once enabled, the bot-level synonyms that match with KG terms (or tags) are automatically displayed under the Bot Synonyms heading in the &lt;b&gt;Synonyms&lt;/b&gt; section and are used by the KG engine. The Bot Synonyms are used similar to that of KG graph-level synonyms, for path qualification and for question matching.
+<p>Once enabled, the bot-level synonyms that match with KG terms (or tags) are automatically displayed under the Bot Synonyms heading in the <b>Synonyms</b> section and are used by the KG engine. The Bot Synonyms are used similar to that of KG graph-level synonyms, for path qualification and for question matching. </p>
+<p>When a node matches both with a bot synonym and a bot concept, the bot concept takes priority.
+5. To add synonyms for a child node, enter them in the Synonyms box next to the <b>Child Terms</b> listed at the bottom of the settings window.
+<a class="glightbox" href="../../images/child-synonyms-terms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/child-synonyms-terms.png" alt="child synonyms terms" title="child synonyms terms" style="border: 1px solid gray; zoom:75%;"></a></p>
+<h3 id="traits">Traits<a class="headerlink" href="#traits" title="Permanent link">&para;</a></h3>
+<p>You can create traits with common user utterances and then add them to the relevant terms in your Knowledge Graph. To know more about Traits, click <a href="https://developer.kore.ai/docs/bots/nlp/traits/">here</a>.</p>
+<p>Traits are common across the XO Platform. If you have created Traits from the Natural Language section, they are available for use here as well.</p>
+<h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h3>
+<p>You can <strong>Manage Context</strong> for the terms and tags by setting:</p>
+<ul>
+<li><strong>Intent Precondition</strong> – the context that should be present as a qualifier for this node or tag.</li>
+<li><strong>Context Output</strong> – the context that should be populated to signify the execution of this task.</li>
+</ul>
+<p>Post the XO Platform v8.0 release, context can be enabled for <b>Organizer</b> nodes as well. Enabling the <strong>Manage Context</strong> option allows you to set the context precondition and context output mentioned above. Click <a href="https://developer.kore.ai/docs/bots/bot-intelligence/context-management/">here</a> for more information on Context Management.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Enabling the <b>Manage Context</b> option will not show the term/node name by default.</p>
+</div>
 
-When a node matches both with a bot synonym and a bot concept, the bot concept takes priority.
-</code></pre></div>
+<h3 id="stop-words">Stop Words<a class="headerlink" href="#stop-words" title="Permanent link">&para;</a></h3>
+<p>Stop words present in the user utterance are discarded for scoring even if the stop word is used to define a node (or node synonyms).</p>
+<p>The Knowledge Graph has a language-specific predefined set of stop words. This list can be customized to suit your requirements.</p>
+<p>To edit the stop words list, follow the steps below:</p>
 <ol>
-<li>To add synonyms for a child node, enter them in the Synonyms box next to the <b>Child Terms</b> listed at the bottom of the settings window.
-<a class="glightbox" href="../../images/child-synonyms-terms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/child-synonyms-terms.png" alt="child synonyms terms" title="child synonyms terms" style="border: 1px solid gray; zoom:75%;"></a></li>
+<li>From the Knowledge Graph page, click on the <strong>more options icon</strong> and select <strong>Manage Stop Words</strong>.</li>
+<li>From the Manage Stop Words window, delete or add stop words.
+<a class="glightbox" href="../../images/manage-stop-words.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/manage-stop-words.png" alt="manage stop words" title="manage stop words" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
 
 
