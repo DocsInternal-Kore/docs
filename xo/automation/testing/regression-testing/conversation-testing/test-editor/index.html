@@ -17,7 +17,7 @@
     
     
       
-        <title>**Test Editor** - Kore ai Docs</title>
+        <title>Test Editor - Kore ai Docs</title>
       
     
     
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Test Editor**
+              Test Editor
             
           </span>
         </div>
@@ -3281,7 +3281,7 @@
 
 
 
-<h1 id="test-editor"><strong>Test Editor</strong><a class="headerlink" href="#test-editor" title="Permanent link">&para;</a></h1>
+<h1 id="test-editor">Test Editor<a class="headerlink" href="#test-editor" title="Permanent link">&para;</a></h1>
 <p>You can use the Test Editor to view the test cases and their metadata. This section explains the steps to access the test editor and use the available options:</p>
 <ol>
 <li>
@@ -3316,14 +3316,21 @@ A  test case consists of: </p>
 <p>Transitions</p>
 </li>
 <li>User Input  </li>
-<li>Expected Output  <ul>
+<li>
+<p>Expected Output  </p>
+<ul>
 <li>All the variations of the node prompt are added as expected output  </li>
-<li>If a node has more than one variation, then the OneOf operator is added by default  </li>
-</ul>
+<li>
+<p>If a node has more than one variation, then the OneOf operator is added by default  </p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>The <strong>OneOf</strong> operator is used to test randomization scenarios where a node can have multiple bot responses. For any node in which multiple responses are configured, the operator is activated by default. If one of the multiple responses is obtained from the VA during the test execution, then the assertion will be passed.  </p>
+</p>
+</div>
 </li>
 </ul>
-<p><em><strong>Note:</strong> The <strong>OneOf</strong> operator is used to test randomization scenarios where a node can have multiple bot responses. For any node in which multiple responses are configured, the operator is activated by default. If one of the multiple responses is obtained from the VA during the test execution, then the assertion will be passed.</em><br />
-<a class="glightbox" href="../images/te-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/te-img5.png" alt="Response" title="Response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><a class="glightbox" href="../images/te-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/te-img5.png" alt="Response" title="Response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+</ul>
 </li>
 <li>
 <p>If the VA response is from <strong>FAQ/Small Talk/Standard Responses</strong>, the following details are captured:  </p>

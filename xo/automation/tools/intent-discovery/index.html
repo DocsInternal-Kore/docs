@@ -17,7 +17,7 @@
     
     
       
-        <title>**Intent Discovery (Beta)** - Kore ai Docs</title>
+        <title>Intent Discovery (Beta) - Kore ai Docs</title>
       
     
     
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Intent Discovery (Beta)**
+              Intent Discovery (Beta)
             
           </span>
         </div>
@@ -3433,16 +3433,16 @@
 
 
 
-<h1 id="intent-discovery-beta"><strong>Intent Discovery (Beta)</strong><a class="headerlink" href="#intent-discovery-beta" title="Permanent link">&para;</a></h1>
+<h1 id="intent-discovery-beta">Intent Discovery (Beta)<a class="headerlink" href="#intent-discovery-beta" title="Permanent link">&para;</a></h1>
 <p>The new Intent Discovery module helps you auto-extract popular intents from previous user conversations. It reduces the time and effort to build a virtual assistant and leads to the success of your Conversational AI Journey. This is a beta feature and is available only for the English language and Enterprise users.</p>
 <p>You can upload your historical transcripts in CSV format. After the transcripts are uploaded into the bot, the bot uses LLMs to identify the different topics, intents, or conversations between the user and the bot. It intelligently identifies all the intents available. You can review each intent to understand which conversations have resulted in identifying these intents. After the review, you can also see the underline utterances that resulted in identifying an intent. You can either add these intents as new intents for your virtual assistant or pick specific utterances and train them as utterances for your existing dialogs and FAQs. So, it helps both ways – either create new intents or enhance the training you provide to your virtual assistant.</p>
 <p><a class="glightbox" href="../images/intent-discovery-demo-diagram.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/intent-discovery-demo-diagram.png" alt="Intent Discovery" title="Intent Discovery" style="border: 1px solid gray; zoom:50%;"/></a> </p>
 <p>The Intent Discovery journey consists of the following steps:</p>
 <ol>
-<li><a href="https://docsinternal-kore.github.io/docs/xo/automation/tools/intent-discovery/#create-a-project">Create a Project</a>: You may have many business use cases to automate. Projects help manage intent discovery for each business use case separately – a project for a specific use case.</li>
-<li><a href="https://docsinternal-kore.github.io/docs/xo/automation/tools/intent-discovery/#upload-transcripts">Upload Transcripts</a>: Upload your use case-specific historical transcripts in CSV format. Conversations are extracted from the uploaded transcripts.</li>
-<li><a href="https://docsinternal-kore.github.io/docs/xo/automation/tools/intent-discovery/#extract-intents">Extract Intents:</a> Intents and training data are extracted from the conversations.</li>
-<li><a href="https://docsinternal-kore.github.io/docs/xo/automation/tools/intent-discovery/#train-the-utterances">Train the Utterances</a> to create new intents or add them as training data: You can add new intents as dialogs or FAQs or train them for existing dialogs or FAQs.</li>
+<li><a href="#create-a-project">Create a Project</a>: You may have many business use cases to automate. Projects help manage intent discovery for each business use case separately – a project for a specific use case.</li>
+<li><a href="#upload-transcripts">Upload Transcripts</a>: Upload your use case-specific historical transcripts in CSV format. Conversations are extracted from the uploaded transcripts.</li>
+<li><a href="#extract-intents">Extract Intents:</a> Intents and training data are extracted from the conversations.</li>
+<li><a href="#train-the-utterances">Train the Utterances</a> to create new intents or add them as training data: You can add new intents as dialogs or FAQs or train them for existing dialogs or FAQs.</li>
 </ol>
 <h2 id="create-a-project">Create a Project<a class="headerlink" href="#create-a-project" title="Permanent link">&para;</a></h2>
 <ol>
@@ -3596,14 +3596,18 @@ table, th, td {
 <p>The dialog box shows a table with individual rows for each session. The table has below columns: </p>
 <ul>
 <li>Session ID: The session ID and the Date and Time of the Session.</li>
-<li>Utterances: The list of utterances qualifying the extracted Intent. <ul>
+<li>
+<p>Utterances: The list of utterances qualifying the extracted Intent. </p>
+<ul>
 <li>The platform shows only 3 utterances per session (row). The remaining count of the utterances is shown as a chip. </li>
 <li>On clicking the chip, you see all the utterances for the corresponding session.</li>
 <li>You can <strong>bookmark</strong> the utterances.</li>
 </ul>
 </li>
-<li>Status: A dropdown that shows whether the session item has been reviewed. By default, it  shows <strong>Yet to Review</strong>. You can change it to <strong>Reviewed</strong>.</li>
-<li><strong>View Transcripts</strong> action button: This button is present in the Status column of each row, next to the drop-down. It helps you view the detailed conversion of the Session. On clicking the icon, the <a href="https://docsinternal-kore.github.io/docs/xo/automation/tools/intent-discovery/#session-details"><strong>Session Details</strong> dialog box</a> is displayed.</li>
+<li>
+<p>Status: A dropdown that shows whether the session item has been reviewed. By default, it  shows <strong>Yet to Review</strong>. You can change it to <strong>Reviewed</strong>.</p>
+</li>
+<li><strong>View Transcripts</strong> action button: This button is present in the Status column of each row, next to the drop-down. It helps you view the detailed conversion of the Session. On clicking the icon, the <a href="#session-details"><strong>Session Details</strong> dialog box</a> is displayed.</li>
 </ul>
 <h3 id="session-details">Session Details<a class="headerlink" href="#session-details" title="Permanent link">&para;</a></h3>
 <p>The <strong>Transcript</strong> dialog box shows the summary of the session. The detailed chat is displayed below the summary.<br />
@@ -3732,7 +3736,7 @@ table, th, td {
 </ul>
 <h3 id="change-the-status-of-utterances">Change the status of utterances<a class="headerlink" href="#change-the-status-of-utterances" title="Permanent link">&para;</a></h3>
 <p>You can change the status of utterances between <strong>Yet to Review</strong> and <strong>Reviewed</strong> on the 
-<a href="https://docsinternal-kore.github.io/docs/xo/automation/tools/intent-discovery/#extracted-intent-details">Extracted Intent Details</a> dialog box. You can change the status of one or multiple utterances in a go as per requirement.</p>
+<a href="#extracted-intent-details">Extracted Intent Details</a> dialog box. You can change the status of one or multiple utterances in a go as per requirement.</p>
 <h2 id="reusing-an-existing-project">Reusing an existing project<a class="headerlink" href="#reusing-an-existing-project" title="Permanent link">&para;</a></h2>
 <p>There may be instances where you may need additional intents in an existing project and can achieve the same by adding transcript files to the project. The steps to upload additional transcript files are the same as uploading transcripts to a new project. Intent extraction can be performed multiple times based on need. For example, if, after having extracted intents previously, there is a need to add more intents, you can upload additional transcripts and extract intents again. Also, existing but no longer relevant transcript files can be deleted from a project. These two features ensure that an existing project becomes reusable.</p>
 <p>The number of files and the file size limitations remain the same.</p>
