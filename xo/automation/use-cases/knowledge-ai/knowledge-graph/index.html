@@ -3066,33 +3066,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#synonyms" class="md-nav__link">
-    Synonyms
-  </a>
-  
-    <nav class="md-nav" aria-label="Synonyms">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#context" class="md-nav__link">
-    Context
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stop-words" class="md-nav__link">
-    Stop Words
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3202,62 +3175,7 @@
 <h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h3>
 <p>When you type a question in the Intent Name <strong>Add Question</strong> field, the Knowledge Graph suggests some tags that you can add to the graph based on the text. To include a suggested term to the path, select the tag from the drop-down list that appears when the cursor is in the Add Term field. You can also add custom tags by typing them in the add term field and hitting the Enter/Return key.</p>
 <p><a class="glightbox" href="../../images/term-field-custom-tag.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/term-field-custom-tag.png" alt="term field custom tag" title="term field custom tag" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>After you add a tag, it is visible below the question like a tag everywhere the question appears. Tags work exactly like terms but are not displayed in the Knowledge Graph to avoid clutter. </p>
-<h2 id="synonyms">Synonyms<a class="headerlink" href="#synonyms" title="Permanent link">&para;</a></h2>
-<p>You can add multiple synonyms for each term in your Knowledge Graph, making the path discoverable for varied user utterances. You can add synonyms for a term from the term’s  <b>Settings</b> window.</p>
-<p>When you add a synonym for a term in the Knowledge Graph, you can add them as local (Path Level) or global (Knowledge Graph level) synonyms.</p>
-<p><strong>Local Synonyms</strong> apply to the term only in that particular path, whereas <strong>Global Synonyms</strong> apply to the term even if it appears on any other path in the hierarchy.</p>
-<p>To add synonyms for a term, follow the below steps:</p>
-<ol>
-<li>On the top left of the VA’s Knowledge Graph, <strong>hover over the node/term</strong> for which you want to add synonyms.</li>
-<li>Click the <strong>gear icon</strong> to open the Settings window.</li>
-<li>
-<p>To add <strong>synonyms</strong>,  do the following:</p>
-<ul>
-<li>
-<p>To add local synonyms, type them in the box under <strong>Path Level Synonyms</strong>.
-<a class="glightbox" href="../../images/path-level-synonyms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/path-level-synonyms.png" alt="path level synonyms" title="path level synonyms" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>To add Global synonyms, click <strong>Edit</strong> then <strong>Add</strong> under <strong>Knowledge Graph Synonyms</strong> and enter them.
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul><li>Press Enter after typing each synonym in the Synonyms box. If you type multiple synonyms without pressing Enter after each synonym, all the synonyms are considered as a single entity, even if they are separated by spaces.
-<a class="glightbox" href="../../images/add-global-synonyms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/add-global-synonyms.png" alt="add global synonyms" title="add global synonyms" style="border: 1px solid gray; zoom:75%;"></a></li>
- <br />
-<li>These Knowledge Graph Synonyms can also be accessed from the Manage Synonyms option under the more options icon on the top-right of the Knowledge Graph page.
-   <a class="glightbox" href="../../images/manage-synonyms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/manage-synonyms.png" alt="manage synonyms" title="manage synonyms" style="border: 1px solid gray; zoom:75%;"></a></li></p>
-</li>
-</ul>
-</li>
-</ol>
-<p></ul></div></p>
-<ol start="4"><li>You can use <b>Bot Synonyms</b> in the identification of KG terms. This option can be enabled either from the <a href="https://developer.kore.ai/docs/bots/nlp/knowledge-graph/#Threshold_Configurations">Threshold and Configurations</a> or from <b>More Options</b> > <b>Manage Synonyms</b>.
-<p>Once enabled, the bot-level synonyms that match with KG terms (or tags) are automatically displayed under the Bot Synonyms heading in the <b>Synonyms</b> section and are used by the KG engine. The Bot Synonyms are used similar to that of KG graph level synonyms, for path qualification and for question matching. When a node matches both with a bot synonym and a bot concept, the bot concept takes priority.</p></li>
-<li>To add synonyms for a child node, enter them in the Synonyms box next to the <b>Child Terms</b> listed at the bottom of the settings window.
-<a class="glightbox" href="../../images/child-synonyms-terms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/child-synonyms-terms.png" alt="child synonyms terms" title="child synonyms terms" style="border: 1px solid gray; zoom:75%;"></a></li></ol>
-
-<h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h3>
-<p>You can <strong>Manage Context</strong> for the terms and tags by setting:</p>
-<ul>
-<li><strong>Intent Precondition</strong> – the context that should be present as a qualifier for this node or tag.</li>
-<li><strong>Context Output</strong> – the context that should be populated to signify the execution of this task.</li>
-</ul>
-<p>Post the XO Platform v8.0 release, context can be enabled for <b>Organizer</b> nodes as well. Enabling the <strong>Manage Context</strong> option allows you to set the context precondition and context output mentioned above. Click <a href="https://developer.kore.ai/docs/bots/bot-intelligence/context-management/">here</a> for more information on Context Management.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Enabling the <b>Manage Context</b> option will not show the term/node name by default.</p>
-</div>
-
-<h3 id="stop-words">Stop Words<a class="headerlink" href="#stop-words" title="Permanent link">&para;</a></h3>
-<p>Stop words present in the user utterance are discarded for scoring even if the stop word is used to define a node (or node synonyms).</p>
-<p>The Knowledge Graph has a language-specific predefined set of stop words. This list can be customized to suit your requirements.</p>
-<p>To edit the stop words list, follow the steps below:</p>
-<ol>
-<li>From the Knowledge Graph page, click on the <strong>more options icon</strong> and select <strong>Manage Stop Words</strong>.</li>
-<li>From the Manage Stop Words window, delete or add stop words.
-<a class="glightbox" href="../../images/manage-stop-words.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/manage-stop-words.png" alt="manage stop words" title="manage stop words" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ol>
+<p>After you add a tag, it is visible below the question like a tag everywhere the question appears. Tags work exactly like terms but are not displayed in the Knowledge Graph to avoid clutter.</p>
 
 
   
