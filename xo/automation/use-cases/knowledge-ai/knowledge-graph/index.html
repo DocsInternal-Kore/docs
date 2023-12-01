@@ -3264,6 +3264,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-graph-engine-capabilities" class="md-nav__link">
+    Knowledge Graph Engine Capabilities
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3282,7 +3297,7 @@
 
 
 <h1 id="knowledge-graph-training">Knowledge Graph Training<a class="headerlink" href="#knowledge-graph-training" title="Permanent link">&para;</a></h1>
-<p><a href="https://developer.kore.ai/docs/bots/nlp/optimizing-bots/">Training your Assistant</a>is not restricted to the Machine Learning and Fundamental Meaning engines. You must also train the Knowledge Graph (KG) engine.</p>
+<p><a href="https://developer.kore.ai/docs/bots/nlp/optimizing-bots/">Training your Assistant</a> is not restricted to the Machine Learning and Fundamental Meaning engines. You must also train the Knowledge Graph (KG) engine.</p>
 <p>The Ontology-based Knowledge Graph turns static FAQ text into an intelligent, personalized conversational experience. It uses domain terms and relationships thus reducing the training needs. It also has the capability to enable the ontology weighted features whenever ML gets confused and to automate conversational dialog for resolving appropriate answers.</p>
 <p>The Few-Shot Knowledge Graph leverages Kore.ai’s LLM and lets you add FAQs without building an ontology. Less training and maintenance are required since you do not need to configure the graph term-by-term. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/knowledge-ai/knowledge-graph-overview/#knowledge-graph-types">Learn more about Knowledge Graph Types</a>.</p>
 <p>The Knowledge Graph engine thus responds to users’ intents by identifying the appropriate questions within the Knowledge Graph, and then presenting the user with the appropriate response.</p>
@@ -3301,6 +3316,17 @@
 <p>See the <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/knowledge-ai/knowledge-graph-overview/#compare-knowledge-graph-types">Knowledge Graph Types Comparison Table</a> for a detailed list of supported features.</p>
 
 <p>Also, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/knowledge-ai/knowledge-graph-training/#training-configuration">Training Configuration</a> below for training setup details.</p>
+
+<h2 id="knowledge-graph-engine-capabilities">Knowledge Graph Engine Capabilities<a class="headerlink" href="#knowledge-graph-engine-capabilities" title="Permanent link">&para;</a></h2>
+<p>The following are the overall capabilities of the Knowledge Graph Engine:</p>
+<ul>
+<li><strong>Ease of Training using Synonyms</strong>: Kore.ai’s Knowledge Graph has a provision to associate synonyms against a graph node. This helps capture the variation in a question. For example, <em>flight</em> can be used as a synonym for <em>plane</em> in an FAQ such as <em>How can I buy a plane ticket</em>?</li>
+<li><strong>Better Coverage with Alternate Questions</strong>: The Knowledge Graph has a provision to add alternate questions. This helps us to capture the various ways a user might ask the same question. For example, in <em>How do I change my flight?</em> we can add an alternate question as <em>Can I change my flight?</em></li>
+<li><strong>Improved Accuracy</strong>: Ontology-driven question-answers reduce the possibility of false positives.</li>
+<li><strong>Weighing Phrases using Traits</strong>: Kore.ai’s Knowledge Graph engine includes a concept of traits for filtering out irrelevant suggestions. <a href="https://developer.kore.ai/docs/bots/nlp/traits/">Learn More</a>.</li>
+<li><strong>Ability to Mark Term Importance</strong>: The Knowledge Graph has a provision to mark that an ontology term is important. For example, in the question, <em>How to book a flight?</em>, the word <em>flight</em> is an important term. If the <em>flight</em> keyword is not present in the user utterance, then it makes little sense.</li>
+<li><strong>Ability to Group Relevant Nodes</strong>: As the graph grows in size, managing graph nodes can become a challenging task. Using the <em>organizer node</em> construct of the ontology engine, developers can group relevant child nodes under a parent node.</li>
+</ul>
 
 
   
