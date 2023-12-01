@@ -3284,6 +3284,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#training-guidelines" class="md-nav__link">
+    Training Guidelines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-configuration" class="md-nav__link">
+    Training Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Training Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#term-type" class="md-nav__link">
+    Term Type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3355,6 +3382,40 @@
 <li>Paths with a score &gt; lower_threshold are ignored.</li>
 </ul>
 </li>
+</ul>
+<h2 id="training-guidelines">Training Guidelines<a class="headerlink" href="#training-guidelines" title="Permanent link">&para;</a></h2>
+<p>From the Knowledge Graph, follow these steps to build and train the corresponding Knowledge Graph:</p>
+<ol>
+<li>Identify terms by grouping the unique words in each FAQ question. Build a hierarchy based on all such unique words.</li>
+<li>Ensure that each node has not more than 25 questions.</li>
+<li>Associate traits with terms to enable filtering FAQs from multiple identified results.</li>
+<li>Define synonyms for each term/node in the hierarchy. Ensure that all the different ways to call the term are defined.</li>
+<li>Depending on the importance of each term in a path, mark them as either mandatory or regular.</li>
+<li>Define alternative questions for each FAQ to ensure better coverage.</li>
+<li>Manage context for accurate response.</li>
+<li>Use Stop Words to filter unwanted utterances.</li>
+</ol>
+<h2 id="training-configuration">Training Configuration<a class="headerlink" href="#training-configuration" title="Permanent link">&para;</a></h2>
+<p>This article presupposes that you already know the basics of building your Knowledge Graph. If not, please read <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-ontology/">this article</a>.</p>
+<p>In order to configure the training of your Knowledge Graph for improved VA performance, we recommend that you go through as many of the following parameters as possible. These parameters involve:</p>
+<ul>
+<li>Adjusting the Term Type to your VA’s needs when adding terms to your graph,</li>
+<li>Setting tags for FAQs to improve detection,</li>
+<li>Configuring synonyms for Knowledge Graph terms to enhance path detection and help the VA find the appropriate questions to answer by widening the spectrum of words that can be used to find a specific question,</li>
+<li>Adding Traits to detect relevant information that improves intent or scenario detection.</li>
+<li>Manage Context to help users complete tasks faster and create more natural, human-like back and forth conversations.</li>
+<li>Add Stop Words which will be discarded from intent scoring, even when they are a node term. </li>
+</ul>
+<p>We will discuss these parameters in detail in the following sections.</p>
+<h3 id="term-type">Term Type<a class="headerlink" href="#term-type" title="Permanent link">&para;</a></h3>
+<p>Designate the terms and tags in the Knowledge Graph as Default, or Mandatory, or Organizer depending on their importance in qualifying matching paths: You can configure term types by accessing the term/node settings.</p>
+<p><a class="glightbox" href="../../images/term-type-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/term-type-settings.png" alt="term type setting" title="term type setting" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>The available term types are: </p>
+<ul>
+<li><strong>Default</strong>: Default terms do not have any particular considerations in shortlisting qualified paths.</li>
+<li><strong>Mandatory</strong>: When you mark a term as Mandatory, all paths associated with the term are shortlisted for ranking only if the user’s utterance includes the mandatory term or its synonyms.</li>
+<li><strong>Organizer</strong>: Term can be marked as being a part of the Knowledge Graph only for organizing questions (this option is available only for terms, not tags).
+<a class="glightbox" href="../../images/term-types.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../images/term-types.png" alt="term types" title="term types" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 
 
