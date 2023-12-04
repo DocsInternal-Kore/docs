@@ -3177,14 +3177,22 @@
 <div class="admonition note">
 <p class="admonition-title">Key Considerations for Training a Few-Shot Knowledge Graph</p>
 <p>Few-Shot Knowledge Graphs do not require an ontology and do not perform path qualification. Instead, they identify intents using semantic similarity and pattern recognition. However, if you want to train the VA on a specific use case for which the appropriate FAQ is not identified, you can map FAQs to an ontology, similar to what you would do with an Ontology-based Graph.</p>
-</div>
-<ul>
-<li>nmnnmnmmnmn</li>
-<li>
-<p>hhhhhhhhhhh</p>
 <p>The main difference concerning training is that in the Few-Shot KG, Terms don't require some of the training configurations needed in an Ontology Graph. Here are some key pointersThe following considerations should be made when training a Few-shot Knowledge Graph.</p>
+<ol>
+<li>
+<p>Default Terms are not available. The only exception is when you switch from an Ontology Graph, in which case existing Default terms are stored as such until updated. Afterward, Default terms become Organizer terms and can be set as Mandatory.</p>
 </li>
-</ul>
+<li>
+<p>Organizer Terms do not support Path-Level and Knowledge Graph Synonyms. They support Intent Preconditions and Context Output.</p>
+</li>
+<li>
+<p>Mandatory Terms support Traits, Path-Level and Knowledge Graph Synonyms, Intent Preconditions, and Context Output, just like in an Ontology-based Graph.</p>
+</li>
+<li>
+<p>You can set all Thresholds and Configurations except Path Coverage and Lemmatization using Parts of Speech, Search in Answer, and Qualify Contextual Paths, which are not supported by Few-Shot Graphs.</p>
+</li>
+</ol>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Key Considerations for Training a Few-Shot Knowledge Graph</p>
 <p>Few-Shot Knowledge Graphs do not require an ontology and do not perform path qualification. Instead, they identify intents using semantic similarity and pattern recognition. However, if you want to train the VA on a specific use case for which the appropriate FAQ is not identified, you can map FAQs to an ontology, similar to what you would do with an Ontology-based Graph.</p>
@@ -3217,8 +3225,8 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Patch coverage computation doesn't consider the root node.</p></div>
-
+<p>Patch coverage computation doesn't consider the root node.</p>
+</div>
 <ol start="4"><li><b>Filter with Traits</b>: If traits are defined in the Knowledge Graph, paths shortlisted in the above step are further filtered based on the confidence score of a classification algorithm in user utterance.</li>
 <li><b>Send to Ranker</b>: The KG engine then sends the shortlisted paths to the Ontology Ranker Program.</li>
 <li><b>Score based on Cosine Similarity</b>: The Ontology Ranker makes use of user-defined synonyms, lemma forms of word, n-grams, stop words, to compute the cosine similarity between the user utterance and the shortlisted questions. Paths are ranked in non-increasing order of cosine similarity score.</li>
@@ -3317,7 +3325,6 @@
 <p class="admonition-title">Note</p>
 <p>Enabling the <b>Manage Context</b> option will not show the term/node name by default.</p>
 </div>
-
 <h3 id="stop-words">Stop Words<a class="headerlink" href="#stop-words" title="Permanent link">&para;</a></h3>
 <p>Stop words present in the user utterance are discarded for scoring even if the stop word is used to define a node (or node synonyms).</p>
 <p>The Knowledge Graph has a language-specific predefined set of stop words. This list can be customized to suit your requirements.</p>
@@ -3333,7 +3340,6 @@
 <p class="admonition-title">Note</p>
 <p>After every change that you make to the Knowledge Graph such as adding synonyms to a term or editing the name of a term, you must click the Train button for the changes to reflect in the bot responses.</p>
 </div>
-
 <p>The training fails if any single node has more than 100 questions. This limit was introduced in v7.3 to make the Knowledge Graph more efficient by improving the response times. In such failure cases, you can <strong>Download Errors</strong> CSV file which lists the path with more than 100 questions. You can use this file to rectify your Knowledge Graph.</p>
 <h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
 <p>When you complete creating the Knowledge Graph and training it, we recommend that you interact with the assistant and ask questions connected to the Knowledge Graph. Test the responses by using a variety of utterances so that you can identify missing terms, questions, alternative questions, synonyms, and traits. <a href="https://developer.kore.ai/docs/bots/test-your-bot/testing-your-bot-with-nlp/" target="_blank">Learn more about utterance testing</a>.</p>
@@ -3343,7 +3349,6 @@
 <p class="admonition-title">Note</p>
 <p>If your VA is multilingual, you can set the Thresholds differently for different languages. If not set, the Default Settings will be used for all languages. This feature is available from v7.0 onwards.</p>
 </div>
-
 <p>The settings for the Knowledge Graph engine are discussed in detail in the following sections.</p>
 <h3 id="explore-thresholds-and-configurations">Explore Thresholds and Configurations<a class="headerlink" href="#explore-thresholds-and-configurations" title="Permanent link">&para;</a></h3>
 <p>To navigate to Thresholds and Configuration, please follow the steps below: </p>
@@ -3380,7 +3385,6 @@
 <p class="admonition-title">Note</p>
 <p>This feature is not supported in all languages, refer here for details.</p>
 </div>
-
 <p>When the <strong>Search in Answer</strong> flag is enabled, the Knowledge Graph engine considers the answer text for identifying the intents also.</p>
 <p>Once this option is enabled, you can specify whether to <strong>Inform the end-user that the answer is a probable answer</strong>. If selected a Standard Message to the effect is displayed, which can be customized using the Manage Response link. <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-dialog/#Managing_Standard_Responses" target="_blank">Learn more</a>.</p>
 <p>There are three ways in which you can render the response:</p>
