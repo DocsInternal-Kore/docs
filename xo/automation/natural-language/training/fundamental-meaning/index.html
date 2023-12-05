@@ -3023,10 +3023,9 @@
     FM Engine Overview
   </a>
   
-    <nav class="md-nav" aria-label="FM Engine Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-fm-process" class="md-nav__link">
     The FM Process
   </a>
@@ -3094,23 +3093,18 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#key-components" class="md-nav__link">
     Key Components
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#fm-output" class="md-nav__link">
     FM Output
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3191,7 +3185,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#manage-concepts" class="md-nav__link">
     Manage Concepts
   </a>
@@ -3220,31 +3219,32 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bot-substitutions" class="md-nav__link">
     Bot Substitutions
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#bot-word-aliases" class="md-nav__link">
     Bot word Aliases
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#bot-homophones" class="md-nav__link">
     Bot Homophones
   </a>
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
+    <nav class="md-nav" aria-label="Bot Homophones">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#emoji-support" class="md-nav__link">
@@ -3294,15 +3294,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#negative-patterns" class="md-nav__link">
     Negative Patterns
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3343,21 +3343,21 @@
 <li>Word Match, Word Coverage across the sentence, Word Position</li>
 <li>Sentence structure</li>
 </ul>
-<h3 id="the-fm-process">The FM Process<a class="headerlink" href="#the-fm-process" title="Permanent link">&para;</a></h3>
+<h2 id="the-fm-process">The FM Process<a class="headerlink" href="#the-fm-process" title="Permanent link">&para;</a></h2>
 <p>The FM model uses the following processes in training.</p>
-<h4 id="tokenization">Tokenization<a class="headerlink" href="#tokenization" title="Permanent link">&para;</a></h4>
+<h3 id="tokenization">Tokenization<a class="headerlink" href="#tokenization" title="Permanent link">&para;</a></h3>
 <p>Also known as word segmentation, this process breaks up the given text into units called tokens. The hyphenated words are retained (might be subjected to spell correction later); digits with a hyphen are split. For example, <strong><em>2-3</em></strong> becomes <strong><em>2 – 3</em></strong>. Tokenization is not done for known concepts like Dates, Currency, etc.</p>
-<h4 id="substitution">Substitution<a class="headerlink" href="#substitution" title="Permanent link">&para;</a></h4>
+<h3 id="substitution">Substitution<a class="headerlink" href="#substitution" title="Permanent link">&para;</a></h3>
 <p>This process expands interjections, abbreviations, misspellings, texting shorthand, and contractions using system concepts. Like <code>~emohello</code> for all greeting-related expressions, <code>~yes</code> for confirmation, <code>~no</code> for rejection, and more. A <strong>Bot Substitution</strong> or replacement of words happens immediately after tokenization.</p>
 <p>This feature allows bot developers to add substitutions specific to their domain and vocabulary. For example, <strong><em>Chevy</em></strong> is replaced by <strong><em>Chevrolet</em></strong> by a car serving bot,</p>
 <p>Another use of this feature is on voice channels where ideally, mis-transcriptions should be corrected by the ASR software, but that isn’t always possible. In these cases, the substitution functionality allows bot developers to correct transcription errors. For example, <strong><em>our d</em></strong> is corrected to <strong><em>Audi</em></strong> by a car serving bot. <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Bot_Substitutions">Learn more</a>.</p>
-<h4 id="merging">Merging<a class="headerlink" href="#merging" title="Permanent link">&para;</a></h4>
+<h3 id="merging">Merging<a class="headerlink" href="#merging" title="Permanent link">&para;</a></h3>
 <p>This process combines a sequence of single words, numbers, or dates. For example, “credit card” or “twenty five” or “twenty-five” merged into a single word.</p>
-<h4 id="spell-check">Spell Check<a class="headerlink" href="#spell-check" title="Permanent link">&para;</a></h4>
+<h3 id="spell-check">Spell Check<a class="headerlink" href="#spell-check" title="Permanent link">&para;</a></h3>
 <p>This process replaces unknown words with known words (if any) which involves case conversion. The Platform refers to WordNet and VA Defined Terms for spell check. E.g. “I wantt  to pai for my booking”   becomes “I want to pay for my booking”</p>
-<h4 id="lemmatization">Lemmatization<a class="headerlink" href="#lemmatization" title="Permanent link">&para;</a></h4>
+<h3 id="lemmatization">Lemmatization<a class="headerlink" href="#lemmatization" title="Permanent link">&para;</a></h3>
 <p>The XO Platform uses the WordNet database to look up word lemmas in a given text.</p>
-<h4 id="gleaning">Gleaning<a class="headerlink" href="#gleaning" title="Permanent link">&para;</a></h4>
+<h3 id="gleaning">Gleaning<a class="headerlink" href="#gleaning" title="Permanent link">&para;</a></h3>
 <p>This process helps identify sections of utterances and mark them as special. This includes the following:</p>
 <ol>
 <li>Marking polite phrases and treating them as noise, like “can you please….”. </li>
@@ -3365,18 +3365,18 @@
 <li>Identifying and normalizing numbers and from other related entities: e.g. “seven one three triple five double zero eighty four” =&gt; 7135550084, which is probably a phone number.</li>
 <li>Identifying System entities like Percentages – “sixty six percent”; Units of measurement – “five sq km”, “12 stone 7 pounds”; Currencies – “twenty bucks”, “six lakh rupees”; Dates and times – “last day of next month”, “10 o’clock tonight”.</li>
 </ol>
-<h4 id="parts-of-speech-pos-tagging">Parts of Speech (POS) tagging<a class="headerlink" href="#parts-of-speech-pos-tagging" title="Permanent link">&para;</a></h4>
+<h3 id="parts-of-speech-pos-tagging">Parts of Speech (POS) tagging<a class="headerlink" href="#parts-of-speech-pos-tagging" title="Permanent link">&para;</a></h3>
 <p>This process marks up a word in a corpus to the corresponding part-of-speech tag based on the context and definition. Part-of-speech tags are useful in building parse trees which are used to extract the relationship between words. <strong>POS Tagging</strong> is also essential for building lemmatizers to reduce a word to its root form.  Each word is assigned a part of the speech tag, and possibly a role (subject/verb/object) from VA definition data.</p>
-<h4 id="marking">Marking<a class="headerlink" href="#marking" title="Permanent link">&para;</a></h4>
+<h3 id="marking">Marking<a class="headerlink" href="#marking" title="Permanent link">&para;</a></h3>
 <p>This process of assigns a concept to each word. <strong>POS tagging</strong> and <strong>Parsing</strong> are abstract and deal with nouns and verbs. Alternatively, <strong>Marking</strong> applies a meaning to the word. For example, for the utterance “book a flight” – <code>book</code> can be a noun or verb. However, in this context, it is marked as a verb.</p>
-<h3 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h3>
+<h2 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h2>
 <p>Synonyms, Concepts &amp; Patterns are the cornerstones of the FM engine. These are used in intent detection and also by Ranking &amp; Resolver when trying to choose among the multiple possible intents.</p>
 <ul>
 <li><strong>Synonyms</strong> need to be used when the words used to identify an intent/entity can be used interchangeably like. The Platform comes with a built-in library, it can be augmented by adding domain words that will be used to build a dictionary for your assistant.</li>
 <li><strong>Concepts</strong> are a predefined set of choices that are defined once and used in multiple places. The Platform has a large set of inbuilt concepts that developers can use to define a pattern like ~world_country, ~asian_country. You can create your own custom concepts which are applicable to your use case, you can also create hierarchical concepts.</li>
 <li><strong>Patterns</strong> used mainly for intent detection in the FM engine. Can be used to define metaphors or other idiomatic expressions for task names. Concepts can be used in defining patterns.</li>
 </ul>
-<h3 id="fm-output">FM Output<a class="headerlink" href="#fm-output" title="Permanent link">&para;</a></h3>
+<h2 id="fm-output">FM Output<a class="headerlink" href="#fm-output" title="Permanent link">&para;</a></h2>
 <p>The FM Engine collects information on a word in a given user input depending on:</p>
 <ul>
 <li><strong>Position</strong> of the matching word in the sentence,</li>
@@ -3476,17 +3476,17 @@
 <p>Whenever a user adds and saves a new synonym, the system only updates the database with the new synonym and does not overwrite the existing synonym list.</p>
 <p><strong>Delete a Synonym</strong></p>
 <p>Whenever a user deletes an existing synonym, the system removes only the concerned synonym from the existing synonyms list without overwriting the complete list. During concurrent usage, the system prompts the user to refresh the page to make the latest information available.</p>
-<h3 id="manage-concepts">Manage Concepts<a class="headerlink" href="#manage-concepts" title="Permanent link">&para;</a></h3>
+<h2 id="manage-concepts">Manage Concepts<a class="headerlink" href="#manage-concepts" title="Permanent link">&para;</a></h2>
 <p><strong>Concepts</strong> are clusters of related and synonymous terms that can be considered as a group identified by a single term.</p>
 <p>For example, <em>yes</em> can be expressed as <em>ok,</em> <em>I agree</em> or <em>all right</em> etc.</p>
 <p>In addition, Concepts can be very useful when you want to categorize terms. For example, you might have <em>fruit</em> as a concept, under which you can classify terms such as <em>apple, orange, banana, etc.</em></p>
-<h4 id="concept-types">Concept Types<a class="headerlink" href="#concept-types" title="Permanent link">&para;</a></h4>
+<h3 id="concept-types">Concept Types<a class="headerlink" href="#concept-types" title="Permanent link">&para;</a></h3>
 <p>There are two types of Concepts within the XO Platform:</p>
 <ul>
 <li><strong>System Concepts</strong>: The Kore.ai platform provides a list of default concepts that cover the most common scenarios like yes, no, help etc.</li>
 <li><strong>Custom Concepts</strong>: You might want to define concepts catering to your business requirements. For example, you might want to use the term <em>fruit</em> to imply either <em>apple</em> or <em>orange</em> or <em>banana</em>. If you want to add to the list of default words, you are advised to create a new concept and add words there before mapping the pattern, instead of adding more words to the default concepts like ~emogoodbye or ~emohello.</li>
 </ul>
-<h4 id="define-custom-concepts">Define Custom Concepts<a class="headerlink" href="#define-custom-concepts" title="Permanent link">&para;</a></h4>
+<h3 id="define-custom-concepts">Define Custom Concepts<a class="headerlink" href="#define-custom-concepts" title="Permanent link">&para;</a></h3>
 <p>You can define a new concept the same way as you would define a Bot Synonym, but you need to start the word with a <strong>~</strong>. For more details on the naming convention, <a href="https://developer.kore.ai/docs/bots/nlp/additional-notes-nlp-settings-guidelines/#Concepts">refer here</a>.</p>
 <p>You can also define custom concepts using emojis.</p>
 <p>Concepts are used to define patterns. For example, the pattern <em>buy ~fruit</em> is used to capture <em>buy orange</em> or <em>buy banana</em>.
@@ -3496,9 +3496,9 @@
 Add the <b>~disable_help</b> concept key and train the VA to disable the system help. You can train the virtual assistant (VA) to use the <b>custom_help</b> group in Smalltalk to trigger the customized help messages. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/small-talk/#Add_Groups">Learn more</a>.</p></div>
 
 <p><a class="glightbox" href="../images/custom_help.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/custom_help.png" alt="custom help" title="custom help" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h4 id="parallel-editing-for-concepts">Parallel Editing for Concepts<a class="headerlink" href="#parallel-editing-for-concepts" title="Permanent link">&para;</a></h4>
+<h3 id="parallel-editing-for-concepts">Parallel Editing for Concepts<a class="headerlink" href="#parallel-editing-for-concepts" title="Permanent link">&para;</a></h3>
 <p>Parallel Editing works the same for Concepts and Synonyms. Please click <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Parallel_Editing_for_Synonyms">here</a> to learn more.</p>
-<h4 id="bot-substitutions">Bot Substitutions<a class="headerlink" href="#bot-substitutions" title="Permanent link">&para;</a></h4>
+<h2 id="bot-substitutions">Bot Substitutions<a class="headerlink" href="#bot-substitutions" title="Permanent link">&para;</a></h2>
 <p>The NLP engine can recognize Bot substitutions present in the user utterance using a custom concept definition called <code>~bot_substitutions</code> for bot substitution.</p>
 <p>You can define this concept based on the following syntax:</p>
 <ul>
@@ -3532,7 +3532,7 @@ Add the <b>~disable_help</b> concept key and train the VA to disable the system 
 <ul>
 <li><code>&amp;lt; word</code> will match the first word in a sentence, e.g., <code>&amp;lt; new Chevy|Chevrolet</code> will change <em>new Chevy car</em> to <em>Chevrolet car</em>, but it will not change <em>I want to know about the new Chevy car</em>.</li>
 </ul>
-<h4 id="bot-word-aliases">Bot word Aliases<a class="headerlink" href="#bot-word-aliases" title="Permanent link">&para;</a></h4>
+<h2 id="bot-word-aliases">Bot word Aliases<a class="headerlink" href="#bot-word-aliases" title="Permanent link">&para;</a></h2>
 <p>The Bots on the Kore.ai XO Platform can now be trained during the NL process to identify aliases or alternative spellings in utterances (during Speech-to-Text (STT) transcriptions).</p>
 <p>Alias is based on <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Marking">Marking</a>, the chat script-specific process of linking concepts to words to match patterns based on those concepts.</p>
 <p>For example, a user might say Alfa Romeo on a voice channel, but the STT transcribes that as <code>Alpha Romeo</code> (a known and valid word). This is because the Bot uses the custom concept defined for Bot Word Aliases, matches the custom entity, and returns <code>Alfa Romeo</code>.</p>
@@ -3564,7 +3564,7 @@ In the example below, the system marks <code>Aston</code> as an alias for <code>
 <a class="glightbox" href="../images/synonyms-example-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synonyms-example-1.png" alt="synonyms example 1" title="synonyms example 1" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Similarly, in the example below, the system marks <code>Kelly</code> as the alias for <code>TeleHealth</code> only if it is followed by the word <code>health</code> (the underscore limits the marking to one word) according to the <strong>Synonyms</strong> pattern.</p>
 <p><a class="glightbox" href="../images/synonyms-example-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synonyms-example-2.png" alt="synonyms example 2" title="synonyms example 2" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h4 id="bot-homophones">Bot Homophones<a class="headerlink" href="#bot-homophones" title="Permanent link">&para;</a></h4>
+<h2 id="bot-homophones">Bot Homophones<a class="headerlink" href="#bot-homophones" title="Permanent link">&para;</a></h2>
 <p>The Kore.ai XO Platform now supports <strong>Bot Homophones</strong> or Homonyms to identify the relevant word when two or more words are pronounced the same but have different spellings. Homonyms are a challenge on voice channels because while processing and adjusting an utterance on the Natural Language (NL) Pipeline, the Speech-to-Text (STT) engine can easily transcribe the wrong word. For example, <code>Write an email</code> can be wrongly transcribed to <code>Right an email</code>.</p>
 <p>With Bot Homophones, the system considers all the alternative homophones to check for a better, or equally valid, word choice during the NL pipeline and <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Parts_of_Speech_POS_tagging">POS tagging</a> processes.</p>
 <p><strong>How it Works</strong></p>
@@ -3613,7 +3613,7 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <p>When the NLP interpreter matches a synonym to one task or field, and a pattern to a different task or field, the pattern match is prioritized and used for positive recognition over the synonym match.</p>
 <p>To learn more about best practices and tips for optimizing NLP, refer to <a href="https://developer.kore.ai/docs/bots/nlp/additional-notes-nlp-settings-guidelines/">Natural Language Processing Guide</a>.</p>
 <p>For a quick guide towards the usage of patterns, refer to <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-use-patterns-for-intents-entities/">How to use Patterns</a>.</p>
-<h4 id="navigate-to-the-patterns-tab">Navigate to the Patterns Tab<a class="headerlink" href="#navigate-to-the-patterns-tab" title="Permanent link">&para;</a></h4>
+<h3 id="navigate-to-the-patterns-tab">Navigate to the Patterns Tab<a class="headerlink" href="#navigate-to-the-patterns-tab" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Open the VA for which you want to add patterns and select the <strong>Build</strong> tab from the top menu.</li>
 <li>From the left menu click <strong>Natural Language -&gt;</strong> <strong>Training</strong>.</li>
@@ -3623,7 +3623,7 @@ Both homonyms do not change the original utterance like Substitutions or return 
 </ul>
 </li>
 </ol>
-<h4 id="add-patterns-for-intents">Add Patterns for Intents<a class="headerlink" href="#add-patterns-for-intents" title="Permanent link">&para;</a></h4>
+<h3 id="add-patterns-for-intents">Add Patterns for Intents<a class="headerlink" href="#add-patterns-for-intents" title="Permanent link">&para;</a></h3>
 <p>You can define a pattern as a sentence that represents the task but does not actually contain any of the words in the name of the task.</p>
 <p>Also, you can define where words must be ignored by the NLP interpreter to improve accuracy for recognizing the correct task.</p>
 <p>For example, you can build a pattern like <em>find <em>testable</em> value</em> to recognize in the user input a sequence of words in order, where the word <em>find</em> is followed by any number of words, followed by the word <em>testable</em>, and again followed by any number of words, which are finally followed by the word <em>value</em>. For this pattern, the user input can be <em>Find me any testable integers corresponding to the value</em>, which can match the pattern.</p>
@@ -3637,7 +3637,7 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <li>You can <strong>reorder, edit</strong> or <strong>delete</strong> patterns using the appropriate icons.</li>
 </ol>
 <p><a class="glightbox" href="../images/add-intent-pattern.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-intent-pattern.png" alt="add intent pattern" title="add intent pattern" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h4 id="add-rules-for-intents">Add Rules for Intents<a class="headerlink" href="#add-rules-for-intents" title="Permanent link">&para;</a></h4>
+<h3 id="add-rules-for-intents">Add Rules for Intents<a class="headerlink" href="#add-rules-for-intents" title="Permanent link">&para;</a></h3>
 <p>You can use traits or context tags to define intent identification rules for better intent detection. You can add Traits or Context Tags and conditional rules using AND, OR operators.</p>
 <p><a class="glightbox" href="../images/add-rules-for-an-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-rules-for-an-intent.png" alt="add rules for an intent" title="add rules for an intent" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>To add an intent rule, follow the below steps:</p>
@@ -3647,7 +3647,7 @@ Both homonyms do not change the original utterance like Substitutions or return 
 </ol>
 <p>Refer here to know more about <a href="https://developer.kore.ai/docs/bots/nlp/traits/">Traits</a>, <a href="https://developer.kore.ai/docs/bots/nlp/traits/#Trait_Association_Rules">Trait Association Rules</a> and <a href="https://developer.kore.ai/docs/bots/bot-intelligence/context-management/">Context Tags</a>.</p>
 <p><a class="glightbox" href="../images/fm-rules.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fm-rules.png" alt="manage rules" title="manage rules" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h4 id="add-patterns-for-entities">Add Patterns for Entities<a class="headerlink" href="#add-patterns-for-entities" title="Permanent link">&para;</a></h4>
+<h3 id="add-patterns-for-entities">Add Patterns for Entities<a class="headerlink" href="#add-patterns-for-entities" title="Permanent link">&para;</a></h3>
 <p>In the <strong>Entities</strong> section of the <strong>Training</strong> page, you can view, add, and delete patterns for dialog task entity node names.</p>
 <p>To add an entity pattern, follow the below steps:</p>
 <ol>
@@ -3658,7 +3658,7 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <li>You can <strong>reorder, edit</strong> or <strong>delete</strong> patterns using the appropriate icons.</li>
 </ol>
 <p><a class="glightbox" href="../images/manage-patterns.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/manage-patterns.png" alt="manage patterns" title="manage patterns" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h3 id="negative-patterns">Negative Patterns<a class="headerlink" href="#negative-patterns" title="Permanent link">&para;</a></h3>
+<h2 id="negative-patterns">Negative Patterns<a class="headerlink" href="#negative-patterns" title="Permanent link">&para;</a></h2>
 <p>On the Kore.ai XO Platform, a natural language engine attempts to identify the user’s input and match it to a task.</p>
 <p>During this process, you may want the NLP engine to identify and filter the matched intents, but not trigger them.</p>
 <p>For example, when a user says <em>I was trying to Book a Flight when I faced an issue</em>, though the machine identifies the intent as <em>Book a Flight</em>, that is not what the user wants to do. The user is looking for a resolution to not being able to book a flight. In such a case, the Platform lets you define “<em>was trying to</em>“ as a negative pattern to ensure that booking a flight (the matched intent) is ignored.</p>
