@@ -17,7 +17,7 @@
     
     
       
-        <title>**Adding the Zoom Contact Center Channel** - Kore ai Docs</title>
+        <title>**Adding the Facebook Messenger Channel** - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adding-the-zoom-contact-center-channel" class="md-skip">
+        <a href="#adding-the-facebook-messenger-channel" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Adding the Zoom Contact Center Channel**
+              **Adding the Facebook Messenger Channel**
             
           </span>
         </div>
@@ -3019,57 +3019,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    How it Works
+  <a href="#step-1-create-and-set-up-a-facebook-messenger-app" class="md-nav__link">
+    Step 1: Create and Set up a Facebook Messenger App
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#step-2-configure-the-webhookcallback-url" class="md-nav__link">
+    Step 2: Configure the Webhook/Callback URL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-zoom-contact-center" class="md-nav__link">
-    Setting up Zoom Contact Center
-  </a>
-  
-    <nav class="md-nav" aria-label="Setting up Zoom Contact Center">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-associate-an-app" class="md-nav__link">
-    Step 1: Associate an App
+  <a href="#step-3-set-up-app-id-and-secret" class="md-nav__link">
+    Step 3: Set up App ID and Secret
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-add-koreai-chatbot-connector-instance" class="md-nav__link">
-    Step 2: Add Kore.ai Chatbot Connector Instance
+      
+        <li class="md-nav__item">
+  <a href="#step-4-submit-the-app-for-approval" class="md-nav__link">
+    Step 4: Submit the App for Approval
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-authorize-the-connector" class="md-nav__link">
-    Step 3: Authorize the Connector
+      
+        <li class="md-nav__item">
+  <a href="#step-5-enable-the-channel" class="md-nav__link">
+    Step 5: Enable the Channel
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-enable-the-channel" class="md-nav__link">
-    Step 4: Enable the Channel
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3092,146 +3072,142 @@
 
 
 
-<h1 id="adding-the-zoom-contact-center-channel"><strong>Adding the Zoom Contact Center Channel</strong><a class="headerlink" href="#adding-the-zoom-contact-center-channel" title="Permanent link">&para;</a></h1>
-<p><strong>Zoom Contact Center (ZCC)</strong> is an automation solution for enterprises to manage customer interactions across voice and chat channels. It enables chat automation through Asynchronous Webhook Integration. The <strong>Kore.ai XO Platform</strong> now supports the Zoom Contact Center channel to integrate virtual assistants for rich and asynchronous messaging experiences.</p>
-<p>This integration streamlines customer support, automates responses, and improves overall operational efficiency, leading to enhanced customer experiences and increased productivity.</p>
-<h2 id="how-it-works">How it Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
-<p>Here’s a general overview of how virtual assistant interactions work on the Zoom Contact Center Channel:</p>
-<ul>
-<li><strong>Setup and Configuration</strong>: Kore.ai sets up and configures the integration between their virtual assistant and ZCC. This involves installing specific connectors provided by Zoom and configuring the settings to establish a connection.</li>
-<li><strong>Channel Integration</strong>: Once the integration is set up, the virtual assistants on the XO Platform can be configured to use ZCC as one of its communication channels. This means that incoming customer inquiries can be handled through Zoom’s communication platform, which may include voice calls and chat messages.</li>
-<li><strong>Routing and Distribution</strong>: When a customer initiates contact through ZCC, the XO Platform’s routing system directs the interaction to an available agent based on predefined rules and criteria.</li>
-<li><strong>Agent Interaction</strong>: The agent receives the customer interaction and responds to the customer using ZCC’s communication features, such as answering voice calls or chat messages.</li>
-</ul>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>Please ensure you have the following before enabling this channel:</p>
+<h1 id="adding-the-facebook-messenger-channel"><strong>Adding the Facebook Messenger Channel</strong><a class="headerlink" href="#adding-the-facebook-messenger-channel" title="Permanent link">&para;</a></h1>
+<p>To add the Facebook Messenger channel to your Virtual Assistant, you need a <strong>Facebook Developer</strong> account. With this account, you can configure the connection between Facebook Messenger and Kore.ai. Enabling the Facebook Messenger Channel on the Bot Builder helps your users chat with the Virtual Assistant using their <strong>Facebook</strong> accounts.</p>
+<p>The steps to enable this channel are simple and summarized below:</p>
 <ol>
-<li>A Zoom App Marketplace Developer account. <em>Don’t have an account? Sign up <a href="https://marketplace.zoom.us/">here</a>.</em></li>
-<li>Developer access to the XO Platform. <em>Need Developer Access? <a href="https://kore.ai/contact-us/">Contact us</a>.</em></li>
+<li><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-facebook-channel/#Step_1_Create_and_Set_up_a_Facebook_Messenger_App">Create and set up a Facebook Messenger App</a>.</li>
+<li><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-facebook-channel/#Step_2_Configure_the_WebhookCallback_URL">Configure the Webhook or Callback URL to send and receive messages</a>.</li>
+<li><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-facebook-channel/#Step_3_Set_up_App_ID_and_Secret">Subscribe to the app on the Facebook page using the Client ID and Client Secret</a>.</li>
+<li><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-facebook-channel/#Step_4_Submit_the_App_for_Approval">Submit the App for Approval.</a></li>
+<li><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-facebook-channel/#Step_5_Enable_the_Channel">Enable the channel and complete the configuration on the Kore.ai XO Platform</a>.</li>
 </ol>
-<h2 id="setting-up-zoom-contact-center">Setting up Zoom Contact Center<a class="headerlink" href="#setting-up-zoom-contact-center" title="Permanent link">&para;</a></h2>
-<p>The important steps to set up the ZCC channel are summarized below:</p>
+<h2 id="step-1-create-and-set-up-a-facebook-messenger-app">Step 1: Create and Set up a Facebook Messenger App<a class="headerlink" href="#step-1-create-and-set-up-a-facebook-messenger-app" title="Permanent link">&para;</a></h2>
 <ol>
-<li><a href="docs/xo/channels/add-zoom-contact-center-channel/#step-1-associate-an-app">Associate an App to the channel</a>.</li>
-<li><a href="/docs/xo/channels/add-zoom-contact-center-channel/#step-2-add-koreai-chatbot-connector-instance">Create a Bot Connector instance</a> on <a href="https://marketplace.zoom.us/apps">Zoom App Marketplace</a> to associate a virtual assistant.</li>
-<li><a href="/docs/xo/channels/add-zoom-contact-center-channel/#step-3-authorize-the-connector">Authorize the connector by configuring the required parameters</a>.</li>
-<li><a href="/docs/xo/channels/add-zoom-contact-center-channel/#step-4-enable-the-channel">Enable the channel on the XO Platform</a>.</li>
-</ol>
-<h3 id="step-1-associate-an-app"><strong>Step 1: Associate an App</strong><a class="headerlink" href="#step-1-associate-an-app" title="Permanent link">&para;</a></h3>
-<p>As a first step to enable the channel, associate an app on the XO Platform by selecting an app from the list or creating a new one.</p>
-<p>To create an app, follow the steps below:</p>
-<ol>
-<li>Navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong>.</li>
-<li>Select <strong>Zoom Contact Center</strong> under <strong>Enterprise Channels</strong>.</li>
-<li>Click the <strong>Configurations</strong> tab.</li>
 <li>
-<p>If you’re creating an app for the first time, click the <strong>Create App</strong> link. Otherwise, select <strong>Create App</strong> from the dropdown list or click <strong>Add</strong>.<br />
-<a class="glightbox" href="../images/Zoom.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom.png" alt="Zoom  channel" title="Zoom channel" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p>Log in to the <a href="https://developers.facebook.com/micro_site/url/?click_from_context_menu=true&amp;country=IN&amp;destination=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fdevelopment%2Fregister&amp;event_type=click&amp;last_nav_impression_id=0pWTvRHj057BWQ868&amp;max_percent_page_viewed=65&amp;max_viewport_height_px=657&amp;max_viewport_width_px=1366&amp;orig_http_referrer=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fdevelopment%2Fcreate-an-app%2F&amp;orig_request_uri=https%3A%2F%2Fdevelopers.facebook.com%2Fajax%2Fdocs%2Fnav%2F%3Fpath1%3Ddevelopment%26path2%3Dcreate-an-app&amp;region=apac&amp;scrolled=true&amp;session_id=0lMcuYhMqR7uUNlDe&amp;site=developers">Facebook Developer Portal</a> and click the <strong>My Apps</strong> top menu option.
+<a class="glightbox" href="../images/fbm.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm.png" alt=" Facebook app" title="Facebook app" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p><strong>Note</strong>: New users should <a href="https://developers.facebook.com/micro_site/url/?click_from_context_menu=true&amp;country=IN&amp;destination=https%3A%2F%2Fdevelopers.facebook.com%2Fasync%2Fregistration&amp;event_type=click&amp;last_nav_impression_id=0z1et1xpn4nZpYCfR&amp;max_percent_page_viewed=30&amp;max_viewport_height_px=657&amp;max_viewport_width_px=1366&amp;orig_http_referrer=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fdevelopment%2Fregister%2F&amp;orig_request_uri=https%3A%2F%2Fdevelopers.facebook.com%2Fajax%2Fdocs%2Fnav%2F%3Fpath1%3Ddevelopment%26path2%3Dregister&amp;region=apac&amp;scrolled=false&amp;session_id=1SbEaGTlt1aWgLNff&amp;site=developers">register</a> on the <strong>Facebook Developer Portal</strong>. <a href="https://developers.facebook.com/docs/development/register">Learn more</a>.</p>
 </li>
 <li>
-<p>In the <strong>Create New Client App</strong> window, follow the steps below:</p>
-<ul>
-<li>In the <strong>Name</strong> field, enter the name for the app registration used in Bot Builder,. Ffor example, My App Registration.</li>
-<li>Select one of these scopes for the app:<ul>
-<li><strong>Allow anonymous users to chat with the bot</strong>: Enables anonymous users to interact with the bot.</li>
-<li><strong>Auto register new users on Kore.ai Bots Platform</strong>: Select to control the auto-user registration in Kore.ai if the user assertion is unknown.</li>
-</ul>
-</li>
-<li>In the <strong>JWT Signing</strong> <strong>Algorithms Used For Client App Authentication</strong> drop-down list, select one of the following security algorithms:<ul>
-<li><strong>RS256/RS512: **Select to enable the **Public Key.</strong> <em>The Private key, used for encryption, is provided by the user, and the Public key, used for decryption, is provided by the Platform</em>. Both the keys have to be used for generating the token. The Public Key is used by the XO Platform to authenticate the client application.</li>
-<li><strong>HS256/HS512:</strong> Select to generate a <strong>Secret Key **and a **Client ID</strong>. The <strong>Client ID</strong> is required for app initialization, and the <strong>Secret Key</strong> is used by the XO Platform to authenticate the client application.</li>
-</ul>
+<p>In the <strong>My Apps</strong> section, click <strong>Create App</strong>.
+<a class="glightbox" href="../images/fbm1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm1.png" alt=" Facebook My apps" title="Facebook My apps" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>(Optional) In the <strong>Push Notifications</strong> section, click <strong>Enable</strong> and then specify a URL to send the notifications.
-<a class="glightbox" href="../images/Zoom1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom1.png" alt="Zoom  client ID" title="Zoom client ID" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p>In the <strong>Select an App Type</strong> window, select the <strong>Business</strong> tab, and click <strong>Next</strong>.
+<a class="glightbox" href="../images/fbm2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm2.png" alt=" Facebook Business" title="Facebook Business" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>When you Enable the Push Notifications, you can select one of the following options to manage the notifications:</p>
-<ul>
-<li><strong>All Messages</strong> – Sends push notifications for all conversation messages to the client app.</li>
-<li><strong>Message Delivery Failures</strong> – Sends push notifications for failure scenarios such as WebSocket Disconnected, App is Killed, and Message Delivery Failure.
-<a class="glightbox" href="../images/Zoom2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom2.png" alt="message delivery failure" title="message delivery failure" style="border: 1px solid gray; zoom:100%;"></a></li>
-</ul>
-</li>
-<li>
-<p>To customize the display messages for the push notifications messages sent to the client app, select one of the following options:</p>
-<ul>
-<li><strong>Send Original Messages</strong> – Sends the actual conversation message as part of the push notification.</li>
-<li><strong>Show a standard message from standard responses</strong> – Sends a generic message instead of the original message.
-<a class="glightbox" href="../images/Zoom3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom3.png" alt="show standard messages" title="show standard messages" style="border: 1px solid gray; zoom:100%;"></a></li>
-</ul>
-</li>
-<li>
-<p>Click <strong>Manage Responses</strong> to add custom messages in the push notification. To learn more about adding responses, read articles <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-standard-responses/">Default Standard Responses</a> and <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-dialog/">Default Conversations</a>.</p>
-</li>
-<li>Click <strong>Save</strong> and then, click <strong>Create</strong>.
-<a class="glightbox" href="../images/Zoom4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom4.png" alt="manage responses" title="manage responses" style="border: 1px solid gray; zoom:100%;"></a></li>
-</ul>
+<p>In the <strong>Details</strong> section, enter the required details, and click <strong>Create App</strong>.</p>
 </li>
 </ol>
-<h3 id="step-2-add-koreai-chatbot-connector-instance"><strong>Step 2: Add Kore.ai Chatbot Connector Instance</strong><a class="headerlink" href="#step-2-add-koreai-chatbot-connector-instance" title="Permanent link">&para;</a></h3>
-<p>To set up <strong>Zoom Contact Center</strong> as a channel, the bot has to be associated with the instance of the Kore.ai Chat bot connector available in the Zoom app marketplace. To create a Chatbot Connector, follow the steps below:</p>
+<p><a class="glightbox" href="../images/fbm3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm3.png" alt=" Facebook create app" title="Facebook create app" style="border: 1px solid gray; zoom:70%;"></a></p>
 <ol>
-<li>Log in to the <a href="https://marketplace.zoom.us/apps">Zoom App Marketplace</a>.</li>
-<li>Select <strong>App Types</strong> &gt; <strong>Connectors</strong> on the left navigation menu.</li>
-<li>On the <strong>Connectors</strong> page, select the <strong>Kore.ai Chatbot</strong> option.</li>
-<li>On the <strong>Overview</strong> page, click <strong>Add Connector</strong>.
-<a class="glightbox" href="../images/Zoom5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom5.png" alt="Zoom  connector" title="Zoom connector" style="border: 1px solid gray; zoom:100%;"></a></li>
-</ol>
-<h3 id="step-3-authorize-the-connector"><strong>Step 3: Authorize the Connector</strong><a class="headerlink" href="#step-3-authorize-the-connector" title="Permanent link">&para;</a></h3>
-<p>The next step after creating a connector is to authorize it on the <strong>Create Kore.ai Connector</strong> page of the **Zoom App Marketplace **portal. To configure, follow the steps below:</p>
-<ol>
+<li>Provide your account password in the <strong>Please re-enter your password</strong> window when prompted, and click <strong>Submit</strong>.</li>
+<li>Your App is now created and you are redirected to the <strong>Add products to your app</strong> page.</li>
 <li>
-<p>Provide the following information for <strong>Set Preferences</strong>:</p>
-<ul>
-<li><strong>Connector Name</strong>.</li>
-<li>Select <strong>Zoom Contact Center</strong>.</li>
-<li>Select <strong>Chatbot</strong> from the dropdown for <strong>Choose Bot Type</strong>.</li>
-<li>Click <strong>Next</strong>.</li>
-</ul>
-<p><a class="glightbox" href="../images/Zoom6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom6.png" alt="Zoom  connector details" title="Zoom connector details" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p>Click <strong>Set Up</strong> on the <strong>Messenger</strong> tab.
+<a class="glightbox" href="../images/fbm4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm4.png" alt=" Facebook add products" title="Facebook add products" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Provide the following information in the** Authorize** section:</p>
-<ul>
-<li>Select the region you want the chatbot to be available from the dropdown.</li>
-<li>The <strong>Base URL</strong> of the Kore.ai Platform to connect to the app. For example, the base URL for Kore.ai is <code>bots.kore.ai</code>.</li>
-<li>Copy and paste the <strong>Bot ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong> values from the <strong>Channels **&gt; **Configuration</strong> section of the XO Platform (shown below) for <strong>Authorization Parameters</strong>.</li>
-</ul>
-<p><a class="glightbox" href="../images/Zoom7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom7.png" alt="Zoom  bot details" title="Zoom bot details" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p>You now need to associate a page with the app. If you do not have a page, click <strong>Create New Page</strong> in the <strong>Access Tokens</strong> panel.
+<a class="glightbox" href="../images/fbm5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm5.png" alt=" Facebook access token" title="Facebook access token" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Click **Next.
-  <a class="glightbox" href="../images/Zoom8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom8.png" alt="save Zoom  configuration" title="Save Zoom configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>Click <strong>Add or Remove Pages</strong> and follow the instructions to add your page.
+<a class="glightbox" href="../images/fbm6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm6.png" alt=" Facebook remove pages" title="Facebook remove pages" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Copy the <strong>Post URL</strong> and <strong>Access Token</strong> values from the <strong>Create Kore.ai Chatbot Connector</strong> page.</p>
+<p>Click <strong>Generate Token</strong>.</p>
 </li>
 </ol>
-<p><a class="glightbox" href="../images/Zoom9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom9.png" alt="Zoom  URL" title="Zoom URL" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p><a class="glightbox" href="../images/fbm7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm7.png" alt=" Facebook generate token" title="Facebook generate token" style="border: 1px solid gray; zoom:70%;"></a></p>
 <ol>
-<li>Paste to the relevant fields on the Kore.ai XO Platform in the <strong>Zoom Contact Center **&gt; **Configurations</strong> section.</li>
+<li>In the <strong>Token Generated</strong> window, select <strong>I understand</strong> and click <strong>Copy</strong> to copy the page Access Token.</li>
 </ol>
-<p><a class="glightbox" href="../images/Zoom10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom10.png" alt="Zoom  contact center" title="Zoom contact center" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p><a class="glightbox" href="../images/fbm8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm8.png" alt=" Facebook generated token" title="Facebook generated token" style="border: 1px solid gray; zoom:70%;"></a></p>
 <ol>
-<li>Copy the <strong>Webhook URL</strong> from the <strong>Zoom Contact Center **&gt; **Configurations</strong> section of the XO Platform.</li>
+<li>Click <strong>Done</strong>.</li>
+<li>
+<p>Copy the <strong>Page ID</strong> of the Facebook page.
+<a class="glightbox" href="../images/fbm9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm9.png" alt=" Facebook configuration" title="Facebook configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>On the Kore.ai XO Platform, navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>Facebook Messenger</strong>.
+<a class="glightbox" href="../images/fbm10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm10.png" alt=" Facebook Messenger" title="Facebook Messenger" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click the <strong>Configurations</strong> tab, and paste the <strong>Page Access Token</strong> and <strong>Page ID</strong> values you’ve copied.
+<a class="glightbox" href="../images/fbm11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm11.png" alt=" Facebook page access" title="Facebook page access" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Navigate to <strong>Settings</strong> &gt; <strong>Basic</strong> and configure the <strong>Privacy Policy URL</strong> and <strong>Terms of Service URL</strong> fields for the app.
+<a class="glightbox" href="../images/fbm12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm12.png" alt=" Facebook Privacy" title="Facebook Privacy" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click <strong>Save Changes</strong>.</p>
+</li>
+<li>Enable the deployment of the app by changing <strong>App Mode: Development</strong> to <strong>Live</strong>.</li>
 </ol>
-<p><a class="glightbox" href="../images/Zoom11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom11.png" alt="Zoom  Webhook URL" title="Zoom Webhook URL" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p><a class="glightbox" href="../images/fbm13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm13.png" alt=" Facebook Save Changes" title="Facebook Save Changes" style="border: 1px solid gray; zoom:70%;"></a></p>
+<h2 id="step-2-configure-the-webhookcallback-url">Step 2: Configure the Webhook/Callback URL<a class="headerlink" href="#step-2-configure-the-webhookcallback-url" title="Permanent link">&para;</a></h2>
+<p>To set up the webhook URL, follow the steps below:</p>
 <ol>
-<li>Paste on the <strong>Create Kore.ai Chatbot Connector</strong> page, and click <strong>Next</strong>.</li>
+<li>Copy the <strong>Webhook URL</strong> and <strong>Verify Token</strong> from the Kore.ai XO Platform’s channel configuration panel.</li>
 </ol>
-<p><a class="glightbox" href="../images/Zoom12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom12.png" alt="Zoom  Kore connnector" title="Zoom Kore connector" style="border: 1px solid gray; zoom:100%;"></a></p>
-<p>The following message appears once the Kore.ai Chatbot connector is authorized successfully.
-<a class="glightbox" href="../images/Zoom13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom13.png" alt="Zoom  channel" title="Zoom channel" style="border: 1px solid gray; zoom:100%;"></a></p>
-<h3 id="step-4-enable-the-channel"><strong>Step 4: Enable the Channel</strong><a class="headerlink" href="#step-4-enable-the-channel" title="Permanent link">&para;</a></h3>
-<p>The final step in the setup is to enable the channel on the XO Platform. To enable, follow the steps below:</p>
+<p><a class="glightbox" href="../images/fbm14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm14.png" alt=" Facebook Webhook URL" title="Facebook Webhook URL" style="border: 1px solid gray; zoom:70%;"></a></p>
 <ol>
-<li>On the XO Platform, under <strong>Zoom Contact Center</strong> &gt; <strong>Configurations</strong>, select <strong>Yes</strong> for <strong>Enable Channel</strong>.</li>
+<li>On the <strong>Messenger Settings</strong> page of the Facebook Developer Portal, click <strong>Add Callback URL</strong>.</li>
+</ol>
+<p><a class="glightbox" href="../images/fbm15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm15.png" alt="Copy Facebook Webhook URL" title="Copy Facebook Webhook URL" style="border: 1px solid gray; zoom:70%;"></a></p>
+<ol>
+<li>
+<p>Paste the copied values in the <strong>Edit Callback URL</strong> window, and click <strong>Verify and Save</strong>.
+<a class="glightbox" href="../images/fbm16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm16.png" alt="Edit Facebook Callback URL" title="Edit Facebook Callback URL" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>The <em>webhook URL</em> is successfully set up.</p>
+</li>
+<li>
+<p>Click <strong>Add Subscriptions</strong>.
+<a class="glightbox" href="../images/fbm17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm17.png" alt="Facebook add subscriptions" title="Facebook add subscriptions" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Select <strong><em>messages</em></strong>, <strong><em>messaging_postbacks</em></strong>, <strong><em>messaging_optins</em></strong>, <strong><em>message_deliveries</em></strong>, and <strong><em>message_reads</em></strong> in the <strong>Edit Page Subscriptions</strong> window to select the webhook services.
+<a class="glightbox" href="../images/fbm18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm18.png" alt="Facebook details" title="Facebook details" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="step-3-set-up-app-id-and-secret">Step 3: Set up App ID and Secret<a class="headerlink" href="#step-3-set-up-app-id-and-secret" title="Permanent link">&para;</a></h2>
+<p>To configure the <strong>Client ID</strong> and <strong>Client Secret</strong> for the app, follow the steps below:</p>
+<ol>
+<li>On the <strong>Facebook Messenger Developer Portal</strong>, navigate to <strong>Settings</strong> &gt; <strong>Basic</strong>.</li>
+<li>
+<p>Copy the <strong><em>App ID</em></strong> and <strong><em>App Secret</em></strong> values.
+<a class="glightbox" href="../images/fbm19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm19.png" alt="Facebook Messenger Developer" title="Facebook Messenger Developer" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>On the Kore.ai Bot Builder, navigate to the <strong>Configurations</strong> section of the Facebook Messenger channel and paste these values in their respective fields.</p>
+</li>
+</ol>
+<p><a class="glightbox" href="../images/fbm20.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm20.png" alt="Facebook messenger channel" title="Facebook messenger channel" style="border: 1px solid gray; zoom:70%;"></a></p>
+<h2 id="step-4-submit-the-app-for-approval">Step 4: Submit the App for Approval<a class="headerlink" href="#step-4-submit-the-app-for-approval" title="Permanent link">&para;</a></h2>
+<p>Configure any other settings that Facebook might require, then submit the app for approval. <a href="https://developers.facebook.com/docs/messenger-platform/app-review#submission">Learn more</a>.</p>
+<p>Once approved, you can enable the <strong>Facebook Messenger</strong> channel for your assistant with the steps mentioned below.</p>
+<h2 id="step-5-enable-the-channel">Step 5: Enable the Channel<a class="headerlink" href="#step-5-enable-the-channel" title="Permanent link">&para;</a></h2>
+<p>On the Kore.ai XO Platform, enable the <strong>Facebook Messenger</strong> channel to complete the integration. To enable follow the steps below:</p>
+<ol>
+<li>Navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>Facebook Messenger</strong>.</li>
+<li>Click the <strong>Configurations</strong> tab, and select <strong><em>YES</em></strong> for <strong>Enable Channel</strong>.</li>
+</ol>
+<p><a class="glightbox" href="../images/fbm21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fbm21.png" alt="Enable Facebook channel" title="Enable Facebook channel" style="border: 1px solid gray; zoom:70%;"></a></p>
+<ol>
 <li>Click <strong>Save</strong>.</li>
 </ol>
-<p><a class="glightbox" href="../images/Zoom14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Zoom14.png" alt="enable Zoom  channel" title=" enable Zoom channel" style="border: 1px solid gray; zoom:100%;"></a></p>
-<p>You’re now ready to test the new channel integration by publishing your virtual assistant. <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/">Learn more</a>.</p>
+<p>After the channel is enabled and all configurations are verified, you can optionally publish the assistant to make it available for end-users, with the new channel. <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/">Learn more</a>.</p>
+<p>To learn more about adding other Channels to your Bot, please see <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/">Channel Enablement</a>.</p>
 
 
   
