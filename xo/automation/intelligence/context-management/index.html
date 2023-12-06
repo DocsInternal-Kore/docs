@@ -3164,10 +3164,11 @@
 <p>For example, let us consider the following conversation:</p>
 <div class="admonition note">
 <p class="admonition-title">Example</p>
-<p>User: What is the cost of an Economy flight ticket from London to Paris on Aug 15, 2022?
-VA: It's €242.
-User: Great! I would like to book it.</p>
+<p><b>User</b>: What is the cost of an Economy flight ticket from London to Paris on Aug 15, 2022?</p>
+<p><b>VA</b>: It's €242.</p>
+<p><b>User</b>: Great! I would like to book it.</p>
 </div>
+
 <p>In the above conversation, the <em>booking</em> is in the context of an economy flight on Aug. 15, 2022. The VA should not be asking the user whether they would like to book a flight or a hotel; what their departure and destination cities are or when they want to fly. </p>
 <p>The context from the previous intent should already be available to the VA, so it can handle the intent according to the existing contextual data. </p>
 <p>The XO Platform allows you to capture and reuse contextual data for a large variety of scenarios, so you can create more complex use cases and redefine the enterprise customer experience. The following are examples of a few such scenarios:</p>
@@ -3182,15 +3183,14 @@ For example, The <em>City Name</em> entity in <em>Check Weather</em> intent can 
 </ul>
 <p>This document talks about the concepts behind the implementation of context management in the Kore.ai XO Platform. For a detailed step-by-step example, <a href="https://developer.kore.ai/docs/bots/how-tos/context-switching/">refer here</a>.</p>
 <div class="admonition note">
-<p class="admonition-title">Use Case Example</p>
-<p>User: When is my flight to Singapore?
-VA: Your flight from New York to Singapore is confirmed for Jun 20<sup>th</sup>.
-User: Do I need a Visa?</p>
-</div>
-<p>VA: Yes, you need a visa to visit Singapore for business or tourism
-   User: I would like to apply for one
-   VA: Sure I can help with a Visa to Singapore. Let me know the duration of the stay.
-`
+<p class="admonition-title">Example</p>
+<p><b>User</b>: When is my flight to Singapore?</p>
+<p><b>VA</b>: Your flight from New York to Singapore is confirmed for Jun 20th.</p>
+<p><b>User</b>: Do I need a Visa?</p>
+<p><b>VA</b>: Yes, you need a visa to visit Singapore for business or tourism?</p>
+<p><b>User</b>: I would like to apply for one.</p>
+<p><b>VA</b>: Sure I can help with a Visa to Singapore. Let me know the duration of the stay.</p></div>
+<p>`
 To achieve the above conversation, the context object can be used as follows:</p>
 <ul>
 <li><em>Flight Booking Enquiry</em> emits the destination city entity value.</li>
@@ -3221,13 +3221,11 @@ To achieve the above conversation, the context object can be used as follows:</p
 <p>The Platform supports emitting details of a dialog task when executed by the user:</p>
 <ul>
 <li>The intent name is emitted as a contextual tag for all dialog tasks when the task execution is initiated.</li>
-<li>
-<p>You can add any additional tags from the <strong>NLP Properties</strong> tab of the dialog task (you may have to scroll down).
-<a class="glightbox" href="../images/set-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-dialog-task.png" alt="set dialog tasks" title="set dialog tasks" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>You can emit output context tags from any place where JavaScript is written (script node, advanced prompts, <em>run a script</em> option, etc.) using the <code>contextTags.add(string value).</code></p>
-</li>
+<li>You can add any additional tags from the <strong>NLP Properties</strong> tab of the dialog task (you may have to scroll down).</li>
+</ul>
+<p><a class="glightbox" href="../images/set-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-dialog-task.png" alt="set dialog tasks" title="set dialog tasks" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ul>
+<li>You can emit output context tags from any place where JavaScript is written (script node, advanced prompts, <em>run a script</em> option, etc.) using the <code>contextTags.add(string value).</code></li>
 </ul>
 <h4 id="alert-tasks">Alert Tasks<a class="headerlink" href="#alert-tasks" title="Permanent link">&para;</a></h4>
 <p>The Platform supports emitting details of the <strong>alert</strong> tasks when executed by the user:</p>
