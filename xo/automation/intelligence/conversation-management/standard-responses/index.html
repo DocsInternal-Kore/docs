@@ -3132,7 +3132,7 @@
 <p><strong>Add a New Standard Response</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If the standard responses are updated at the conditions wherein an ambiguity is presented to the user, the bot response will not display the ambiguous choices to the user and you need to use the function <b>getChoices</b> to present the ambiguity list (refer to point 6 below).</p>
+<p>If the standard responses are updated at the conditions wherein an ambiguity is presented to the user, the bot response will not display the ambiguous choices to the user and you need to use the function <b>getChoices</b> to present the ambiguity list (refer to point 7 below).</p>
 </div>
 
 <ol>
@@ -3148,7 +3148,9 @@
 <li>
 <p>In the bot <strong>Response</strong> editor, you can override the default Bot Response for this channel using basic editor controls on the <strong>Simple Mode</strong> tab, or write custom JavaScript for the response on the <strong>Advanced Mode</strong> tab as follows:</p>
 </li>
-<li><strong>Simple Mode</strong> tab – Enter the text for the default standard response. For example, <em>There</em> you are, I was <sub>hoping</sub> you would return soon! and then optionally, format the text using the formatting buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting a line. For more information, refer to <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/prompt-editor/">Using the Prompt Editor</a>.</li>
+<li>
+<p><strong>Simple Mode</strong> tab – Enter the text for the default standard response. For example, <em>There</em> you are, I was <sub>hoping</sub> you would return soon! and then optionally, format the text using the formatting buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting a line. For more information, refer to <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/prompt-editor/">Using the Prompt Editor</a>.</p>
+</li>
 <li><strong>Advanced Mode tab</strong> – Enter JavaScript to override the channel message as described in the following code examples.</li>
 </ol>
 <div class="admonition note">
@@ -3223,33 +3225,33 @@
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    message.text = text;
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    print(JSON.stringify(message));
 </span></code></pre></div>
-<ol>
-<li>Using the <strong>getChoices()</strong> function, you can also customize the <strong>response display format</strong> using the <a href="https://developer.kore.ai/docs/bots/sdks/message-templates/">message formatting templates</a>. When the getChoices() function is called and there is an ambuguity, the platform returns the ambiguous choices information as an array which can be used to present the options to the end users. </li>
-</ol>
-<p>For example, to display the standard response for <em>Did you mean in</em> a button format, you can use the following code:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>var info =getChoices() ;
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>var message = {
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&quot;type&quot;: &quot;template&quot;,
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>&quot;payload&quot;: {
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>  &quot;template_type&quot;: &quot;button&quot;,
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  &quot;text&quot;: &quot;Did you mean&quot;,
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  &quot;subText&quot;: &quot;You can now customize response for did you mean&quot;,
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  &quot;buttons&quot;: []
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a> }
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>};
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>for (i = 0; i &lt; info.length; i++) {
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>var button = {
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>  &quot;type&quot;: &quot;postback&quot;,
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  &quot;title&quot;: info[i],
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>  &quot;payload&quot;: &quot;payload1&quot;
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>};
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>message.payload.buttons.push(button);
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>}
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>print(JSON.stringify(message)); 
-</span></code></pre></div>
-<ol>
-<li>Click <strong>Done</strong> to save and close the <strong>Edit Response</strong> dialog and apply the new standard response.</li>
-</ol>
+<ol start="7"><li>Using the <code>getChoices()</code> function, you can also customize the <b>response display format</b> using the <a href="https://developer.kore.ai/docs/bots/sdks/message-templates/">message formatting templates</a>. When the <code>getChoices()</code> function is called and there is an ambuguity, the platform returns the ambiguous choices information as an array which can be used to present the options to the end users.
+
+For example, to display the standard response for _Did you mean in_ a button format, you can use the following code:
+
+<pre>
+var info =getChoices() ;
+var message = {
+"type": "template",
+"payload": {
+  "template_type": "button",
+  "text": "Did you mean",
+  "subText": "You can now customize response for did you mean",
+  "buttons": []
+ }
+};
+for (i = 0; i < info.length; i++) {
+var button = {
+  "type": "postback",
+  "title": info[i],
+  "payload": "payload1"
+};
+message.payload.buttons.push(button);
+}
+print(JSON.stringify(message)); 
+</pre></li>
+<li>Click <b>Done</b> to save and close the <b>Edit Response</b> dialog and apply the new standard response.</li></ol>
+
 <h2 id="scenarios">Scenarios<a class="headerlink" href="#scenarios" title="Permanent link">&para;</a></h2>
 <table border="1.5">
   <tr bgcolor="#ECECEC">
