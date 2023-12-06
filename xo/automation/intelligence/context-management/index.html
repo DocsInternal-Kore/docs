@@ -3019,13 +3019,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#use-case-example" class="md-nav__link">
-    Use Case Example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#implementation" class="md-nav__link">
     Implementation
   </a>
@@ -3169,10 +3162,12 @@
 <h1 id="context-management">Context Management<a class="headerlink" href="#context-management" title="Permanent link">&para;</a></h1>
 <p>Effective context management is important because it allows Virtual Assistants to interact with users in a way that is easier, quicker, more helpful, and less robotic and scripted. Contextual data helps users complete tasks faster and allows you to create more natural, human-like back and forth conversations.</p>
 <p>For example, let us consider the following conversation:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>User: What is the cost of an Economy flight ticket from London to Paris on Aug 15, 2022?
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>VA: It&#39;s €242.
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>User: Great! I would like to book it.
-</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Example</p>
+<p>User: What is the cost of an Economy flight ticket from London to Paris on Aug 15, 2022?
+VA: It's €242.
+User: Great! I would like to book it.</p>
+</div>
 <p>In the above conversation, the <em>booking</em> is in the context of an economy flight on Aug. 15, 2022. The VA should not be asking the user whether they would like to book a flight or a hotel; what their departure and destination cities are or when they want to fly. </p>
 <p>The context from the previous intent should already be available to the VA, so it can handle the intent according to the existing contextual data. </p>
 <p>The XO Platform allows you to capture and reuse contextual data for a large variety of scenarios, so you can create more complex use cases and redefine the enterprise customer experience. The following are examples of a few such scenarios:</p>
@@ -3186,14 +3181,16 @@ For example, User utterance <em>what are the extra charges?</em> should be respo
 For example, The <em>City Name</em> entity in <em>Check Weather</em> intent can be pre-populated if the user has executed <em>Check Flight Status</em> intent and has provided value for the <em>Destination City</em> entity.</li>
 </ul>
 <p>This document talks about the concepts behind the implementation of context management in the Kore.ai XO Platform. For a detailed step-by-step example, <a href="https://developer.kore.ai/docs/bots/how-tos/context-switching/">refer here</a>.</p>
-<h2 id="use-case-example">Use Case Example<a class="headerlink" href="#use-case-example" title="Permanent link">&para;</a></h2>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>User: When is my flight to Singapore?
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>VA: Your flight from New York to Singapore is confirmed for Jun 20th.
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>User: Do I need a Visa?
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>VA: Yes, you need a visa to visit Singapore for business or tourism
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>User: I would like to apply for one
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>VA: Sure I can help with a Visa to Singapore. Let me know the duration of the stay.
-</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Use Case Example</p>
+<p>User: When is my flight to Singapore?
+VA: Your flight from New York to Singapore is confirmed for Jun 20<sup>th</sup>.
+User: Do I need a Visa?</p>
+</div>
+<p>VA: Yes, you need a visa to visit Singapore for business or tourism
+   User: I would like to apply for one
+   VA: Sure I can help with a Visa to Singapore. Let me know the duration of the stay.
+`
 To achieve the above conversation, the context object can be used as follows:</p>
 <ul>
 <li><em>Flight Booking Enquiry</em> emits the destination city entity value.</li>
@@ -3266,7 +3263,7 @@ To achieve the above conversation, the context object can be used as follows:</p
 <p>Intent pre-conditions are used to define the intent detection scope for intents and FAQs. These are a set of conditions that must be fulfilled for the intent/FAQ to be detected and executed.</p>
 <h4 id="dialog-tasks_1">Dialog Tasks<a class="headerlink" href="#dialog-tasks_1" title="Permanent link">&para;</a></h4>
 <p>Intent pre-conditions for dialog intents are set to define when a dialog is detected i.e. making a dialog available for detection only when specific tags are available in the context.</p>
-<ol>
+<ul>
 <li>
 <p>You can add one or more intent pre-conditions for making a dialog intent available.
 <a class="glightbox" href="../images/dialog-tasks-preconditions.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-tasks-preconditions.png" alt="dialog tasks precondition" title="dialog tasks precondition" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -3275,17 +3272,17 @@ To achieve the above conversation, the context object can be used as follows:</p
 <p>Dialog intents with pre-conditions are detected only if the defined pre-conditions are met.</p>
 </li>
 <li>The intent with a precondition set is treated as a sub-intent and will be part of the <a href="https://developer.kore.ai/docs/bots/bot-intelligence/sub-intents-and-follow-up-intents/#Linked_Task_Exceptions">Linked Task Exception</a> behavior from the Dialog level Hold and Resume settings.</li>
-</ol>
+</ul>
 <h4 id="alert-tasks_1">Alert Tasks<a class="headerlink" href="#alert-tasks_1" title="Permanent link">&para;</a></h4>
 <p>Intent pre-conditions for <strong>alert</strong> tasks are set to define when a task is detected i.e. making a task available for detection only when specific tags are available in the context.</p>
-<ol>
+<ul>
 <li>You can add one or more intent pre-conditions for making a task intent available.</li>
 <li>Task intents with pre-conditions must be detected only if the defined pre-conditions are met.
 <a class="glightbox" href="../images/input-preconditions.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/input-preconditions.png" alt="input preconditions" title="input preconditions" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ol>
+</ul>
 <h4 id="knowledge-graph_1">Knowledge Graph<a class="headerlink" href="#knowledge-graph_1" title="Permanent link">&para;</a></h4>
 <p>Intent pre-conditions for Knowledge Graph can be associated with terms.</p>
-<ol>
+<ul>
 <li>
 <p>You can define intent pre-conditions for any of the terms present in the Knowledge Graph.
 <a class="glightbox" href="../images/define-intent-preconditions.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/define-intent-preconditions.png" alt="define intent preconditions" title="define intent preconditions" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -3293,7 +3290,7 @@ To achieve the above conversation, the context object can be used as follows:</p
 <li>
 <p>Paths that contain terms with pre-conditions are qualified only if the pre-conditions are met.</p>
 </li>
-</ol>
+</ul>
 <h3 id="contextual-intent-detection">Contextual Intent Detection<a class="headerlink" href="#contextual-intent-detection" title="Permanent link">&para;</a></h3>
 <p>Contextual intent detection helps in detecting relevant intents using the output context set by previously executed intents.</p>
 <h4 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h4>
