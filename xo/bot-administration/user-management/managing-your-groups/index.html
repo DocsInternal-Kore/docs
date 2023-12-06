@@ -17,7 +17,7 @@
     
     
       
-        <title>Managing Your Users - Kore ai Docs</title>
+        <title>Managing Your Groups - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#managing-your-users" class="md-skip">
+        <a href="#managing-your-groups" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Managing Your Users
+              Managing Your Groups
             
           </span>
         </div>
@@ -3012,82 +3012,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#users" class="md-nav__link">
-    Users
-  </a>
-  
-    <nav class="md-nav" aria-label="Users">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#profile" class="md-nav__link">
-    Profile
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sessionsdevices" class="md-nav__link">
-    Sessions/Devices
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manage-bots" class="md-nav__link">
-    Manage Bots
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-options" class="md-nav__link">
-    Other Options
-  </a>
-  
-    <nav class="md-nav" aria-label="Other Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reset-a-user-password" class="md-nav__link">
-    Reset a User Password
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-user" class="md-nav__link">
-    Delete User
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-settings" class="md-nav__link">
-    User Settings
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3105,16 +3029,11 @@
 
 
 
-<h1 id="managing-your-users">Managing Your Users<a class="headerlink" href="#managing-your-users" title="Permanent link">&para;</a></h1>
-<p><strong>User Management</strong> involves managing users and user groups</p>
-<ul>
-<li>From <strong><a href="#users">Users section</a></strong>, you can view and manage your Kore.ai user roles, status, and monitor user message activity.</li>
-<li>From <strong><a href="#user-settings">User Settings section</a></strong>, you can define the user profile fields displayed to the user in their profile, for example, address information, and if the user can edit those fields.</li>
-</ul>
-<h2 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h2>
-<p>You can manage users in your enterprise network from the Bot Administration page from <strong>User Management -&gt; Users</strong> section.</p>
-<p><a class="glightbox" href="../images/bac-users.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bac-users.png" alt="User Management Module" title="User Management Module" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p>The following list describes the columns displayed for each Kore.ai user.</p>
+<h1 id="managing-your-groups">Managing Your Groups<a class="headerlink" href="#managing-your-groups" title="Permanent link">&para;</a></h1>
+<p>On the <strong>Groups</strong> page in the <strong>User Management</strong> module, you can create and manage logically related groups of users, as well as import groups, such as your company Active Directory groups. If the enterprise has varied and distinct Bot requirements for various departments or lines of business, creating groups, adding developers and assigning bots to the groups would be the recommended option. You can create a custom group of users, for example, by geographical location, department title, or common interest. Groups are automatically created when you import organizational units using Active Directory. The following illustration is an example of the <strong>Groups</strong> page in the <strong>User Management</strong> module. </p>
+<p><a class="glightbox" href="../images/bac-groups.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bac-groups.png" alt="User Management - Groups" title="User Management - Groups" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h1 id="details">Details<a class="headerlink" href="#details" title="Permanent link">&para;</a></h1>
+<p>To sort the list of column values, click the <strong>Arrow Up</strong> <a class="glightbox" href="../images/up-arrow.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/up-arrow.png"></a> icon or <strong>Arrow Down</strong> <a class="glightbox" href="../images/down-arrow.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/down-arrow.png"></a> icon to the right of a column name. The following list describes the columns displayed in the Groups listing.</p>
 <table border="1">
   <tr>
    <td><strong>COLUMN</strong>
@@ -3123,171 +3042,107 @@
    </td>
   </tr>
   <tr>
-   <td>Name
+   <td>Group Name
    </td>
-   <td>Displays the Kore.ai username, admin indicator, and selection box.
-   </td>
-  </tr>
-  <tr>
-   <td>Email Id
-   </td>
-   <td>Registered email id of the user.
+   <td>Displays the group name. Click a group name to edit the the selected group – name, description & members.
    </td>
   </tr>
   <tr>
-   <td>Bot Builder Access
+   <td>Description
    </td>
-   <td>The type of access user has to Bot Builder. Can be
+   <td>Displays the description of the group. This is an optional field.
+   </td>
+  </tr>
+  <tr>
+   <td>Source
+   </td>
+   <td>The source used to create the group. One of:
 <ul>
 
-<li><strong>none</strong> i.e no access to Bot Builder;
+<li><strong>Local </strong>– The group was created manually from the <strong>User Management</strong> module.
 
-<li>only <strong>Bot Builder Access</strong>, or
+<li><strong>AD</strong> – The group was imported or synchronized using Active Directory.
 
-<li>Bot Builder access along with permission for a <strong>New Bot Creation</strong>
+<li><strong>System</strong> – The group was created as a default group by Kore.ai, for example, <em>everyone</em>.
 </li>
 </ul>
    </td>
   </tr>
   <tr>
-   <td>Status
+   <td>Membership
    </td>
-   <td>Displays the Kore.ai user status. One of:
-<ul>
-
-<li><strong>Active</strong> – The user is active and can interact with other Kore.ai users.
-
-<li><strong>Not Active</strong> – Users invited by the Admin, but who are yet to join or accept the invitation.
-
-<li><strong>Suspended</strong> – The user is suspended by an administrator. The user cannot log on to Kore.ai, however, messages can still be sent to the suspended user. The status of a <strong>Suspended </strong>user can be <strong>Activated</strong>.
-
-<li><strong>Locked</strong> – The user exceeded the maximum number of logon attempts. The status of a locked user can be changed to <strong>Unlock</strong>, <strong>Suspend</strong>, or <strong>Deactivate</strong>.
-</li>
-</ul>
+   <td>Displays the number of group members as users, and the number of groups as child members of the parent group. Click the link to edit the list of Kore.ai users and child groups for the selected group.
    </td>
   </tr>
 </table>
 
-<p>Clicking on a specific User row from the Users page opens the <strong>User Details</strong> page from where you can modify the</p>
-<ul>
-<li><strong><a href="#profile">User Profile</a></strong>,</li>
-<li><strong><a href="#sessionsdevices">Sessions/Devices</a></strong>, and</li>
-<li><strong><a href="#manage-bots">Manage Bots access</a></strong>.</li>
-</ul>
-<h3 id="profile">Profile<a class="headerlink" href="#profile" title="Permanent link">&para;</a></h3>
-<p>You can modify the user profile information of a specific user in your account, for example, to update their address or title.</p>
-<p><a class="glightbox" href="../images/bac-users-profile.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bac-users-profile.png" alt="User Profile" title="User Profile" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p>The following fields are accessible from this page:</p>
-<ul>
-<li>
-<p><strong>Status</strong> can be:</p>
-<ul>
-<li><em>Active</em>: hovering over the information icon displays the last logged in date and time.</li>
-<li><em>Not Active</em>: hovering over the information icon displays when the invite to join the account was sent.</li>
-<li><em>Suspended</em>: hovering over the information icon displays the last logged in date and time. You can Activate User either using the <strong>more</strong> icon on this dialog or using the <strong>ACTIVATE</strong> button displayed when you hover over the user row in the Users page.</li>
-</ul>
-</li>
-<li>
-<p><strong>Groups</strong> to which the user is assigned. Using the <strong>Edit</strong> link you can select or deselect the groups for the given User. <a href="../managing-your-groups" target="_blank">Refer here for more on Managing Groups</a></p>
-</li>
-<li><strong>Admin Role</strong> status, can be added or removed using the <strong>Edit</strong> link.</li>
-<li><strong>Bot Builder Access</strong> status can be modified using the <strong>Edit</strong> link. <a href="../role-management" target="_blank">Refer here for more on Role Management</a>.</li>
-<li>User Details like First Name, Last Name, email id, etc. can be viewed and modified.<br />
-Note that the email id is read-only field and cannot be modified.</li>
-</ul>
-<h3 id="sessionsdevices">Sessions/Devices<a class="headerlink" href="#sessionsdevices" title="Permanent link">&para;</a></h3>
-<p>This tab displays the User activity – the session ID, device type the user used, and their last activity timestamp on that session.</p>
-<p>As an admin, you may need to end one or more user sessions. You can use the <strong>Kill Session</strong> button to to end a mobile or desktop session for the user.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning<p>No confirmation message is displayed and the session is immediately and abruptly ended for the user.</p>
-</p>
-</div>
-<p><a class="glightbox" href="../images/bac-users-sessions.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bac-users-sessions.png" alt="Sessions - User Activity" title="Sessions - User Activity" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<h3 id="manage-bots">Manage Bots<a class="headerlink" href="#manage-bots" title="Permanent link">&para;</a></h3>
-<p>This tab displays the Bots to which the User has access and their role – Owner, Developer or Tester.</p>
-<p>As an admin, you may Edit or Delete the role of the User for a given Bot. Note that you cannot delete or modify the role of a Bot Owner, it is assigned at the time of Bot creation.</p>
-<p>You can also select a Bot and assign a Bot role to the user. <a href="../role-management/#bot-roles" target="_blank">See here for more on Bot roles</a>.</p>
-<p><a class="glightbox" href="../images/bac-manage-bots.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bac-manage-bots.png" alt="Manage Bots" title="Manage Bots" style="border: 1px solid gray;"/></a></p>
-<h3 id="other-options">Other Options<a class="headerlink" href="#other-options" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../images/bac-users-more.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bac-users-more.png" alt="Other Options" title="Other Options" style="border: 1px solid gray;"/></a></p>
-<h4 id="reset-a-user-password">Reset a User Password<a class="headerlink" href="#reset-a-user-password" title="Permanent link">&para;</a></h4>
-<p>As a Bots Admin, you can send a password reset email to any user, including yourself, from the Bots Admin Console if Single Sign-On (SSO) is not enabled. You can reset the password using the <strong>more</strong> icon from the User Profile page.</p>
-<p>The <em>password reset email</em> sent message is displayed and an email is sent to the user with instructions about how to reset the password.</p>
-<p><strong>Note</strong>: When SSO is enabled, password policies are not in effect for Bots Admins or Kore.ai users, the SSO service provider handles the password policies.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip<p>If SSO is enabled, Bots Admins can still log on to the Bots Admin Console directly using their password credentials and bypass SSO. For more information, see <a href="../../security-control/using-single-sign-on/#logging-on-using-your-admin-password-instead-of-sso" target="_blank">Logging On Using Your Admin Password Instead of SSO</a>.</p>
-</p>
-</div>
-<h4 id="delete-user">Delete User<a class="headerlink" href="#delete-user" title="Permanent link">&para;</a></h4>
-<p>Using the <strong>more</strong> icon from the User Settings page you can <strong>Delete User.</strong></p>
-<p>You can also <strong>Delete User</strong> from the Users page by using the <strong>delete icon</strong> on the hover of the User row or select users and using the <strong>Delete Selected</strong> link.</p>
+<h2 id="using-the-search-field">Using the Search Field<a class="headerlink" href="#using-the-search-field" title="Permanent link">&para;</a></h2>
+<p>The list of entries in an admin console table can be very large depending on the size of your company. To find one or more specific users or groups, in the <strong>Search</strong> field, enter at least three characters to begin find-as-you-type.</p>
 <div class="admonition note">
-<p class="admonition-title">Note<p>You cannot delete the Users if they are owners of the virtual assistant. You need to change the respective bot ownership to someone else in order to delete the user.</p>
+<p class="admonition-title">Note<p>The number of search terms in a search query is unlimited, however, no more than the first 20 characters of each search term is used to return search results.</p>
 </p>
 </div>
-<h2 id="user-settings">User Settings<a class="headerlink" href="#user-settings" title="Permanent link">&para;</a></h2>
-<p>On the <strong>User Settings</strong> section in the <strong>User Management</strong> module, you can manage the fields to display to Kore.ai users on their <strong>User Profile</strong> page, for example, <strong>Company</strong>, <strong>Department</strong>, and so forth.</p>
-<p><a class="glightbox" href="../images/bac-user-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bac-user-settings.png" alt="User Settings" title="User Settings" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<table border="1">
-  <tr>
-   <td><strong>CONTROLS</strong>
-   </td>
-   <td><strong>DESCRIPTION</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Default Fields Section
-   </td>
-   <td>The following user profile fields are displayed by default and cannot be disabled from the User Profile page for the user.
-<ul>
-
-<li><strong>First Name</strong>
-
-<li><strong>Last Name</strong>
-
-<li><strong>Profile Picture</strong>
-
-<p>
-You can also select or clear <strong>Allow Edits</strong> to enable/disable the user to overwrite the data. Modifications to the user profile take effect when the user logs in next.
+<p>To view all entries, clear the search field, and then press the <strong>Enter</strong> key.</p>
+<h1 id="creation">Creation<a class="headerlink" href="#creation" title="Permanent link">&para;</a></h1>
+<p>You may want to create one or more groups of users in your account for users with, for example, a related interest, department, or location. Groups created by the admin are not visible to the user and are for administrative purposes only. This topic describes how to define a new group and add users, or existing groups of users to that group.</p>
+<ol>
+<li>In the <strong>User Management</strong> module, select the <strong>Groups</strong> section.</li>
+<li>Click the <a class="glightbox" href="../images/add-new-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-new-button.png"></a> button to display the <strong>Create New User Group</strong> dialog to add a new Kore.ai group to your account.</li>
+<li>The <strong>Create New User Group</strong> dialog is displayed.</li>
+<li>
+<p>In the <strong>Common</strong> tab,</p>
+<ol>
+<li>in the <strong>Group Name</strong> field, enter the name for the group.</li>
+<li>Optionally, in the <strong>Description</strong> field, enter a description for the group.<br />
+<a class="glightbox" href="../images/create-new-group.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/create-new-group.png" alt="User Management - Groups" title="User Management - Groups" style="border: 1px solid gray;"/></a> </li>
+</ol>
 </li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td>Controlled Fields Sections
-   </td>
-   <td>The following user profile fields are disabled by default and can be enabled by the Enterprise Admin or admin user:
-<ul>
-
-<li><strong>Company</strong>
-
-<li><strong>Department</strong>
-
-<li><strong>Title</strong>
-
-<li><strong>Mobile Number</strong>
-
-<li><strong>Work Number</strong>
-
-<li><strong>Address (Number & Street)</strong>
-
-<li><strong>Address (Street/Suite #)</strong>
-
-<li><strong>City</strong>
-
-<li><strong>State</strong>
-
-<li><strong>Zip</strong>
-
-<li><strong>Country</strong>
-
-<p>
-You can also select or clear <strong>Allow Edits</strong> to enable/disable the user to overwrite the data. Modifications to the user profile take effect when the user logs in next.
+<li>
+<p>Navigate to the <strong>Members</strong> tab, and select the user(s) and/or group(s) to be added to this group. You can locate the needed users/groups from the the <strong>Available Users/Groups</strong> section by</p>
+<ol>
+<li>using <strong>Sort</strong> and then selecting a <strong>Filter</strong> to display users and groups that can be added to the new group.</li>
+<li>entering a name in the <strong>Search</strong> field, or</li>
+<li>scrolling to select one or more Kore.ai users and Kore.ai groups,</li>
+<li>Then click <a class="glightbox" href="../images/single-arrow-right.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/single-arrow-right.png"></a>, to move the selected list to the <strong>Current Members</strong> section.</li>
+<li>To add all available users and groups, click <a class="glightbox" href="../images/double-arrow-right.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/double-arrow-right.png"></a>.<br />
+<a class="glightbox" href="../images/bots-admin-user-mgmt-groups-create-new-group-add-users.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bots-admin-user-mgmt-groups-create-new-group-add-users.png" alt="Add users to group" title="Add users to group" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
 </li>
-</ul>
-   </td>
-  </tr>
-</table>
+<li>
+<p>Click <strong>Save</strong>. The group is created and the <strong>Groups</strong> page is displayed.</p>
+</li>
+<li>The <em>Group Updated</em> message is displayed at the top of the page.</li>
+</ol>
+<h1 id="modification">Modification<a class="headerlink" href="#modification" title="Permanent link">&para;</a></h1>
+<p>You may need to modify the members of a group. This topic describes how to modify the common group properties and the membership of an existing group.</p>
+<ol>
+<li>In the <strong>User Management</strong> module, on the <strong>Groups</strong> page, in the <strong>Group Name</strong> column, click the name of the group to modify.</li>
+<li>The <strong>Editing User Group</strong> – <strong><em>&lt; Group Name &gt;</em></strong> dialog is displayed.</li>
+<li>On the <strong>Common</strong> tab, you can modify the <strong>Group Name</strong> and <strong>Description</strong> field.</li>
+<li>On the <strong>Members</strong> tab, in the <strong>Available Users/Groups</strong> and <strong>Current Members</strong> sections, optionally <strong>Sort</strong>, and then select a <strong>Filter</strong> to display users and groups to add or remove.</li>
+<li>To modify the members of the group, you can:<ol>
+<li>Enter a name in the <strong>Search</strong> field, or scroll to select one or more users and groups, and then click <a class="glightbox" href="../images/single-arrow-right.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/single-arrow-right.png"></a> to add new group members, or click <a class="glightbox" href="../images/single-arrow-left.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/single-arrow-left.png"></a> to remove the selected group members.</li>
+<li>Click <a class="glightbox" href="../images/double-arrow-right.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/double-arrow-right.png"></a> to add all available group members, or click <a class="glightbox" href="../images/double-arrow-left.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/double-arrow-left.png"></a> to remove all current group members.</li>
+</ol>
+</li>
+<li>Click <strong>Save</strong>. The group is modified and the <strong>Groups</strong> page is displayed.<br />
+<a class="glightbox" href="../images/bots-admin-user-mgmt-groups-edit.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bots-admin-user-mgmt-groups-edit.png" alt="Modify group" title="Modify group" style="border: 1px solid gray;zoom:50%;"/></a></li>
+</ol>
+<h1 id="deletion">Deletion<a class="headerlink" href="#deletion" title="Permanent link">&para;</a></h1>
+<p>You may no longer need a group of users in your account. You must remove all users from a group before you can delete a group. Complete the steps in the following procedure to delete a group. Instead of deleting a group, you can also modify the common settings as well as the membership of an existing group. For more information, see <a href="#modify-an-existing-user-group">Modify an Existing User Group</a>.</p>
+<ol>
+<li>In the <strong>User Management</strong> module, on the <strong>Groups</strong> page, in the <strong>Group Name</strong> column, select the name of one or more groups to delete.</li>
+<li>On the <strong>Action</strong> bar, click <a class="glightbox" href="../images/delete-button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/delete-button.png"></a>.</li>
+<li>
+<p>In the <strong>Delete Group(s)</strong> confirmation dialog, click <strong>Delete</strong>.  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This operation is permanent and cannot be undone.</p>
+</div>
+</li>
+</ol>
+<p>The group is deleted.</p>
+<p><a class="glightbox" href="../images/bots-admin-user-mgmt-groups-delete.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bots-admin-user-mgmt-groups-delete.png" alt="Delete group" title="Delete group" style="border: 1px solid gray;zoom:50%;"/></a></p>
 
 
   
