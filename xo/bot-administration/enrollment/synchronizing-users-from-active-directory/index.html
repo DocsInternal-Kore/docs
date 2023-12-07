@@ -17,7 +17,7 @@
     
     
       
-        <title>Importing Users and User Data - Kore ai Docs</title>
+        <title>Synchronizing Users from Active Directory - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#importing-users-and-user-data" class="md-skip">
+        <a href="#synchronizing-users-from-active-directory" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Importing Users and User Data
+              Synchronizing Users from Active Directory
             
           </span>
         </div>
@@ -3019,23 +3019,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#file-requirements" class="md-nav__link">
-    File Requirements
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ad-sync-configuration" class="md-nav__link">
+    AD Sync Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-sync" class="md-nav__link">
+    Manual Sync
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-and-upload-an-import-file" class="md-nav__link">
-    Create and Upload an Import File
+  <a href="#view-report" class="md-nav__link">
+    View Report
+  </a>
+  
+    <nav class="md-nav" aria-label="View Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-the-last-run-report" class="md-nav__link">
+    Viewing the Last Run Report
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#view-results" class="md-nav__link">
-    View Results
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3043,6 +3069,19 @@
   <a href="#view-history" class="md-nav__link">
     View History
   </a>
+  
+    <nav class="md-nav" aria-label="View History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-a-report" class="md-nav__link">
+    Viewing a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3065,97 +3104,177 @@
 
 
 
-<h1 id="importing-users-and-user-data">Importing Users and User Data<a class="headerlink" href="#importing-users-and-user-data" title="Permanent link">&para;</a></h1>
-<p>If you need to invite multiple Kore.ai users and you have information about users in addition to the email address, such as the <strong>First Name</strong>, <strong>Last Name</strong>, <strong>Department</strong>, <strong>Phone</strong>, and <strong>Job Title</strong>, you can use the <strong>Import</strong> page to add new users and update existing users based on a list that contains additional user information. The following illustration is an example of the <strong>Import</strong> page in the <strong>Enrollment</strong> module.</p>
-<p><a class="glightbox" href="../images/importing-users-and-user-data-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img1.png" alt="Enrollment - Import" title="Enrollment - Import" style="border: 1px solid gray;zoom:70%;"/></a></p>
-<p>The import file can be a basic text file and saved as a .txt or .csv file format. After you create an import file, you can upload the file to add or update the Kore.ai users in your account.</p>
-<h3 id="file-requirements">File Requirements<a class="headerlink" href="#file-requirements" title="Permanent link">&para;</a></h3>
-<p>When you create an import file, you must adhere to the following guidelines:</p>
+<h1 id="synchronizing-users-from-active-directory">Synchronizing Users from Active Directory<a class="headerlink" href="#synchronizing-users-from-active-directory" title="Permanent link">&para;</a></h1>
+<p>As a Bots Admin or admin user, you can configure Kore.ai to synchronize with your organizational LDAP Active Directory to enroll users from your company into Kore.ai. On the <strong>Enrollment &gt; Directory sync</strong> page, you can do the following:</p>
 <ul>
-<li>The first row identifies the name of the field under which the data is stored within Kore.ai, kind of header row.</li>
+<li>Use a cloud-based agent to connect to your Active Directory (AD) server</li>
+<li>Manually start synchronization with your company Active Directory</li>
+<li>Create exclusion rules used to prevent unwanted updates to existing users or groups</li>
+<li>Define distribution lists to import from Active Directory</li>
+<li>Define organizational units to import from Active Directory</li>
+<li>Set up an automated schedule for synchronization.</li>
+</ul>
+<p>Kore.ai can synchronize with your LDAP Active Directory to match the member information from your organization to include, for example, user profile data such as name, department, title, telephone number, location, and user status in the organization. \
+If a Kore.ai user leaves your company and is deactivated in Active Directory, Kore.ai can automatically deactivate the Kore.ai account during the next scheduled Active Directory synchronization. Your company’s Active Directory is never modified during synchronization.</p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>Post v8.1, the support for Kore.ai Directory Agent for AD Sync has been discontinued. You can use the Cloud Connector option discussed in detail in this document or use the public APIs for synchronizing your users, <a href="../../../apis/api-list/#admin-apis" target="_blank">click here for details</a>.</p>
+</p>
+</div>
+<p><strong>Prerequisites</strong></p>
+<p>To configure Active Directory synchronization, you must:</p>
+<ol>
+<li>Have administrative access for reading and executing actions on your LDAP server.</li>
+<li>Familiarity with LDAP queries and LDAP server administration.</li>
+<li>Have a Microsoft Active Directory LDAP Server.</li>
+</ol>
+<p>Kore.ai offers a wizard-based approach that will take you through the process to set up access to an Active Directory and configure the synchronization process customized for your company. You can define synchronization for members, and if needed, distribution lists and organizational units.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<p>To configure Active Directory using the cloud-based connector, you must log on to the Bots Admin Console, and complete the following steps to access the configuration settings for your company Active Directory sync.</p>
+<ol>
+<li>In the <strong>Enrollment</strong> module, on the <strong>Directory Sync</strong> page, select <strong>Cloud-Based Connector</strong>.</li>
 <li>
-<p>The following Kore.ai account fields are required:</p>
+<p>From the Configure section, click <strong>Configure</strong>.<br />
+<a class="glightbox" href="../images/synchronizing-users-from-active-directory-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synchronizing-users-from-active-directory-img1.png" alt="Cloud based connector - Configure" title="Cloud based connector - Configure" style="border: 1px solid gray;zoom:70%;"/></a></p>
+</li>
+<li>
+<p>The <strong>Configure Synchronization with your Company Directory</strong> dialog is displayed. Follow the steps given here to proceed.</p>
+</li>
+</ol>
+<h3 id="ad-sync-configuration">AD Sync Configuration<a class="headerlink" href="#ad-sync-configuration" title="Permanent link">&para;</a></h3>
+<p>Complete the steps in the following procedure to define the synchronization settings. If you have already defined your synchronization settings, you can modify the settings and initiate a manual sync.</p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>If you are using a bot built on the platform from before v7.3, you will have an option to <strong>Upgrade</strong> or <strong>Configure</strong>. If you proceed to Configure without Upgrade the following options from the configuration steps will not be available;
+    * access to AD sub-Groups or option to create a group within Kore.ai for the OUs in AD;
+    * add custom fields to the user data by mapping it to the right key from the AD server incoming payload;
+    * specify the inclusion rules.</p>
+<div class="language-text highlight"><pre><span></span><code>Also, the older version would be deprecated in the upcoming releases.
+</code></pre></div>
+</p>
+</div>
+<p>In the following procedure, the cloud-based connection settings dialogs are described.</p>
+<ol>
+<li>
+<p>On the <strong>Connection</strong> tab, define the following fields:<br />
+<a class="glightbox" href="../images/synchronizing-users-from-active-directory-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synchronizing-users-from-active-directory-img2.png" alt="Connection tab" title="Connection tab" style="border: 1px solid gray;zoom:70%;"/></a></p>
+</li>
+<li>
+<p><strong>Host Name</strong> – The name of the domain host, for example, MyCompany.com or 10.12.6.151.</p>
+</li>
+<li><strong>Server Port</strong> – The port number for the domain host, for example, 10042.</li>
+<li><strong>Base DN</strong> – The server location for users and groups in a domain, for example, dc=kore,dc=com.</li>
+<li><strong>User ID</strong> – The username for authentication to connect to the domain controller.</li>
+<li><strong>Password</strong> – The password for authentication to connect to the domain controller.</li>
+<li><strong>SSL</strong> – Select to enable SSL for HTTPS.</li>
+<li><strong>Test Connection</strong> – Click to test the authentication and Host configuration settings.</li>
+<li>
+<p>Click <strong>Save and next</strong> to continue.</p>
+</li>
+<li>
+<p>Optionally, on the <strong>Organizational Units</strong> tab, you can define the Org Units that need to be imported from your company directory. Groups and sub-groups from the selected OU will be synchronized into the platform and the hierarchy of groups as present in the AD Server will be maintained in the platform.</p>
+<ol>
+<li>
+<p>You can choose to</p>
 <ul>
-<li><strong>Email ID</strong> – mandatory</li>
-<li><strong>First Name</strong> – mandatory</li>
-<li><strong>Last Name</strong> – mandatory</li>
-<li><strong>Alternate ID</strong>, <strong>Work Phone</strong>, <strong>Title</strong>, <strong>Department</strong> – optional</li>
-<li><strong>User Status</strong> – – mandatory – One of<ul>
-<li><strong>New</strong></li>
-<li><strong>Update</strong></li>
-<li><strong>Delete</strong></li>
-<li><strong>Activate</strong></li>
-</ul>
-</li>
+<li><em>Import all Organization Units</em>,</li>
+<li><em>Not Import any unit</em>, or</li>
+<li><em>Import specific units</em>.</li>
 </ul>
 </li>
 <li>
-<p>Create one row for each Kore.ai user</p>
+<p>Click <strong>Save and next</strong> to continue.</p>
 </li>
-<li>Valid field delimiters are comma, pipe, semicolon, and tab</li>
-</ul>
-<p>When using an import file, the following validation rules are applied:</p>
+</ol>
+</li>
+<li>
+<p>Optionally, on the <strong>Distribution Lists</strong> tab, you can select to <strong>Import Distribution Lists from Active Directory</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Users</strong> tab, you can define the desired User Attributes (profile fields) that need to be imported from your company directory. You can set import criteria, inclusion rules, and exclusion rules to control the information that you want to import from your organization.</p>
+<ol>
+<li>
+<p>On the <strong>User Attributes</strong> child tab you can import the user profile information</p>
 <ul>
-<li>Entries with invalid email formats are ignored.</li>
-<li>Each successful import of an email address generates an invitation email to become a Kore.ai user.</li>
-<li>Existing users in your Kore.ai account are not sent invitation emails.</li>
-<li>Imported users with status set to <strong>Activate</strong> are sent a notification that the Kore.ai account is activated.</li>
+<li>using predefined <strong>Default</strong> mapping of Kore.ai user profile fields to relevant LDAP attributes or</li>
+<li>create your own <strong>custom</strong> mapping with the Customer Attribute name and values.</li>
 </ul>
-<p><strong>Sample File</strong></p>
-<p>For a .txt file:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Email ID, First Name, Last Name, Alternate ID, Work Phone, Title, Department, User Status
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Kore.aiUser1@kore.com,User1FirstName,User1LastName,,800-555-1212,President,Executive,New
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Kore.aiUser2@kore.com,User2FirstName,User2LastName,,800-555-5555,VicePresident,Executive,New
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Kore.aiUser3@kore.com,User3FirstName,User1LastName,,,,,New
-</span></code></pre></div></p>
-<h3 id="create-and-upload-an-import-file">Create and Upload an Import File<a class="headerlink" href="#create-and-upload-an-import-file" title="Permanent link">&para;</a></h3>
-<p>You can create a file to invite users in your organization to become Kore.ai users that you can manage as a Bots Admin. This topic describes how to create a file that contains the email addresses and user information, such as first and last name, phone number, department, and so forth, for the users that you want to invite to become Kore.ai users in your account. If you only have email address information for your users, you should create and <a href="../enrolling-many-users/" target="_blank">import a bulk invite file</a> instead. <strong>To create an import file</strong></p>
-<ol>
-<li>
-<p>In a text editor or spreadsheet, enter the field IDs on the first line, and then enter a complete email address and data on each following line or in a comma-separated list as shown in the following example:  </p>
-<p><strong>For a .txt file:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Email ID, First Name, Last Name, Alternate ID, Work Phone, Title, Department, User Status
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Kore.aiUser1@kore.com,User1FirstName,User1LastName,User1AlternateID,800-555-1212,President,Executive,New
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Kore.aiUser2@kore.com,User2FirstName,User2LastName,User2AlternateID,800-555-5555,VicePresident,Executive,New
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Kore.aiUser3@kore.com,User3FirstName,User1LastName,,,,New
-</span></code></pre></div></p>
 </li>
 <li>
-<p>Save the import file as a .txt or .csv file, for example, Kore.aiImport.txt or Kore.aiImport.csv. After you create an import file, you can upload the file to invite your account users.</p>
+<p>On the <strong>Inclusion Rules,</strong> you can sync select users from your AD Server by defining the sync criteria or filters using the profile parameters. You can write the rules using the LDAP filter syntax, <a href="https://social.technet.microsoft.com/wiki/contents/articles/5392.active-directory-ldap-syntax-filters.aspx" target="_blank">refer here for more</a>.</p>
+</li>
+<li>On the <strong>Exclusion Rules</strong> child tab, you can create rules to limit incoming user records for the user (default and custom) data.<br />
+<a class="glightbox" href="../images/synchronizing-users-from-active-directory-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synchronizing-users-from-active-directory-img3.png" alt="Exclusion rules" title="Exclusion rules" style="border: 1px solid gray;zoom:70%;"/></a></li>
+</ol>
+</li>
+<li>
+<p>Optionally, on the <strong>Kore.ai Exclusions</strong> tab, you can define exclusions for synchronization to prevent Active Directory from replacing specific users (default and custom), distribution lists, or organizational groups.<br />
+<a class="glightbox" href="../images/synchronizing-users-from-active-directory-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synchronizing-users-from-active-directory-img4.png" alt="Define exclusions" title="Define exclusions" style="border: 1px solid gray;zoom:70%;"/></a></p>
+</li>
+<li>
+<p>On the <strong>Schedule</strong> tab, enable and define the synchronization schedule with the Active Directory as shown in the following illustration.<br />
+<a class="glightbox" href="../images/synchronizing-users-from-active-directory-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synchronizing-users-from-active-directory-img5.png" alt="Define synchronization rules" title="Define synchronization rules" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<ol>
+<li><strong>Enable Synchronization</strong> – Click to enable or disable a synchronization schedule.</li>
+<li><strong>Synchronization Frequency</strong> – Select one of:<ul>
+<li><strong>Daily</strong> – Specify the <strong>Start Synchronization</strong> date and time to begin the daily sync.</li>
+<li><strong>Weekly</strong> – Specify the day of the week to synchronize and the <strong>Start Synchronization</strong> date and time to begin the weekly sync.</li>
+<li><strong>Monthly</strong> – Specify the day of the month to synchronize and the <strong>Start Synchronization</strong> date and time to begin the monthly sync.</li>
+<li><strong>Other</strong> – Specify the number of <strong>DAY(S)</strong> or <strong>WEEK(S)</strong> to synchronize and the <strong>Start Synchronization</strong> date and time to begin the sync.</li>
+</ul>
 </li>
 </ol>
-<p>After you have created an import file, you need to upload the import file. This topic describes how you can upload your import file of users of your account. <strong>To upload a user import file</strong></p>
-<ol>
-<li>In the <strong>Enrollment &gt; Import</strong> page, click <strong>Choose File</strong>.</li>
-<li>Navigate to your import file, and then click <strong>Open</strong>. The filename is displayed to the right of the <strong>Choose File</strong> button.</li>
-<li>Click <strong>Import File</strong>. The status of the import is described immediately following the <strong>Import File</strong> button.</li>
-<li>You can click the <em>File Based Bulk User Import History</em> link to review an import status from a prior import.<br />
-<a class="glightbox" href="../images/importing-users-and-user-data-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img2.png" alt="File Based Bulk User Import History" title="File Based Bulk User Import History" style="border: 1px solid gray;zoom:70%;"/></a></li>
-</ol>
-<h3 id="view-results">View Results<a class="headerlink" href="#view-results" title="Permanent link">&para;</a></h3>
-<p>You can review the import operation results on a per-user basis if needed. This topic describes how to view the results of the current import report. <strong>To view the results of the current user import</strong></p>
-<ol>
-<li>
-<p>On the <strong>Enrollment &gt; Import</strong> page, click the <em>here</em> link, as shown below.<br />
-<a class="glightbox" href="../images/importing-users-and-user-data-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img3.png" alt="File Based Bulk User Import History" title="File Based Bulk User Import History" style="border: 1px solid gray;zoom:70%;"/></a></p>
 </li>
 <li>
-<p>The <strong>Report On File Import</strong> dialog opens.<br />
-<a class="glightbox" href="../images/importing-users-and-user-data-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img4.png" alt="Report on File Import" title="Report on File Import" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<p>Click <strong>Save</strong> to save the synchronization settings and close the <strong>Configure Synchronization with your Company Directory</strong> dialog.</p>
 </li>
 </ol>
-<h3 id="view-history">View History<a class="headerlink" href="#view-history" title="Permanent link">&para;</a></h3>
-<p>After you create and import a list of users in your account, you may want to review the results of the import. This topic describes how to view the historical list of file-based user imports. <strong>To view historical import reports</strong></p>
-<ol>
+<p>You may want to view the results of Active Directory sync, <a href="#view-report">see here</a>.</p>
+<p>Notes regarding deleted users:</p>
+<ul>
+<li>Users who are deleted or marked as deleted in the AD Server will be deleted from the Bots Platform as well and will be not available in the list of users during AD sync process</li>
+<li>The user record will be retained in the database for any cross-reference and audit purposes</li>
+<li>Any login attempts by such users will be blocked by the system</li>
+<li>Deletion would be against a specific Account to which the user belongs to i.e. if the user is part of multiple accounts, then the user will be able to access any other accounts in which the user is still an active state</li>
 <li>
-<p>In the <strong>Enrollment</strong> module, on the <strong>Import</strong> page, click <em>File Based Bulk User Import History</em> as shown in the following illustration.<br />
-<a class="glightbox" href="../images/importing-users-and-user-data-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img5.png" alt="Click 'File Based Bulk User Import History'" title="Click 'File Based Bulk User Import History'" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<p>The following user cannot be deleted from the account</p>
+<ul>
+<li>User is Bot Owner for one or more bots</li>
+<li>User is Account Owner</li>
+</ul>
+<p>Such users will not be deleted from the account during the AD Sync process. The AD Sync logs will contain the list of such users who could not be deleted along with the reason.</p>
 </li>
-<li>
-<p>In the <strong>File Based Import History</strong> dialog, to view the results of an import, in the <strong>Report</strong> column for the import that you want to view, click Results. The individual user results for the import are displayed in the the <strong>File Based Import Results</strong> dialog as shown in the following illustration.<br />
-<a class="glightbox" href="../images/importing-users-and-user-data-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img6.png" alt="File Based Import Results" title="File Based Import Results" style="border: 1px solid gray;zoom:70%;"/></a></p>
-</li>
-</ol>
+</ul>
+<h2 id="manual-sync">Manual Sync<a class="headerlink" href="#manual-sync" title="Permanent link">&para;</a></h2>
+<p>You may want to initiate manual sync with your Active Directory to update when there are many changes between scheduled syncs.<br />
+To complete this procedure, you must have already defined synchronization settings for your account.</p>
+<p>How you access the Active Directory Sync configuration depends which type of connector you are using. Complete one of the following procedures to access the Kore.ai Active Directory configuration dialog.</p>
+<p><strong>To manually start an Active Directory sync using the cloud-based connector</strong></p>
+<ul>
+<li>In the <strong>Enrollment &gt; Directory Sync</strong> page, in the <strong>Current Settings</strong> section, click <strong>Run Now</strong> as shown in the following illustration.<br />
+<a class="glightbox" href="../images/synchronizing-users-from-active-directory-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synchronizing-users-from-active-directory-img6.png" alt="Run manual sync" title="Run manual sync" style="border: 1px solid gray;zoom:70%;"/></a></li>
+</ul>
+<p>The <em>Directory Synchronization is in-progress</em> message is displayed at the top of the page.</p>
+<h2 id="view-report">View Report<a class="headerlink" href="#view-report" title="Permanent link">&para;</a></h2>
+<p>After you configure and run an Active Directory sync for your account, you should review the results of the sync. This topic describes how to access and view a report for the current Active Directory sync.</p>
+<p>How you access the last run results for your Active Directory sync runs depends which type of connector you are using. Complete one of the following procedures to access the last run results for Kore.ai Active Directory sync.</p>
+<p><strong>To view the last run report for an Active Directory sync using the cloud-based connector</strong></p>
+<ul>
+<li>In the Bots Admin Console <strong>Enrollment</strong> module, on the <strong>Directory Sync</strong> page, click <em>here</em> as shown in the following illustration.<br />
+<a class="glightbox" href="../images/synchronizing-users-from-active-directory-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synchronizing-users-from-active-directory-img7.png" alt="View last run report" title="View last run report" style="border: 1px solid gray;zoom:70%;"/></a></li>
+</ul>
+<h3 id="viewing-the-last-run-report">Viewing the Last Run Report<a class="headerlink" href="#viewing-the-last-run-report" title="Permanent link">&para;</a></h3>
+<p>The <strong>Report on Active Directory Sync</strong> dialog is displayed as shown in the following illustration.</p>
+<p><a class="glightbox" href="../images/synchronizing-users-from-active-directory-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synchronizing-users-from-active-directory-img8.png" alt="Report on active directory sync" title="Report on active directory sync" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<h2 id="view-history">View History<a class="headerlink" href="#view-history" title="Permanent link">&para;</a></h2>
+<p>You can review all historical Active Directory sync operations along with the results of that sync. This topic describes how to access the report and how to retrieve details about the synchronization.</p>
+<p>How you access the history for your Active Directory sync runs depends which type of connector you are using. Complete one of the following procedures to access the history results for Kore.ai Active Directory sync.</p>
+<p><strong>To view historical reports for Active Directory sync using the cloud-based connector</strong></p>
+<ul>
+<li>In the Bots Admin Console <strong>Enrollment</strong> module, on the <strong>Directory Sync</strong> page, in the <strong>Current Settings</strong> section, click <em>Sync History</em> as shown in the following illustration.<br />
+<a class="glightbox" href="../images/synchronizing-users-from-active-directory-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synchronizing-users-from-active-directory-img9.png" alt="Historical synchronization report" title="Historical synchronization report" style="border: 1px solid gray;zoom:70%;"/></a></li>
+</ul>
+<h3 id="viewing-a-report">Viewing a Report<a class="headerlink" href="#viewing-a-report" title="Permanent link">&para;</a></h3>
+<p>In the <strong>History of Active Directory Synchronization Runs</strong> dialog, to view the results of an import, in the <strong>Report</strong> column for the import that you want to view, click Sync Results.  </p>
+<p><a class="glightbox" href="../images/synchronizing-users-from-active-directory-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/synchronizing-users-from-active-directory-img10.png" alt="View report" title="View report" style="border: 1px solid gray;zoom:70%;"/></a></p>
 
 
   
