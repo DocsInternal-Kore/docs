@@ -3097,9 +3097,9 @@
 <h2 id="assistant-capabilities">Assistant Capabilities<a class="headerlink" href="#assistant-capabilities" title="Permanent link">&para;</a></h2>
 <p>The assistant we build will perform basic travel booking tasks, as follows:</p>
 <ul>
-<li>Check the status of a flight, based on the flight number provided by the user, as seen <a href="https://developer.kore.ai/docs/bots/how-tos/travel-planing-assistant/create-a-travel-virtual-assistant/#Create_a_Dialog_Task">here</a>.</li>
-<li>Update a flight booking, as discussed in <a href="https://developer.kore.ai/docs/bots/how-tos/update-booking-task/">this article</a>.</li>
-<li>Perform a flight change, based on the current flight and new flight preference provided by the user, as seen <a href="https://developer.kore.ai/uncategorised/change-flight-task/">here</a>.</li>
+<li>Check the status of a flight, based on the flight number provided by the user, as seen <a href="https://developer.kore.ai/docs/bots/how-tos/travel-planing-assistant/create-a-travel-virtual-assistant/#Create_a_Dialog_Task" target="_blank">here</a>.</li>
+<li>Update a flight booking, as discussed in <a href="https://developer.kore.ai/docs/bots/how-tos/update-booking-task/" target="_blank">this article</a>.</li>
+<li>Perform a flight change, based on the current flight and new flight preference provided by the user, as seen <a href="https://developer.kore.ai/uncategorised/change-flight-task/" target="_blank">here</a>.</li>
 </ul>
 <p>In this article, therefore, we will be configuring the assistant to update a booking, by configuring an Update Booking Intent. For the purpose of this use case, we will work with a Name update.</p>
 <h3 id="update-booking-dialog-taskintent">Update Booking Dialog Task/Intent<a class="headerlink" href="#update-booking-dialog-taskintent" title="Permanent link">&para;</a></h3>
@@ -3126,16 +3126,16 @@
 <p>The Property Panel for User Intent will be displayed. We will retain the default properties.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For instructions related to the <b>Legacy Dialog Builder</b>, click <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlp-guidelines/">here</a>.</p></div>
+<p>For instructions related to the <b>Legacy Dialog Builder</b>, click <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlp-guidelines/" target="_blank">here</a>.</p></div>
 
-<ol start="6"><li>Close the User Intent Property Panel.</li></ol>
+<ol start="6"><li>Close the <b>User Intent</b> Property Panel.</li></ol>
 <p><a class="glightbox" href="../images/close-user-property-panel.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/close-user-property-panel.png" alt="user property panel" title="user property panel" style="border: 1px solid gray; zoom:75%;"></a> </p>
 <h3 id="add-entity-nodes-booking-number-update-type">Add Entity Nodes (Booking Number &amp; Update Type)<a class="headerlink" href="#add-entity-nodes-booking-number-update-type" title="Permanent link">&para;</a></h3>
 <p>The Entity Node is typically used to gather information from the user.</p>
 <p>Here we will be using it to capture the user input for Booking Number and type of update. </p>
 <p><strong>Add an Entity node that retrieves the Booking Number</strong> with the following steps:</p>
 <ol>
-<li>Click the <strong>+</strong> below the <em>User Intent</em> node.</li>
+<li>Click the <strong>+</strong> icon below the <strong>User Intent</strong> node.</li>
 <li>Select the <strong>Entity</strong> option and click <strong>+New Entity</strong>.</li>
 <li>The <strong>Property Panel</strong> for the Entity Node is displayed, if not click on the newly created entity to open it.</li>
 <li>Enter the following details:<ul>
@@ -3147,7 +3147,7 @@
 </ol>
 <p><strong>Add an Entity Node that retrieves the Update Type</strong> with the following steps:</p>
 <ol>
-<li>Click the <strong>+</strong> below the Booking Number node.</li>
+<li>Click the <strong>+</strong> icon below the <strong>Booking Number</strong> node.</li>
 <li>Select the <strong>Entity</strong> option.</li>
 <li>Click <strong>+ New entity</strong>.</li>
 <li>The <strong>Property Panel</strong> for the Entity Node is displayed, if not click on the newly created entity to open it.<ul>
@@ -3175,7 +3175,7 @@
 </ol>
 <p><strong>Add an Entity Node that retrieves the Updated Name</strong> with the following steps: </p>
 <ol>
-<li>Click the <strong>+</strong> below the <em>UpdateType</em> node.</li>
+<li>Click the <strong>+</strong> icon below the <strong>UpdateType</strong> node.</li>
 <li>Select the <strong>Entity</strong> option and click <strong>+New Entity</strong>.</li>
 <li>The <strong>Property Panel</strong> for the Entity Node is displayed, if not click on the newly created entity to open it. </li>
 <li>Enter the following details:<ul>
@@ -3191,10 +3191,10 @@
 <p>Here the service node is used to call an API to get the booking details  for the user entered booking number.</p>
 <p>We will be using a dummy API setup for this tutorial. We will be using a mock API created specifically for this purpose with the following fields – FirstName, LastName, Address, City, Country, ZipCode, BookingNumber.</p>
 <ol>
-<li>Click the <strong>+</strong> below the <em>UpdateType</em> Entity node.</li>
+<li>Click the <strong>+</strong> icon below the <strong>UpdateType</strong> Entity node.</li>
 <li>Select <strong>Bot Action</strong>, click to open properties, name it GetBooking, and close the properties window.</li>
 <li>To add a service node, click the <strong>+</strong> icon next to the <strong>Get Booking</strong> Bot Action node to expand it.</li>
-<li>Click the <strong>+</strong> within the <strong>Bot Action</strong> layout.</li>
+<li>Click the <strong>+</strong> icon within the <strong>Bot Action</strong> layout.</li>
 <li>Select <strong>Service</strong> – Service node is used to make a backend API call to get booking information.<ul>
 <li>Click <strong>+ New Service</strong></li>
 <li>The <strong>Property Panel</strong> for the Service Node is displayed, if not click on the newly created entity node to open it.</li>
@@ -3211,7 +3211,7 @@
 <p>Here the service node is used to call an API to update the account balance for the user entered booking number.</p>
 <p>We will be using a dummy API setup for this tutorial.</p>
 <ol>
-<li>Click the <strong>+</strong> below the <em>GetBooking</em> Service node.</li>
+<li>Click the <strong>+</strong> icon below the <strong>GetBooking</strong> Service node.</li>
 <li>Select <strong>Service</strong> – Service node is used to make a backend API call to update booking information.</li>
 <li>Click <strong>+ New service</strong>.</li>
 <li>The <strong>Property Panel</strong> for the Service Node is displayed, if not click on the newly added service node to open</li>
@@ -3246,7 +3246,7 @@ This API does not require any Auth Parameters.</li>
 </ul>
 </li>
 <li>
-<p>Close the <em>Service</em> Property Panel.</p>
+<p>Close the <strong>Service</strong> Property Panel.</p>
 </li>
 <li>Click <strong>Next</strong> to the <strong>Bot Action</strong> node to collapse it.</li>
 </ol>
@@ -3254,7 +3254,7 @@ This API does not require any Auth Parameters.</li>
 <p>A Message Node is used to display a message from the assistant to the user.</p>
 <p>Here we will be using the Message node to show the success message.</p>
 <ol>
-<li>Click the <strong>+</strong> below the <strong>GetBooking</strong> Bot Action.</li>
+<li>Click the <strong>+</strong> icon below the <strong>GetBooking</strong> Bot Action.</li>
 <li>Select <strong>Message</strong> and click the <strong>+ New message</strong>.</li>
 <li><strong>Property Panel</strong> for the Message Node is displayed</li>
 <li>Enter the following details:<ul>

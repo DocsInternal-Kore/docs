@@ -17,7 +17,7 @@
     
     
       
-        <title>Travel VA: Schedule a Smart Alert - Kore ai Docs</title>
+        <title>Travel VA: Build a Knowledge Graph - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#travel-va-schedule-a-smart-alert" class="md-skip">
+        <a href="#travel-va-build-a-knowledge-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Travel VA: Schedule a Smart Alert
+              Travel VA: Build a Knowledge Graph
             
           </span>
         </div>
@@ -3019,43 +3019,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#problem-statement" class="md-nav__link">
-    Problem Statement
+  <a href="#static-faq" class="md-nav__link">
+    Static FAQ
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#tags" class="md-nav__link">
+    Tags
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
-    Implementation
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-up-an-alert-task" class="md-nav__link">
-    Set Up an Alert Task
+  <a href="#ontology" class="md-nav__link">
+    Ontology
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-api-request" class="md-nav__link">
-    Configure the API Request
+      
+        <li class="md-nav__item">
+  <a href="#term-usage" class="md-nav__link">
+    Term Usage
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#synonyms" class="md-nav__link">
+    Synonyms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternate-questions" class="md-nav__link">
+    Alternate Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-execution" class="md-nav__link">
+    Task Execution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontology-tags" class="md-nav__link">
+    Ontology Tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traits" class="md-nav__link">
+    Traits
+  </a>
   
 </li>
       
@@ -3078,56 +3100,222 @@
 
 
 
-<h1 id="travel-va-schedule-a-smart-alert">Travel VA: Schedule a Smart Alert<a class="headerlink" href="#travel-va-schedule-a-smart-alert" title="Permanent link">&para;</a></h1>
-<p>In this help page, we will explore a scenario for a Travel Planning Assistant where the user requires weather updates daily for a preferred location. We will configure an <strong>Alert</strong> task to achieve this. We will also enable an auto-subscription on this task.</p>
-<p>For details on an Alert task and its implementation on the XO Platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/" target="_blank">here</a>.</p>
-<h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
-<p>A registered user of a Virtual Assistant(VA) requires a weather update in the form of an alert at a specified time of the day and/or at a specified interval of time.
-<a class="glightbox" href="../images/weather-alert-problem-statement.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/weather-alert-problem-statement.png" alt="problem statement weather alert" title="problem statement weather alert" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h1 id="travel-va-build-a-knowledge-graph">Travel VA: Build a Knowledge Graph<a class="headerlink" href="#travel-va-build-a-knowledge-graph" title="Permanent link">&para;</a></h1>
+<p>This article shows you how to build and understand the working of a Knowledge Graph for your Virtual Assistant. It shows how to convert an FAQ into ontology, add tags, use terms, add alternate questions, synonyms, tags, and traits.</p>
+<p>For details on the implementation process, please click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-ontology/" target="_blank">here</a>.</p>
+<p>Throughout this use case article, we will be building a Knowledge Graph for a Travel Planning Assistant. This article discusses both the basic setup of a Knowledge Graph, but also the solutions at hand for cases of ambiguity.</p>
+<h2 id="static-faq">Static FAQ<a class="headerlink" href="#static-faq" title="Permanent link">&para;</a></h2>
+<p>To add a static FAQ, follow the steps below:</p>
+<ol>
+<li>Open the <strong>Travel Planning</strong> Assistant.</li>
+<li>Navigate to <strong>Build</strong> &gt; <strong>Conversational Skills</strong> &gt; <strong>Knowledge Graph</strong>.</li>
+<li>Click <strong>Create</strong> to create a Knowledge Graph.</li>
+<li>A Knowledge Graph with the name set to your VAt’s Name is created.</li>
+<li>Click <strong>Add Intent</strong> to start entering your FAQs.</li>
+<li>Select <strong>Intent</strong> type as FAQ.</li>
+<li>
+<p><strong>Add Question</strong> and <strong>Bot Response</strong>. Then, click <strong>Save</strong>.
+<a class="glightbox" href="../images/add-static-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-static-faq.png" alt="add static faq" title="add static faq" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>Click <strong>Add Intent</strong> on the top-right to add more FAQs.</p>
+</li>
+<li>
+<p>After you enter all the FAQs, click <strong>Train</strong> to train the Knowledge Graph.
+<a class="glightbox" href="../images/train-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/train-faq.png" alt="train faq" title="train faq" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>Click <strong>Talk to Bot</strong> at the bottom-right to check the response for the added FAQs.</p>
+</li>
+</ol>
+<h2 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h2>
+<p>Tags help filter the FAQs based on the presence of some key phrases in the user utterance. This helps identify the intent more efficiently and prevents the assistant from providing users with irrelevant responses. We recommend adding tags to every question, unless you have a large list of FAQs. </p>
+<p>In this case, you need to create an Ontology (see below for details). To add tags to an FAQ:</p>
+<ol>
+<li>Hover over the Question then click the <strong>Edit</strong> icon.</li>
+<li>In the <strong>Add tag</strong> text box, suggestions from the XO Platform are displayed based on the phrases present in the question. Pick one suggestion from the list or type your own custom tag.</li>
+<li><strong>Train</strong> the assistant.</li>
+<li>Click <strong>Talk to the Bot</strong> and use an utterance that points to the FAQ you added tags to. Formulate the request in different ways, to find potential tags to add.
+<a class="glightbox" href="../images/add-tags.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-tags.gif" alt="add tags" title="add tags" style="border: 1px solid gray; zoom:75%;"></a> </li>
+</ol>
+<h2 id="ontology">Ontology<a class="headerlink" href="#ontology" title="Permanent link">&para;</a></h2>
+<p>For a better response, you must add tags for every question. But this solution is not feasible in case we have a big list of FAQs or questions with common tags. Ontologies help in this situation because they rely on key words and frequently occurring words/phrases to organize FAQs in groups and subgroups. </p>
+<p>Each group can be a node in the ontology. You can have multiple levels of the nodes forming a hierarchical structure. Moving the relevant FAQs (intents) to the nodes will associate that FAQ with the corresponding node name set as a tag.</p>
+<p>Here is an example Ontology: </p>
+<p><strong>Reservation</strong>
+* Make
+    * How do I pay for my booking?
+* Update
+    * How do I update my booking?
+* Cancel
+    * Can I cancel my reservation?</p>
+<p>To create an ontology, follow the steps below:</p>
+<ol>
+<li>
+<p>Hover over the Knowledge Graph name on the left pane and click the <strong>+</strong> icon to <strong>Add Child Node</strong>. For example, we can add a node for questions related to <strong>international</strong> travel, and one for <strong>reservation</strong> related questions.
+<a class="glightbox" href="../images/add-child-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-child-node.png" alt="add child node" title="add child node" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>To add subgroups, hover over the node and click the corresponding <strong>+</strong> icon to add child nodes.
+<a class="glightbox" href="../images/add-subgroup.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-subgroup.png" alt="add subgroup" title="add subgroup" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+</li>
+<li>
+<p>Repeat the process for related questions.</p>
+</li>
+<li>To add questions to your newly created ontology, select them from your list of FAQs, then drag and drop them onto the relevant node. You will notice the path gets updated accordingly.
+<a class="glightbox" href="../images/add-faq-to-node.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-faq-to-node.gif" alt="add faq to node" title="add faq to node" style="border: 1px solid gray; zoom:75%;"></a> </li>
+<li>Edit a question and see that the node name is added as a tag. This ensures that this question is qualified for a user utterance containing the term/node name. </li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The tags you added earlier are retained and you can delete them, whereas the node names cannot be deleted from the tags list.</p>
+</div>
+<p><a class="glightbox" href="../images/edit-ontology-question.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/edit-ontology-question.png" alt="edit ontology question" title="edit ontology question" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ol start="6"><li>You can further add nodes to your Ontology. The image below shows you the Ontology that we will be working with moving forward.
+
+<a class="glightbox" href="../images/ontology-example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ontology-example.png" alt="ontology example" title="ontology example" style="border: 1px solid gray; zoom:75%;"></a></li>
+<li>Train the Knowledge Graph and use <b>Talk to Bot</b>. There should not be any changes in the responses.</li></ol>
+
+<h2 id="term-usage">Term Usage<a class="headerlink" href="#term-usage" title="Permanent link">&para;</a></h2>
+<p>By default, the node names or terms are used in evaluating the path and coming up with a set of qualifying questions. You can tighten or relax this rule by either making the term mandatory in the utterance or marking the term/node as organizer respectively.</p>
+<p><strong>Use Case 1</strong>: You want to ensure that the intentions regarding <strong><em>Cancel Reservation</em></strong> must be considered only when the user asked a direct question regarding the topic.</p>
+<p>To address this case, we mark the term <strong><em>Cancel</em></strong> as <strong>Mandatory</strong>. This helps improve the assistant’s performance.</p>
+<p><strong>Steps to Execute the Use Case</strong></p>
+<ol>
+<li>Hover over the node, in this case, <strong>cancel</strong>, and click the <strong>settings icon</strong>.</li>
+<li>From the <strong>Settings</strong> section, select the <strong>Mandatory</strong> option from the dropdown next to the term name.</li>
+<li><strong>Save</strong> and <strong>Train</strong> the Knowledge Collection.</li>
+<li>Now the questions under this node are considered only if the user utterance has the node name, <em>cancel</em> in this case.
+<a class="glightbox" href="../images/term-usage-use-case-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/term-usage-use-case-1.png" alt="term usage use case 1" title="term usage use case 1" style="border: 1px solid gray; zoom:75%;"></a> </li>
+</ol>
+<p><strong>Use Case 2</strong>: Consider the following FAQs that need to be added to the Knowledge Graph.</p>
 <ul>
-<li>A working and published VA. We are using a <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-travel-planning-assistant/create-a-travel-virtual-assistant/" target="_blank">Travel Planning Assistant</a>.</li>
-<li>Access to a web service that provides weather updates. We are using a REST service hosted at <a href="http://api.openweathermap.org/" target="_blank">api.openweathermap.org</a>. If you want to use this service, you need to register to their free alert service as we will be using the API key to access their APIs.</li>
+<li>Contact<ul>
+<li>Who do I contact in case of an issue?</li>
+<li>What is your helpline number?</li>
 </ul>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<h3 id="set-up-an-alert-task">Set Up an Alert Task<a class="headerlink" href="#set-up-an-alert-task" title="Permanent link">&para;</a></h3>
-<p><strong>Alert tasks</strong> can be used to deliver timely, relevant, and personalized information from enterprise systems to customers and employees by polling the relevant service in real-time or according to a user-defined schedule. To add an Alert Task, follow the steps below:</p>
+</li>
+<li>Complaints<ul>
+<li>Where can I register my query/complaints?</li>
+</ul>
+</li>
+<li>Issues<ul>
+<li>How do I report a problem?</li>
+</ul>
+</li>
+</ul>
+<p>Though they do not have any phrases or terms in common, they are related to <em>Customer Care</em>. For ease of understanding, we can put them under a node by the same name and mark it as <strong>Organizer</strong> node, ensuring that the intents get qualified without the need to have the term phrase in the user utterance.</p>
+<p><strong>Steps to Execute the Use Case</strong></p>
 <ol>
-<li>From <strong>Build &gt; Conversational Skills</strong> add an <strong>Alert Task</strong>.</li>
-<li>
-<p>On the <strong>Task Details</strong> page, follow the steps below:</p>
+<li>Create a node called <strong><em>Customer Care</em></strong>.</li>
+<li>Create the above three nodes as child nodes to this new node.</li>
+<li>Hover over the node, in this case, <strong>Customer Care</strong>, and click the <strong>Settings</strong> icon.</li>
+<li>From the <strong>Settings</strong> page, select the <strong>Organizer</strong> option.</li>
+<li><strong>Save</strong> and <strong>Train</strong> the Knowledge Collection.</li>
+<li>Now the questions under this node are considered even if the user utterance does not include the node name.
+<a class="glightbox" href="../images/term-usage-use-case-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/term-usage-use-case-2.png" alt="term usage use case 2" title="term usage use case 2" style="border: 1px solid gray; zoom:75%;"></a> </li>
+</ol>
+<h2 id="synonyms">Synonyms<a class="headerlink" href="#synonyms" title="Permanent link">&para;</a></h2>
+<p><strong>Use Case</strong>: If you test the VA for <em>How do I make a booking</em>. While your Knowledge Graph contains <em>How do I make a reservation?</em> you might get a suggestive match that is not definitive. The reason is that the assistant does not understand <em>booking</em> as being the same as <em>reservation</em>.</p>
+<p>To add Synonyms, follow the steps below:</p>
+<ol>
+<li>Hover over the <strong>reservation</strong> node and click the <strong>Settings</strong> icon.</li>
+<li>In the <strong>Path Level Synonyms</strong>, add <strong>booking</strong>. Path level synonyms are useful in such cases because they apply to all nodes.</li>
+<li>Click <strong>Save</strong> and <strong>Train</strong> the VA.</li>
+<li>Click <strong>Talk to Bot</strong> and use the same query <em>How do I make a booking?</em>.</li>
+<li>Similarly, we can define <strong>Knowledge Graph Synonym</strong> if it is applicable to the entire knowledge graph.</li>
+</ol>
+<h2 id="alternate-questions">Alternate Questions<a class="headerlink" href="#alternate-questions" title="Permanent link">&para;</a></h2>
+<p>Some questions have multiple ways the user can approach them.</p>
 <ul>
-<li>Enter a <strong>Task Name</strong>, for example, <em>Get Daily Weather</em>.</li>
-<li>Select <em>Webservice</em> for <strong>Connection Type</strong>.</li>
-<li>Choose <em>REST</em> for <strong>Connection Mode</strong>.</li>
+<li>Is there a way to see my reservation details from my laptop?</li>
+<li>Is there a mobile app that I can use to access my reservation?</li>
+</ul>
+<p>Both of these questions pertain to one intent: <em>How do I access my reservation online?</em>. But instead of adding all these Q&amp;As as intents and repeat the response and the settings, if any, you can add these questions as alternate questions.</p>
+<p>To add alternate questions, follow the steps below:</p>
+<ol>
+<li>Hover over the question, in this case, <em>How do I access my booking online?</em> and click the <strong>Edit</strong> icon.</li>
+<li>In the <strong>Add alternate question</strong> text field, enter the question.</li>
 <li>
-<p>Click <strong>Create &amp; Proceed</strong>.
-<a class="glightbox" href="../images/set-up-alert-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-up-alert-task.png" alt="add dialog task" title="add dialog task" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Add the queries mentioned above.
+<a class="glightbox" href="../images/alternate-questions.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/alternate-questions.png" alt="alternative question" title="alternative question" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
 <li>
-<p>You will be directed to the <strong>Alert Settings</strong> page. Review and modify the <strong>General Settings</strong> if needed. For our use case, we do not need to modify any settings.</p>
+<p>Click <strong>Save</strong>, <strong>Train</strong>, and <strong>Talk to the Bot</strong>.</p>
 </li>
+<li>Entering any of the above three questions will yield the same response as the question <em>How do I access my reservation online?</em></li>
+</ol>
+<h2 id="task-execution">Task Execution<a class="headerlink" href="#task-execution" title="Permanent link">&para;</a></h2>
+<p>Consider the query <em>How do I check my flight status?</em>. If the VA has a task that can give the balance, we can direct the user to it, instead of asking the user to use the utterance to trigger the task.</p>
+<p>To trigger a task, follow the steps below:</p>
+<ol>
+<li>Before proceeding, ensure that you have a Dialog Task defined for <strong><em>Check Flight Status</em></strong>. Let us consider a dummy dialog that displays a message. Learn more on adding tasks by reading <a href="https://developer.kore.ai/docs/bots/chatbot-overview/using-the-dialog-builder-tool/" target="_blank">Using the Dialog Builder</a>.</li>
+<li>Click <strong>Add Intent</strong> <em>How do I check my flight status?</em></li>
+<li>
+<p>Set <strong>Intent</strong> to <em>Task</em>.
+<a class="glightbox" href="../images/set-task-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-task-intent.png" alt="set task intent" title="set task intent" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>From the drop-down list select the <em>Check Flight Status</em> Dialog Task.</p>
+</li>
+<li>Click <strong>Save</strong> and <strong>Train</strong> the Knowledge Graph.</li>
+<li>Select <strong>Talk to bot</strong> with the utterance <em>How do I check my flight status?</em> will trigger the <em>Check flight</em> status task.</li>
+</ol>
+<h2 id="ontology-tags">Ontology Tags<a class="headerlink" href="#ontology-tags" title="Permanent link">&para;</a></h2>
+<p><strong>Use Case</strong>: When asking the VA <em>Does your airline support mobile check in?</em> the response might be: Did you mean <em>How do I check in online?</em>.</p>
+<p>The reason for this might be that: <em>Does your airline support mobile check in?</em> is a very close match to <em>How do I check online?</em>. You can avoid such situations by adding a tag <em>(i.e.: mobile)</em> and marking it as mandatory to the alternate question <em>Does your airline support mobile checkin?</em></p>
+<p>To add Tags, follow the steps below:</p>
+<ol>
+<li>Edit the question <em>How do I check in online?</em></li>
+<li>
+<p>For the alternate question: <em>Does your airline support mobile check in?</em> follow the steps below:</p>
+<ul>
+<li>
+<p>Add the tag <strong><em>mobile</em></strong>.
+<a class="glightbox" href="../images/add-mobile-tag.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-mobile-tag.png" alt="add mobile tag" title="add mobile tag" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>Click the tag to open <strong>Tag Settings</strong>, then set <strong>Tag Usage</strong> to <strong><em>Mandatory</em></strong>.
+    <a class="glightbox" href="../images/mandatory-tag-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/mandatory-tag-settings.png" alt="mandatory tag settings" title="mandatory tag settings" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>Click <strong>Done</strong>.</p>
+</li>
+<li>Click <strong>Save</strong> and <strong>Train</strong> the VA.</li>
+<li>Click <strong>Talk to the Bot</strong> and see the response.</li>
 </ul>
 </li>
 </ol>
-<h3 id="configure-the-api-request">Configure the API Request<a class="headerlink" href="#configure-the-api-request" title="Permanent link">&para;</a></h3>
-<p>Select the <strong>API Request</strong> tab, and follow the steps below:</p>
+<h2 id="traits">Traits<a class="headerlink" href="#traits" title="Permanent link">&para;</a></h2>
+<p><strong>Use Case</strong>: <em>I lost my boarding pass, how do I get another boarding pass?</em></p>
+<p>You will get the response for <em>How do I get a boarding pass?</em></p>
+<p>While this is a valid response it is not the right one. Ideally, since the user said <em>I lost my boarding pass, the assistant</em> must direct the user to information that helps them regenerate their boarding pass.</p>
+<p><strong>Traits</strong> are used to get additional information from the user utterance and direct the user to a better solution.</p>
+<p>To add traits, follow the below steps:</p>
 <ol>
-<li>Set the <strong>Content Type</strong> to <em>JSON</em>. We do not need to set the <strong>Authorization Provider</strong> for our use case. Configure it only if the API you are using has any authorization requirements.</li>
-<li>Set <strong>Parameter</strong> to gather the <em>Preferred City</em> from the user. Ensure that it is set as a <strong>Mandatory</strong> field.</li>
+<li>From the <strong>more</strong> option next to the <strong>Train</strong> button, select the <strong>Manage Traits</strong> option.</li>
 </ol>
-<p><a class="glightbox" href="../images/gather-preferred-city.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/gather-preferred-city.png" alt="gather preferred city info" title="gather preferred city info" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/select-manage-trait.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-manage-trait.png" alt="manage trait" title="manage trait" style="border: 1px solid gray; zoom:75%;"></a>  </p>
 <ol>
-<li>We will not need any <strong>Initializer</strong> requirements for our use case. Use this in case any JavaScript needs to be executed before the request is sent.</li>
-<li>Under <strong>Request</strong> click <strong>Add API</strong> to add the service API that needs to be invoked. We use the <em>GET</em> method from the following API: <code>http://api.openweathermap.org/data/2.5/weather?q={cityname}&amp;APPID=&amp;lt;your-app-id&gt;</code></li>
-<li>The <strong>AppID</strong> in the above URL is assigned to you by <strong>OpenWeather</strong> when you sign up. You can find it from the <a href="https://home.openweathermap.org/api_keys" target="_blank">API Keys</a> section after you login to your account. Notice that the <strong>Parameters</strong> list is populated automatically with the parameters entered earlier.</li>
-<li><strong>Save</strong> the API.</li>
+<li>Click <strong>New Trait</strong> to create a new trait.</li>
+<li>Select the <strong>Trait Type</strong> and add <strong>Traits</strong> to it. Here, let us consider <strong><em>Issues</em></strong> as Trait Type and <strong><em>lostpass</em></strong> as Trait.</li>
+<li>Add “<strong><em>lost my boarding pass</em></strong> as the <strong>utterance</strong> that triggers this trait. (Do not forget to hit enter after you add the utterance).</li>
+<li>
+<p>Click <strong>Save</strong> and <strong>Train the trait</strong>.
+<a class="glightbox" href="../images/save-and-train-trait.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/save-and-train-trait.png" alt="save and train trait" title="save and train trait" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>Apply Trait with  the steps below:</p>
+<ul>
+<li>From the ontology, go to the <strong>Issues</strong> node <strong>Settings</strong> page.</li>
+<li>Add <strong>_lostpass</strong> as the trait (pick from the drop-down list).</li>
+<li>Click <strong>Save</strong> and <strong>Train</strong> the Knowledge Graph.</li>
+<li>Click <strong>Talk to the Bot</strong> and try the same question. Now you will get the expected response.
+<a class="glightbox" href="../images/add-trait-to-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-trait-to-node.png" alt="add trait to node" title="add trait to node" style="border: 1px solid gray; zoom:75%;"></a> </li>
+</ul>
+</li>
 </ol>
-<p><a class="glightbox" href="../images/smart-alert-save-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/smart-alert-save-api.png" alt="save api" title="save api" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li><strong>Test</strong> the API to ensure that the configuration is proper. Enter a sample city name, when prompted and ensure you get a success message and a proper Response.</li>
-<li><strong>Save</strong> your settings.</li>
-</ol>
+<p>In this document you have seen various settings for building and managing a Knowledge Graph. For details regarding the implementation and functionality of Knowledge Graph, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-ontology/" target="_blank">here</a>.</p>
 
 
   
