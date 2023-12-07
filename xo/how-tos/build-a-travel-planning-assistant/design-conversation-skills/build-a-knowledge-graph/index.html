@@ -3142,26 +3142,32 @@
 <p>For a better response, you must add tags for every question. But this solution is not feasible in case we have a big list of FAQs or questions with common tags. Ontologies help in this situation because they rely on key words and frequently occurring words/phrases to organize FAQs in groups and subgroups. </p>
 <p>Each group can be a node in the ontology. You can have multiple levels of the nodes forming a hierarchical structure. Moving the relevant FAQs (intents) to the nodes will associate that FAQ with the corresponding node name set as a tag.</p>
 <p>Here is an example Ontology: </p>
-<p><strong>Reservation</strong>
-* Make
-    * How do I pay for my booking?
-* Update
-    * How do I update my booking?
-* Cancel
-    * Can I cancel my reservation?</p>
+<p><strong>Reservation</strong></p>
+<ul>
+<li>Make<ul>
+<li>How do I pay for my booking?</li>
+</ul>
+</li>
+<li>Update<ul>
+<li>How do I update my booking?</li>
+</ul>
+</li>
+<li>Cancel<ul>
+<li>Can I cancel my reservation?</li>
+</ul>
+</li>
+</ul>
 <p>To create an ontology, follow the steps below:</p>
 <ol>
-<li>
-<p>Hover over the Knowledge Graph name on the left pane and click the <strong>+</strong> icon to <strong>Add Child Node</strong>. For example, we can add a node for questions related to <strong>international</strong> travel, and one for <strong>reservation</strong> related questions.
-<a class="glightbox" href="../images/add-child-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-child-node.png" alt="add child node" title="add child node" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-<li>
-<p>To add subgroups, hover over the node and click the corresponding <strong>+</strong> icon to add child nodes.
-<a class="glightbox" href="../images/add-subgroup.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-subgroup.png" alt="add subgroup" title="add subgroup" style="border: 1px solid gray; zoom:75%;"></a>  </p>
-</li>
-<li>
-<p>Repeat the process for related questions.</p>
-</li>
+<li>Hover over the Knowledge Graph name on the left pane and click the <strong>+</strong> icon to <strong>Add Child Node</strong>. For example, we can add a node for questions related to <strong>international</strong> travel, and one for <strong>reservation</strong> related questions.</li>
+</ol>
+<p><a class="glightbox" href="../images/add-child-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-child-node.png" alt="add child node" title="add child node" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<ol>
+<li>To add subgroups, hover over the node and click the corresponding <strong>+</strong> icon to add child nodes.</li>
+</ol>
+<p><a class="glightbox" href="../images/add-subgroup.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-subgroup.png" alt="add subgroup" title="add subgroup" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+<ol>
+<li>Repeat the process for related questions.</li>
 <li>To add questions to your newly created ontology, select them from your list of FAQs, then drag and drop them onto the relevant node. You will notice the path gets updated accordingly.
 <a class="glightbox" href="../images/add-faq-to-node.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-faq-to-node.gif" alt="add faq to node" title="add faq to node" style="border: 1px solid gray; zoom:75%;"></a> </li>
 <li>Edit a question and see that the node name is added as a tag. This ensures that this question is qualified for a user utterance containing the term/node name. </li>
@@ -3292,29 +3298,20 @@
 <p>While this is a valid response it is not the right one. Ideally, since the user said <em>I lost my boarding pass, the assistant</em> must direct the user to information that helps them regenerate their boarding pass.</p>
 <p><strong>Traits</strong> are used to get additional information from the user utterance and direct the user to a better solution.</p>
 <p>To add traits, follow the below steps:</p>
-<ol>
-<li>From the <strong>more</strong> option next to the <strong>Train</strong> button, select the <strong>Manage Traits</strong> option.</li>
-</ol>
-<p><a class="glightbox" href="../images/select-manage-trait.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-manage-trait.png" alt="manage trait" title="manage trait" style="border: 1px solid gray; zoom:75%;"></a>  </p>
-<ol>
-<li>Click <strong>New Trait</strong> to create a new trait.</li>
-<li>Select the <strong>Trait Type</strong> and add <strong>Traits</strong> to it. Here, let us consider <strong><em>Issues</em></strong> as Trait Type and <strong><em>lostpass</em></strong> as Trait.</li>
-<li>Add “<strong><em>lost my boarding pass</em></strong> as the <strong>utterance</strong> that triggers this trait. (Do not forget to hit enter after you add the utterance).</li>
-<li>
-<p>Click <strong>Save</strong> and <strong>Train the trait</strong>.
-<a class="glightbox" href="../images/save-and-train-trait.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/save-and-train-trait.png" alt="save and train trait" title="save and train trait" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-<li>
-<p>Apply Trait with  the steps below:</p>
-<ul>
-<li>From the ontology, go to the <strong>Issues</strong> node <strong>Settings</strong> page.</li>
-<li>Add <strong><em>lostpass</em></strong> as the trait (pick from the drop-down list).</li>
-<li>Click <strong>Save</strong> and <strong>Train</strong> the Knowledge Graph.</li>
-<li>Click <strong>Talk to the Bot</strong> and try the same question. Now you will get the expected response.
-<a class="glightbox" href="../images/add-trait-to-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-trait-to-node.png" alt="add trait to node" title="add trait to node" style="border: 1px solid gray; zoom:75%;"></a> </li>
-</ul>
-</li>
-</ol>
+<ol><li>From the <b>more</b> option next to the <b>Train</b> button, select the <b>Manage Traits</b> option.
+<a class="glightbox" href="../images/select-manage-trait.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-manage-trait.png" alt="manage trait" title="manage trait" style="border: 1px solid gray; zoom:75%;"></a> </li>
+<li>Click <b>New Trait</b> to create a new trait.
+<li>Select the <b>Trait Type</b> and add <b>Traits</b> to it. Here, let us consider <b><i>Issues</i></b> as Trait Type and <b><i>lostpass</i></b> as Trait.
+<li>Add “<i>lost my boarding pass</i>" as the utterance that triggers this trait. (Do not forget to hit enter after you add the utterance).</li>
+<li>Click <b>Save</b> and <b>Train the trait</b>.
+<a class="glightbox" href="../images/save-and-train-trait.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/save-and-train-trait.png" alt="save and train trait" title="save and train trait" style="border: 1px solid gray; zoom:75%;"></a></li>
+<li>Apply Trait with  the steps below:</li></ol>
+<ul><li>From the ontology, go to the <b>Issues</b> node <b>Settings</b> page.</li>
+<li>Add <b><i>lostpass</i></b> as the trait (pick from the drop-down list).</li>
+<li>Click <b>Save</b> and <b>Train</b> the Knowledge Graph.</li>
+<li>Click <b>Talk to the Bot</b> and try the same question. Now you will get the expected response.
+<a class="glightbox" href="../images/add-trait-to-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-trait-to-node.png" alt="add trait to node" title="add trait to node" style="border: 1px solid gray; zoom:75%;"></a></li></ul>
+
 <p>In this document you have seen various settings for building and managing a Knowledge Graph. For details regarding the implementation and functionality of Knowledge Graph, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-ontology/" target="_blank">here</a>.</p>
 
 
