@@ -17,7 +17,7 @@
     
     
       
-        <title>Create an Update Booking Task - Kore ai Docs</title>
+        <title>Create a Change Flight Task - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-an-update-booking-task" class="md-skip">
+        <a href="#create-a-change-flight-task" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create an Update Booking Task
+              Create a Change Flight Task
             
           </span>
         </div>
@@ -3027,42 +3027,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#update-booking-dialog-taskintent" class="md-nav__link">
-    Update Booking Dialog Task/Intent
+  <a href="#add-the-change-flight-dialog-task-intent" class="md-nav__link">
+    Add the Change Flight Dialog Task / Intent
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-entity-nodes-booking-number-update-type" class="md-nav__link">
-    Add Entity Nodes (Booking Number &amp; Update Type)
+  <a href="#add-entity-nodes" class="md-nav__link">
+    Add Entity nodes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-a-bot-action-service-node-get-booking-details" class="md-nav__link">
-    Add a Bot Action – Service Node (Get Booking Details)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-a-bot-action-service-node-update-balance" class="md-nav__link">
-    Add a Bot Action – Service Node (Update Balance)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-a-message-node" class="md-nav__link">
-    Add a Message Node
+  <a href="#add-an-entity-node-to-retrieve-the-current-flight-to-change-with-the-following-steps" class="md-nav__link">
+    Add an Entity Node to retrieve the Current Flight to change with the following steps:
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-bot-action-service-node" class="md-nav__link">
+    Add a Bot Action – Service Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-message-node" class="md-nav__link">
+    Add a Message Node
+  </a>
   
 </li>
       
@@ -3092,206 +3092,154 @@
 
 
 
-<h1 id="create-an-update-booking-task">Create an Update Booking Task<a class="headerlink" href="#create-an-update-booking-task" title="Permanent link">&para;</a></h1>
-<p>This document is part of the documentation that shows you the steps in creating a sample Travel Planning Assistant. </p>
+<h1 id="create-a-change-flight-task">Create a Change Flight Task<a class="headerlink" href="#create-a-change-flight-task" title="Permanent link">&para;</a></h1>
+<p>This document is part of the documentation related to creating a sample travel assistant. </p>
 <h2 id="assistant-capabilities">Assistant Capabilities<a class="headerlink" href="#assistant-capabilities" title="Permanent link">&para;</a></h2>
 <p>The assistant we build will perform basic travel booking tasks, as follows:</p>
 <ul>
 <li>Check the status of a flight, based on the flight number provided by the user, as seen <a href="https://developer.kore.ai/docs/bots/how-tos/travel-planing-assistant/create-a-travel-virtual-assistant/#Create_a_Dialog_Task">here</a>.</li>
-<li>Update a flight booking, as discussed in <a href="https://developer.kore.ai/docs/bots/how-tos/update-booking-task/">this article</a>.</li>
-<li>Perform a flight change, based on the current flight and new flight preference provided by the user, as seen <a href="https://developer.kore.ai/uncategorised/change-flight-task/">here</a>.</li>
+<li>Update a flight booking, as discussed <a href="https://developer.kore.ai/docs/bots/how-tos/update-booking-task/">here</a>.</li>
+<li>Perform a flight change, based on the current flight and new flight preference provided by the user. as discussed in this present article.</li>
 </ul>
-<p>In this article, therefore, we will be configuring the assistant to update a booking, by configuring an Update Booking Intent. For the purpose of this use case, we will work with a Name update.</p>
-<h3 id="update-booking-dialog-taskintent">Update Booking Dialog Task/Intent<a class="headerlink" href="#update-booking-dialog-taskintent" title="Permanent link">&para;</a></h3>
+<h3 id="add-the-change-flight-dialog-task-intent">Add the Change Flight Dialog Task / Intent<a class="headerlink" href="#add-the-change-flight-dialog-task-intent" title="Permanent link">&para;</a></h3>
 <ul>
-<li>The Update booking task will prompt the user to enter the booking number corresponding to the booking that they want to update. </li>
-<li>It would then prompt for the type of update – e.g. Name or Passport Number. </li>
-<li>A service call will be made to fetch the details, and then another service call to update the booking.</li>
-<li>The success/failure message will be displayed.</li>
+<li>The Change Flight  task will prompt the user to enter their Current and New Flight Numbers.</li>
+<li>Next it would prompt for the Seat preference.</li>
+<li>It will then make a service call to update the booking appropriately.</li>
+<li>The message indicating success or failure is displayed before the end of the dialog.</li>
 </ul>
-<p>To create an Update Booking Dialog Task/Intent:</p>
+<p>To add this Dialog Task, follow the steps below:</p>
 <ol>
-<li>Open the Travel Planning Assistant  with the Get Flight Status task already configured.</li>
-<li>Navigate to <strong>Build &gt; Conversational Skills &gt; Dialog Tasks</strong>.</li>
+<li>Open the <strong>Travel Planning Assistant</strong>, with the two pre-configured tasks – <em>Check Flight Status</em> and <em>Update Booking</em>.</li>
+<li>Navigate to the <strong>Build &gt;</strong> <strong>Conversational Skills</strong> &gt; <strong>Dialog Task</strong> page from the left menu.</li>
 <li>Click <strong>Create Dialog</strong> from the top right. The <strong>Create Dialog</strong> screen will open.</li>
 <li>Enter the following details:<ul>
-<li><strong>Intent Name</strong> – Enter the Intent name, this is the phrase that triggers the dialog. The intent name should be simple and not more than 3-4 words. For example, <em>Update Booking</em>.</li>
-<li>You can add a <strong>description</strong> and under <strong>More Options</strong> other dialog-related details. Let’s retain the default settings without any changes.</li>
+<li><strong>Intent Name</strong> – Enter the Intent name, this is the phrase that triggers the dialog. The intent name should be simple and not more than 3-4 words. For example, <em>Change Flight</em>.</li>
+<li>Under <strong>More Options</strong>, you can add a <strong>description</strong> and other dialog-related details. Let’s retain the default settings.</li>
 <li>You can also include utterances to train this intent.</li>
 <li>Select <strong>Try Conversation Driven Dialog Builder</strong> option.</li>
 </ul>
 </li>
 <li>Click <strong>Proceed</strong>.</li>
 </ol>
-<p>The Property Panel for User Intent will be displayed. We will retain the default properties.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For instructions related to the <b>Legacy Dialog Builder</b>, click <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlp-guidelines/">here</a>.</p></div>
 
-<ol start="6"><li>Close the User Intent Property Panel.</li></ol>
-<p><a class="glightbox" href="../images/close-user-property-panel.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/close-user-property-panel.png" alt="user property panel" title="user property panel" style="border: 1px solid gray; zoom:75%;"></a> </p>
-<h3 id="add-entity-nodes-booking-number-update-type">Add Entity Nodes (Booking Number &amp; Update Type)<a class="headerlink" href="#add-entity-nodes-booking-number-update-type" title="Permanent link">&para;</a></h3>
-<p>The Entity Node is typically used to gather information from the user.</p>
-<p>Here we will be using it to capture the user input for Booking Number and type of update. </p>
-<p><strong>Add an Entity node that retrieves the Booking Number</strong> with the following steps:</p>
+<p><a class="glightbox" href="../images/add-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-dialog-task.png" alt="add dialog task" title="add dialog task" style="border: 1px solid gray; zoom:75%;"></a> </p>
 <ol>
-<li>Click the <strong>+</strong> below the <em>User Intent</em> node.</li>
-<li>Select the <strong>Entity</strong> option and click <strong>+New Entity</strong>.</li>
-<li>The <strong>Property Panel</strong> for the Entity Node is displayed, if not click on the newly created entity to open it.</li>
-<li>Enter the following details:<ul>
-<li><strong>Name</strong>: <em>BookingNumber</em></li>
-<li><strong>Display Name</strong>: <em>Booking Number</em></li>
-<li><strong>Type</strong>: <em>Number</em></li>
-</ul>
-</li>
+<li>Close the <strong>User Intent</strong> Property Panel.</li>
 </ol>
-<p><strong>Add an Entity Node that retrieves the Update Type</strong> with the following steps:</p>
+<h3 id="add-entity-nodes">Add Entity nodes<a class="headerlink" href="#add-entity-nodes" title="Permanent link">&para;</a></h3>
+<p>An Entity Node is typically used to gather information from the user.</p>
+<p>Here we will be using it to capture the user input for the Current Flight (change from) and New Flight (change to). </p>
+<h3 id="add-an-entity-node-to-retrieve-the-current-flight-to-change-with-the-following-steps"><strong>Add an Entity Node to retrieve the Current Flight to change</strong> with the following steps:<a class="headerlink" href="#add-an-entity-node-to-retrieve-the-current-flight-to-change-with-the-following-steps" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Click the <strong>+</strong> below the Booking Number node.</li>
+<li>Click the <strong>+</strong> icon below the <strong>User Intent</strong> node.</li>
 <li>Select the <strong>Entity</strong> option.</li>
-<li>Click <strong>+ New entity</strong>.</li>
-<li>The <strong>Property Panel</strong> for the Entity Node is displayed, if not click on the newly created entity to open it.<ul>
+<li>Click the <strong>+ New entity</strong> icon in the <strong>Property Panel</strong>. Alternatively, click on the newly added entity node to open.</li>
 <li>Enter the following details:<ul>
-<li><strong>Name</strong>: <em>UpdateType</em></li>
-<li><strong>Display Name</strong>: <em>Update Type</em></li>
-<li><strong>Type</strong>: Select <em>List of Items(enumerated)</em> from the drop-down. We need to provide the list of values that the user can select.<ul>
-<li>Click the <strong>Settings (gear) icon</strong> that appears next to the field.</li>
-<li>Opt for <strong>Static List.</strong></li>
-<li>Enter the following options under separate rows as the <strong>Display name</strong> – <em>Name</em> and <em>Passport Number</em>. <em>Value</em> and <em>Synonym</em> columns will auto-populate, leave them as is.</li>
-<li>Define the percentage of <strong>Auto-correction</strong> to be applied to match the user’s input to a value in the list.
-<a class="glightbox" href="../images/define-auto-correction.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/define-auto-correction.png" alt="define autocorrection" title="define autocorrection" style="border: 1px solid gray; zoom:75%;"></a> </li>
-<li>Click <strong>Save</strong>.</li>
-<li>Navigate back to the Entity Property Panel.</li>
-<li><strong>User Prompts:</strong> Enter the following text and hit enter to save:<code>What would you like to update?</code></li>
-<li><strong>Display List Of Values</strong>: Mark as <em>Yes, use channel specific standard formatting for default messages and show the available list of values to the end user</em>‘. This will present the list of values in a button template for the supported channels.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Close the <strong>UpdateType</strong> Entity Property Panel.
-<a class="glightbox" href="../images/entity-update-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/entity-update-type.png" alt="entity update type" title="entity update type" style="border: 1px solid gray; zoom:75%;"></a> </li>
-</ol>
-<p><strong>Add an Entity Node that retrieves the Updated Name</strong> with the following steps: </p>
-<ol>
-<li>Click the <strong>+</strong> below the <em>UpdateType</em> node.</li>
-<li>Select the <strong>Entity</strong> option and click <strong>+New Entity</strong>.</li>
-<li>The <strong>Property Panel</strong> for the Entity Node is displayed, if not click on the newly created entity to open it. </li>
-<li>Enter the following details:<ul>
-<li><strong>Name</strong>: <em>Name</em></li>
-<li><strong>Display Name</strong>: <em>Name</em></li>
+<li><strong>Name</strong>: <em>CurrentFlight</em></li>
+<li><strong>Display Name</strong>: <em>Current Flight</em></li>
 <li><strong>Type</strong>: <em>String</em></li>
-<li><strong>User Prompts:</strong> Enter the following text and hit enter to save: <code>Please enter your full name.</code></li>
+<li><strong>User Prompts:</strong> Enter the text "<em>Enter the Current Flight that you want to change from</em>". </li>
+<li>Close the <em>CurrentFlight</em> Entity Property Panel.</li>
 </ul>
 </li>
 </ol>
-<h3 id="add-a-bot-action-service-node-get-booking-details">Add a Bot Action – Service Node (Get Booking Details)<a class="headerlink" href="#add-a-bot-action-service-node-get-booking-details" title="Permanent link">&para;</a></h3>
-<p>A Service Node allows you to make a backend API call. It is included in the Bot Actions node.</p>
-<p>Here the service node is used to call an API to get the booking details  for the user entered booking number.</p>
-<p>We will be using a dummy API setup for this tutorial. We will be using a mock API created specifically for this purpose with the following fields – FirstName, LastName, Address, City, Country, ZipCode, BookingNumber.</p>
+<p><strong>Add an Entity Node to retrieve the New Flight to change</strong> with the following steps:</p>
 <ol>
-<li>Click the <strong>+</strong> below the <em>UpdateType</em> Entity node.</li>
-<li>Select <strong>Bot Action</strong>, click to open properties, name it GetBooking, and close the properties window.</li>
-<li>To add a service node, click the <strong>+</strong> icon next to the <strong>Get Booking</strong> Bot Action node to expand it.</li>
-<li>Click the <strong>+</strong> within the <strong>Bot Action</strong> layout.</li>
-<li>Select <strong>Service</strong> – Service node is used to make a backend API call to get booking information.<ul>
+<li>Repeat the above steps to add another entity with the following details:<ul>
+<li><strong>Name</strong>: <em>NewFlight</em></li>
+<li><strong>Display Name</strong>: <em>New Flight</em></li>
+<li><strong>Type</strong>: <em>String</em></li>
+<li><strong>User Prompts:</strong> Enter the text "<em>Enter the New Flight that you want to change to</em>".</li>
+</ul>
+</li>
+<li>Close the <em>NewFlight</em> Entity Property Panel.</li>
+</ol>
+<p><strong>Add a Seat Selection Entity Node</strong> with the following steps:</p>
+<ol>
+<li>Repeat the above steps to add another entity with the following details:<ul>
+<li><strong>Name</strong>: <em>Seat</em></li>
+<li><strong>Display Name</strong>: <em>Seat</em></li>
+<li><strong>Type</strong>: <em>List of items (Enumerated)</em>. We need to provide the list of values that the user can select.<ul>
+<li>Click the <strong>Settings (gear)</strong> icon that appears next to the field.</li>
+<li>Opt for <strong>Static List.</strong></li>
+<li>Enter the following options under separate rows as the <strong>Display name</strong>– e.g.: <em>21A, 25C, 32F</em> <em>Value</em> and <em>Synonym</em> columns will auto-populate, leave them as is.</li>
+<li>Define the percentage of <strong>Auto-correction</strong> to be applied to match the user’s input to a value in the list.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Save</strong>.
+<a class="glightbox" href="../images/add-seat-selection-entity-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-seat-selection-entity-node.png" alt="add seat selection entity node" title="add seat selection entity node" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>Under <strong>Display List of Values</strong>, select <em>Yes, use channel specific standard formatting for default messages and show an available list of values to the end user.</em></p>
+</li>
+</ol>
+<p><b>User Prompts</b>: Enter the text: "<i>Please select a seat</i>."</p>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use Javascript in the User Prompt to display available seats. In this case you would need to set the Type  'String'. For the purpose of this use case, we have chosen to list fixed values, which is why we have set the Type to 'List of Items'.</p></div>
+
+<ol start="4"><li> Close the <b>Seat</b> Entity Property Panel.</li></ol>
+
+<h2 id="add-a-bot-action-service-node">Add a Bot Action – Service Node<a class="headerlink" href="#add-a-bot-action-service-node" title="Permanent link">&para;</a></h2>
+<p>A <strong>Service Node</strong> allows you to make a backend API call. It is included in the <strong>Bot Actions</strong> node. Here the service node is used to call an API to update the provided booking based on the user’s input, with the new flight and the selected seat.</p>
+<p>To add a <strong>Bot Action – Service Node</strong>, follow the steps below:</p>
+<ol>
+<li>Click the <strong>+</strong> below the <em>Seat</em> Entity node.</li>
+<li>Select <strong>Bot Action</strong>, click to open properties, name it <em>UpdateBooking</em>, and close the properties window.</li>
+<li>To add a Service Node, click the <strong>+</strong> icon next to the <strong>Update Booking</strong> Bot Action node to expand it</li>
+<li>Click the <strong>+</strong> icon within the <strong>Bot Action</strong> layout, and select <strong>Service</strong>.</li>
 <li>Click <strong>+ New Service</strong></li>
 <li>The <strong>Property Panel</strong> for the Service Node is displayed, if not click on the newly created entity node to open it.</li>
 <li>Enter the following details:<ul>
-<li><strong>Name</strong>: <em>GetBooking</em></li>
-<li><strong>Display Name</strong>: <em>Get Booking</em></li>
+<li><strong>Name</strong>: <em>UpdateBookingService</em></li>
+<li><strong>Display Name</strong>: <em>Update Booking Service</em></li>
 </ul>
 </li>
-<li>Under <em>Request Definition</em>: click <strong>Define Request</strong> and enter it.</li>
-</ul>
-</li>
+<li>Under Request Definition: click <strong>Define Request</strong>.</li>
 </ol>
-<h3 id="add-a-bot-action-service-node-update-balance">Add a Bot Action – Service Node (Update Balance)<a class="headerlink" href="#add-a-bot-action-service-node-update-balance" title="Permanent link">&para;</a></h3>
-<p>Here the service node is used to call an API to update the account balance for the user entered booking number.</p>
-<p>We will be using a dummy API setup for this tutorial.</p>
+<p>Here is an example request to enter: 
+<code>https://5c3c633d29429300143fe4d2.mockapi.io:{{context.entities.CurrentFlight}}./BookingDetails/{{context.entities.NewFlight}}./BookingDetails/{{context.entities.Seat}}</code></p>
+<h2 id="add-a-message-node">Add a Message Node<a class="headerlink" href="#add-a-message-node" title="Permanent link">&para;</a></h2>
+<p>A <strong>Message Node</strong> is used to display a message from the VA to the user. Here we will be using the Message node to confirm the update to the user..</p>
 <ol>
-<li>Click the <strong>+</strong> below the <em>GetBooking</em> Service node.</li>
-<li>Select <strong>Service</strong> – Service node is used to make a backend API call to update booking information.</li>
-<li>Click <strong>+ New service</strong>.</li>
-<li>The <strong>Property Panel</strong> for the Service Node is displayed, if not click on the newly added service node to open</li>
-<li>
-<p>Enter the following details:</p>
-<ul>
-<li><strong>Name</strong>: <em>UpdateBooking</em></li>
-<li><strong>Display Name</strong>: <em>Update Booking</em></li>
-<li><strong>Service Type</strong>: <em>Custom Service</em></li>
-<li><strong>Type</strong>: <em>Webservice</em></li>
-<li><strong>Sub Type</strong>: <em>REST</em></li>
-<li>Click <strong>DEFINE REQUEST</strong><ul>
-<li>In the <strong>Define Request Page</strong>, enter the following details:<ul>
-<li><strong>Request type</strong> – <em>PUT</em></li>
-<li><strong>Request URL</strong> –<code>https://5c3c633d29429300143fe4d2.mockapi.io/AccountDetails/{{context.entities.BookingNumber}}.</code>
-This API does not require any Auth Parameters.</li>
-<li>In the <strong>Body</strong> tab, select the type as <em>application/json.</em></li>
-<li>Select the <strong>Test Request</strong> tab.</li>
-<li>Enter an account number and balance in the <strong>Sample Context Values</strong> section.</li>
-<li>Click the <strong>Test</strong> button.</li>
-<li>Wait for the test to be completed and you get a Status: 200.</li>
-</ul>
-</li>
-<li>Click <strong>Save as Sample Response.</strong></li>
-<li>Click <strong>Save.</strong></li>
-</ul>
-</li>
-<li>On the <strong>Service Node</strong> Property window, click the <strong>Connections</strong> tab.<ul>
-<li>Under the <strong>Connection Rules</strong> section, ensure that the <strong>Default</strong> connection is set to <strong>End of Bot Action</strong>.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Close the <em>Service</em> Property Panel.</p>
-</li>
-<li>Click <strong>Next</strong> to the <strong>Bot Action</strong> node to collapse it.</li>
-</ol>
-<h3 id="add-a-message-node">Add a Message Node<a class="headerlink" href="#add-a-message-node" title="Permanent link">&para;</a></h3>
-<p>A Message Node is used to display a message from the assistant to the user.</p>
-<p>Here we will be using the Message node to show the success message.</p>
-<ol>
-<li>Click the <strong>+</strong> below the <strong>GetBooking</strong> Bot Action.</li>
-<li>Select <strong>Message</strong> and click the <strong>+ New message</strong>.</li>
-<li><strong>Property Panel</strong> for the Message Node is displayed</li>
+<li>Click the <strong>+</strong> below the <em>UpdateBooking</em> Bot Action node. </li>
+<li>Select <strong>Message</strong> and click + <strong>New message</strong>. The <strong>Property Panel</strong> for the Message Node is displayed. If not click on the newly added dialog node to open</li>
 <li>Enter the following details:<ul>
-<li><strong>Name</strong>: <em>BookingUpdated</em></li>
-<li><strong>Display Name</strong>: <em>Booking Updated</em></li>
-<li><strong>Bot Responses:</strong> Enter "<em>Your booking has been updated</em>".</li>
+<li><strong>Name</strong>: <em>FlightChangeConfirmation</em></li>
+<li><strong>Display Name</strong>: <em>Flight Change Confirmation</em></li>
+<li><strong>Bot Responses</strong>: <code>The flight {{context.entities.CurrentFlight}} has been changed to flight  {{context.entities.NewFlight}} seat {{context.entities.Seat}}</code></strong></li>
 </ul>
 </li>
-<li>On the <strong>Message Property</strong> Panel, click the <strong>Connections</strong> icon.<ul>
-<li>Change the <strong>Default</strong> connection from <em>Not Connected</em> to <em>End of Dialog</em>‘.</li>
-<li>Click <strong>Save</strong>.</li>
-</ul>
-</li>
+<li>On the <strong>Bot Response</strong> Property Panel, open the connections tab by clicking the <strong>Connections</strong> icon.</li>
+<li>Change the <strong>Default</strong> connection from <em>Not Connected</em> to <em>End of Dialog</em>.</li>
 <li>Close the <strong>Property</strong> Panel.</li>
 </ol>
-<p>When completed, your task may look similar to the one shown below:
-<a class="glightbox" href="../images/add-a-message-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-a-message-node.png" alt="add a message node" title="add a message node" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>The completed task might look similar to the image below:</p>
+<p><a class="glightbox" href="../images/change-flight-task-completed.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/change-flight-task-completed.png" alt="change flight task completed" title="change flight task completed" style="border: 1px solid gray; zoom:75%;"></a> </p>
 <h2 id="test-the-assistant">Test the Assistant<a class="headerlink" href="#test-the-assistant" title="Permanent link">&para;</a></h2>
 <p>To test the <strong>Dialog</strong> task, follow the steps below:</p>
 <ol>
+<li>Use the <strong>Talk to Bot</strong> feature at the bottom right corner of the Platform.</li>
+<li>Enter the utterance (intent name) “<em>Change Flight.</em>”</li>
 <li>
-<p>Use the <strong>Talk to bot</strong> feature, at the bottom right corner of the Platform.</p>
-</li>
-<li>
-<p>Enter the utterance (intent name) “<em>Update Booking</em>”</p>
-</li>
-<li>
-<p>Follow the Bot instructions given below:</p>
-</li>
-<li>
-<p>Enter Booking Number – 29565731.</p>
-</li>
-<li>Select the Update Type – Choose Name.</li>
-<li>Enter the Name: e.g. Anne Smith.</li>
+<p>Follow the instructions below to test:</p>
+<ul>
+<li>Enter the Current Flight.</li>
+<li>Enter the New Flight.</li>
+<li>Select the Seat.</li>
 <li>See the success message.</li>
+</ul>
+<p><a class="glightbox" href="../images/test-bot-change-flight.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-bot-change-flight.png" alt="test bot for change flight" title="test bot for change flight" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
 </ol>
-<p><a class="glightbox" href="../images/test-update-booking.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-update-booking.png" alt="test update booking" title="test update booking" style="border: 1px solid gray; zoom:75%;"></a></p>
 
 
   
