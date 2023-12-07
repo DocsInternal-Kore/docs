@@ -17,7 +17,7 @@
     
     
       
-        <title>Create a Change Flight Task - Kore ai Docs</title>
+        <title>Travel VA: Schedule a Smart Alert - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-a-change-flight-task" class="md-skip">
+        <a href="#travel-va-schedule-a-smart-alert" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create a Change Flight Task
+              Travel VA: Schedule a Smart Alert
             
           </span>
         </div>
@@ -3019,57 +3019,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#assistant-capabilities" class="md-nav__link">
-    Assistant Capabilities
+  <a href="#problem-statement" class="md-nav__link">
+    Problem Statement
   </a>
   
-    <nav class="md-nav" aria-label="Assistant Capabilities">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#add-the-change-flight-dialog-task-intent" class="md-nav__link">
-    Add the Change Flight Dialog Task / Intent
+  <a href="#set-up-an-alert-task" class="md-nav__link">
+    Set Up an Alert Task
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-entity-nodes" class="md-nav__link">
-    Add Entity nodes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-an-entity-node-to-retrieve-the-current-flight-to-change-with-the-following-steps" class="md-nav__link">
-    Add an Entity Node to retrieve the Current Flight to change with the following steps:
+  <a href="#configure-the-api-request" class="md-nav__link">
+    Configure the API Request
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-a-bot-action-service-node" class="md-nav__link">
-    Add a Bot Action – Service Node
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-a-message-node" class="md-nav__link">
-    Add a Message Node
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-the-assistant" class="md-nav__link">
-    Test the Assistant
-  </a>
   
 </li>
       
@@ -3092,151 +3078,60 @@
 
 
 
-<h1 id="create-a-change-flight-task">Create a Change Flight Task<a class="headerlink" href="#create-a-change-flight-task" title="Permanent link">&para;</a></h1>
-<p>This document is part of the documentation related to creating a sample travel assistant. </p>
-<h2 id="assistant-capabilities">Assistant Capabilities<a class="headerlink" href="#assistant-capabilities" title="Permanent link">&para;</a></h2>
-<p>The assistant we build will perform basic travel booking tasks, as follows:</p>
+<h1 id="travel-va-schedule-a-smart-alert">Travel VA: Schedule a Smart Alert<a class="headerlink" href="#travel-va-schedule-a-smart-alert" title="Permanent link">&para;</a></h1>
+<p>In this help page, we will explore a scenario for a Travel Planning Assistant where the user requires weather updates daily for a preferred location. We will configure an <strong>Alert</strong> task to achieve this. We will also enable an auto-subscription on this task.</p>
+<p>For details on an Alert task and its implementation on the XO Platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/">here</a>.</p>
+<h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
+<p>A registered user of a Virtual Assistant(VA) requires a weather update in the form of an alert at a specified time of the day and/or at a specified interval of time.
+<a class="glightbox" href="../images/add-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-dialog-task.png" alt="add dialog task" title="add dialog task" style="border: 1px solid gray; zoom:75%;"></a></p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Check the status of a flight, based on the flight number provided by the user, as seen <a href="https://developer.kore.ai/docs/bots/how-tos/travel-planing-assistant/create-a-travel-virtual-assistant/#Create_a_Dialog_Task">here</a>.</li>
-<li>Update a flight booking, as discussed <a href="https://developer.kore.ai/docs/bots/how-tos/update-booking-task/">here</a>.</li>
-<li>Perform a flight change, based on the current flight and new flight preference provided by the user. as discussed in this present article.</li>
+<li>A working and published VA. We are using a <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-travel-planning-assistant/create-a-travel-virtual-assistant/">Travel Planning Assistant</a>.</li>
+<li>Access to a web service that provides weather updates. We are using a REST service hosted at <a href="http://api.openweathermap.org/">api.openweathermap.org</a>. If you want to use this service, you need to register to their free alert service as we will be using the API key to access their APIs.</li>
 </ul>
-<h3 id="add-the-change-flight-dialog-task-intent">Add the Change Flight Dialog Task / Intent<a class="headerlink" href="#add-the-change-flight-dialog-task-intent" title="Permanent link">&para;</a></h3>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h3 id="set-up-an-alert-task">Set Up an Alert Task<a class="headerlink" href="#set-up-an-alert-task" title="Permanent link">&para;</a></h3>
+<p><strong>Alert tasks</strong> can be used to deliver timely, relevant, and personalized information from enterprise systems to customers and employees by polling the relevant service in real-time or according to a user-defined schedule. To add an Alert Task, follow the steps below:</p>
+<ol>
+<li>From <strong>Build &gt; Conversational Skills</strong> add an <strong>Alert Task</strong>.</li>
+<li>
+<p>On the <strong>Task Details</strong> page, follow the steps below:</p>
 <ul>
-<li>The Change Flight  task will prompt the user to enter their <em>Current</em> and <em>New Flight Numbers</em>.</li>
-<li>Next it would prompt for the Seat preference.</li>
-<li>It will then make a service call to update the booking appropriately.</li>
-<li>The message indicating success or failure is displayed before the end of the dialog.</li>
-</ul>
-<p>To add this Dialog Task, follow the steps below:</p>
-<ol>
-<li>Open the <strong>Travel Planning Assistant</strong>, with the two pre-configured tasks – <em>Check Flight Status</em> and <em>Update Booking</em>.</li>
-<li>Navigate to the <strong>Build &gt;</strong> <strong>Conversational Skills</strong> &gt; <strong>Dialog Task</strong> page from the left menu.</li>
-<li>Click <strong>Create Dialog</strong> from the top right. The <strong>Create Dialog</strong> screen will open.</li>
-<li>Enter the following details:<ul>
-<li><strong>Intent Name</strong> – Enter the Intent name, this is the phrase that triggers the dialog. The intent name should be simple and not more than 3-4 words. For example, <em>Change Flight</em>.</li>
-<li>Under <strong>More Options</strong>, you can add a <strong>description</strong> and other dialog-related details. Let’s retain the default settings.</li>
-<li>You can also include utterances to train this intent.</li>
-<li>Select <strong>Try Conversation Driven Dialog Builder</strong> option.</li>
-</ul>
-</li>
-<li>Click <strong>Proceed</strong>.</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For instructions related to the <b>Legacy Dialog Builder</b>, click <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlp-guidelines/">here</a>.</p></div>
-
-<p><a class="glightbox" href="../images/add-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-dialog-task.png" alt="add dialog task" title="add dialog task" style="border: 1px solid gray; zoom:75%;"></a> </p>
-<ol start="6"><li>Close the <b>User Intent</b> Property Panel.</li></ol>
-
-<h3 id="add-entity-nodes">Add Entity nodes<a class="headerlink" href="#add-entity-nodes" title="Permanent link">&para;</a></h3>
-<p>An Entity Node is typically used to gather information from the user.</p>
-<p>Here we will be using it to capture the user input for the Current Flight (change from) and New Flight (change to). </p>
-<h3 id="add-an-entity-node-to-retrieve-the-current-flight-to-change-with-the-following-steps"><strong>Add an Entity Node to retrieve the Current Flight to change</strong> with the following steps:<a class="headerlink" href="#add-an-entity-node-to-retrieve-the-current-flight-to-change-with-the-following-steps" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Click the <strong>+</strong> icon below the <strong>User Intent</strong> node.</li>
-<li>Select the <strong>Entity</strong> option.</li>
-<li>Click the <strong>+ New entity</strong> icon in the <strong>Property Panel</strong>. Alternatively, click on the newly added entity node to open.</li>
-<li>Enter the following details:<ul>
-<li><strong>Name</strong>: <em>CurrentFlight</em></li>
-<li><strong>Display Name</strong>: <em>Current Flight</em></li>
-<li><strong>Type</strong>: <em>String</em></li>
-<li><strong>User Prompts:</strong> Enter the text "<em>Enter the Current Flight that you want to change from</em>". </li>
-<li>Close the <strong>CurrentFlight</strong> Entity Property Panel.</li>
-</ul>
-</li>
-</ol>
-<p><strong>Add an Entity Node to retrieve the New Flight to change</strong> with the following steps:</p>
-<ol>
-<li>Repeat the above steps to add another entity with the following details:<ul>
-<li><strong>Name</strong>: <em>NewFlight</em></li>
-<li><strong>Display Name</strong>: <em>New Flight</em></li>
-<li><strong>Type</strong>: <em>String</em></li>
-<li><strong>User Prompts:</strong> Enter the text "<em>Enter the New Flight that you want to change to</em>".</li>
-</ul>
-</li>
-<li>Close the <strong>NewFlight</strong> Entity Property Panel.</li>
-</ol>
-<p><strong>Add a Seat Selection Entity Node</strong> with the following steps:</p>
-<ol>
-<li>Repeat the above steps to add another entity with the following details:<ul>
-<li><strong>Name</strong>: <em>Seat</em></li>
-<li><strong>Display Name</strong>: <em>Seat</em></li>
-<li><strong>Type</strong>: <em>List of items (Enumerated)</em>. We need to provide the list of values that the user can select.<ul>
-<li>Click the <strong>Settings (gear)</strong> icon that appears next to the field.</li>
-<li>Opt for <strong>Static List.</strong></li>
-<li>Enter the following options under separate rows as the <strong>Display name</strong>– e.g.: <em>21A, 25C, 32F</em> <em>Value</em> and <em>Synonym</em> columns will auto-populate, leave them as is.</li>
-<li>Define the percentage of <strong>Auto-correction</strong> to be applied to match the user’s input to a value in the list.</li>
-</ul>
-</li>
-</ul>
+<li>Enter a <strong>Task Name</strong>, for example, <em>Get Daily Weather</em>.</li>
+<li>Select <em>Webservice</em> for <strong>Connection Type</strong>.</li>
+<li>Choose <em>REST</em> for <strong>Connection Mode</strong>.</li>
+<li>
+<p>Click <strong>Create &amp; Proceed</strong>.
+<a class="glightbox" href="../images/add-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-dialog-task.png" alt="add dialog task" title="add dialog task" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>Click <strong>Save</strong>.
-<a class="glightbox" href="../images/add-seat-selection-entity-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-seat-selection-entity-node.png" alt="add seat selection entity node" title="add seat selection entity node" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<p>You will be directed to the <strong>Alert Settings</strong> page. Review and modify the <strong>General Settings</strong> if needed. For our use case, we do not need to modify any settings.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="configure-the-api-request">Configure the API Request<a class="headerlink" href="#configure-the-api-request" title="Permanent link">&para;</a></h3>
+<p>Select the <strong>API Request</strong> tab, and follow the steps below:</p>
+<ol>
+<li>Set the <strong>Content Type</strong> to <em>JSON</em>.</li>
+<li>We do not need to set the <strong>Authorization Provider</strong> for our use case. Configure it only if the API you are using has any authorization requirements.</li>
+<li>
+<p>Set <strong>Parameter</strong> to gather the <em>Preferred City</em> from the user. Ensure that it is set as a <strong>Mandatory</strong> field.
+<a class="glightbox" href="../images/add-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-dialog-task.png" alt="add dialog task" title="add dialog task" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>Under <strong>Display List of Values</strong>, select <em>Yes, use channel specific standard formatting for default messages and show an available list of values to the end user.</em></p>
+<p>We will not need any <strong>Initializer</strong> requirements for our use case. Use this in case any JavaScript needs to be executed before the request is sent.</p>
 </li>
-<li><strong>User Prompts</strong>: Enter the text: "<em>Please select a seat</em>.</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can use Javascript in the User Prompt to display available seats. In this case you would need to set the Type  <code>String</code>. For the purpose of this use case, we have chosen to list fixed values, which is why we have set the Type to <code>List of Items</code>.</p></div>
-
-<ol start="5"><li> Close the <b>Seat</b> Entity Property Panel.</li></ol>
-
-<h2 id="add-a-bot-action-service-node">Add a Bot Action – Service Node<a class="headerlink" href="#add-a-bot-action-service-node" title="Permanent link">&para;</a></h2>
-<p>A <strong>Service Node</strong> allows you to make a backend API call. It is included in the <strong>Bot Actions</strong> node. Here the service node is used to call an API to update the provided booking based on the user’s input, with the new flight and the selected seat.</p>
-<p>To add a <strong>Bot Action – Service Node</strong>, follow the steps below:</p>
-<ol>
-<li>Click the <strong>+</strong> below the <em>Seat</em> Entity node.</li>
-<li>Select <strong>Bot Action</strong>, click to open properties, name it <em>UpdateBooking</em>, and close the <strong>Properties</strong> window.</li>
-<li>To add a Service Node, click the <strong>+</strong> icon next to the <strong>Update Booking</strong> Bot Action node to expand it.</li>
-<li>Click the <strong>+</strong> icon within the <strong>Bot Action</strong> layout, and select <strong>Service</strong>.</li>
-<li>Click <strong>+ New Service</strong>.</li>
-<li>The <strong>Property Panel</strong> for the Service Node is displayed, if not click on the newly created entity node to open it.</li>
-<li>Enter the following details:<ul>
-<li><strong>Name</strong>: <em>UpdateBookingService</em></li>
-<li><strong>Display Name</strong>: <em>Update Booking Service</em></li>
-</ul>
-</li>
-<li>Under Request Definition: click <strong>Define Request</strong>.</li>
-</ol>
-<p>Here is an example request to enter: 
-<code>https://5c3c633d29429300143fe4d2.mockapi.io:{{context.entities.CurrentFlight}}./BookingDetails/{{context.entities.NewFlight}}./BookingDetails/{{context.entities.Seat}}</code></p>
-<h2 id="add-a-message-node">Add a Message Node<a class="headerlink" href="#add-a-message-node" title="Permanent link">&para;</a></h2>
-<p>A <strong>Message Node</strong> is used to display a message from the VA to the user. Here we will be using the Message node to confirm the update to the user..</p>
-<ol>
-<li>Click the <strong>+</strong> icon below the <em>UpdateBooking</em> Bot Action node. </li>
-<li>Select <strong>Message</strong> and click <strong>+ New message</strong>. The <strong>Property Panel</strong> for the Message Node is displayed. If not click on the newly added dialog node to open.</li>
-<li>Enter the following details:<ul>
-<li><strong>Name</strong>: <em>FlightChangeConfirmation</em></li>
-<li><strong>Display Name</strong>: <em>Flight Change Confirmation</em></li>
-<li><strong>Bot Responses</strong>: <code>The flight {{context.entities.CurrentFlight}} has been changed to flight  {{context.entities.NewFlight}} seat {{context.entities.Seat}}</code></strong></li>
-</ul>
-</li>
-<li>On the <strong>Bot Response</strong> Property Panel, open the connections tab by clicking the <strong>Connections</strong> icon.</li>
-<li>Change the <strong>Default</strong> connection from <em>Not Connected</em> to <em>End of Dialog</em>.</li>
-<li>Close the <strong>Property</strong> Panel.</li>
-</ol>
-<p>The completed task might look similar to the image below:</p>
-<p><a class="glightbox" href="../images/change-flight-task-completed.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/change-flight-task-completed.png" alt="change flight task completed" title="change flight task completed" style="border: 1px solid gray; zoom:75%;"></a> </p>
-<h2 id="test-the-assistant">Test the Assistant<a class="headerlink" href="#test-the-assistant" title="Permanent link">&para;</a></h2>
-<p>To test the <strong>Dialog</strong> task, follow the steps below:</p>
-<ol>
-<li>Use the <strong>Talk to Bot</strong> feature at the bottom right corner of the Platform.</li>
-<li>Enter the utterance (intent name) “<em>Change Flight.</em>”</li>
+<li>Under <strong>Request</strong> click <strong>Add API</strong> to add the service API that needs to be invoked. We use the <em>GET</em> method from the following API: <code>http://api.openweathermap.org/data/2.5/weather?q={cityname}&amp;APPID=&amp;lt;your-app-id&gt;</code></li>
+<li>The <strong>AppID</strong> in the above URL is assigned to you by <strong>OpenWeather</strong> when you sign up. You can find it from the <a href="https://home.openweathermap.org/api_keys">API Keys</a> section after you login to your account. Notice that the <strong>Parameters</strong> list is populated automatically with the parameters entered earlier.</li>
 <li>
-<p>Follow the instructions below to test:</p>
-<ul>
-<li>Enter the Current Flight.</li>
-<li>Enter the New Flight.</li>
-<li>Select the Seat.</li>
-<li>See the success message.</li>
-</ul>
-<p><a class="glightbox" href="../images/test-bot-change-flight.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-bot-change-flight.png" alt="test bot for change flight" title="test bot for change flight" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<p><strong>Save</strong> the API.
+<a class="glightbox" href="../images/add-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-dialog-task.png" alt="add dialog task" title="add dialog task" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
+<li>
+<p><strong>Test</strong> the API to ensure that the configuration is proper. Enter a sample city name, when prompted and ensure you get a success message and a proper Response.</p>
+</li>
+<li><strong>Save</strong> your settings.</li>
 </ol>
 
 
