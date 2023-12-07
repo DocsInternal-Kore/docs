@@ -3035,14 +3035,7 @@
         
           <li class="md-nav__item">
   <a href="#add-entity-nodes-booking-number-update-type" class="md-nav__link">
-    Add Entity nodes (Booking Number &amp; Update Type)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-an-entity-node" class="md-nav__link">
-    Add an Entity Node
+    Add Entity Nodes (Booking Number &amp; Update Type)
   </a>
   
 </li>
@@ -3133,16 +3126,14 @@
 <p>The Property Panel for User Intent will be displayed. We will retain the default properties.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For instructions related to the Legacy Dialog Builder, refer here.</p>
-</div>
-<ol>
-<li>Close the User Intent Property Panel.
-<a class="glightbox" href="../images/close-user-property-panel.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/close-user-property-panel.png" alt="user property panel" title="user property panel" style="border: 1px solid gray; zoom:75%;"></a> </li>
-</ol>
-<h3 id="add-entity-nodes-booking-number-update-type">Add Entity nodes (Booking Number &amp; Update Type)<a class="headerlink" href="#add-entity-nodes-booking-number-update-type" title="Permanent link">&para;</a></h3>
+<p>For instructions related to the <b>Legacy Dialog Builder</b>, click <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlp-guidelines/">here</a>.</p></div>
+
+<ol start="6"><li>Close the User Intent Property Panel.</li></ol>
+<p><a class="glightbox" href="../images/close-user-property-panel.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/close-user-property-panel.png" alt="user property panel" title="user property panel" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<h3 id="add-entity-nodes-booking-number-update-type">Add Entity Nodes (Booking Number &amp; Update Type)<a class="headerlink" href="#add-entity-nodes-booking-number-update-type" title="Permanent link">&para;</a></h3>
 <p>The Entity Node is typically used to gather information from the user.</p>
 <p>Here we will be using it to capture the user input for Booking Number and type of update. </p>
-<p>Add an Entity node that retrieves the Booking Number as follows:</p>
+<p><strong>Add an Entity node that retrieves the Booking Number</strong> with the following steps:</p>
 <ol>
 <li>Click the <strong>+</strong> below the <em>User Intent</em> node.</li>
 <li>Select the <strong>Entity</strong> option and click <strong>+New Entity</strong>.</li>
@@ -3154,7 +3145,7 @@
 </ul>
 </li>
 </ol>
-<p>Add an Entity Node that retrieves the Update Type </p>
+<p><strong>Add an Entity Node that retrieves the Update Type</strong> with the following steps:</p>
 <ol>
 <li>Click the <strong>+</strong> below the Booking Number node.</li>
 <li>Select the <strong>Entity</strong> option.</li>
@@ -3166,13 +3157,13 @@
 <li><strong>Type</strong>: Select <em>List of Items(enumerated)</em> from the drop-down. We need to provide the list of values that the user can select.<ul>
 <li>Click the <strong>Settings (gear) icon</strong> that appears next to the field.</li>
 <li>Opt for <strong>Static List.</strong></li>
-<li>Enter the following options under separate rows as the <strong>Display name</strong> – <em>Name</em> and <em>Passport Number. _Value</em> and <em>Synonym</em> columns will auto-populate, leave them as is.</li>
+<li>Enter the following options under separate rows as the <strong>Display name</strong> – <em>Name</em> and <em>Passport Number</em>. <em>Value</em> and <em>Synonym</em> columns will auto-populate, leave them as is.</li>
 <li>Define the percentage of <strong>Auto-correction</strong> to be applied to match the user’s input to a value in the list.
 <a class="glightbox" href="../images/define-auto-correction.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/define-auto-correction.png" alt="define autocorrection" title="define autocorrection" style="border: 1px solid gray; zoom:75%;"></a> </li>
 <li>Click <strong>Save</strong>.</li>
 <li>Navigate back to the Entity Property Panel.</li>
 <li><strong>User Prompts:</strong> Enter the following text and hit enter to save:<code>What would you like to update?</code></li>
-<li><strong>Display List Of Values</strong>: Mark as_Yes, use channel specific standard formatting for default messages and show the available list of values to the end user_‘. This will present the list of values in a button template for the supported channels.</li>
+<li><strong>Display List Of Values</strong>: Mark as <em>Yes, use channel specific standard formatting for default messages and show the available list of values to the end user</em>‘. This will present the list of values in a button template for the supported channels.</li>
 </ul>
 </li>
 </ul>
@@ -3182,8 +3173,7 @@
 <li>Close the <strong>UpdateType</strong> Entity Property Panel.
 <a class="glightbox" href="../images/entity-update-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/entity-update-type.png" alt="entity update type" title="entity update type" style="border: 1px solid gray; zoom:75%;"></a> </li>
 </ol>
-<h3 id="add-an-entity-node">Add an Entity Node<a class="headerlink" href="#add-an-entity-node" title="Permanent link">&para;</a></h3>
-<p>Add an Entity Node that retrieves the Updated Name with the following steps: </p>
+<p><strong>Add an Entity Node that retrieves the Updated Name</strong> with the following steps: </p>
 <ol>
 <li>Click the <strong>+</strong> below the <em>UpdateType</em> node.</li>
 <li>Select the <strong>Entity</strong> option and click <strong>+New Entity</strong>.</li>
@@ -3203,7 +3193,7 @@
 <ol>
 <li>Click the <strong>+</strong> below the <em>UpdateType</em> Entity node.</li>
 <li>Select <strong>Bot Action</strong>, click to open properties, name it GetBooking, and close the properties window.</li>
-<li>To add a service node, click the <strong>+</strong> next to the <strong>Get Booking Bot</strong> Action node to expand it.</li>
+<li>To add a service node, click the <strong>+</strong> icon next to the <strong>Get Booking Bot</strong> Action node to expand it.</li>
 <li>Click the <strong>+</strong> within the Bot Action layout.</li>
 <li>Select <strong>Service</strong> – Service node is used to make a backend API call to get booking information.<ul>
 <li>Click <strong>+ New Service</strong></li>
@@ -3258,7 +3248,7 @@ This API does not require any Auth Parameters.</li>
 <li>
 <p>Close the <em>Service</em> Property Panel.</p>
 </li>
-<li>Click next to the Bot Action node to collapse it.</li>
+<li>Click <strong>Next</strong> to the Bot Action node to collapse it.</li>
 </ol>
 <h3 id="add-a-message-node">Add a Message Node<a class="headerlink" href="#add-a-message-node" title="Permanent link">&para;</a></h3>
 <p>A Message Node is used to display a message from the assistant to the user.</p>
@@ -3290,9 +3280,9 @@ This API does not require any Auth Parameters.</li>
 <li>Enter Booking Number – 29565731.</li>
 <li>Select the Update Type – Choose Name.</li>
 <li>Enter the Name: e.g. Anne Smith.</li>
-<li>See the success message.
-<a class="glightbox" href="../images/test-update-booking.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-update-booking.png" alt="test update booking" title="test update booking" style="border: 1px solid gray; zoom:75%;"></a></li>
+<li>See the success message.</li>
 </ul>
+<p><a class="glightbox" href="../images/test-update-booking.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-update-booking.png" alt="test update booking" title="test update booking" style="border: 1px solid gray; zoom:75%;"></a></p>
 
 
   
