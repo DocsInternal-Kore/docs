@@ -17,7 +17,7 @@
     
     
       
-        <title>Sending Bulk Invites to Enroll Users - Kore ai Docs</title>
+        <title>Importing Users and User Data - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sending-bulk-invites-to-enroll-users" class="md-skip">
+        <a href="#importing-users-and-user-data" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sending Bulk Invites to Enroll Users
+              Importing Users and User Data
             
           </span>
         </div>
@@ -3019,29 +3019,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-bulk-invites" class="md-nav__link">
-    About Bulk Invites
+  <a href="#file-requirements" class="md-nav__link">
+    File Requirements
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-bulk-invite-file" class="md-nav__link">
-    Create a Bulk Invite File
+  <a href="#create-and-upload-an-import-file" class="md-nav__link">
+    Create and Upload an Import File
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#upload-a-bulk-invite-file" class="md-nav__link">
-    Upload a Bulk Invite File
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#view-the-results" class="md-nav__link">
-    View the Results
+  <a href="#view-results" class="md-nav__link">
+    View Results
   </a>
   
 </li>
@@ -3072,58 +3065,96 @@
 
 
 
-<h1 id="sending-bulk-invites-to-enroll-users">Sending Bulk Invites to Enroll Users<a class="headerlink" href="#sending-bulk-invites-to-enroll-users" title="Permanent link">&para;</a></h1>
-<p>On the <strong>Enrollment &gt; Bulk Invite</strong> page, you can use a text file that contains email addresses of the users you want to join your account. This option is particularly useful to enroll a large number of members.</p>
-<p>The import file should be a basic text file with one email address per line and saved as a .txt file format. After you create a bulk invite file, you need to upload the file.</p>
-<h2 id="about-bulk-invites">About Bulk Invites<a class="headerlink" href="#about-bulk-invites" title="Permanent link">&para;</a></h2>
-<p>When using a bulk invite file to add new users to your account, the following needs to be kept in mind:</p>
+<h1 id="importing-users-and-user-data">Importing Users and User Data<a class="headerlink" href="#importing-users-and-user-data" title="Permanent link">&para;</a></h1>
+<p>If you need to invite multiple Kore.ai users and you have information about users in addition to the email address, such as the <strong>First Name</strong>, <strong>Last Name</strong>, <strong>Department</strong>, <strong>Phone</strong>, and <strong>Job Title</strong>, you can use the <strong>Import</strong> page to add new users and update existing users based on a list that contains additional user information. The following illustration is an example of the <strong>Import</strong> page in the <strong>Enrollment</strong> module.</p>
+<p><a class="glightbox" href="../images/importing-users-and-user-data-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img1.png" alt="Enrollment - Import" title="Enrollment - Import" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<p>The import file can be a basic text file and saved as a .txt or .csv file format. After you create an import file, you can upload the file to add or update the Kore.ai users in your account.</p>
+<h3 id="file-requirements">File Requirements<a class="headerlink" href="#file-requirements" title="Permanent link">&para;</a></h3>
+<p>When you create an import file, you must adhere to the following guidelines:</p>
 <ul>
-<li>Entries with an invalid email format are ignored.</li>
-<li>Invitation emails are sent to each email address which was successfully imported.</li>
-<li>Invites are not sent to existing account users.</li>
+<li>The first row identifies the name of the field under which the data is stored within Kore.ai, kind of header row.</li>
+<li>
+<p>The following Kore.ai account fields are required:</p>
+<ul>
+<li><strong>Email ID</strong> – mandatory</li>
+<li><strong>First Name</strong> – mandatory</li>
+<li><strong>Last Name</strong> – mandatory</li>
+<li><strong>Alternate ID</strong>, <strong>Work Phone</strong>, <strong>Title</strong>, <strong>Department</strong> – optional</li>
+<li><strong>User Status</strong> – – mandatory – One of<ul>
+<li><strong>New</strong></li>
+<li><strong>Update</strong></li>
+<li><strong>Delete</strong></li>
+<li><strong>Activate</strong></li>
 </ul>
-<p>The following illustration is an example of the <strong>Bulk Invite</strong> page in the <strong>Enrollment</strong> module.</p>
-<p><a class="glightbox" href="../images/inviting-many-users-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/inviting-many-users-img1.png" alt="Bulk invite" title="Bulk invite" style="border: 1px solid gray;zoom:70%;"/></a></p>
-<h2 id="create-a-bulk-invite-file">Create a Bulk Invite File<a class="headerlink" href="#create-a-bulk-invite-file" title="Permanent link">&para;</a></h2>
-<p>You can create an invitation file with all the email addresses of the users you want to add to your Enterprise Bots Platform account. <strong>To create a bulk invite file</strong></p>
-<ol>
-<li>In a text editor, enter a complete email address on each line or in a comma-separated list as shown in the following example: For a '.txt' file:  <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#75;&#111;&#114;&#101;&#46;&#97;&#105;&#85;&#115;&#101;&#114;&#49;&#64;&#107;&#111;&#114;&#101;&#46;&#99;&#111;&#109;">&#75;&#111;&#114;&#101;&#46;&#97;&#105;&#85;&#115;&#101;&#114;&#49;&#64;&#107;&#111;&#114;&#101;&#46;&#99;&#111;&#109;</a> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#75;&#111;&#114;&#101;&#46;&#97;&#105;&#85;&#115;&#101;&#114;&#50;&#64;&#107;&#111;&#114;&#101;&#46;&#99;&#111;&#109;">&#75;&#111;&#114;&#101;&#46;&#97;&#105;&#85;&#115;&#101;&#114;&#50;&#64;&#107;&#111;&#114;&#101;&#46;&#99;&#111;&#109;</a> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#75;&#111;&#114;&#101;&#46;&#97;&#105;&#85;&#115;&#101;&#114;&#51;&#64;&#107;&#111;&#114;&#101;&#46;&#99;&#111;&#109;">&#75;&#111;&#114;&#101;&#46;&#97;&#105;&#85;&#115;&#101;&#114;&#51;&#64;&#107;&#111;&#114;&#101;&#46;&#99;&#111;&#109;</a></li>
-<li>Save the bulk invite file as a '.txt' file, for example, Kore.aiImport.txt.</li>
-<li>After you create a bulk invite file, you can upload the file to invite your users.</li>
-</ol>
-<p>The following image is an example of text editor used to create a bulk invite file that can be uploaded with your custom list of users to invite to your Kore.ai account. </p>
-<p><a class="glightbox" href="../images/inviting-many-users-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/inviting-many-users-img2.png" alt="Bulk invite file" title="Bulk invite file" style="border: 1px solid gray;zoom:70%;"/></a></p>
-<h2 id="upload-a-bulk-invite-file">Upload a Bulk Invite File<a class="headerlink" href="#upload-a-bulk-invite-file" title="Permanent link">&para;</a></h2>
-<p>This topic describes how to upload a file that contains user email addresses to invite the users to become Kore.ai users in your account. <strong>To upload a bulk invite file:</strong></p>
-<ol>
-<li>In the <strong>Enrollment</strong> module, on the <strong>Bulk Invite</strong> page, click <strong>Choose File</strong>.</li>
-<li>Navigate to your bulk invite file created as mentioned in the previous section, and then click <strong>Open</strong>. The filename is displayed to the right of the <strong>Choose File</strong> button.</li>
-<li>Click <strong>Send Invitations</strong>. The status of the import is described immediately following the <strong>Send Invitations</strong> button.</li>
-<li>Click the <strong>View details here</strong> link to review the details of the import. In addition, you can click the <em>File Based Bulk User Invite History</em> link to review import statuses from prior bulk invite imports.</li>
-</ol>
-<p>The following image shows the location of the upload details.</p>
-<p><a class="glightbox" href="../images/inviting-many-users-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/inviting-many-users-img3.png" alt="Location of the upload details" title="Location of the upload details" style="border: 1px solid gray;zoom:70%;"/></a></p>
-<h2 id="view-the-results">View the Results<a class="headerlink" href="#view-the-results" title="Permanent link">&para;</a></h2>
-<p>You can review the bulk invite import operation results on a per-user basis if needed. <strong>To view results of a bulk user import</strong></p>
-<ol>
-<li>In the <strong>Enrollment</strong> module, on the <strong>Bulk Invite</strong> page, click <strong><em>View details here</em></strong>.</li>
-<li>The <strong>Report on File Based Bulk User Invite</strong> dialog is displayed as shown in the following illustration.<br />
-<a class="glightbox" href="../images/inviting-many-users-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/inviting-many-users-img4.png" alt="Report on File Based Bulk User Invite" title="Report on File Based Bulk User Invite" style="border: 1px solid gray;zoom:70%;"/></a></li>
-</ol>
-<p>Click <strong>Invite History</strong> to open the <strong>History of Bulk User Invite</strong> dialog to select a report from a previous date.</p>
-<h2 id="view-history">View History<a class="headerlink" href="#view-history" title="Permanent link">&para;</a></h2>
-<p>You can review all historical bulk invite import operations along with the results of that import. <strong>To view results of a bulk user invite:</strong></p>
-<ol>
-<li>On the <strong>Enrollment</strong> &gt; <strong>Bulk Invite</strong> page, click <em>File Based Bulk user Invite History</em>.</li>
-<li>
-<p>The <strong>History of Bulk User Invite</strong> dialog is displayed as shown in the following illustration.<br />
-<a class="glightbox" href="../images/inviting-many-users-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/inviting-many-users-img5.png" alt="History of Bulk User Invite" title="History of Bulk User Invite" style="border: 1px solid gray;zoom:70%;"/></a></p>
+</li>
+</ul>
 </li>
 <li>
-<p>To view the results of an import, in the <strong>Report</strong> column for the import that you want to view, click <strong><em>Results</em></strong>.</p>
+<p>Create one row for each Kore.ai user</p>
 </li>
-<li>The <strong>Report on File Based Bulk User Invite</strong> dialog is displayed as shown in the following illustration.<br />
-<a class="glightbox" href="../images/inviting-many-users-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/inviting-many-users-img4.png" alt="Report on File Based Bulk User Invite" title="Report on File Based Bulk User Invite" style="border: 1px solid gray;zoom:70%;"/></a></li>
+<li>Valid field delimiters are comma, pipe, semicolon, and tab</li>
+</ul>
+<p>When using an import file, the following validation rules are applied:</p>
+<ul>
+<li>Entries with invalid email formats are ignored.</li>
+<li>Each successful import of an email address generates an invitation email to become a Kore.ai user.</li>
+<li>Existing users in your Kore.ai account are not sent invitation emails.</li>
+<li>Imported users with status set to **Activate **are sent a notification that the Kore.ai account is activated.</li>
+</ul>
+<p><strong>Sample File</strong></p>
+<p>For a .txt file:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Email ID, First Name, Last Name, Alternate ID, Work Phone, Title, Department, User Status
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Kore.aiUser1@kore.com,User1FirstName,User1LastName,,800-555-1212,President,Executive,New
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Kore.aiUser2@kore.com,User2FirstName,User2LastName,,800-555-5555,VicePresident,Executive,New
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Kore.aiUser3@kore.com,User3FirstName,User1LastName,,,,,New
+</span></code></pre></div></p>
+<h3 id="create-and-upload-an-import-file">Create and Upload an Import File<a class="headerlink" href="#create-and-upload-an-import-file" title="Permanent link">&para;</a></h3>
+<p>You can create a file to invite users in your organization to become Kore.ai users that you can manage as a Bots Admin. This topic describes how to create a file that contains the email addresses and user information, such as first and last name, phone number, department, and so forth, for the users that you want to invite to become Kore.ai users in your account. If you only have email address information for your users, you should create and <a href="../enrolling-many-users/" target="_blank">import a bulk invite file</a> instead. <strong>To create an import file</strong></p>
+<ol>
+<li>
+<p>In a text editor or spreadsheet, enter the field IDs on the first line, and then enter a complete email address and data on each following line or in a comma-separated list as shown in the following example:  </p>
+<p><strong>For a .txt file:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Email ID, First Name, Last Name, Alternate ID, Work Phone, Title, Department, User Status
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Kore.aiUser1@kore.com,User1FirstName,User1LastName,User1AlternateID,800-555-1212,President,Executive,New
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Kore.aiUser2@kore.com,User2FirstName,User2LastName,User2AlternateID,800-555-5555,VicePresident,Executive,New
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Kore.aiUser3@kore.com,User3FirstName,User1LastName,,,,New
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Save the import file as a .txt or .csv file, for example, Kore.aiImport.txt or Kore.aiImport.csv. After you create an import file, you can upload the file to invite your account users.</p>
+</li>
+</ol>
+<p>After you have created an import file, you need to upload the import file. This topic describes how you can upload your import file of users of your account. <strong>To upload a user import file</strong></p>
+<ol>
+<li>In the <strong>Enrollment</strong> <strong>&gt;</strong> <strong>Import</strong> page, click <strong>Choose File</strong>.</li>
+<li>Navigate to your import file, and then click <strong>Open</strong>. The filename is displayed to the right of the <strong>Choose File</strong> button.</li>
+<li>Click <strong>Import File</strong>. The status of the import is described immediately following the <strong>Import File</strong> button.</li>
+<li>You can click the <em>File Based Bulk User Import History</em> link to review an import status from a prior import.<br />
+<a class="glightbox" href="../images/importing-users-and-user-data-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img2.png" alt="File Based Bulk User Import History" title="File Based Bulk User Import History" style="border: 1px solid gray;zoom:70%;"/></a></li>
+</ol>
+<h3 id="view-results">View Results<a class="headerlink" href="#view-results" title="Permanent link">&para;</a></h3>
+<p>You can review the import operation results on a per-user basis if needed. This topic describes how to view the results of the current import report. <strong>To view the results of the current user import</strong></p>
+<ol>
+<li>
+<p>On the <strong>Enrollment &gt; Import</strong> page, click the <em>here</em> link, as shown below.<br />
+<a class="glightbox" href="../images/importing-users-and-user-data-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img3.png" alt="File Based Bulk User Import History" title="File Based Bulk User Import History" style="border: 1px solid gray;zoom:70%;"/></a></p>
+</li>
+<li>
+<p>The <strong>Report On File Import</strong> dialog opens.<br />
+<a class="glightbox" href="../images/importing-users-and-user-data-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img4.png" alt="Report on File Import" title="Report on File Import" style="border: 1px solid gray;zoom:70%;"/></a></p>
+</li>
+</ol>
+<h3 id="view-history">View History<a class="headerlink" href="#view-history" title="Permanent link">&para;</a></h3>
+<p>After you create and import a list of users in your account, you may want to review the results of the import. This topic describes how to view the historical list of file-based user imports. <strong>To view historical import reports</strong></p>
+<ol>
+<li>
+<p>In the <strong>Enrollment</strong> module, on the <strong>Import</strong> page, click <em>File Based Bulk User Import History</em> as shown in the following illustration.<br />
+<a class="glightbox" href="../images/importing-users-and-user-data-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img5.png" alt="Click 'File Based Bulk User Import History'" title="Click 'File Based Bulk User Import History'" style="border: 1px solid gray;zoom:70%;"/></a></p>
+</li>
+<li>
+<p>In the <strong>File Based Import History</strong> dialog, to view the results of an import, in the <strong>Report</strong> column for the import that you want to view, click Results. The individual user results for the import are displayed in the the <strong>File Based Import Results</strong> dialog as shown in the following illustration.<br />
+<a class="glightbox" href="../images/importing-users-and-user-data-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/importing-users-and-user-data-img6.png" alt="File Based Import Results" title="File Based Import Results" style="border: 1px solid gray;zoom:70%;"/></a></p>
+</li>
 </ol>
 
 
