@@ -3946,7 +3946,8 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 <li>Knowledge on how to <a href="https://developer.kore.ai/docs/bots/how-tos/travel-planing-assistant/create-a-travel-virtual-assistant/">build a virtual assistant</a>. </li>
 <li>A Virtual Assistant with the Dialog Tasks mentioned below – <a href="https://developer.kore.ai/docs/bots/how-tos/travel-assistant-overview/">see an overview here</a>.</li>
 <li>
-<p><strong>Check Flight Status</strong>– This task prompts the user to enter their flight number and displays its status.  <a class="glightbox" href="../images/flightstatus-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/flightstatus-task.png" alt="flight status task" title="flight status task" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<p><strong>Check Flight Status</strong>– This task prompts the user to enter their flight number and displays its status.</p>
+<p><a class="glightbox" href="../images/flightstatus-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/flightstatus-task.png" alt="flight status task" title="flight status task" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
 <li>
 <p><strong>Change Flight</strong> – This task prompts the user for their Current Flight and New Flight, then performs the flight change.</p>
@@ -3969,8 +3970,8 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 <li><strong>User-driven transition</strong> – This is a bit complex since we have no way of knowing when, during the current task flow, the user would make such a request and it requires a combination of tags, entity emission, and extraction.</li>
 </ul>
 <h3 id="task-driven-context-switching">Task-driven Context switching<a class="headerlink" href="#task-driven-context-switching" title="Permanent link">&para;</a></h3>
-<p>The following is the scenario where the Change Flight dialog invokes the Check Flight Status task to ensure that the flight is available to book.
-<a class="glightbox" href="../images/task-driven-context-switching.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/task-driven-context-switching.png" alt="task driven context switching" title="task driven context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>The following is the scenario where the Change Flight dialog invokes the Check Flight Status task to ensure that the flight is available to book.</p>
+<p><a class="glightbox" href="../images/task-driven-context-switching.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/task-driven-context-switching.png" alt="task driven context switching" title="task driven context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>We will be using the Context Variables and Entity Pre-Assignments to achieve this.</p>
 <p>We need to invoke Check Flight Status from Change Flight, check flight availability and follow the steps below:</p>
 <ol>
@@ -3983,9 +3984,9 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 <ul>
 <li><strong>Flight Number</strong> – entity required in the Check Flight Status  dialog set to <code>context.entities.currentflight</code></li>
 <li><strong>Add Key/Value</strong> – pair <code>context.type</code> and <em>change</em> identifying the Change Flight  intent. This will be checked in the Check Flight Status  dialog as shown in the next step to modify the flow.</li>
-<li>Ensure that the <strong>Transition Option</strong> is set to Initiate <em>Check Flight Status</em>,., once complete return to this node.
-<a class="glightbox" href="../images/transition-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/transition-node.png" alt="transition node" title="transition node" style="border: 1px solid gray; zoom:75%;"></a></li>
+<li>Ensure that the <strong>Transition Option</strong> is set to Initiate <em>Check Flight Status</em>,., once complete return to this node.</li>
 </ul>
+<p><a class="glightbox" href="../images/transition-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/transition-node.png" alt="transition node" title="transition node" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p><strong>Message Node</strong> to display a message that the new flight is not available to book. Connect this message back to the <strong>New Flight</strong> Entity node, so that the user be prompted to select a different flight.</p>
@@ -4018,8 +4019,8 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 </span></code></pre></div>
 <p>Talk to the Bot to see the changes in action.</p>
 <h3 id="user-triggered-context-switching">User triggered context switching<a class="headerlink" href="#user-triggered-context-switching" title="Permanent link">&para;</a></h3>
-<p>While asking to change their flight, users might ask for the status of the flight that they want to switch to.
-<a class="glightbox" href="../images/user-triggered-context-switching.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/user-triggered-context-switching.png" alt="user triggered context switching" title="user triggered context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>While asking to change their flight, users might ask for the status of the flight that they want to switch to.</p>
+<p><a class="glightbox" href="../images/user-triggered-context-switching.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/user-triggered-context-switching.png" alt="user triggered context switching" title="user triggered context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Let us see how this can be achieved. We will be using historic tags – system generated and custom tags. The historic tags get transmitted from one intent to another automatically.</p>
 <p>First, modify the Change Flight task to populate the appropriate tags and configure the Hold and Resume settings. Follow the steps below to complete the process:</p>
 <ol>
