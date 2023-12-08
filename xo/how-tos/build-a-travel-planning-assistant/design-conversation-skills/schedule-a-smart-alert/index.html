@@ -3114,18 +3114,22 @@
 <p>Select the <strong>API Request</strong> tab, and follow the steps below:</p>
 <ol>
 <li>Set the <strong>Content Type</strong> to <em>JSON</em>. We do not need to set the <strong>Authorization Provider</strong> for our use case. Configure it only if the API you are using has any authorization requirements.</li>
-<li>Set <strong>Parameter</strong> to gather the <em>Preferred City</em> from the user. Ensure that it is set as a <strong>Mandatory</strong> field.</li>
-</ol>
-<p><a class="glightbox" href="../images/gather-preferred-city.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/gather-preferred-city.png" alt="gather preferred city info" title="gather preferred city info" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li>We will not need any <strong>Initializer</strong> requirements for our use case. Use this in case any JavaScript needs to be executed before the request is sent.</li>
+<li>
+<p>Set <strong>Parameter</strong> to gather the <em>Preferred City</em> from the user. Ensure that it is set as a <strong>Mandatory</strong> field.
+<a class="glightbox" href="../images/gather-preferred-city.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/gather-preferred-city.png" alt="gather preferred city info" title="gather preferred city info" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>We will not need any <strong>Initializer</strong> requirements for our use case. Use this in case any JavaScript needs to be executed before the request is sent.</p>
+</li>
 <li>Under <strong>Request</strong> click <strong>Add API</strong> to add the service API that needs to be invoked. We use the <em>GET</em> method from the following API: <code>http://api.openweathermap.org/data/2.5/weather?q={cityname}&amp;APPID=&amp;lt;your-app-id&gt;</code></li>
 <li>The <strong>AppID</strong> in the above URL is assigned to you by <strong>OpenWeather</strong> when you sign up. You can find it from the <a href="https://home.openweathermap.org/api_keys" target="_blank">API Keys</a> section after you login to your account. Notice that the <strong>Parameters</strong> list is populated automatically with the parameters entered earlier.</li>
-<li><strong>Save</strong> the API.</li>
-</ol>
-<p><a class="glightbox" href="../images/smart-alert-save-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/smart-alert-save-api.png" alt="save api" title="save api" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li><strong>Test</strong> the API to ensure that the configuration is proper. Enter a sample city name, when prompted and ensure you get a success message and a proper Response.</li>
+<li>
+<p><strong>Save</strong> the API.
+<a class="glightbox" href="../images/smart-alert-save-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/smart-alert-save-api.png" alt="save api" title="save api" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p><strong>Test</strong> the API to ensure that the configuration is proper. Enter a sample city name, when prompted and ensure you get a success message and a proper Response.</p>
+</li>
 <li><strong>Save</strong> your settings.</li>
 </ol>
 
