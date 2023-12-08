@@ -3132,9 +3132,9 @@
 <p>To install the Kore.ai Connector, you should review the following hardware and software requirements.</p>
 <p><strong>Hardware Requirements</strong></p>
 <p>The server hosting the Kore.ai Connector Agent should have:</p>
-<p><strong>RAM:</strong> 4 GB
-<strong>CPU Core:</strong> 8
-<strong>Hard disk space:</strong> 10 GB</p>
+<p><strong>RAM:</strong> 4 GB</p>
+<p><strong>CPU Core:</strong> 8</p>
+<p><strong>Hard disk space:</strong> 10 GB</p>
 <p>To support the following:</p>
 <ul>
 <li>Kore.ai Connector download – 10MB</li>
@@ -3348,7 +3348,7 @@ You must configure access control for each bot application that will use the Kor
 <li><strong>internalhost</strong> – Specify the actual host name of the on-premises enterprise application used for data exchange with your Bots.</li>
 <li><strong>internalport</strong> – Specify the actual port of the on-premises enterprise application used for data exchange with your Bots.</li>
 <li><strong>protocol</strong> – Specify HTTP or HTTPS for the connection to on-premises enterprise applications.</li>
-<li><strong>allowedPaths</strong> – Specify all paths as “/<em>” or a specific array of paths for the host, not to include any parameters. The Kore.ai Connector checks the path up to, but not including parameters beginning with *</em>"?"**</li>
+<li><strong>allowedPaths</strong> – Specify all paths as “/<em>” or a specific array of paths for the host, not to include any parameters. The Kore.ai Connector checks the path up to, but not including parameters beginning with "*</em>?**"</li>
 </ul>
 <p>The following image is an example of a configured accesscontrol.json file with four Bot configurations.</p>
 <p><a class="glightbox" href="../images/kore-ai-connector-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img8.png" alt="configured accessconteol.json" title="configured accesscontrol.json" style="border: 1px solid gray;zoom:70%;"/></a></p>
@@ -3394,13 +3394,13 @@ You must configure access control for each bot application that will use the Kor
 <ol>
 <li>In the <strong>Set up Request Chain Object</strong> dialog, select <strong>Access using connector</strong>, save the changes, and then publish the Bot. For more information about configuring the request object, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/" target="_blank">Configuring an Alert Task Request Object</a> or  <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/action-info-task/kore-bot-action-tasks/" target="_blank">Configuring an Action Task Request Object</a> in the Bot Builder tool documentation.</li>
 </ol>
-</li>
-</ol>
 <p>!!! Note</p>
-<div class="language-text highlight"><pre><span></span><code>     The option in the **Set up Request Chain Object** dialog for **Access using connector** is only available after the Kore.ai connector is enabled in the Bots Admin Console.
+<div class="language-text highlight"><pre><span></span><code> The option in the **Set up Request Chain Object** dialog for **Access using connector** is only available after the Kore.ai connector is enabled in the Bots Admin Console.
 </code></pre></div>
-<ol>
-<li>In the Bots Admin Console, deploy the published Bot and assign the users that can use the Bot tasks in your enterprise. For more information, see <a href="../bot-management" target="_blank">Bot Management</a>.</li>
+</li>
+<li>
+<p>In the Bots Admin Console, deploy the published Bot and assign the users that can use the Bot tasks in your enterprise. For more information, see <a href="../bot-management" target="_blank">Bot Management</a>.</p>
+</li>
 </ol>
 <p>After the Kore.ai Connector is installed on your application server, enabled in Bots Admin Console, and your Bots customized to use the connector, you only need to monitor the status of your connector in the Bots Admin Console.
 If you cannot start the Kore.ai Connector, or customers are reporting errors, you may need to reconfigure Kore.ai Connector settings.</p>
