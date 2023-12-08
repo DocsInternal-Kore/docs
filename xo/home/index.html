@@ -1,0 +1,3943 @@
+<div class="kore-home-cntr">
+    
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Rajasekhar Balla">
+      
+      
+      
+      
+        <link rel="next" href="../virtual-assistants-overview/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+    
+    
+      
+        <title>Material for MkDocs - Kore ai Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra_kore.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-6GL1FRPFB3"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-6GL1FRPFB3",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-6GL1FRPFB3",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine base classes -->
+
+
+<style>
+  .md-header__option{
+    margin-bottom: 0px;
+  }
+  .nav-links{
+    display: flex;
+  }
+  .m-0{
+    margin: 0px;
+  }
+  .md-cstm-sele{
+    z-index: 30;
+  }
+  .md-cstm-sele .nav-item{
+    display: flex;
+    align-items: center;
+  }
+  .md-cstm-sele .nav-item span{
+    transform: rotate(90deg);
+  }
+</style>
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+
+    <!-- Link to home -->
+    <!-- <a
+      href=".."
+      title="Kore ai Docs"
+      class="md-header__button md-logo"
+      aria-label="Kore ai Docs"
+      data-md-component="logo"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a> -->
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <!-- <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kore ai Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Material for MkDocs
+            
+          </span>
+        </div>
+      </div> -->
+      <!-- <h1>Kore ai test</h1> -->
+      <div class="logo">
+        <div class="logo-img">
+          <img width="228" height="58" src="https://kore-wordpress.s3.us-east-2.amazonaws.com/developer.kore.ai/wp-content/uploads/20210813113826/kore.ai_logo.svg" class="attachment-large size-large" alt="kore ai">
+          <span class="logo-title">DOCUMENTATION</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="nav-links">
+      <a class="nav-item" 
+          target="_blank" 
+          href="https://community.kore.ai/?__hstc=48303737.3349b4c86fed311d945dbec6899be857.1528698434671.1528698434671.1528698434671.1&__hssc=48303737.1.1528698434672&__hsfp=2270402703"
+      >Release Note</a>
+
+      <!-- <a class="nav-item"
+          target="_blank" 
+          href="https://support.kore.ai/"
+      > -->
+      <div class="md-select md-cstm-sele">
+        <a
+          class="md-header__button m-0 nav-item"
+        >
+          Get Support
+          <span class="md-nav__icon md-icon"></span>
+      </a>
+        <div class="md-select__inner">
+          <ul class="md-select__list">
+            
+              <li class="md-select__item">
+                <a href="" class="md-select__link">
+                  text
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+  
+
+      <a class="nav-item" href="#">Doc Versions</a>
+      
+    </div>
+
+    <!-- Color palette -->
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input
+              class="md-option"
+              data-md-color-media=""
+              data-md-color-scheme="default"
+              data-md-color-primary="indigo"
+              data-md-color-accent="indigo"
+              
+                aria-label="Switch to dark mode"
+              
+              type="radio"
+              name="__palette"
+              id="__palette_1"
+            />
+            
+              <label
+                class="md-header__button md-icon"
+                title="Switch to dark mode"
+                for="__palette_2"
+                hidden
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input
+              class="md-option"
+              data-md-color-media=""
+              data-md-color-scheme="slate"
+              data-md-color-primary="indigo"
+              data-md-color-accent="lime"
+              
+                aria-label="Switch to light mode"
+              
+              type="radio"
+              name="__palette"
+              id="__palette_2"
+            />
+            
+              <label
+                class="md-header__button md-icon"
+                title="Switch to light mode"
+                for="__palette_1"
+                hidden
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+
+    <!-- Site language selector -->
+    
+      <div class="md-header__option">
+        <div class="md-select md-cstm-sele">
+          
+          <button
+            class="md-header__button md-icon"
+            aria-label="Select language"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a
+                    href="https://docsinternal-kore.github.io/docs/en"
+                    hreflang="en"
+                    class="md-select__link"
+                  >
+                    en - English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a
+                    href="https://docsinternal-kore.github.io/docs/ja"
+                    hreflang="ja"
+                    class="md-select__link"
+                  >
+                    ja - 日本語
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a
+                    href="https://docsinternal-kore.github.io/docs/ko"
+                    hreflang="jako"
+                    class="md-select__link"
+                  >
+                    ko - 한국어
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+
+    <!-- Button to open search modal -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+
+      <!-- Search interface -->
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+  
+  </nav>
+
+  <!-- Navigation tabs (sticky) -->
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../virtual-assistants-overview/" class="md-tabs__link">
+        Platform
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/" class="md-tabs__link">
+        Automation
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../answers/content-sources/directory/" class="md-tabs__link">
+        Answers
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../contactcenter/configurations/default-flows/configure-default-flows/" class="md-tabs__link">
+        Contact Center
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../agentassist/agent-experience/agent-realtime-coaching/" class="md-tabs__link">
+        AgentAssist
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../channels/IVR-integration/" class="md-tabs__link">
+        Integrations & APIs
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../insiders/" class="md-tabs__link">
+        Analytics
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../contributing/" class="md-tabs__link">
+        Administration
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+    
+      <!-- Additional styles for landing page -->
+      <style>
+    
+        /* Application header should be static for the landing page */
+        .md-header {
+          position: initial;
+        }
+    
+        /* Remove spacing, as we cannot hide it completely */
+        .md-main__inner {
+          margin: 0;
+        }
+    
+        /* Hide main content for now */
+        .md-content {
+          display: none;
+        }
+    
+        /* Hide table of contents */
+        @media screen and (min-width: 60em) {
+          .md-sidebar--secondary {
+            display: none;
+          }
+        }
+    
+        /* Hide navigation */
+        @media screen and (min-width: 76.25em) {
+          .md-sidebar--primary {
+            display: none;
+          }
+        }
+      </style>
+    
+      <!-- Hero for landing page -->
+        <style>
+      /* Banner styles start */
+        .mdc-main-banner{
+            background-image: url(assets/mdc-banner.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 147px;
+            position: relative;
+        }
+        /* Banner styles end */
+
+
+        /* Banner search styles start */
+        .mdc-search{
+            width: 524px;
+            margin: auto;
+            position: relative;
+            transform: translateY(-20px);
+        }
+        .mdc-search-input{
+            padding: 11px 18px 11px 42px;
+            border-radius: 9.038px;
+            border: 0px solid var(--gray-300, #D0D5DD);
+            background: var(--base-white, #FFF);
+            box-shadow: 0px 1.13px 2.259px 0px rgba(16, 24, 40, 0.05);
+            outline: 0px;
+            width: 100%;
+        }
+        .mdc-search-icon{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: default;
+            width: 54px;
+        }
+        /* Banner search styles end */
+
+         /* Explore section styles start */
+        .mdc-explore-wrapper{
+            display: flex;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        .mdc-explore-block{
+            display: flex;
+            padding: var(--spacing-sm, 8px) 16px;
+            gap: 16px;
+            border-radius: 66px;
+            border: 1px solid var(--gray-200, #EAECF0);
+            background: var(--base-white, #FFF);
+            align-items: center;
+        }
+        .mdc-explore-block .mdc-explore-block-info{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .mdc-explore-block .explore-icon{
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(33deg, #9747FF -0.23%, #8DCFFF 94.28%);
+        }
+        .explore-contnet{
+            color: var(--gray-500, #667085);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+        .explore-contnet span{
+            color: var(--gray-900, #101828);
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            margin-right: 8px;
+        }
+        .mdc-explore-block-action span{
+            color: var(--primary-600, #155EEF);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        /* Explore section styles End */
+
+        /* Services section styles start */
+        .mdc-services{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 24px;
+            margin-top: 24px;
+            justify-content: space-between;
+        }
+        .mdc-services-block{
+            display: flex;
+            border-radius: var(--radius-md, 8px);
+            padding: 18px;
+            border: 1px solid var(--gray-200, #EAECF0);
+            background: var(--base-white, #FFF);
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+            gap: 14px;
+        }
+        .mdc-services-title{
+            color: var(--gray-900, #101828);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin: 0;
+        }
+        .mdc-services-des{
+            color: var(--gray-500, #667085);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            margin: 5px 0px 10px 0px;
+        }
+        .mdc-services-action{
+            color: var(--gray-500, #667085);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            text-decoration: none;
+        }
+         /* Services section styles end */
+
+         /* Browse by offering section styles start */
+        .mdc-browse-by-offering{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            background: var(--gray-50, #F9FAFB);
+            border-radius: 8px;
+            padding: 0px 64px;
+        }
+        .mdc-main-title{
+            color: var(--gray-900, #101828);
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 32px; 
+            margin: 0;
+        }
+        .mdc-nav-tabs{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            list-style-type: none;
+            padding: 0px;
+            flex-wrap: wrap;
+        }
+        .mdc-nav-tabs .mdc-nav-item{
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        .mdc-nav-tabs .mdc-nav-item .mdc-nav-link{
+            color: var(--gray-500, #667085);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            line-height: 20px;
+        }
+        .mdc-nav-tabs .mdc-nav-item:hover{
+            background: var(--primary-50, #EFF4FF);
+        }
+        .mdc-nav-tabs .mdc-nav-item:hover .mdc-nav-link{
+            background: var(--primary-50, #EFF4FF);
+            color: var(--primary-600, #155EEF);
+        }
+        .mdc-nav-tabs .mdc-nav-item.active{
+            background: var(--primary-50, #EFF4FF);
+        }
+        .mdc-nav-tabs .mdc-nav-item.active .mdc-nav-link{
+            color: var(--primary-600, #155EEF);
+        }
+        .mdc-offering-data{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 12px;
+            padding-bottom: 20px;
+        }
+        .mdc-offering-data-block{
+            padding: var(--spacing-md, 16px);
+            border-radius: var(--radius-md, 8px);
+            transition: all 0.5s ease-in;
+            cursor: pointer;
+        }
+        .mdc-offering-data-block:hover{
+            box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+            background-color: #fff;
+        }
+        .mdc-offering-data-block .mdc-offering-header{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gray-900, #101828);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+        .mdc-filter-icon{
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .mdc-offering-data-block:hover .mdc-filter-icon{
+            background: var(--primary-50, #EFF4FF);
+        }
+        .mdc-offering-data-block:hover .mdc-filter-icon svg path{
+            fill: #155EEF !important;
+        }
+        .mdc-offering-info{
+            color: var(--gray-500, #667085);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+        .mdc-offering-action{
+            color: var(--primary-600, #155EEF);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px; 
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+            margin-top: 12px;
+        }
+        /* Browse by offering section styles end */
+
+         /* Whats new section styles start */
+        .mdc-whats-new{
+            padding: 24px 0px;
+            display: flex;
+            gap: 24px;
+        }
+        .mdc-whats-new-left{
+            width: 100%;
+            padding: 0px 60px 0px 0px;
+        }
+        .mdc-heading{
+            color: var(--gray-900, #101828);
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 32px; 
+            margin: 0px 0px 12px 0px;
+        }
+        .mdc-des{
+            color: var(--gray-500, #667085);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin: 0px 0px 24px 0px;
+        }
+        .mdc-whats-new-block{
+            margin-bottom: 12px;
+        }
+        .mdc-whats-new-title{
+            color: var(--gray-900, #101828);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px; 
+            padding-left: 20px;
+            position: relative;
+            margin: 0px;
+        }
+        .mdc-whats-new-title::before{
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            border: 1.6px solid var(--purple-200, #D9D6FE);
+            background-color: var(--purple-600, #6938EF);
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .mdc-whats-new-des{
+            padding-left: 20px;
+            position: relative;
+        }
+        .mdc-whats-new-des p{
+            color: var(--gray-500, #667085);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            padding: 12px 0px;
+            margin: 0px;
+        }
+        .mdc-whats-new-des span{
+            color: var(--gray-400, #98A2B3);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+        .mdc-whats-new-des::before{
+            content: '';
+            position: absolute;
+            height: 100%;
+            border-left: 1px dashed var(--purple-300, #BDB4FE);
+            left: 3px;
+            top: 0;
+        }
+        .mdc-whats-new-block span{
+            color: var(--gray-400, #98A2B3);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px; 
+        }
+        .mdc-whats-new-right{
+            width: 360px;
+            flex-shrink: 0;
+            padding: var(--spacing-3-xl, 64px) var(--spacing-lg, 24px) var(--spacing-lg, 24px) var(--spacing-lg, 24px);
+            border-radius: var(--radius-md, 8px);
+            background: var(--gray-50, #F9FAFB);
+            position: relative;
+        }
+        .arrow-image{
+            position: absolute;
+            left: -61.309px;
+            top: -22.697px;
+            background-image: url(assets/quirky-paper-plane-with-dotted-line.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 138px;
+            height: 118px;
+        }
+        .mdc-whats-new-right h4{
+            color: var(--gray-900, #101828);
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0px;
+            line-height: 28px; 
+        }
+        .mdc-whats-new-right p{
+            margin: 0px;
+            color: var(--gray-700, #344054);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin: 8px 0px 40px 0px;
+        }
+        .mdc-email-notifi{
+            display: flex;
+            align-items: center;
+        }
+        .mdc-email-notifi .input-email{
+            padding: 10px 14px;
+            border-radius: var(--radius-md, 8px) 0px 0px var(--radius-md, 8px);
+            border: 1px solid var(--gray-300, #D0D5DD);
+            background: var(--base-white, #FFF);
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            color: var(--gray-500, #667085);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            width: 100%;
+        }
+        .mdc-email-notifi  .send-btn{
+            padding: 10px 16px;
+            border-radius: 0px var(--radius-md, 8px) var(--radius-md, 8px) 0px;
+            border: 1px solid var(--gray-300, #D0D5DD);
+            background: var(--gray-50, #F9FAFB);
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            color: var(--gray-500, #667085);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+        .relase-note-action{
+            color: var(--primary-500, #2970FF);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            display: inline-block;
+            text-decoration: none;
+        }
+         /* Whats new section styles end */
+
+
+        .mdc-spacing{
+            height: 64px;
+        }
+
+         /* hepler section styles start */
+        .mdc-help-wrapper{
+            border-bottom: 1px solid var(--gray-200, #EAECF0);
+            padding: 16px 0px 40px 0px;
+        }
+        .mdc-help-title{
+            color: var(--gray-700, #344054);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 30px;
+            gap: 12px;
+            display: flex;
+            align-items: center;
+            margin: 0px;
+        }
+        .mdc-helpline-centers{
+            display: flex;
+            justify-content: center;
+            margin-top: 48px;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .mdc-helpline-block{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mdc-helpline-block .mdc-helpline-title{
+            color: #000;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px; 
+        }
+        .mdc-helpline-block .mdc-helpline-action{
+            color: var(--primary-600, #155EEF);
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            line-height: 24px;
+        }
+         /* hepler section styles end */
+
+         /*Media quires for home page */
+         @media screen and (max-width:767px) {
+          .mdc-search{
+            width: 100%;
+            padding: 0px 20px;
+          }
+          .mdc-explore-wrapper{
+            margin-top: 15px;
+            padding: 0px 20px;
+          }
+          .mdc-explore-block{
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+          }
+          .mdc-explore-block-info{
+            flex-direction: column;
+            text-align: center;
+          }
+          .mdc-services{
+            padding: 0px 20px;
+          }
+          .mdc-browse-by-offering{
+            padding: 0px 20px;
+          }
+          .mdc-whats-new{
+            padding: 24px 20px;
+    flex-direction: column;
+
+          }
+          .mdc-whats-new-left{
+            padding: 0px;
+          }
+          .mdc-whats-new-right{
+            width: 100%;
+            padding: 20px !important;
+          }
+          .mdc-help-title{
+            justify-content: center;
+          }
+          .mdc-helpline-centers{
+            margin-top: 20px !important;
+            gap: 10px;
+          }
+        }
+        </style>
+      <section class="mdx-container">
+        <div class="mdc-main-banner"></div>
+        <main class="mdc-main md-grid">
+            <!--Banner search Start-->
+            <div class="mdc-search">
+                <input type="text" class="mdc-search-input">
+                <span class="mdc-search-icon">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" >
+                      <path d="M19.8465 20.2705L15.7512 16.1752M17.9636 10.856C17.9636 15.0155 14.5916 18.3876 10.432 18.3876C6.27241 18.3876 2.90039 15.0155 2.90039 10.856C2.90039 6.69636 6.27241 3.32434 10.432 3.32434C14.5916 3.32434 17.9636 6.69636 17.9636 10.856Z" stroke="#98A2B3" stroke-width="1.8829" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </div>
+             <!--Banner search End-->
+    
+            <!--Explore section start-->
+            <div class="mdc-explore-wrapper">
+                <div class="mdc-explore-block">
+                    <div class="mdc-explore-block-info">
+                        <div class="explore-icon">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                <path opacity="0.16" d="M9.16675 2.59485L10.3229 5.60076C10.5109 6.08958 10.6049 6.33399 10.7511 6.53957C10.8806 6.72178 11.0398 6.88098 11.222 7.01054C11.4276 7.15672 11.672 7.25072 12.1608 7.43873L15.1667 8.59485L12.1608 9.75097C11.672 9.93898 11.4276 10.033 11.222 10.1792C11.0398 10.3087 10.8806 10.4679 10.7511 10.6501C10.6049 10.8557 10.5109 11.1001 10.3229 11.5889L9.16675 14.5948L8.01063 11.5889C7.82262 11.1001 7.72862 10.8557 7.58244 10.6501C7.45287 10.4679 7.29368 10.3087 7.11147 10.1792C6.90589 10.033 6.66148 9.93898 6.17266 9.75097L3.16675 8.59485L6.17265 7.43873C6.66148 7.25072 6.90589 7.15672 7.11147 7.01054C7.29368 6.88098 7.45287 6.72178 7.58243 6.53957C7.72862 6.33399 7.82262 6.08958 8.01063 5.60076L9.16675 2.59485Z" fill="white"/>
+                                <path d="M3.49992 15.2615V11.9282M3.49992 5.26153V1.92819M1.83325 3.59486H5.16659M1.83325 13.5949H5.16659M9.16659 2.59486L8.01047 5.60077C7.82246 6.08959 7.72846 6.334 7.58227 6.53958C7.45271 6.72179 7.29352 6.88099 7.11131 7.01055C6.90572 7.15673 6.66131 7.25073 6.17249 7.43874L3.16659 8.59486L6.17249 9.75098C6.66131 9.93899 6.90572 10.033 7.11131 10.1792C7.29352 10.3087 7.45271 10.4679 7.58227 10.6501C7.72846 10.8557 7.82246 11.1001 8.01047 11.589L9.16659 14.5949L10.3227 11.589C10.5107 11.1001 10.6047 10.8557 10.7509 10.6501C10.8805 10.4679 11.0397 10.3087 11.2219 10.1792C11.4274 10.033 11.6719 9.93898 12.1607 9.75098L15.1666 8.59486L12.1607 7.43874C11.6719 7.25073 11.4274 7.15673 11.2219 7.01055C11.0397 6.88099 10.8805 6.72179 10.7509 6.53958C10.6047 6.334 10.5107 6.08959 10.3227 5.60077L9.16659 2.59486Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="explore-contnet">
+                           <span>Platform</span>section to determine where you can find the most appropriate topic.
+                        </div>
+                    </div>
+                    <div class="mdc-explore-block-action">
+                        <span>Explore More <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                            <path d="M4.66675 10.5948H16.3334M16.3334 10.5948L10.5001 4.76151M16.3334 10.5948L10.5001 16.4282" stroke="#155EEF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg></span>
+                    </div>
+                </div>
+            </div>
+             <!--Explore section end-->
+    
+             <!--Services section start-->
+            <section class="mdc-services">
+                <div class="mdc-services-block">
+                    <div class="mdc-services-icon">
+                        <img src="assets/automation.svg" alt="Automations">
+                    </div>
+                    <div class="mdc-services-info">
+                        <h4 class="mdc-services-title">Automations</h4>
+                        <p class="mdc-services-des">Deliver extraordinary experiences for customers, agents, and employees on voice and digital channels.</p>
+                        <a href="#" class="mdc-services-action">Read More</a>
+                    </div>
+                </div>
+                <div class="mdc-services-block">
+                    <div class="mdc-services-icon">
+                        <img src="assets/answers.svg" alt="Answers">
+                    </div>
+                    <div class="mdc-services-info">
+                        <h4 class="mdc-services-title">Answers</h4>
+                        <p class="mdc-services-des">Conversational Search Assistantwith the Added Power of LLMs and Generative AI</p>
+                        <a href="#" class="mdc-services-action">Read More</a>
+                    </div>
+                </div>
+                <div class="mdc-services-block">
+                    <div class="mdc-services-icon">
+                        <img src="assets/agentasisst.svg" alt="AgentAssist">
+                    </div>
+                    <div class="mdc-services-info">
+                        <h4 class="mdc-services-title">AgentAssist</h4>
+                        <p class="mdc-services-des">An AI-first intelligent virtual assistant to elevate your agents' productivity and experience.</p>
+                        <a href="#" class="mdc-services-action">Read More</a>
+                    </div>
+                </div>
+                <div class="mdc-services-block">
+                    <div class="mdc-services-icon">
+                        <img src="assets/contact-center.svg" alt="Contact Center">
+                    </div>
+                    <div class="mdc-services-info">
+                        <h4 class="mdc-services-title">Contact Center</h4>
+                        <p class="mdc-services-des">Deliver an Exceptional Customer Experience using our AI-Native Contact Center as a Service.</p>
+                        <a href="#" class="mdc-services-action">Read More</a>
+                    </div>
+                </div>
+                <div class="mdc-services-block">
+                    <div class="mdc-services-icon">
+                        <img src="assets/campaign.svg" alt="Campaign">
+                    </div>
+                    <div class="mdc-services-info">
+                        <h4 class="mdc-services-title">Campaign</h4>
+                        <p class="mdc-services-des">Deliver extraordinary experiences for their customers, agents, and  on voice and digital channels.</p>
+                        <a href="#" class="mdc-services-action">Read More</a>
+                    </div>
+                </div>
+                <div class="mdc-services-block">
+                    <div class="mdc-services-icon">
+                        <img src="assets/quality-mangement.svg" alt="Quality Management">
+                    </div>
+                    <div class="mdc-services-info">
+                        <h4 class="mdc-services-title">Quality Management </h4>
+                        <p class="mdc-services-des">Deliver an Exceptional Customer Experience using our AI-Native Contact Center as a Service.</p>
+                        <a href="#" class="mdc-services-action">Read More</a>
+                    </div>
+                </div>
+            </section>
+            <!--Services section end-->
+    
+            <div class="mdc-spacing"></div>
+    
+            <!--Browse bt offering section start-->
+            <section class="mdc-browse-by-offering">
+                <h4 class="mdc-main-title">Browse by offerings</h4>
+                <ul class="mdc-nav-tabs">
+                    <li class="mdc-nav-item active"><a href="" class="mdc-nav-link">Automations</a></li>
+                    <li class="mdc-nav-item"><a href="" class="mdc-nav-link">Contact Center AI</a></li>
+                    <li class="mdc-nav-item"><a href="" class="mdc-nav-link">AgentAssist</a></li>
+                    <li class="mdc-nav-item"><a href="" class="mdc-nav-link">Campaign</a></li>
+                    <li class="mdc-nav-item"><a href="" class="mdc-nav-link">Answers</a></li>
+                </ul>
+                <div class="mdc-offering-data">
+                    <div class="mdc-offering-data-block">
+                        <div class="mdc-offering-header">
+                            <span class="mdc-filter-icon">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.84615 2.59485C9.2476 2.59485 8.73918 2.98427 8.54808 3.51793H2.46154C2.20664 3.51793 2 3.72456 2 3.97946C2 4.23436 2.20664 4.441 2.46154 4.441H8.54808C8.73918 4.97466 9.2476 5.36408 9.84615 5.36408C10.4447 5.36408 10.9531 4.97466 11.1442 4.441H12.6154C12.8703 4.441 13.0769 4.23436 13.0769 3.97946C13.0769 3.72456 12.8703 3.51793 12.6154 3.51793H11.1442C10.9531 2.98427 10.4447 2.59485 9.84615 2.59485ZM9.84615 3.51793C10.1058 3.51793 10.3077 3.71985 10.3077 3.97946C10.3077 4.23908 10.1058 4.441 9.84615 4.441C9.58654 4.441 9.38462 4.23908 9.38462 3.97946C9.38462 3.71985 9.58654 3.51793 9.84615 3.51793ZM5.23077 7.21023C4.63221 7.21023 4.1238 7.59966 3.93269 8.13331H2.46154C2.20664 8.13331 2 8.33995 2 8.59485C2 8.84975 2.20664 9.05639 2.46154 9.05639H3.93269C4.1238 9.59004 4.63221 9.97946 5.23077 9.97946C5.82933 9.97946 6.33774 9.59004 6.52885 9.05639H12.6154C12.8703 9.05639 13.0769 8.84975 13.0769 8.59485C13.0769 8.33995 12.8703 8.13331 12.6154 8.13331H6.52885C6.33774 7.59966 5.82933 7.21023 5.23077 7.21023ZM5.23077 8.13331C5.49038 8.13331 5.69231 8.33523 5.69231 8.59485C5.69231 8.85446 5.49038 9.05639 5.23077 9.05639C4.97115 9.05639 4.76923 8.85446 4.76923 8.59485C4.76923 8.33523 4.97115 8.13331 5.23077 8.13331ZM9.84615 11.8256C9.2476 11.8256 8.73918 12.215 8.54808 12.7487H2.46154C2.20664 12.7487 2 12.9553 2 13.2102C2 13.4651 2.20664 13.6718 2.46154 13.6718H8.54808C8.73918 14.2054 9.2476 14.5948 9.84615 14.5948C10.4447 14.5948 10.9531 14.2054 11.1442 13.6718H12.6154C12.8703 13.6718 13.0769 13.4651 13.0769 13.2102C13.0769 12.9553 12.8703 12.7487 12.6154 12.7487H11.1442C10.9531 12.215 10.4447 11.8256 9.84615 11.8256ZM9.84615 12.7487C10.1058 12.7487 10.3077 12.9506 10.3077 13.2102C10.3077 13.4698 10.1058 13.6718 9.84615 13.6718C9.58654 13.6718 9.38462 13.4698 9.38462 13.2102C9.38462 12.9506 9.58654 12.7487 9.84615 12.7487Z" fill="#101828"/>
+                                </svg>
+                            </span>
+                            Dialogs
+                        </div>
+                        <div class="mdc-offering-info">
+                            Build conversation use cases
+                        </div>
+                        <a href="#" class="mdc-offering-action">View <svg width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path d="M4.16675 10.5949H15.8334M15.8334 10.5949L10.0001 4.76152M15.8334 10.5949L10.0001 16.4282" stroke="#155EEF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg></a>
+                    </div>
+                    <div class="mdc-offering-data-block">
+                        <div class="mdc-offering-header">
+                            <span class="mdc-filter-icon">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.84615 2.59485C9.2476 2.59485 8.73918 2.98427 8.54808 3.51793H2.46154C2.20664 3.51793 2 3.72456 2 3.97946C2 4.23436 2.20664 4.441 2.46154 4.441H8.54808C8.73918 4.97466 9.2476 5.36408 9.84615 5.36408C10.4447 5.36408 10.9531 4.97466 11.1442 4.441H12.6154C12.8703 4.441 13.0769 4.23436 13.0769 3.97946C13.0769 3.72456 12.8703 3.51793 12.6154 3.51793H11.1442C10.9531 2.98427 10.4447 2.59485 9.84615 2.59485ZM9.84615 3.51793C10.1058 3.51793 10.3077 3.71985 10.3077 3.97946C10.3077 4.23908 10.1058 4.441 9.84615 4.441C9.58654 4.441 9.38462 4.23908 9.38462 3.97946C9.38462 3.71985 9.58654 3.51793 9.84615 3.51793ZM5.23077 7.21023C4.63221 7.21023 4.1238 7.59966 3.93269 8.13331H2.46154C2.20664 8.13331 2 8.33995 2 8.59485C2 8.84975 2.20664 9.05639 2.46154 9.05639H3.93269C4.1238 9.59004 4.63221 9.97946 5.23077 9.97946C5.82933 9.97946 6.33774 9.59004 6.52885 9.05639H12.6154C12.8703 9.05639 13.0769 8.84975 13.0769 8.59485C13.0769 8.33995 12.8703 8.13331 12.6154 8.13331H6.52885C6.33774 7.59966 5.82933 7.21023 5.23077 7.21023ZM5.23077 8.13331C5.49038 8.13331 5.69231 8.33523 5.69231 8.59485C5.69231 8.85446 5.49038 9.05639 5.23077 9.05639C4.97115 9.05639 4.76923 8.85446 4.76923 8.59485C4.76923 8.33523 4.97115 8.13331 5.23077 8.13331ZM9.84615 11.8256C9.2476 11.8256 8.73918 12.215 8.54808 12.7487H2.46154C2.20664 12.7487 2 12.9553 2 13.2102C2 13.4651 2.20664 13.6718 2.46154 13.6718H8.54808C8.73918 14.2054 9.2476 14.5948 9.84615 14.5948C10.4447 14.5948 10.9531 14.2054 11.1442 13.6718H12.6154C12.8703 13.6718 13.0769 13.4651 13.0769 13.2102C13.0769 12.9553 12.8703 12.7487 12.6154 12.7487H11.1442C10.9531 12.215 10.4447 11.8256 9.84615 11.8256ZM9.84615 12.7487C10.1058 12.7487 10.3077 12.9506 10.3077 13.2102C10.3077 13.4698 10.1058 13.6718 9.84615 13.6718C9.58654 13.6718 9.38462 13.4698 9.38462 13.2102C9.38462 12.9506 9.58654 12.7487 9.84615 12.7487Z" fill="#101828"/>
+                                </svg>
+                            </span>
+                            Training
+                        </div>
+                        <div class="mdc-offering-info">
+                            Train your virtual assistant
+                        </div>
+                        <a href="#" class="mdc-offering-action">View <svg width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path d="M4.16675 10.5949H15.8334M15.8334 10.5949L10.0001 4.76152M15.8334 10.5949L10.0001 16.4282" stroke="#155EEF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg></a>
+                    </div>
+                    <div class="mdc-offering-data-block">
+                        <div class="mdc-offering-header">
+                            <span class="mdc-filter-icon">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.84615 2.59485C9.2476 2.59485 8.73918 2.98427 8.54808 3.51793H2.46154C2.20664 3.51793 2 3.72456 2 3.97946C2 4.23436 2.20664 4.441 2.46154 4.441H8.54808C8.73918 4.97466 9.2476 5.36408 9.84615 5.36408C10.4447 5.36408 10.9531 4.97466 11.1442 4.441H12.6154C12.8703 4.441 13.0769 4.23436 13.0769 3.97946C13.0769 3.72456 12.8703 3.51793 12.6154 3.51793H11.1442C10.9531 2.98427 10.4447 2.59485 9.84615 2.59485ZM9.84615 3.51793C10.1058 3.51793 10.3077 3.71985 10.3077 3.97946C10.3077 4.23908 10.1058 4.441 9.84615 4.441C9.58654 4.441 9.38462 4.23908 9.38462 3.97946C9.38462 3.71985 9.58654 3.51793 9.84615 3.51793ZM5.23077 7.21023C4.63221 7.21023 4.1238 7.59966 3.93269 8.13331H2.46154C2.20664 8.13331 2 8.33995 2 8.59485C2 8.84975 2.20664 9.05639 2.46154 9.05639H3.93269C4.1238 9.59004 4.63221 9.97946 5.23077 9.97946C5.82933 9.97946 6.33774 9.59004 6.52885 9.05639H12.6154C12.8703 9.05639 13.0769 8.84975 13.0769 8.59485C13.0769 8.33995 12.8703 8.13331 12.6154 8.13331H6.52885C6.33774 7.59966 5.82933 7.21023 5.23077 7.21023ZM5.23077 8.13331C5.49038 8.13331 5.69231 8.33523 5.69231 8.59485C5.69231 8.85446 5.49038 9.05639 5.23077 9.05639C4.97115 9.05639 4.76923 8.85446 4.76923 8.59485C4.76923 8.33523 4.97115 8.13331 5.23077 8.13331ZM9.84615 11.8256C9.2476 11.8256 8.73918 12.215 8.54808 12.7487H2.46154C2.20664 12.7487 2 12.9553 2 13.2102C2 13.4651 2.20664 13.6718 2.46154 13.6718H8.54808C8.73918 14.2054 9.2476 14.5948 9.84615 14.5948C10.4447 14.5948 10.9531 14.2054 11.1442 13.6718H12.6154C12.8703 13.6718 13.0769 13.4651 13.0769 13.2102C13.0769 12.9553 12.8703 12.7487 12.6154 12.7487H11.1442C10.9531 12.215 10.4447 11.8256 9.84615 11.8256ZM9.84615 12.7487C10.1058 12.7487 10.3077 12.9506 10.3077 13.2102C10.3077 13.4698 10.1058 13.6718 9.84615 13.6718C9.58654 13.6718 9.38462 13.4698 9.38462 13.2102C9.38462 12.9506 9.58654 12.7487 9.84615 12.7487Z" fill="#101828"/>
+                                </svg>
+                            </span>
+                            Knowledge AI
+                        </div>
+                        <div class="mdc-offering-info">
+                            Define FAQs
+                        </div>
+                        <a href="#" class="mdc-offering-action">View <svg width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path d="M4.16675 10.5949H15.8334M15.8334 10.5949L10.0001 4.76152M15.8334 10.5949L10.0001 16.4282" stroke="#155EEF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg></a>
+                    </div>
+                    <div class="mdc-offering-data-block">
+                        <div class="mdc-offering-header">
+                            <span class="mdc-filter-icon">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.84615 2.59485C9.2476 2.59485 8.73918 2.98427 8.54808 3.51793H2.46154C2.20664 3.51793 2 3.72456 2 3.97946C2 4.23436 2.20664 4.441 2.46154 4.441H8.54808C8.73918 4.97466 9.2476 5.36408 9.84615 5.36408C10.4447 5.36408 10.9531 4.97466 11.1442 4.441H12.6154C12.8703 4.441 13.0769 4.23436 13.0769 3.97946C13.0769 3.72456 12.8703 3.51793 12.6154 3.51793H11.1442C10.9531 2.98427 10.4447 2.59485 9.84615 2.59485ZM9.84615 3.51793C10.1058 3.51793 10.3077 3.71985 10.3077 3.97946C10.3077 4.23908 10.1058 4.441 9.84615 4.441C9.58654 4.441 9.38462 4.23908 9.38462 3.97946C9.38462 3.71985 9.58654 3.51793 9.84615 3.51793ZM5.23077 7.21023C4.63221 7.21023 4.1238 7.59966 3.93269 8.13331H2.46154C2.20664 8.13331 2 8.33995 2 8.59485C2 8.84975 2.20664 9.05639 2.46154 9.05639H3.93269C4.1238 9.59004 4.63221 9.97946 5.23077 9.97946C5.82933 9.97946 6.33774 9.59004 6.52885 9.05639H12.6154C12.8703 9.05639 13.0769 8.84975 13.0769 8.59485C13.0769 8.33995 12.8703 8.13331 12.6154 8.13331H6.52885C6.33774 7.59966 5.82933 7.21023 5.23077 7.21023ZM5.23077 8.13331C5.49038 8.13331 5.69231 8.33523 5.69231 8.59485C5.69231 8.85446 5.49038 9.05639 5.23077 9.05639C4.97115 9.05639 4.76923 8.85446 4.76923 8.59485C4.76923 8.33523 4.97115 8.13331 5.23077 8.13331ZM9.84615 11.8256C9.2476 11.8256 8.73918 12.215 8.54808 12.7487H2.46154C2.20664 12.7487 2 12.9553 2 13.2102C2 13.4651 2.20664 13.6718 2.46154 13.6718H8.54808C8.73918 14.2054 9.2476 14.5948 9.84615 14.5948C10.4447 14.5948 10.9531 14.2054 11.1442 13.6718H12.6154C12.8703 13.6718 13.0769 13.4651 13.0769 13.2102C13.0769 12.9553 12.8703 12.7487 12.6154 12.7487H11.1442C10.9531 12.215 10.4447 11.8256 9.84615 11.8256ZM9.84615 12.7487C10.1058 12.7487 10.3077 12.9506 10.3077 13.2102C10.3077 13.4698 10.1058 13.6718 9.84615 13.6718C9.58654 13.6718 9.38462 13.4698 9.38462 13.2102C9.38462 12.9506 9.58654 12.7487 9.84615 12.7487Z" fill="#101828"/>
+                                </svg>
+                            </span>
+                            NLU
+                        </div>
+                        <div class="mdc-offering-info">
+                            Configure NLP, LLM, and Gen AI
+                        </div>
+                        <a href="#" class="mdc-offering-action">View <svg width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path d="M4.16675 10.5949H15.8334M15.8334 10.5949L10.0001 4.76152M15.8334 10.5949L10.0001 16.4282" stroke="#155EEF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg></a>
+                    </div>
+                    <div class="mdc-offering-data-block">
+                        <div class="mdc-offering-header">
+                            <span class="mdc-filter-icon">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.84615 2.59485C9.2476 2.59485 8.73918 2.98427 8.54808 3.51793H2.46154C2.20664 3.51793 2 3.72456 2 3.97946C2 4.23436 2.20664 4.441 2.46154 4.441H8.54808C8.73918 4.97466 9.2476 5.36408 9.84615 5.36408C10.4447 5.36408 10.9531 4.97466 11.1442 4.441H12.6154C12.8703 4.441 13.0769 4.23436 13.0769 3.97946C13.0769 3.72456 12.8703 3.51793 12.6154 3.51793H11.1442C10.9531 2.98427 10.4447 2.59485 9.84615 2.59485ZM9.84615 3.51793C10.1058 3.51793 10.3077 3.71985 10.3077 3.97946C10.3077 4.23908 10.1058 4.441 9.84615 4.441C9.58654 4.441 9.38462 4.23908 9.38462 3.97946C9.38462 3.71985 9.58654 3.51793 9.84615 3.51793ZM5.23077 7.21023C4.63221 7.21023 4.1238 7.59966 3.93269 8.13331H2.46154C2.20664 8.13331 2 8.33995 2 8.59485C2 8.84975 2.20664 9.05639 2.46154 9.05639H3.93269C4.1238 9.59004 4.63221 9.97946 5.23077 9.97946C5.82933 9.97946 6.33774 9.59004 6.52885 9.05639H12.6154C12.8703 9.05639 13.0769 8.84975 13.0769 8.59485C13.0769 8.33995 12.8703 8.13331 12.6154 8.13331H6.52885C6.33774 7.59966 5.82933 7.21023 5.23077 7.21023ZM5.23077 8.13331C5.49038 8.13331 5.69231 8.33523 5.69231 8.59485C5.69231 8.85446 5.49038 9.05639 5.23077 9.05639C4.97115 9.05639 4.76923 8.85446 4.76923 8.59485C4.76923 8.33523 4.97115 8.13331 5.23077 8.13331ZM9.84615 11.8256C9.2476 11.8256 8.73918 12.215 8.54808 12.7487H2.46154C2.20664 12.7487 2 12.9553 2 13.2102C2 13.4651 2.20664 13.6718 2.46154 13.6718H8.54808C8.73918 14.2054 9.2476 14.5948 9.84615 14.5948C10.4447 14.5948 10.9531 14.2054 11.1442 13.6718H12.6154C12.8703 13.6718 13.0769 13.4651 13.0769 13.2102C13.0769 12.9553 12.8703 12.7487 12.6154 12.7487H11.1442C10.9531 12.215 10.4447 11.8256 9.84615 11.8256ZM9.84615 12.7487C10.1058 12.7487 10.3077 12.9506 10.3077 13.2102C10.3077 13.4698 10.1058 13.6718 9.84615 13.6718C9.58654 13.6718 9.38462 13.4698 9.38462 13.2102C9.38462 12.9506 9.58654 12.7487 9.84615 12.7487Z" fill="#101828"/>
+                                </svg>
+                            </span>
+                            Digital Skills
+                        </div>
+                        <div class="mdc-offering-info">
+                            Design rich input interface
+                        </div>
+                        <a href="#" class="mdc-offering-action">View <svg width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path d="M4.16675 10.5949H15.8334M15.8334 10.5949L10.0001 4.76152M15.8334 10.5949L10.0001 16.4282" stroke="#155EEF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg></a>
+                    </div>
+                    <div class="mdc-offering-data-block">
+                        <div class="mdc-offering-header">
+                            <span class="mdc-filter-icon">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.84615 2.59485C9.2476 2.59485 8.73918 2.98427 8.54808 3.51793H2.46154C2.20664 3.51793 2 3.72456 2 3.97946C2 4.23436 2.20664 4.441 2.46154 4.441H8.54808C8.73918 4.97466 9.2476 5.36408 9.84615 5.36408C10.4447 5.36408 10.9531 4.97466 11.1442 4.441H12.6154C12.8703 4.441 13.0769 4.23436 13.0769 3.97946C13.0769 3.72456 12.8703 3.51793 12.6154 3.51793H11.1442C10.9531 2.98427 10.4447 2.59485 9.84615 2.59485ZM9.84615 3.51793C10.1058 3.51793 10.3077 3.71985 10.3077 3.97946C10.3077 4.23908 10.1058 4.441 9.84615 4.441C9.58654 4.441 9.38462 4.23908 9.38462 3.97946C9.38462 3.71985 9.58654 3.51793 9.84615 3.51793ZM5.23077 7.21023C4.63221 7.21023 4.1238 7.59966 3.93269 8.13331H2.46154C2.20664 8.13331 2 8.33995 2 8.59485C2 8.84975 2.20664 9.05639 2.46154 9.05639H3.93269C4.1238 9.59004 4.63221 9.97946 5.23077 9.97946C5.82933 9.97946 6.33774 9.59004 6.52885 9.05639H12.6154C12.8703 9.05639 13.0769 8.84975 13.0769 8.59485C13.0769 8.33995 12.8703 8.13331 12.6154 8.13331H6.52885C6.33774 7.59966 5.82933 7.21023 5.23077 7.21023ZM5.23077 8.13331C5.49038 8.13331 5.69231 8.33523 5.69231 8.59485C5.69231 8.85446 5.49038 9.05639 5.23077 9.05639C4.97115 9.05639 4.76923 8.85446 4.76923 8.59485C4.76923 8.33523 4.97115 8.13331 5.23077 8.13331ZM9.84615 11.8256C9.2476 11.8256 8.73918 12.215 8.54808 12.7487H2.46154C2.20664 12.7487 2 12.9553 2 13.2102C2 13.4651 2.20664 13.6718 2.46154 13.6718H8.54808C8.73918 14.2054 9.2476 14.5948 9.84615 14.5948C10.4447 14.5948 10.9531 14.2054 11.1442 13.6718H12.6154C12.8703 13.6718 13.0769 13.4651 13.0769 13.2102C13.0769 12.9553 12.8703 12.7487 12.6154 12.7487H11.1442C10.9531 12.215 10.4447 11.8256 9.84615 11.8256ZM9.84615 12.7487C10.1058 12.7487 10.3077 12.9506 10.3077 13.2102C10.3077 13.4698 10.1058 13.6718 9.84615 13.6718C9.58654 13.6718 9.38462 13.4698 9.38462 13.2102C9.38462 12.9506 9.58654 12.7487 9.84615 12.7487Z" fill="#101828"/>
+                                </svg>
+                            </span>
+                            Intelligence
+                        </div>
+                        <div class="mdc-offering-info">
+                            Define events, standard responses, interruption behavior
+                        </div>
+                        <a href="#" class="mdc-offering-action">View <svg width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path d="M4.16675 10.5949H15.8334M15.8334 10.5949L10.0001 4.76152M15.8334 10.5949L10.0001 16.4282" stroke="#155EEF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg></a>
+                    </div>
+                </div>
+            </section>
+            <!--Browse bt offering section end-->
+    
+            <!--Whats new section start-->
+            <section class="mdc-whats-new">
+                <div class="mdc-whats-new-left">
+                    <h2 class="mdc-heading">Whats New</h2>
+                    <p class="mdc-des">Explore the most recent changes, enhancements, and bug fixes with our latest release notes. Stay up-to-date with our software's evolving features and improvements</p>
+                    <div class="mdc-whats-new-block">
+                        <h4 class="mdc-whats-new-title">Enhanced Bot Creation Journey with Use Case Suggestions <svg width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path d="M4.16675 10.5949H15.8334M15.8334 10.5949L10.0001 4.76152M15.8334 10.5949L10.0001 16.4282" stroke="#000000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg></h4>
+                        <div class="mdc-whats-new-des">
+                            <p>Create Virtual Assistants faster with the new bot creation process that lets you generate use cases automatically.</p>
+                            <span>12th September 2023</span>
+                        </div>
+                     </div>
+                     <div class="mdc-whats-new-block">
+                        <h4 class="mdc-whats-new-title">Enhanced Bot Creation Journey with Use Case Suggestions <svg width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path d="M4.16675 10.5949H15.8334M15.8334 10.5949L10.0001 4.76152M15.8334 10.5949L10.0001 16.4282" stroke="#000000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg></h4>
+                        <div class="mdc-whats-new-des">
+                            <p>Create Virtual Assistants faster with the new bot creation process that lets you generate use cases automatically.</p>
+                            <span>12th September 2023</span>
+                        </div>
+                     </div>
+                     <a href="" class="relase-note-action">View Recent Release Notes </a>
+                </div>
+                <div class="mdc-whats-new-right">
+                    <div class="arrow-image"></div>
+                    <h4>Stay Connected to Our Most Recent Update Information</h4>
+                    <p>Your connection to our most recent update information is your key to remaining current and in-the-know.</p>
+                    <div class="mdc-email-notifi">
+                        <input type="email" class="input-email"/>
+                        <button class="send-btn">Send</button>
+                    </div>
+                </div>
+            </section>
+             <!--Whats new section End-->
+    
+            <div class="mdc-spacing"></div>
+    
+            <!--Documentation help start-->
+            <section class="mdc-help-wrapper">
+                <div class="mdc-help-title">
+                    <img src="assets/kore-logo.svg" alt="Kore.ai"/>Documentation
+                </div>
+                <div class="mdc-helpline-centers">
+                    <div class="mdc-helpline-block">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none">
+                          <path d="M9.59 9.59485C9.8251 8.92652 10.2892 8.36296 10.9 8.00398C11.5108 7.64501 12.2289 7.51379 12.9272 7.63356C13.6255 7.75333 14.2588 8.11637 14.7151 8.65838C15.1713 9.20038 15.4211 9.88637 15.42 10.5948C15.42 12.5948 12.42 13.5948 12.42 13.5948M12.5 17.5948H12.51M22.5 12.5948C22.5 18.1177 18.0228 22.5948 12.5 22.5948C6.97715 22.5948 2.5 18.1177 2.5 12.5948C2.5 7.072 6.97715 2.59485 12.5 2.59485C18.0228 2.59485 22.5 7.072 22.5 12.5948Z" stroke="#101828" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h4 class="mdc-helpline-title">Need help</h4>
+                        <span class="mdc-helpline-action">Contact Support</span>
+                    </div>
+                    <div class="mdc-helpline-block">
+                        <svg  width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path d="M22.5 9.52622C22.5 8.9204 22.5 8.6175 22.3802 8.47723C22.2763 8.35553 22.1203 8.29094 21.9608 8.3035C21.7769 8.31797 21.5627 8.53216 21.1343 8.96053L17.5 12.5948L21.1343 16.2292C21.5627 16.6575 21.7769 16.8717 21.9608 16.8862C22.1203 16.8988 22.2763 16.8342 22.3802 16.7125C22.5 16.5722 22.5 16.2693 22.5 15.6635V9.52622Z" stroke="#101828" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.5 10.3948C2.5 8.71469 2.5 7.87461 2.82698 7.23288C3.1146 6.66839 3.57354 6.20945 4.13803 5.92183C4.77976 5.59485 5.61984 5.59485 7.3 5.59485H12.7C14.3802 5.59485 15.2202 5.59485 15.862 5.92183C16.4265 6.20945 16.8854 6.66839 17.173 7.23288C17.5 7.87461 17.5 8.71469 17.5 10.3948V14.7948C17.5 16.475 17.5 17.3151 17.173 17.9568C16.8854 18.5213 16.4265 18.9802 15.862 19.2679C15.2202 19.5948 14.3802 19.5948 12.7 19.5948H7.3C5.61984 19.5948 4.77976 19.5948 4.13803 19.2679C3.57354 18.9802 3.1146 18.5213 2.82698 17.9568C2.5 17.3151 2.5 16.475 2.5 14.7948V10.3948Z" stroke="#101828" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        <h4 class="mdc-helpline-title">Watch our</h4>
+                        <span class="mdc-helpline-action">Developer tutorials</span>
+                    </div>
+                    <div class="mdc-helpline-block">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none">
+                          <path d="M9.59 9.59485C9.8251 8.92652 10.2892 8.36296 10.9 8.00398C11.5108 7.64501 12.2289 7.51379 12.9272 7.63356C13.6255 7.75333 14.2588 8.11637 14.7151 8.65838C15.1713 9.20038 15.4211 9.88637 15.42 10.5948C15.42 12.5948 12.42 13.5948 12.42 13.5948M12.5 17.5948H12.51M22.5 12.5948C22.5 18.1177 18.0228 22.5948 12.5 22.5948C6.97715 22.5948 2.5 18.1177 2.5 12.5948C2.5 7.072 6.97715 2.59485 12.5 2.59485C18.0228 2.59485 22.5 7.072 22.5 12.5948Z" stroke="#101828" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h4 class="mdc-helpline-title">Questions?</h4>
+                        <span class="mdc-helpline-action">Contact Sales</span>
+                    </div>
+                </div>
+            </section>
+            <!--Documentation help end-->
+        </main>
+      </section>
+    
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kore ai Docs" class="md-nav__button md-logo" aria-label="Kore ai Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Kore ai Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Koredotcom/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Koredotcom/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Platform
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Platform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+          Platform
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Platform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Introduction to the Platform
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Access the Platform
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+          Automation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Automation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Introduction to Virtual Assistant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Build a Virtual Assistant
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+          Answers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Answers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Introduction to Answers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Configure Answers
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+          AgentAssist
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          AgentAssist
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Introduction to AgentAssist
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Set up AgentAssist
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
+          Contact Center
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Contact Center
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Introduction to Contact Center
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Set up Contact Center
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_6" id="__nav_2_1_6_label" tabindex="0">
+          Campaign
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Campaign
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Introduction to Campaign
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-assistants-overview/" class="md-nav__link">
+        Set up Campaign
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Glossary
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Glossary
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://developer.kore.ai/docs/bots/chatbot-overview/about-bots/" class="md-nav__link">
+        Concepts and Terminology
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          FAQs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          FAQs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://developer.kore.ai/docs/bots/chatbot-overview/about-bots/" class="md-nav__link">
+        Automation FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://developer.kore.ai/docs/bots/chatbot-overview/about-bots/" class="md-nav__link">
+        Contact Center FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Automation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Automation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Dialogs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Knowledge AI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/small-talk/" class="md-nav__link">
+        Small Talk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+          Digital Skills
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Digital Skills
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/digital-skills-overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/digital-forms/" class="md-nav__link">
+        Digital Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/configure-digital-forms/" class="md-nav__link">
+        Configure Digital Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/digital-views/" class="md-nav__link">
+        Digital Views
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/configure-digital-views/" class="md-nav__link">
+        Configure Digital Views
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/feedback-surveys/" class="md-nav__link">
+        Feedback Survey
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Training
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Training
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+          Natural Language Processing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Natural Language Processing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/natural-language/nlp-introduction/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/natural-language/nlp-guidelines/" class="md-nav__link">
+        NLP Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/natural-language/training/nlp-training-overview/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Intents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Entities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Bot Synonyms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Traits
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Fields
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          NLU Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          NLU Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/natural-language/nlu-configurations/engine-tuning/" class="md-nav__link">
+        Engine Tuning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/natural-language/nlu-configurations/amend-entities/" class="md-nav__link">
+        Amend Entity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/natural-language/nlu-configurations/multi-intent-detection/" class="md-nav__link">
+        Multi Intent Detect
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Events
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Events
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Intent Events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        conversation Events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Sentiment Events
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          Conversation Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Conversation Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Standard Responses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Manage Interruptions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Ignore Words and Field Memory
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Regression Testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Regression Testing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Health and Monitoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Batch Testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Conversation Testing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Answers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Answers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Content Sources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Content Sources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../answers/content-sources/directory/" class="md-nav__link">
+        Directory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../answers/content-sources/web-crawl/" class="md-nav__link">
+        Web Crawl
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Contact Center
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Contact Center
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          Configurations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Configurations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contactcenter/configurations/default-flows/configure-default-flows/" class="md-nav__link">
+        Default Flows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contactcenter/configurations/default-flows/configure-default-flows/" class="md-nav__link">
+        Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contactcenter/configurations/default-flows/configure-default-flows/" class="md-nav__link">
+        Hour of Operations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
+          Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/digital-skills-overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/digital-forms/" class="md-nav__link">
+        Digital Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/configure-digital-forms/" class="md-nav__link">
+        Configure Digital Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/digital-views/" class="md-nav__link">
+        Digital Views
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/configure-digital-views/" class="md-nav__link">
+        Configure Digital Views
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          AgentAssist
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          AgentAssist
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+          Agent Experience
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Agent Experience
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agentassist/agent-experience/agent-realtime-coaching/" class="md-nav__link">
+        Agent Coaching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agentassist/agent-experience/agent-realtime-coaching/" class="md-nav__link">
+        Knowledge AI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/small-talk/" class="md-nav__link">
+        Small Talk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1_4" id="__nav_6_1_4_label" tabindex="0">
+          Digital Skills
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Digital Skills
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/digital-skills-overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/digital-forms/" class="md-nav__link">
+        Digital Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/configure-digital-forms/" class="md-nav__link">
+        Configure Digital Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/digital-views/" class="md-nav__link">
+        Digital Views
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/use-cases/digital-skills/configure-digital-views/" class="md-nav__link">
+        Configure Digital Views
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Integrations & APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations & APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+          Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channels/IVR-integration/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channels/IVR-integration/" class="md-nav__link">
+        Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channels/IVR-integration/" class="md-nav__link">
+        Agent Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2_1" id="__nav_7_2_1_label" tabindex="0">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apis/api-list/" class="md-nav__link">
+        API Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apis/api-list/" class="md-nav__link">
+        API List
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Analytics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Analytics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insiders/" class="md-nav__link">
+        Insiders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+          Automation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Automation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/automations/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insiders/changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Administration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Contributing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/reporting-a-bug/" class="md-nav__link">
+        Reporting a bug
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/reporting-a-docs-issue/" class="md-nav__link">
+        Reporting a docs issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/requesting-a-change/" class="md-nav__link">
+        Requesting a change
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/squidfunk/mkdocs-material/discussions" class="md-nav__link">
+        Asking a question
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+          Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/creating-a-reproduction.md" class="md-nav__link">
+        Creating a reproduction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+          FAQ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          FAQ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/sponsoring/" class="md-nav__link">
+        Sponsoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/intent-over-entity.md" class="md-nav__link">
+        Intent Over Entity
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this Page">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "header.autohide"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
