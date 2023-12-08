@@ -17,7 +17,7 @@
     
     
       
-        <title>Kore.ai Connector - Kore ai Docs</title>
+        <title>Billing - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#koreai-connector" class="md-skip">
+        <a href="#billing" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kore.ai Connector
+              Billing
             
           </span>
         </div>
@@ -3019,57 +3019,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-koreai-connector" class="md-nav__link">
-    Why Kore.ai Connector?
+  <a href="#billing-sessions" class="md-nav__link">
+    Billing Sessions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    About
+  <a href="#invoices" class="md-nav__link">
+    Invoices
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing" class="md-nav__link">
-    Installing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding" class="md-nav__link">
-    Adding
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring" class="md-nav__link">
-    Configuring
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#starting" class="md-nav__link">
-    Starting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enabling-bots" class="md-nav__link">
-    Enabling Bots
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    Troubleshooting
+  <a href="#plan-usage" class="md-nav__link">
+    Plan &amp; Usage
   </a>
   
 </li>
@@ -3093,357 +3058,42 @@
 
 
 
-<h1 id="koreai-connector">Kore.ai Connector<a class="headerlink" href="#koreai-connector" title="Permanent link">&para;</a></h1>
-<p>On the <strong>Kore.ai Connector</strong> page, in the <strong>Security &amp; Control</strong> module of the Bots Admin Console, you can download and configure the Kore.ai Connector Agent for Bots within your secure company intranet to provide secure communications between the Kore.ai Bots platform in the cloud and your network.</p>
-<h2 id="why-koreai-connector">Why Kore.ai Connector?<a class="headerlink" href="#why-koreai-connector" title="Permanent link">&para;</a></h2>
-<p>Kore.ai Bots are designed to make updates, provide notifications to users, and perform tasks. The tasks to perform are received from or performed on third-party applications available over the Internet as web-based applications or on-premises bots applications.</p>
-<p>In a Kore.ai bots on-premises system, communications security is maintained by restricting users and systems within the company intranet or by configuring specific channels for specific data exchange. On the contrary, Kore.ai Bots reside and process data in the cloud environment and cannot directly connect to your bots' premises applications.</p>
-<p>You can use the Kore.ai Connector Agent to establish and maintain secure data connectivity between Kore.ai and your on-premises applications within your intranet.</p>
-<p>The Kore.ai Connector is a stand-alone application that is installed and configured within your company intranet configured with restricted and secure connectivity to specified bots applications. The Kore.ai Connector Agent is designed to pass requests for data access between your on-premises applications and Kore.ai to process the specific Bot tasks configured by an end-user with rights and privileges for those applications.</p>
-<p>The following illustration shows the <strong>Kore.ai Connector</strong> page in the Bots Admin Console <strong>Security &amp; Control</strong> module.</p>
-<p><a class="glightbox" href="../images/kore-ai-connector-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img1.png" alt="Kore.ai connector page" title="Kore.ai connector page" style="border: 1px solid gray;zoom:70%;"/></a></p>
-<p><strong>Kore.ai Connector Page Controls</strong></p>
-<p>The following controls are available on the <strong>Kore.ai Connector</strong> page in the Bots Admin Console.</p>
-<p><strong>Download Connector</strong> – Click the <strong>Download Connector</strong> drop-down arrow in and then select one of the following operating systems:</p>
-<ul>
-<li>Windows Based</li>
-<li>Unix/Linux Based</li>
-</ul>
-<p>Download the Kore.ai Connector Agent to your default browser downloads directory. Install the agent in your DMZ or Intranet. For more information, see <a href="#installing">Installing the Kore.ai Connector Agent</a>.</p>
-<p><strong>Add Connector</strong> – Click to add up to two connectors. After a connector is added, you should install and configure the Kore.ai Connector Agent.</p>
-<p><strong>Actions Menu</strong> – On the <strong>Kore.ai Connector</strong> page, against each added connector, click the <strong>Ellipsis</strong>  icon to display the <strong>Actions</strong> menu to run the following commands:</p>
-<ul>
-<li><strong>Instructions</strong> – Displays the <strong>Connector Instructions</strong> dialog that describes the overall steps to install and configure the Kore.ai Connector Agent.</li>
-<li><strong>Edit</strong> – Displays the <strong>Connector Details</strong> dialog that shows the Kore.ai Connector name, description, ID, status as CONNECTED or DISCONNECTED, and <strong>Last Connected</strong> date.</li>
-<li><strong>Generate Certificate</strong> – Displays the Generate Signed Certificate dialog used to create a .pem file for security along with instructions on how to create the file. For more information, see <a href="#installing">Installing the Kore.ai Connector Agent</a>.</li>
-<li><strong>Enable/Disable</strong> – Click to show the <strong>Are you sure you want to enable this connector?</strong> dialog. Click Continue to enable the connector. When enabling a connector, any other enabled instances of the Kore.ai Connector Agent are disabled.</li>
-<li><strong>Delete</strong> – Click to display the <strong>Delete Connector</strong> dialog. To permanently delete the connector, click <strong>Confirm</strong>.</li>
-</ul>
-<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
-<p>The Kore.ai Connector is an agent that runs behind your bots firewall within your company Intranet or perimeter network (DMZ) to provide secure data exchange between Kore.ai which operates in the cloud and your on-premises applications.</p>
-<p>In the following diagram, end-users configure a Kore.ai Bot that connects to Kore.ai in the cloud. The Kore.ai Bot servers (5) contact the Kore.ai Connector Gateway (2) with the Bot request. The Kore.ai Connector Gateway relays the request to the Kore.ai Connector (3) installed and securely configured in your on-premises Intranet or DMZ to interact with your bots applications. The response from your applications is sent through the Kore.ai Connector back out to the Kore.ai cloud and processed. Optionally, you can enable your on-premises applications to push data, for example, alert messages, to the Kore.ai cloud using webhooks.</p>
-<p><a class="glightbox" href="../images/kore-ai-connector-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img2.png" alt="About Kore.ai connector" title="About Kore.ai connector" style="border: 1px solid gray;zoom:70%;"/></a></p>
-<p><strong>How it Works</strong></p>
-<p>After you install the Kore.ai Connector in your network, you configure the agent with details to specifically access, communicate, and request or post data to the bots application you define.</p>
-<p>When started, the Kore.ai Connector Agent initiates a persistent SSL connection with Kore.ai and monitors requests for data transfer to or from your bots applications and Kore.ai. If the persistent connection is broken, the Kore.ai Connector automatically attempts to reestablish communication. You can monitor connectivity directly in the Bots Admin console.</p>
-<h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
-<p>This topic describes how to install and configure the Kore.ai Connector Agent for Kore.ai Bots that you can use to securely connect the cloud-based Kore.ai Bots platform to your on-premises applications in your company Intranet.</p>
-<p><strong>Prerequisites</strong></p>
-<p>To install the Kore.ai Connector, you should review the following hardware and software requirements.</p>
-<p><strong>Hardware Requirements</strong></p>
-<p>The server hosting the Kore.ai Connector Agent should have:</p>
-<p><strong>RAM:</strong> 4 GB</p>
-<p><strong>CPU Core:</strong> 8</p>
-<p><strong>Hard disk space:</strong> 10 GB</p>
-<p>To support the following:</p>
-<ul>
-<li>Kore.ai Connector download – 10MB</li>
-<li>Installation Files – 20MB</li>
-<li>Logging and Configuration Files – &lt; 5GB</li>
-</ul>
-<p><strong>Software Requirements</strong></p>
-<p>The Kore.ai Connector supports both Windows and Linux operating systems as follows:</p>
-<p><strong>Linux/Unix</strong></p>
-<p>The following Red Hat® Enterprise Linux® versions are supported:</p>
-<ul>
-<li>RHEL 7.x or higher</li>
-<li>RHEL 5 (32-bit and 64-bit)</li>
-<li>RHEL 6 (32-bit and 64-bit)</li>
-<li>RHEL 7 (64-bit)</li>
-</ul>
-<p>The following CentOS versions are supported:</p>
-<ul>
-<li>CentOS 7.x or higher</li>
-<li>CentOS 5 (32-bit and 64-bit)</li>
-<li>CentOS 6 (32-bit and 64-bit)</li>
-<li>CentOS 7 (64-bit)</li>
-</ul>
-<p><strong>Node.js</strong> (version 10 or higher) – Required to run the Kore.ai Connector Agent. Download and install from <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a> on the server where the Kore.ai Connector Agent is installed.</p>
-<p><strong>Windows</strong></p>
-<p>The following Microsoft Windows 64-bit operating systems are supported:</p>
-<ul>
-<li>Windows 7 (64-bit)</li>
-<li>Windows 8.1 (64-bit)</li>
-<li>Windows 10 (64-bit)</li>
-<li>Windows Server 2008 R2 (64-bit)</li>
-<li>Windows Server 2012 (64-bit)</li>
-<li>Windows Server 2012 R2 (64-bit)</li>
-</ul>
-<p><strong>Node.js</strong> – Required to run the Kore.ai Connector Agent. Download and install from <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a> (version 10 or higher)on the server where the Kore.ai Connector Agent is installed. In addition, you must also install the <strong>forever</strong> module. After node.js is installed, run the following command to install the <strong>forever</strong> module:</p>
-<p><code>npm  install forever -g</code></p>
-<p><strong>Installation Process</strong></p>
-<p>This section describes the installation and configuration of your application server where the Kore.ai Connector Agent is installed, the configuration required in the Bots Admin Console, and finally, enabling enterprise Bots for the Kore.ai Connector Agent and deploying the upgraded Bots for enterprise users.</p>
-<h2 id="adding">Adding<a class="headerlink" href="#adding" title="Permanent link">&para;</a></h2>
-<p>In the Bots Admin Console, you begin by adding a connector. When you add a connection, a unique ID is created for your company and your unique Kore.ai Connector.</p>
-<ol>
-<li>In the Bots Admin Console, in the <strong>Security &amp; Control</strong> module, on the <strong>Kore.ai Connector</strong> page, click <strong>Add Connector</strong>. The <strong>Add Connector</strong> dialog is displayed.</li>
-<li>Optionally, in the first field, edit the name of the connector, and then enter a <strong>Description</strong> for the connector in the second field.</li>
-<li>
-<p>Click <strong>Add</strong>. The <strong>Connector Instructions</strong> dialog is displayed as shown in the following illustration.<br />
-<a class="glightbox" href="../images/kore-ai-connector-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img3.png" alt="Adding Kore.ai connector - Connector instructions" title="Adding Kore.ai connector - Connector instructions" style="border: 1px solid gray;zoom:70%;"/></a></p>
-</li>
-<li>
-<p>In the <strong>Connector Instructions</strong> dialog, click <strong>OK</strong>. The <strong>Kore.ai Connector</strong> page is displayed.</p>
-</li>
-<li>
-<p>In the Download Connector drop-down list, select you operating system and download the Kore.ai Connector Agent compressed file, one of:</p>
-<ol>
-<li><strong>Linux/Unix</strong> – kore-connector-1.0.0.tar.gz</li>
-<li><strong>Windows</strong> – kore-connector-1.0.0.zip</li>
-</ol>
-</li>
-<li>
-<p>Copy, and then uncompress the file to your application server.</p>
-<ol>
-<li>
-<p>For Linux, use the following command:
-  `tar -xvf kore-connector-X.X.X.tar.gz</p>
-</li>
-<li>
-<p>For Windows, in File Explorer, right-click the file and select <strong>Extract to</strong> on the command menu.</p>
-</li>
-</ol>
-</li>
-</ol>
-<p>The Kore.ai Connector Agent file is uncompressed into the following directory structure.</p>
-<p><a class="glightbox" href="../images/kore-ai-connector-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img4.png" alt="Kore.ai connector directory structure" title="Kore.ai connector directory structure" style="border: 1px solid gray;zoom:70%;"/></a></p>
-<p><strong>Generating a Signed Security Certificate</strong></p>
-<p>For secure data exchange between the Kore.ai servers in the cloud and your intranet, you need to generate a signed security certificate. First, create a .csr file on your application server using the command displayed in the Bots Admin Console, and then paste the content of the .csr file into the <strong>Generate Signed Certificate</strong> dialog. The .csr content is used to generate and download the .pem file. You will then copy the .pem file back to the Kore.ai Connector Agent installed on your application server.</p>
-<ol>
-<li>In the Bots Admin Console, in the <strong>Security &amp; Control</strong> module, on the <strong>Kore.ai Connector</strong> page, click the <strong>Ellipsis</strong>  icon.</li>
-<li>
-<p>On the <strong>Actions</strong> menu, click <strong>Generate Certificate</strong>. The <strong>Generate Signed Certificate</strong> dialog is displayed as shown in the following illustration.<br />
-<a class="glightbox" href="../images/kore-ai-connector-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img5.png" alt="Generate Signed Certificate dialog" title="Generate Signed Certificate dialog" style="border: 1px solid gray;zoom:70%;"/></a></p>
-</li>
-<li>
-<p>Review the instructions, and then copy your custom command displayed after step 6 in the instructions as shown in the following illustration.<br />
-<a class="glightbox" href="../images/kore-ai-connector-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img6.png" alt="Review the instructions and copy custom command" title="Review the instructions and copy custom command" style="border: 1px solid gray;zoom:70%;"/></a></p>
-</li>
-<li>
-<p>Paste and run the command on your application server within your company intranet in the <em>/Credentials</em> directory created when you installed the Kore.ai Connector Agent.</p>
-</li>
-<li>
-<p>In the <em>/Credentials</em> directory, the Kore.aiConnector.csr file is created, along with the Kore.aiConnector.key file. Open the Kore.aiConnector.csr file using a text editor, and copy the entire contents of the file, and then paste the contents into the <strong>Certificate signing request</strong> field in the <strong>Generate Signed Certificate</strong> dialog as shown in the following illustration.<br />
-<a class="glightbox" href="../images/kore-ai-connector-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img7.png" alt="Paste file contents in Generate Signed Certificate dialog" title="Paste file contents in Generate Signed Certificate dialog" style="border: 1px solid gray;zoom:70%;"/></a></p>
-</li>
-<li>
-<p>Click <strong>Generate</strong>. The <strong>Download Certificate</strong> and <strong>View Certificate</strong> buttons are displayed.</p>
-</li>
-<li>Click <strong>Download Certificate</strong>. The Kore.aiConnectorCert.pem file is downloaded to your local computer browser default downloads folder.</li>
-<li>Copy the Kore.aiConnectorCert.pem file to the /Credentials folder created when you installed the Kore.ai Connector on your application server.</li>
-</ol>
-<p>Your security files are in-place on the application server.</p>
-<h2 id="configuring">Configuring<a class="headerlink" href="#configuring" title="Permanent link">&para;</a></h2>
-<p>After you install the Kore.ai Connector Agent software, you must verify or set the properties for:</p>
-<ul>
-<li><strong>Certificate Information</strong> – See <code>credentials</code> in the connectorconfig.json file.</li>
-<li><strong>Log Directories</strong> – See <code>logger</code> in the connectorconfig.json file.</li>
-<li><strong>Cluster Environment</strong> – See <code>cluster</code> in the connectorconfig.json file.</li>
-<li><strong>Proxy Control for Outbound Connections</strong> – See <code>tunnel</code> in the connectorconfig.json file.</li>
-<li><strong>Access Control for Enterprise Applications</strong> – See the accesscontrol.json file.</li>
-</ul>
-<p><strong>Default Configuration Settings – connectorconfig.json</strong></p>
-<p>This section shows the default configuration settings for certificate information, logging, and cluster mode settings in the &lt; <strong><em>Kore.ai Connector agent Installation Path</em></strong> &gt;/config/connectorconfig.json file:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   &quot;credentials&quot;:{
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>      &quot;key&quot;:&quot;./credentials/Kore.aiConnector.key&quot;,
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      &quot;cert&quot;:&quot;./credentials/Kore.aiConnectorCert.pem&quot;,
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      &quot;ca&quot;:&quot;./credentials/ca.crt&quot;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>   },
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>   &quot;logger&quot;:{
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>      &quot;applogs&quot;:{
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>         &quot;path&quot;:&quot;./logs&quot;,
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>         &quot;level&quot;:&quot;info&quot;
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      },
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      &quot;auditlogs&quot;:{
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>         &quot;path&quot;:&quot;./audits&quot;,
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>         &quot;level&quot;:&quot;info&quot;
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      }
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>   },
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>   &quot;cluster&quot;:{
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>      &quot;enabled&quot;:true,
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      &quot;workers&quot;:2
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>   }
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>}
-</span></code></pre></div>
-<p><strong>Certificate Information</strong></p>
-<p>You may want to store the security keys for the Kore.ai Connector Agent in another location other than the installation directory for the Kore.ai Connector Agent. You can move the credential files to another directory on the application server or another server in the network and specify the relative or absolute path in the <code>credentials</code> section in the connectorconfig.json file that contains the following parameters:</p>
-<ul>
-<li><code>key</code> – The client certificate. Default setting is:
-<code>./credentials/Kore.aiConnector.key</code></li>
-<li><code>cert</code> – The .pem file generated in the Bots Admin Console. Default setting is:
-<code>./credentials/Kore.aiConnectorCert.pem</code></li>
-<li><code>ca</code> –  Installed as part of the Kore.ai Connector Agent. Default setting is:
-<code>./credentials/ca.crt</code></li>
-</ul>
-<p><strong>Logging Configuration</strong></p>
-<p>The Kore.ai Connector Agent generates two logging files at runtime:</p>
-<ul>
-<li>
-<p>kore-connector.log.&lt; <strong><em>dd-MM-yyyy</em></strong> &gt; – Application logging events to include:</p>
-<ul>
-<li><strong>Connector status</strong> – Any change in status such as agent start or stop is added <strong>as a log entry.</strong></li>
-<li><strong>Errors</strong> – Any error message for the agent is captured in the app.log file.</li>
-</ul>
-</li>
-<li>
-<p>kore-connector-audit.log.&lt; <strong><em>dd-MM-yyyy</em></strong> &gt; – Audit logging events.</p>
-<ul>
-<li><strong>Configuration changes</strong> – Any changes in connectorconfig.json file and accesscontrol.json file. The original file is backed up automatically and a log entry is made.</li>
-<li><strong>Requested URLs</strong> – All requested URLs coming into the Kore.ai Connector are captured as a log entry.</li>
-</ul>
-</li>
-</ul>
-<p>By default, logging files for the application and auditing logs are created and stored in the default installation pat in the &lt; <strong><em>Kore.ai Connector Agent Installation Path</em></strong> &gt;/logs and &lt; <strong><em>Kore.ai Connector Agent Installation Path</em></strong> &gt;/audits. You can specify another directory on the application server or another server in the network and specify the full path.
-You can also increase or decrease the logging levels as needed for either logging file as:</p>
-<ul>
-<li><strong>fatal</strong> – Any error that is forcing a shutdown of the service or application to prevent data loss or further data loss. Occurs only once in a process and is usually the last entry in a log.</li>
-<li><strong>critical</strong> – An error which requires immediate investigation that has not yet shut down a service or application, but is likely to do so.</li>
-<li><strong>error</strong> – Any error which is fatal to the current operation but not fatal to the service or application, for example, cannot open a file, missing file, or missing data. This type of errors usually requires administrator intervention.</li>
-<li><strong>warn</strong> – Anything that can potentially cause application abnormalities with the ability to recover, for example, switching from a primary to backup server, retrying, or missing secondary data.</li>
-<li><strong>info</strong> – General information about normal application operations such as start and planning stopping of service, configuration assumptions, and so forth. This is the default setting for the Kore.ai Connector Agent.</li>
-<li><strong>debug</strong> – Diagnostic information, usually for system administrators and IT personnel.</li>
-<li><strong>trace</strong> – All operational information, for example, parts of a function.</li>
-</ul>
-<p>Each log level below fatal includes the information from any logging level above. For example, the default level as info includes all the information for fatal, critical, error, warn, and info in the log file.</p>
-<p><strong>Scalability and Cluster Configuration</strong></p>
-<p>The Kore.ai Connector Agent is scalable to handle the request load as required. When you install the Kore.ai Connector Agent, cluster mode settings are enabled by default, with 2 workers, or CPUs, set for use.</p>
-<p>For increased load handling for requests by the Kore.ai Connector Agent, you may want to enable more workers. If you do not want to use cluster mode, set the “enabled” property to false.</p>
-<p>You can also run cloud connectors in more than one server to meet failover as well as scalability requirements. Certificate and other configurations will remain same. Cloud Connector is a client which makes outboud connection to Kore.ai Cloud Gateway. When more than one connectors are connected, Cloud Gateway will distribute the load to the connectors.</p>
-<p><strong>Proxy Control for Outbound Connections</strong></p>
-<p>You can configure outbound proxy settings for the Kore.ai Connector Agent in the &lt; <strong><em>Kore.ai Connector agent Installation Path</em></strong> &gt;/config/connectorconfig.json file. This configuration is optional unless all of your outbound data is routed through a proxy server.
-To configure outbound proxy settings, add the following configuration shown as the entry labeled tunnel_ _in the following configuration sample:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   &quot;credentials&quot;:{
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      &quot;key&quot;:&quot;./credentials/Kore.aiConnector.key&quot;,
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      &quot;cert&quot;:&quot;./credentials/Kore.aiConnectorCert.pem&quot;,
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      &quot;ca&quot;:&quot;./credentials/ca.crt&quot;
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>   },
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>   &quot;logger&quot;:{
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      &quot;applogs&quot;:{
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>         &quot;path&quot;:&quot;./logs&quot;,
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>         &quot;level&quot;:&quot;info&quot;
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>      },
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>      &quot;auditlogs&quot;:{
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>         &quot;path&quot;:&quot;./audits&quot;,
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>         &quot;level&quot;:&quot;info&quot;
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>      }
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>   },
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>   &quot;cluster&quot;:{
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>      &quot;enabled&quot;:true,
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>      &quot;workers&quot;:2
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>   },
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>   &quot;tunnel&quot;:{
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>      &quot;proxyHost&quot;:&quot;hostname&quot;,
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>      &quot;proxyPort&quot;:&quot;portnumber&quot;
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>   }
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>}
-</span></code></pre></div>
-<p><strong>Access Control for Applications</strong></p>
-<p>The Kore.ai Connector Agent requires an explicit set of white-listed URLs to access specific applications on your company intranet. Any other HTTP requests are denied by the Kore.ai Connector.
-You must configure access control for each bot application that will use the Kore.ai Connector Agent in the accesscontrol.json file in the Kore.ai Connector installation directory in the …/config/configs directory with the following parameters:</p>
-<ul>
-<li><strong>virtualhost</strong> – Specify the virtual host name exactly as specified in the <strong>Request URL</strong> property in the <strong>Set Up Request Chain</strong> dialog while configuring on-premises bots in the Bot Builder tool. For more information, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/" target="_blank">Defining a Request Chain Object</a> in the Bot Builder documentation.</li>
-<li><strong>virtualport</strong> – Specify the virtual port exactly as specified in the <strong>Request URL</strong> property in the <strong>Set Up Request Chain</strong> dialog while configuring on-premises bots in the Bot Builder tool. For more information, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/" target="_blank">Defining a Request Chain Object</a> in the Bot Builder documentation.</li>
-<li><strong>internalhost</strong> – Specify the actual host name of the on-premises enterprise application used for data exchange with your Bots.</li>
-<li><strong>internalport</strong> – Specify the actual port of the on-premises enterprise application used for data exchange with your Bots.</li>
-<li><strong>protocol</strong> – Specify HTTP or HTTPS for the connection to on-premises enterprise applications.</li>
-<li><strong>allowedPaths</strong> – Specify all paths as “/<em>” or a specific array of paths for the host, not to include any parameters. The Kore.ai Connector checks the path up to, but not including parameters beginning with "*</em>?**"</li>
-</ul>
-<p>The following image is an example of a configured accesscontrol.json file with four Bot configurations.</p>
-<p><a class="glightbox" href="../images/kore-ai-connector-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img8.png" alt="configured accessconteol.json" title="configured accesscontrol.json" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<h1 id="billing">Billing<a class="headerlink" href="#billing" title="Permanent link">&para;</a></h1>
+<p>The billing section has been added to the Bot Admin Console from ver 7.0, to enable the Bot Admins to view and track their Invoices and plan details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Comments cannot be used in configuration files.</p>
+<p>This page is not available for customers under the Enterprise plan.</p>
 </div>
-<h2 id="starting">Starting<a class="headerlink" href="#starting" title="Permanent link">&para;</a></h2>
-<p>This section describes how to start or stop the Kore.ai Connector Agent on Windows or Linux operating systems.</p>
-<p><strong>Linux/Unix Operating Systems</strong></p>
-<p>On Linux operating systems, you can manually start the Kore.ai Connector Agent, or configure the Kore.ai Connector Agent to autostart on boot.</p>
-<p><strong>Manually Starting/Stopping the Kore.ai Connector on Linux</strong></p>
-<p>Manually start or stop the Kore.ai Connector Agent on the Linux/Unit application server by running the following commands in the Kore.ai Connector installation directory, and check the status as follows:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./koreconnector.sh start
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>./koreconnector.sh stop    
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>./koreconnector.sh status
-</span></code></pre></div>
-<p>The following image shows the response for a successful start and status check of the Kore.ai Connector.</p>
-<p><a class="glightbox" href="../images/kore-ai-connector-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img9.png" alt="successful start and status check of the Kore.ai Connector" title="successful start and status check of the Kore.ai Connector" style="border: 1px solid gray;zoom:70%;"/></a></p>
-<p><strong>Configuring Kore.ai Connector for Autostart on Linux</strong></p>
-<p>This section describes how to set the Kore.ai Connector Agent to automatically start when the Linux server is started or rebooted.</p>
-<p>To configure the autostart for the Kore.ai Connector Agent, on the application server, in the …/etc/rc.local file, add the following command:</p>
-<p><code>cd &amp;lt;Kore.ai Connector&amp;nbsp;Installation Root&gt; ; ./koreconnector.sh start</code></p>
-<p>For example:</p>
-<p><code>cd /home/CompanyAdmin/kore-connector ; ./koreconnector.sh start</code></p>
-<p><strong>Windows Operating Systems</strong></p>
-<p>On Windows operating systems, you can manually start or stop the Kore.ai Connector Agent, and check the status of the Kore.ai Connector Agent.</p>
-<p><strong>Manually Starting/Stopping the Kore.ai Connector on Windows</strong></p>
-<p>Manually start or stop the Kore.ai Connector Agent on the Windows application server by running the following commands in the Kore.ai Connector installation directory, and check the status as follows:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>.\koreconnector.cmd start
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>.\koreconnector.cmd stop    
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>.\koreconnector.cmd status
-</span></code></pre></div>
-<h2 id="enabling-bots">Enabling Bots<a class="headerlink" href="#enabling-bots" title="Permanent link">&para;</a></h2>
-<p>In this section, you can verify the connection to the Kore.ai Connector Agent in the Bots Admin Console, and then enable the connection. When the connection is enabled, you can modify your custom Bots in the Bot Builder tool to use the Kore.ai Connector, publish those Bots, and then in the Bots Admin Console, deploy the published Bots and assign the Bots to users in your company.</p>
-<ol>
-<li>
-<p>In the Bots Admin Console, in the <strong>Security &amp; Control</strong> module, on the <strong>Kore.ai Connector</strong> page, verify the Kore.ai Connector status as CONNECTED, click the <strong>Ellipsis</strong> icon, and then on the <strong>Actions</strong> menu, click <strong>Enable</strong> as shown in the following illustration.<br />
-<a class="glightbox" href="../images/kore-ai-connector-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img10.png" alt="Enable bots" title="Enable bots" style="border: 1px solid gray;zoom:70%;"/></a></p>
-</li>
-<li>
-<p>In Bot Builder, for each Bot task that you want to run using the Kore.ai Connector, clone or upgrade each Bot.  </p>
-<ol>
-<li>In the <strong>Set up Request Chain Object</strong> dialog, select <strong>Access using connector</strong>, save the changes, and then publish the Bot. For more information about configuring the request object, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/" target="_blank">Configuring an Alert Task Request Object</a> or  <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/action-info-task/kore-bot-action-tasks/" target="_blank">Configuring an Action Task Request Object</a> in the Bot Builder tool documentation.  </li>
-</ol>
-<p>!!! note</p>
-<div class="language-text highlight"><pre><span></span><code>    The option in the **Set up Request Chain Object** dialog for **Access using connector** is only available after the Kore.ai connector is enabled in the Bots Admin Console.
-</code></pre></div>
-</li>
-<li>
-<p>In the Bots Admin Console, deploy the published Bot and assign the users that can use the Bot tasks in your enterprise. For more information, see <a href="../bot-management" target="_blank">Bot Management</a>.</p>
-</li>
-</ol>
-<p>After the Kore.ai Connector is installed on your application server, enabled in Bots Admin Console, and your Bots customized to use the connector, you only need to monitor the status of your connector in the Bots Admin Console.
-If you cannot start the Kore.ai Connector, or customers are reporting errors, you may need to reconfigure Kore.ai Connector settings.</p>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<p>Installing and configuring the Kore.ai Connector Agent involves many steps. And even after installation, you may need additional configuration to maintain connectivity between Kore.ai Bots and your on-premises applications. This topic describes some of the typical issues that may arise, and how to handle those issues.</p>
-<p><strong>Kore.ai Connect Agent Server Issues</strong></p>
-<p><strong>Kore.ai Connector Fails to Start</strong></p>
-<p><strong>Log Error Message:</strong> TypeError: Object #&lt;Object&gt; has no method ‘parse’
-<strong>Solution:</strong> The server may have multiple node.js installations with different versions. You may need to specify which node.js version to run.
-To check for versions, run the following command:</p>
-<p><code>nvm list</code></p>
-<p>This command may return:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>v0.10.29
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>v0.10.30
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>v0.10.31
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>v0.10.35
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>v0.10.36
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>v0.11.13
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>v0.12.2
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>v0.12.4
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>v4.0.0
-</span></code></pre></div>
-<p>To set the version to use, run the following command:</p>
-<p><code>nvm use v4.0.0</code></p>
-<p>The command should return:</p>
-<p><code>Now using node v4.0.0</code></p>
-<p><strong>Client Issues</strong></p>
-<p>Users in your organization may experience connectivity issues with the Kore.ai Connector.</p>
+<h3 id="billing-sessions">Billing Sessions<a class="headerlink" href="#billing-sessions" title="Permanent link">&para;</a></h3>
+<p>The Billing sessions are calculated based on</p>
 <ul>
 <li>
-<p><strong>Error Message:</strong> <em>“&lt; Enterprise application &gt;” is not reachable. Unable to communicate with the connector. Please try again.</em></p>
+<p>Bot Usage (Usage Session)</p>
 <ul>
-<li><strong>Solution:</strong> The “virtualhost” entry in the <em><strong>&lt; Kore.ai Connector Install Dir &gt;</strong>/config/configs/accesscontrol.json</em> file is not defined, or is incorrectly configured. Verify the entry.</li>
+<li>A usage session is defined as ‘Fifteen minutes’ of user conversation with the bot. For example – If a user converses with the bot for 31 minutes, then it would be counted as 3 sessions (0-15, 16-30,31-End).</li>
+<li>In the case of Human-agent transfer – If the user-bot interaction results in human agent transfer, the time spent with the human agent will be excluded from the bot session.</li>
 </ul>
 </li>
 <li>
-<p><strong>Error Message:</strong> <em>The server returned an error. Try again later. (404 – System not reachable).</em></p>
+<p>Alerts Delivered (Alert Session)</p>
 <ul>
-<li><strong>Solution:</strong> Connectivity between the Kore.ai Connector on your application server and the Kore.ai Gateway is broken. The Kore.ai Connector Agent may have stopped running. You may need to restart the Kore.ai Connector on the application server.</li>
+<li>Every alert delivered to a user will be counted as an Alert session. For example – If the user has set up to receive a sales report every 8 hours. In a day this user would consume 3 alert sessions.</li>
 </ul>
 </li>
 </ul>
-<p>If you cannot resolve your issue, contact Kore.ai Support.</p>
+<h3 id="invoices">Invoices<a class="headerlink" href="#invoices" title="Permanent link">&para;</a></h3>
+<p>The Invoice section displays the Invoice history listing the Id, validity period and amount paid.</p>
+<p>You have the option to download the Invoice. Hover over the Invoice you want to download to see the download icon.</p>
+<p><a class="glightbox" href="../images/billing-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/billing-img1.png" alt="Download invoices" title="Download invoices" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<h3 id="plan-usage">Plan &amp; Usage<a class="headerlink" href="#plan-usage" title="Permanent link">&para;</a></h3>
+<p>The Plan &amp; Usage section lists all the published Bots in your account along with the Plan under which they were published, the validity period, and the usage details.</p>
+<p>Information icons to indicate any plan changes like downgrade messages and expiring plans are also displayed.</p>
+<p><a class="glightbox" href="../images/billing-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/billing-img2.png" alt="Plan and Usage information" title="Plan and Usage information" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<p><strong>Manage</strong> option displays the current plan based eligibility and the usage details. Note that there is no renewal date for free bots.</p>
+<p><a class="glightbox" href="../images/billing-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/billing-img3.png" alt="Plan based eligibility and usage details" title="Plan based eligibility and usage details" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<p>The <strong>Cancel Subscription</strong> option allows you to cancel the current subscription for the selected bot.</p>
+<p><strong>Change Plan</strong> option gives you a list of all plans with the plan offerings with the current plan indicated. From here you can choose to <strong>Select Plan</strong>. <a href="https://developer.kore.ai/docs/bots/bot-settings/bot-management/subscription-plans/">Refer here</a> for plan details.</p>
+<p>Once you select to change a plan order details will be displayed and you will be prompted to enter the address details. <strong>Confirm Payment</strong> will redirect to the payment gateway to capture the billing details.</p>
 
 
   
