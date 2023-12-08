@@ -17,7 +17,7 @@
     
     
       
-        <title>Travel VA: Configure Digital Forms - Kore ai Docs</title>
+        <title>Travel VA: Using Traits - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#travel-va-configure-digital-forms" class="md-skip">
+        <a href="#travel-va-using-traits" class="md-skip">
           Skip to content
         </a>
       
@@ -171,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Travel VA: Configure Digital Forms
+              Travel VA: Using Traits
             
           </span>
         </div>
@@ -3033,83 +3033,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurations" class="md-nav__link">
-    Configurations
+  <a href="#implementation" class="md-nav__link">
+    Implementation
   </a>
   
-    <nav class="md-nav" aria-label="Configurations">
+    <nav class="md-nav" aria-label="Implementation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#digital-form-configuration" class="md-nav__link">
-    Digital Form Configuration
-  </a>
-  
-    <nav class="md-nav" aria-label="Digital Form Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#form-creation" class="md-nav__link">
-    Form Creation
+  <a href="#intent-detection-using-traits" class="md-nav__link">
+    Intent Detection using Traits
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-form-editor" class="md-nav__link">
-    The Form Editor
+  <a href="#knowledge-intent-using-traits" class="md-nav__link">
+    Knowledge Intent using Traits
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dialog-task-configuration" class="md-nav__link">
-    Dialog Task Configuration
-  </a>
-  
-    <nav class="md-nav" aria-label="Dialog Task Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-a-dialog-task" class="md-nav__link">
-    Create a Dialog Task
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-a-digital-form-node" class="md-nav__link">
-    Add a Digital Form Node
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-a-message-node" class="md-nav__link">
-    Add a Message Node
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-the-assistant" class="md-nav__link">
-    Test the Assistant
-  </a>
   
 </li>
       
@@ -3132,203 +3078,120 @@
 
 
 
-<h1 id="travel-va-configure-digital-forms">Travel VA: Configure Digital Forms<a class="headerlink" href="#travel-va-configure-digital-forms" title="Permanent link">&para;</a></h1>
-<p>In this document, we will explore a scenario in a Travel Planning assistant, through which a user can book a flight. We will see how Digital Forms can be used to gather all the required information from the user, then make the booking based on that information.</p>
-<p>For details on what Digital Forms are and how they are implemented in the Kore.ai XO Platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/digital-forms/" target="_blank">here</a>.</p>
+<h1 id="travel-va-using-traits">Travel VA: Using Traits<a class="headerlink" href="#travel-va-using-traits" title="Permanent link">&para;</a></h1>
+<p>In this post, we explore a scenario for a Travel Planning Assistant where traits are used to steer the conversation flow in a more natural and predictable direction. For details on what Traits are and how they are implemented in the XO Platform, click <a href="https://developer.kore.ai/docs/bots/nlp/traits/" target="_blank">here</a>. </p>
 <h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
-<p>Consider a Travel Planning Assistant helping a user book a flight. There are several information categories that the VA should collect from the user in order to complete this task. Rather than asking the user for each piece of information one by one, the VA can ask the user just once to complete a form that collects all the necessary data. Once the form is successfully submitted, the VA can pull the data and process the booking.</p>
+<p>Consider the cases where the user is trying to report an issue or ask a question pertaining to <em>“Make a Booking”.</em> The VA might trigger the <em>“Make a Booking”</em> intent as opposed to <em>“Issue Resolution”</em>. The problem that may arise in this scenario is that the user is presented with a response that is not relevant to their utterance.</p>
+<p>In this document, we will show how Traits can be used to identify such situations and take appropriate action.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>To understand these configurations, you need to know at least the basics of the following XO Platform features:</p>
+<p>To go through these configurations, you need to know at least the basics of <a href="https://developer.kore.ai/docs/bots/how-tos/travel-planing-assistant/create-a-travel-virtual-assistant/" target="_blank">building a Virtual Assistant</a>. This is because your assistant needs to have been already built when you begin working on your forms.</p>
+<p>In addition, your VA requires the following configurations:</p>
 <ul>
-<li><a href="https://developer.kore.ai/docs/bots/how-tos/travel-planing-assistant/create-a-travel-virtual-assistant/" target="_blank">Building a Virtual Assistant</a>: This is because your assistant needs to have been already built when you begin working on your forms.</li>
-<li><a href="https://developer.kore.ai/docs/bots/bot-builder-tool/digital-forms/" target="_blank">Working with Digital Forms</a>.</li>
+<li>
+<p><strong>Book a Flight Dialog Task</strong> – This task allows the user to make a flight booking via the assistant.
+<a class="glightbox" href="../images/bookflight-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bookflight-dialog.png" alt="book flight dialog" title="book flight dialog" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+</li>
+<li>
+<p><strong>Issue Resolution Dialog Task</strong>– This task assists in any issues faced by the user. It displays a regret message and transfers the conversation to a Live Agent.
+<a class="glightbox" href="../images/issue-resolution-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/issue-resolution-dialog.png" alt="issue resolution dialog" title="issue resolution dialog" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+</li>
+<li>
+<p><strong>Knowledge Graph Booking FAQ</strong>– A Booking node with an FAQ for How do I make a Booking?
+<a class="glightbox" href="../images/kg-booking-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kg-booking-faq.png" alt="kg booking faq" title="kg booking faq" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+</li>
 </ul>
-<h2 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
-<p>When a user makes a booking, the following needs to happen within your assistant</p>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h3 id="intent-detection-using-traits">Intent Detection using Traits<a class="headerlink" href="#intent-detection-using-traits" title="Permanent link">&para;</a></h3>
+<p>We will be using Trait to steer the conversation to “Issue Resolution” when the word “issue” is present in the User Utterance.</p>
+<p><strong>Steps to add a New Trait</strong></p>
 <ol>
-<li>A Digital Form needs to be displayed in order to gather input from the user;</li>
-<li>A Dialog Task needs to:<ul>
-<li>trigger the above Digital Form; and</li>
-<li>capture the user-entered booking information.</li>
+<li>Select <strong>Build</strong> tab from the top menu</li>
+<li>From <strong>Natural Language</strong> -&gt; <strong>Training</strong> select the <strong>Traits</strong> tab.</li>
+<li>
+<p>Click <strong>Add New Trait</strong> We will be using a trait to identify the existence of the word ‘issue’ in the user utterance.</p>
+<ul>
+<li>Add a <strong>Trait Type</strong> as <em>Problem Statement</em> and <strong>Traits</strong> as <em>issue</em>. A given Trait Type can have multiple Traits grouped together logically.</li>
+<li>
+<p>Optionally you can add utterances for Issues as <em>‘problem’, ‘unable to’</em>, and <em>‘not working’</em>. These are the alternate words that users might use to indicate an issue.
+<a class="glightbox" href="../images/optional-add-utterance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/optional-add-utterance.png" alt="optionally add utterance" title="optionally add utterance" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+</li>
+<li>
+<p><strong>Save &amp; Add Rule</strong></p>
+</li>
+<li>We will be defining the intent that needs to be triggered in the presence of this Issue trait.</li>
+<li><strong>Select Intent</strong> – <em>Issue Resolution</em> to be triggered in the presence of this trait.</li>
+<li>
+<p>Add the <strong>Trait Rules</strong> – <em>issue</em> as the trait that should trigger the above selected intent.
+<a class="glightbox" href="../images/add-trait-rule.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-trait-rule.png" alt="add trait rule" title="add trait rule" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+</li>
+<li>
+<p><strong>Save</strong> the Trait Mapping.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Train</strong> the Traits.</p>
+</li>
+<li>
+<p>Open the Issue Resolution Intent to see the Trait <strong>Rules</strong> under the <strong>NLP</strong> properties panel updated with the <em>issue</em> trait.
+<a class="glightbox" href="../images/issue-resolution-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/issue-resolution-intent.png" alt="issue resolution intent" title="issue resolution intent" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+</li>
+<li>
+<p><strong>Talk to the Bot</strong> and see the conversation flow. As you can see in the illustration below, rather than detect the <em>Make a Booking</em> intent, the VA uses the Issue Resolution task to transfer the conversation to an agent. This is despite the fact that the user utterance contains the full <em>Make a Booking</em> sentence. The VA picks up on the presence of an utterance which we have set up under the <em>Issue</em> trait – the word <em>problem</em> – and thus triggers the intent that we selected as the rule, rather than the other one.
+<a class="glightbox" href="../images/traits-talk-to-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/traits-talk-to-bot.png" alt="talk to bot" title="talk to bot" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+</li>
+</ol>
+<h3 id="knowledge-intent-using-traits">Knowledge Intent using Traits<a class="headerlink" href="#knowledge-intent-using-traits" title="Permanent link">&para;</a></h3>
+<p>Here we will see how to drive the query from the user to the appropriate FAQ instead of the dialog task.</p>
+<p><strong>Steps to Create Knowledge Intent using Traits</strong></p>
+<ol>
+<li>From <strong>Natural Language &gt; Training</strong> open the <strong>Traits</strong> dialog.</li>
+<li>
+<p>Click <strong>Add New Trait.</strong> We will be using a trait to identify the existence of questions in the user utterance.</p>
+<ul>
+<li>Add a <strong>Trait Type</strong> as <em>Inquiry</em>, and <strong>Traits</strong> as <em>ask</em>. A given Trait Type can have multiple Traits grouped together logically.</li>
+<li>
+<p>Optionally you can add utterances for Issues as <em>‘wondering’</em> and <em>‘want to know’</em>. These are the alternate words that the user might use to indicate an inquiry.
+<a class="glightbox" href="../images/add-trait-details.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-trait-details.png" alt="add trait details" title="add trait details" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p><strong>Save &amp; Exit</strong> the Trait.</p>
+</li>
+<li><strong>Train</strong> the Trait.</li>
+<li>Associate the Trait to the FAQ</li>
+<li>Open the <strong>Knowledge Graph</strong> and hover over the node with the question pertaining to <em>Booking</em>.</li>
+<li>Click the <strong>Settings</strong> icon.</li>
+<li>
+<p>Under <strong>Traits</strong> type and select <em>ask</em> trait.
+<a class="glightbox" href="../images/associate-to-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/associate-to-faq.png" alt="associate to faq" title="associate to faq" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+</li>
+<li>
+<p><strong>Train</strong> the Knowledge Graph.</p>
+</li>
+<li>Click <strong>Talk to the bot</strong> and say <em>I want to make a booking</em>. You will see that the assistant is still detecting the <em>Make a Booking</em> intent.</li>
+<li>
+<p>To understand the reason behind this:</p>
+</li>
+<li>
+<p>Open <strong>Testing &gt; Utterance Testing.</strong></p>
+</li>
+<li>Type the utterance, you will see that the <strong>Trait</strong> has been identified.</li>
+<li>Select the <strong>Ranking and Resolver</strong>. You will see that both the intent and FAQ were identified but the intent got a higher score.
+<a class="glightbox" href="../images/select-ranking-and-resolver.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-ranking-and-resolver.png" alt="select ranking and resolver" title="select ranking and resolver" style="border: 1px solid gray; zoom:75%;"></a>  </li>
+</ul>
+</li>
+<li>
+<p>To ensure that the intent is not selected, we will add a <strong>Negative Pattern</strong> to the <em>Book Flight</em> intent.</p>
+<ul>
+<li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong> and select the <em>Book Flight</em> task.</li>
+<li>Select the <strong>primary intent node</strong> and go to its <strong>NLP Properties</strong>. </li>
+<li>Under <strong>Patterns</strong> click <strong>Add Pattern</strong>.</li>
+<li>Select the <strong>Negative Patterns</strong> tab. Add the words <em>know</em>, <em>ask,</em> any any other question identifiers.This will ensure that the ‘Book Flight’ intent is not identified when either of the negative patterns is present in the user utterance.
+<a class="glightbox" href="../images/add-negative-pattern.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-negative-pattern.png" alt="add negative pattern" title="add negative pattern" style="border: 1px solid gray; zoom:75%;"></a>   </li>
 </ul>
 </li>
 </ol>
-<h3 id="digital-form-configuration">Digital Form Configuration<a class="headerlink" href="#digital-form-configuration" title="Permanent link">&para;</a></h3>
-<p>Moving forward, we will be creating a form that gathers some of the necessary information in order to allow the user to book a flight:</p>
-<ul>
-<li>Trip Type – Roundtrip or One Way.</li>
-<li>Departure Airport (From);</li>
-<li>Arrival Airport (To);</li>
-<li>Departure Date;</li>
-<li>Return Date  </li>
-<li>Fare – default selection set to <em>Premium Economy</em>;</li>
-<li>Pro Tip – showcases a promotional offer for <em>Premium Economy</em> seats and only displays when the selected Fare is <em>Economy.</em></li>
-<li>Passenger First Name and Last Name.</li>
-</ul>
-<h4 id="form-creation">Form Creation<a class="headerlink" href="#form-creation" title="Permanent link">&para;</a></h4>
-<ol>
-<li>From the Kore.ai XO Platform, open the <strong>Travel Planning</strong> assistant.</li>
-<li>Select the <strong>Build</strong> tab from the top menu.</li>
-<li>From the left navigation menu, select <strong>Digital Skills &gt; Digital Forms</strong>.</li>
-<li>Click <strong>New Form</strong> and enter the following:<ul>
-<li><strong>Name</strong> – name to the form, say <em>BookingForm</em></li>
-<li><strong>Display Name</strong> for the form, say <em>Booking Form</em></li>
-<li><strong>Description</strong> of the form.</li>
-<li><strong>Logo and style</strong> for the form header</li>
-<li><strong>Description</strong> toggle set to on/off depending on whether you want to display the form description in the header</li>
-</ul>
-</li>
-<li><strong>Save &amp; Proceed</strong> to the next step.
-<a class="glightbox" href="../images/form-creation-details.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/form-creation-details.png" alt="problem statement weather alert" title="problem statement weather alert" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ol>
-<h4 id="the-form-editor">The Form Editor<a class="headerlink" href="#the-form-editor" title="Permanent link">&para;</a></h4>
-<p>The Form Editor opens with components on the left, and a blank form. You can drag and drop components to the form as per your requirement. </p>
-<p>By default, a <strong>Submit button</strong> is added to the form. This would trigger the submit event which would capture the user input and save in the context object. </p>
-<p>As soon as you drag and drop a component, its property settings panel will be displayed. There are several settings available for each component and you can set them up according to your own requirements. </p>
-<p>Some of these settings include: making a field mandatory, adding tooltips, securing field data, and more. This article takes you through the basic ones.</p>
-<ol>
-<li>
-<p>Start by adding a selection field for the <strong>Trip Type</strong>. Drag and drop a <strong>Toggle</strong> component onto the form and set the following values:</p>
-<ul>
-<li><strong>Display Name</strong> say <em>Trip Type.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>TripType</em>.</li>
-<li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Please select whether you are booking a roundtrip.</em></li>
-<li><strong>Value</strong> used to display functionality when the toggle is either on or off. When the toggle is <em>enabled</em>, set the value to <em>Roundtrip</em>. For the <em>disabled</em> state of the toggle, set the value to <em>One Way</em>.
-    <a class="glightbox" href="../images/toggle-component.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/toggle-component.png" alt="toggle component" title="ptoggle component" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-<li>
-<p>Drag and Drop a <strong>Dropdown</strong> component onto the form, for the <strong>From</strong> field.</p>
-<ul>
-<li><strong>Display Name</strong> say <em>From.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>From.</em></li>
-<li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Select the trip type</em>.</li>
-<li>Scroll and locate <strong>Data Settings,</strong> then click <strong>Add Values</strong> to enter the values. You can add a list of airports from which flights are departing.
-    <a class="glightbox" href="../images/data-settings-form-editor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-settings-form-editor.png" alt="data settings form editor" title="data settings form editor" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-<li>
-<p>Repeat <strong>Step 2</strong> to add the <strong>To</strong> field, for the arrival airport.</p>
-</li>
-<li>
-<p>Drag and drop a <strong>Date</strong> field onto the form, to add the <strong>Departure Date</strong>. </p>
-<ul>
-<li><strong>Display Name</strong> say <em>Departure Date</em>.</li>
-<li><strong>Name</strong> used for internal reference, say <em>DepartureDate</em>.</li>
-<li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Please select the departure date</em>.
-    <a class="glightbox" href="../images/departure-date-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/departure-date-settings.png" alt="departure date" title="departure date" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-<li>
-<p>Add a second Date field, for the Return Date and repeat <strong>Step 4</strong>. </p>
-</li>
-<li>
-<p>Drag and drop a Radio Button component onto the form for the <strong>Fare</strong> field, and set it up as follows:</p>
-<ul>
-<li><strong>Display Name</strong>, say Fare.</li>
-<li><strong>Name</strong> used for internal reference, say Fare.</li>
-<li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, Please select the Fare Category.</li>
-<li>Scroll and locate <strong>Data Settings</strong>, then click <strong>Add Values</strong> to enter the values – Economy, Premium Economy and First Class. You can mark one value, e.g. Premium Economy, as default. This would be selected by default at the time of execution.
-<a class="glightbox" href="../images/fare-category.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/fare-category.png" alt="fare category" title="fare category" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-<li>
-<p>Add a <strong>Pro Tip</strong> component. This field will only be visible if the user selects <em>Economy</em> as the <em>Fare</em>.</p>
-<ul>
-<li><strong>Display Name</strong> say <em>Pro Tip</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>Protip.</em></li>
-<li><strong>Description</strong> of the field, say <em>Book a Premium Economy seat and get a free hot meal onboard</em>.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank. </li>
-<li>Scroll down to <strong>Visibility Settings</strong> and click <strong>Add Visibility Rule</strong>.</li>
-<li>Now, set the rule by building the following logical expression:_Fare <code>Equal to Value</code> Economy. 
-</em>This rule ensures that the <em>Pro Tip </em>will only be visible when the user selects the <em>Economy </em>option under the Fare field.
-<a class="glightbox" href="../images/add-visibility-rule.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-visibility-rule.png" alt="add visibility rule" title="add visibility rule" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-<li>
-<p>Drag and drop a <strong>Text Field</strong> component onto the form, to add the <strong>Passenger First Name</strong> field.</p>
-<ul>
-<li><strong>Display Name, </strong>say <em>Passenger First Name.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>PassengerFirstName.</em></li>
-<li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Enter the name of the account holder</em>.
-<a class="glightbox" href="../images/add-passenger-first-name.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-passenger-first-name.png" alt="add first name" title="add first name" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-<li>
-<p>Repeat <strong>Step 7</strong> to add the <strong>Passenger Last Name</strong> field. </p>
-</li>
-<li>Use any additional fields that are required for your process. For example, a <em>Select Flight</em> field, as a Radio Button, further fields for flight documents, (as e.g.: Text, Text Area, etc.) onboard meal options (as e.g.: Checkboxes or Radio Buttons), etc.</li>
-<li>
-<p>You can select how the VA handles the conversation when the user cancels the form. You can choose from two options:</p>
-<ul>
-<li>
-<p>Discard the task and trigger End of Task Event: This is the default option.</p>
-<p><a class="glightbox" href="../images/end-of-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/end-of-task.png" alt="end of task" title="end of task" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>Continue with this task and transition to this node: In the <strong>Select Node</strong> drop-down list, you can select any node present in the current dialog task.</p>
-<p><a class="glightbox" href="../images/select-node-dropdown-list.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-node-dropdown-list.png" alt="select node" title="select node" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-</ul>
-</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The target node has to be in the same dialog, you cannot make a jump to a target node outside the current dialog. The list of target nodes only shows the local nodes. If the target node is not present during runtime, the platform presents the error Error in continuing the conversation, and the task should get discarded.</p>
-</div>
-<p>Your form is ready! You can toggle between <strong>Desktop View</strong> and <strong>Mobile View</strong> to see how it looks on each device type.
-<a class="glightbox" href="../images/desktop-mobile-view.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/desktop-mobile-view.png" alt="desktop mobile view" title="desktop mobile view" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>Use the <strong>Test</strong> button to see a preview. Below is a demo of the user experience with the form we have built:</p>
-<p><a class="glightbox" href="../images/use-test-button.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/use-test-button.gif" alt="use test button" title="use test button" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h3 id="dialog-task-configuration">Dialog Task Configuration<a class="headerlink" href="#dialog-task-configuration" title="Permanent link">&para;</a></h3>
-<p>We will be creating a dialog task and adding a form node to trigger the Digital Form created in the above step and use a service node to make a service call to complete the booking process. Please see <a href="https://developer.kore.ai/docs/bots/chatbot-overview/using-the-dialog-builder-tool/" target="_blank">Using the Dialog Builder</a> for details on working with Dialog Tasks. </p>
-<h4 id="create-a-dialog-task">Create a Dialog Task<a class="headerlink" href="#create-a-dialog-task" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Select the <strong>Build</strong> tab from the top menu</li>
-<li>From the left navigation menu, select <strong>Conversational Skills &gt; Dialog Tasks.</strong></li>
-<li>Click <strong>Create Dialog</strong> to create a new Task<ul>
-<li>Enter the <strong>Intent Name</strong>, say, <em>Book a Flight</em></li>
-<li><strong>Create &amp; Proceed</strong> to open the <strong>dialog builder</strong> page.
-<a class="glightbox" href="../images/create-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/create-dialog-task.png" alt="create dialog task" title="create dialog task" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-</ol>
-<h4 id="add-a-digital-form-node">Add a Digital Form Node<a class="headerlink" href="#add-a-digital-form-node" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Click the <strong>+</strong> next to the intent node and select the <strong>Digital Form</strong> node.</li>
-<li>From the dropdown list select the <em>Booking Form</em> we created earlier.</li>
-<li>You will be prompted to select the <strong>Form Experience.</strong> Kore.ai XO Platform allows you to gather user input both from the form and through conversation based on the channel.</li>
-<li>For this use case, let us select <strong>Only Form UI</strong> experience.</li>
-<li>A Form Node would be added, you can customize the form name, etc.</li>
-<li>We are changing the <strong>Name</strong> to <em>BookingForm</em> and <strong>Display Name</strong> to <em>Booking Form</em>.</li>
-</ol>
-<p><a class="glightbox" href="../images/booking-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/booking-form.png" alt="booking form" title="booking form" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h4 id="add-a-message-node">Add a Message Node<a class="headerlink" href="#add-a-message-node" title="Permanent link">&para;</a></h4>
-<p>Next, we will see how to capture the values returned by the Form Node using a Script and a Message node..</p>
-<ol>
-<li>Add a <strong>Message Node</strong> to the form node.</li>
-<li>Set the <strong>Name</strong> to <em>FormMessage</em> and <strong>Display Name</strong> to <em>Form Message</em>.</li>
-<li>Click <strong>Manage</strong> under <strong>Bot Responses</strong> to open the message editor.</li>
-<li>Select the <strong>JavaScript</strong> tab and enter the following code. This is a simple script that captures some of the data from within the context object, as submitted by the user into the Form, and displays it accordingly.</li>
-</ol>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="p">;</span><span class="w"> </span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;You have booked a &#39;</span><span class="o">+</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">BookingForm</span><span class="p">.</span><span class="nx">TripType</span><span class="o">+</span><span class="s1">&#39; flight in the name of &#39;</span><span class="o">+</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="w"> </span><span class="nx">BookingForm</span><span class="p">.</span><span class="nx">PassengerLastName</span><span class="p">;</span><span class="w"> </span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; and opted for &#39;</span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="w"> </span><span class="nx">BookingForm</span><span class="p">.</span><span class="nx">Fare</span><span class="p">;</span><span class="w"> </span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">print</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span><span class="w"> </span>
-</span></code></pre></div>
-<p><a class="glightbox" href="../images/javascript-code-block.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/javascript-code-block.png" alt="javascript code" title="javascript code" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol start="5"><li>Your dialog task is ready to use a digital form.</li></ol>
-<p><a class="glightbox" href="../images/dialog-task-digital-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-task-digital-form.png" alt="dialog task" title="dialog task" style="border: 1px solid gray; zoom:75%;"></a> </p>
-<h2 id="test-the-assistant">Test the Assistant<a class="headerlink" href="#test-the-assistant" title="Permanent link">&para;</a></h2>
-<p><strong>Talk to the bot</strong> to trigger the above dialog. The form will be displayed, enter the values and click Submit, the message will be displayed.</p>
-<p>You can use the context object as shown above in <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-script-node/" target="_blank">Script</a> or <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-service-node/" target="_blank">Service</a> nodes for further processing of the booking.</p>
-<p>Click <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-add-data-into-data-tables-from-digital-forms/" target="_blank">here</a> to learn how to add this data into data tables.
-<a class="glightbox" href="../images/test-bot-configure-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-bot-configure-form.png" alt="test bot configure form" title="test bot configure form" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Check the Utterance Training and ensure that the Book Flight intent is rejected because of the negative pattern. Finally, <strong>Talk to the Bot</strong> and test the changes.</p>
 
 
   
