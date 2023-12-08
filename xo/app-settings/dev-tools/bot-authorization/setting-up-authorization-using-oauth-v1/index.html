@@ -17,7 +17,7 @@
     
     
       
-        <title>Setting Up Authorization using Basic Auth - Kore ai Docs</title>
+        <title>Setting Up Authorization using OAuth v1 - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-authorization-using-basic-auth" class="md-skip">
+        <a href="#setting-up-authorization-using-oauth-v1" class="md-skip">
           Skip to content
         </a>
       
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setting Up Authorization using Basic Auth
+              Setting Up Authorization using OAuth v1
             
           </span>
         </div>
@@ -3805,22 +3805,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-basic-authorization" class="md-nav__link">
-    Configuring Basic Authorization
+  <a href="#how-oauth-v1-works" class="md-nav__link">
+    How OAuth v1 Works
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#defining-tenancy" class="md-nav__link">
-    Defining Tenancy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-form-fields" class="md-nav__link">
-    Adding Form Fields
+  <a href="#configuring-oauth-v1-authorization" class="md-nav__link">
+    Configuring oAuth v1 Authorization
   </a>
   
 </li>
@@ -3833,15 +3826,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-authorization-fields" class="md-nav__link">
-    Adding Authorization Fields
+  <a href="#defining-tenancy" class="md-nav__link">
+    Defining Tenancy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#authorization-check-url" class="md-nav__link">
-    Authorization Check URL
+  <a href="#adding-additional-fields" class="md-nav__link">
+    Adding Additional Fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-authorization-fields" class="md-nav__link">
+    Adding Authorization Fields
   </a>
   
 </li>
@@ -3872,53 +3872,37 @@
 
 
 
-<h1 id="setting-up-authorization-using-basic-auth">Setting Up Authorization using Basic Auth<a class="headerlink" href="#setting-up-authorization-using-basic-auth" title="Permanent link">&para;</a></h1>
-<p>When basic authorization is used for a task, the XO Platform automatically prompts the user for login credentials to access the web application or web service, as shown in the following illustration.</p>
-<p><a class="glightbox" href="../images/basic-auth-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img1.png" alt="Login" title="Login" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p>After the end-user is authorized, the settings are saved using the following naming syntax:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{{ First Name }} {{ Last Name }} {{ Bot Name }} {{ Account # }} {{ Sequence # }}
-</span></code></pre></div>
-<p>For example, John Smith’s Twitter Account <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/1" title="GitHub Issue: squidfunk/mkdocs-material #1">#1</a>.</p>
-<p>The XO Platform can access the web application or web service for all future task requests using this account. In addition, the end-user can reuse the account for other tasks for the same Virtual Assistant.</p>
-<p>You need to have an account with the external application which you want to authorize the XO Platform for.</p>
-<h2 id="configuring-basic-authorization">Configuring Basic Authorization<a class="headerlink" href="#configuring-basic-authorization" title="Permanent link">&para;</a></h2>
-<p>To define Basic Authorization for your assistant, follow these steps:</p>
+<h1 id="setting-up-authorization-using-oauth-v1">Setting Up Authorization using OAuth v1<a class="headerlink" href="#setting-up-authorization-using-oauth-v1" title="Permanent link">&para;</a></h1>
+<p>OAuth v1 is an open protocol to allow secure authorization in a simple and standardized method from web, mobile, and desktop applications.</p>
+<p>To use OAuth v1, you must first register an account with the web application, as you will need the login credentials for that application to configure the settings for the authorization mechanism.</p>
+<h2 id="how-oauth-v1-works">How OAuth v1 Works<a class="headerlink" href="#how-oauth-v1-works" title="Permanent link">&para;</a></h2>
+<p>OAuth v1 authorization works as follows:</p>
 <ol>
-<li>Open the VA for which you want to configure the Basic Authorization profile.</li>
-<li>Select the <strong>Build</strong> tab from the top menu.</li>
-<li>From the left menus, click <strong>Configurations &gt; Authorization Profile</strong></li>
+<li>The XO Platform obtains an unauthorized request token from the web application.</li>
+<li>The XO Platform redirects the user to a login dialog at the web application.</li>
+<li>The user authorizes the request token, associating it with their account.</li>
 <li>
-<p>Click <strong>Add</strong> to open the <strong>New Authorization Mechanism</strong> dialog.<br />
-<a class="glightbox" href="../images/basic-auth-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img2.png" alt="New Auth mechanism - Add" title="New Auth mechanism - Add" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>The web application redirects the user back to the XO Platform.<br />
+<a class="glightbox" href="../images/oauth-v1-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/oauth-v1-img1.png" alt="Auth profile - Add" title="Auth profile - Add" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>In the <strong>Authorization Type</strong> drop-down list, select <strong>Basic Auth</strong>.</p>
+<p>The XO Platform exchanges the request token for an access token.</p>
 </li>
-<li>
-<p>In the <strong>Name</strong> field, enter the name for your <strong>Basic Auth</strong> type.<br />
-<a class="glightbox" href="../images/basic-auth-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img3.png" alt="Auth Name and Type" title="Auth Name and Type" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Enter the <strong>Description</strong> for the profile and select the API endpoint <strong>Method</strong>. You can select either <strong>GET</strong> or <strong>POST</strong> method.<br />
-<a class="glightbox" href="../images/basic-auth-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img4.png" alt="Description and Endpoint Method" title="Description and Endpoint Method" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note<p>By default, the GET method is selected for the existing bots.</p>
-</p>
-</div>
-</li>
-<li>
-<p>Click <strong>Save</strong>.</p>
-</li>
+<li>The access token allows the XO Platform to access a protected resource at the provider, on behalf of the user.<br />
+<a class="glightbox" href="../images/basic-auth-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img2.png" alt="New auth mechanism details" title="New auth mechanism details" style="border: 1px solid gray;zoom:50%;"/></a></li>
 </ol>
-<h2 id="defining-tenancy">Defining Tenancy<a class="headerlink" href="#defining-tenancy" title="Permanent link">&para;</a></h2>
-<p>If required, in the <strong>Subdomain</strong> section, select <strong>Yes</strong> if the base URL for a web application or user interface uses a tenant name in the URL. For example, kore is the tenant organization for a web service using tenants as www.<strong><em>kore</em></strong>.someCompany.com.</p>
-<p>In the following example configuration, the tenancy URL contains the {tenant} organization placeholder.</p>
-<p><a class="glightbox" href="../images/basic-auth-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img5.png" alt="Defining Tenancy" title="Defining Tenancy" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<h2 id="adding-form-fields">Adding Form Fields<a class="headerlink" href="#adding-form-fields" title="Permanent link">&para;</a></h2>
-<p>If the default username and password fields do not meet your needs for authorization input, you can add custom fields displayed to the end-user by adding authorization IDP form fields. You can use these form fields. For example, if PIN code is required in the authorization process, in addition to the <strong>Username</strong> and <strong>Password</strong> form fields.</p>
-<p><a class="glightbox" href="../images/basic-auth-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img6.png" alt="Adding Form Fields" title="Adding Form Fields" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h2 id="configuring-oauth-v1-authorization">Configuring oAuth v1 Authorization<a class="headerlink" href="#configuring-oauth-v1-authorization" title="Permanent link">&para;</a></h2>
+<p>To define authorization for your assistant, follow these steps:</p>
+<ol>
+<li>Open the assistant for which you want to configure an Authorization profile.</li>
+<li>Select the <strong>Build</strong> tab from the top menu.</li>
+<li>From the left menus, click <strong>Configurations -&gt; Authorization Profiles</strong>.</li>
+<li>Click <strong>Add</strong> to open the <strong>New Authorization Mechanism</strong> dialog.</li>
+<li>In the <strong>Authorization Type</strong> drop-down list, select <strong>oAuth v1</strong>.</li>
+<li>The following illustration is an example of the <strong>oAuth v1</strong> authorization type fields that you must define to enable a customized authorization for your assistant.</li>
+</ol>
 <h2 id="defining-configuration-fields">Defining Configuration Fields<a class="headerlink" href="#defining-configuration-fields" title="Permanent link">&para;</a></h2>
-<p>The following table describes the fields used to define an authorization IDP form field.</p>
+<p>To define oAuth v1, configure the fields described in the following table.</p>
 <table border="1">
   <tr>
    <td><strong>FIELD NAME</strong>
@@ -3927,67 +3911,107 @@
    </td>
   </tr>
   <tr>
-   <td>Field Title
+   <td>Authorization Type
    </td>
-   <td>Specify the name of the field displayed to the end-user in the authorization dialog.
-   </td>
-  </tr>
-  <tr>
-   <td>Field Key
-   </td>
-   <td>The value that represents the end-user input value to the authorizing service.
+   <td>Set to <strong>oAuth v1</strong>.
    </td>
   </tr>
   <tr>
-   <td>Help Hint
+   <td>Callback URL
    </td>
-   <td>The help text displayed in the field to describe what should be entered into the field.
-   </td>
-  </tr>
-  <tr>
-   <td>Field Type
-   </td>
-   <td>When <strong>Advanced Options</strong> is selected, specify the type of field displayed in the end-user interface to collect the user input assigned as the value for the <strong>Field Key</strong>, one of:
-<ul>
-
-<li><strong>Textbox</strong>
-
-<li><strong>Password</strong>
-</li>
-</ul>
+   <td>The URL used by the web application or web service to redirect the end-user after end-user authorization is complete. This value, https://idp.kore.ai/workflows/callback/,  is provided as a read-only value by the XO Platform when you define oAuth v1 settings.
    </td>
   </tr>
   <tr>
-   <td>Mandatory
+   <td>Identity Provider Name
    </td>
-   <td>When <strong>Advanced Options</strong> is selected, select if the end-user must define this field to complete the authorization.
-   </td>
-  </tr>
-  <tr>
-   <td>Data Type
-   </td>
-   <td>When <strong>Advanced Options</strong> is selected, specify the type of data expected as input from the end-user, for example, <strong>String</strong>.
+   <td>The name of the web application or web service, for example, <em>Twitter</em>. This field is required. This is the name under which the authorization profile will be displayed within the XO Platform.
    </td>
   </tr>
   <tr>
-   <td>Visibility
+   <td>Consumer Key
    </td>
-   <td>When <strong>Advanced Options</strong> is selected, specify if the authorization field should be visible, hidden, or displayed as read-only.
+   <td>The value provided as the XO Platform identification to the web application. This field is required.
+   </td>
+  </tr>
+  <tr>
+   <td>Consumer Secret
+   </td>
+   <td>The secret value provided by the XO Platform to establish ownership of the <strong>Consumer Key</strong>. This field is required.
+   </td>
+  </tr>
+  <tr>
+   <td>Request Token Link
+   </td>
+   <td>The URL used by the XO Platform to obtain an unauthorized request token. The request token is a value used by the XO Platform to obtain authorization from the end-user to obtain an access token. For example, https://{tenant}.someCompany.com/oauth/request_token. After end-user authorization, an access token can be requested by the XO Platform. This field is required.
+   </td>
+  </tr>
+  <tr>
+   <td>Access Token Link
+   </td>
+   <td>The URL used to exchange the end-user authorized request token for an access token. The access token is the value used by the XO Platform to gain access to the web application or web service on behalf of the end-user, instead of using the end-user credentials. For example, https://{tenant}.someCompany.com/oauth/access_token. This field is required.
+   </td>
+  </tr>
+  <tr>
+   <td>User Authorization Link
+   </td>
+   <td>This is the URL used to obtain end-user authorization for the XO Platform to access the web application or web service using the access token. This field is required. You can use dynamic fields, path parameter fields, query fields, and so forth, to define the Authorization URL, for example,
+<p>
+     https://kore.someCompany.com/sap/opu/odata/sap/{{authfield1}}/?$format=json
+<p>
+or
+<p>
+https://{tenant}.service-now.com/api/now/v1/table/incident
+<p>
+For more information, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/using-session-and-context-variables-in-tasks/" target="_blank">Using Session and Context Variables in Tasks</a>.
+   </td>
+  </tr>
+  <tr>
+   <td>Access Using a Connector
+   </td>
+   <td>Select <strong>Yes</strong> to enable access for Kore.ai Bots using the Kore.ai Connector agent. This option is only visible if a Kore.ai Connector agent is configured and enabled in your enterprise on-premises network. For more information, see <a href="https://developer.kore.ai/docs/bots/bot-admin/security-control/security-module-overview/#Why_Use_the_Koreai_Connector_for_Bots" target="_blank">Using the Kore.ai Connector</a>.
+   </td>
+  </tr>
+  <tr>
+   <td>Refresh Token URL
+   </td>
+   <td>This is a URL that lets the XO Platform get new access tokens without asking the user to log in again.
+   </td>
+  </tr>
+  <tr>
+   <td>Description
+   </td>
+   <td>:Enter a description for your authorization task. 
    </td>
   </tr>
 </table>
 
+<h2 id="defining-tenancy">Defining Tenancy<a class="headerlink" href="#defining-tenancy" title="Permanent link">&para;</a></h2>
+<p>If required, in the <strong>Subdomain</strong> section, select <strong>Yes</strong> if the base URL for a web application or user interface uses a tenant name in the URL. For example, kore is the tenant organization for a web service using tenants at www.<strong><em>kore</em></strong>.someCompany.com.</p>
+<p>In the following example configuration, the tenancy URL contains the {tenant} organization placeholder.</p>
+<p><a class="glightbox" href="../images/basic-auth-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img3.png" alt="Defining tenancy" title="Defining tenancy" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h2 id="adding-additional-fields">Adding Additional Fields<a class="headerlink" href="#adding-additional-fields" title="Permanent link">&para;</a></h2>
+<p>Click <strong>Add Additional Fields</strong> to open the <strong>Additional Fields</strong> dialog and then enter one or more key/value pairs that represent additional authorization input fields.</p>
+<p>If, for example, the default username and password fields do not meet your needs for authorization input, you can add custom fields as key/value pairs that are displayed to the end-user by adding <strong>Additional Fields</strong>. You can use these fields, for example, if a PIN code is required in the authorization process, in addition to the <strong>Username</strong> and <strong>Password</strong> fields.</p>
+<p><strong>Additional Fields</strong> are added as shown in the following illustration.</p>
+<p><a class="glightbox" href="../images/basic-auth-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img4.png" alt="Additional fields"" title="Additional fields" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>Specify the following fields:</p>
+<ul>
+<li><strong>Field Key</strong> – The name of the custom field to specify for authorization.</li>
+<li><strong>Field Value</strong> – The value for the custom field to specify for authorization.</li>
+<li>Click <strong>Done</strong> to save the <strong>Additional Field</strong>.</li>
+</ul>
 <h2 id="adding-authorization-fields">Adding Authorization Fields<a class="headerlink" href="#adding-authorization-fields" title="Permanent link">&para;</a></h2>
-<p>By default, authorization fields are configured as part of the header of the request message. If your request requires additional authorization fields or the expected authorization is not part of the header, for example, social security number or PIN, click <strong>Add Authorization Fields</strong> and then define the required fields.</p>
-<p><a class="glightbox" href="../images/basic-auth-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img7.png" alt="Adding Authorization Fields" title="Adding Authorization Fields" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>By default, no authorization fields are configured as part of the header of the request message. If your request requires authorization fields or the expected authorization is not part of the header, for example, social security number or PIN, click <strong>Add Authorization Fields</strong> and then define the fields as shown in the following illustration.</p>
+<p><a class="glightbox" href="../images/basic-auth-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img5.png" alt="Adding auth fields" title="Adding auth fields" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <ol>
 <li>
 <p>In the <strong>Field Type</strong> field, you can select one of the following depending on where in the request message and the type of authorization fields that are required.</p>
 <ol>
-<li><strong>Header</strong> – The VA looks for the authorization fields in the request header.</li>
-<li><strong>Payload</strong> – The VA looks for the authorization fields in the request body content.</li>
-<li><strong>Query String</strong> – The VA looks for the authorization fields as a query in the request body.</li>
-<li><strong>Path Param</strong> – The VA looks for the authorization fields in the request URL path.</li>
+<li><strong>Header</strong> – The assistant expects the authorization fields as part of the header of the request.</li>
+<li><strong>Payload</strong> – The assistant expects the authorization fields as part of the content of the body of the request.</li>
+<li><strong>Query String</strong> – The assistant expects the authorization fields as a query in the body of the request.</li>
+<li><strong>Path Param</strong> – The assistant expects the authorization fields as part of the URL path for the request.</li>
 </ol>
 </li>
 <li>
@@ -3996,30 +4020,12 @@
 <li>In the <strong>Field Value</strong> field, enter the value for the <strong>Field Key</strong> specified.</li>
 <li>Click <strong>Done</strong>. The new authorization field is added in the <strong>Authorization Fields</strong> section.</li>
 </ol>
-<h2 id="authorization-check-url">Authorization Check URL<a class="headerlink" href="#authorization-check-url" title="Permanent link">&para;</a></h2>
-<p>In the <strong>Authorization Check URL</strong> field, optionally define a URL that can be used to test the authorization settings from the XO Platform before you deploy the assistant with the authorization mechanism. You can use dynamic fields, path parameter fields, query fields, and so forth, to define the test URL.</p>
-<p>For example</p>
-<p><a href="https://kore.someCompany.com/sap/opu/odata/sap/{{authfield1}}/?$format=json">https://kore.someCompany.com/sap/opu/odata/sap/{{authfield1}}/?$format=json</a></p>
-<p>or</p>
-<p>https://{tenant}.service-now.com/api/now/v1/table/incident</p>
-<p>For more information, see <a href="../../../../automation/use-cases/using-session-and-context-variables" target="_blank">Using Session and Context Variables in Tasks</a>.</p>
-<p>Click <strong>Save</strong> to save the authorization settings and close the <strong>New Authorization Mechanism</strong> dialog.</p>
 <h2 id="testing-the-authorization">Testing the Authorization<a class="headerlink" href="#testing-the-authorization" title="Permanent link">&para;</a></h2>
-<p>Once you save the authorization settings, you can test your authorization definition when you click <strong>Test</strong> from the Authorization Profile page.</p>
-<p><a class="glightbox" href="../images/basic-auth-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img8.png" alt="Auth profile - Test" title="Auth profile - Test" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p>To configure testing for Basic Auth, please follow the steps below:</p>
-<ol>
-<li>In the <strong>Auth Check URL</strong> field, verify or enter the URL to test the authorization configuration.</li>
-<li>If your assistant uses subdomains, the <strong>Tenancy</strong> field is displayed and you must specify the tenant.</li>
-<li>Enter your <strong>User Name</strong> and <strong>Password</strong> for the web service.</li>
-<li>Select the content type expected for the URL in the <strong>Content-Type</strong> field.</li>
-<li>Select the <strong>Method</strong> for testing the URL, You can select either the <strong>GET</strong> or <strong>POST</strong> method .</li>
-<li>Click <strong>Test</strong> to begin the authorization test.</li>
-</ol>
-<p><a class="glightbox" href="../images/basic-auth-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img9.png" alt="Testing the Authorization" title="Testing the Authorization" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p>When the validation of authorization is complete, the <strong>Test Authorization</strong> dialog closes and you can see the results of the validation, either success or failure.</p>
-<p>If the authorization fails, the <em>Auth Test Failed</em> message is displayed along with the <strong>Headers</strong> and <strong>Response</strong> tabs.</p>
-<p><a class="glightbox" href="../images/basic-auth-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img10.png" alt="Auth test failed" title="Auth test failed" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>After you save the authorization, you can test it on the <strong>Authorization</strong> page when you click <strong>Test</strong> before continuing to develop the remaining steps of your assistant. When you click <strong>Test</strong>, the test is executed using the <strong>authorization token URLs</strong> and the <strong>Consumer Key</strong> and <strong>Consumer Token</strong>. If the tenancy was defined, the <strong>Test Authorization</strong> dialog is displayed. </p>
+<p><a class="glightbox" href="../images/basic-auth-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img6.png" alt="Test authorization dialog" title="Test authorization dialog" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>Click <strong>Test</strong> to begin the authorization test. </p>
+<p>When the validation of authorization is complete, the <strong>Test Authorization</strong> dialog is closed and the results of the validation, either success or failure, is displayed. If the authorization fails, the <em>Auth Test Failed</em> message is displayed along with the <strong>Headers</strong> and <strong>Response</strong> tabs.</p>
+<p><a class="glightbox" href="../images/basic-auth-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img7.png" alt="Auth Test Failed" title="Auth Test Failed" style="border: 1px solid gray;zoom:50%;"/></a></p>
 
 
   
