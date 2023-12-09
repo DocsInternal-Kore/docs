@@ -3917,22 +3917,21 @@ We will be using them later in the Web SDK setup.</li>
 <p class="admonition-title">Note</p>
 <p>By default, the Travel Sample Planning assistant is configured with <b>Target Audience</b> set to <i>Enterprise Users</i> on the <b>Build</b> tab in the <b>Configurations</b> -> <b>General Settings</b>. Optionally, you can define this assistant for <b>General Public</b> use. Once this assistant is published, the <b>Target Audience</b> cannot be changed.</p></div>
 
-<ol>
-<li>On the <strong>Deploy</strong> tab, click <strong>Publish</strong>.</li>
-<li>On <strong>Publish</strong> page, select all tasks, and then click <strong>Proceed</strong>.</li>
-<li>Enter a comment and <strong>Confirm</strong> publish.</li>
-</ol>
-<p><em>After an enterprise developer publishes a assistant, it must be approved and assigned to the users for use.</em></p>
-<ol>
-<li>Complete one of the following assistant deployments in the Bots Admin Console depending if your bot <strong>Target Audience</strong> is set to <strong>Enterprise Users</strong> or <strong>General Public</strong>. Complete one of the following:<ul>
+<ol start="9"><li> On the <b>Deploy</b> tab, click <b>Publish</b>.</li>
+<li>On <b>Publish</b> page, select all tasks, and then click <b>Proceed</b>.</li>
+<li>Enter a comment and <b>Confirm</b> publish.
+
+<i>After an enterprise developer publishes a assistant, it must be approved and assigned to the users for use.</i></li>
+
+<li>Complete one of the following assistant deployments in the Bots Admin Console depending if your bot <b>Target Audience</b> is set to <b>Enterprise Users</b> or <b>General Public</b>. Complete one of the following:</li></ol>
+
+<ul>
 <li>In the Bots Admin Console, in the <strong>Bots Management</strong> module, on the <strong>Enterprise Bots</strong> page, click the <strong>Ellipses</strong>  icon for the <em>Travel Planning Sample Virtual Assistant</em> that you want to deploy, and then click <strong>Manage bot tasks</strong>. The <strong>Manage Bot Tasks</strong> dialog is displayed.</li>
 <li>In the <strong>Bot tasks</strong> field, click the <strong>Expand</strong> the <strong>&gt;</strong> icon to display the available and deployed tasks, select all tasks for this bot, and then click <strong>Confirm</strong>.</li>
 <li>In the <strong>Manage bots tasks</strong> dialog, click <strong>Confirm</strong>. The <em>Bot status changed successfully</em> message is displayed.</li>
 <li>On the <strong>Enterprise Bots</strong> page, click the <strong>Ellipses</strong> icon for the <em>Travel Planning Sample Virtual Assistant</em> that you want to assign the users to, and then click <strong>Bot &amp; task assignments</strong>.</li>
 <li>The <strong>Bot &amp; task assignments</strong> dialog is displayed. Assign the assistant to your users, for all tasks, including yourself.</li>
 </ul>
-</li>
-</ol>
 <p><em>Now it is time to download, uncompress, install and configure the software packages required for the Web SDK and a test application to run the assistant locally on your local host server.</em></p>
 <ol>
 <li>To download and install <em>node.js</em> on your computer, go to <a href="https://nodejs.org/en/download/" target="_blank">Node JS Download</a> link, and select your OS as <code>.pkg</code> for Mac, and <code>.msi</code> for Windows.</li>
@@ -3963,38 +3962,39 @@ We will be using them later in the Web SDK setup.</li>
 <ul>
 <li>Open the <code>kore-config.js</code> and update the <em>botOptions</em> parameters botInfo, clientId and clientSecret, and your email id as userIdentity.</li>
 </ul>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">“</span><span class="nx">clientSecret</span><span class="err">”</span><span class="o">:</span><span class="w"> </span><span class="err">“</span><span class="p">{</span><span class="nx">client</span><span class="w"> </span><span class="nx">secret</span><span class="p">}</span><span class="err">”</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">   </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="err">“</span><span class="nx">http</span><span class="o">:</span><span class="c1">//localhost:3000/api/users/getJWT”,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">     </span><span class="c1">//this is sample url of a localhost. </span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">     </span><span class="c1">//This should include the url where you are hosting the bot.</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">   </span><span class="nx">botOptions</span><span class="p">.</span><span class="nx">userIdentity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="w"> </span><span class="err">‘</span><span class="p">;</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">     </span><span class="c1">// Provide users email id here</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">   </span><span class="nx">botOptions</span><span class="p">.</span><span class="nx">clientId</span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;{client id} &quot;</span><span class="p">;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">     </span><span class="c1">// secure client-id</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">   </span><span class="nx">_botOptions</span><span class="p">.</span><span class="nx">botInfo</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;{bot name}&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;{bot id&quot;</span><span class="p">};</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">     </span><span class="c1">// Kore bot name is case sensitive</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w"> </span><span class="p">})</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w"> </span><span class="sb">```</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="sb">The JWTUrl refers to the location where your app (where you want the Kore.ai assistant to be integrated) is hosted. For this tutorial, we are using the JWT server (as setup in step 19) and hence using the same here.</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="sb">Ensure that in `</span><span class="nx">kore</span><span class="o">-</span><span class="nx">config</span><span class="p">.</span><span class="nx">js</span><span class="sb">` you set the audience for your assistant. Choose one of the following:</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="sb">* &lt;code&gt;&quot;isAnonymous&quot;: &lt; &lt;em&gt;false&lt;/em&gt; &gt;;&lt;/code&gt; if the assistant is deployed for the &lt;strong&gt;enterprise users&lt;/strong&gt;, and then set &lt;code&gt;botOptions.userIdentity = &#39;&lt;strong&gt;&amp;lt;&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;Your email ID&lt;/em&gt; &gt;&lt;/strong&gt;&#39;;&lt;/code&gt; &lt;strong&gt;</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="sb">– or –&lt;/strong&gt;</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="sb">* &lt;code&gt;&quot;isAnonymous&quot;: &amp;lt; &lt;strong&gt;&lt;em&gt;true&lt;/em&gt; &lt;/strong&gt;&gt;;&lt;/code&gt; if bot is deployed for &lt;strong&gt;Consumer Use&lt;/strong&gt;.</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="sb">This step is valid for older Web SDK file downloaded **before ver7.2** of the platform.</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="sb">* Open the `</span><span class="nx">index</span><span class="p">.</span><span class="nx">html</span><span class="sb">` file from the `</span><span class="err">…</span><span class="o">/</span><span class="nx">SDKApp</span><span class="o">/</span><span class="nx">sdk</span><span class="o">/</span><span class="nx">UI</span><span class="sb">` folder using a text editor:</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="sb">&lt;ul&gt;&lt;li&gt;Update the following lines to add the path to the &lt;em&gt;UI&lt;/em&gt; folder:&lt;/li&gt;&lt;/ul&gt;</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="sb">```</span><span class="nx">js</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery.tmpl.min.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery-ui.min.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="o">&lt;</span><span class="nx">link</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;libs/jquery-ui.min.css&quot;</span><span class="w"> </span><span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;&lt;</span><span class="err">/link&gt;</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;chatWindow.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="o">&lt;</span><span class="nx">link</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;chatWindow.css&quot;</span><span class="w"> </span><span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;&lt;</span><span class="err">/link&gt;</span>
+<p><code>“clientSecret”: “{client secret}”
+$.ajax({
+   url: “http://localhost:3000/api/users/getJWT”,
+     //this is sample url of a localhost. 
+     //This should include the url where you are hosting the bot.
+   botOptions.userIdentity = ‘ ‘;
+     // Provide users email id here
+   botOptions.clientId= "{client id} ";
+     // secure client-id
+   _botOptions.botInfo= {name:"{bot name}","id":"{bot id"};
+     // Kore bot name is case sensitive
+ })
+</code></p>
+
+<p>The JWTUrl refers to the location where your app (where you want the Kore.ai assistant to be integrated) is hosted. For this tutorial, we are using the JWT server (as setup in step 19) and hence using the same here.</p>
+
+<p>Ensure that in <code>kore-config.js</code> you set the audience for your assistant. Choose one of the following:</p>
+
+<ul>
+<li><code>"isAnonymous": &lt; <em>false</em> &gt;;</code> if the assistant is deployed for the <strong>enterprise users</strong>, and then set <code>botOptions.userIdentity = '<strong>&lt;</strong> <strong><em>Your email ID</em> &gt;</strong>';</code> <strong>
+– or –</strong></li>
+<li><code>"isAnonymous": &lt; <strong><em>true</em> </strong>&gt;;</code> if bot is deployed for <strong>Consumer Use</strong>.
+This step is valid for older Web SDK file downloaded <strong>before ver7.2</strong> of the platform.</li>
+<li>Open the <code>index.html</code> file from the <code>…/SDKApp/sdk/UI</code> folder using a text editor:</li>
+</ul>
+<ul><li>Update the following lines to add the path to the <em>UI</em> folder:</li></ul>
+
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery.tmpl.min.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery-ui.min.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">&lt;</span><span class="nx">link</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;libs/jquery-ui.min.css&quot;</span><span class="w"> </span><span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;&lt;</span><span class="err">/link&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;chatWindow.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="o">&lt;</span><span class="nx">link</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;chatWindow.css&quot;</span><span class="w"> </span><span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;&lt;</span><span class="err">/link&gt;</span>
 </span></code></pre></div>
 <ul><li>Update the following parameters to run as local host:</li></ul>
 
