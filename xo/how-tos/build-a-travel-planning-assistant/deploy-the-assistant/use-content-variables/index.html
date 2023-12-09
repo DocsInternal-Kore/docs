@@ -17,7 +17,7 @@
     
     
       
-        <title>Travel VA: Using Bot Functions - Kore ai Docs</title>
+        <title>Travel VA: Use Content Variables - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#travel-va-using-bot-functions" class="md-skip">
+        <a href="#travel-va-use-content-variables" class="md-skip">
           Skip to content
         </a>
       
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Travel VA: Using Bot Functions
+              Travel VA: Use Content Variables
             
           </span>
         </div>
@@ -3819,40 +3819,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
-    Implementation
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#import-the-bot-function-script" class="md-nav__link">
-    Import the Bot Function Script
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-dialog-task" class="md-nav__link">
-    Create a Dialog Task
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-widget" class="md-nav__link">
-    Create a Widget
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#testing" class="md-nav__link">
     Testing
   </a>
@@ -3878,148 +3844,64 @@
 
 
 
-<h1 id="travel-va-using-bot-functions">Travel VA: Using Bot Functions<a class="headerlink" href="#travel-va-using-bot-functions" title="Permanent link">&para;</a></h1>
-<p>In this document we explore Bot Functions for a travel VA that can help reuse the same functionality in several places. We will see how a travel spend report can be programmed as a function and used, for example, to send to users upon request in different circumstances, to integrate with apps or create digital views. </p>
-<p>For details on the Bot Functions are and how they are implemented in the XO Platform, click <a href="https://developer.kore.ai/docs/bots/bot-settings/bot-functions/reusing-bot-functions-custom-script-file/#Updating_Custom_Script_File" target="_blank">here</a>.</p>
+<h1 id="travel-va-use-content-variables">Travel VA: Use Content Variables<a class="headerlink" href="#travel-va-use-content-variables" title="Permanent link">&para;</a></h1>
+<p>The Kore.ai XO Platform allows you to declare and use variables within the assistants you build. These variables can be used to capture values that are commonly used by different tasks, nodes, and other elements</p>
+<p>In this use case, we will explore a scenario in a Travel Planning Assistant, where variables can be used, and see how Content Variables can be used to pass language-specific messages.</p>
+<p>For details on what Variables are and how they are implemented in the XO Platform, click <a href="https://developer.kore.ai/docs/bots/bot-settings/bot-management/using-bot-variables/" target="_blank">here</a>. </p>
+<p>For a use case with Global Variables, click <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-use-global-variables/" target="_blank">here</a>.</p>
 <h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
-<p>In a Travel Planning Assistant used by a travel agency, we have a reporting task that requires the VA to provide information on how much a traveller has spent in different categories, as part of a booking made via the agency. </p>
-<p>This information can be provided in several ways. For the purpose of this article, we will demonstrate how to create a dialog task that sends the user these details upon request, and how to create a widget, as part of a Digital View, that will display the information, say within an app that is integrated via the Widget SDK.</p>
+<p>In our Travel Planning Assistant, we welcome users when they connect. The assistant is multilingual and we want the messages to be in the appropriate user language.</p>
+<p>In this document, we will see how Content Variable can be used to store the message in multiple languages.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>To go through these configurations, you need to know at least the basics of <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-travel-planning-assistant/create-a-travel-virtual-assistant/" target="_blank">building a Virtual Assistant</a>. This is because your assistant needs to have been already built when you begin working on your variables.</p>
+<p>Your Virtual Assistant will also need an <em><a href="https://developer.kore.ai/docs/bots/bot-intelligence/event-based-bot-actions/" target="_blank">on Connect</a></em> event configured, as well as some language settings, as explained below:</p>
+<ol>
+<li>Select the <strong>Build</strong> tab from the top menu.</li>
+<li>From <strong>Intelligence</strong> select <strong>Events</strong>.</li>
+<li>
+<p>Click the <strong>On Connect</strong> event and configure to <strong>Show Message</strong>.</p>
+<p><a class="glightbox" href="../images/on-connect-event.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/on-connect-event.png" alt="on connect event" title="on connect event" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>Enable the Spanish language for the assistant by following the steps below:</p>
 <ul>
-<li>
-<p>To go through these configurations, you need to know at least the basics of <a href="https://developer.kore.ai/docs/bots/chatbot-overview/getting-started-bots/" target="_blank">building a Virtual Assistant</a>. </p>
-</li>
-<li>
-<p>A pre-built Virtual Assistant. We will use the <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-travel-planning-assistant/create-a-travel-virtual-assistant/" target="_blank">Travel Planning VA</a> for this example.</p>
-</li>
-<li>
-<p>The Script file has the following functions that use the message templates to display the data. (Refer <a href="https://developer.kore.ai/docs/bots/sdks/message-templates/" target="_blank">here</a> for more information on message templates): </p>
-<ul>
-<li>
-<p><strong>tableTemplate</strong> – </em>takes a two-dimensional array and displays the content in a tabular format.</p>
-</li>
-<li>
-<p><strong>pieTemplate</strong> – </em>takes a two-dimensional array and displays the content in a pie format.</p>
-</li>
+<li>From <strong>Configurations</strong>, select <strong>Language,</strong></li>
+<li>Click <strong>Add Language</strong> and <em>Configure</em> the <em>Spanish</em> language.
+<a class="glightbox" href="../images/add-language.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-language.png" alt="test bot function" title="test bot function" style="border: 1px solid gray; zoom:75%;"></a> </li>
 </ul>
 </li>
-</ul>
-<p>Copy the following content and save it as a <em>.js</em> file (say, <em>functionEX.js</em>)</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">tableTemplate</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span><span class="w"> </span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">   </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;template&quot;</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">   </span><span class="s2">&quot;payload&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">   </span><span class="s2">&quot;template_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mini_table&quot;</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">   </span><span class="s2">&quot;layout&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">   </span><span class="s2">&quot;text&quot;</span><span class="o">:</span><span class="s2">&quot;Travel Spend&quot;</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">   </span><span class="s2">&quot;elements&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="w">  </span><span class="p">}</span><span class="w"> </span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w"> </span><span class="p">};</span><span class="w"> </span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">j</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">     </span><span class="s2">&quot;primary&quot;</span><span class="o">:</span><span class="p">[[</span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]],[</span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="o">+</span><span class="mf">1</span><span class="p">],</span><span class="s2">&quot;right&quot;</span><span class="p">]],</span><span class="w"> </span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">     </span><span class="s2">&quot;additional&quot;</span><span class="o">:</span><span class="p">[[</span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="o">+</span><span class="mf">2</span><span class="p">],</span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="o">+</span><span class="mf">3</span><span class="p">]],[</span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="o">+</span><span class="mf">4</span><span class="p">],</span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="o">+</span><span class="mf">5</span><span class="p">]]]</span><span class="w">   </span><span class="p">};</span><span class="w"> </span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">elements</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w"> </span><span class="p">}</span><span class="w"> </span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">};</span><span class="w"> </span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="kd">function</span><span class="w"> </span><span class="nx">pieTemplate</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span><span class="w"> </span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">   </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;template&quot;</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">   </span><span class="s2">&quot;payload&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">   </span><span class="s2">&quot;template_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;piechart&quot;</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">   </span><span class="s2">&quot;pie_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;regular&quot;</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">   </span><span class="s2">&quot;text&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Travel Spend&quot;</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">   </span><span class="s2">&quot;elements&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="w">   </span><span class="p">}</span><span class="w"> </span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="p">};</span><span class="w"> </span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">   </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">   </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mf">1</span><span class="p">]</span><span class="w">   </span><span class="p">};</span><span class="w"> </span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="nx">message</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">elements</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w"> </span><span class="p">}</span><span class="w"> </span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="p">};</span>
-</span></code></pre></div>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<h3 id="import-the-bot-function-script">Import the Bot Function Script<a class="headerlink" href="#import-the-bot-function-script" title="Permanent link">&para;</a></h3>
-<p>To begin using Bot Functions, you first need to import a script into your assistant, by following the steps below:</p>
+</ol>
+<p>Declaring a Content Variable to hold the On Connect message will ensure it is not missed in the language translation.</p>
 <ol>
 <li>Open the Travel Planning Assistant.</li>
-<li>Select the <strong>Build</strong> tab from the top menu.</li>
-<li>From <strong>Configurations</strong> select the <strong>Bot Functions</strong> section.</li>
-<li>Click <strong>Import</strong> (or Import New) to open the Import Custom Script window.</li>
-<li>Drag and drop or Browse the script file that you saved from the Prerequisites section and click <strong>Import</strong>.</li>
+<li>Select the <strong>Build</strong> tab from the top menu</li>
+<li>From <strong>Configurations</strong> select the <strong>Content Variables</strong> section.</li>
+<li>Click <strong>Add Variable</strong> to open the corresponding window.</li>
+<li>Enter <strong>Variable Name</strong> and <strong>Variable Value</strong>. For this use case, we are calling the Variable <em>connectMessage</em>, and for the value, we are entering the “<em>Welcome to our Travel Portal</em>”.</li>
 <li>
-<p>Once the success message is displayed click <strong>Done</strong>.</p>
-<p>Your Script file is ready to use!</p>
-<p><a class="glightbox" href="../images/import-bot-function-script.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/import-bot-function-script.png" alt="test bot function" title="test bot function" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<p>Click <strong>Save</strong>.
+<a class="glightbox" href="../images/configure-variable-name.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-variable-name.png" alt="configure variable name" title="configure variable name" style="border: 1px solid gray; zoom:75%;"></a>  </p>
 </li>
-</ol>
-<h3 id="create-a-dialog-task">Create a Dialog Task<a class="headerlink" href="#create-a-dialog-task" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Open the <strong>Dialog Tasks</strong> page and create a New Dialog Task called “<em>Get Travel Spend</em>”.</li>
-<li>Add entities to capture the <strong>Flight Number</strong> and <strong>Fare</strong>.</li>
-<li>Ideally, there would be a service call to fetch the details. Here we will use static values for demonstration purposes.</li>
 <li>
-<p>Add a <strong>Script</strong> node using the <strong>Bot Action</strong> and enter the following – we are declaring an array carrying the spent amount on Airlines, Hotels and Experiences.</p>
-<p><code>context.travelspend = [["Airlines",1264],["Hotels",568],["Experiences", 324];</code></p>
+<p>Now switch the language to <em>Spanish</em> and for the same connectMessage variable using the <strong>edit</strong> icon enter the text in Spanish – “<em>Le damos la bienvenida al portal de viajes</em>".   <a class="glightbox" href="../images/switch-language.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/switch-language.png" alt="switch language" title="switch language" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
-</ol>
-<ol start="5"><li>Add a <strong>Message</strong> node to send this data to the Bot Function declared earlier and get the report.</li> 
-<li>From <strong>Bot Responses</strong> section, click <strong>Manage Responses</strong>.</li> 
-<li><strong>Add Bot Response</strong>, select <em>Web/Mobile Client </em>as the <strong>Channel</strong>, switch to <strong>JavaScript</strong> tab and enter the following code to display the values in a tabular format:
-<br><code>var info = context.travelspend;<br>print(tableTemplate(info));</code></li> 
-<li>Add another <strong>Message</strong> node to send this data to the Bot Function declared earlier and get the report.</li>
-<ul> 
-<li>From <strong>Bot Responses</strong> section, click <strong>Manage Responses</strong>.</li>
-<li><strong>Add Bot Response</strong>, select <em>Web/Mobile Client </em>as the <strong>Channel</strong>, switch to <strong>JavaScript</strong> tab and enter the following code to display the values in a pie chart:<br><code>var info = context.travelspend;<br>print(pieTemplate(info));</code>
-</li> 
-</ul>
-<li>Close the Dialog Task.
+<li>
+<p>Return to the English version of your assistant.</p>
 </li>
+<li>Return to the On Connect Event Handler, click <strong>Add Response</strong> and replace the text with reference to the content variable using the following code: 
+<code>{{content.connectMessage}}</code></li>
+<li><strong>Save</strong> the changes.</li>
 </ol>
-
-<h3 id="create-a-widget">Create a Widget<a class="headerlink" href="#create-a-widget" title="Permanent link">&para;</a></h3>
-<p>The bot function can also be used to create a Widget using Digital Views, as follows:</p>
-<ol>
-<li>Go to <strong>Build &gt; Digital Skills &gt; Digital Views</strong>.</li>
-<li>Click <strong>Create Widget</strong>.</li>
-<li>Name your Widget as <em>Travel Spend</em>.</li>
-<li>Select <em>Pie Chart</em> as the <strong>Template Hint</strong>.</li>
-<li>You can link the Widget to the Dialog Task you just created. For this example, we will choose <em>JSON</em> as the <strong>Source</strong> to populate the data for this widget.</li>
-<li>Add the following script:</li>
-</ol>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="s2">&quot;templateType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;piechart&quot;</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="s2">&quot;pie_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;regular&quot;</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Summary&quot;</span><span class="p">,</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;monthly report&quot;</span><span class="p">,</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="s2">&quot;elements&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Airlines&quot;</span><span class="p">,</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">          </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1264.0&quot;</span><span class="p">,</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">          </span><span class="s2">&quot;displayValue&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$ 1,234&quot;</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hotels&quot;</span><span class="p">,</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">          </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;568&quot;</span><span class="p">,</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">          </span><span class="s2">&quot;displayValue&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$ 568&quot;</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Experiences&quot;</span><span class="p">,</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">          </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;324&quot;</span><span class="p">,</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">          </span><span class="s2">&quot;displayValue&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$ 324&quot;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="p">]</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
-</span></code></pre></div>
 <h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
-<p>Use <strong>Talk to Bot</strong> and try both functions. Thus we have used the same function to display the reports in multiple places.</p>
-<p><a class="glightbox" href="../images/bot-function-testing.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-function-testing.png" alt="test bot function" title="test bot function" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<p>Use <strong>Talk to Bot</strong> to test the changes.</p>
+<ol>
+<li>Open <strong>Talk to Bot</strong>.</li>
+<li>The message will appear in English.</li>
+<li>Use the cheat command to switch the language: 
+<code>cheat lang Es</code>.</li>
+<li>Reconnect to the assistant and see the message in Spanish.
+<a class="glightbox" href="../images/test-content-variables.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-content-variables.png" alt="test content variables" title="test content variables" style="border: 1px solid gray; zoom:75%;"></a> </li>
+</ol>
 
 
   
