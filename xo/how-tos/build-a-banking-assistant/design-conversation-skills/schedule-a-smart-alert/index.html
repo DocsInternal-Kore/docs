@@ -3883,7 +3883,7 @@
 <p>For details on what Alert task is and how it is implemented in the Kore.ai Bots platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/" target="_blank"> here</a>.</p>
 <h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
 <p>A registered user of a Bot needs to be sent a weather update in the form of an alert, on a pre-specified time of the day and/or at a specified interval of time. A sample is given below:
-<a class="glightbox" href="../design-conversation-skills/images/sample-weather-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/sample-weather-bot.png" alt="sample weather bot" title="sample weather bot" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/sample-weather-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/sample-weather-bot.png" alt="sample weather bot" title="sample weather bot" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>In this document, we show how an Alert Task can be used to cater to such situations and take appropriate action.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3905,7 +3905,7 @@
 <li>Choose the <strong>Connection Type</strong>, we go with <em>Webservice</em>.</li>
 <li>Choose the <strong>Connection Mode</strong>, we use <em>REST</em>.</li>
 <li>Click <strong>Create &amp; Proceed</strong>.
-<a class="glightbox" href="../design-conversation-skills/images/create-alert-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/create-alert-task.png" alt="create alert task" title="create alert task" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/create-alert-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/create-alert-task.png" alt="create alert task" title="create alert task" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 <li>
@@ -3919,7 +3919,7 @@
 <li>We do not need to set <strong>Authorization Provider</strong> for our use case. Configure the same if the API you are using has any authorization requirements.</li>
 <li>
 <p>Set <strong>Parameter</strong> to gather the <em>preferred City</em> from the User. Ensure that it is set as a <strong>Mandatory</strong> field. This is the API requirement.
-<a class="glightbox" href="../design-conversation-skills/images/set-task-parameter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/set-task-parameter.png" alt="set task parameter" title="set task parameter" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/set-task-parameter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-task-parameter.png" alt="set task parameter" title="set task parameter" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>We will not need any <strong>Initializer</strong> requirements for our use case. Use this in case any JavaScript needs to be executed before the request is sent.</p>
@@ -3931,7 +3931,7 @@
 <li>Notice that the <strong>Parameters</strong> list is populated automatically with the parameters entered earlier.</li>
 <li><strong>Save</strong> the API.</li>
 </ul>
-<p><a class="glightbox" href="../design-conversation-skills/images/add-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/add-api.png" alt="add api" title="add api" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/add-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-api.png" alt="add api" title="add api" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li><strong>Test</strong> the API to ensure that the configuration is proper. Enter a sample city name, when prompted and ensure you get a success message and a proper Response.
         * <strong>Save</strong> the response.</li>
@@ -3948,20 +3948,20 @@ We are using the following rich text to achieve the same: </p>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">Temperature</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;%=</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp</span><span class="o">%&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">Humidity</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;%=</span><span class="nx">main</span><span class="p">.</span><span class="nx">humidity</span><span class="o">%&gt;</span><span class="w"> </span>
 </span></code></pre></div>
-<p><a class="glightbox" href="../design-conversation-skills/images/parse-input.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/parse-input.png" alt="input keys" title="input keys" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/parse-input.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/parse-input.png" alt="input keys" title="input keys" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul><li>The values returned by the API call can be accessed from the <b>Variable Keys</b> option.</li>
 <li>Clicking it opens the <b>Request/Response Keys</b> window. The various variables available are categorized.</li>
 <li>Expand <b>Response Keys</b> section to access the response from API call.</li>
 <li>Select the key for the value you want to display.</li> 
 <li>Click <b>OK</b>. The key will be inserted in the editor in the appropriate format. For example, <code><%=weather[0].description%></code>.</li></ul>
 
-<p><a class="glightbox" href="../design-conversation-skills/images/request-response-keys.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/request-response-keys.png" alt="request response keys" title="request response keys" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/request-response-keys.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/request-response-keys.png" alt="request response keys" title="request response keys" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li><strong>Save</strong> the Message Definition.</li>
 <li>
 <p>Select <strong>Settings</strong> tab and expand the <strong>Schedule</strong> section. Use this section to configure an initial schedule, these are the options that are provided to the user to choose from for the initial setup. 
 For example, in this example, we have set the schedule to be at 10:30 am daily followed by an update every 4 hrs. The user may choose just once at 10:30 am and not get the further updates.
-<a class="glightbox" href="../design-conversation-skills/images/schedule-alert.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/schedule-alert.png" alt="parse input" title="parse input" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/schedule-alert.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/schedule-alert.png" alt="parse input" title="parse input" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Click <strong>Finish Setup</strong>.</p>
@@ -3976,7 +3976,7 @@ For example, in this example, we have set the schedule to be at 10:30 am daily f
 <li>Next you will be prompted to enter a specific time, you can enter a time or enter “every x minutes”.</li>
 <li>
 <p>As you can see if the time you enter does no match the scheduled time configured, the nearest time will be presented. Same is the case with the frequency setting.
-<a class="glightbox" href="../design-conversation-skills/images/banking-bot-execution.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/banking-bot-execution.png" alt="banking bot execution" title="banking bot execution" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/banking-bot-execution.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/banking-bot-execution.png" alt="banking bot execution" title="banking bot execution" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>This is a one-time setup. From this point onwards whenever you launch Talk to Bot for this Bot, you will be given the Weather Alert at the specified time.</p>
@@ -3993,7 +3993,7 @@ For example, in this example, we have set the schedule to be at 10:30 am daily f
 <li>Add a <strong>Service Node</strong> in the Dialog which will act as the trigger for the Alert Task.</li>
 <li>
 <p>Set the <strong>Service Type</strong> to <em>Alert Subscription</em> Service.
-<a class="glightbox" href="../design-conversation-skills/images/service-type-alert.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/service-type-alert.png" alt="service type alert" title="service type alert" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/service-type-alert.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/service-type-alert.png" alt="service type alert" title="service type alert" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Click <strong>Define Request</strong> and select the already configured Alert Task. In this case, <em>Get Daily Weather</em>. </p>
@@ -4007,7 +4007,7 @@ For example, in this example, we have set the schedule to be at 10:30 am daily f
 <li>You can also define the <strong>Alert Upgrade </strong>behavior in case the Alert task is updated and published.</li>
 <li>Click<strong> Save</strong>.<strong><br></strong></li>
 
-<a class="glightbox" href="../design-conversation-skills/images/automatic-alerts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/automatic-alerts.png" alt="automatic alerts" title="automatic alerts" style="border: 1px solid gray; zoom:75%;"></a>
+<a class="glightbox" href="../images/automatic-alerts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/automatic-alerts.png" alt="automatic alerts" title="automatic alerts" style="border: 1px solid gray; zoom:75%;"></a>
 
 <li>You can trigger this task from Welcome or onConnect Event, so the user can enter their preferred city and time.</li>
 <li>On setup, the first time this service node is hit the subscription will be in effect without user intervention.</li></ol>
