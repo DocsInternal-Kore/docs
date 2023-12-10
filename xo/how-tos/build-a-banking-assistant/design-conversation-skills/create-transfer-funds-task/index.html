@@ -17,7 +17,7 @@
     
     
       
-        <title>Create a Banking Assistant - Kore ai Docs</title>
+        <title>Create Transfer Funds Task - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-a-banking-assistant" class="md-skip">
+        <a href="#create-transfer-funds-task" class="md-skip">
           Skip to content
         </a>
       
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create a Banking Assistant
+              Create Transfer Funds Task
             
           </span>
         </div>
@@ -3819,44 +3819,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-bot" class="md-nav__link">
-    Create a Bot
+  <a href="#transfer-funds-intent" class="md-nav__link">
+    Transfer Funds Intent
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-balance-intent" class="md-nav__link">
-    Get Balance Intent
-  </a>
-  
-    <nav class="md-nav" aria-label="Get Balance Intent">
+    <nav class="md-nav" aria-label="Transfer Funds Intent">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dialog-task" class="md-nav__link">
-    Dialog Task
+  <a href="#step-1-dialog-task" class="md-nav__link">
+    Step 1: Dialog Task
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#entity-node" class="md-nav__link">
-    Entity Node
+  <a href="#step-2-entity-nodes" class="md-nav__link">
+    Step 2: Entity nodes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#bot-action-service-node" class="md-nav__link">
-    Bot Action – Service Node
+  <a href="#step-3-run-dialog-task" class="md-nav__link">
+    Step 3: Run Dialog Task
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-node" class="md-nav__link">
-    Message Node
+  <a href="#step-4-message-node" class="md-nav__link">
+    Step 4: Message Node
   </a>
   
 </li>
@@ -3870,13 +3863,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    Next Steps
-  </a>
   
 </li>
       
@@ -3899,258 +3885,197 @@
 
 
 
-<h1 id="create-a-banking-assistant">Create a Banking Assistant<a class="headerlink" href="#create-a-banking-assistant" title="Permanent link">&para;</a></h1>
-<p>This document helps you create a sample banking bot. This bot is used in various use case scenarios presented in the How-Tos section of the developer documentation.</p>
+<h1 id="create-transfer-funds-task">Create Transfer Funds Task<a class="headerlink" href="#create-transfer-funds-task" title="Permanent link">&para;</a></h1>
+<p>This is document details steps in creating a sample banking bot. This bot is used in various use case scenarios presented in the How-Tos section of the developer documentation.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>The following are the prerequisites:</p>
 <ul>
-<li>You must have <a href="https://developer.kore.ai/docs/bots/getting-started/how-to-open-bot-builder/" target="_blank">signed up</a> with the Kore.ai Bots Platform.</li>
-<li>You must be aware of the basics concepts of bot-building (refer to <a href="https://developer.kore.ai/docs/bots/chatbot-overview/getting-started-bots/" target="_blank">this link</a>).</li>
-<li>You must have created a simple bot (<a href="https://developer.kore.ai/docs/bots/chatbot-overview/creating-a-simple-bot/" target="_blank">refer here</a>) for an example).</li>
+<li>You must have <a href="https://developer.kore.ai/docs/bots/getting-started/how-to-open-bot-builder/" target="_blank">signed up</a> with the Kore.ai Bots Platform
+
+<li>You must be aware of the basics of Bot building (refer to <a href="https://developer.kore.ai/docs/bots/chatbot-overview/getting-started-bots/" target="_blank">this link</a>)
+
+<li>You must have created a simple bot. Click (<a href="https://developer.kore.ai/docs/bots/chatbot-overview/creating-a-simple-bot/" target="_blank">here</a> for an example)
+
+<li>You must have created a Banking Bot. Click (<a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/" target="_blank">here</a> for example)
+</li>
 </ul>
+
 <h2 id="bot-overview">Bot Overview<a class="headerlink" href="#bot-overview" title="Permanent link">&para;</a></h2>
-<p>The bot we build will perform the basic banking transactions. This bot will:</p>
+<p>The Bot we will be building will be performing the basic banking transactions.<br>This Bot will:</p>
 <ul>
-<li>Get account balance based on the user’s <em>Account Number</em> and <em>Account Type</em>.</li>
-<li>Update accounts with the balance. For more information, <a href="https://developer.kore.ai/docs/bots/how-tos/banking-bot-update-balance/" target="_blank">click here</a>.</li>
-<li>Transfer a specified amount from the user account to a payee account. For more information, <a href="https://developer.kore.ai/docs/bots/how-tos/banking-bot-transfer-funds/" target="_blank">click here</a>.</li>
-</ul>
-<p>Let us start building the bot and add <em>Get Balance</em> task to it.</p>
-<h2 id="create-a-bot">Create a Bot<a class="headerlink" href="#create-a-bot" title="Permanent link">&para;</a></h2>
-<p>This document helps you to create a Standard Bot for banking activities. To create a standard bot, follow the below steps:</p>
-<ol>
-<li>Log in to your Kore.ai Bots Platform with valid credentials.</li>
-<li>On the bots landing page, click <strong>New Bot</strong> on the top-right and select <strong>Start from Scratch</strong> from the list.</li>
-<li>On the <strong>Create New Bot</strong> window, enter the bot details:<ul>
-<li><strong>Bot Name</strong> – Provide a name to your bot. For example, <em>Banking Bot</em>. If the name is already used, provide a different name.</li>
-<li>Set the <strong>Default Bot Language</strong> to <em>English.</em></li>
-<li>Select the <strong>Bot Type</strong> as <em>Standard Bot</em>.</li>
-</ul>
-</li>
-<li>
-<p>Click <strong>Create</strong>.</p>
-<p><a class="glightbox" href="../images/create-new-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/create-new-bot.png" alt="create new bot" title="create new bot" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-</ol>
-<h2 id="get-balance-intent">Get Balance Intent<a class="headerlink" href="#get-balance-intent" title="Permanent link">&para;</a></h2>
-<ul>
-<li>The <em>Get Balance</em> task prompts the user to enter an <em>account number</em> and the account type (Savings/Current).</li>
-<li>It makes a service call to fetch the details.</li>
-<li>The balance for the requested account is displayed.
-<a class="glightbox" href="../images/get-balance-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/get-balance-intent.png" alt="get balance intent" title="get balance intent" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-<h3 id="dialog-task">Dialog Task<a class="headerlink" href="#dialog-task" title="Permanent link">&para;</a></h3>
-<p>Successful creation of the bot directs you to the Bot Summary page. We need to add a Dialog Task as the first step in the Bot. Intent Dialog is the first step in the user-bot conversation flow.</p>
-<ol>
-<li>On the Bot Summary page, click <strong>+ New Task</strong> on the <strong>Tasks</strong> widget.</li>
-<li>
-<p>Select <strong>Dialog Task</strong> from the list.
-<a class="glightbox" href="../images/new-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/new-dialog-task.png" alt="new dialog task" title="new dialog task" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>On the Create Dialog window, enter the following details:</p>
-<ul>
-<li>Enter a name in the <strong>Intent Name</strong> field. This is the phrase that triggers the dialog. The intent name must be simple and not more than 3-4 words. For example, <em>Get Balance</em>.</li>
-<li>Enter a description in the <strong>Description</strong> field.</li>
-<li>In the <strong>Intent Training</strong> field, add unique utterances to improve the user intent recognition.</li>
-<li>Under <strong>More Options</strong>, you can add other dialog-related details. Let us retain the default settings.</li>
-<li>Select <strong>Try Conversation Driven Dialog Builder</strong> option.</li>
-</ul>
-</li>
-<li>
-<p>Click <strong>Proceed</strong>.</p>
-<p><a class="glightbox" href="../images/proceed-create-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/proceed-create-dialog.png" alt="proceed create dialog" title="proceed create dialog" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For instructions with the older Dialog Builder,  <a href="https://developer.kore.ai/v8-1/docs/bots/how-tos/creating-a-banking-bot/" target="_blank">refer here</a></p>
-</div>
+<li>Get account balance based on the Account Number and Account Type entered by the user, as seen <a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/" target="_blank">here</a>.
 
-<h3 id="entity-node">Entity Node<a class="headerlink" href="#entity-node" title="Permanent link">&para;</a></h3>
-<p>Entity Node is typically used to gather information from the user. Here, it is used to capture the user input for <em>Account Number</em> and <em>Account Type</em>.</p>
-<ol>
-<li>Click the <strong>+</strong> icon below the User Intent (Get Balance) node.</li>
-<li>
-<p>Select <strong>Entity</strong> from the list and click <strong>+ Entity</strong>.
-<a class="glightbox" href="../images/select-entity-from-list.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-entity-from-list.png" alt="select entity from list" title="select entity from list" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-<li>
-<p>Click on the newly created Entity node to open the <strong>Property</strong> window.</p>
-</li>
-<li>
-<p>Under the <strong>General Settings</strong> section, enter the following details:</p>
-<ul>
-<li><strong>Name</strong>: <em>AccountNumber</em>.</li>
-<li><strong>Display Name</strong>: <em>Account Number</em>.</li>
-<li><strong>Type</strong>: <em>Number</em>.</li>
-<li><strong>User Prompts:</strong> Enter the following text and press <strong>Enter</strong> to save: `Enter the account number.</li>
-</ul>
-<p><a class="glightbox" href="../images/set-user-prompts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-user-prompts.png" alt="set user prompts" title="set user prompts" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-<li>
-<p>Close the <em>AccountNumber</em> Entity Property window.</p>
-</li>
-<li>
-<p>Repeat the above steps to add another entity with the following details:</p>
-<ul>
-<li><strong>Name</strong>: <em>AccountType</em></li>
-<li><strong>Display Name</strong>: <em>Account Type</em>.</li>
-<li><strong>User Prompts</strong>: Enter the following text and press <strong>Enter</strong> to save:<code>Enter the account type.</code></li>
-<li><strong>Display List Of Values</strong>: Select <em>Yes, use channel-specific standard formatting for default messages and show the available list of values to the end-user</em>. This presents the list of values in a button template for the supported channels.</li>
-<li>
-<p><strong>Type</strong>: Select <em>List of Items (enumerated</em> from the drop-down list.
-<a class="glightbox" href="../images/set-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-type.png" alt="set type" title="set type" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-<li>
-<p>Provide the list of values that the user can select.</p>
-<ul>
-<li>Click the <strong>Settings</strong> icon that appears next to the field.</li>
-<li>Under the <strong>Account Type</strong> section, select the <strong>Static List</strong> radio button.</li>
-<li>Under the <strong>Keys &amp; values to use</strong> section, enter<ul>
-<li>the <strong>Display Name</strong> as <em>Savings</em> and <em>Current</em>.</li>
-<li><strong>Value</strong> and <strong>Synonym</strong> columns will auto-populate. Change the Value to <em>savings</em> and <em>current</em>, since our mockapi has the account type saved in lowercase.</li>
-</ul>
-</li>
-<li>Click <strong>Save</strong> on the top-right of the page.
-<a class="glightbox" href="../images/save-value-synonym.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/save-value-synonym.png" alt="save value synonym" title="save value synonym" style="border: 1px solid gray; zoom:75%;"></a> </li>
-</ul>
-</li>
-<li>
-<p>Close the <em>AccountType</em> Entity Property window.</p>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="bot-action-service-node">Bot Action – Service Node<a class="headerlink" href="#bot-action-service-node" title="Permanent link">&para;</a></h3>
-<p>Service Node allows you to make a backend API call and is under Bot Action.</p>
-<p>Here, the service node is used to call an API to fetch the account balance for the user-entered account number. You can find a dummy API setup for this tutorial. A mock API is created specifically for this purpose with the following fields – FirstName, LastName, Address, City, Country, ZipCode, AccountNumber, AccountType, Balance.</p>
-<ol>
-<li>
-<p>From the left pane, drag and drop the <strong>Bot Action</strong> node below the <em>Account Type</em> entity node.</p>
-<p><a class="glightbox" href="../images/drop-below-action-type-entity-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/drop-below-action-type-entity-node.png" alt="drop below action type node" title="drop below action type node" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-</ol>
-<ol start="2"><li>The newly created <b>Bot Action</b> node would be expanded. If not, click the <b>+</b> icon to expand.</li>
-<li>From the left pane, drag and drop the <b>Service</b> node to the <b>Bot Action</b> node layout,
-or on the <b>Bot Action</b> node layout, click the <b>+</b> icon and select <b>Service</b> from the list, and click <b>+ New Service</b>.</li>
+<li>Update accounts with the balance, as seen <a href="https://developer.kore.ai/docs/bots/how-tos/banking-bot-update-balance/" target="_blank">here</a>.
 
-<a class="glightbox" href="../images/bot-action-new-service.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-action-new-service.png" alt="new service" title="new service" style="border: 1px solid gray; zoom:75%;"></a> 
+<li>Transfer a specified amount from the user account to a payee account.
+</li>
+</ul>
 
-<li> A <i>Service</i> node is added to the <i>Bot Actions</i> node layout.</li>
-<li>Click the Service node to open its <b>Property</b> window.</li>
-<li>Under the <b>General Settings</b> section, enter the following details:</li></ol>
-
+<p>Let us add the Transfer Funds task.</p>
+<h2 id="transfer-funds-intent">Transfer Funds Intent<a class="headerlink" href="#transfer-funds-intent" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Name</strong>: GetAccountBalance</li>
-<li><strong>Display Name</strong>: Get Account Balance</li>
-<li>
-<p><strong>Description</strong>: Enter a description to describe the service node.
-<a class="glightbox" href="../images/describe-service-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/describe-service-node.png" alt="describe service node" title="describe service node" style="border: 1px solid gray; zoom:75%;"></a>  </p>
-</li>
-<li>
-<p>Click <strong>DEFINE REQUEST</strong>.</p>
-<ul>
-<li>
-<p>On the <strong>Define Request</strong> page, enter the following details:</p>
-<ul>
-<li><strong>Request type</strong> – <em>GET</em></li>
-<li><strong>Request URL</strong> – <code>https://5c3c633d29429300143fe4d2.mockapi.io/AccountDetails?filter={{context.entities.AccountNumber}}</code></li>
-</ul>
-<p>Due to the limitations of the dummy API service, instead of fetching the record for the given account number, the response is filtered for the required account number.</p>
-</li>
-</ul>
-<p><ul><li>This API does not require any Auth, or Header Parameters.</li>
-<li>Click the <b>Test Request</b> tab.
-<li>Enter an account number in the <b>Sample Context Values</b> section. This is the filter parameter needed by the API, you can use the following account number <i>02929664</i>.
-<li>Click <b>Test</b> on the top-right of the page. Wait for the test to be completed and you get a <i>Status Code: 200</i>.</li>
-<li>You can see an array of records returned by the API call. In the next step, values are parsed using JavaScript.</li>
-<li>Click <b>Save as Sample Response</b>.</li>
-<li>Click <b>Save</b> on the top-right of the page.</li>
-  <a class="glightbox" href="../images/save-sample-response.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/save-sample-response.png" alt="save sample response" title="save sample response" style="border: 1px solid gray; zoom:75%;"></a></ul></p>
-</li>
-</ul>
-<ol start="7"><li>On the <b>Service</b> node Property window, click the <b>Connections</b> tab.</li></ol>
+<li>The Transfer Funds task will prompt the user to enter Payee and Payer account number.
 
-<ul><li>Under the <b>Connection Rules</b> section, ensure that the <b>Default</b> connection is set to <b>End of Bot Action</b>.</li>
+<li>Next it would prompt for the amount to be transferred.
 
-<a class="glightbox" href="../images/end-of-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/end-of-bot.png" alt="end of bot" title="end of bot" style="border: 1px solid gray; zoom:75%;"></a></ul>
+<li>It will then make a service call to update the accounts appropriately.
 
-<ol start="8"><li>Close the Service Property window.</li>
-<li>Click the <b>–</b> icon next to the Bot Action node to collapse the bot action node.</li></ol>
+<li>The message indicating success or failure is displayed.</li>
 
-<h3 id="message-node">Message Node<a class="headerlink" href="#message-node" title="Permanent link">&para;</a></h3>
-<p>A Message node displays a message from the bot to the user. Here, the Message node is used to show the balance.</p>
-<ol>
-<li>From the left pane, drag and drop the <strong>Message</strong> node below the <strong>Bot Action</strong> node, or click the <strong>+</strong> icon below the <strong>Bot Action</strong> node.</li>
-<li>Select <strong>Message</strong> from the list and click <strong>+ New Message</strong>.</li>
-<li>Click the Message node to open its <strong>Property</strong> window.</li>
-<li>Enter the following details:<ul>
-<li><strong>Name</strong>: <em>BalanceMessage</em></li>
-<li><strong>Display Name</strong>: <em>Balance Message</em></li>
-<li>
-<p><strong>Bot Responses</strong>: Define a standard message to send to the user.</p>
+<a class="glightbox" href="..s/images/success-failure-message.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="..s/images/success-failure-message.png" alt="success failure message" title="success failure message" style="border: 1px solid gray; zoom:75%;"></a> 
+</ul>
+
+<h3 id="step-1-dialog-task">Step 1: Dialog Task<a class="headerlink" href="#step-1-dialog-task" title="Permanent link">&para;</a></h3>
+<p>We need to add an Intent Dialog as the first step in the Bot. Intent Dialog is the first step in the user-bot conversation flow.</p>
 <ul>
-<li>Click <strong>Manage</strong>.</li>
-</ul>
-<p><a class="glightbox" href="../images/manage-bot-response.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/manage-bot-response.png" alt="manage bot response" title="manage bot response" style="border: 1px solid gray; zoom:75%;"></a> </p>
-<ul>
-<li>On the <strong>Manage User Prompts</strong> page, you can find the user prompt.</li>
-<li>Open the user prompt to define JavaScript to parse the message for all channels.</li>
-<li>
-<p>Under the <strong>Channels</strong> section, select <strong>All</strong> from the drop-down list. Refer to the image below.</p>
-<ul>
-<li>
-<p>Under the <strong>Message</strong> section, click the <strong>Advanced</strong> tab.
-<a class="glightbox" href="../images/message-advanced-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/message-advanced-settings.png" alt="advanced settings" title="advanced settings" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-<li>
-<p>Add the following <strong>JavaScript</strong>. The JavaScript is written to compare all the records filtered for the <em>AccountType</em> as entered by the user and then display the <em>Balance</em>, and click <strong>Save</strong>.</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">balance</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">GetAccountBalance</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">GetAccountBalance</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">AccountType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">entities</span><span class="p">.</span><span class="nx">AccountType</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="nx">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">GetAccountBalance</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">Balance</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">   </span><span class="p">}</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">balance</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">print</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Invalid Account, try again &#39;</span><span class="p">);</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">else</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nx">print</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;The Balance in your account is &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">balance</span><span class="p">)</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
-</span></code></pre></div>
-<ol start="5"><li>Go back to the Dialog Builder.</li>
-<li>On the <b>Message</b> node Property window, click the <b>Connections</b> tab.</li>
-<li>Under the <b>Connection Rules</b> section, change the <b>Default</b> connection from <b>Not Connected</b> to <b>End of Dialog</b>.</li>
-<a class="glightbox" href="../images/connection-rules-banking-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/connection-rules-banking-bot.png" alt="connection rules" title="connection rules" style="border: 1px solid gray; zoom:75%;"></a></ol>
+<li>Open the Banking Bot with the two pre-configured tasks – <a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/" target="_blank">Get Balance</a> and <a href="https://developer.kore.ai/docs/bots/how-tos/banking-bot-update-balance/" target="_blank">Update Balance</a>.
 
-<ol start="8"><li>Close the Property window.</li></ol>
+<li>Ensure that the <strong>Build </strong>tab is selected from the top menu.
+
+<li>Navigate to the <strong>Conversational Skills -> Dialog Task</strong> page from the left menu.
+
+<li>Click <strong>Create Dialog</strong> from the top right.
+
+<li><strong>Create Dialog </strong>screen will open.
+
+<li>Enter the following details: 
+<ul>
+<li><strong>Intent Name</strong> – Enter the Intent name, this is the phrase that triggers the dialog. The intent name should be simple and not more than 3-4 words. For example, ‘Transfer Funds.’
+<li>Under <strong>More Options</strong>, you can add a <strong>description</strong> and other dialog-related details. Let’s retain the default settings.
+<li>You can also include utterances to train this intent.</li> 
+<li>Select <strong>Try Conversation Driven Dialog Builder</strong> option.</li></ul>
+
+<li>Click <strong>Proceed.</strong>
+
+<li>Property Panel for User Intent will be displayed. We will retain the default properties.
+
+<li>For instructions with the older Dialog Builder, click <a href="https://developer.kore.ai/docs/bots/how-tos/banking-bot-transfer-funds/ target="_blank">here</a>.
+
+<li>Close the User Intent Property Panel.</li>
+</ul>
+
+<h3 id="step-2-entity-nodes">Step 2: Entity nodes<a class="headerlink" href="#step-2-entity-nodes" title="Permanent link">&para;</a></h3>
+<p>Entity Node is typically used to gather information from the user.</p>
+<p>Here we will be using it to capture the user input for the Payee and Payer Account Number and amount to be transferred.</p>
+<ul>
+<li>Click the <strong>+</strong> below to the User Intent node.
+<li>Select the <strong>Entity</strong> option.
+<li>Click the <strong>+ New entity </strong>.
+<li><strong>Property Panel</strong> for the Entity Node is displayed. If not click on the newly added entity node to open.
+<li>Enter the following details: 
+<ul>
+<li><strong>Name</strong>: <em>PayerAccount</em>
+<li><strong>Display Name</strong>: <em>Payer Account </em>
+<li><strong>Type</strong>: <em>Number</em>
+<li><strong>User Prompts:</strong> Enter the following text:<br><code>Enter the Account from where you want to transfer funds.</code>
+</li> 
+</ul>
+
+<li>Close the PayerAccount Entity Property Panel.</li>
+
+<li>Repeat the above steps to add another entity with the following details:
+<ul>
+
+<li><strong>Name</strong>: <em>PayeeAccount</em>
+
+<li><strong>Display Name</strong>: <em>Payee Account </em>
+
+<li><strong>Type</strong>: <em>Number</em>
+
+<li><strong>User Prompts:</strong> Enter the following text<br><code>Enter the Account to which you want to transfer funds.</code>
+</li> 
+</ul>
+
+<li>Close the PayeeAccount Entity Property Panel.
+
+<li>Repeat the above steps to add another entity with the following details: 
+<ul>
+
+<li><strong>Name</strong>: <em>AmountToTransfer</em>
+
+<li><strong>Display Name</strong>: <em>Amount To Transfer </em>
+
+<li><strong>Type</strong>: <em>Number</em>
+
+<li><strong>User Prompts:</strong> Enter the following text and hit enter to save:<br><code>Enter the amount to transfer.</code>
+</li> 
+</ul>
+
+<li>Close the Amount Entity Property Panel.
+</li>
+</ul>
+
+<p>The next steps would update the balance in both the Payer and Payee accounts. Since we already have <a href="https://developer.kore.ai/docs/bots/how-tos/banking-bot-update-balance/" target="_blank">Update Balance</a> task, we will see how to run it from the current task.</p>
+<h3 id="step-3-run-dialog-task">Step 3: Run Dialog Task<a class="headerlink" href="#step-3-run-dialog-task" title="Permanent link">&para;</a></h3>
+<p>Predefined dialog tasks can be triggered from within another task with the steps below:</p>
+<ul>
+<li>Click the <strong>+</strong> below to the Amount Entity node.
+<li>Select <strong>Dialog Task</strong>.
+<li>From the given task list, select the required task – <strong>UpdateBalance</strong>.
+<li><strong>Property Panel</strong> for the Dialog Node is displayed. If not click on the newly added dialog node to open.
+<li>Navigate to the <strong>Instance Properties</strong> tab and enter the following details:
+<li><strong>Entity Pre-Assignments</strong> section – these are the entity values required by the Dialog Task if they are not populated here the user will be prompted to enter the same. Since we have already collected the information through the entities defined in the previous step we will be passing those user-entered values to the UpdateBalance task 
+<ul>
+
+<li><strong>AccountType</strong>: <em>savings</em></li>
+
+<li><strong>AccountNumber</strong>: <em>context.entities.PayerAccount</em></li>
+
+<li><strong>Amount</strong>: <em>context.entities.Amount</em></li>
+
+<li><strong>TransactionType</strong>: <em>Debit</em> (payer account needs to be deducted of the transferred amount)</li>
+
+<a class="glightbox" href="..s/images/intent-update-balance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="..s/images/intent-update-balance.png" alt="update balance intent" title="update balance intent" style="border: 1px solid gray; zoom:75%;"></a></ul>
+
+<li>Close the UpdateBalance Dialog Properties panel.
+
+<li>Repeat the same steps to Update the Payee Account with the following values in the <strong>Entity Pre-Assignments</strong> section:
+<ul>
+
+<li><strong>AccountType</strong>: <em>savings</em>
+
+<li><strong>AccountNumber</strong>: <em>context.entities.PayeeAccount</em>
+
+<li><strong>Amount</strong>: <em>context.entities.Amount</em>
+
+<li><strong>TransactionType</strong>: <em>Credit</em>
+</li> 
+</ul>
+
+<li>Close the UpdateBalance Dialog Properties panel.
+</li>
+</ul>
+
+<h3 id="step-4-message-node">Step 4: Message Node<a class="headerlink" href="#step-4-message-node" title="Permanent link">&para;</a></h3>
+<p>A Message Node is used to display a message from the Bot to the user. Here we will be using the Message node to show the balance.</p>
+<ul>
+<li>Click the <strong>+</strong> below the UpdateBalance [2] Service node.</li>
+<li>Select <strong>Message</strong> and click the ‘+ <strong>New message</strong>‘</li>
+<li><strong>Property Panel</strong> for the Message Node is displayed. If not click on the newly added dialog node to open.</li>
+<li>Enter the following details:  
+    <ul>
+    <li><strong>Name</strong>: <em>FinalMessage</em>.</li>  
+    <li><strong>Display Name</strong>: <em>Final Message</em></li>  
+    <li><strong>Bot Responses: <code>The amount {{context.entities.AmountToTransfer}} has been transferred from {{context.entities.PayerAccount}} to {{context.entities.PayeeAccount}}</code></strong></li>
+    </ul>  
+</ul>
+<ul>
+<li>On the Bot Response Property Panel, open the connections tab by clicking the ‘<strong>Connections</strong>‘ icon. 
+<li>Change the <strong>Default</strong> connection from ‘<em>Not Connected</em>‘ to ‘<em>End of Dialog</em>‘.
+
+<li>Click <strong>Save</strong>.
+</li> 
+
+<li>Close the Property Panel.</li></ul>
 
 <h3 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h3>
-<p>To test the dialog task, you can use the <strong>Talk to bot</strong> option at the bottom-right.</p>
-<ol>
-<li>Enter the following utterance (intent name) <strong>Get Balance</strong>.</li>
-<li>Follow the bot instructions:<ul>
-<li>Enter Account Number – 67846279</li>
-<li>Select Account Type – Savings</li>
+<p>To test the Dialog task, you can use the ‘Talk to bot’ at the bottom right corner.<br>Enter the utterance (intent name): “<em>Transfer Funds</em>."</p>
+<p>Follow the Bot instructions and enter the following values;</p>
+<ul>
+<li>Enter Payer Account – 02929664;</li>
+<li>Enter Payee Account – 44994354;</li>
+<li>Enter Transfer Amount – 200</li>
+<li>See the success message.</li>
 </ul>
-</li>
-<li>
-<p>See the Account Balance.</p>
-<p><a class="glightbox" href="../images/test-banking-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-banking-bot.png" alt="test banking bot" title="test banking bot" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-</ol>
-<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p>Now that you have added the <em>Get Balance</em> dialog task to the Banking bot, the next step is to add the Update Balance task. For convenience, the steps for <em>Update Balance</em> are split into different documents. Click <a href="https://developer.kore.ai/docs/bots/how-tos/banking-bot-update-balance/" target="_blank">here</a> to continue.</p>
 
 
   
