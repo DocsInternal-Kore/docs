@@ -3897,7 +3897,7 @@
 <p>Alert tasks can be used to deliver timely, relevant, and personalized information from enterprise systems to customers and employees by polling the relevant service in real-time or according to a user-defined schedule.</p>
 <h3 id="steps-to-set-up-an-alert-task">Steps to Set up an Alert Task<a class="headerlink" href="#steps-to-set-up-an-alert-task" title="Permanent link">&para;</a></h3>
 <ol>
-<li>From <strong>Build</strong> &gt; <strong>Conversational Skills</strong> add an <strong>Alert Task</strong>.</li>
+<li>From <strong>Build</strong> &gt; <strong>Conversational Skills</strong>, click <strong>Alert Task</strong> to create one.</li>
 <li>
 <p>On the <strong>Task Details</strong> page, follow the steps below:</p>
 <ul>
@@ -3924,19 +3924,19 @@
 <li>
 <p>We will not need any <strong>Initializer</strong> requirements for our use case. Use this in case any JavaScript needs to be executed before the request is sent.</p>
 </li>
-<li>
-<p>Under <strong>Request</strong> click <strong>Add API</strong> to add the service API that needs to be invoked. We are using a <em>GET</em> method from the following API: <code>http://api.openweathermap.org/data/2.5/weather?q={cityname}&amp;APPID=&amp;lt;your-app-id&gt;</code>.</p>
-<ul>
+<li>Under <strong>Request</strong> click <strong>Add API</strong> to add the service API that needs to be invoked. We are using a <em>GET</em> method from the following API: <code>http://api.openweathermap.org/data/2.5/weather?q={cityname}&amp;APPID=&amp;lt;your-app-id&gt;</code>.<ul>
 <li>The <strong>APPID</strong> in the above url is assigned to you by OpenWeather when you sign up. You can find it from the <a href="https://home.openweathermap.org/api_keys" target="_blank">API keys</a> section after you login to your account.</li>
 <li>Notice that the <strong>Parameters</strong> list is populated automatically with the parameters entered earlier.</li>
-<li><strong>Save</strong> the API.</li>
-</ul>
-<p><a class="glightbox" href="../images/add-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-api.png" alt="add api" title="add api" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Test</strong> the API to ensure that the configuration is proper. Enter a sample city name, when prompted and ensure you get a success message and a proper Response.
-        * <strong>Save</strong> the response.</li>
 </ul>
 </li>
+<li>
+<p><strong>Save</strong> the API.</p>
+<p><a class="glightbox" href="../images/add-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-api.png" alt="add api" title="add api" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p><strong>Test</strong> the API to ensure that the configuration is proper. Enter a sample city name, when prompted and ensure you get a success message and a proper Response.</p>
+</li>
+<li><strong>Save</strong> the response.</li>
 </ul>
 </li>
 </ul>
