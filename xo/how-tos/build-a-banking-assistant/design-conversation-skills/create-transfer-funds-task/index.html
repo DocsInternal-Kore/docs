@@ -3889,18 +3889,18 @@
 <p>This is document details steps in creating a sample banking bot. This bot is used in various use case scenarios presented in the How-Tos section of the developer documentation.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li>You must have <a href="https://developer.kore.ai/docs/bots/getting-started/how-to-open-bot-builder/" target="_blank">signed up</a> with the Kore.ai Bots Platform
+<li>You must have <a href="https://developer.kore.ai/docs/bots/getting-started/how-to-open-bot-builder/" target="_blank">signed up</a> with the Kore.ai Bots Platform.
 
-<li>You must be aware of the basics of Bot building (refer to <a href="https://developer.kore.ai/docs/bots/chatbot-overview/getting-started-bots/" target="_blank">this link</a>)
+<li>You must be aware of the basics of Bot building (refer to <a href="https://developer.kore.ai/docs/bots/chatbot-overview/getting-started-bots/" target="_blank">this link</a>).
 
-<li>You must have created a simple bot. Click (<a href="https://developer.kore.ai/docs/bots/chatbot-overview/creating-a-simple-bot/" target="_blank">here</a> for an example)
+<li>You must have created a simple bot. Click (<a href="https://developer.kore.ai/docs/bots/chatbot-overview/creating-a-simple-bot/" target="_blank">here</a> for an example).
 
-<li>You must have created a Banking Bot. Click (<a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/" target="_blank">here</a> for example)
+<li>You must have created a Banking Bot. Click (<a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/" target="_blank">here</a> for an example).
 </li>
 </ul>
 
 <h2 id="bot-overview">Bot Overview<a class="headerlink" href="#bot-overview" title="Permanent link">&para;</a></h2>
-<p>The Bot we will be building will be performing the basic banking transactions.<br>This Bot will:</p>
+<p>The Bot we will be building will be performing the basic banking transactions like the following:</p>
 <ul>
 <li>Get account balance based on the Account Number and Account Type entered by the user, as seen <a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/" target="_blank">here</a>.
 
@@ -3921,7 +3921,7 @@
 
 <li>The message indicating success or failure is displayed.</li>
 
-<a class="glightbox" href="..s/images/success-failure-message.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="..s/images/success-failure-message.png" alt="success failure message" title="success failure message" style="border: 1px solid gray; zoom:75%;"></a> 
+<a class="glightbox" href="../images/success-failure-message.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/success-failure-message.png" alt="success failure message" title="success failure message" style="border: 1px solid gray; zoom:75%;"></a> 
 </ul>
 
 <h3 id="step-1-dialog-task">Step 1: Dialog Task<a class="headerlink" href="#step-1-dialog-task" title="Permanent link">&para;</a></h3>
@@ -4015,16 +4015,12 @@
 <li>Navigate to the <strong>Instance Properties</strong> tab and enter the following details:
 <li><strong>Entity Pre-Assignments</strong> section – these are the entity values required by the Dialog Task if they are not populated here the user will be prompted to enter the same. Since we have already collected the information through the entities defined in the previous step we will be passing those user-entered values to the UpdateBalance task 
 <ul>
+<li><strong>AccountType</strong>: <em>savings</em>.</li>
+<li><strong>AccountNumber</strong>: <em>context.entities.PayerAccount</em>.</li>
+<li><strong>Amount</strong>: <em>context.entities.Amount</em>.</li>
+<li><strong>TransactionType</strong>: <em>Debit</em> (payer account needs to be deducted of the transferred amount).</li>
 
-<li><strong>AccountType</strong>: <em>savings</em></li>
-
-<li><strong>AccountNumber</strong>: <em>context.entities.PayerAccount</em></li>
-
-<li><strong>Amount</strong>: <em>context.entities.Amount</em></li>
-
-<li><strong>TransactionType</strong>: <em>Debit</em> (payer account needs to be deducted of the transferred amount)</li>
-
-<a class="glightbox" href="..s/images/intent-update-balance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="..s/images/intent-update-balance.png" alt="update balance intent" title="update balance intent" style="border: 1px solid gray; zoom:75%;"></a></ul>
+<a class="glightbox" href="../images/intent-update-balance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/intent-update-balance.png" alt="update balance intent" title="update balance intent" style="border: 1px solid gray; zoom:75%;"></a></ul>
 
 <li>Close the UpdateBalance Dialog Properties panel.
 
@@ -4049,7 +4045,7 @@
 <p>A Message Node is used to display a message from the Bot to the user. Here we will be using the Message node to show the balance.</p>
 <ul>
 <li>Click the <strong>+</strong> below the UpdateBalance [2] Service node.</li>
-<li>Select <strong>Message</strong> and click the ‘+ <strong>New message</strong>‘</li>
+<li>Select <strong>Message</strong> and click the ‘+ <strong>New message</strong>'.</li>
 <li><strong>Property Panel</strong> for the Message Node is displayed. If not click on the newly added dialog node to open.</li>
 <li>Enter the following details:  
     <ul>
