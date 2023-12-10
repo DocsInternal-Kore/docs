@@ -4026,22 +4026,21 @@
 <p>Service Node allows you to make a backend API call and is under Bot Action.</p>
 <p>Here, the service node is used to call an API to fetch the account balance for the user-entered account number. You can find a dummy API setup for this tutorial. A mock API is created specifically for this purpose with the following fields – FirstName, LastName, Address, City, Country, ZipCode, AccountNumber, AccountType, Balance.</p>
 <ol>
-<li>From the left pane, drag and drop the <strong>Bot Action</strong> node below the <em>Account Type</em> entity node.</li>
-</ol>
+<li>
+<p>From the left pane, drag and drop the <strong>Bot Action</strong> node below the <em>Account Type</em> entity node.</p>
 <p><a class="glightbox" href="../images/drop-below-action-type-entity-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/drop-below-action-type-entity-node.png" alt="drop below action type node" title="drop below action type node" style="border: 1px solid gray; zoom:75%;"></a> </p>
-<ol>
-<li>The newly created <strong>Bot Action</strong> node would be expanded. If not, click the <strong>+</strong> icon to expand</li>
-<li>
-<p>From the left pane, drag and drop the <strong>Service</strong> node to the <strong>Bot Action</strong> node layout, 
-or on the <strong>Bot Action</strong> node layout, click the <strong>+</strong> icon and select <strong>Service</strong> from the list, and click <strong>+ New Service</strong>.
-<a class="glightbox" href="../images/bot-action-new-service.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-action-new-service.png" alt="new service" title="new service" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
-<li>
-<p>A <em>Service</em> node is added to the <em>Bot Actions</em> node layout.</p>
-</li>
-<li>Click the Service node to open its <strong>Property</strong> window.</li>
-<li>
-<p>Under the <strong>General Settings</strong> section, enter the following details:</p>
+</ol>
+<ol start="2"><li>The newly created <b>Bot Action</b> node would be expanded. If not, click the <b>+</b> icon to expand.</li>
+<li>From the left pane, drag and drop the <b>Service</b> node to the <b>Bot Action</b> node layout,
+or on the <b>Bot Action</b> node layout, click the <b>+</b> icon and select <b>Service</b> from the list, and click <b>+ New Service</b>.</li>
+
+<a class="glightbox" href="../images/bot-action-new-service.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-action-new-service.png" alt="new service" title="new service" style="border: 1px solid gray; zoom:75%;"></a> 
+
+<li> A <i>Service</i> node is added to the <i>Bot Actions</i> node layout.</li>
+<li>Click the Service node to open its <b>Property</b> window.</li>
+<li>Under the <b>General Settings</b> section, enter the following details:</li></ol>
+
 <ul>
 <li><strong>Name</strong>: GetAccountBalance</li>
 <li><strong>Display Name</strong>: Get Account Balance</li>
@@ -4052,11 +4051,11 @@ or on the <strong>Bot Action</strong> node layout, click the <strong>+</strong> 
 <li>
 <p>Click <strong>DEFINE REQUEST</strong>.</p>
 <ul>
-<li>On the <strong>Define Request</strong> page, enter the following details:<ul>
+<li>
+<p>On the <strong>Define Request</strong> page, enter the following details:</p>
+<ul>
 <li><strong>Request type</strong> – <em>GET</em></li>
 <li><strong>Request URL</strong> – <code>https://5c3c633d29429300143fe4d2.mockapi.io/AccountDetails?filter={{context.entities.AccountNumber}}</code></li>
-</ul>
-</li>
 </ul>
 <p>Due to the limitations of the dummy API service, instead of fetching the record for the given account number, the response is filtered for the required account number.</p>
 </li>
@@ -4070,18 +4069,16 @@ or on the <strong>Bot Action</strong> node layout, click the <strong>+</strong> 
 <li>Click <b>Save</b> on the top-right of the page.</li>
   <a class="glightbox" href="../images/save-sample-response.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/save-sample-response.png" alt="save sample response" title="save sample response" style="border: 1px solid gray; zoom:75%;"></a></ul></p>
 </li>
-<li>
-<p>On the <strong>Service</strong> node Property window, click the <strong>Connections</strong> tab.</p>
-<ul>
-<li>Under the <strong>Connection Rules</strong> section, ensure that the <strong>Default</strong> connection is set to <strong>End of Bot Action</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../images/end-of-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/end-of-bot.png" alt="end of bot" title="end of bot" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-<li>
-<p>Close the Service Property window.</p>
-</li>
-<li>Click the <strong>–</strong> icon next to the Bot Action node to collapse the bot action node.</li>
-</ol>
+<ol start="7"><li>On the <b>Service</b> node Property window, click the <b>Connections</b> tab.</li></ol>
+
+<ul><li>Under the <b>Connection Rules</b> section, ensure that the <b>Default</b> connection is set to <b>End of Bot Action</b>.</li>
+
+<a class="glightbox" href="../images/end-of-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/end-of-bot.png" alt="end of bot" title="end of bot" style="border: 1px solid gray; zoom:75%;"></a></ul>
+
+<ol start="8"><li>Close the Service Property window.</li>
+<li>Click the <b>–</b> icon next to the Bot Action node to collapse the bot action node.</li></ol>
+
 <h3 id="message-node">Message Node<a class="headerlink" href="#message-node" title="Permanent link">&para;</a></h3>
 <p>A Message node displays a message from the bot to the user. Here, the Message node is used to show the balance.</p>
 <ol>
