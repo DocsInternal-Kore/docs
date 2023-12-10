@@ -17,7 +17,7 @@
     
     
       
-        <title>Schedule a Smart Alert - Kore ai Docs</title>
+        <title>Build a Knowledge Graph - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#schedule-a-smart-alert" class="md-skip">
+        <a href="#build-a-knowledge-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Schedule a Smart Alert
+              Build a Knowledge Graph
             
           </span>
         </div>
@@ -3805,38 +3805,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#problem-statement" class="md-nav__link">
-    Problem Statement
+  <a href="#static-faq" class="md-nav__link">
+    Static FAQ
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#tags" class="md-nav__link">
+    Tags
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
-    Implementation
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementation">
+    <nav class="md-nav" aria-label="Tags">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-an-alert-task" class="md-nav__link">
-    Setting an Alert Task
-  </a>
-  
-    <nav class="md-nav" aria-label="Setting an Alert Task">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#steps-to-set-up-an-alert-task" class="md-nav__link">
-    Steps to Set up an Alert Task
+  <a href="#steps-to-add-tags" class="md-nav__link">
+    Steps to Add Tags
   </a>
   
 </li>
@@ -3845,23 +3830,53 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#execution" class="md-nav__link">
-    Execution
+      
+        <li class="md-nav__item">
+  <a href="#ontology" class="md-nav__link">
+    Ontology
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#smart-alert" class="md-nav__link">
-    Smart Alert
+      
+        <li class="md-nav__item">
+  <a href="#term-usage" class="md-nav__link">
+    Term Usage
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#synonyms" class="md-nav__link">
+    Synonyms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternate-questions" class="md-nav__link">
+    Alternate Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasks-execution" class="md-nav__link">
+    Tasks Execution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags-in-ontology" class="md-nav__link">
+    Tags in Ontology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traits" class="md-nav__link">
+    Traits
+  </a>
   
 </li>
       
@@ -3884,139 +3899,331 @@
 
 
 
-<h1 id="schedule-a-smart-alert">Schedule a Smart Alert<a class="headerlink" href="#schedule-a-smart-alert" title="Permanent link">&para;</a></h1>
-<p>In this post, we explore a scenario for a travel Bot, where the user needs to be provided with weather updates daily for a preferred location. We use an Alert task to achieve the same. We also see how auto-subscription can be enabled on this Alert task, making it smart.</p>
-<p>For details on what Alert task is and how it is implemented in the Kore.ai Bots platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/" target="_blank"> here</a>.</p>
-<h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
-<p>A registered user of a Bot needs to be sent a weather update in the form of an alert, on a pre-specified time of the day and/or at a specified interval of time. A sample is given below:
-<a class="glightbox" href="../images/sample-weather-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/sample-weather-bot.png" alt="sample weather bot" title="sample weather bot" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>In this document, we show how an Alert Task can be used to cater to such situations and take appropriate action.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h1 id="build-a-knowledge-graph">Build a Knowledge Graph<a class="headerlink" href="#build-a-knowledge-graph" title="Permanent link">&para;</a></h1>
+<p>This article helps to quickly build and understand the working of a Knowledge Graph for your bot. It shows how to convert an FAQ into ontology, add tags, use terms, add alternate questions, synonyms, tags, and traits.</p>
+<p>For the implementation details, click <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/knowledge-ai/knowledge-graph-overview/" target="_blank">here</a>.</p>
+<p>In this example, we work on the following FAQs related to a banking bot:</p>
 <ul>
-<li>Basic Bot building knowledge.</li>
-<li>A working Bot, we are using a <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-a-sample-banking-assistant/" target="_blank">Banking Bot</a>.</li>
-<li>Access to a web service that gives a weather updates. We are using a REST service hosted at: <a href="http://api.openweathermap.org/" target="_blank">open weather map</a>. </li>
+<li><em>How do I apply for a debit card?</em></li>
+<li><em>How do I apply for a checkbook?</em></li>
+<li><em>How do I open a joint account?</em></li>
+<li><em>Can I add a joint account holder?</em></li>
 </ul>
-<p>If you want to use this service, you need register to their <strong>free alerts</strong> as we use the API key to access their APIs.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<h3 id="setting-an-alert-task">Setting an Alert Task<a class="headerlink" href="#setting-an-alert-task" title="Permanent link">&para;</a></h3>
-<p>Alert tasks can be used to deliver timely, relevant, and personalized information from enterprise systems to customers and employees by polling the relevant service in real-time or according to a user-defined schedule.</p>
-<h4 id="steps-to-set-up-an-alert-task">Steps to Set up an Alert Task<a class="headerlink" href="#steps-to-set-up-an-alert-task" title="Permanent link">&para;</a></h4>
+<h2 id="static-faq">Static FAQ<a class="headerlink" href="#static-faq" title="Permanent link">&para;</a></h2>
+<p>Let us start by creating a static FAQ without an ontology.</p>
+<p>To add a static FAQ, follow the steps below:</p>
 <ol>
-<li>From <strong>Build</strong> &gt; <strong>Conversational Skills</strong>, click <strong>Alert Task</strong> to create one.</li>
+<li>Open the bot.</li>
+<li>Select the <strong>Build</strong> tab from the top menu.</li>
+<li>On the left pane, click <strong>Conversational Skills</strong> &gt; <strong>Knowledge Graph</strong>.</li>
+<li>Click <strong>Create</strong> to create a Knowledge Graph.</li>
+<li>A Knowledge Graph with the name set to the Bot Name is created.</li>
+<li>Click <strong>Add Intent</strong> to start entering your FAQs.</li>
+<li>Select <strong>Intent</strong> type as FAQ.</li>
 <li>
-<p>On the <strong>Task Details</strong> page, follow the steps below:</p>
-<ul>
-<li>Enter a <strong>Task Name</strong>, say <em>Get Daily Weather</em>.</li>
-<li>Choose the <strong>Connection Type</strong>, we go with <em>Webservice</em>.</li>
-<li>Choose the <strong>Connection Mode</strong>, we use <em>REST</em>.</li>
-<li>Click <strong>Create &amp; Proceed</strong>.
-<a class="glightbox" href="../images/create-alert-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/create-alert-task.png" alt="create alert task" title="create alert task" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
+<p><strong>Add Question</strong> and <strong>Bot Response</strong>; then click <strong>Save</strong>.
+<a class="glightbox" href="../design-conversation-skills/images/add-question-and-bot-response.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/add-question-and-bot-response.png" alt="add question and bot response" title="add question and bot response" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>You will be directed to the <b>Alert Settings</b> page. Follow the steps below to complete the setup.</p>
-<ul>
-<li>Review and modify the <strong>General Settings</strong> if needed. For our use case, we do not need to modify any settings here.</li>
-<li>
-<p>Select the <strong>API Request</strong> tab</p>
-<ul>
-<li>Ensure that the <strong>Content Type</strong> is set to <em>JSON</em>.</li>
-<li>We do not need to set <strong>Authorization Provider</strong> for our use case. Configure the same if the API you are using has any authorization requirements.</li>
-<li>
-<p>Set <strong>Parameter</strong> to gather the <em>preferred City</em> from the User. Ensure that it is set as a <strong>Mandatory</strong> field. This is the API requirement.
-<a class="glightbox" href="../images/set-task-parameter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-task-parameter.png" alt="set task parameter" title="set task parameter" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Click <strong>Add Intent</strong> on the top-right to add more Q&amp;As.</p>
 </li>
 <li>
-<p>We will not need any <strong>Initializer</strong> requirements for our use case. Use this in case any JavaScript needs to be executed before the request is sent.</p>
-</li>
-<li>Under <strong>Request</strong> click <strong>Add API</strong> to add the service API that needs to be invoked. We are using a <em>GET</em> method from the following API: <code>http://api.openweathermap.org/data/2.5/weather?q={cityname}&amp;APPID=&amp;lt;your-app-id&gt;</code>.<ul>
-<li>The <strong>APPID</strong> in the above url is assigned to you by OpenWeather when you sign up. You can find it from the <a href="https://home.openweathermap.org/api_keys" target="_blank">API keys</a> section after you login to your account.</li>
-<li>Notice that the <strong>Parameters</strong> list is populated automatically with the parameters entered earlier.</li>
-</ul>
+<p>After you enter all the Q&amp;As, click <strong>Train</strong> to train the Knowledge Graph.
+<a class="glightbox" href="../design-conversation-skills/images/click-training.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/click-training.png" alt="click training" title="click training" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p><strong>Save</strong> the API.</p>
-<p><a class="glightbox" href="../images/add-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-api.png" alt="add api" title="add api" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p><strong>Test</strong> the API to ensure that the configuration is proper. Enter a sample city name, when prompted and ensure you get a success message and a proper Response.</p>
-</li>
-<li><strong>Save</strong> the response.</li>
-</ul>
-</li>
-</ul>
+<p>Click <strong>Talk to Bot</strong> at the bottom-right to check the bot response for the added Q&amp;As.</p>
 </li>
 </ol>
-<p>Next we need to format the <strong>Bot Response.</strong> For our use case, we will be parsing the weather description, temperature and humidity details returned by the API call to be presented to the user. 
-We are using the following rich text to achieve the same: </p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">Todays</span><span class="w"> </span><span class="nx">weather</span><span class="w"> </span><span class="nx">details</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;%=</span><span class="nx">weather</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">description</span><span class="o">%&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">Temperature</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;%=</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp</span><span class="o">%&gt;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">Humidity</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;%=</span><span class="nx">main</span><span class="p">.</span><span class="nx">humidity</span><span class="o">%&gt;</span><span class="w"> </span>
-</span></code></pre></div>
-<p><a class="glightbox" href="../images/parse-input.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/parse-input.png" alt="input keys" title="input keys" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul><li>The values returned by the API call can be accessed from the <b>Variable Keys</b> option.</li>
-<li>Clicking it opens the <b>Request/Response Keys</b> window. The various variables available are categorized.</li>
-<li>Expand <b>Response Keys</b> section to access the response from API call.</li>
-<li>Select the key for the value you want to display.</li> 
-<li>Click <b>OK</b>. The key will be inserted in the editor in the appropriate format. For example, <code><%=weather[0].description%></code>.</li></ul>
-
-<p><a class="glightbox" href="../images/request-response-keys.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/request-response-keys.png" alt="request response keys" title="request response keys" style="border: 1px solid gray; zoom:75%;"></a></p>
+<h2 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Save</strong> the Message Definition.</li>
+<li>Issue: Try the utterance “<em>how do I apply for a credit card</em>?” 
+We will get did you mean dialog with reference to a question pertaining to Debit Card, which is not appropriate in this scenario. Ideally, we should see an <em>I don’t know</em> response as you get for a totally unrelated query regarding weather.
+<a class="glightbox" href="../design-conversation-skills/images/kg-tutorial-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/kg-tutorial-bot.png" alt="kg tutorial bot" title="kg tutorial bot" style="border: 1px solid gray; zoom:75%;"></a></li>
+</ul>
+<p><strong>Solution</strong></p>
+<p>To overcome the above situation, we can add <strong>tags</strong> to each question. Tags help filter the FAQs based upon the presence of some key phrases in the user utterance.</p>
+<h3 id="steps-to-add-tags">Steps to Add Tags<a class="headerlink" href="#steps-to-add-tags" title="Permanent link">&para;</a></h3>
+<ol>
 <li>
-<p>Select <strong>Settings</strong> tab and expand the <strong>Schedule</strong> section. Use this section to configure an initial schedule, these are the options that are provided to the user to choose from for the initial setup. 
-For example, in this example, we have set the schedule to be at 10:30 am daily followed by an update every 4 hrs. The user may choose just once at 10:30 am and not get the further updates.
-<a class="glightbox" href="../images/schedule-alert.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/schedule-alert.png" alt="parse input" title="parse input" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Hover over the Question to find the <strong>Edit</strong> icon. 
+<a class="glightbox" href="../design-conversation-skills/images/edit-question-tag.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/edit-question-tag.png" alt="edit question tag" title="edit question tag" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
 <li>
-<p>Click <strong>Finish Setup</strong>.</p>
+<p>Click the <strong>Edit</strong> icon to add a tag to the question.</p>
+</li>
+<li>In the <strong>Add Tag</strong> text box, you can find some suggestions by the platform based on the phrases present in the question. You can pick one from the list or type your own custom tag.</li>
+<li>
+<p>For this use case, we can pick the <em>debit card</em> tag as suggested by the platform and <strong>Save</strong> the changes.
+<a class="glightbox" href="../design-conversation-skills/images/pick-debit-card.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/pick-debit-card.png" alt="pick debit card" title="pick debit card" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>Similarly, add a <em>checkbook</em> for the <em>How to apply for checkbook</em> question.</p>
+</li>
+<li>
+<p><strong>Train</strong> the bot.
+<a class="glightbox" href="../design-conversation-skills/images/train-bot-for-debit-card.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/train-bot-for-debit-card.png" alt="train bot for debit card" title="train bot for debit card" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p><strong>Talk to the Bot</strong>, use the same utterance “<em>how do I apply for a credit card</em>?”</p>
+</li>
+</ol>
+<h2 id="ontology">Ontology<a class="headerlink" href="#ontology" title="Permanent link">&para;</a></h2>
+<p>For a better bot response, you must add tags for every question. But this solution is not feasible in case we have a big list of FAQs. Also, more than one question can have a tag(s) in common.</p>
+<p><strong>Solution</strong>: Ontology. Based on crucial words and frequently occurring words/phrases, FAQs are organized into groups and subgroups.</p>
+<p><strong>Example of Ontology</strong>: Continuing with the Banking bot FAQ example, we can organize the questions thus:</p>
+<ul>
+<li>Apply<ul>
+<li>Debit Card<ul>
+<li><em>How do I apply for a debit card?</em></li>
+</ul>
+</li>
+<li>Checkbook<ul>
+<li><em>How do I apply for a credit card?</em></li>
+</ul>
 </li>
 </ul>
-<h3 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h3>
-<p>Before publishing and sharing the Bot with a user, you can test it from the <strong>Talk to bot</strong> feature.</p>
+</li>
+<li>Joint account<ul>
+<li><em>How do I open a Joint account?</em></li>
+<li><em>Can I add a joint account holder?</em></li>
+</ul>
+</li>
+</ul>
+<p>Each group can be a node in the ontology. You can have multiple levels of the nodes forming a hierarchical structure. Moving the relevant FAQs (intents) to the nodes will associate that FAQ with the corresponding node name set as a tag.</p>
+<p>To create an ontology, follow the steps below:</p>
 <ol>
-<li>Launch <strong>Talk to bot</strong>.</li>
-<li>Initiate the schedule task, <strong>Get Daily Weather</strong> (name of the Alert Task we configured).</li>
-<li>You will be prompted to enter city name.</li>
-<li>Next you will be prompted to enter a specific time, you can enter a time or enter “every x minutes”.</li>
+<li>Hover over the Knowledge Graph name on the left pane and click <strong>+</strong> icon to <strong>Add Child Node</strong>.</li>
 <li>
-<p>As you can see if the time you enter does no match the scheduled time configured, the nearest time will be presented. Same is the case with the frequency setting.
-<a class="glightbox" href="../images/banking-bot-execution.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/banking-bot-execution.png" alt="banking bot execution" title="banking bot execution" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Add the Nodes as <em>Apply</em> and <em>Joint Account</em>.
+<a class="glightbox" href="../design-conversation-skills/images/add-child-node-banking.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/add-child-node-banking.png" alt="add child node" title="add child node" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
 <li>
-<p>This is a one-time setup. From this point onwards whenever you launch Talk to Bot for this Bot, you will be given the Weather Alert at the specified time.</p>
+<p>To add subgroups, hover over the node and use the corresponding <strong>+</strong> icon to add child nodes.</p>
 </li>
-<li>The user can trigger the task using the Alert Task name, just like any other Dialog Task and set up the alert manually. The experience User will have when they start using your Bot will be similar to the above-mentioned flow.</li>
+<li>Select the questions pertaining to Joint Account and drag and drop them to the <strong>Joint Account</strong> node.</li>
+<li>
+<p>Repeat the process for questions related to <strong>Apply</strong>, <strong>Debit Card</strong>, and <strong>Checkbook</strong> nodes.
+<a class="glightbox" href="../design-conversation-skills/images/repeat-steps-ontology.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/repeat-steps-ontology.png" alt="repeat steps ontology" title="repeat steps ontology" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>You will notice the path gets updated accordingly.
+<a class="glightbox" href="../design-conversation-skills/images/kg-path-update.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/kg-path-update.png" alt="kg path update" title="kg path update" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Edit a question and see that the node name is added as a tag.</p>
+</li>
+<li>
+<p>This ensures that this question is qualified for a user utterance containing the term/node name. Note that the tags you added earlier are retained and you can delete them, whereas the node names cannot be deleted.
+<a class="glightbox" href="../design-conversation-skills/images/edit-a-question.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/edit-a-question.png" alt="edit a question" title="edit a question" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p><strong>Train</strong> the Knowledge Graph and <strong>Talk to Bot</strong>.</p>
+</li>
+<li>There should not be any changes in the bot responses.</li>
 </ol>
-<h3 id="smart-alert">Smart Alert<a class="headerlink" href="#smart-alert" title="Permanent link">&para;</a></h3>
-<p>You can set the alert for the user automatically by adding the <strong>Alert Subscription Service</strong> type Service node in a welcome dialog task.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Only published Alert Tasks are available for Alert subscription.</p>
-</div>
+<h2 id="term-usage">Term Usage<a class="headerlink" href="#term-usage" title="Permanent link">&para;</a></h2>
+<p>By default, the node names or terms are used in evaluating the path and coming up with a set of qualifying questions. You can tighten or relax this rule by either making the term mandatory in the utterance or marking the term/node as organizer respectively.</p>
+<p>Before proceeding, let us add a few more nodes questions to our Knowledge Collection:</p>
+<ul>
+<li>Account<ul>
+<li><em>How do I open an account?</em></li>
+<li><em>How do I access my account?</em></li>
+<li><em>How do I check my account balance?</em></li>
+<li><em>How do I access my account online?</em></li>
+</ul>
+</li>
+<li>Contact<ul>
+<li><em>Who do I contact in case of an issue?</em></li>
+<li><em>What is your helpline number?</em></li>
+</ul>
+</li>
+<li>Complaints<ul>
+<li><em>Where can I register my query/complaints?</em></li>
+</ul>
+</li>
+<li>Issues<ul>
+<li><em>How do I report a stolen card?</em></li>
+</ul>
+</li>
+</ul>
+<p><strong>Use Case 1</strong>: You want to ensure that the intents regarding <em>Joint Account</em> must be considered only when the user asked a direct question regarding the same. Any ambiguous cases must consider the Account node and not the Joint Account node.</p>
+<p>To address this case, we mark the term <em>Joint Account</em> as <strong>Mandatory</strong>. This helps improve the bot’s performance.</p>
+<p><strong>Steps to Set up a Term</strong></p>
 <ol>
-<li>Add a <strong>Service Node</strong> in the Dialog which will act as the trigger for the Alert Task.</li>
+<li>Hover over the node, in this case, Joint Account, and click on the <strong>Settings</strong> icon.</li>
+<li>From the Settings section, select the <strong>Mandatory</strong> option from the dropdown next to the term name.</li>
+<li><strong>Save</strong> and <strong>Train</strong> the Knowledge Collection.</li>
+<li>Now the questions under this node are considered only if the user utterance has the node name, <strong>Joint Account</strong> in this case.
+<a class="glightbox" href="../design-conversation-skills/images/mandatory-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/mandatory-settings.png" alt="mandatory settings" title="mandatory settngs" style="border: 1px solid gray; zoom:75%;"></a></li>
+</ol>
+<p><strong>Use Case 2</strong>: Consider the following FAQs.</p>
+<ul>
+<li>Contact<ul>
+<li><em>Who do I contact in case of an issue?</em></li>
+<li><em>What is your helpline number?</em></li>
+</ul>
+</li>
+<li>Complaints<ul>
+<li><em>Where can I register my query/complaints?</em></li>
+</ul>
+</li>
+<li>Issues<ul>
+<li><em>How do I report a stolen card?</em></li>
+</ul>
+</li>
+</ul>
+<p>Though they do not have any phrases or terms in common, they are related to <em>Customer Care</em>. For ease of understanding, we can put them under a node by the same name and mark it as <strong>Organizer</strong> node, ensuring that the intents get qualified without the need to have the term phrase in the user utterance.</p>
+<p><strong>Steps to Set up a Term</strong></p>
+<ol>
+<li>Create a node called <em>Customer Care.</em></li>
+<li>Drag and drop the above three nodes to this new node.</li>
+<li>Hover over the node, in this case <em>Customer Care</em>, and click on the <strong>Settings</strong> icon.</li>
+<li>From the <strong>Settings</strong> page, select the <strong>Organizer</strong> option.</li>
+<li><strong>Save</strong> and <strong>Train</strong> the Knowledge Collection.</li>
+<li>Now the questions under this node are considered even if the user utterance does not include the node name.
+<a class="glightbox" href="../design-conversation-skills/images/save-and-train-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/save-and-train-faq.png" alt="save and train faq" title="save and train faq" style="border: 1px solid gray; zoom:75%;"></a></li>
+</ol>
+<h2 id="synonyms">Synonyms<a class="headerlink" href="#synonyms" title="Permanent link">&para;</a></h2>
+<p><strong>Use Case</strong></p>
+<p><strong>User</strong>: <em>How do I get a debit card?</em></p>
+<p><strong>Bot</strong> provides a suggestive and not a definitive match because the bot does not understand <em>get</em> as being the same as <em>apply</em>.</p>
+<p><strong>Solution</strong>: Synonyms</p>
+<p>To add synonyms, follow the steps below:</p>
+<ol>
+<li>Hover over the <strong>Apply</strong> node and click the <strong>Settings</strong> icon.</li>
 <li>
-<p>Set the <strong>Service Type</strong> to <em>Alert Subscription</em> Service.
-<a class="glightbox" href="../images/service-type-alert.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/service-type-alert.png" alt="service type alert" title="service type alert" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>In the <strong>Path Level Synonyms</strong>, add <strong>get</strong>.
+<a class="glightbox" href="../design-conversation-skills/images/get-path-level-synonyms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/get-path-level-synonyms.png" alt="get path level synonyms" title="get path level synonyms" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
 <li>
-<p>Click <strong>Define Request</strong> and select the already configured Alert Task. In this case, <em>Get Daily Weather</em>. </p>
+<p><strong>Save</strong> and <strong>Train</strong> the Bot.</p>
+</li>
+<li><strong>Talk to Bot</strong> and use the same query “<em>How do I get a debit card?”</em></li>
+<li>
+<p>Try “<em>How do I get a checkbook”</em> and you will see that the synonym works here also. This is because we added the synonym at path level and it is applicable to all nodes and questions under that path/node.
+<a class="glightbox" href="../design-conversation-skills/images/kg-tutorial-bot-synonyms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/kg-tutorial-bot-synonyms.png" alt="kg tutorial bot synonyms" title="kg tutorial bot synonyms" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Similarly, we can define <strong>Knowledge Graph Synonym</strong> if it is applicable to the entire knowledge graph.</p>
 </li>
 </ol>
-<ol start="4">
-<li>You will be navigated to the <strong>Smart/Automatic Alerts</strong> window.
-<li>Set up the <strong>Alert Parameters</strong> as required.</li>
-<li>Set the <strong>Alert Frequency</strong>.</li>
-<li>You can set the <b>Alert Expiry</b> values based on either the duration of the subscription or the number of notifications sent, these will come in handy in case your subscription to the service is limited. Here we have set the <strong>Number of Notification</strong> to a <em>maximum value</em>.</li>
-<li>You can also define the <strong>Alert Upgrade </strong>behavior in case the Alert task is updated and published.</li>
-<li>Click<strong> Save</strong>.<strong><br></strong></li>
-
-<a class="glightbox" href="../images/automatic-alerts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/automatic-alerts.png" alt="automatic alerts" title="automatic alerts" style="border: 1px solid gray; zoom:75%;"></a>
-
-<li>You can trigger this task from Welcome or onConnect Event, so the user can enter their preferred city and time.</li>
-<li>On setup, the first time this service node is hit the subscription will be in effect without user intervention.</li></ol>
+<h2 id="alternate-questions">Alternate Questions<a class="headerlink" href="#alternate-questions" title="Permanent link">&para;</a></h2>
+<p>Some questions have multiple ways the user can approach them.</p>
+<ul>
+<li><em>Is there a way to see my account details from my laptop?</em></li>
+<li><em>Is there a mobile app that I can use to access my account?</em></li>
+<li><em>Does your bank support internet banking to view account details?</em></li>
+</ul>
+<p>All these questions pertain to one intent: <em>How do I access my account online?</em>. But instead of adding all these Q&amp;As as intents and repeat the response and the settings, if any, you can add these questions as alternate questions.</p>
+<p>To add alternate questions, follow the steps below:</p>
+<ol>
+<li>Hover over the question, in this case, <em>How do I access my account online?</em> and click the <strong>Edit</strong> icon.</li>
+<li>In the <strong>Add alternate question</strong> enter the question.</li>
+<li>
+<p>Add all the three queries mentioned above.
+<a class="glightbox" href="../design-conversation-skills/images/add-alternative-question.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/add-alternative-question.png" alt="add alternative question" title="add alternative question" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p><strong>Save</strong>, <strong>Train</strong>, and <strong>Talk to the Bot</strong>.</p>
+</li>
+<li>Entering any of the above three questions will yield the same response as the question <em>How do I access my account online?</em></li>
+</ol>
+<h2 id="tasks-execution">Tasks Execution<a class="headerlink" href="#tasks-execution" title="Permanent link">&para;</a></h2>
+<p>Consider the query “<em>How do I check my account balance?</em>.” If the bot has a task that can give the balance, we can direct the user to the same, instead of asking the user to use the utterance to trigger the task.</p>
+<p>To trigger a task, follow the steps below:</p>
+<ol>
+<li>
+<p>Before proceeding, ensure that you have a task defined for <em>Check Balance</em>. Let us consider a dummy dialog that displays a message.
+<a class="glightbox" href="../design-conversation-skills/images/tasks-execution-dummy-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/tasks-execution-dummy-dialog.png" alt="tasks execution dummy dialog" title="tasks execution dummy dialog" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Add the <strong>Add Intent</strong> <em>How do I check my account balance?</em></p>
+</li>
+<li>Set <strong>Intent</strong> to <em>Task.</em></li>
+<li>
+<p>From the drop-down list select the Dialog Task name <strong>Check Balance</strong>.
+<a class="glightbox" href="../design-conversation-skills/images/check-balance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/check-balance.png" alt="check balance" title="check balance" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p><strong>Save</strong> and <strong>Train</strong> the Knowledge Graph.</p>
+</li>
+<li><strong>Talk to bot</strong> with the utterance <em>How do I check my account balance?</em> will trigger the <em>Check Balance</em> task.</li>
+</ol>
+<h2 id="tags-in-ontology">Tags in Ontology<a class="headerlink" href="#tags-in-ontology" title="Permanent link">&para;</a></h2>
+<p><strong>Use Case</strong></p>
+<p><strong>User</strong>: <em>Does your bank give a passbook to view account details?</em></p>
+<p><strong>Bot</strong>: Did you mean <em>How do I access my account online?</em>.</p>
+<p>The reason being the alternate question for online account access: <em>Does your bank support internet banking to view account details?</em> is a very close match to the above query. You can avoid such situations by adding a tag <em>internet banking</em> and marking it as mandatory to the alternate question <em>Does your bank support internet banking to view account details?.</em></p>
+<p><strong>Solution</strong>: Custom Tags</p>
+<p>To add tags, follow the steps below:</p>
+<ol>
+<li>Edit the question “<em>How do I access my account online?”</em></li>
+<li>
+<p>For the alternate question: “<em>Does your bank support internet banking to view account details?”</em></p>
+<ul>
+<li>
+<p>Add the tag <em>internet-banking</em>.
+<a class="glightbox" href="../design-conversation-skills/images/add-tag-internal-banking.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/add-tag-internal-banking.png" alt="add tag internal banking" title="add tag internal banking" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Click the tag to open the <strong>Tag Settings</strong> dialog and set <strong>Tag Usage</strong> to <strong>Mandatory</strong>. 
+<a class="glightbox" href="../design-conversation-skills/images/click-tag-to-open.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/click-tag-to-open.png" alt="click tag to open" title="click tag to open" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Click <strong>Done</strong>.</p>
+</li>
+<li>Repeat for the alternate question <em>Is there a mobile app that I can use to access my account?</em> with the tag <em>mobile app</em>.
+<a class="glightbox" href="../design-conversation-skills/images/repeat-alternative-question.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/repeat-alternative-question.png" alt="repeat alternative question" title="repeat alternative question" style="border: 1px solid gray; zoom:75%;"></a></li>
+</ul>
+</li>
+<li>
+<p><strong>Save</strong> and <strong>Train</strong> the bot.</p>
+</li>
+<li>Now <strong>Talk to the Bot</strong> and see the response.
+<a class="glightbox" href="../design-conversation-skills/images/talk-to-bot-ontology.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/talk-to-bot-ontology.png" alt="talk to bot ontology" title="talk to bot ontology" style="border: 1px solid gray; zoom:75%;"></a></li>
+</ol>
+<h2 id="traits">Traits<a class="headerlink" href="#traits" title="Permanent link">&para;</a></h2>
+<p><strong>Use Case</strong></p>
+<p><strong>User</strong>: <em>I lost my card, how do I apply for another debit card?</em>
+<strong>Bot</strong>: <em>How do I apply for a debit card?</em>.</p>
+<p><a class="glightbox" href="../design-conversation-skills/images/kg-trait.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/kg-trait.png" alt="kg trait" title="kg trait" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>While this is a valid response it is not the right one. Ideally, since the user said <em>I lost my card</em> bot must direct the user to report a stolen card.</p>
+<p><strong>Solution</strong>: Traits. Traits are used to get additional information from user utterance and direct the user to a better solution.</p>
+<p>To add traits, follow the steps below:</p>
+<ol>
+<li>First, add this question as an alternate question to “<em>How do I report a stolen card?</em>”</li>
+</ol>
+<p><a class="glightbox" href="../design-conversation-skills/images/add-trait-ontology.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/add-trait-ontology.png" alt="add trait ontology" title="add trait ontology" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ol>
+<li><strong>Save</strong> and <strong>Train the bot.</strong></li>
+<li><strong>Talk to bot</strong> and ask the same question. You will get the same response.</li>
+<li>
+<p>Define the Trait with the steps below:</p>
+</li>
+<li>
+<p>From the <strong>More</strong> option next to the <strong>Train</strong> button, select <strong>Manage Traits</strong>.</p>
+</li>
+</ol>
+<p><a class="glightbox" href="../design-conversation-skills/images/manage-traits-ontology.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/manage-traits-ontology.png" alt="manage traits ontology" title="manage traits ontology" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ul>
+<li>Click <strong>New Trait</strong> to create a new trait.</li>
+<li>Give a <strong>Trait Type</strong> and add <strong>Traits</strong> to it. Here, let us consider <em>Issues</em> as Trait Type and <em>lostcard</em> as the trait.</li>
+<li>Add <em>lost my card</em> as the <strong>utterance</strong> that triggers this trait. (Do not forget to hit enter after you add the utterance). </li>
+</ul>
+<p><a class="glightbox" href="../design-conversation-skills/images/add-lost-my-card-utterance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/add-lost-my-card-utterance.png" alt="add lost my card utterance" title="add lost my card utterance" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ul>
+<li><strong>Save</strong> and <strong>Train the trait</strong>.</li>
+<li>Click <strong>Apply Trait</strong>.</li>
+<li>From the ontology, go to the <strong>Issues</strong> node <strong>Settings</strong> page.</li>
+<li>Add <em>lostcard</em> as <strong>Trait</strong> (pick from the drop-down list). </li>
+</ul>
+<p><a class="glightbox" href="../design-conversation-skills/images/select-trait-from-dropdown.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/select-trait-from-dropdown.png" alt="select trait from list" title="select trait from list" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ul>
+<li><strong>Save</strong> and <strong>Train</strong> the Knowledge Graph.</li>
+<li><strong>Talk to the Bot</strong> and try the same question. Now you will get the expected response. </li>
+</ul>
+<p><a class="glightbox" href="../design-conversation-skills/images/kg-bot-trait.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-conversation-skills/images/kg-bot-trait.png" alt="kg bot trait" title="kg bot trait" style="border: 1px solid gray; zoom:75%;"></a></p>
 
 
   
