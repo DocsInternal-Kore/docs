@@ -17,7 +17,7 @@
     
     
       
-        <title>Update Data in Data Tables - Kore ai Docs</title>
+        <title>Add Data into Data Tables from UI Forms - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#update-data-in-data-tables" class="md-skip">
+        <a href="#add-data-into-data-tables-from-ui-forms" class="md-skip">
           Skip to content
         </a>
       
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Update Data in Data Tables
+              Add Data into Data Tables from UI Forms
             
           </span>
         </div>
@@ -3862,20 +3862,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#fetch-data" class="md-nav__link">
-    Fetch Data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-data" class="md-nav__link">
-    Update Data
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3905,216 +3891,246 @@
 
 
 
-<h1 id="update-data-in-data-tables">Update Data in Data Tables<a class="headerlink" href="#update-data-in-data-tables" title="Permanent link">&para;</a></h1>
-<p>In this post, we explore a Banking Bot scenario where the account-related data for a customer is stored in a Data Table. We will see how the data can be updated by a request from the user.</p>
-<p>For details on what Data Tables are and how it is implemented in the Kore.ai Bots platform, click <a href="https://developer.kore.ai/docs/bots/advanced-topics/data-as-a-service/" target="_blank"> here</a>.</p>
+<h1 id="add-data-into-data-tables-from-ui-forms">Add Data into Data Tables from UI Forms<a class="headerlink" href="#add-data-into-data-tables-from-ui-forms" title="Permanent link">&para;</a></h1>
+<p>In this page, we explore a scenario in a Banking Bot where the user can create an additional account.</p>
+<p>We will see how data collected from the UI Forms can be used to create the account in a Data Table.</p>
+<p>For details on what UI Forms are and how they are implemented on the XO Platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/ui-forms/" target="_blank"> here</a>.
+For details on what Data Tables are and how it is implemented in the XO Platform, click <a href="https://developer.kore.ai/docs/bots/advanced-topics/data-as-a-service/" target="_blank"> here</a>.</p>
 <h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
-<p>Consider a Banking Bot, for a given customer, the following data is stored. This data needs to be updated as per customer request. Customers can update only email id and address details.</p>
-<ul>
-<li>Id;</li>
-<li>Name;</li>
-<li>Email id;</li>
-<li>Address; and</li>
-<li>Type</li>
-</ul>
-<p><a class="glightbox" href="../images/problem-statement-update-data.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/problem-statement-update-data.png" alt="problem statement update data" title="problem statement update data" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Bot building knowledge.</li>
-<li>A Banking Bot with access to the above-mentioned table, and data existing in that table (click <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-add-data-tables/" target="_blank"> here</a> for use case example to create and add data).</li>
-</ul>
-<h2 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
-<p>Let us consider each of the following scenarios one by one:</p>
+<p>Consider a Banking Bot trying to address the following scenarios:</p>
 <ol>
-<li>Dialog Task to:<ul>
-<li>Gather required information.</li>
-<li>Invoke a service to update the customer information.</li>
+<li>An already registered user wants to open an additional account.</li>
+<li>There are three types of accounts that are available, each with further options:<ul>
+<li>Savings Account.</li>
+<li>Checking Account with an option to opt for a Cash Card and set a Minimum Balance.</li>
+<li>Credit Card with an option to choose the type of card to be <em>Platinum, Gold, Silver</em> or <em>Basic</em>.</li>
 </ul>
 </li>
+<li>The above data is collected from the user using a UI form.</li>
+<li>This data needs to be updated to the data table.</li>
 </ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Bot building knowledge</li>
+<li>A Banking Bot with access to<ul>
+<li>Customer details table as created <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-add-data-tables/#Table_Creation" target="_blank"> here</a> </li>
+<li>Account details table, using the same steps shown in the above link create the following data table:<ul>
+<li><strong>Name</strong>, say <em>accountdetails;</em></li>
+<li><strong>Description</strong>, say <em>Account details Table;</em></li>
+<li>Under the <strong>Column</strong> section add the following details:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table border="1.5">
+<tr bgcolor="#ECECEC">
+   <td>
+            <strong>COLUMN NAME</strong>
+   </td>
+   <td>
+            <strong>TYPE</strong>
+   </td>
+   <td>
+            <strong>REQUIRED</strong>
+   </td>
+   <td>
+            <strong>ADDITIONAL SETTINGS</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>
+            AccountId
+   </td>
+   <td>
+            number
+   </td>
+   <td>
+            Yes
+   </td>
+   <td>
+            Encrypted & Max Length of 5
+   </td>
+  </tr>
+  <tr>
+   <td>
+            AccountName
+   </td>
+   <td>
+            string
+   </td>
+   <td>
+            Yes
+   </td>
+   <td>
+            –
+   </td>
+  </tr>
+  <tr>
+   <td>
+            AccountType
+   </td>
+   <td>
+            string
+   </td>
+   <td>
+            No
+   </td>
+   <td>
+            –
+   </td>
+  </tr>
+  <tr>
+   <td>
+            CustId
+   </td>
+   <td>
+            number
+   </td>
+   <td>
+            Yes
+   </td>
+   <td>
+            Reference table & column as
+<p>
+
+            <em>customertable.CustId</em>
+   </td>
+  </tr>
+  <tr>
+   <td>
+            CashCard
+   </td>
+   <td>
+            string
+   </td>
+   <td>
+            No
+   </td>
+   <td>
+            –
+   </td>
+  </tr>
+  <tr>
+   <td>
+            WithdrawalLimit
+   </td>
+   <td>
+            number
+   </td>
+   <td>
+            No
+   </td>
+   <td>
+            –
+   </td>
+  </tr>
+  <tr>
+   <td>
+            CCType
+   </td>
+   <td>
+            string
+   </td>
+   <td>
+            No
+   </td>
+   <td>
+            –
+   </td>
+  </tr>
+</table>
+
+<p><a class="glightbox" href="../design-digital-skills/images/update-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/update-form.png" alt="update form" title="update form" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>UI Form we will be using the UI Form configured as shown <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-configure-ui-forms/#UI_Form_Configuration" target="_blank"> here</a>.</p>
+<h2 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
+<p>Let us consider each of the following scenarios one by one:</p>
+<p>Dialog Task to:
+* Capture the customer id.
+* Trigger the UI Form to gather account details.
+* Invoke the service node to add the account data.</p>
 <h3 id="dialog-task-configuration">Dialog Task Configuration<a class="headerlink" href="#dialog-task-configuration" title="Permanent link">&para;</a></h3>
-<p>We will create a dialog task to gather the required information, and use a <strong>Service</strong> node to update the data table with the values thus gathered.</p>
-<p><a class="glightbox" href="../images/dialog-task-configuration-update.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-task-configuration-update.png" alt="dialog task configuration" title="dialog task configuration" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>We will be creating a dialog task and adding a form node to trigger the UI Form created in the above step and use a service node to make a service call to add the new account from the form data.
+<a class="glightbox" href="../design-digital-skills/images/dialog-task-configuration-ui-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/dialog-task-configuration-ui-form.png" alt="dialog task configuration" title="dialog task configuration" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h4 id="create-dialog-task">Create Dialog Task<a class="headerlink" href="#create-dialog-task" title="Permanent link">&para;</a></h4>
 <ol>
-<li>From the left navigation menu, select <strong>Bot Tasks -&gt; Dialog Tasks</strong>.</li>
+<li>From the left navigation menu, select <strong>Bot Tasks</strong> -&gt; <strong>Dialog Tasks</strong>.</li>
 <li>Click the <strong>+</strong> icon against the <strong>Dialog Tasks</strong> to create a new Task.<ul>
-<li>Enter <strong>IntentName</strong>, say, <em>UpdateCustomer</em>.</li>
+<li>Enter <strong>IntentName</strong> say, <em>AddAccount</em>.</li>
 <li><strong>Create &amp; Proceed</strong> to open the dialog builder page.</li>
 </ul>
 </li>
 <li>Retain the Intent Node default settings, and close the Intent Node.</li>
-<li>Click the <strong>+</strong> icon next to the intent node and add an <strong>Entities</strong> to capture the customer id: </li>
-</ol>
-<table border="1.5">
-<tr bgcolor="#ECECEC">
-   <td>
-    <strong>ENTITY NAME</strong>
-   </td>
-   <td>
-    <strong>TYPE</strong>
-   </td>
-   <td>
-    <strong>USER PROMPTS</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CustId
-   </td>
-   <td>
-    String
-   </td>
-   <td>
-    Enter your customer id
-   </td>
-  </tr>
-</table>
-
-<ol start="5"><li>First, we will fetch data from the table for the given <code>Cust Id</code> and then use a Logic node to control the process flow.</li></ol>
-
-<h4 id="fetch-data">Fetch Data<a class="headerlink" href="#fetch-data" title="Permanent link">&para;</a></h4>
-<p>You can use a Service call to fetch data from the table:</p>
-<ol>
-<li>Click the <strong>+</strong> iconagainst the entity node.</li>
-<li>Select <strong>Service</strong> -&gt; <strong>New Service Node</strong> option.</li>
-<li>From the <strong>General Settings</strong> section configure the following:<ul>
-<li><strong>Name</strong> say <em>GetCustomerData</em>.</li>
-<li><strong>Display Name</strong> say <em>Get Customer Data</em>.</li>
-<li><strong>Service Type</strong> select <em>Data Service</em>.</li>
-<li><strong>Type</strong> select <em>Table</em>.</li>
+<li>Click the <strong>+</strong> icon next to the intent node and select the <strong>Entity</strong> node. This will be used to capture the customer id<ul>
+<li>Enter <strong>Name</strong> say, <em>CustId</em>.</li>
+<li>Select <strong>Type</strong> as <em>Number</em>.</li>
+<li><strong>User Prompt</strong> as <em>Enter your Customer Id</em>.</li>
+<li>Close the entity node.</li>
 </ul>
 </li>
-<li>Under <strong>Request Definition</strong> click <strong>Add Request</strong> to define a request to fetch data from the table.</li>
-<li>In the <strong>Data Service Request Definition</strong> page, enter the following:<ul>
-<li><strong>Choose Table Name</strong> as <em>customertable</em>.</li>
-<li><strong>Actions</strong> as <em>Get Data</em>.</li>
-<li><strong>Choose Filters</strong> to select the <em>CustId = {{context.entities.CustId}}</em>.</li>
-</ul>
-</li>
+<li>Add a <strong>Service</strong> node to check for the validity of the customer id entered.</li>
 </ol>
-<p><a class="glightbox" href="../images/data-service-request-definition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-service-request-definition.png" alt="data service request definition" title="data service request definition" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol start="6"><li><b>Save</b> the definition and close the service node.</li>
-<li>Add a <b>Message Node</b> to display the records fetches using the following context variable values, since we are fetching only one record, we are using a static _[0]_ reference to the row:</li></ol>
-
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>For the customer number entered, we have the following details: {{context.GetCustomerData.response.body.queryResult[0].CustName}}, {{context.GetCustomerData.response.body.queryResult[0].CustEmail}}, {{context.GetCustomerData.response.body.queryResult[0].Address}}, {{context.GetCustomerData.response.body.queryResult[0].CustType}}
-</span></code></pre></div>
-<h4 id="update-data">Update Data<a class="headerlink" href="#update-data" title="Permanent link">&para;</a></h4>
-<p>We will be using an entity node and a logic node to capture the inputs from the customer and to control the process flow:</p>
+<p><a class="glightbox" href="../design-digital-skills/images/check-customer-id-validity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/check-customer-id-validity.png" alt="check customer id validity" title="check customer id validity" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ol>
-<li>Click the <strong>+</strong> icon against the last message node added above.</li>
-<li>Select an <strong>Entity Node</strong> and add a <em>List of Items (enumerated)</em> type entity with the following settings. </li>
+<li>Add a <strong>Logic</strong> node to proceed with the Form if the customer id is valid else prompt for the customer id.
+<a class="glightbox" href="../design-digital-skills/images/logic-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
-<table border="1.5">
-<tr bgcolor="#ECECEC">
-   <td>
-    <strong>DISPLAY NAME</strong>
-   </td>
-   <td>
-    <strong>VALUE</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    Email Id
-   </td>
-   <td>
-    Email Id
-   </td>
-  </tr>
-  <tr>
-   <td>
-    Address
-   </td>
-   <td>
-    Address
-   </td>
-  </tr>
-</table>
-
-<ol start="3"><li>Add a <b>Logic Node</b> and based upon the value from the entity node above fetch either Email ID or Address from the customer, here <i>CustEmail</i> and <i>CustAddress</i> are the entities to capture customer email id and customer address.</li>
-
-<a class="glightbox" href="../images/logic-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a>
-
-<li>Also populate the context variables with the current details, these variables would be used to update the data table.</li>
-
-<a class="glightbox" href="../images/populate-context-variables.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/populate-context-variables.png" alt="populate context varoiable" title="banking bot configure columns" style="border: 1px solid gray; zoom:75%;"></a></ol>
-
-<p>From the Email Id and Address entity trigger a <strong>Script Node</strong> to modify the context variables appropriately using the following script:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">entities</span><span class="p">.</span><span class="nx">CustUpdateChoice</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Address&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="sb">`</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="sb">    context.custAdd = context.entities.CustAddress;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="sb">  }</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="sb">else {</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="sb">   context.custEmail = context.entities.CustEmail;</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="sb"> }</span>
+<p>The <em>InvalidCustId</em> is a <strong>Message</strong> node with the following JavaScript:</p>
+<p><code>context.entities.CustId = null;</code></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">print</span><span class="p">(</span><span class="s1">&#39;You have entered an invalid customer id, try again&#39;</span><span class="p">);</span>
 </span></code></pre></div>
-<ol start="5"><li>Select <b>Service</b> -> <b>New Service Node</b> option.</li>
-<li>From the <b>General Settings</b> section configure the following:</li>
-    <ul><li><b>Name</b> say <i>UpdateCust</i>.
-    <li><b>Display Name</b> say <i>Update Customer Data</i>
-    <li><b>Service Type</b> select <i>Data Service</i>.
-    <li><b>Type</b> select <i>Table</i>.</li></ul>
-<li>Under <b>Request Definition</b> click <b>Add Request</b> to define a request to add data to the table.</li>
-<li>In the <b>Data Service Request Definition</b> page, enter the following:</li>
-    <ul><li><b>Choose Table Name</b> as <code>customertable</code> defined earlier.</li>
-    <li><b>Actions</b> as <i>Update Data</i>.</li></ul></ol>
+<ol start="7"><li>Next, add a <b>Form</b> node and from the dropdown list select the form (<i>OpenAccount</i>).</li>
+    <ul><li>You will be prompted to select the <b>Form Experience</b>. The XO Platform allows you to gather user input both from the form and through conversation based on the channel.</li>
+    <li>For this use case, let us select <i>Only Form UI</i> experience.</li>
+    <li>A Form Node would be added, you can customize the form name, etc.</li>
+    <li>We are changing the <b>Name</b> to <i>OpenAccountForm</i> and <b>Display Name</b> to <i>Form to open account</i>.</li></ul>
+<li>Using a <b>Service</b> node, fetch any existing account details for the customer id.</li>
+<li>Next, we will see how to capture the values returned by the Form Node using a <b>Script</b> node and process the same to get the next account id value and set to null the unwanted fields.</li></ol>
 
-<p><strong>Assign Values</strong> from the entities defined as follows, remember you need to include all the fields and their values, else the field would be set to null value:</p>
-<table border="1.5">
-<tr bgcolor="#ECECEC">
-   <td>
-        <strong>COLUMN</strong>
-   </td>
-   <td>
-        <strong>ENTITY CONTEXT</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>
-        CustName
-   </td>
-   <td>
-        {{context.CustName}}
-   </td>
-  </tr>
-  <tr>
-   <td>
-        CustEmail
-   </td>
-   <td>
-        {{context.CustEmail}}
-   </td>
-  </tr>
-  <tr>
-   <td>
-        Address
-   </td>
-   <td>
-        {{context.CustAddress}}
-   </td>
-  </tr>
-  <tr>
-   <td>
-        CustType
-   </td>
-   <td>
-        {{context.CustType}}
-   </td>
-  </tr>
-  <tr>
-   <td>
-        CustId
-   </td>
-   <td>
-        {{context.CustId}}
-   </td>
-  </tr>
-</table>
+<p>Use the following script to get the next account id</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">resultSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">GetAcctData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">resultSet</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nx">id</span><span class="o">=</span><span class="mf">1</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">resultSet</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">id</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">resultSet</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">AccountId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">resultSet</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">AccountId</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">         </span><span class="p">}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nx">id</span><span class="o">++</span><span class="p">;</span><span class="w">    </span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nx">context</span><span class="p">.</span><span class="nx">accountid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">id</span><span class="p">;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nx">context</span><span class="p">.</span><span class="nx">name</span><span class="o">=</span><span class="nx">context</span><span class="p">.</span><span class="nx">GetCustData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">CustName</span><span class="p">;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1">//set unwanted fields to null</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Savings&#39;</span><span class="p">)</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">cashcard</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">      </span><span class="nx">context</span><span class="p">.</span><span class="nx">withdrawallimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">      </span><span class="nx">context</span><span class="p">.</span><span class="nx">cardtype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">      </span><span class="nx">context</span><span class="p">.</span><span class="nx">type</span><span class="o">=</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="p">;</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Checkings&#39;</span><span class="p">)</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">cardtype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">      </span><span class="nx">context</span><span class="p">.</span><span class="nx">cashcard</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">cashcard</span><span class="p">;</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">      </span><span class="nx">context</span><span class="p">.</span><span class="nx">withdrawallimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">withdrawallimit</span><span class="p">;</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">      </span><span class="nx">context</span><span class="p">.</span><span class="nx">type</span><span class="o">=</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="p">;</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Credit Card&#39;</span><span class="p">)</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">cashcard</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">      </span><span class="nx">context</span><span class="p">.</span><span class="nx">withdrawallimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">      </span><span class="nx">context</span><span class="p">.</span><span class="nx">cardtype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">cardtype</span><span class="p">;</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">      </span><span class="nx">context</span><span class="p">.</span><span class="nx">type</span><span class="o">=</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="p">;</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="p">}</span>
+</span></code></pre></div>
+<ol start="10"><li>Use a <b>Service</b> node to add the account details using the context variables populated in the previous Script node.</li> 
 
-<p><a class="glightbox" href="../images/data-service-request-update.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-service-request-update.png" alt="data service request update" title="data service request update" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol start="9"><li>Add a <b>Message node</b> to display the success message.</li>
-<li>Using <b>Talk to bot</b> option, enter the values when prompted and see the message being displayed.</li></ol>
+<a class="glightbox" href="../design-digital-skills/images/service-node-to-add-account-details.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/service-node-to-add-account-details.png" alt="service node to add account details" title="service node to add account details" style="border: 1px solid gray; zoom:75%;"></a>
+
+<li>Your dialog with form and service nodes to update the data table is ready.</li>
+<li><b>Talk to bot</b> and follow the steps to add an account to a given customer id.</li></ol>
 
 
   
