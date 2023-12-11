@@ -17,7 +17,7 @@
     
     
       
-        <title>Configure Digital Views - Kore ai Docs</title>
+        <title>Add Data to Data Tables - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configure-digital-views" class="md-skip">
+        <a href="#add-data-to-data-tables" class="md-skip">
           Skip to content
         </a>
       
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configure Digital Views
+              Add Data to Data Tables
             
           </span>
         </div>
@@ -3848,23 +3848,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-template" class="md-nav__link">
-    Message Template
+  <a href="#data-table-configuration" class="md-nav__link">
+    Data Table Configuration
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#widgets-configuration" class="md-nav__link">
-    Widgets Configuration
-  </a>
-  
-    <nav class="md-nav" aria-label="Widgets Configuration">
+    <nav class="md-nav" aria-label="Data Table Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dialog-task-widgets" class="md-nav__link">
-    Dialog Task Widgets
+  <a href="#table-creation" class="md-nav__link">
+    Table Creation
   </a>
   
 </li>
@@ -3875,15 +3868,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#panel-configuration" class="md-nav__link">
-    Panel Configuration
+  <a href="#dialog-task-configuration" class="md-nav__link">
+    Dialog Task Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Dialog Task Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-dialog-task" class="md-nav__link">
+    Create Dialog Task
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#panel-with-json-widgets" class="md-nav__link">
-    Panel with JSON Widgets
+  <a href="#fetch-data" class="md-nav__link">
+    Fetch Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-data" class="md-nav__link">
+    Add Data
   </a>
   
 </li>
@@ -3892,18 +3900,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#publish" class="md-nav__link">
-    Publish
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hosting" class="md-nav__link">
-    Hosting
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3926,192 +3925,360 @@
 
 
 
-<h1 id="configure-digital-views">Configure Digital Views<a class="headerlink" href="#configure-digital-views" title="Permanent link">&para;</a></h1>
-<p>In this post we explore how you can view your account details using a Digital View and a Banking Bot. We will see how this Digital View can be presented using Panels and Widgets. Widgets can be used to trigger Dialog Tasks and display appropriate messages and Panel can be used to hold these Widgets. 
-We will also see how the Panel can be hosted on Web/Mobile Client using the Widget SDK.</p>
-<p>For details on what Digital Views are and how it is implemented in the Kore.ai Bots platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/digital-views/" target="_blank"> here</a>.</p>
+<h1 id="add-data-to-data-tables">Add Data to Data Tables<a class="headerlink" href="#add-data-to-data-tables" title="Permanent link">&para;</a></h1>
+<p>In this post, we explore how to add account-related data for a customer with the help of a Banking Bot. We see how the required information gathered from the user can be stored in a data table.</p>
+<p>For details on what Data Tables are and how it is implemented in the Kore.ai Bots platform, click <a href="https://developer.kore.ai/docs/bots/advanced-topics/data-as-a-service/" target="_blank"> here</a>.</p>
 <h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
-<p>Consider a Banking Bot trying to address the following scenarios:</p>
-<video class="wp-video-shortcode" id="video-23376-1" width="410" height="528" preload="metadata" controls="controls"><source type="video/mp4" src="../images/WP_howto.mp4" /><a href="../images/WP_howto.mp4">Banking Bot Demo</a></video>
-
-<video width="410" height="530" controls>
-<source src="../images/WP_howto.mp4" type="video/mp4"></video>
-
-<p>This document gives a step-by-step approach to achieve all the above-mentioned scenarios using – Digital Views (Panels, Widgets), Widget SDK and Web/Mobile Client.</p>
+<p>Consider a Banking Bot, for a given customer, the following data needs to be stored:</p>
+<ul>
+<li>Id</li>
+<li>Name</li>
+<li>Email id</li>
+<li>Address</li>
+<li>Type</li>
+</ul>
+<p><a class="glightbox" href="../images/banking-bot-configure-columns.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/banking-bot-configure-columns.png" alt="banking bot configure columns" title="banking bot configure columns" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Bot building knowledge</li>
-<li>A <a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/" target="_blank"> Banking Bot</a> with a dialog as mentioned below:<ul>
-<li><a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/#Get_Balance_Intent" target="_blank"> Get Balance</a> – Dialog task prompting the user for their Account Number and Account Type and displaying the available balance in the account.
-<a class="glightbox" href="../images/get-balance-dialog-digital-views.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/get-balance-dialog-digital-views.png" alt="get balance dialog" title="get balance dialog" style="border: 1px solid gray; zoom:75%;"></a> </li>
-</ul>
-</li>
+<li>Bot building knowledge;</li>
+<li>A Banking Bot.</li>
 </ul>
 <h2 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
 <p>Let us consider each of the following scenarios one by one:</p>
 <ol>
-<li>Dialog Task to display balance in a given account using Widget SDK channel.</li>
-<li>Widgets to trigger the above dialog task and a Panel set with the widgets.</li>
-<li>Panel to hold a widget displaying static JSON template message.</li>
+<li>Define Data Table with the above requirements;</li>
+<li>Dialog Task to:<ul>
+<li>Gather required information; and</li>
+<li>Invoke a service to update the customer information.</li>
+</ul>
+</li>
 </ol>
-<h3 id="message-template">Message Template<a class="headerlink" href="#message-template" title="Permanent link">&para;</a></h3>
-<p>First, the Dialog task which would be triggered from the Widget should have a message definition for the Widget SDK channel.
-<a class="glightbox" href="../images/dialog-task-message-template.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-task-message-template.png" alt="dialog task message template" title="dialog task message template" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>We are using the following message to display the account details:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;The Balance in your&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">entities</span><span class="p">.</span><span class="nx">AccountType</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; account is &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">GetAccountBalance</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">Balance</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="s2">&quot;elements&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Account View&quot;</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="s2">&quot;sub_title&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">output</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="s2">&quot;icon&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://kore.ai/wp-content/uploads/banking-home.png&quot;</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">]</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">};</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
-</span></code></pre></div>
-<h3 id="widgets-configuration">Widgets Configuration<a class="headerlink" href="#widgets-configuration" title="Permanent link">&para;</a></h3>
-<h4 id="dialog-task-widgets">Dialog Task Widgets<a class="headerlink" href="#dialog-task-widgets" title="Permanent link">&para;</a></h4>
-<p>We will be creating two Widgets to trigger a Dialog Task.</p>
-<p><strong>Current Account:</strong></p>
-<p>First, let us see how to configure a Widget to display balance from the current account of the user.</p>
+<h3 id="data-table-configuration">Data Table Configuration<a class="headerlink" href="#data-table-configuration" title="Permanent link">&para;</a></h3>
+<p>Create a Data Table to hold the following information:</p>
 <ul>
-<li>Ensure that <strong>Build</strong> is selected from the top menu.</li>
-<li>From under <strong>Digital Skills</strong> open <strong>Digital Views</strong>.</li>
-<li>Click the <strong>Create Widget</strong> button.</li>
-<li>Give a Widget Name and a Display Name.</li>
-<li>Set the <strong>Source</strong>, we are triggering Dialog Task, hence select <em>Dialog Task</em>.</li>
-<li><strong>Select Dialog Task</strong> as <em>Get Balance</em>, as per our use case.</li>
+<li>CustId – A unique identifier for a customer;</li>
+<li>CustName – Name of the customer;</li>
+<li>CustEmail – Email id of the customer;</li>
+<li>CustType – Type of customer – Regular, Preferred, etc.</li>
+<li>Address – Customer Address;</li>
+</ul>
+<h4 id="table-creation">Table Creation<a class="headerlink" href="#table-creation" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Log in to the Kore.ai Bot Builder platform.</li>
 <li>
-<p>In the <strong>Entity Assignment</strong>, set the following entities (you can select from the drop box that appears as you type) as per the Dialog Task requirement:</p>
+<p>Select the <strong>Data</strong> tab.
+<a class="glightbox" href="../images/select-data-tab.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-data-tab.png" alt="select data tab" title="select data tab" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>Click the <strong>New Table</strong> button.</p>
+</li>
+<li>
+<p>In the New Table page enter the following:</p>
 <ul>
-<li><strong>AccountType</strong> to <em>current</em>.</li>
-<li><strong>AccountNumber</strong> to <em>1</em>.
-You can use the <strong>Open Dialog Task</strong> icon, next to the select Dialog Task drop down, to open the dialog and check the entities needed.
-<a class="glightbox" href="../images/open-dialog-task-digital-views.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-dialog-task-digital-views.png" alt="open dialog tasks" title="open dialog tasks" style="border: 1px solid gray; zoom:75%;"></a></li>
+<li><strong>Name</strong>, say <em>customertable;</em></li>
+<li><strong>Description</strong>, say <em>Table containing customer details;</em></li>
 </ul>
 </li>
 <li>
-<p><strong>Save</strong> the widget.</p>
-</li>
-<li><strong>Edit</strong> the widget and click <strong>Run &amp; Preview</strong> to see the widget output.</li>
-<li><strong>Save as preview</strong> will set the output as the thumbnail against the widget.</li>
-</ul>
-<p><strong>Savings Account</strong>: Repeat the above steps for Account View from <em>savings</em> account of the same account number.
-<a class="glightbox" href="../images/savings-account-widget.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/savings-account-widget.png" alt="savings account widget" title="savings account widget" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h3 id="panel-configuration">Panel Configuration<a class="headerlink" href="#panel-configuration" title="Permanent link">&para;</a></h3>
-<p>The Widgets thus created need to be attached to a Panel for runtime display and execution.</p>
-<ol>
-<li>Click the <strong>Create Panel</strong> button to create a Panel.</li>
-<li>
-<p>In the <strong>New Panel</strong> window, enter Panel Name, Display Name and a URL for Icon.
-<a class="glightbox" href="../images/new-panel-window.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/new-panel-window.png" alt="new panel window" title="new panel window" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>Click the <strong>Add Widget</strong> button to open the <strong>Panel Management</strong> window.</p>
-</li>
-<li>
-<p>Use the <strong>Add Widget</strong> to select and add the Widgets that we want to display, in this case Account Balance and Current Account widgets.
-<a class="glightbox" href="../images/add-widgets.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-widgets.png" alt="add widgets" title="add widgets" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>Use the <strong>Test</strong> button to see the widgets in action.
-<a class="glightbox" href="../images/see-widgets-in-action.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/see-widgets-in-action.png" alt="see widgets in action" title="see widgets in action" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Under the <strong>Column</strong> section add the following details: </p>
 </li>
 </ol>
-<h3 id="panel-with-json-widgets">Panel with JSON Widgets<a class="headerlink" href="#panel-with-json-widgets" title="Permanent link">&para;</a></h3>
-<p>We will see how to create Widgets with static JSON content. We will use a JSON to display a pie chart.</p>
-<ol>
-<li>Click on <strong>Create Panel</strong> to create a new panel and name it <strong>JSON Example</strong>.</li>
-<li>
-<p>Use the <strong>More</strong> icon and select <strong>Panel Management</strong>, there you will find the option to <strong>Create Widget</strong>. Click on that.
-<a class="glightbox" href="../images/panel-management.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/panel-management.png" alt="panel management" title="panel management" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>In the <strong>New Widget</strong> dialog, enter the Name, and set the source to JSON.
-<a class="glightbox" href="../images/configure-new-widget-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-new-widget-dialog.png" alt="configure new widget dialog" title="configure new widget dialog" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-</ol>
-<p>Enter the following in the JavaScript Editor. This is a message template to display a pie chart with a break up for amounts spent under various heads like travel, food, and accommodation. For more on supported message templates, click <a href="https://developer.kore.ai/docs/bots/sdks/widget-sdk-message-formatting-and-templates/" target="_blank"> here</a>. </p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="s2">&quot;templateType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;piechart&quot;</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="s2">&quot;pie_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;regular&quot;</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Summary&quot;</span><span class="p">,</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;monthly report&quot;</span><span class="p">,</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="s2">&quot;elements&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Airlines&quot;</span><span class="p">,</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">          </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1264.0&quot;</span><span class="p">,</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">          </span><span class="s2">&quot;displayValue&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$ 1,234&quot;</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hotels&quot;</span><span class="p">,</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">          </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;568.10&quot;</span><span class="p">,</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">          </span><span class="s2">&quot;displayValue&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$ 568&quot;</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Food&quot;</span><span class="p">,</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">          </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;324.50&quot;</span><span class="p">,</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">          </span><span class="s2">&quot;displayValue&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$ 324&quot;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="p">]</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
-</span></code></pre></div>
-<ol start="4"><li><b>Test</b> the panel and you will see both the panel icons, click on each to see them in action.</li></ol>
+<table>
+  <tr>
+   <td>
+    <strong>COLUMN NAME</strong>
+   </td>
+   <td>
+    <strong>TYPE</strong>
+   </td>
+   <td>
+    <strong>REQUIRED</strong>
+   </td>
+   <td>
+    <strong>ADDITIONAL SETTINGS</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CustId
+   </td>
+   <td>
+    number
+   </td>
+   <td>
+    Yes
+   </td>
+   <td>
+    Encrypted & Max Length of 5
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CustName
+   </td>
+   <td>
+    string
+   </td>
+   <td>
+    Yes
+   </td>
+   <td>
+    –
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Address
+   </td>
+   <td>
+    string
+   </td>
+   <td>
+    No
+   </td>
+   <td>
+    –
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CustType
+   </td>
+   <td>
+    string
+   </td>
+   <td>
+    No
+   </td>
+   <td>
+    Default Value as Preferred
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CustEmail
+   </td>
+   <td>
+    string
+   </td>
+   <td>
+    No
+   </td>
+   <td>
+    –
+   </td>
+  </tr>
+</table>
 
-<p><a class="glightbox" href="../images/json-example-panel.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/json-example-panel.png" alt="json example panel" title="json example panel" style="border: 1px solid gray; zoom:75%;"></a></p>
-<h2 id="publish">Publish<a class="headerlink" href="#publish" title="Permanent link">&para;</a></h2>
-<p>To publish the Bot first enable channels:</p>
+<p><a class="glightbox" href="../images/add-column-details.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-column-details.png" alt="add column details" title="add column details" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ol>
-<li>From left navigation menu, select <strong>Channel</strong> for publishing. For our use case we will select both Web/Mobile Client and Widget SDK channels.</li>
-<li>Select the channels and from <strong>Configurations</strong> tab, make a note of the <strong>Bot Name</strong>, <strong>Bot Id</strong>, <strong>Client Id</strong> and <strong>Client Secret</strong>.</li>
-<li>From left navigation menu, select <strong>Publish</strong> option. Under Tasks &amp; languages section, ensure that the Widget and Panels we developed are selected for publication.</li>
-<li><strong>Proceed</strong> with the Publish.</li>
-</ol>
-<h2 id="hosting">Hosting<a class="headerlink" href="#hosting" title="Permanent link">&para;</a></h2>
-<p>We will be hosting the Panels in the web/mobile client. Click <a href="https://developer.kore.ai/docs/bots/sdks/kore-ai-widget-sdk-tutorial/" target="_blank">here</a> for more details on the Widget SDK usage.</p>
-<ol>
-<li>Download the Kore.ai Widget SDK, go to <a href="https://github.com/Koredotcom/web-kore-sdk" target="_blank">Kore Web SDK</a>, and then click <strong>Download</strong>.</li>
-<li>Extract all files to the <code>/SDKApp/sdk</code> folder.</li>
-<li>Open the above SDK folder, and traverse to <em>UI</em> folder.</li>
-<li>Open the <code>kore-config.js</code>.</li>
 <li>
-<p>Configure your <code>botOptions</code> with the <code>web/mobile client</code> channel configurations copied  in  above  section.</p>
-<ul>
-<li><code>botOptions.botInfo</code></li>
-<li><code>botOptions.clientId</code></li>
-<li><code>botOptions.clientSecret</code></li>
+<p>Under the <strong>Indexes</strong> section add an index for CustId to be unique.
+<a class="glightbox" href="../images/indexes-section.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/indexes-section.png" alt="indexes section" title="indexes section" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Click <strong>Create</strong> and your table is ready.</p>
+</li>
+<li>Under the <strong>Bot Assignments</strong> add the bot which would be using this table, say <em>Banking Bot</em>, and give <em>Read</em>, <em>Write</em> and <em>Delete</em> permissions. <em>Delete</em> permission is optional since we would not be deleting data.
+<a class="glightbox" href="../images/bot-assignments.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-assignments.png" alt="bot assignments" title="bot assignments" style="border: 1px solid gray; zoom:75%;"></a></li>
+</ol>
+<h3 id="dialog-task-configuration">Dialog Task Configuration<a class="headerlink" href="#dialog-task-configuration" title="Permanent link">&para;</a></h3>
+<p>We will be creating a dialog task to gather the required information, and use a Service node to update the data table with the values thus gathered.</p>
+<p><a class="glightbox" href="../images/dialo-task-configuration.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialo-task-configuration.png" alt="dialog task configuration" title="dialog task configuration" style="border: 1px solid gray; zoom:75%;"></a></p>
+<h4 id="create-dialog-task">Create Dialog Task<a class="headerlink" href="#create-dialog-task" title="Permanent link">&para;</a></h4>
+<ol>
+<li>From the left navigation menu, select <strong>Bot Tasks</strong> -&gt; <strong>Dialog Tasks</strong>.</li>
+<li>Click the <strong>+</strong> against the <strong>Dialog Tasks</strong> to create a new Task, and follow the steps below:<ul>
+<li>Enter <strong>IntentName</strong>, say, <em>AddCustomer</em></li>
+<li><strong>Create &amp; Proceed</strong> to open the dialog builder page.</li>
 </ul>
 </li>
+<li>Retain the Intent Node default settings, and close the Intent Node.</li>
+<li>Click the <strong>+</strong> next to the intent node and add four <strong>Entities</strong> as follows: </li>
+</ol>
+<table>
+  <tr>
+   <td>
+    <strong>ENTITY NAME</strong>
+   </td>
+   <td>
+    <strong>TYPE</strong>
+   </td>
+   <td>
+    <strong>USER PROMPTS</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CustName
+   </td>
+   <td>
+    String
+   </td>
+   <td>
+    Enter your name
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CustEmail
+   </td>
+   <td>
+    Email
+   </td>
+   <td>
+    Enter your email id
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CustAddress
+   </td>
+   <td>
+    City
+   </td>
+   <td>
+    Enter your address city
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CustType
+   </td>
+   <td>
+    List of items (enumerated)
+   </td>
+   <td>
+    Select your income range
+   </td>
+  </tr>
+</table>
+
+<ol>
 <li>
-<p>Make other changes as per your requirements.
-<a class="glightbox" href="../images/configure-bot-options.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-bot-options.png" alt="configure bot options" title="configure bot options" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<p><code>CustType</code> can be Basic, Preferred, or Premium based on the income level of the customer. For this purpose, we have used a static list to populate the CustType value as follows:
+<a class="glightbox" href="../images/basic-cust-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-cust-type.png" alt="basic cust type" title="basic cust type" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>Open the <code>kore-widgets-config.js</code>.</p>
-</li>
-<li>
-<p>Configure your <code>botOptionsWiz</code> with the ‘<em>Widget SDK</em>’ channel configurations copied  in  above  section.</p>
-<ul>
-<li><code>botOptionsWiz.botInfo</code></li>
-<li><code>botOptionsWiz.clientId</code></li>
-<li><code>botOptionsWiz.clientSecret</code></li>
-</ul>
-</li>
-<li>
-<p>Make other changes as per your requirements.
-<a class="glightbox" href="../images/widget-config-changes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/widget-config-changes.png" alt="widget configuration changes" title="widget configuration changes" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>Open the <code>index_widgets_chat.html</code> file in the browser and see the chat window along with the widgets.
-<a class="glightbox" href="../images/index-widgets-chat.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/index-widgets-chat.png" alt="index widgets" title="index widgets" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>If you want to host the Panels individually use the <code>index_widgets.html</code> file. See the GitHub for hosting the same in your web site.</p>
+<p>For generating the CustID, we need to get the last customer id in the table and add one to it. For this, we will first fetch data from the table and then use a Script node to process the id.</p>
 </li>
 </ol>
+<h4 id="fetch-data">Fetch Data<a class="headerlink" href="#fetch-data" title="Permanent link">&para;</a></h4>
+<p>You can use a Service call to fetch data from the table:</p>
+<ol>
+<li>Click the <strong>+</strong> against the last entity node.</li>
+<li>Select <strong>Service</strong> -&gt; <strong>New Service Node</strong> option.</li>
+<li>From the <strong>General Settings</strong> section configure the following:</li>
+<li><strong>Name</strong> say <em>GetLastCustId</em></li>
+<li><strong>Display Name</strong> say <em>Get Customer Data</em></li>
+<li><strong>Service Type</strong> select <em>Data Service</em></li>
+<li><strong>Type</strong> select <em>Table</em>.</li>
+<li>Under <strong>Request Definition</strong> click <strong>Add Request</strong> to define a request to fetch data from the table.</li>
+<li>In the <strong>Data Service Request Definition</strong> page, enter the following:<ul>
+<li><strong>Choose Table Name</strong> as <em>customertable</em></li>
+<li><strong>Actions</strong> as <em>Get Data</em>.</li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" href="../images/configure-data-service-request.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-data-service-request.png" alt="configure data service request" title="configure data service request" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ol>
+<li><strong>Test</strong> and <strong>Save</strong> the definition and <strong>close</strong> the service node.</li>
+<li>Add a <strong>Script</strong> node to process the values fetched from the data service to obtain the value for the next customer id using the following script:</li>
+</ol>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">resultSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">GetLastCustId</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">resultSet</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nx">id</span><span class="o">=</span><span class="mf">1</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">resultSet</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">id</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">resultSet</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">CustId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">resultSet</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">CustId</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">         </span><span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nx">id</span><span class="o">++</span><span class="p">;</span><span class="w">    </span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nx">context</span><span class="p">.</span><span class="nx">lastID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">id</span><span class="p">;</span>
+</span></code></pre></div>
+<ol start="8"><li>Now we have all the required data to add to the table.</li></ol>
+
+<h4 id="add-data">Add Data<a class="headerlink" href="#add-data" title="Permanent link">&para;</a></h4>
+<p>We will be using a Service call to add data to the table:</p>
+<ol>
+<li>Click the <strong>+</strong> against the last Entity node added above.</li>
+<li>Select <strong>Service</strong> -&gt; <strong>New Service Node</strong> option.</li>
+<li>From the <strong>General Settings</strong> section configure the following:<ul>
+<li><strong>Name</strong> say <em>AddCustData</em>.</li>
+<li><strong>Display Name</strong> say <em>Add Customer Data</em>.</li>
+<li><strong>Service Type</strong> select <em>Data Service</em>.</li>
+<li><strong>Type</strong> select <em>Table</em>.</li>
+</ul>
+</li>
+<li>Under <strong>Request Definition</strong> click <strong>Add Request</strong> to define a request to add data to the table.</li>
+<li>In the <strong>Data Service Request Definition</strong> page, enter the following:<ul>
+<li><strong>Choose Table Name</strong> as <em>customertable</em> defined earlier.</li>
+<li><strong>Actions</strong> as <em>Add Data</em>.</li>
+</ul>
+</li>
+<li><strong>Assign Values</strong> from the entities defined as follows:</li>
+</ol>
+<table>
+  <tr>
+   <td>
+        <strong>COLUMN</strong>
+   </td>
+   <td>
+                <strong>ENTITY CONTEXT</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>
+        CustName
+   </td>
+   <td>
+        {{context.entities.CustName}}
+   </td>
+  </tr>
+  <tr>
+   <td>
+        CustEmail
+   </td>
+   <td>
+        {{context.entities.CustEmail}}
+   </td>
+  </tr>
+  <tr>
+   <td>
+        Address
+   </td>
+   <td>
+        {{context.entities.CustAddress}}
+   </td>
+  </tr>
+  <tr>
+   <td>
+        CustType
+   </td>
+   <td>
+        {{context.entities.CustType}}
+   </td>
+  </tr>
+  <tr>
+   <td>
+        CustId
+   </td>
+   <td>
+        {{context.lastID}}
+   </td>
+  </tr>
+</table>
+
+<p><a class="glightbox" href="../images/data-service-request.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-service-request.png" alt="data service request" title="data service request" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ol>
+<li>Add a <strong>Message node</strong> to display the values added using the following response format:</li>
+</ol>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">Customer</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="nx">created</span><span class="w"> </span><span class="k">for</span><span class="o">:</span><span class="w"> </span><span class="p">{{</span><span class="nx">context</span><span class="p">.</span><span class="nx">GetCustData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">CustName</span><span class="p">}},</span><span class="w"> </span><span class="p">{{</span><span class="nx">context</span><span class="p">.</span><span class="nx">GetCustData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">CustEmail</span><span class="p">}},</span><span class="w"> </span><span class="p">{{</span><span class="nx">context</span><span class="p">.</span><span class="nx">GetCustData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">CustAddress</span><span class="p">}},</span><span class="w"> </span><span class="p">{{</span><span class="nx">context</span><span class="p">.</span><span class="nx">GetCustData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">CustType</span><span class="p">}}</span>
+</span></code></pre></div>
+<ol start="8"><li>Using <b>Talk to bot</b> option, enter the values when prompted and see the message being displayed.</li></ol>
 
 
   
