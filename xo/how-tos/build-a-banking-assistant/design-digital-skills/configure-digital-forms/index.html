@@ -3971,24 +3971,27 @@
 <li>From the Kore.ai Bot Builder platform, open the Banking Bot.</li>
 <li>Select the <strong>Build</strong> tab from the top menu.</li>
 <li>From the left navigation menu, select <strong>Digital Skills</strong> -&gt; <strong>Digital Forms</strong> to access the Digital Forms page.</li>
-<li>Click <strong>New Form</strong> and enter the following:<ul>
-<li><strong>Name</strong>: name to the form, say <em>OpenAccount</em></li>
+<li>
+<p>Click <strong>New Form</strong> and enter the following:</p>
+<ul>
+<li><strong>Name</strong>: name to the form, say <em>OpenAccount</em>.</li>
 <li><strong>Display Name</strong> for the form, say <em>Open an Account</em></li>
 <li><strong>Description</strong> of the form.</li>
 <li><strong>Description</strong>: Turn on the toggle to show a description of the form in the header.</li>
 </ul>
 </li>
-</ol>
+<li>
 <p><strong>Select the form’s Header Style</strong>: You can choose a specific header style from the listed illustrations – the circle indicates the position of logo/icon with respect to the title of the form in the header. </p>
+</li>
+</ol>
 <p>Click the card to select the style. If it has a logo, you can upload an image file (png or jpg) for the logo.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>During the Export of the Bot, the logo is not exported along with Digital Forms. So, while importing this Bot, you need to separately copy the logo image file and then manually reupload the logo.</p>
 </div>
-<ol>
-<li><strong>Save &amp; Proceed</strong> to the next step.
-<a class="glightbox" href="../images/form-creation-digital-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/form-creation-digital-form.png" alt="digital form" title="digital form" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ol>
+<ol start="6"><li> <b>Save & Proceed</b> to the next step.</li>
+<a class="glightbox" href="../images/form-creation-digital-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/form-creation-digital-form.png" alt="digital form" title="digital form" style="border: 1px solid gray; zoom:75%;"></a></ol>
+
 <h4 id="form-editor">Form Editor<a class="headerlink" href="#form-editor" title="Permanent link">&para;</a></h4>
 <ol>
 <li>The Form Editor opens with components on the left, and a blank form. You can drag and drop components to the form as per your requirement.</li>
@@ -4052,7 +4055,7 @@
 <li>
 <p>For the Credit Card option, the user needs to further select the type of card. Drag and drop a <strong>Radio Button</strong> component onto the form and set the following values:</p>
 <ul>
-<li>**Display Name**say  <em>Card Type.</em></li>
+<li><strong>Display Name</strong> say  <em>Card Type.</em></li>
 <li><strong>Name</strong> used for internal reference, say <em>cardtype</em>.</li>
 <li><strong>Description</strong> of the field.</li>
 <li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Choose the type of credit card</em>.</li>
@@ -4099,18 +4102,16 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The target node has to be in the same dialog, you cannot make a jump to a target node outside the current dialog. The list of target nodes only shows the local nodes.
-If the target node is not present during runtime, the platform presents the error Error in continuing the conversation, and the task should get discarded..</p>
+If the target node is not present during runtime, the platform presents the error Error in continuing the conversation, and the task should get discarded.</p>
+<p>Use the <strong>Test</strong> button to see a preview.</p>
 </div>
-<ol>
-<li>Use the <strong>Test</strong> button to see a preview.</li>
-</ol>
 <h3 id="dialog-task-configuration">Dialog Task Configuration<a class="headerlink" href="#dialog-task-configuration" title="Permanent link">&para;</a></h3>
 <p>We will be creating a dialog task and adding a form node to trigger the Digital Form created in the above step and use a service node to make a service call to add the new account from the form data.</p>
 <h3 id="create-dialog-task">Create Dialog Task<a class="headerlink" href="#create-dialog-task" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Select the <strong>Build</strong> tab from the top menu</li>
 <li>From the left navigation menu, select <strong>Conversational Skills -&gt; Dialog Tasks.</strong></li>
-<li>Click the <strong>+</strong> against the <strong>Dialog Tasks</strong> to create a new Task<ul>
+<li>Click the <strong>+</strong> against the <strong>Dialog Tasks</strong> to create a new Task.<ul>
 <li>Enter <strong>IntentName</strong>, say, <em>OpenAccount</em></li>
 <li><strong>Create &amp; Proceed</strong> to open the dialog builder page.</li>
 </ul>
