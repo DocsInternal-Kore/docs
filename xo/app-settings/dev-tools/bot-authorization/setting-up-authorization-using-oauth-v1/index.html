@@ -3889,7 +3889,7 @@
 <p>The XO Platform exchanges the request token for an access token.</p>
 </li>
 <li>The access token allows the XO Platform to access a protected resource at the provider, on behalf of the user.<br />
-<a class="glightbox" href="../images/basic-auth-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img2.png" alt="New auth mechanism details" title="New auth mechanism details" style="border: 1px solid gray;zoom:50%;"/></a></li>
+<a class="glightbox" href="../images/oauth-v1-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/oauth-v1-img2.png" alt="New auth mechanism details" title="New auth mechanism details" style="border: 1px solid gray;zoom:50%;"/></a></li>
 </ol>
 <h2 id="configuring-oauth-v1-authorization">Configuring oAuth v1 Authorization<a class="headerlink" href="#configuring-oauth-v1-authorization" title="Permanent link">&para;</a></h2>
 <p>To define authorization for your assistant, follow these steps:</p>
@@ -3989,12 +3989,12 @@ For more information, see <a href="https://developer.kore.ai/docs/bots/bot-build
 <h2 id="defining-tenancy">Defining Tenancy<a class="headerlink" href="#defining-tenancy" title="Permanent link">&para;</a></h2>
 <p>If required, in the <strong>Subdomain</strong> section, select <strong>Yes</strong> if the base URL for a web application or user interface uses a tenant name in the URL. For example, kore is the tenant organization for a web service using tenants at www.<strong><em>kore</em></strong>.someCompany.com.</p>
 <p>In the following example configuration, the tenancy URL contains the {tenant} organization placeholder.</p>
-<p><a class="glightbox" href="../images/basic-auth-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img3.png" alt="Defining tenancy" title="Defining tenancy" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><a class="glightbox" href="../images/oauth-v1-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/oauth-v1-img3.png" alt="Defining tenancy" title="Defining tenancy" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <h2 id="adding-additional-fields">Adding Additional Fields<a class="headerlink" href="#adding-additional-fields" title="Permanent link">&para;</a></h2>
 <p>Click <strong>Add Additional Fields</strong> to open the <strong>Additional Fields</strong> dialog and then enter one or more key/value pairs that represent additional authorization input fields.</p>
 <p>If, for example, the default username and password fields do not meet your needs for authorization input, you can add custom fields as key/value pairs that are displayed to the end-user by adding <strong>Additional Fields</strong>. You can use these fields, for example, if a PIN code is required in the authorization process, in addition to the <strong>Username</strong> and <strong>Password</strong> fields.</p>
 <p><strong>Additional Fields</strong> are added as shown in the following illustration.</p>
-<p><a class="glightbox" href="../images/basic-auth-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img4.png" alt="Additional fields"" title="Additional fields" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><a class="glightbox" href="../images/oauth-v1-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/oauth-v1-img4.png" alt="Additional fields"" title="Additional fields" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p>Specify the following fields:</p>
 <ul>
 <li><strong>Field Key</strong> – The name of the custom field to specify for authorization.</li>
@@ -4003,7 +4003,7 @@ For more information, see <a href="https://developer.kore.ai/docs/bots/bot-build
 </ul>
 <h2 id="adding-authorization-fields">Adding Authorization Fields<a class="headerlink" href="#adding-authorization-fields" title="Permanent link">&para;</a></h2>
 <p>By default, no authorization fields are configured as part of the header of the request message. If your request requires authorization fields or the expected authorization is not part of the header, for example, social security number or PIN, click <strong>Add Authorization Fields</strong> and then define the fields as shown in the following illustration.</p>
-<p><a class="glightbox" href="../images/basic-auth-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img5.png" alt="Adding auth fields" title="Adding auth fields" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><a class="glightbox" href="../images/oauth-v1-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/oauth-v1-img5.png" alt="Adding auth fields" title="Adding auth fields" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <ol>
 <li>
 <p>In the <strong>Field Type</strong> field, you can select one of the following depending on where in the request message and the type of authorization fields that are required.</p>
@@ -4022,10 +4022,10 @@ For more information, see <a href="https://developer.kore.ai/docs/bots/bot-build
 </ol>
 <h2 id="testing-the-authorization">Testing the Authorization<a class="headerlink" href="#testing-the-authorization" title="Permanent link">&para;</a></h2>
 <p>After you save the authorization, you can test it on the <strong>Authorization</strong> page when you click <strong>Test</strong> before continuing to develop the remaining steps of your assistant. When you click <strong>Test</strong>, the test is executed using the <strong>authorization token URLs</strong> and the <strong>Consumer Key</strong> and <strong>Consumer Token</strong>. If the tenancy was defined, the <strong>Test Authorization</strong> dialog is displayed. </p>
-<p><a class="glightbox" href="../images/basic-auth-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img6.png" alt="Test authorization dialog" title="Test authorization dialog" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><a class="glightbox" href="../images/oauth-v1-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/oauth-v1-img6.png" alt="Test authorization dialog" title="Test authorization dialog" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p>Click <strong>Test</strong> to begin the authorization test. </p>
 <p>When the validation of authorization is complete, the <strong>Test Authorization</strong> dialog is closed and the results of the validation, either success or failure, is displayed. If the authorization fails, the <em>Auth Test Failed</em> message is displayed along with the <strong>Headers</strong> and <strong>Response</strong> tabs.</p>
-<p><a class="glightbox" href="../images/basic-auth-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-auth-img7.png" alt="Auth Test Failed" title="Auth Test Failed" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><a class="glightbox" href="../images/oauth-v1-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/oauth-v1-img7.png" alt="Auth Test Failed" title="Auth Test Failed" style="border: 1px solid gray;zoom:50%;"/></a></p>
 
 
   
