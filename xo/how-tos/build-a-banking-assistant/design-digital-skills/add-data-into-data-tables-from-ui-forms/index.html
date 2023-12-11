@@ -3912,7 +3912,9 @@ For details on what Data Tables are and how it is implemented in the XO Platform
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Bot building knowledge</li>
-<li>A Banking Bot with access to<ul>
+<li>
+<p>A Banking Bot with access to</p>
+<ul>
 <li>Customer details table as created <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-add-data-tables/#Table_Creation" target="_blank"> here</a> </li>
 <li>Account details table, using the same steps shown in the above link create the following data table:<ul>
 <li><strong>Name</strong>, say <em>accountdetails;</em></li>
@@ -3921,127 +3923,129 @@ For details on what Data Tables are and how it is implemented in the XO Platform
 </ul>
 </li>
 </ul>
+<p><table border="1.5">
+<tr bgcolor="#ECECEC">
+<td>
+<strong>COLUMN NAME</strong>
+</td>
+<td>
+<strong>TYPE</strong>
+</td>
+<td>
+<strong>REQUIRED</strong>
+   </td>
+ <br />
+<td>
+    <strong>ADDITIONAL SETTINGS</strong>
+   </td></p>
+<p></tr>
+<tr>
+<td>
+AccountId
+</td>
+<td>
+number
+   </td>
+ <br />
+<td>
+    Yes
+   </td></p>
 </li>
 </ul>
-<table border="1.5">
-<tr bgcolor="#ECECEC">
+<td>
+    Encrypted & Max Length of 5
+   </td>
+<p></tr>
+<br />
+<tr>
    <td>
-            <strong>COLUMN NAME</strong>
+    AccountName
    </td>
    <td>
-            <strong>TYPE</strong>
+    string
    </td>
    <td>
-            <strong>REQUIRED</strong>
+    Yes
    </td>
    <td>
-            <strong>ADDITIONAL SETTINGS</strong>
+     –
    </td>
-  </tr>
-  <tr>
+  </tr></p>
+<tr>
    <td>
-            AccountId
-   </td>
-   <td>
-            number
+    AccountType
    </td>
    <td>
-            Yes
+    string
    </td>
    <td>
-            Encrypted & Max Length of 5
-   </td>
-  </tr>
-  <tr>
-   <td>
-            AccountName
+    No
    </td>
    <td>
-            string
-   </td>
-   <td>
-            Yes
-   </td>
-   <td>
-            –
+    –
    </td>
   </tr>
-  <tr>
+<tr>
    <td>
-            AccountType
+    CustId
    </td>
    <td>
-            string
+    number
    </td>
    <td>
-            No
+    Yes
    </td>
    <td>
-            –
-   </td>
-  </tr>
-  <tr>
-   <td>
-            CustId
-   </td>
-   <td>
-            number
-   </td>
-   <td>
-            Yes
-   </td>
-   <td>
-            Reference table & column as
+    Reference table & column as
 <p>
 
-            <em>customertable.CustId</em>
+<em>customertable.CustId</em>
    </td>
   </tr>
-  <tr>
+<tr>
    <td>
-            CashCard
+    CashCard
    </td>
    <td>
-            string
+    string
    </td>
    <td>
-            No
+    No
    </td>
    <td>
-            –
-   </td>
-  </tr>
-  <tr>
-   <td>
-            WithdrawalLimit
-   </td>
-   <td>
-            number
-   </td>
-   <td>
-            No
-   </td>
-   <td>
-            –
+    –
    </td>
   </tr>
-  <tr>
+<tr>
    <td>
-            CCType
+    WithdrawalLimit
    </td>
    <td>
-            string
+    number
    </td>
    <td>
-            No
+    No
    </td>
    <td>
-            –
+    –
+   </td>
+  </tr>
+<tr>
+   <td>
+    CCType
+   </td>
+   <td>
+    string
+   </td>
+   <td>
+    No
+   </td>
+   <td>
+    –
    </td>
   </tr>
 </table>
-
-<p><a class="glightbox" href="../design-digital-skills/images/update-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/update-form.png" alt="update form" title="update form" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/update-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/update-form.png" alt="update form" title="update form" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>UI Form we will be using the UI Form configured as shown <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-configure-ui-forms/#UI_Form_Configuration" target="_blank"> here</a>.</p>
 <h2 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
 <p>Let us consider each of the following scenarios one by one:</p>
@@ -4051,7 +4055,7 @@ For details on what Data Tables are and how it is implemented in the XO Platform
 * Invoke the service node to add the account data.</p>
 <h3 id="dialog-task-configuration">Dialog Task Configuration<a class="headerlink" href="#dialog-task-configuration" title="Permanent link">&para;</a></h3>
 <p>We will be creating a dialog task and adding a form node to trigger the UI Form created in the above step and use a service node to make a service call to add the new account from the form data.
-<a class="glightbox" href="../design-digital-skills/images/dialog-task-configuration-ui-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/dialog-task-configuration-ui-form.png" alt="dialog task configuration" title="dialog task configuration" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/dialog-task-configuration-ui-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-task-configuration-ui-form.png" alt="dialog task configuration" title="dialog task configuration" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h4 id="create-dialog-task">Create Dialog Task<a class="headerlink" href="#create-dialog-task" title="Permanent link">&para;</a></h4>
 <ol>
 <li>From the left navigation menu, select <strong>Bot Tasks</strong> -&gt; <strong>Dialog Tasks</strong>.</li>
@@ -4070,10 +4074,10 @@ For details on what Data Tables are and how it is implemented in the XO Platform
 </li>
 <li>Add a <strong>Service</strong> node to check for the validity of the customer id entered.</li>
 </ol>
-<p><a class="glightbox" href="../design-digital-skills/images/check-customer-id-validity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/check-customer-id-validity.png" alt="check customer id validity" title="check customer id validity" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/check-customer-id-validity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/check-customer-id-validity.png" alt="check customer id validity" title="check customer id validity" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ol>
 <li>Add a <strong>Logic</strong> node to proceed with the Form if the customer id is valid else prompt for the customer id.
-<a class="glightbox" href="../design-digital-skills/images/logic-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/logic-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
 <p>The <em>InvalidCustId</em> is a <strong>Message</strong> node with the following JavaScript:</p>
 <p><code>context.entities.CustId = null;</code></p>
@@ -4127,7 +4131,7 @@ For details on what Data Tables are and how it is implemented in the XO Platform
 </span></code></pre></div>
 <ol start="10"><li>Use a <b>Service</b> node to add the account details using the context variables populated in the previous Script node.</li> 
 
-<a class="glightbox" href="../design-digital-skills/images/service-node-to-add-account-details.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/service-node-to-add-account-details.png" alt="service node to add account details" title="service node to add account details" style="border: 1px solid gray; zoom:75%;"></a>
+<a class="glightbox" href="../images/service-node-to-add-account-details.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-to-add-account-details.png" alt="service node to add account details" title="service node to add account details" style="border: 1px solid gray; zoom:75%;"></a>
 
 <li>Your dialog with form and service nodes to update the data table is ready.</li>
 <li><b>Talk to bot</b> and follow the steps to add an account to a given customer id.</li></ol>
