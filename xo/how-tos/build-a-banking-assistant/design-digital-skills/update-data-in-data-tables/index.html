@@ -3938,16 +3938,16 @@
 <h4 id="create-dialog-task">Create Dialog Task<a class="headerlink" href="#create-dialog-task" title="Permanent link">&para;</a></h4>
 <ol>
 <li>From the left navigation menu, select <strong>Bot Tasks -&gt; Dialog Tasks</strong>.</li>
-<li>Click the <strong>+</strong> against the <strong>Dialog Tasks</strong> to create a new Task.<ul>
+<li>Click the <strong>+</strong> icon against the <strong>Dialog Tasks</strong> to create a new Task.<ul>
 <li>Enter <strong>IntentName</strong>, say, <em>UpdateCustomer</em>.</li>
 <li><strong>Create &amp; Proceed</strong> to open the dialog builder page.</li>
 </ul>
 </li>
 <li>Retain the Intent Node default settings, and close the Intent Node.</li>
-<li>Click the <strong>+</strong> next to the intent node and add an <strong>Entities</strong> to capture the customer id: </li>
+<li>Click the <strong>+</strong> icon next to the intent node and add an <strong>Entities</strong> to capture the customer id: </li>
 </ol>
-<table>
-  <tr>
+<table border="1.5">
+<tr bgcolor="#ECECEC">
    <td>
     <strong>ENTITY NAME</strong>
    </td>
@@ -3976,7 +3976,7 @@
 <h4 id="fetch-data">Fetch Data<a class="headerlink" href="#fetch-data" title="Permanent link">&para;</a></h4>
 <p>You can use a Service call to fetch data from the table:</p>
 <ol>
-<li>Click the <strong>+</strong> against the entity node.</li>
+<li>Click the <strong>+</strong> icon against the entity node.</li>
 <li>Select <strong>Service</strong> -&gt; <strong>New Service Node</strong> option.</li>
 <li>From the <strong>General Settings</strong> section configure the following:<ul>
 <li><strong>Name</strong> say <em>GetCustomerData</em>.</li>
@@ -3994,20 +3994,19 @@
 </li>
 </ol>
 <p><a class="glightbox" href="../images/data-service-request-definition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-service-request-definition.png" alt="data service request definition" title="data service request definition" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li><strong>Save</strong> the definition and close the service node.</li>
-<li>Add a <strong>Message Node</strong> to display the records fetches using the following context variable values, since we are fetching only one record, we are using a static <em>[0]</em> reference to the row:</li>
-</ol>
+<ol start="6"><li><b>Save</b> the definition and close the service node.</li>
+<li>Add a <b>Message Node</b> to display the records fetches using the following context variable values, since we are fetching only one record, we are using a static _[0]_ reference to the row:</li></ol>
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>For the customer number entered, we have the following details: {{context.GetCustomerData.response.body.queryResult[0].CustName}}, {{context.GetCustomerData.response.body.queryResult[0].CustEmail}}, {{context.GetCustomerData.response.body.queryResult[0].Address}}, {{context.GetCustomerData.response.body.queryResult[0].CustType}}
 </span></code></pre></div>
 <h4 id="update-data">Update Data<a class="headerlink" href="#update-data" title="Permanent link">&para;</a></h4>
 <p>We will be using an entity node and a logic node to capture the inputs from the customer and to control the process flow:</p>
 <ol>
-<li>Click the <strong>+</strong> against the last message node added above.</li>
+<li>Click the <strong>+</strong> icon against the last message node added above.</li>
 <li>Select an <strong>Entity Node</strong> and add a <em>List of Items (enumerated)</em> type entity with the following settings. </li>
 </ol>
-<table>
-  <tr>
+<table border="1.5">
+<tr bgcolor="#ECECEC">
    <td>
     <strong>DISPLAY NAME</strong>
    </td>
@@ -4062,8 +4061,8 @@
     <li><b>Actions</b> as <i>Update Data</i>.</li></ul></ol>
 
 <p><strong>Assign Values</strong> from the entities defined as follows, remember you need to include all the fields and their values, else the field would be set to null value:</p>
-<table>
-  <tr>
+<table border="1.5">
+<tr bgcolor="#ECECEC">
    <td>
         <strong>COLUMN</strong>
    </td>
