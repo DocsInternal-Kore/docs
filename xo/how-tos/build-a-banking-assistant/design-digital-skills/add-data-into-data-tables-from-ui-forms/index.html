@@ -3923,8 +3923,8 @@ For details on what Data Tables are and how it is implemented in the XO Platform
 </ul>
 </li>
 </ul>
-<table>
-  <tr>
+<table border="1.5">
+<tr bgcolor="#ECECEC">
    <td>
             <strong>COLUMN NAME</strong>
 </li>  
@@ -4077,14 +4077,16 @@ For details on what Data Tables are and how it is implemented in the XO Platform
 <li>Add a <strong>Service</strong> node to check for the validity of the customer id entered.</li>
 </ol>
 <p><a class="glightbox" href="../images/check-customer-id-validity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/check-customer-id-validity.png" alt="check customer id validity" title="check customer id validity" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li>Add a <strong>Logic</strong> node to proceed with the Form if the customer id is valid else prompt for the customer id.
-<a class="glightbox" href="../images/logic-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ol>
-<p>The <em>InvalidCustId</em> is a <strong>Message</strong> node with the following JavaScript:</p>
-<p><code>context.entities.CustId = null;</code></p>
+<ol start="6"><li>Add a <b>Logic</b> node to proceed with the Form if the customer id is valid else prompt for the customer id.</li>
+<a class="glightbox" href="../images/logic-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a>
+
+The _InvalidCustId_ is a **Message** node with the following JavaScript:
+
+ `context.entities.CustId = null;`
+
 <div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">print</span><span class="p">(</span><span class="s1">&#39;You have entered an invalid customer id, try again&#39;</span><span class="p">);</span>
 </span></code></pre></div>
+
 <ol start="7"><li>Next, add a <b>Form</b> node and from the dropdown list select the form (<i>OpenAccount</i>).</li>
     <ul><li>You will be prompted to select the <b>Form Experience</b>. The XO Platform allows you to gather user input both from the form and through conversation based on the channel.</li>
     <li>For this use case, let us select <i>Only Form UI</i> experience.</li>
@@ -4093,7 +4095,8 @@ For details on what Data Tables are and how it is implemented in the XO Platform
 <li>Using a <b>Service</b> node, fetch any existing account details for the customer id.</li>
 <li>Next, we will see how to capture the values returned by the Form Node using a <b>Script</b> node and process the same to get the next account id value and set to null the unwanted fields.</li></ol>
 
-<p>Use the following script to get the next account id</p>
+Use the following script to get the next account id
+
 <div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">resultSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">GetAcctData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">resultSet</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -4131,6 +4134,7 @@ For details on what Data Tables are and how it is implemented in the XO Platform
 </span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">      </span><span class="nx">context</span><span class="p">.</span><span class="nx">type</span><span class="o">=</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="p">;</span>
 </span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="p">}</span>
 </span></code></pre></div>
+
 <ol start="10"><li>Use a <b>Service</b> node to add the account details using the context variables populated in the previous Script node.</li>
 <a class="glightbox" href="../images/service-node-to-add-account-details.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-to-add-account-details.png" alt="service node to add account details" title="service node to add account details" style="border: 1px solid gray; zoom:75%;"></a>
 
