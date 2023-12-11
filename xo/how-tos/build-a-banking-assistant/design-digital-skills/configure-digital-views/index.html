@@ -17,7 +17,7 @@
     
     
       
-        <title>Configure Digital Forms - Kore ai Docs</title>
+        <title>Configure Digital Views - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configure-digital-forms" class="md-skip">
+        <a href="#configure-digital-views" class="md-skip">
           Skip to content
         </a>
       
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configure Digital Forms
+              Configure Digital Views
             
           </span>
         </div>
@@ -3830,18 +3830,12 @@
     Problem Statement
   </a>
   
-    <nav class="md-nav" aria-label="Problem Statement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     Prerequisites
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3854,23 +3848,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#digital-form-configuration" class="md-nav__link">
-    Digital Form Configuration
+  <a href="#message-template" class="md-nav__link">
+    Message Template
   </a>
   
-    <nav class="md-nav" aria-label="Digital Form Configuration">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets-configuration" class="md-nav__link">
+    Widgets Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Widgets Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#form-creation" class="md-nav__link">
-    Form Creation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#form-editor" class="md-nav__link">
-    Form Editor
+  <a href="#dialog-task-widgets" class="md-nav__link">
+    Dialog Task Widgets
   </a>
   
 </li>
@@ -3881,21 +3875,35 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dialog-task-configuration" class="md-nav__link">
-    Dialog Task Configuration
+  <a href="#panel-configuration" class="md-nav__link">
+    Panel Configuration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-dialog-task" class="md-nav__link">
-    Create Dialog Task
+  <a href="#panel-with-json-widgets" class="md-nav__link">
+    Panel with JSON Widgets
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish" class="md-nav__link">
+    Publish
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hosting" class="md-nav__link">
+    Hosting
+  </a>
   
 </li>
       
@@ -3918,243 +3926,190 @@
 
 
 
-<h1 id="configure-digital-forms">Configure Digital Forms<a class="headerlink" href="#configure-digital-forms" title="Permanent link">&para;</a></h1>
-<p>In this post, we explore how you can create an additional account through a Banking Bot. We will see how Digital Forms can be used to gather all the required information from the user and create the account.</p>
-<p>For details on what Digital Forms are and how it is implemented in the XO platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/digital-forms/" target="_blank"> here</a>.</p>
+<h1 id="configure-digital-views">Configure Digital Views<a class="headerlink" href="#configure-digital-views" title="Permanent link">&para;</a></h1>
+<p>In this post we explore how you can view your account details using a Digital View and a Banking Bot. We will see how this Digital View can be presented using Panels and Widgets. Widgets can be used to trigger Dialog Tasks and display appropriate messages and Panel can be used to hold these Widgets. 
+We will also see how the Panel can be hosted on Web/Mobile Client using the Widget SDK.</p>
+<p>For details on what Digital Views are and how it is implemented in the Kore.ai Bots platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/digital-views/" target="_blank"> here</a>.</p>
 <h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
 <p>Consider a Banking Bot trying to address the following scenarios:</p>
-<ol>
-<li>An already registered user wants to open an additional account.</li>
-<li>There are three types of accounts that are available, each with further options:<ul>
-<li><strong>Savings Account</strong>.</li>
-<li><strong>Checking Account</strong> with an option to opt for a Cash Card and set a Minumum Balance.</li>
-<li><strong>Credit Card</strong> with an option to choose the type of card to be Platinum, Gold, Silver or Basic.
-<a class="glightbox" href="../images/problem-statement-banking-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/problem-statement-banking-bot.png" alt="banking bot forms" title="banking bot forms" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-</ol>
-<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<video class="wp-video-shortcode" id="video-23376-1" width="410" height="528" preload="metadata" controls="controls"><source type="video/mp4" src="../design-digital-skills/images/WP_howto.mp4" /><a href="../design-digital-skills/images/WP_howto.mp4">Banking Bot Demo</a></video>
+
+<video width="410" height="530" controls>
+<source src="../design-digital-skills/images/WP_howto.mp4" type="video/mp4"></video>
+
+<p>This document gives a step-by-step approach to achieve all the above-mentioned scenarios using – Digital Views (Panels, Widgets), Widget SDK and Web/Mobile Client.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Bot building knowledge</li>
-<li>A Banking Bot</li>
+<li>A <a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/" target="_blank"> Banking Bot</a> with a dialog as mentioned below:<ul>
+<li><a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/#Get_Balance_Intent" target="_blank"> Get Balance</a> – Dialog task prompting the user for their Account Number and Account Type and displaying the available balance in the account.
+<a class="glightbox" href="../design-digital-skills/images/get-balance-dialog-digital-views.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/get-balance-dialog-digital-views.png" alt="get balance dialog" title="get balance dialog" style="border: 1px solid gray; zoom:75%;"></a> </li>
+</ul>
+</li>
 </ul>
 <h2 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
-<p>Let us consider each of the following scenarios:</p>
+<p>Let us consider each of the following scenarios one by one:</p>
 <ol>
-<li>Digital Form to gather input from the user;</li>
-<li>Dialog Task to:<ul>
-<li>Trigger the above Digital Form; and</li>
-<li>Capture the user-entered account information.</li>
-</ul>
-</li>
+<li>Dialog Task to display balance in a given account using Widget SDK channel.</li>
+<li>Widgets to trigger the above dialog task and a Panel set with the widgets.</li>
+<li>Panel to hold a widget displaying static JSON template message.</li>
 </ol>
-<h3 id="digital-form-configuration">Digital Form Configuration<a class="headerlink" href="#digital-form-configuration" title="Permanent link">&para;</a></h3>
-<p>Create a form to gather the following information:</p>
-<ul>
-<li><em>Account Name</em> pre-populated with the user’s name with an option to change it;</li>
-<li><em>Type of Account</em> that the user wants to create, default selection to Savings Account;</li>
-<li>Based on the type of account selected above the following details to be gathered:<ul>
-<li>Savings – no further information needed;</li>
-<li>Checkings – whether Cash Card is required, if yes then the maximum withdrawal limit (range between $100 to $1000) to be enforced on that card.</li>
-<li>Credit Card – the type of card required<ul>
-<li>Platinum card levies additional charge,</li>
-<li>Gold,</li>
-<li>Silver, or</li>
-<li>Basic</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="form-creation">Form Creation<a class="headerlink" href="#form-creation" title="Permanent link">&para;</a></h4>
-<ol>
-<li>From the Kore.ai Bot Builder platform, open the Banking Bot.</li>
-<li>Select the <strong>Build</strong> tab from the top menu.</li>
-<li>From the left navigation menu, select <strong>Digital Skills</strong> -&gt; <strong>Digital Forms</strong> to access the Digital Forms page.</li>
-<li>
-<p>Click <strong>New Form</strong> and enter the following:</p>
-<ul>
-<li><strong>Name</strong>: name to the form, say <em>OpenAccount</em>.</li>
-<li><strong>Display Name</strong> for the form, say <em>Open an Account</em>.</li>
-<li><strong>Description</strong> of the form.</li>
-<li><strong>Description</strong>: Turn on the toggle to show a description of the form in the header.</li>
-</ul>
-</li>
-<li>
-<p><strong>Select the form’s Header Style</strong>: You can choose a specific header style from the listed illustrations – the circle indicates the position of logo/icon with respect to the title of the form in the header. </p>
-</li>
-</ol>
-<p>Click the card to select the style. If it has a logo, you can upload an image file (png or jpg) for the logo.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>During the Export of the Bot, the logo is not exported along with Digital Forms. So, while importing this Bot, you need to separately copy the logo image file and then manually reupload the logo.</p>
-</div>
-<ol start="6"><li> <b>Save & Proceed</b> to the next step.</li>
-<a class="glightbox" href="../images/form-creation-digital-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/form-creation-digital-form.png" alt="digital form" title="digital form" style="border: 1px solid gray; zoom:75%;"></a></ol>
-
-<h4 id="form-editor">Form Editor<a class="headerlink" href="#form-editor" title="Permanent link">&para;</a></h4>
-<ol>
-<li>The Form Editor opens with components on the left, and a blank form. You can drag and drop components to the form as per your requirement.</li>
-<li>By default, a <strong>Submit button</strong> is added to the form. This would trigger the submit event which would capture the user input and save in context object.</li>
-<li>Drag and drop a <strong>Text Field</strong> component onto the form.</li>
-<li>As soon as you drag and drop a component, its property settings panel will be displayed.</li>
-<li>
-<p>In that panel set the following values:</p>
-<ul>
-<li><strong>Display Name</strong> say <em>Name.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>accountname.</em></li>
-<li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Enter the name of the account holder</em>.
-<a class="glightbox" href="../images/Form-editor-general-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/Form-editor-general-settings.png" alt="general settings" title="general settings" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-<li>
-<p>Next, a selection box for the type of account to be opened. Drag and drop a <strong>Dropdown</strong> component onto the form and set the following values:</p>
-<ul>
-<li><strong>Display Name</strong> say <em>Type</em>.</li>
-<li><strong>Name</strong> used for internal reference, say <em>accounttype</em>.</li>
-<li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Select the type of account you want to open</em>.</li>
-<li>Scroll and locate <strong>Data Settings</strong>, deselect <strong>Multi Select</strong> option and against <strong>Dropdown values</strong> click <strong>Add Values</strong> to enter the values – <em>Checkings, Savings, Credit Card</em> You can mark one value, <em>Savings</em>, as default. This would be selected by default at the time of execution.
-<a class="glightbox" href="../images/data-settings-default-selection.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-settings-default-selection.png" alt="data settngs default selection" title="data settngs default selection" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-<li>
-<p>Next, for the Cash Card option when the account type is selected to be a Checkings account. Drag and drop a <strong>Toggle</strong> component onto the form and set the following values:</p>
-<ul>
-<li><strong>Display Name</strong> say <em>Cash Card</em>.</li>
-<li><strong>Name</strong> used for internal reference, say <em>cashcard.</em></li>
-<li><strong>Description</strong> of the field. In this case, the question, <em>Want a cash card?</em></li>
-<li><strong>Value</strong> as <em>Yes</em> when selected and <em>No</em> when deselected.</li>
-<li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Checkings.<ul>
-<li>Add <strong>Visibility Rules – Rule 1</strong> for the field to be <strong>Visible</strong> when, select, <em>accounttype</em> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Checkings</em> value.
-<a class="glightbox" href="../images/visibility-settings-cash-card.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/visibility-settings-cash-card.png" alt="cash card visibility settings" title="cash card visibility settings" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>If the user opts for cash card, then the withdrawal limit needs to be set on the same. Drag and drop a <strong>Range Slider</strong> component onto the form and set the following values:</p>
-<ul>
-<li><strong>Display Name</strong> say <em>Withdrawal Limit</em>.</li>
-<li><strong>Name</strong> used for internal reference, say <em>withdrawallimit.</em></li>
-<li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Set the withdrawal limit</em>.</li>
-<li>Deselect <strong>Is Percentage</strong>.</li>
-<li><strong>Value</strong> as <em>100</em> for Min and <em>1000</em> for Max.</li>
-<li>Under <strong>Data Settings</strong>, you can set the <strong>Default Value</strong> to be 150, this would be pre-selected.</li>
-<li><strong>Visibility Rules</strong> would be a compound rule – account type is checkings and cash card is selected.</li>
-<li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Checkings and the Cash Card is opted.<ul>
-<li>Add <strong>Visibility Rules – Rule 1</strong> field to be visible when, select, <strong>accounttype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Checkings</em> value  AND selecting <strong>cashcard</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Yes</em> value.</li>
-<li>You can switch to <strong>Advanced Mode</strong> to enter the visibility rules.
-<a class="glightbox" href="../images/visibility-settings-rule-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/visibility-settings-rule-1.png" alt="visibility settings rule 1" title="visibility settings rule 1" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>For the Credit Card option, the user needs to further select the type of card. Drag and drop a <strong>Radio Button</strong> component onto the form and set the following values:</p>
-<ul>
-<li><strong>Display Name</strong> say  <em>Card Type.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>cardtype</em>.</li>
-<li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Choose the type of credit card</em>.</li>
-<li>Under <strong>Data Settings</strong>, you can set the <strong>Radio values</strong> to be <em>Platinum, Gold, Silver</em>, and <em>Basic</em>.</li>
-<li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Credit Card.<ul>
-<li>Set <strong>Is visible</strong> flag to <em>Yes</em></li>
-<li>Add <strong>Visibility Rules – Rule 1</strong> for the filed to be <strong>Visible</strong> when, select, <strong>accounttype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Credit Card</em> value.
-<a class="glightbox" href="../images/data-settings-visibility-rules.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-settings-visibility-rules.png" alt="data settings visibility rule" title="data settings visibility rule" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Finally, the Pro-Tip, when user selects a Platinum card. Drag and drop a <strong>Pro Tip</strong> component onto the form and set the following values:</p>
-<ul>
-<li>Set <strong>Display Name</strong> as <em>Platinum Tip.</em></li>
-<li><strong>Name</strong> used for internal reference, mention <em>platinumtip.</em></li>
-<li><strong>Description</strong> would be the tip you want to display, eg. <em>Additional charges will apply</em>.</li>
-<li>Scroll and locate <strong>Visibility Settings</strong>. This component should be visible only when the account type is set to Credit Card.<ul>
-<li>Set <strong>Is visible</strong> flag to <em>Yes</em></li>
-<li>Add <strong>Visibility Rules – Rule 1</strong> for the field to be <strong>Visible</strong> when, select, <strong>accounttype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Credit Card</em> value AND selecting <strong>cardtype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Platinum</em> value.
-<a class="glightbox" href="../images/add-visibility-rule-digital-forms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-visibility-rule-digital-forms.png" alt="add visibility rule" title="add visibility rule" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Your form is ready.</p>
-</li>
-<li>
-<p>You can toggle between Desktop View and Mobile View to see how it looks in those devices.
-<a class="glightbox" href="../images/toggle-between-views.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/toggle-between-views.png" alt="toggle between views" title="toggle between views" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>You can select how the VA handles the conversation when the user cancels the form. You can choose from two options:</p>
-<ul>
-<li><strong>Discard the task and trigger End of Task Event</strong>: This is the default option.
-<a class="glightbox" href="../images/discard-task-trigger-end-of-task-event.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/discard-task-trigger-end-of-task-event.png" alt="discard task trigger end of task event" title="discard task trigger end of task event" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-</li>
-</ol>
-<p>Continue with this task and transition to this node: In the <strong>Select Node</strong> drop-down list, you can select any node present in the current dialog task.</p>
-<p><a class="glightbox" href="../images/select-node-dropdown-list.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-node-dropdown-list.png" alt="select node dropdown" title="select node dropdown" style="border: 1px solid gray; zoom:75%;"></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The target node has to be in the same dialog, you cannot make a jump to a target node outside the current dialog. The list of target nodes only shows the local nodes.
-If the target node is not present during runtime, the platform presents the error Error in continuing the conversation, and the task should get discarded.</p>
-<p>Use the <strong>Test</strong> button to see a preview.</p>
-</div>
-<h3 id="dialog-task-configuration">Dialog Task Configuration<a class="headerlink" href="#dialog-task-configuration" title="Permanent link">&para;</a></h3>
-<p>We will be creating a dialog task and adding a form node to trigger the Digital Form created in the above step and use a service node to make a service call to add the new account from the form data.</p>
-<h3 id="create-dialog-task">Create Dialog Task<a class="headerlink" href="#create-dialog-task" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Select the <strong>Build</strong> tab from the top menu</li>
-<li>From the left navigation menu, select <strong>Conversational Skills -&gt; Dialog Tasks.</strong></li>
-<li>Click the <strong>+</strong> against the <strong>Dialog Tasks</strong> to create a new Task.<ul>
-<li>Enter <strong>IntentName</strong>, say, <em>OpenAccount</em></li>
-<li><strong>Create &amp; Proceed</strong> to open the dialog builder page.</li>
-</ul>
-</li>
-<li>Retain the Intent Node default settings, and close the Intent Node.</li>
-<li>Click the <strong>+</strong> next to the intent node and select the <strong>Form</strong> option.</li>
-<li>
-<p>From the dropdown list select the form (<em>OpenAccount</em>) we created earlier.
-<a class="glightbox" href="../images/select-openaccount-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-openaccount-form.png" alt="select open account form" title="select open account form" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>You will be prompted to select the <strong>Form Experience.</strong> Kore.ai Bots platform allows you to gather user input both from the form and through conversation based on the channel.</p>
-</li>
-<li>For this use case, let us select <em>Only Form UI</em> experience.</li>
-<li>A Form Node would be added, you can customize the form name, etc.</li>
-<li>We are changing the <strong>Name</strong> to <em>OpenAccountForm</em> and <strong>Display Name</strong> to <em>Form to open account</em>.</li>
-<li>Next, we will see how to capture the values returned by the Form Node using a Script node and displaying the same.</li>
-<li>Add a <strong>Message Node</strong> to the form node.</li>
-<li>Set the <strong>Name</strong> to <em>FormMessage</em> and <strong>Display Name</strong> to <em>Form Message</em>.</li>
-<li>
-<p>Click the <strong>MANAGE RESPONSES</strong> to open the message editor.
-<a class="glightbox" href="../images/message-node-manage-responses.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/message-node-manage-responses.png" alt="message node" title="message node" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>Select the <strong>JavaScript</strong> tab and enter the following code. This code would capture from the context object, the data submitted by the user in the Form and display it accordingly.</p>
-</li>
-</ol>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;You have opened a &#39;</span><span class="o">+</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="o">+</span><span class="s1">&#39; account in the name of &#39;</span><span class="o">+</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accountname</span><span class="p">;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Checkings&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">cashcard</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Yes&#39;</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; and opted for cash card with withdrawal limit set to &#39;</span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">withdrawallimit</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Credit Card&#39;</span><span class="p">)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; and opted for a &#39;</span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">cardtype</span><span class="o">+</span><span class="s1">&#39; card&#39;</span><span class="p">;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nx">print</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+<h3 id="message-template">Message Template<a class="headerlink" href="#message-template" title="Permanent link">&para;</a></h3>
+<p>First, the Dialog task which would be triggered from the Widget should have a message definition for the Widget SDK channel.
+<a class="glightbox" href="../design-digital-skills/images/dialog-task-message-template.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/dialog-task-message-template.png" alt="dialog task message template" title="dialog task message template" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>We are using the following message to display the account details:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;The Balance in your&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">entities</span><span class="p">.</span><span class="nx">AccountType</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; account is &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">GetAccountBalance</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">Balance</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="s2">&quot;elements&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Account View&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="s2">&quot;sub_title&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">output</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="s2">&quot;icon&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://kore.ai/wp-content/uploads/banking-home.png&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">};</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
 </span></code></pre></div>
-<p><a class="glightbox" href="../images/javascript-code-design-forms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/javascript-code-design-forms.png" alt="sample weather bot" title="sample weather bot" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>Your dialog with form is ready!</p>
-<ol start="16"><li><b>Talk to bot</b> and trigger the above dialog. The form will be displayed, enter the values and click Submit, the message would be displayed.</li>
+<h3 id="widgets-configuration">Widgets Configuration<a class="headerlink" href="#widgets-configuration" title="Permanent link">&para;</a></h3>
+<h4 id="dialog-task-widgets">Dialog Task Widgets<a class="headerlink" href="#dialog-task-widgets" title="Permanent link">&para;</a></h4>
+<p>We will be creating two Widgets to trigger a Dialog Task.</p>
+<p><strong>Current Account:</strong></p>
+<p>First, let us see how to configure a Widget to display balance from the current account of the user.</p>
+<ul>
+<li>Ensure that <strong>Build</strong> is selected from the top menu.</li>
+<li>From under <strong>Digital Skills</strong> open <strong>Digital Views</strong>.</li>
+<li>Click the <strong>Create Widget</strong> button.</li>
+<li>Give a Widget Name and a Display Name.</li>
+<li>Set the <strong>Source</strong>, we are triggering Dialog Task, hence select <em>Dialog Task</em>.</li>
+<li><strong>Select Dialog Task</strong> as <em>Get Balance</em>, as per our use case.</li>
+<li>
+<p>In the <strong>Entity Assignment</strong>, set the following entities (you can select from the drop box that appears as you type) as per the Dialog Task requirement:</p>
+<ul>
+<li><strong>AccountType</strong> to <em>current</em>.</li>
+<li><strong>AccountNumber</strong> to <em>1</em>.
+You can use the <strong>Open Dialog Task</strong> icon, next to the select Dialog Task drop down, to open the dialog and check the entities needed.
+<a class="glightbox" href="../design-digital-skills/images/open-dialog-task-digital-views.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/open-dialog-task-digital-views.png" alt="open dialog tasks" title="open dialog tasks" style="border: 1px solid gray; zoom:75%;"></a></li>
+</ul>
+</li>
+<li>
+<p><strong>Save</strong> the widget.</p>
+</li>
+<li><strong>Edit</strong> the widget and click <strong>Run &amp; Preview</strong> to see the widget output.</li>
+<li><strong>Save as preview</strong> will set the output as the thumbnail against the widget.</li>
+</ul>
+<p><strong>Savings Account</strong>: Repeat the above steps for Account View from <em>savings</em> account of the same account number.
+<a class="glightbox" href="../design-digital-skills/images/savings-account-widget.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/savings-account-widget.png" alt="savings account widget" title="savings account widget" style="border: 1px solid gray; zoom:75%;"></a></p>
+<h3 id="panel-configuration">Panel Configuration<a class="headerlink" href="#panel-configuration" title="Permanent link">&para;</a></h3>
+<p>The Widgets thus created need to be attached to a Panel for runtime display and execution.</p>
+<ol>
+<li>Click the <strong>Create Panel</strong> button to create a Panel.</li>
+<li>
+<p>In the <strong>New Panel</strong> window, enter Panel Name, Display Name and a URL for Icon.
+<a class="glightbox" href="../design-digital-skills/images/new-panel-window.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/new-panel-window.png" alt="new panel window" title="new panel window" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Click the <strong>Add Widget</strong> button to open the <strong>Panel Management</strong> window.</p>
+</li>
+<li>
+<p>Use the <strong>Add Widget</strong> to select and add the Widgets that we want to display, in this case Account Balance and Current Account widgets.
+<a class="glightbox" href="../design-digital-skills/images/add-widgets.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/add-widgets.png" alt="add widgets" title="add widgets" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Use the <strong>Test</strong> button to see the widgets in action.
+<a class="glightbox" href="../design-digital-skills/images/see-widgets-in-action.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/see-widgets-in-action.png" alt="see widgets in action" title="see widgets in action" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+</ol>
+<h3 id="panel-with-json-widgets">Panel with JSON Widgets<a class="headerlink" href="#panel-with-json-widgets" title="Permanent link">&para;</a></h3>
+<p>We will see how to create Widgets with static JSON content. We will use a JSON to display a pie chart.</p>
+<ol>
+<li>Click on <strong>Create Panel</strong> to create a new panel and name it <strong>JSON Example</strong>.</li>
+<li>Use the <strong>More</strong> icon and select <strong>Panel Management</strong>, there you will find the option to <strong>Create Widget</strong>. Click on that. </li>
+</ol>
+<p><a class="glightbox" href="../design-digital-skills/images/panel-management.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/panel-management.png" alt="panel management" title="panel management" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ol>
+<li>In the <strong>New Widget</strong> dialog, enter the Name, and set the source to JSON. </li>
+</ol>
+<p><a class="glightbox" href="../design-digital-skills/images/configure-new-widget-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/configure-new-widget-dialog.png" alt="configure new widget dialog" title="configure new widget dialog" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Enter the following in the JavaScript Editor. This is a message template to display a pie chart with a break up for amounts spent under various heads like travel, food, and accommodation. For more on supported message templates, click <a href="https://developer.kore.ai/docs/bots/sdks/widget-sdk-message-formatting-and-templates/" target="_blank"> here</a>. </p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="s2">&quot;templateType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;piechart&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="s2">&quot;pie_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;regular&quot;</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Summary&quot;</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;monthly report&quot;</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="s2">&quot;elements&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Airlines&quot;</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">          </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1264.0&quot;</span><span class="p">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">          </span><span class="s2">&quot;displayValue&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$ 1,234&quot;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hotels&quot;</span><span class="p">,</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">          </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;568.10&quot;</span><span class="p">,</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">          </span><span class="s2">&quot;displayValue&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$ 568&quot;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Food&quot;</span><span class="p">,</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">          </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;324.50&quot;</span><span class="p">,</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">          </span><span class="s2">&quot;displayValue&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$ 324&quot;</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="p">]</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
+</span></code></pre></div>
+<ol start="4"><li><b>Test</b> the panel and you will see both the panel icons, click on each to see them in action.</li></ol>
 
-<a class="glightbox" href="../images/talk-to-bot-digital-forms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/talk-to-bot-digital-forms.png" alt="javascript code" title="javascript code" style="border: 1px solid gray; zoom:75%;"></a>
-
-<li>You can use the context object as shown above it a <b>Script</b> or <b>Service</b> nodes for further processing.</li>
-<li>Click <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-add-data-into-data-tables-from-digital-forms/" target="_blank">here</a> to learn how to add this data into data tables.</li></ol>
+<p><a class="glightbox" href="../design-digital-skills/images/json-example-panel.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/json-example-panel.png" alt="json example panel" title="json example panel" style="border: 1px solid gray; zoom:75%;"></a></p>
+<h2 id="publish">Publish<a class="headerlink" href="#publish" title="Permanent link">&para;</a></h2>
+<p>To publish the Bot first enable channels:</p>
+<ol>
+<li>From left navigation menu, select <strong>Channel</strong> for publishing. For our use case we will select both Web/Mobile Client and Widget SDK channels.</li>
+<li>Select the channels and from <strong>Configurations</strong> tab, make a note of the <strong>Bot Name</strong>, <strong>Bot Id</strong>, <strong>Client Id</strong> and <strong>Client Secret</strong>.</li>
+<li>From left navigation menu, select <strong>Publish</strong> option. Under Tasks &amp; languages section, ensure that the Widget and Panels we developed are selected for publication.</li>
+<li><strong>Proceed</strong> with the Publish.</li>
+</ol>
+<h2 id="hosting">Hosting<a class="headerlink" href="#hosting" title="Permanent link">&para;</a></h2>
+<p>We will be hosting the Panels in the web/mobile client. Click <a href="https://developer.kore.ai/docs/bots/sdks/kore-ai-widget-sdk-tutorial/" target="_blank">here</a> for more details on the Widget SDK usage.</p>
+<ol>
+<li>Download the Kore.ai Widget SDK, go to <a href="https://github.com/Koredotcom/web-kore-sdk" target="_blank">Kore Web SDK</a>, and then click <strong>Download</strong>.</li>
+<li>Extract all files to the <code>/SDKApp/sdk</code> folder.</li>
+<li>Open the above SDK folder, and traverse to <em>UI</em> folder.</li>
+<li>Open the <code>kore-config.js</code>.</li>
+<li>
+<p>Configure your <code>botOptions</code> with the <code>web/mobile client</code> channel configurations copied  in  above  section.</p>
+<ul>
+<li><code>botOptions.botInfo</code></li>
+<li><code>botOptions.clientId</code></li>
+<li><code>botOptions.clientSecret</code></li>
+</ul>
+</li>
+<li>
+<p>Make other changes as per your requirements.
+<a class="glightbox" href="../design-digital-skills/images/configure-bot-options.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/configure-bot-options.png" alt="configure bot options" title="configure bot options" style="border: 1px solid gray; zoom:75%;"></a> </p>
+</li>
+<li>
+<p>Open the <code>kore-widgets-config.js</code>.</p>
+</li>
+<li>
+<p>Configure your <code>botOptionsWiz</code> with the ‘<em>Widget SDK</em>’ channel configurations copied  in  above  section.</p>
+<ul>
+<li><code>botOptionsWiz.botInfo</code></li>
+<li><code>botOptionsWiz.clientId</code></li>
+<li><code>botOptionsWiz.clientSecret</code></li>
+</ul>
+</li>
+<li>
+<p>Make other changes as per your requirements.
+<a class="glightbox" href="../design-digital-skills/images/widget-config-changes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/widget-config-changes.png" alt="widget configuration changes" title="widget configuration changes" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Open the <code>index_widgets_chat.html</code> file in the browser and see the chat window along with the widgets.
+<a class="glightbox" href="../design-digital-skills/images/index-widgets-chat.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../design-digital-skills/images/index-widgets-chat.png" alt="index widgets" title="index widgets" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>If you want to host the Panels individually use the <code>index_widgets.html</code> file. See the GitHub for hosting the same in your web site.</p>
+</li>
+</ol>
 
 
   
