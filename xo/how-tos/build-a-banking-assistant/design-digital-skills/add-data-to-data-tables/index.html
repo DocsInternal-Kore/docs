@@ -4071,17 +4071,13 @@
 </table>
 
 <p><a class="glightbox" href="../images/add-column-details.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-column-details.png" alt="add column details" title="add column details" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li>
-<p>Under the <strong>Indexes</strong> section add an index for CustId to be unique.
-<a class="glightbox" href="../images/indexes-section.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/indexes-section.png" alt="indexes section" title="indexes section" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>Click <strong>Create</strong> and your table is ready.</p>
-</li>
-<li>Under the <strong>Bot Assignments</strong> add the bot which would be using this table, say <em>Banking Bot</em>, and give <em>Read</em>, <em>Write</em> and <em>Delete</em> permissions. <em>Delete</em> permission is optional since we would not be deleting data.
-<a class="glightbox" href="../images/bot-assignments.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-assignments.png" alt="bot assignments" title="bot assignments" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ol>
+<ol start="6"><li>Under the <b>Indexes</b> section add an index for CustId to be unique.</li>
+<a class="glightbox" href="../images/indexes-section.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/indexes-section.png" alt="indexes section" title="indexes section" style="border: 1px solid gray; zoom:75%;"></a>
+
+<li>Click <b>Create</b> and your table is ready.</li>
+<li>Under the <b>Bot Assignments</b> add the bot which would be using this table, say <i>Banking Bot</i>, and give <i>Read</i>, <i>Write</i> and <i>Delete</i> permissions. <i>Delete</i> permission is optional since we would not be deleting data.</li>
+<a class="glightbox" href="../images/bot-assignments.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-assignments.png" alt="bot assignments" title="bot assignments" style="border: 1px solid gray; zoom:75%;"></a></ol>
+
 <h3 id="dialog-task-configuration">Dialog Task Configuration<a class="headerlink" href="#dialog-task-configuration" title="Permanent link">&para;</a></h3>
 <p>We will be creating a dialog task to gather the required information, and use a Service node to update the data table with the values thus gathered.</p>
 <p><a class="glightbox" href="../images/dialo-task-configuration.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialo-task-configuration.png" alt="dialog task configuration" title="dialog task configuration" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -4154,35 +4150,35 @@
   </tr>
 </table>
 
-<ol>
-<li>
-<p><code>CustType</code> can be Basic, Preferred, or Premium based on the income level of the customer. For this purpose, we have used a static list to populate the CustType value as follows:
-<a class="glightbox" href="../images/basic-cust-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-cust-type.png" alt="basic cust type" title="basic cust type" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>For generating the CustID, we need to get the last customer id in the table and add one to it. For this, we will first fetch data from the table and then use a Script node to process the id.</p>
-</li>
-</ol>
+<ol start="5"><li><code>CustType</code> can be Basic, Preferred, or Premium based on the income level of the customer. For this purpose, we have used a static list to populate the CustType value as follows:</li>
+<a class="glightbox" href="../images/basic-cust-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/basic-cust-type.png" alt="basic cust type" title="basic cust type" style="border: 1px solid gray; zoom:75%;"></a>
+
+<li>For generating the CustID, we need to get the last customer id in the table and add one to it. For this, we will first fetch data from the table and then use a Script node to process the id.</li></ol>
+
 <h4 id="fetch-data">Fetch Data<a class="headerlink" href="#fetch-data" title="Permanent link">&para;</a></h4>
 <p>You can use a Service call to fetch data from the table:</p>
 <ol>
-<li>Click the <strong>+</strong> against the last entity node.</li>
+<li>Click the <strong>+</strong> icon of the last entity node.</li>
 <li>Select <strong>Service</strong> -&gt; <strong>New Service Node</strong> option.</li>
-<li>From the <strong>General Settings</strong> section configure the following:</li>
+<li>From the <strong>General Settings</strong> section configure the following:<ul>
 <li><strong>Name</strong> say <em>GetLastCustId</em></li>
 <li><strong>Display Name</strong> say <em>Get Customer Data</em></li>
 <li><strong>Service Type</strong> select <em>Data Service</em></li>
 <li><strong>Type</strong> select <em>Table</em>.</li>
-<li>Under <strong>Request Definition</strong> click <strong>Add Request</strong> to define a request to fetch data from the table.</li>
-<li>In the <strong>Data Service Request Definition</strong> page, enter the following:<ul>
-<li><strong>Choose Table Name</strong> as <em>customertable</em></li>
-<li><strong>Actions</strong> as <em>Get Data</em>.</li>
 </ul>
 </li>
-</ol>
-<p><a class="glightbox" href="../images/configure-data-service-request.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-data-service-request.png" alt="configure data service request" title="configure data service request" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li><strong>Test</strong> and <strong>Save</strong> the definition and <strong>close</strong> the service node.</li>
+<li>Under <strong>Request Definition</strong> click <strong>Add Request</strong> to define a request to fetch data from the table.</li>
+<li>
+<p>In the <strong>Data Service Request Definition</strong> page, enter the following:</p>
+<ul>
+<li><strong>Choose Table Name</strong> as <em>customertable</em></li>
+<li><strong>Actions</strong> as <em>Get Data</em>.
+<a class="glightbox" href="../images/configure-data-service-request.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-data-service-request.png" alt="configure data service request" title="configure data service request" style="border: 1px solid gray; zoom:75%;"></a></li>
+</ul>
+</li>
+<li>
+<p><strong>Test</strong> and <strong>Save</strong> the definition and <strong>close</strong> the service node.</p>
+</li>
 <li>Add a <strong>Script</strong> node to process the values fetched from the data service to obtain the value for the next customer id using the following script:</li>
 </ol>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">resultSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">GetLastCustId</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">;</span>
@@ -4273,9 +4269,8 @@
 </table>
 
 <p><a class="glightbox" href="../images/data-service-request.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-service-request.png" alt="data service request" title="data service request" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li>Add a <strong>Message node</strong> to display the values added using the following response format:</li>
-</ol>
+<ol start="7"><li>Add a <b>Message node</b> to display the values added using the following response format:</li></ol>
+
 <div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">Customer</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="nx">created</span><span class="w"> </span><span class="k">for</span><span class="o">:</span><span class="w"> </span><span class="p">{{</span><span class="nx">context</span><span class="p">.</span><span class="nx">GetCustData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">CustName</span><span class="p">}},</span><span class="w"> </span><span class="p">{{</span><span class="nx">context</span><span class="p">.</span><span class="nx">GetCustData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">CustEmail</span><span class="p">}},</span><span class="w"> </span><span class="p">{{</span><span class="nx">context</span><span class="p">.</span><span class="nx">GetCustData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">CustAddress</span><span class="p">}},</span><span class="w"> </span><span class="p">{{</span><span class="nx">context</span><span class="p">.</span><span class="nx">GetCustData</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">queryResult</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">CustType</span><span class="p">}}</span>
 </span></code></pre></div>
 <ol start="8"><li>Using <b>Talk to bot</b> option, enter the values when prompted and see the message being displayed.</li></ol>
