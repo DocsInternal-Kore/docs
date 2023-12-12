@@ -4083,8 +4083,8 @@ For details on what Data Tables are and how it is implemented in the XO Platform
 <a class="glightbox" href="../images/logic-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a></ol>
 
 <p>The <em>InvalidCustId</em> is a <strong>Message</strong> node with the following JavaScript:</p>
-<p><code>context.entities.CustId = null;</code></p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">print</span><span class="p">(</span><span class="s1">&#39;You have entered an invalid customer id, try again&#39;</span><span class="p">);</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">context</span><span class="p">.</span><span class="nx">entities</span><span class="p">.</span><span class="nx">CustId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">print</span><span class="p">(</span><span class="s1">&#39;You have entered an invalid customer id, try again&#39;</span><span class="p">);</span>
 </span></code></pre></div>
 <ol start="7"><li>Next, add a <b>Form</b> node and from the dropdown list select the form (<i>OpenAccount</i>).</li>
     <ul><li>You will be prompted to select the <b>Form Experience</b>. The XO Platform allows you to gather user input both from the form and through conversation based on the channel.</li>
