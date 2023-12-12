@@ -3950,8 +3950,8 @@
 </ol>
 <h3 id="create-sub-entities">Create Sub-Entities<a class="headerlink" href="#create-sub-entities" title="Permanent link">&para;</a></h3>
 <p>Since the Composite Entity is a combination of other entities, you need to build individual entities in the dialog task. To capture the Flight Information from the above example, you must create sub-entities that capture the required details. Here is a sample mapping of sub-entities for a primary entity called <em>Flight</em>, for which we create a few sub-entities to capture relevant information:</p>
-<table>
-  <tr>
+<table border="1.5">
+<tr bgcolor="#ECECEC">
    <td><strong>ENTITY</strong>
    </td>
    <td><strong>ENTITY TYPE</strong>
@@ -3998,11 +3998,11 @@
 <ol>
 <li>On the <strong>Entity</strong> window, click the <strong>NLP Properties</strong> tab.</li>
 <li>On the <strong>NLP Properties</strong> tab, under the <strong>Composite Patterns for Entity</strong> section, add relevant patterns. The various patterns built are similar to the ones used in defining Entity Patterns. Click <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/fundamental-meaning/#navigate-to-the-patterns-tab" target="_blank">here</a> to learn more.
-<a class="glightbox" href="../train-the-assistant/images/define-composite-entity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../train-the-assistant/images/define-composite-entity.png" alt="define composite entity" title="define composite entity" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/define-composite-entity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/define-composite-entity.png" alt="define composite entity" title="define composite entity" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
 <p>For the above composite entity patterns, the following are the sample utterances and the output:</p>
-<table>
-  <tr>
+<table border="1.5">
+<tr bgcolor="#ECECEC">
    <td>
 <strong>SAMPLE UTTERANCE</strong>
    </td>
@@ -4058,7 +4058,7 @@
 </li>
 </ol>
 <p>Post v8.0.07, you can use the <em>Entity Pre-Assignments</em> and <em>Entity Post-Assignments</em> from the Dialog Node, Instance Properties as shown in the image below (the numbers in the below image correspond to the number in the above use case):</p>
-<p><a class="glightbox" href="../train-the-assistant/images/test-composite-entity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../train-the-assistant/images/test-composite-entity.png" alt="test composite entities" title="test composite entities" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/test-composite-entity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-composite-entity.png" alt="test composite entities" title="test composite entities" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h2 id="json-object-for-composite-entity">JSON Object for Composite Entity<a class="headerlink" href="#json-object-for-composite-entity" title="Permanent link">&para;</a></h2>
 <p>In v8.0 of the platform, the Composite Entity is enhanced to handle the JSON object as input. This helps in handling the scenarios where the enabled channels send data as a JSON object. For example, MS Teams and Cisco Spark channels. The user input received from these channels is stored as a JSON object in the Context object under the respective composite entity name.</p>
 <p>To enable the composite entity to handle JSON object data, do not add any <em>Patterns</em> from the <strong>NLP Properties</strong> tab.</p>
