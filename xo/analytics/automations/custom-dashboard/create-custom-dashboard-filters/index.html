@@ -3832,6 +3832,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#manage-filters" class="md-nav__link">
+    Manage Filters
+  </a>
+  
+    <nav class="md-nav" aria-label="Manage Filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-filter" class="md-nav__link">
+    Update Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-filter" class="md-nav__link">
+    Delete Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-filters" class="md-nav__link">
+    More Filters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter-configurations" class="md-nav__link">
+    Filter Configurations
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3852,38 +3893,36 @@
 
 
 <h1 id="create-custom-dashboard-filters"><strong>Create Custom Dashboard Filters</strong><a class="headerlink" href="#create-custom-dashboard-filters" title="Permanent link">&para;</a></h1>
-<p>Prior to the Version 10.0 release, you had to add filter conditions in the ‘<strong>Filter by</strong>’ clause for individual widgets within a dashboard. There was no provision to filter the records at a dashboard level. The platform now allows you to create custom filters that filter the data for all the widgets across a custom dashboard.</p>
+<p>Prior to the Version 10.0 release, you had to add filter conditions in the <strong>Filter by</strong> clause for individual widgets within a dashboard. There was no provision to filter the records at a dashboard level. The platform now allows you to create custom filters that filter the data for all the widgets across a custom dashboard.</p>
 <p>You can either add or update the custom filters for the dashboard.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Note: The date selection filter is a default filter that gets applied to all the widgets across the dashboard.
-</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The date selection filter is a default filter that gets applied to all the widgets across the dashboard.</p>
+</div>
+<p><a class="glightbox" href="../images/custom-dashboard-with-filters.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/custom-dashboard-with-filters.png" alt="Custom Dashboard with Filters" title="Custom Dashboard with Filters" style="border: 1px solid gray; zoom:80%;"></a></p>
 <h2 id="add-filters">Add Filters<a class="headerlink" href="#add-filters" title="Permanent link">&para;</a></h2>
 <p>To add one or more filters at the Custom Dashboard level, perform the following steps:</p>
 <ol>
 <li>Click the <strong>Add Filter</strong> button to go to the <strong>Configuration</strong> panel shown below.</li>
 </ol>
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>```
-</code></pre></div>
-<p>Note: Tooltips are available for all the fields in the Add Custom Filter panel except the Preview Date. Using the Preview Date, you can select a date range to display the data.
-<code>\
-
-
-&lt;p id="gdcalert2" &gt;&lt;span style="color: red; font-weight: bold"&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href="#"&gt;Back to top&lt;/a&gt;)(&lt;a href="#gdcalert3"&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style="color: red; font-weight: bold"&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-
-
-![alt_text](images/image2.png "image_tooltip")
-
-
-
-    The Platform currently supports 3 types of filters:
-
-* **Drop-down list:** Allows you to choose from a list of values based on the selected field name within the dataset or meta tag. You can set one or more values as ‘default values’ for this control.
-    * This is an optional feature.
-    * The existing values of the selected field are displayed in ascending order as suggestions. Either choose from the suggested values or add a new value.</code>
-Note: By adding a new value, you can create filters for values that are not available for the VA.
-```</p>
+<p><a class="glightbox" href="../images/add-custom-filters1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-custom-filters1.png" alt="Add Custom Filters1" title="Add Custom Filters1" style="border: 1px solid gray; zoom:80%;"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tooltips are available for all the fields in the Add Custom Filter panel except the Preview Date. Using the Preview Date, you can select a date range to display the data.</p>
+</div>
+<p><a class="glightbox" href="../images/add-custom-filters2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-custom-filters2.png" alt="Add Custom Filters2" title="Add Custom Filters2" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p>The Platform currently supports 3 types of filters:</p>
+<ul>
+<li><strong>Drop-down list:</strong> Allows you to choose from a list of values based on the selected field name within the dataset or meta tag. You can set one or more values as ‘default values’ for this control.<ul>
+<li>This is an optional feature.</li>
+<li>The existing values of the selected field are displayed in ascending order as suggestions. Either choose from the suggested values or add a new value.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By adding a new value, you can create filters for values that are not available for the VA.</p>
+</div>
 <ul>
 <li><strong>Alphanumeric Text field:</strong> You can choose from the existing values of the selected field as suggestions in ascending order or add a new value. Adding a new value creates filters for the values which are not available in the VA.</li>
 <li><strong>Numeric Text field:</strong> You can choose a numeric range by providing values at the <strong>‘From Value’</strong> and <strong>‘To Value’</strong> fields. On applying this filter, results in each widget are filtered out based on the From and To values defined in the filter.</li>
@@ -3896,159 +3935,95 @@ Note: By adding a new value, you can create filters for values that are not avai
 </ul>
 <p>The fields in the Sessions dataset are supported for custom filters. Messages and Analytics dataset filters are not supported.</p>
 <p>See Datasets and Fields to understand more.</p>
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/add-custom-filters3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-custom-filters3.png" alt="Add Custom Filters3" title="Add Custom Filters3" style="border: 1px solid gray; zoom:80%;"></a>   </p>
 <p>For custom filters, we can use fields either from the Sessions dataset or from Message, User, or Session tags. We can add filters for the existing tags and also the tags that are not available in the VA. See Custom Meta Tags to understand more.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Note: Based on the Filter Source, select the fields in the Field Name drop-down. In case of Custom Tags, you can select any of the existing tags or add a tag that is not available in the VA.
-</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Based on the Filter Source, select the fields in the Field Name drop-down. In case of Custom Tags, you can select any of the existing tags or add a tag that is not available in the VA.</p>
+</div>
 <ol>
 <li>Click the button <strong>Save &amp; Preview</strong> to save and preview the filter details.</li>
 <li>You can also select a <strong>Default</strong> filter to be applied to all the widgets in the entire dashboard.</li>
 </ol>
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/add-custom-filters4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-custom-filters4.png" alt="Add Custom Filters4" title="Add Custom Filters4" style="border: 1px solid gray; zoom:80%;"></a>    </p>
 <ol>
 <li>Click the button <strong>Add to Dashboard</strong> in the preview panel to add the filter to the dashboard.</li>
-<li>
-<p>Click the button <strong>Apply</strong> if you want to apply the filter to the dashboard.</p>
-<p><code>Note: The default filter is added at the dashboard level (highlighted in the screenshot) and you can select the value from the LoB drop-down to apply to all the widgets.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;p id=&quot;gdcalert5&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert6&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>![alt_text](images/image5.png &quot;image_tooltip&quot;)
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>## Manage Filters
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>All the filters added to the dashboard are displayed on the Custom Dashboards home page. You can edit or delete a filter added to the Custom Dashboard.
-</span></code></pre></div>
-Note: The default Date Filter cannot be edited or deleted.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>### Update Filter
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>You can perform the following steps to update the filters of the Custom Dashboard:
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>1. Click the **Manage Filter** drop-down button. The options **Add Filter** and **Update Filter** are displayed.
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>&lt;p id=&quot;gdcalert6&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert7&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>![alt_text](images/image6.png &quot;image_tooltip&quot;)
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2. Select the **Update Filter** option. The panel **Update Custom Filter** is displayed as shown below.
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>&lt;p id=&quot;gdcalert7&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert8&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>![alt_text](images/image7.png &quot;image_tooltip&quot;)
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>3. Select a filter from the **Choose Filter** drop-down menu.
-</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
-</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
-</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
-</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>&lt;p id=&quot;gdcalert8&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert9&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>
-</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>
-</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>![alt_text](images/image8.png &quot;image_tooltip&quot;)
-</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>
-</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>
-</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>4. Edit the details as per the requirement, in the **Configuration** panel.
-</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>5. Click the **Preview** button. The **Preview Filter** pop-up is displayed as shown in the preceding screenshot. Select a value from the drop-down as per the requirement.
-</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>6. Click the **Update filter** button to update the details.
-</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>
-</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>
-</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>
-</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>&lt;p id=&quot;gdcalert9&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert10&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>
-</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>
-</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>![alt_text](images/image9.png &quot;image_tooltip&quot;)
-</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>
-</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>
-</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>7. Click **Proceed** in the displayed pop-up to confirm the updates.
-</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>
-</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>
-</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>### Delete Filter
-</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>
-</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>You can perform the following steps to delete the filters of the Custom Dashboard:
-</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>
-</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>
-</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>
-</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>1. In the **Update Custom Filter** panel, select the filter to be deleted from the **Choose Filter** drop-down.
-</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>
-</span><span id="__span-4-60"><a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>
-</span><span id="__span-4-61"><a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>
-</span><span id="__span-4-62"><a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>&lt;p id=&quot;gdcalert10&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert11&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-4-63"><a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>
-</span><span id="__span-4-64"><a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>
-</span><span id="__span-4-65"><a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>![alt_text](images/image10.png &quot;image_tooltip&quot;)
-</span><span id="__span-4-66"><a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>
-</span><span id="__span-4-67"><a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>
-</span><span id="__span-4-68"><a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>2. Click the button **Delete** to delete the selected filter.
-</span><span id="__span-4-69"><a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>
-</span><span id="__span-4-70"><a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>
-</span><span id="__span-4-71"><a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>
-</span><span id="__span-4-72"><a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>&lt;p id=&quot;gdcalert11&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert12&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-4-73"><a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a>
-</span><span id="__span-4-74"><a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>
-</span><span id="__span-4-75"><a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a>![alt_text](images/image11.png &quot;image_tooltip&quot;)
-</span><span id="__span-4-76"><a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a>
-</span><span id="__span-4-77"><a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a>
-</span><span id="__span-4-78"><a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a>3. Click **Proceed** in the displayed pop-up to confirm the deletion.
-</span><span id="__span-4-79"><a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a>
-</span><span id="__span-4-80"><a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a>
-</span><span id="__span-4-81"><a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a>### More Filters
-</span><span id="__span-4-82"><a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a>
-</span><span id="__span-4-83"><a id="__codelineno-4-83" name="__codelineno-4-83" href="#__codelineno-4-83"></a>If more than two filters are added to the dashboard, then they are displayed in the **More Filters** drop-down next to the first two added filters. \
-</span><span id="__span-4-84"><a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a>
-</span><span id="__span-4-85"><a id="__codelineno-4-85" name="__codelineno-4-85" href="#__codelineno-4-85"></a>
-</span><span id="__span-4-86"><a id="__codelineno-4-86" name="__codelineno-4-86" href="#__codelineno-4-86"></a>&lt;p id=&quot;gdcalert12&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert13&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-4-87"><a id="__codelineno-4-87" name="__codelineno-4-87" href="#__codelineno-4-87"></a>
-</span><span id="__span-4-88"><a id="__codelineno-4-88" name="__codelineno-4-88" href="#__codelineno-4-88"></a>
-</span><span id="__span-4-89"><a id="__codelineno-4-89" name="__codelineno-4-89" href="#__codelineno-4-89"></a>![alt_text](images/image12.png &quot;image_tooltip&quot;)
-</span><span id="__span-4-90"><a id="__codelineno-4-90" name="__codelineno-4-90" href="#__codelineno-4-90"></a>
-</span><span id="__span-4-91"><a id="__codelineno-4-91" name="__codelineno-4-91" href="#__codelineno-4-91"></a>
-</span><span id="__span-4-92"><a id="__codelineno-4-92" name="__codelineno-4-92" href="#__codelineno-4-92"></a>
-</span><span id="__span-4-93"><a id="__codelineno-4-93" name="__codelineno-4-93" href="#__codelineno-4-93"></a>## Filter Configurations
-</span><span id="__span-4-94"><a id="__codelineno-4-94" name="__codelineno-4-94" href="#__codelineno-4-94"></a>
-</span><span id="__span-4-95"><a id="__codelineno-4-95" name="__codelineno-4-95" href="#__codelineno-4-95"></a>The following list details the filtering configurations available on the Custom Dashboard:
-</span><span id="__span-4-96"><a id="__codelineno-4-96" name="__codelineno-4-96" href="#__codelineno-4-96"></a>
-</span><span id="__span-4-97"><a id="__codelineno-4-97" name="__codelineno-4-97" href="#__codelineno-4-97"></a>**Set Default Value**
-</span><span id="__span-4-98"><a id="__codelineno-4-98" name="__codelineno-4-98" href="#__codelineno-4-98"></a>
-</span><span id="__span-4-99"><a id="__codelineno-4-99" name="__codelineno-4-99" href="#__codelineno-4-99"></a>
-</span><span id="__span-4-100"><a id="__codelineno-4-100" name="__codelineno-4-100" href="#__codelineno-4-100"></a>
-</span><span id="__span-4-101"><a id="__codelineno-4-101" name="__codelineno-4-101" href="#__codelineno-4-101"></a>* Whenever a Custom Dashboard is loaded or refreshed, the ‘_default values_’ of the dashboard level filters are applied for all the widgets in that Custom Dashboard.
-</span><span id="__span-4-102"><a id="__codelineno-4-102" name="__codelineno-4-102" href="#__codelineno-4-102"></a>* If the default value is not set, then the filter is not applied to any of the widgets in the dashboard.
-</span><span id="__span-4-103"><a id="__codelineno-4-103" name="__codelineno-4-103" href="#__codelineno-4-103"></a>* If the default value is set, the filter is applied as per the filter component type as follows:
-</span><span id="__span-4-104"><a id="__codelineno-4-104" name="__codelineno-4-104" href="#__codelineno-4-104"></a>    * If the dropdown is used, all the values are selected as the default values and filtered.
-</span><span id="__span-4-105"><a id="__codelineno-4-105" name="__codelineno-4-105" href="#__codelineno-4-105"></a>    * If a date range is selected, the records between the **From Date** and **To Date**, including both dates, are filtered.
-</span><span id="__span-4-106"><a id="__codelineno-4-106" name="__codelineno-4-106" href="#__codelineno-4-106"></a>    * — If only the ‘**From Date**’ is selected, the records equal to or greater than the value in the ‘ **From Date**’ are filtered. \
-</span><span id="__span-4-107"><a id="__codelineno-4-107" name="__codelineno-4-107" href="#__codelineno-4-107"></a>— If only the ‘**To Date**’ is selected, the records less than or equal to the value in the ‘**To Date**’ are filtered. If a numeric range is selected, then the records that are between the **From Value** and **To Value**, including both the values, are filtered.
-</span><span id="__span-4-108"><a id="__codelineno-4-108" name="__codelineno-4-108" href="#__codelineno-4-108"></a>    * — If only the ‘**From Value**’ is selected, the records equal to or greater than that value are filtered. \
-</span><span id="__span-4-109"><a id="__codelineno-4-109" name="__codelineno-4-109" href="#__codelineno-4-109"></a>— If only the ‘**To Value**’ is selected, the records less than or equal to that value are filtered. If a text field is selected, the records that contain the exact value are filtered.
-</span><span id="__span-4-110"><a id="__codelineno-4-110" name="__codelineno-4-110" href="#__codelineno-4-110"></a>* The system dynamically appends the dashboard-level filters to each of the widget’s ‘Filter’ conditions during query execution.
-</span><span id="__span-4-111"><a id="__codelineno-4-111" name="__codelineno-4-111" href="#__codelineno-4-111"></a>* If the filter is not applicable for any of the widgets, then the data for that widget is not loaded, and a message is displayed. This usually happens when the dashboard filter’s dataset differs from the dataset used to define the widget.
-</span><span id="__span-4-112"><a id="__codelineno-4-112" name="__codelineno-4-112" href="#__codelineno-4-112"></a>
-</span><span id="__span-4-113"><a id="__codelineno-4-113" name="__codelineno-4-113" href="#__codelineno-4-113"></a>
-</span><span id="__span-4-114"><a id="__codelineno-4-114" name="__codelineno-4-114" href="#__codelineno-4-114"></a>
-</span><span id="__span-4-115"><a id="__codelineno-4-115" name="__codelineno-4-115" href="#__codelineno-4-115"></a>&lt;p id=&quot;gdcalert13&quot; &gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image13.png). Store image on your image server and adjust path/filename/extension if necessary. &lt;/span&gt;&lt;br&gt;(&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;)(&lt;a href=&quot;#gdcalert14&quot;&gt;Next alert&lt;/a&gt;)&lt;br&gt;&lt;span style=&quot;color: red; font-weight: bold&quot;&gt;&gt;&gt;&gt;&gt;&gt; &lt;/span&gt;&lt;/p&gt;
-</span><span id="__span-4-116"><a id="__codelineno-4-116" name="__codelineno-4-116" href="#__codelineno-4-116"></a>
-</span><span id="__span-4-117"><a id="__codelineno-4-117" name="__codelineno-4-117" href="#__codelineno-4-117"></a>
-</span><span id="__span-4-118"><a id="__codelineno-4-118" name="__codelineno-4-118" href="#__codelineno-4-118"></a>![alt_text](images/image13.png &quot;image_tooltip&quot;)
-</span></code></pre></div>
-Note: As per the settings in the Kore config, the maximum number of allowed Dashboard-level filters is 5.</code></p>
-</li>
+<li>Click the button <strong>Apply</strong> if you want to apply the filter to the dashboard.</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default filter is added at the dashboard level (highlighted in the screenshot) and you can select the value from the LoB drop-down to apply to all the widgets.</p>
+</div>
+<p><a class="glightbox" href="../images/add-custom-filters5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-custom-filters5.png" alt="Add Custom Filters5" title="Add Custom Filters5" style="border: 1px solid gray; zoom:80%;"></a> </p>
+<h2 id="manage-filters">Manage Filters<a class="headerlink" href="#manage-filters" title="Permanent link">&para;</a></h2>
+<p>All the filters added to the dashboard are displayed on the Custom Dashboards home page. You can edit or delete a filter added to the Custom Dashboard.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default Date Filter cannot be edited or deleted.</p>
+</div>
+<h3 id="update-filter">Update Filter<a class="headerlink" href="#update-filter" title="Permanent link">&para;</a></h3>
+<p>You can perform the following steps to update the filters of the Custom Dashboard:</p>
+<ol>
+<li>
+<p>Click the <strong>Manage Filter</strong> drop-down button. The options <strong>Add Filter</strong> and <strong>Update Filter</strong> are displayed.
+<a class="glightbox" href="../images/update-filter1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/update-filter1.png" alt="Update Filter1" title="Update Filter1" style="border: 1px solid gray; zoom:80%;"></a> </p>
+</li>
+<li>
+<p>Select the <strong>Update Filter</strong> option. The panel <strong>Update Custom Filter</strong> is displayed as shown below.
+<a class="glightbox" href="../images/update-filter2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/update-filter2.png" alt="Update Filter2" title="Update Filter2" style="border: 1px solid gray; zoom:80%;"></a> </p>
+</li>
+<li>
+<p>Select a filter from the <strong>Choose Filter</strong> drop-down menu.
+<a class="glightbox" href="../images/update-filter3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/update-filter3.png" alt="Update Filter3" title="Update Filter3" style="border: 1px solid gray; zoom:80%;"></a> </p>
+</li>
+<li>
+<p>Edit the details as per the requirement, in the <strong>Configuration</strong> panel.</p>
+</li>
+<li>Click the <strong>Preview</strong> button. The <strong>Preview Filter</strong> pop-up is displayed as shown in the preceding screenshot. Select a value from the drop-down as per the requirement.</li>
+<li>Click the <strong>Update filter</strong> button to update the details.</li>
+</ol>
+<p><a class="glightbox" href="../images/update-filter4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/update-filter4.png" alt="Update Filter4" title="Update Filter4" style="border: 1px solid gray; zoom:80%;"></a>    </p>
+<ol>
+<li>Click <strong>Proceed</strong> in the displayed pop-up to confirm the updates.</li>
+</ol>
+<h3 id="delete-filter">Delete Filter<a class="headerlink" href="#delete-filter" title="Permanent link">&para;</a></h3>
+<p>You can perform the following steps to delete the filters of the Custom Dashboard:</p>
+<ol>
+<li>In the <strong>Update Custom Filter</strong> panel, select the filter to be deleted from the <strong>Choose Filter</strong> drop-down.</li>
+</ol>
+<p><a class="glightbox" href="../images/delete-filter1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/delete-filter1.png" alt="Delete Filter1" title="Delete Filter1" style="border: 1px solid gray; zoom:80%;"></a> </p>
+<ol>
+<li>Click the button <strong>Delete</strong> to delete the selected filter.</li>
+</ol>
+<p><a class="glightbox" href="../images/delete-filter2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/delete-filter2.png" alt="Delete Filter2" title="Delete Filter2" style="border: 1px solid gray; zoom:80%;"></a></p>
+<ol>
+<li>Click <strong>Proceed</strong> in the displayed pop-up to confirm the deletion.</li>
+</ol>
+<h3 id="more-filters">More Filters<a class="headerlink" href="#more-filters" title="Permanent link">&para;</a></h3>
+<p>If more than two filters are added to the dashboard, then they are displayed in the <strong>More Filters</strong> drop-down next to the first two added filters.</p>
+<p><a class="glightbox" href="../images/more-filters.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/more-filters.png" alt="More Filters" title="Delete Filter1" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h2 id="filter-configurations">Filter Configurations<a class="headerlink" href="#filter-configurations" title="Permanent link">&para;</a></h2>
+<p>The following list details the filtering configurations available on the Custom Dashboard:</p>
+<p><strong>Set Default Value</strong></p>
+<ul>
+<li>Whenever a Custom Dashboard is loaded or refreshed, the ‘<em>default values</em>’ of the dashboard level filters are applied for all the widgets in that Custom Dashboard.</li>
+<li>If the default value is not set, then the filter is not applied to any of the widgets in the dashboard.</li>
+<li>If the default value is set, the filter is applied as per the filter component type as follows:<ul>
+<li>If the dropdown is used, all the values are selected as the default values and filtered.</li>
+<li>If a date range is selected, the records between the <strong>From Date</strong> and <strong>To Date</strong>, including both dates, are filtered.</li>
+<li>— If only the ‘<strong>From Date</strong>’ is selected, the records equal to or greater than the value in the ‘ <strong>From Date</strong>’ are filtered.
+— If only the ‘<strong>To Date</strong>’ is selected, the records less than or equal to the value in the ‘<strong>To Date</strong>’ are filtered. If a numeric range is selected, then the records that are between the <strong>From Value</strong> and <strong>To Value</strong>, including both the values, are filtered.</li>
+<li>— If only the ‘<strong>From Value</strong>’ is selected, the records equal to or greater than that value are filtered.
+— If only the ‘<strong>To Value</strong>’ is selected, the records less than or equal to that value are filtered. If a text field is selected, the records that contain the exact value are filtered.</li>
+</ul>
+</li>
+<li>The system dynamically appends the dashboard-level filters to each of the widget’s ‘Filter’ conditions during query execution.</li>
+<li>If the filter is not applicable for any of the widgets, then the data for that widget is not loaded, and a message is displayed. This usually happens when the dashboard filter’s dataset differs from the dataset used to define the widget.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As per the settings in the Kore config, the maximum number of allowed Dashboard-level filters is 5.</p>
+</div>
 
 
   
