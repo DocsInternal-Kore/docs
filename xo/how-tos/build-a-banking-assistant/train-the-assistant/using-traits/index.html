@@ -3906,18 +3906,16 @@
 <li>
 <p>A <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-a-sample-banking-assistant/" target="_blank">Banking Bot</a> with the dialogs as mentioned below:</p>
 <ul>
-<li>
-<p><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-transfer-funds-task/" target="_blank">Transfer Funds</a> – Dialog task prompting the user for Payer and Payee account numbers and the amount to be transferred and transferring the specified amount from the payer account to the payee account.
-<a class="glightbox" href="../images/dialog-transfer-funds.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-transfer-funds.png" alt="dialog transfer funds" title="dialog transfer funds" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-<li>
-<p><strong>Issue Resolution</strong>– Dialog task to assist in any issues faced by the user. It would display a regret message and transfer to a Live Agent.
-<a class="glightbox" href="../images/issue-resolution-dialog-traits.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/issue-resolution-dialog-traits.png" alt="issue resolution" title="issue resolution" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p><strong>Knowledge Collection</strong> – A node “transfer funds” with an FAQ “<em>How do I transfer funds?</em>”
-<a class="glightbox" href="../images/knowledge-collection.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/knowledge-collection.png" alt="knowledge collection" title="knowledge collection" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
+<li><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-transfer-funds-task/" target="_blank">Transfer Funds</a> – Dialog task prompting the user for Payer and Payee account numbers and the amount to be transferred and transferring the specified amount from the payer account to the payee account.</li>
+</ul>
+<p><a class="glightbox" href="../images/dialog-transfer-funds.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-transfer-funds.png" alt="dialog transfer funds" title="dialog transfer funds" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<ul>
+<li><strong>Issue Resolution</strong>– Dialog task to assist in any issues faced by the user. It would display a regret message and transfer to a Live Agent.</li>
+</ul>
+<p><a class="glightbox" href="../images/issue-resolution-dialog-traits.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/issue-resolution-dialog-traits.png" alt="issue resolution" title="issue resolution" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ul>
+<li><strong>Knowledge Collection</strong> – A node “transfer funds” with an FAQ “<em>How do I transfer funds?</em>”
+<a class="glightbox" href="../images/knowledge-collection.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/knowledge-collection.png" alt="knowledge collection" title="knowledge collection" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 </ul>
@@ -3929,7 +3927,7 @@
 <li>Select <strong>Build</strong> tab from the top menu.</li>
 <li>From <strong>Natural Language -&gt; Training</strong> select the <strong>Traits</strong> tab.</li>
 <li>
-<p>Click <strong>Add New Trait</strong>. We will be using a trait to identify the existence of the word ‘issue’ in the user utterance.</p>
+<p>Click <strong>Add New Trait</strong>. We will be using a trait to identify the existence of the word ‘issue’ in the user utterance. Follow the steps below to complete adding the trait:</p>
 <ul>
 <li>Add a <strong>Trait Type</strong> as <em>Problem Statement</em> and <strong>Traits</strong> as <em>issue</em>. A given Trait Type can have multiple Traits grouped together logically.</li>
 <li>
