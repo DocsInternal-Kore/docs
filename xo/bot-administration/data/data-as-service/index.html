@@ -4147,46 +4147,42 @@
 <li>
 <p>You can set the Instance and Connections properties as per your bot requirements.</p>
 </li>
-<li>
-<p>The data returned from the data table can be accessed from the context object and used in your task as per your need, using: <code>{{context.&amp;lt;service_node_name&gt;.response.body.queryResult[&amp;lt;index&gt;].&amp;lt;column_name&gt;}}</code></p>
-</li>
-<li>
+<li>The data returned from the data table can be accessed from the context object and used in your task as per your need, using: <code>{{context.&amp;lt;service_node_name&gt;.response.body.queryResult[&amp;lt;index&gt;].&amp;lt;column_name&gt;}}</code></li>
+</ol>
 <p>The response from this service call would be:  </p>
 <p>```
-  "CustomerView": {
-      "response": {
-          "body": {
-              "hasMore": true,
-              "total": 4,
-              "metaInfo": [
-              {
-                  "name": "type",
-                  "type": "string"
-              },
-              {
-                  "name": "address",
-                  "type": "string"
-              }
-              ],
-              "queryResult": [
-              {
-                  "type": "Gold",
-                  "address": "New York"
-              },
-              {
-                  "type": "Gold",
-                  "address": "Chicago"
-              },
-              {
-                  "type": "Gold",
-                  "address": "Chicago"
-              }
-              ]
-          }
-      }<br />
-  }</p>
-</li>
-</ol>
+    "CustomerView": {
+        "response": {
+            "body": {
+                "hasMore": true,
+                "total": 4,
+                "metaInfo": [
+                {
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                }
+                ],
+                "queryResult": [
+                {
+                    "type": "Gold",
+                    "address": "New York"
+                },
+                {
+                    "type": "Gold",
+                    "address": "Chicago"
+                },
+                {
+                    "type": "Gold",
+                    "address": "Chicago"
+                }
+                ]
+            }
+        }<br />
+    }</p>
 
 
   
