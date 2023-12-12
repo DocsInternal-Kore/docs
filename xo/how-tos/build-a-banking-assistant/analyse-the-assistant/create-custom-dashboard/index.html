@@ -3923,17 +3923,17 @@
 <p>In this post, we create a dashboard using various metrics to analyze the performance of a Virtual Assistant and identify trends for business needs using a Banking Bot as an example.</p>
 <h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
 <p>As a Banking Bot client, you want to track the following metrics:</p>
-<ul><li><a href="https://developer.kore.ai/docs/bots/how-tos/how-to-create-custom-dashboard/#Dollar_Value_Breakup" target="_blank">Dollar Value Breakup</a></li>
+<ul><li><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/analyse-the-assistant/create-custom-dashboard/#dollar-value-breakup" target="_blank">Dollar Value Breakup</a></li>
 
-<li><a href="https://developer.kore.ai/docs/bots/how-tos/how-to-create-custom-dashboard/#Customer_Type_Summary" target="_blank">Customer Type Summary</a></li>
+<li><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/analyse-the-assistant/create-custom-dashboard/#customer-type-summary" target="_blank">Customer Type Summary</a></li>
 
-<li><a href="https://developer.kore.ai/docs/bots/how-tos/how-to-create-custom-dashboard/#Task_Fulfillment_Trend" target="_blank">Task Fulfillment Trend</a></li>
+<li><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/analyse-the-assistant/create-custom-dashboard/#task-fulfillment-trend" target="_blank">Task Fulfillment Trend</a>.</li>
 
-<li><a href="https://developer.kore.ai/docs/bots/how-tos/how-to-create-custom-dashboard/#Top_Failure_Tasks" target="_blank">Top Failure Tasks</a></li>
+<li><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/analyse-the-assistant/create-custom-dashboard/#top-failure-tasks" target="_blank">Top Failure Tasks</a>.</li>
 
-<li><a href="https://developer.kore.ai/docs/bots/how-tos/how-to-create-custom-dashboard/#Channel_Volume_Trend" target="_blank">Channel Volume Trend</a></li>
+<li><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/analyse-the-assistant/create-custom-dashboard/#channel-volume-trend" target="_blank">Channel Volume Trend</a>.</li>
 
-<li><a href="https://developer.kore.ai/docs/bots/how-tos/how-to-create-custom-dashboard/#Filter_the_Messages_using_the_Having_Clause" target="_blank">Filter the Messages using the Having clause</a></li></ul>
+<li><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/analyse-the-assistant/create-custom-dashboard/#filter-the-messages-using-the-having-clause" target="_blank">Filter the Messages using the Having clause</a>.</li></ul>
 
 <p>You can create a custom dashboard to achieve all the scenarios listed above, with detailed step-by-step instructions as described in the following sections.</p>
 <p>Once the Dashboard is configured for the listed scenarios, it looks like below.</p>
@@ -3941,12 +3941,12 @@
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul><li>Bot building knowledge.</li>
 
-<li>Custom Meta Tags usage. Click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/custom-meta-tags/" target="_blank">here</a> for more information.</li>
+<li>Custom Meta Tags usage. Click <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/analyse-the-assistant/using-custom-tags-to-filter-assistant-metrics/" target="_blank">here</a> for more information.</li>
 
-<li>A <a href="https://developer.kore.ai/docs/bots/how-tos/creating-a-banking-bot/" target="_blank">Banking Bot</a> with the dialogs as follows:
+<li>A <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-a-sample-banking-assistant/" target="_blank">Banking Bot</a> with the dialogs as follows:
 </li>
 
-<ul><li><strong><a href="https://developer.kore.ai/docs/bots/how-tos/banking-bot-transfer-funds/" target="_blank">Transfer Funds</a></strong> – The Dialog task walking the user through the steps in transferring money.</li>
+<ul><li><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-transfer-funds-task/" target="_blank">Transfer Funds</a> – The Dialog task walking the user through the steps in transferring money.</li>
 
 <a class="glightbox" href="../images/transfer-funds-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/transfer-funds-dialog-task.png" alt="transfer funds" title="transfer funds" style="border: 1px solid gray; zoom:75%;"></a></ul></ul>
 
@@ -3988,11 +3988,10 @@
 <p>The details for each widget are explained in the following sections.</p>
 <h3 id="dollar-value-breakup">Dollar Value Breakup<a class="headerlink" href="#dollar-value-breakup" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Add Widget</strong></li>
+<li>Click <strong>Add Widget</strong></li>
 <li>Query setup:<ul>
 <li><strong>Dataset</strong> – <em>Analytics</em></li>
-<li><strong>Select</strong> – _sessionTag.TransferValue as TransferValue,count(taskName) 
-_This will let the platform know what data to fetch. Here we are using the session tag values added to the Transfer Amount task against the total number of tasks executed.</li>
+<li><strong>Select</strong> – <em>sessionTag.TransferValue as TransferValue,count(taskName)</em>. This will let the platform know what data to fetch. Here we are using the session tag values added to the Transfer Amount task against the total number of tasks executed.</li>
 <li><strong>Group By</strong> – <em>sessionTag.TransferValue.</em></li>
 <li><strong>Run</strong> to see the results from the above query.</li>
 </ul>
@@ -4000,7 +3999,7 @@ _This will let the platform know what data to fetch. Here we are using the sessi
 <li>
 <p>Widget Setup</p>
 <ul>
-<li>Select <strong>Pie chart</strong></li>
+<li>Select <strong>Pie chart</strong>.</li>
 <li>Set <strong>Dimension</strong> to TransferValue.</li>
 <li>Set <strong>Metrics</strong> to count(taskName).
 <a class="glightbox" href="../images/create-new-dashboard.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/create-new-dashboard.png" alt="create new dashboard" title="create new dashboard" style="border: 1px solid gray; zoom:75%;"></a></li>
@@ -4013,7 +4012,7 @@ _This will let the platform know what data to fetch. Here we are using the sessi
 </ol>
 <h3 id="customer-type-summary">Customer Type Summary<a class="headerlink" href="#customer-type-summary" title="Permanent link">&para;</a></h3>
 <p>This query provides usage statistics based on the customer type.</p>
-<p>Repeat the steps listed in the previous section (<a href="https://developer.kore.ai/docs/bots/how-tos/how-to-create-custom-dashboard/#Dollar_Value_Breakup" target="_blank">Dollar Value Breakup</a>) with the following details:</p>
+<p>Repeat the steps listed in the previous section (<a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/analyse-the-assistant/create-custom-dashboard/#dollar-value-breakup" target="_blank">Dollar Value Breakup</a>) with the following details:</p>
 <ol>
 <li>Click <strong>Add Widget</strong>.</li>
 <li>
@@ -4042,13 +4041,13 @@ _This will let the platform know what data to fetch. Here we are using the sessi
 <p>This query provides day-wise task success vs. failure trends.</p>
 <p>Repeat the steps listed in the previous section with the following details:</p>
 <ol>
-<li>Cick <strong>Add Widget</strong>.</li>
+<li>Click <strong>Add Widget</strong>.</li>
 <li>
 <p>Query setup:</p>
 <ul>
 <li><strong>Dataset</strong> – <em>Analytics.</em></li>
 <li><strong>Select</strong> – <em>date,metricType, count(metricType) as TotalTasks</em>.</li>
-<li><strong>Filter By</strong> – _metricType = ‘successtasks’ or metricType = ‘failedtasks’.</li>
+<li><strong>Filter By</strong> – <em>metricType</em> = ‘successtasks’ or metricType = ‘failedtasks’.</li>
 </ul>
 </li>
 </ol>
@@ -4135,7 +4134,7 @@ _This will let the platform know what data to fetch. Here we are using the sessi
 <p>This query uses a <strong>Having</strong> clause, to display the number of filtered messages for <em>userIds</em>, where the user has interacted with the virtual assistant more than 12 times. The query setup and result are described below.</p>
 <p>Repeat the steps listed in the previous section with the following details:</p>
 <ol>
-<li><strong>Add Widget</strong></li>
+<li>Click <strong>Add Widget</strong>.</li>
 <li>Query setup:<ul>
 <li><strong>Dataset</strong> – <em>Messages</em>.</li>
 <li><strong>Select</strong> – <em>count(messageId),userId</em>.</li>
