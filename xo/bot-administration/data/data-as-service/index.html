@@ -4084,10 +4084,12 @@
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>}
 </span></code></pre></div>
 <h3 id="delete-data">Delete data<a class="headerlink" href="#delete-data" title="Permanent link">&para;</a></h3>
-<p>To delete rows from the data table you need to define filter criteria to specify the rows to be deleted using
-* the column names,
-* an operator and
-* filter value, these values can be static or a reference to a context object  for example <code>{{context.entities.&amp;lt;entity-name&gt;}}</code>. Multiple filter criteria can be defined using AND/OR connectors.</p>
+<p>To delete rows from the data table you need to define filter criteria to specify the rows to be deleted using</p>
+<ul>
+<li>the column names,</li>
+<li>an operator and</li>
+<li>filter value, these values can be static or a reference to a context object  for example <code>{{context.entities.&amp;lt;entity-name&gt;}}</code>. Multiple filter criteria can be defined using AND/OR connectors.</li>
+</ul>
 <p><a class="glightbox" href="../images/data-as-service-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img7.png" alt="Delete data" title="Delete data" style="border: 1px solid gray;zoom:80%;"/></a></p>
 <p>The response from this service request would be:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&quot;customerdetails&quot;: {
@@ -4150,41 +4152,41 @@
 </li>
 <li>
 <p>The response from this service call would be:  </p>
+<p>```
+  "CustomerView": {
+      "response": {
+          "body": {
+              "hasMore": true,
+              "total": 4,
+              "metaInfo": [
+              {
+                  "name": "type",
+                  "type": "string"
+              },
+              {
+                  "name": "address",
+                  "type": "string"
+              }
+              ],
+              "queryResult": [
+              {
+                  "type": "Gold",
+                  "address": "New York"
+              },
+              {
+                  "type": "Gold",
+                  "address": "Chicago"
+              },
+              {
+                  "type": "Gold",
+                  "address": "Chicago"
+              }
+              ]
+          }
+      }<br />
+  }</p>
 </li>
 </ol>
-<p>```
-    "CustomerView": {
-        "response": {
-            "body": {
-                "hasMore": true,
-                "total": 4,
-                "metaInfo": [
-                {
-                    "name": "type",
-                    "type": "string"
-                },
-                {
-                    "name": "address",
-                    "type": "string"
-                }
-                ],
-                "queryResult": [
-                {
-                    "type": "Gold",
-                    "address": "New York"
-                },
-                {
-                    "type": "Gold",
-                    "address": "Chicago"
-                },
-                {
-                    "type": "Gold",
-                    "address": "Chicago"
-                }
-                ]
-            }
-        }<br />
-    }</p>
 
 
   
