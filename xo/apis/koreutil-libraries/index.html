@@ -3991,58 +3991,56 @@
 <h2 id="list-of-koreutil-libraries">List of koreUtil libraries<a class="headerlink" href="#list-of-koreutil-libraries" title="Permanent link">&para;</a></h2>
 <p>Below is the list of koreUtil libraries provided by the Platform:</p>
 <ul>
-<li><a href="#koreUtilrrule">koreUtil.rrule</a></li>
-<li><a href="#koreUtilmoment">koreUtil.moment</a></li>
-<li><a href="#koreUtilintl">koreUtil.intl</a></li>
-<li><a href="#koreUtilmomenttz">koreUtil.momenttz</a></li>
-<li><a href="#koreUtilxml2js">koreUtil.xml2js</a></li>
-<li><a href="#koreUtilhash">koreUtil.hash</a></li>
-<li><a href="#koreUtil">koreUtil._</a></li>
-<li><a href="#koreUtilgetCurrentOptions">koreUtil.getCurrentOptions</a></li>
-<li><a href="#koreUtilgetAmbiguousIntents">koreUtil.getAmbiguousIntents</a></li>
-<li><a href="#koreUtilgetSessionId">koreUtil.getSessionId</a></li>
-<li><a href="#koreUtilclose">koreUtil.closeConversationSession</a></li>
-<li><a href="#koreautotranslate">koreUtil.autoTranslate</a></li>
+<li><a href="../koreutil-libraries#koreUtilrrule">koreUtil.rrule</a></li>
+<li><a href="../koreutil-libraries#koreUtilmoment">koreUtil.moment</a></li>
+<li><a href="../koreutil-libraries#koreUtilintl">koreUtil.intl</a></li>
+<li><a href="../koreutil-libraries#koreUtilmomenttz">koreUtil.momenttz</a></li>
+<li><a href="../koreutil-libraries#koreUtilxml2js">koreUtil.xml2js</a></li>
+<li><a href="../koreutil-libraries#koreUtilhash">koreUtil.hash</a></li>
+<li><a href="../koreutil-libraries#koreUtil">koreUtil._</a></li>
+<li><a href="../koreutil-libraries#koreUtilgetCurrentOptions">koreUtil.getCurrentOptions</a></li>
+<li><a href="../koreutil-libraries#koreUtilgetAmbiguousIntents">koreUtil.getAmbiguousIntents</a></li>
+<li><a href="../koreutil-libraries#koreUtilgetSessionId">koreUtil.getSessionId</a></li>
+<li><a href="../koreutil-libraries#koreUtilclose">koreUtil.closeConversationSession</a></li>
+<li><a href="../koreutil-libraries#koreautotranslate">koreUtil.autoTranslate</a></li>
 </ul>
 <h3 id="koreutilrrule">koreUtil.rrule<a class="headerlink" href="#koreutilrrule" title="Permanent link">&para;</a></h3>
 <p>koreUtil.rrule is a platform-offered JS library for creating new recurrence rules, interpreting and reading them in human-readable format.</p>
 <p><strong>Usage Example:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>context.rule = new koreUtil.rrule({ \
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>freq: koreUtil.rrule.WEEKLY, \
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>interval: 5, \
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>byweekday: [koreUtil.rrule.MO, koreUtil.rrule.FR], \
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>dtstart: new Date(2012, 1, 1, 10, 30), \
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>until: new Date(2012, 12, 31) \
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>}); \
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>context.between=context.rule.between(new Date(2012, 7, 1), new Date(2012, 8, 1)); \
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>context.rule = new koreUtil.rrule({ 
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>freq: koreUtil.rrule.WEEKLY, 
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>interval: 5, 
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>byweekday: [koreUtil.rrule.MO, koreUtil.rrule.FR], 
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>dtstart: new Date(2012, 1, 1, 10, 30), 
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>until: new Date(2012, 12, 31) 
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>}); 
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>context.between=context.rule.between(new Date(2012, 7, 1), new Date(2012, 8, 1)); 
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>context.readableFormat=context.rule.toText();
 </span></code></pre></div></p>
 <p><strong>Output:</strong></p>
-<ul>
-<li>For context.between \
-<code>[ \
-"2012-08-27T10:30:00.000Z", \
-"2012-08-31T10:30:00.000Z" \
-]</code></li>
-<li>For context.readableFormat \
-<code>every 5 weeks on Monday, Friday until January 31, 2013</code></li>
-</ul>
+<p><em>For context.between</em>
+<code>[ 
+"2012-08-27T10:30:00.000Z", 
+"2012-08-31T10:30:00.000Z" 
+]</code>
+<em>For context.readableFormat</em>
+<code>every 5 weeks on Monday, Friday until January 31, 2013</code></p>
 <h3 id="koreutilmoment">koreUtil.moment<a class="headerlink" href="#koreutilmoment" title="Permanent link">&para;</a></h3>
 <p>koreUtil.moment is a platform-offered JS library for validating, manipulating, and formatting dates.</p>
-<p><strong>Usage Example:</strong> \
+<p><strong>Usage Example:</strong> 
 <code>context.german=koreUtil.moment().locale('de').format('LLLL');</code></p>
-<p><strong>Output:</strong> \
-**For context.german: \
+<p><strong>Output:</strong> 
+<em>For context.german:</em>
 <code>Montag, 18. November 2019 01:43</code></p>
 <h3 id="koreutilintl">koreUtil.intl<a class="headerlink" href="#koreutilintl" title="Permanent link">&para;</a></h3>
 <p>koreUtil.intl is a platform-offered JS library for language-specific string comparison, number formatting, and date and time formatting.</p>
-<p><strong>Usage Example: \
-<code>context.formattedNumberUK = koreUtil.intl.NumberFormat('en-GB').format(123456.789); \
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0)); \
-context.USdate=koreUtil.intl.DateTimeFormat('en-US').format(date);</code></strong></p>
+<p><strong>Usage Example:</strong>
+<code>context.formattedNumberUK = koreUtil.intl.NumberFormat('en-GB').format(123456.789);
+var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0)); 
+context.USdate=koreUtil.intl.DateTimeFormat('en-US').format(date);</code></p>
 <p><strong>Output:</strong></p>
 <ul>
-<li>For context.formattedNumberUK: \
+<li>For context.formattedNumberUK: *
 <code>123,456.789</code></li>
 <li>For context.USdate \
 <code>12/20/2012</code></li>
