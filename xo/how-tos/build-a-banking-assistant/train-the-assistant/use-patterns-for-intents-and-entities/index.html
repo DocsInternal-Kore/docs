@@ -4103,7 +4103,7 @@ For e.g., the pattern (buy ~number ticket) will match “buy 2 tickets for the s
    <td><b>word1 *n word2</b>
 
    </td>
-   <td>Exactly _n_ number of additional words between the specified words/phrases
+   <td>Exactly <b>n</b> number of additional words between the specified words/phrases
 
    </td>
    <td>
@@ -4140,7 +4140,7 @@ For e.g., the pattern (buy ~number ticket) will match “buy 2 tickets for the s
    <td><b>word1 *~n word2</b>
 
    </td>
-   <td>Up to _n_ number of additional words between the specified words/phrases.
+   <td>Up to <b>n</b> number of additional words between the specified words/phrases.
 
 !!!note
 
@@ -4368,7 +4368,7 @@ No space between !! and word/concept.
    <td><b>[ … ]</b>
 
    </td>
-   <td>Used to define a group of words/concepts and the match should be against exactly one of the group declared in [ ]._ Be aware that when a match is found the rest of the group is ignored, so order the words accordingly._
+   <td>Used to define a group of words/concepts and the match should be against exactly one of the group declared in [ ]. Be aware that when a match is found the rest of the group is ignored, so order the words accordingly.
 
 <b>Note</b>: The brackets should not be clubbed with the word, i.e. maintain a space between the parenthesis and the adjacent word.
 
@@ -4446,7 +4446,7 @@ No space between !! and word/concept.
    </td>
    <td>Contains a sub-pattern i.e. when a pattern or part of a pattern is enclosed in these parentheses, we treat it as a pattern unlike [ ] and { }.
 
-This is the default setting i.e. when a pattern _word1 word2_ it is treated as _( word1 word2 )_
+This is the default setting i.e. when a pattern _word1 word2_ it is treated as <i>( word1 word2 )</i>
 
 Commonly used explicitly to define sub pattern inside [ ] or { }
 
@@ -4643,7 +4643,7 @@ Due to the risk of running into false positives, you are advised <span style="te
 <li>User utterance: <em>Planning a trip to California get me the forecast</em><ul>
 <li>Will not match <em>Get current weather</em></li>
 <li>Will match <em>Get 3-day weather forecast 
-_Note that the _!word</em> means <em>not after this point</em>. </li>
+Note that the _!word</em> means <em>not after this point</em>.</li>
 </ul>
 </li>
 </ul>
@@ -4721,8 +4721,8 @@ or <em>Transfer funds from my account to ABC123.</em> </li>
 <li><strong>Pattern for <em>ToAccount</em> entity</strong>: <em>“to * [ using from ]”</em> and <em>“[ using from ] to *1”</em>. </li>
 <li><strong>Pattern for FromAccount entity</strong>: “<em>[using from] * to” and “to [using from] *</em>” .</li>
 <li><strong>User Utterance</strong>: <em>Transfer funds to ABC123 from my account.</em>
-or <em>Transfer funds using my account to ABC123.</em>
-<strong>Entity Extracted</strong><em>: _ToAccount = ABC123</em> and <em>FromAccount = my account</em>.</li>
+or <em>Transfer funds using my account to ABC123.</em></li>
+<li><strong>Entity Extracted</strong>: <em>ToAccount = ABC123</em> and <em>FromAccount = my account</em>.</li>
 <li><strong>User Utterance not resulting in entity extraction</strong>: “transfer funds for <em>ABC123 using my account”</em>.</li>
 </ul>
 <h3 id="pattern-5-customconcept">Pattern 5: ~CustomConcept *<a class="headerlink" href="#pattern-5-customconcept" title="Permanent link">&para;</a></h3>
@@ -4734,7 +4734,7 @@ or <em>Transfer funds using my account to ABC123.</em>
 <li><strong>User Utterance</strong>: <em>Transfer funds to ABC123 using my account.</em>
 or <em>Transfer funds from my account to ABC123.</em> </li>
 <li><strong>Entity Extracted</strong>: <em>ToAccount = ABC123</em> and <em>FromAccount = my account</em>.</li>
-<li><strong>User Utterance not resulting in entity extraction</strong><em>: “_transfer funds to ABC123 <span style="text-decoration:underline;">of</span> my account</em>”</li>
+<li><strong>User Utterance not resulting in entity extraction</strong>: “<em>transfer funds to ABC123 <span style="text-decoration:underline;">of</span> my account</em>”</li>
 </ul>
 <h3 id="pattern-6-intent">Pattern 6: ~intent<a class="headerlink" href="#pattern-6-intent" title="Permanent link">&para;</a></h3>
 <p>Useful in entity patterns and custom entities 
