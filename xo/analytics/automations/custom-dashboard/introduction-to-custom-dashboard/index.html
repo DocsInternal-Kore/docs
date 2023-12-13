@@ -4000,8 +4000,8 @@
 <li>
 <p>Each of these dashboards can have one or more <strong>widgets</strong>.</p>
 </li>
-<li>Each widget in the dashboard must be associated with a dataset</li>
-<li>You need to define a query to extract the required data to be displayed in a widget</li>
+<li>Each widget in the dashboard must be associated with a dataset.</li>
+<li>You need to define a query to extract the required data to be displayed in a widget.</li>
 </ol>
 <h2 id="add-custom-dashboards">Add Custom Dashboards<a class="headerlink" href="#add-custom-dashboards" title="Permanent link">&para;</a></h2>
 <p>You can add one or more Dashboards by providing basic details of the Dashboard.</p>
@@ -4048,7 +4048,7 @@
 <ul>
 <li>The fields differ for each selected dataset. See the table for more details. For example to list the success &amp; failed intents, <em>metricType</em>:</li>
 <li>
-<p>You can apply on these fields the aggregation functions like “<em>min”</em>, “<em>max”</em>, “<em>sum”</em>, “<em>count”</em>, or “<em>avg”</em>“. For example, to count the total triggered intents, <em>count(metricType)</em>, you can give a display name as an alias – <em>count(metricType) as total.</em></p>
+<p>You can apply on these fields the aggregation functions like “<em>min”</em>, “<em>max”</em>, “<em>sum”</em>, “<em>count”</em>, or “<em>avg”</em>. For example, to count the total triggered intents, <em>count(metricType)</em>, you can give a display name as an alias – <em>count(metricType) as total.</em></p>
 </li>
 <li>
 <p><strong>Aggregate Functions:</strong> While defining a query, you can click the drop-down provided for each field in <strong>Select</strong>, to access the relevant aggregate functions. On selecting the appropriate aggregate function, you can enter the filter criteria.</p>
@@ -4126,12 +4126,10 @@
 <li>Average</li>
 </ul>
 <p>Apart from these if you have defined any Custom/Meta Tags for your VA, you can use them under the appropriate heading with the following notation: <code>userTag.tagname = value</code>. If you declared a Message level custom tag, select the Message Dataset and enter <code>messageTag.TagName</code>. This would result in an empty dataset, and as a result the display would be empty.</p>
-<p><strong>Filter By</strong> clause is used to extract only those records that fulfill a specified condition. You can apply the following operators on these fields: “<em>=”</em>, “<em>&gt;=”</em>, “<em>&lt;=”</em>, “<em>&gt;”</em>, “<em>&lt;“, “in”, “not in”</em>. \
-For example, to obtain the count of a specific FAQ, the following details are entered in the query setup. \
- \
- \
-<code>taskName = 'What account privileges does an authorized user have?' <strong>and </strong>metricType = successtasks<em>. \
-</em></code>While conjugating multiple conditions, they would be evaluated left to right, and this ordering cannot be changed using parentheses ()</p>
+<p><strong>Filter By</strong> clause is used to extract only those records that fulfill a specified condition. You can apply the following operators on these fields: “<em>=”</em>, “<em>&gt;=”</em>, “<em>&lt;=”</em>, “<em>&gt;”</em>, “<em>&lt;“, “in”, “not in”</em>.
+For example, to obtain the count of a specific FAQ, the following details are entered in the query setup. </p>
+<p><code>taskName = 'What account privileges does an authorized user have?' <strong>and </strong>metricType = successtasks<em>.</p>
+<p></em></code>While conjugating multiple conditions, they would be evaluated left to right, and this ordering cannot be changed using parentheses ()</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In the query setup, for Filter By, individual AND, OR operators, and multiple ANDs, ORs, can be applied, but a combination of AND/ORs is not supported.</p>
