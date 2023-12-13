@@ -3887,32 +3887,32 @@
     Synonyms
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#synonym-types" class="md-nav__link">
-    Synonym Types
-  </a>
-  
-    <nav class="md-nav" aria-label="Synonym Types">
+    <nav class="md-nav" aria-label="Synonyms">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#traits" class="md-nav__link">
-    Traits
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intents" class="md-nav__link">
-    Intents
+  <a href="#synonym-types" class="md-nav__link">
+    Synonym Types
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traits" class="md-nav__link">
+    Traits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intents" class="md-nav__link">
+    Intents
+  </a>
   
 </li>
       
@@ -3980,10 +3980,10 @@
 <h2 id="synonyms">Synonyms<a class="headerlink" href="#synonyms" title="Permanent link">&para;</a></h2>
 <p>The Knowledge Graph allows you to add <a href="https://developer.kore.ai/docs/bots/nlp/knowledge-graph/#Synonyms">Synonyms</a> for terms to include all possible alternative forms. Adding synonyms reduces the need for training the VA with alternative questions.</p>
 <p>For example, the reservation node in our previously-mentioned Travel Assistant may have the following synonyms added to it: booking, order, purchase, etc. </p>
-<h2 id="synonym-types">Synonym Types<a class="headerlink" href="#synonym-types" title="Permanent link">&para;</a></h2>
+<h3 id="synonym-types">Synonym Types<a class="headerlink" href="#synonym-types" title="Permanent link">&para;</a></h3>
 <p>When you add a synonym for a term or a tag in the Knowledge Graph, you can add it as a local or global synonym. Local synonyms (or <strong><em>Path Level Synonyms</em></strong>) apply to the term only in that particular path, whereas global synonyms (or <strong><em>Knowledge Graph Synonyms</em></strong>) apply to the term even if it appears on any other path in the ontology.</p>
 <p>After v. 7.2 of the XO Platform, you can also use <strong><em>Bot Synonyms</em></strong> inside the Knowledge Graph engine for path qualification and question matching. With this setting, you need not recreate the same synonyms in Bot Synonyms and KG Synonyms.</p>
-<h3 id="traits">Traits<a class="headerlink" href="#traits" title="Permanent link">&para;</a></h3>
+<h2 id="traits">Traits<a class="headerlink" href="#traits" title="Permanent link">&para;</a></h2>
 <p>A trait is a collection of typical end-user utterances that define the nature of a question. <a href="https://developer.kore.ai/docs/bots/nlp/traits/">Learn more</a>.</p>
 <p>A trait is applied to multiple terms across your Bot Ontology.</p>
 <div class="admonition note">
@@ -3992,7 +3992,7 @@
 <li>If the utterance is present in any other node to which the trait is not applied, the node is ignored.</li></ul></p>
 </div>
 
-<h3 id="intents">Intents<a class="headerlink" href="#intents" title="Permanent link">&para;</a></h3>
+<h2 id="intents">Intents<a class="headerlink" href="#intents" title="Permanent link">&para;</a></h2>
 <p>A VA can respond to a given question with an FAQ or the execution of a Dialog Task.</p>
 <ul>
 <li>
