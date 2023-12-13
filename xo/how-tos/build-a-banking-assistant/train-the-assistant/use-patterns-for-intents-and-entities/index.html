@@ -17,7 +17,7 @@
     
     
       
-        <title>Using Patterns for Intents & Entities - Kore ai Docs</title>
+        <title>Use Patterns for Intents & Entities - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-patterns-for-intents-entities" class="md-skip">
+        <a href="#use-patterns-for-intents-entities" class="md-skip">
           Skip to content
         </a>
       
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using Patterns for Intents & Entities
+              Use Patterns for Intents & Entities
             
           </span>
         </div>
@@ -3942,7 +3942,7 @@
 
 
 
-<h1 id="using-patterns-for-intents-entities">Using Patterns for Intents &amp; Entities<a class="headerlink" href="#using-patterns-for-intents-entities" title="Permanent link">&para;</a></h1>
+<h1 id="use-patterns-for-intents-entities">Use Patterns for Intents &amp; Entities<a class="headerlink" href="#use-patterns-for-intents-entities" title="Permanent link">&para;</a></h1>
 <p>Using patterns can help to improve NLP interpreter accuracy.</p>
 <p>In this document, we will elaborate on the various pattern syntax and how they can be used in intent detection and entity extraction.</p>
 <p><strong>Things to Remember:</strong></p>
@@ -4035,7 +4035,7 @@
    </td>
    <td>Compound words:  A compound word is treated as one word and that impacts how the canonical form is constructed. No additional words allowed in between word1 and word2. This is to ensure that a sequence of tokens are read as a phrase. Usage is restricted to words, concepts not allowed.
 
-**Note**: There should be no space between the word1, word2 and _.
+<b>Note</b>: There should be no space between the word1, word2 and _.
 
    </td>
    <td>
@@ -4070,7 +4070,7 @@
    </td>
    <td>_word1 ensures that the word1 in the user utterance is <span style="text-decoration:underline;">not marked</span> as <span style="text-decoration:underline;">Used Up</span> by the platform and is to be considered for entity extraction. This is useful when entity words are used in the intent pattern.
 
-For e.g., the pattern (buy ~number ticket) will match “buy 2 tickets for the show at 7”; each of the three pattern words internally will be tracked as used up, but a ticket number entity will first consider “7” and not “2” because “7” is not used up. If the pattern is changed to (**buy _~number ticket**), then “2” is still matched for the intent pattern but the word is not marked as used up and the entity would consider it, hence the leading underscore is useful for pattern tokens that constitute important data.
+For e.g., the pattern (buy ~number ticket) will match “buy 2 tickets for the show at 7”; each of the three pattern words internally will be tracked as used up, but a ticket number entity will first consider “7” and not “2” because “7” is not used up. If the pattern is changed to (buy _~number ticket), then “2” is still matched for the intent pattern but the word is not marked as used up and the entity would consider it, hence the leading underscore is useful for pattern tokens that constitute important data.
 
    </td>
    <td>
@@ -4142,9 +4142,11 @@ For e.g., the pattern (buy ~number ticket) will match “buy 2 tickets for the s
    </td>
    <td>Up to _n_ number of additional words between the specified words/phrases.
 
-**Note:** FM engine automatically generates variations with this wildcard and unless it is a special scenario, developers do not further perform any action.
+!!!note
 
-An advanced NLP configuration setting allows developers to change the default number of possible wildcards between tokens.
+    FM engine automatically generates variations with this wildcard and unless it is a special scenario, developers do not further perform any action.
+
+    An advanced NLP configuration setting allows developers to change the default number of possible wildcards between tokens.
 
    </td>
    <td>
@@ -4183,7 +4185,7 @@ _“<em>can you tell me what the credit on my card is</em>?”
 
 (available 7.1 onwards).
 
-**Note:** If a phrase needs to be treated as an idiom or  a complete unit, then instead of using an _ or the *0 syntax, the phrase can be used in concept. The advantages of this usage are having a specific sequence of words, correct canonical handling, easy reuse, and better performance.
+<b>Note</b>: If a phrase needs to be treated as an idiom or  a complete unit, then instead of using an _ or the *0 syntax, the phrase can be used in concept. The advantages of this usage are having a specific sequence of words, correct canonical handling, easy reuse, and better performance.
 
    </td>
    <td>
@@ -4220,7 +4222,7 @@ _“<em>can you tell me what the credit on my card is</em>?”
    </td>
    <td>Indicates the match for word1 should start from the beginning of a sentence. Add a space after the angular bracket.
 
-**Note:** ‘**&lt;’** indicates the start of the sentence. The next token would match the first word.
+<b>Note</b>: ‘<’ indicates the start of the sentence. The next token would match the first word.
 
    </td>
    <td>
@@ -4368,7 +4370,7 @@ No space between !! and word/concept.
    </td>
    <td>Used to define a group of words/concepts and the match should be against exactly one of the group declared in [ ]._ Be aware that when a match is found the rest of the group is ignored, so order the words accordingly._
 
-**Note:** The brackets should not be clubbed with the word, i.e. maintain a space between the parenthesis and the adjacent word.
+<b>Note</b>: The brackets should not be clubbed with the word, i.e. maintain a space between the parenthesis and the adjacent word.
 
    </td>
    <td>
@@ -4407,7 +4409,7 @@ No space between !! and word/concept.
    </td>
    <td>Used to define an optional group or words/concepts and the match would be against zero or one of the words/patterns declared in { }. Be aware that when a match is found, rest of the group is ignored, so order the words accordingly.
 
-**Note:** The brackets should not be clubbed with the word, i.e. maintain a space between the parenthesis and the adjacent word.
+<b>Note</b>: The brackets should not be clubbed with the word, i.e. maintain a space between the parenthesis and the adjacent word.
 
    </td>
    <td>
@@ -4548,7 +4550,7 @@ Due to the risk of running into false positives, you are advised <span style="te
   <tr>
    <td><b>word1~concept2</b>
 
-**~concept1~concept2**
+<b>~concept1~concept2</b>
 
 (from ver8.0)
 
@@ -4646,15 +4648,19 @@ _Note that the _!word</em> means <em>not after this point</em>. </li>
 </li>
 </ul>
 <p>So (!forecast the weather) and (get the weather !forecast) are different. The utterance <em>get the forecast for the weather</em> matches the second but not the first.</p>
-<p><strong>Optional: {X}</strong>: For example, {phone} If the user utterance is <em>Get me a phone number</em> or <em>get me a number</em> the platform will treat it equally.
-* <strong>Enforce Phrase:</strong> X_Y: To enforce occurrence of the phrase as is in the user utterance, without any words in between. For example, transfer_funds. The utterance <em>transfer funds</em> or <em>I want to transfer funds</em> will match but not <em>Can I transfer some funds</em>.
-* <strong>Concepts: ~</strong>: Platform has a large set of inbuilt concepts that developers can use to define a pattern. For example, (I [like love] ~world_country) will match
-    * I like India
-    * I love traveling to Australia
-    * I would like to visit an African country
-* <strong>Unordered: &lt;&lt;, &gt;&gt;</strong>: Used to find words in any order. For example, &lt;<Cancel Order>&gt; matches <em>Cancel my phone order</em> and also <em>I have a pending order for an iPhone X, can I cancel</em>
-* <strong>Start/End of Statement: &lt;, &gt;:</strong> For example, ( <em>transfer fund &gt;</em> ) will match <em>I want to transfer funds</em> but will not match <em>transfer funds today.</em>
-* <strong>Quote</strong>: <strong>‘–</strong>: If you quote words or use words that are not in canonical form, the system will restrict itself to what you used in the pattern. For example, (<em>like to transfer funds</em>) This matches <em>I would like to transfer funds from my account</em> but not <em>I really liked transfer funds process</em>.</p>
+<p><strong>Optional: {X}</strong>: For example, {phone} If the user utterance is <em>Get me a phone number</em> or <em>get me a number</em> the platform will treat it equally.</p>
+<ul>
+<li><strong>Enforce Phrase:</strong> X_Y: To enforce occurrence of the phrase as is in the user utterance, without any words in between. For example, transfer_funds. The utterance <em>transfer funds</em> or <em>I want to transfer funds</em> will match but not <em>Can I transfer some funds</em>.</li>
+<li><strong>Concepts: ~</strong>: Platform has a large set of inbuilt concepts that developers can use to define a pattern. For example, (I [like love] ~world_country) will match<ul>
+<li>I like India</li>
+<li>I love traveling to Australia</li>
+<li>I would like to visit an African country</li>
+</ul>
+</li>
+<li><strong>Unordered: &lt;&lt;, &gt;&gt;</strong>: Used to find words in any order. For example, &lt;<Cancel Order>&gt; matches <em>Cancel my phone order</em> and also <em>I have a pending order for an iPhone X, can I cancel</em></li>
+<li><strong>Start/End of Statement: &lt;, &gt;:</strong> For example, ( <em>transfer fund &gt;</em> ) will match <em>I want to transfer funds</em> but will not match <em>transfer funds today.</em></li>
+<li><strong>Quote</strong>: <strong>‘–</strong>: If you quote words or use words that are not in canonical form, the system will restrict itself to what you used in the pattern. For example, (<em>like to transfer funds</em>) This matches <em>I would like to transfer funds from my account</em> but not <em>I really liked transfer funds process</em>.</li>
+</ul>
 <h2 id="negative-patterns">Negative Patterns<a class="headerlink" href="#negative-patterns" title="Permanent link">&para;</a></h2>
 <p>Negative Patterns can be used to eliminate intents detected in the presence of a phrase. This will help filter the matched intents for false positives.</p>
 <ul>
@@ -4680,15 +4686,15 @@ or “<em>I got an error during transfer funds process.</em>” </li>
 <p>Every entity pattern has to include a * (of some form) to represent where the platform should look for an entity value.</p>
 <p>Continuing with the Banking Bot example with <em>Transfer Funds</em> intent. This intent needs two entities – <em>ToAccount</em> and <em>FromAccount</em>. We will see how to achieve this.</p>
 <h3 id="pattern-1-word1-word2">Pattern 1: word1 * word2<a class="headerlink" href="#pattern-1-word1-word2" title="Permanent link">&para;</a></h3>
-<p>This can be used as a positional wildcard that indicates the expected position of the entity. </p>
+<p>This can be used as a positional wildcard that indicates the expected position of the entity.
+* <strong>Pattern for <em>ToAccount</em> entity</strong>: <em>to * from</em>.</p>
 <ul>
-<li><strong>Pattern for <em>ToAccount</em> entity</strong>: <em>to * from</em>.</li>
 <li><strong>User Utterance</strong>: <em>Transfer funds to ABC123 from my account.</em> </li>
 <li><strong>Entity Extracted</strong>: <em>ToAccount = ABC123</em></li>
 <li><strong>User Utterance not resulting in entity extraction</strong>: “<em>transfer funds for ABC123 from my account”</em>.</li>
 </ul>
 <h3 id="pattern-2-word1-n">Pattern 2: word1 *n<a class="headerlink" href="#pattern-2-word1-n" title="Permanent link">&para;</a></h3>
-<p>This can be used as a positional wildcard * that indicates the expected position of the entity based upon the number of words</span> after the specified word1. That is, <em>n</em> words after the <em>word1</em> are to be considered for the entity, if <em>n</em> words are not present then look for the next occurrence of <em>word1</em>. </p>
+<p>This can be used as a positional wildcard * that indicates the expected position of the entity based upon the number of words after the specified word1. That is, <em>n</em> words after the <em>word1</em> are to be considered for the entity, if <em>n</em> words are not present then look for the next occurrence of <em>word1</em>.</p>
 <ul>
 <li><strong>Pattern for <em>ToAccount</em> entity</strong>: <em>from *2</em></li>
 <li><strong>User Utterance</strong>: <em>Transfer funds to ABC123 from my account.</em> </li>
@@ -4734,7 +4740,7 @@ or <em>Transfer funds from my account to ABC123.</em> </li>
 <p>Useful in entity patterns and custom entities 
 Words that are used in the intent identification are dynamically marked with the <em>~intent</em> concept. This can then be used as an anchor or reference point for some entity patterns.</p>
 <ul>
-<li><strong>Sample Pattern</strong>: <em>“<sub>intent</sub>meeting~plural”</em>.</li>
+<li><strong>Sample Pattern</strong>: “<em><sub>intent</sub>meeting~plural</em>”.</li>
 <li><strong>User Utterance not resulting in entity extraction</strong>: <em>show my meetings.</em> </li>
 <li><strong>User Utterance might mark the entity</strong>: “<em>schedule a presentation called Meeting the Sales Goals</em>.”</li>
 </ul>
