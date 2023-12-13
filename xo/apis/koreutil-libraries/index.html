@@ -3896,56 +3896,7 @@
     koreUtil.getCurrentOptions
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#koreutilgetambiguousintents" class="md-nav__link">
-    koreUtil.getAmbiguousIntents
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#koreutilgetsessionid" class="md-nav__link">
-    koreUtil.getSessionId
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#koreutilgetsunshineconversationsmetadata" class="md-nav__link">
-    koreUtil.getSunshineConversationsMetadata
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#koreutilclearauthprofiles" class="md-nav__link">
-    koreUtil.ClearAuthProfiles
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#koreutilclearallauthprofiles" class="md-nav__link">
-    koreUtil.ClearAllAuthProfiles
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#koreutilcloseconversationsession" class="md-nav__link">
-    koreUtil.closeConversationSession
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#koreutilautotranslate" class="md-nav__link">
-    koreUtil.autoTranslate
-  </a>
-  
-    <nav class="md-nav" aria-label="koreUtil.autoTranslate">
+    <nav class="md-nav" aria-label="koreUtil.getCurrentOptions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4039,350 +3990,403 @@
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0)); 
 context.USdate=koreUtil.intl.DateTimeFormat('en-US').format(date);</code></p>
 <p><strong>Output:</strong></p>
-<ul>
-<li>For context.formattedNumberUK: *
-<code>123,456.789</code></li>
-<li>For context.USdate \
-<code>12/20/2012</code></li>
-</ul>
+<p><em>For context.formattedNumberUK:</em>
+<code>123,456.789</code>
+<em>For context.USdate</em>
+<code>12/20/2012</code></p>
 <h3 id="koreutilmomenttz">koreUtil.momenttz<a class="headerlink" href="#koreutilmomenttz" title="Permanent link">&para;</a></h3>
 <p>koreUtil.momenttz is a platform-offered JS library for the formatting of dates in any timezone and converting dates between timezones.</p>
-<p><strong>Usage Example: \
-<code>var jun = koreUtil.moment("2014-06-01T12:00:00Z"); \
-context.newyork= koreUtil.momenttz(jun,'America/New_York').format('ha z'); \
-context.tokyo = koreUtil.moment().tz('Asia/Tokyo').format('ha z'); \
-context.sydney = koreUtil.moment().tz('Australia/Sydney').format('ha z');</code></strong></p>
+<p><strong>Usage Example:</strong>
+<code>var jun = koreUtil.moment("2014-06-01T12:00:00Z"); 
+context.newyork= koreUtil.momenttz(jun,'America/New_York').format('ha z'); 
+context.tokyo = koreUtil.moment().tz('Asia/Tokyo').format('ha z'); 
+context.sydney = koreUtil.moment().tz('Australia/Sydney').format('ha z');</code></p>
 <p><strong>Output:</strong></p>
 <ul>
-<li>For context.newyork: \
+<li>For context.newyork: *
 <code>5am PDT</code></li>
-<li>For context.tokyo: \
+<li>For context.tokyo: *
 <code>7pm JST</code></li>
-<li>For context.sydney: \
+<li>For context.sydney: *
 <code>9pm AEDT</code></li>
 </ul>
 <h3 id="koreutilxml2js">koreUtil.xml2js<a class="headerlink" href="#koreutilxml2js" title="Permanent link">&para;</a></h3>
 <p>koreUtil.xml2js is a Platform-offered JS library for parsing XML to JSON and vice versa.</p>
-<p><strong>Usage Example: \
+<p><strong>Usage Example:</strong>
 <code>var obj = {name: "John", Surname: "Doe", age: 23}; \
 var builder = new koreUtil.xml2js.Builder(); \
-context.xml = builder.buildObject(obj);</code></strong></p>
+context.xml = builder.buildObject(obj);</code></p>
 <p><strong>Output:</strong></p>
 <ul>
-<li>For context.xml: \
+<li>For context.xml: *
 <code>John Doe 23</code></li>
 </ul>
 <h3 id="koreutilhash">koreUtil.hash<a class="headerlink" href="#koreutilhash" title="Permanent link">&para;</a></h3>
 <p>koreUtil.hash is a Platform offered JS library that supports SHA on JavaScript.</p>
-<p><strong>Usage Example: \
-<code>context.hashString= koreUtil.hash('sha256').update('42').digest('hex');</code></strong></p>
-<p><strong>Output:</strong></p>
-<ul>
-<li>For context.hashString: \
-<code>73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049</code></li>
-</ul>
+<p><strong>Usage Example:</strong>
+```context.hashString= koreUtil.hash('sha256').update('42').digest('hex');
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>**Output:**
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>* For context.hashString:*
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>```73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049
+</span></code></pre></div></p>
 <h3 id="koreutil_">koreUtil._<a class="headerlink" href="#koreutil_" title="Permanent link">&para;</a></h3>
 <p>koreUtil._ is a Platform-offered JS library that provides utility functions for common programming tasks.</p>
-<p><strong>Usage Example: \
-<code>context.chunkArray = koreUtil._.chunk(['a', 'b', 'c', 'd'], 2); \
-var users = [ \
-{ 'user': 'barney', 'age': 36, 'active': true }, \
-{ 'user': 'fred', 'age': 40, 'active': false } \
-]; \
-context.filterActive =koreUtil._.pluck(koreUtil._.filter(users, { 'age': 36, 'active': true }), 'user');</code></strong></p>
-<p><strong>Output:</strong></p>
-<ul>
-<li>For context.chunkArray: \
-<code>[["a","b"],["c","d"]]</code></li>
-<li>For context.filterActive: \
-<code>[ \
-"barney" \
-]</code></li>
-</ul>
+<p><strong>Usage Example:</strong>
+```context.chunkArray = koreUtil.<em>.chunk(['a', 'b', 'c', 'd'], 2); 
+var users = [ 
+{ 'user': 'barney', 'age': 36, 'active': true }, 
+{ 'user': 'fred', 'age': 40, 'active': false } 
+]; 
+context.filterActive =koreUtil.</em>.pluck(koreUtil._.filter(users, { 'age': 36, 'active': true }), 'user');
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>**Output:**
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>* For context.chunkArray: *
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>```[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quot;,&quot;d&quot;]]```
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>* For context.filterActive: *
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>```[ \
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>&quot;barney&quot; \
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>]
+</span></code></pre></div></p>
 <h3 id="koreutilgetcurrentoptions">koreUtil.getCurrentOptions<a class="headerlink" href="#koreutilgetcurrentoptions" title="Permanent link">&para;</a></h3>
 <p>koreUtil.getCurrentOptions is a platform-offered JS library that provides utility functions to get the current template for language selection standard response options. This can be used to customize the standard response. \
 Post the release of v8.1, this function has been enhanced to return the authorization URL used in the standard response when end-user authorization is requested.</p>
 <p>Following is the return format for each of the situations:</p>
 <ul>
-<li>For the language selection standard response: \
-<code>{"list_of_languages": [</code></li>
-<li><code>{"title": "English","value": "English"},</code></li>
-<li><code>{"title": "Deutsche","value": "Deutsche"},</code></li>
-<li><code>{"title": "Español","value": "Español"}</code></li>
-<li><code>]}</code></li>
-<li>For the language ambiguity standard response: \
-<code>{"current_language": "Español",</code></li>
-<li><code>"list_of_new_languages": [</code></li>
-<li><code>{"title": "English","value": "English"},</code></li>
-<li><code>{"title": "Deutsche","value": "Deutsche"},</code></li>
-<li><code>{"title": "Español","value": "Español"}</code></li>
-<li><code>]}</code></li>
-<li>For the language switch standard response: \
-<code>{"new_language": "Español","current_language": "English"}</code></li>
-<li>For User authorization request standard response: \
-<code>{</code></li>
-<li><code>"authorizationURL": "https:///r/xxxxxxxxxxxxx"</code></li>
-<li><code>}</code></li>
+<li>For the language selection standard response: *
+<code>{"list_of_languages": [`
+      {"title": "English","value": "English"},
+      {"title": "Deutsche","value": "Deutsche"},`
+      {"title": "Español","value": "Español"}`
+]}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>* For the language ambiguity standard response: \
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>`{&quot;current_language&quot;: &quot;Español&quot;,`
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>* `      &quot;list_of_new_languages&quot;: [`
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>* `         {&quot;title&quot;: &quot;English&quot;,&quot;value&quot;: &quot;English&quot;},`
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>* `         {&quot;title&quot;: &quot;Deutsche&quot;,&quot;value&quot;: &quot;Deutsche&quot;},`
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>* `         {&quot;title&quot;: &quot;Español&quot;,&quot;value&quot;: &quot;Español&quot;}`
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>* `  ]}`
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>* For the language switch standard response: \
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>`{&quot;new_language&quot;: &quot;Español&quot;,&quot;current_language&quot;: &quot;English&quot;}`
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>* For User authorization request standard response: \
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>`{`
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>* `    &quot;authorizationURL&quot;: &quot;https:///r/xxxxxxxxxxxxx&quot;`
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>* `}`
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>Following are the usage examples of how the above utility can be used to render the message in a button template, you can use any template as per your requirements.  [See here for more on message templates](https://developer.kore.ai/docs/bots/sdks/message-templates/).
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>**Usage Example 1:** To get the standard response for “_Ask if the user would like to select any of the languages_”
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>* `var info = koreUtil.getCurrentOptions();`
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>* `var message = {`
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>* `  &quot;type&quot;: &quot;template&quot;,`
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>* `  &quot;payload&quot;: {`
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>* `    &quot;template_type&quot;: &quot;button&quot;,`
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>* `    &quot;text&quot;: &quot;please select your laguage&quot;,`
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>* `    &quot;subText&quot;: &quot;Button Template Description&quot;,`
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>* `    &quot;buttons&quot;: []`
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>* `    }`
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>* `  };`
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>* `for (i = 0; i &amp;lt; info.list_of_languages.length; i++) {`
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>* `  var button = {`
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>* `    &quot;type&quot;: &quot;postback&quot;,`
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>* `    &quot;title&quot;: info.list_of_languages[i].title,`
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>* `    &quot;payload&quot;: info.list_of_languages[i].value`
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>* `    };`
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>* 
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>* `  message.payload.buttons.push(button);`
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>* ` }`
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>* `print(JSON.stringify(message));`
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>**Usage Example 2:** To get the standard response for “_Ask if the user would like to switch to any of the new languages detected during a conversation_”
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>* `var info = koreUtil.getCurrentOptions();`
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>* `var message = {`
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>* `    &quot;type&quot;: &quot;template&quot;,`
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>* `    &quot;payload&quot;: {`
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>* `        &quot;template_type&quot;: &quot;button&quot;,`
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>* `        &quot;text&quot;: &quot;language ambiguity response for the current language&quot; + info.current_language,`
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>* `        &quot;subText&quot;: &quot;Button Template Description&quot;,`
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>* `        &quot;buttons&quot;: []`
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>* `    }`
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>* `};`
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>* `for (i = 0; i &amp;lt; info.list_of_new_languages.length; i++) {`
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>* `    var button = {`
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>* `        &quot;type&quot;: &quot;postback&quot;,`
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>* `        &quot;title&quot;: info.list_of_new_languages[i].title,`
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>* `        &quot;payload&quot;: info.list_of_new_languages[i].value`
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>* `    };`
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>* 
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>* `    message.payload.buttons.push(button);`
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>* `}`
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>* `print(JSON.stringify(message));`
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>**Usage Example 3:** To get the standard response for “_Ask if the user would like to switch to any of the new languages detected during a conversation_”
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>* `var info = koreUtil.getCurrentOptions();`
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>* `var message = {`
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>* `    &quot;type&quot;: &quot;template&quot;,`
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>* `    &quot;payload&quot;: {`
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>* `        &quot;template_type&quot;: &quot;button&quot;,`
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>* `        &quot;text&quot;: &quot;would you like to switch to new language detected: current language &quot; + info.current_language + &quot;new language : &quot; + info.new_language,`
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>* `        &quot;subText&quot;: &quot;Button Template Description&quot;,`
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>* `        &quot;buttons&quot;: []`
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>* `    }`
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>* `};`
+</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>* `var options = [&quot;yes&quot;, &quot;no&quot;]`
+</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a>* `for (i = 0; i &amp;lt; options.length; i++) {`
+</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a>* `    var button = {`
+</span><span id="__span-3-84"><a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a>* `        &quot;type&quot;: &quot;postback&quot;,`
+</span><span id="__span-3-85"><a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a>* `        &quot;title&quot;: options[i],`
+</span><span id="__span-3-86"><a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a>* `        &quot;payload&quot;: options[i]`
+</span><span id="__span-3-87"><a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a>* `    };`
+</span><span id="__span-3-88"><a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a>* `    message.payload.buttons.push(button);`
+</span><span id="__span-3-89"><a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a>* `}`
+</span><span id="__span-3-90"><a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a>* `print(JSON.stringify(message));`
+</span><span id="__span-3-91"><a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a>
+</span><span id="__span-3-92"><a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a>**Usage Example 4:** To get the standard response for “_User needs to authorize or re-authorize_”
+</span><span id="__span-3-93"><a id="__codelineno-3-93" name="__codelineno-3-93" href="#__codelineno-3-93"></a>
+</span><span id="__span-3-94"><a id="__codelineno-3-94" name="__codelineno-3-94" href="#__codelineno-3-94"></a>
+</span><span id="__span-3-95"><a id="__codelineno-3-95" name="__codelineno-3-95" href="#__codelineno-3-95"></a>
+</span><span id="__span-3-96"><a id="__codelineno-3-96" name="__codelineno-3-96" href="#__codelineno-3-96"></a>* `var info = koreUtil.getCurrentOptions();`
+</span><span id="__span-3-97"><a id="__codelineno-3-97" name="__codelineno-3-97" href="#__codelineno-3-97"></a>* 
+</span><span id="__span-3-98"><a id="__codelineno-3-98" name="__codelineno-3-98" href="#__codelineno-3-98"></a>* `var message = {`
+</span><span id="__span-3-99"><a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a>* `    type: &#39;template&#39;,`
+</span><span id="__span-3-100"><a id="__codelineno-3-100" name="__codelineno-3-100" href="#__codelineno-3-100"></a>* `    payload: {`
+</span><span id="__span-3-101"><a id="__codelineno-3-101" name="__codelineno-3-101" href="#__codelineno-3-101"></a>* `        template_type: &#39;button&#39;,`
+</span><span id="__span-3-102"><a id="__codelineno-3-102" name="__codelineno-3-102" href="#__codelineno-3-102"></a>* `        text: &#39;Please authorize before we continue...&#39;,`
+</span><span id="__span-3-103"><a id="__codelineno-3-103" name="__codelineno-3-103" href="#__codelineno-3-103"></a>* `        buttons: [`
+</span><span id="__span-3-104"><a id="__codelineno-3-104" name="__codelineno-3-104" href="#__codelineno-3-104"></a>* `            {`
+</span><span id="__span-3-105"><a id="__codelineno-3-105" name="__codelineno-3-105" href="#__codelineno-3-105"></a>* `                type: &#39;url&#39;,`
+</span><span id="__span-3-106"><a id="__codelineno-3-106" name="__codelineno-3-106" href="#__codelineno-3-106"></a>* `                title: &#39;Click here to authorize&#39;,`
+</span><span id="__span-3-107"><a id="__codelineno-3-107" name="__codelineno-3-107" href="#__codelineno-3-107"></a>* `                url: info.authorizationURL`
+</span><span id="__span-3-108"><a id="__codelineno-3-108" name="__codelineno-3-108" href="#__codelineno-3-108"></a>* `            }`
+</span><span id="__span-3-109"><a id="__codelineno-3-109" name="__codelineno-3-109" href="#__codelineno-3-109"></a>* `        ]`
+</span><span id="__span-3-110"><a id="__codelineno-3-110" name="__codelineno-3-110" href="#__codelineno-3-110"></a>* `    }`
+</span><span id="__span-3-111"><a id="__codelineno-3-111" name="__codelineno-3-111" href="#__codelineno-3-111"></a>* `};`
+</span><span id="__span-3-112"><a id="__codelineno-3-112" name="__codelineno-3-112" href="#__codelineno-3-112"></a>* 
+</span><span id="__span-3-113"><a id="__codelineno-3-113" name="__codelineno-3-113" href="#__codelineno-3-113"></a>* `print(JSON.stringify(message));`
+</span><span id="__span-3-114"><a id="__codelineno-3-114" name="__codelineno-3-114" href="#__codelineno-3-114"></a>
+</span><span id="__span-3-115"><a id="__codelineno-3-115" name="__codelineno-3-115" href="#__codelineno-3-115"></a>
+</span><span id="__span-3-116"><a id="__codelineno-3-116" name="__codelineno-3-116" href="#__codelineno-3-116"></a>### koreUtil.getAmbiguousIntents
+</span><span id="__span-3-117"><a id="__codelineno-3-117" name="__codelineno-3-117" href="#__codelineno-3-117"></a>
+</span><span id="__span-3-118"><a id="__codelineno-3-118" name="__codelineno-3-118" href="#__codelineno-3-118"></a>The `koreUtil.getAmbiguousIntents` util function is used to obtain the ambiguous intents list when the [Ambiguity Intents Identified](https://developer.kore.ai/docs/bots/bot-intelligence/event-based-bot-actions/#Ambiguous_Intents_Identified_Event) event gets triggered. Along with the list of ambiguous intents, the retrieved context object contains additional details such as ambiguity reasons – ‘multiple definite intents’, ‘multiple intents with similar scores’, etc., and the engine name that detects the intent (ML, FM, or KG), the score given by the respective engines, and so on. The [Ranking and Resolver](https://developer.kore.ai/docs/bots/nlp/nlp-detection/) score is displayed wherever available.
+</span><span id="__span-3-119"><a id="__codelineno-3-119" name="__codelineno-3-119" href="#__codelineno-3-119"></a>
+</span><span id="__span-3-120"><a id="__codelineno-3-120" name="__codelineno-3-120" href="#__codelineno-3-120"></a>**Usage Example \
+</span><span id="__span-3-121"><a id="__codelineno-3-121" name="__codelineno-3-121" href="#__codelineno-3-121"></a>**You can use the `koreUtil.getAmbiguousIntents()` function in the entity prompt or any other node to obtain the list of ambiguous intents.
+</span><span id="__span-3-122"><a id="__codelineno-3-122" name="__codelineno-3-122" href="#__codelineno-3-122"></a>
+</span><span id="__span-3-123"><a id="__codelineno-3-123" name="__codelineno-3-123" href="#__codelineno-3-123"></a>**Sample Response**
+</span></code></pre></div>
+{
+"intents": [
+{
+"intent": "Transfer Money",
+"name": "Transfer Money",
+"intentType": "dialog",
+"mlScore": 100,
+"rrScore": 7980,
+"identifyingEngines": {
+"ml": true
+}
+},
+{
+"intent": "Pay Bills",
+"name": "Pay Bills",
+"intentType": "dialog",
+"rrScore": 0,
+"identifyingEngines": {
+"traits": true
+}
+},
+{
+"intent": "Status of Funds Transfer",
+"name": "Status of Funds Transfer",
+"intentType": "dialog",
+"fmScore": 5330,
+"rrScore": 5330,
+"identifyingEngines": {
+"fm": true
+}
+},
+{
+"PrimaryQuestion": "How to Send Money",
+"MatchedQuestion": "How to Send Money",
+"intentType": "FAQ",
+"faqScore": 100,
+"rrScore": 7960,
+"faqDemystification": {
+"path": [
+"Money Transfer"
+]
+},
+"identifyingEngines": {
+"faq": true
+}
+}
+],
+"cause": "multipleChoices",
+"userInput": "How do I make a payment or transfer"
+};
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>In this response, we obtain the details of multiple ambiguous intents from different engines.
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>The type of intent is captured in the `intentType`object. For example, `Status of Funds Transfer` is a Dialog-type intent, and `How to Send Money` is a FAQ-type intent. The identifying engine for that respective intent and the confidence scores assigned by the engines for the intents are captured. For example, for the intent `Transfer Money`, the `mlScore`is 100. The `rrScore`is the [Ranking and Resolver](https://developer.kore.ai/docs/bots/nlp/nlp-detection/) score for the winning intent. The object `faqDemystification`provides the bot path for the FAQ. The user input and the cause for the ambiguous intents are also captured.
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>### koreUtil.getSessionId
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>koreUtil.getSessionId is a Platform offered JS library for obtaining the current conversation session Id.
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>**Usage Example: \
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>`var sessionId = koreUtil.getSessionId();`**
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>**Output:**
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>* For sessionId: \
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>`5x54321x11xx87654321xx12`
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>### koreUtil.getSunshineConversationsMetadata
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>The XO Platform captures and stores the metadata sent as part of the Pass control action that routes the conversation to the bot via Switchboard integration API in Zendesk. Developers can use the `koreUtil.getSunshineConversationsMetadata()` function to access the stored metadata. For more information, read the [Switchboard Integration](https://developer.kore.ai/docs/bots/channel-enablement/adding-the-sunshine-conversations-channel/#Switchboard_Integration_for_Agent_Handoff) section.
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>The **koreUtil.getSunshineConversationsMetadata** function can be used by a bot developer to access the metadata captured in any node.
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>**Usage Example: \
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>`koreUtil.getSunshineConversationsMetadata();`**
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>**Output:**
+</span></code></pre></div>
+{
+"dataCapture.systemField.tags" : "TransferToBot",
+"dataCapture.systemField.priority" : "high"
+}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>**Note**: The **koreUtil.getSunshineConversationsMetadata** is supported in the Platform v10.1.9 and above versions.
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>### koreUtil.ClearAuthProfiles
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>The `koreUtil.ClearAuthProfiles` is a Platform function to clear tokens associated with an authorization profile of an active conversation by passing a particular profile name in the custom script. This function can be invoked from any component that supports JavaScript.
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>**Usage Example:**
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>Example : To clear one or more authorization profile:
+</span></code></pre></div>
+koreUtil.ClearAuthProfiles([Auth_Profle_Name]);
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Example: `koreUtil.ClearAuthProfiles([&quot;Auth_openai&quot;, &quot;Auth_hubspot&quot;]);`
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>### koreUtil.ClearAllAuthProfiles
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>The `koreUtil.ClearAllAuthProfiles` is a Platform function to clear tokens associated with all auth profiles associated with any active conversation. This function can be invoked from any component that supports JavaScript.
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>**Usage Example:**
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>Example : To clear all authorization profiles:
+</span></code></pre></div>
+koreUtil.ClearAllAuthProfiles ( );
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>### koreUtil.closeConversationSession
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>koreUtil.closeConversationSession is a Platform function for force closing any active conversation. This function can be invoked from any component that supports JavaScript. When you invoke this function, the Platform will discard any ongoing task and the active conversation session  will be closed. The Platform also presents the session timeout message on the supported channels.
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>**Usage Example:**
+</span></code></pre></div>
+koreUtil.closeConversationSession();
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>**Output:**
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>No response is returned and the session ends.
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>**Note**: The koreUtil.closeConversationSession is supported in the Platform v8.1 and above versions.
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>### koreUtil.autoTranslate
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>koreUtil.autotranslate is a Platform function that lets you automatically translate the virtual assistant response from a language in which the assistant is configured to the language in which the user is interacting or a language of your choice. This function uses a translation engine to translate the bot responses into user input language. For more information on how to configure a translation engine, [refer here](https://developer.kore.ai/docs/bots/advanced-topics/multi-lingual/managing-translation-services/).
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>**Note: **To use the `koreUtil.autoTranlsate`function for language translation, you must have the Access Key provided by your translation service provider, such as Google Translator, Microsoft Translator, etc.
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>Please refer below for the translation behavior:
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>&lt;table&gt;
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>  &lt;tr&gt;
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>   &lt;td&gt;&lt;strong&gt;RESPONSE TYPES&lt;/strong&gt;
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>   &lt;/td&gt;
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>   &lt;td&gt;&lt;strong&gt;COMPONENTS&lt;/strong&gt;
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>   &lt;/td&gt;
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>   &lt;td&gt;&lt;strong&gt;TRANSLATION BEHAVIOR&lt;/strong&gt;
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>   &lt;/td&gt;
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>  &lt;/tr&gt;
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>  &lt;tr&gt;
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>   &lt;td&gt;Plain Text Responses
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>   &lt;/td&gt;
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>   &lt;td&gt;Refers to plain text responses defined anywhere in the virtual assistant. For example, prompts, responses etc.
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>   &lt;/td&gt;
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>   &lt;td&gt;Default: Auto-translated
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>&lt;p&gt;
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>You can choose to translate only a specific part of the response by using the koreUtil.autoTranslate function only for that part.
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>   &lt;/td&gt;
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>  &lt;/tr&gt;
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>  &lt;tr&gt;
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>   &lt;td&gt;Advanced / JavaScript based Responses
+</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>   &lt;/td&gt;
+</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>   &lt;td&gt;Refers to responses defined using JavaScript. For example, prompts, responses etc.
+</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a>   &lt;/td&gt;
+</span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a>   &lt;td&gt;Default: No auto-translation
+</span><span id="__span-8-42"><a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a>&lt;p&gt;
+</span><span id="__span-8-43"><a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a>You can use the AutoTranslation function inside the JavaScript to define the parts of the responses that need translation.
+</span><span id="__span-8-44"><a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>   &lt;/td&gt;
+</span><span id="__span-8-45"><a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a>  &lt;/tr&gt;
+</span><span id="__span-8-46"><a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a>  &lt;tr&gt;
+</span><span id="__span-8-47"><a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a>   &lt;td&gt;Auto-formatted Responses
+</span><span id="__span-8-48"><a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a>   &lt;/td&gt;
+</span><span id="__span-8-49"><a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a>   &lt;td&gt;Refers to the responses that are auto-formatted by the Platform as per the channel specifications—for example, confirmations, list of values, ambiguities, etc.
+</span><span id="__span-8-50"><a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a>   &lt;/td&gt;
+</span><span id="__span-8-51"><a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a>   &lt;td&gt;Default: Auto-translated
+</span><span id="__span-8-52"><a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a>   &lt;/td&gt;
+</span><span id="__span-8-53"><a id="__codelineno-8-53" name="__codelineno-8-53" href="#__codelineno-8-53"></a>  &lt;/tr&gt;
+</span><span id="__span-8-54"><a id="__codelineno-8-54" name="__codelineno-8-54" href="#__codelineno-8-54"></a>&lt;/table&gt;
+</span><span id="__span-8-55"><a id="__codelineno-8-55" name="__codelineno-8-55" href="#__codelineno-8-55"></a>
+</span><span id="__span-8-56"><a id="__codelineno-8-56" name="__codelineno-8-56" href="#__codelineno-8-56"></a>
+</span><span id="__span-8-57"><a id="__codelineno-8-57" name="__codelineno-8-57" href="#__codelineno-8-57"></a>**Usage Example:**
+</span></code></pre></div>
+koreUtil.autoTranslate();
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Here are a few use-case examples for your reference:
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>**Use Case-1:**To translate part of a sentence in the user’s language:
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>**Example:**
+</span></code></pre></div>
+{{koreUtil.autoTranslate('Welcome! I am a virtual assistant powered by ')}} General Insurance
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>**Output in Serbian**
+</span></code></pre></div>
+Добредојдовте! Јас сум виртуелен асистент напојуван од General Insurance
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>**Use Case-2:**To translate the content of a customized JavaScript template, then use koreUtil.autoTranslate as follows:
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>**Example:**
+</span></code></pre></div>
+var accountBalance = getbalance(); var message = koreUtil.autoTranslate("Your account balance is "); var message = message.concat(env.currency, ' ', accountBalance); print(message);
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>**Output in Serbian**
+</span></code></pre></div>
+Баланс вашего счета USD 5,278.00
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>**Use Case-3:** To translate the bot responses in a particular language by passing the language code. An example where the assistant will respond only in German even though the user is interacting in any language:
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>**Example**
+</span></code></pre></div>
+var message = koreUtil.autoTranslate("This is a sample message", "de");print(message);
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>**Output in German**
+</span></code></pre></div>
+Dies ist eine Beispielnachricht</code></li>
 </ul>
-<p>Following are the usage examples of how the above utility can be used to render the message in a button template, you can use any template as per your requirements.  <a href="https://developer.kore.ai/docs/bots/sdks/message-templates/">See here for more on message templates</a>.</p>
-<p><strong>Usage Example 1:</strong> To get the standard response for “<em>Ask if the user would like to select any of the languages</em>”</p>
-<ul>
-<li><code>var info = koreUtil.getCurrentOptions();</code></li>
-<li><code>var message = {</code></li>
-<li><code>"type": "template",</code></li>
-<li><code>"payload": {</code></li>
-<li><code>"template_type": "button",</code></li>
-<li><code>"text": "please select your laguage",</code></li>
-<li><code>"subText": "Button Template Description",</code></li>
-<li><code>"buttons": []</code></li>
-<li><code>}</code></li>
-<li><code>};</code></li>
-<li><code>for (i = 0; i &amp;lt; info.list_of_languages.length; i++) {</code></li>
-<li><code>var button = {</code></li>
-<li><code>"type": "postback",</code></li>
-<li><code>"title": info.list_of_languages[i].title,</code></li>
-<li><code>"payload": info.list_of_languages[i].value</code></li>
-<li><code>};</code></li>
-<li></li>
-<li><code>message.payload.buttons.push(button);</code></li>
-<li><code>}</code></li>
-<li><code>print(JSON.stringify(message));</code></li>
-</ul>
-<p><strong>Usage Example 2:</strong> To get the standard response for “<em>Ask if the user would like to switch to any of the new languages detected during a conversation</em>”</p>
-<ul>
-<li><code>var info = koreUtil.getCurrentOptions();</code></li>
-<li><code>var message = {</code></li>
-<li><code>"type": "template",</code></li>
-<li><code>"payload": {</code></li>
-<li><code>"template_type": "button",</code></li>
-<li><code>"text": "language ambiguity response for the current language" + info.current_language,</code></li>
-<li><code>"subText": "Button Template Description",</code></li>
-<li><code>"buttons": []</code></li>
-<li><code>}</code></li>
-<li><code>};</code></li>
-<li><code>for (i = 0; i &amp;lt; info.list_of_new_languages.length; i++) {</code></li>
-<li><code>var button = {</code></li>
-<li><code>"type": "postback",</code></li>
-<li><code>"title": info.list_of_new_languages[i].title,</code></li>
-<li><code>"payload": info.list_of_new_languages[i].value</code></li>
-<li><code>};</code></li>
-<li></li>
-<li><code>message.payload.buttons.push(button);</code></li>
-<li><code>}</code></li>
-<li><code>print(JSON.stringify(message));</code></li>
-</ul>
-<p><strong>Usage Example 3:</strong> To get the standard response for “<em>Ask if the user would like to switch to any of the new languages detected during a conversation</em>”</p>
-<ul>
-<li><code>var info = koreUtil.getCurrentOptions();</code></li>
-<li><code>var message = {</code></li>
-<li><code>"type": "template",</code></li>
-<li><code>"payload": {</code></li>
-<li><code>"template_type": "button",</code></li>
-<li><code>"text": "would you like to switch to new language detected: current language " + info.current_language + "new language : " + info.new_language,</code></li>
-<li><code>"subText": "Button Template Description",</code></li>
-<li><code>"buttons": []</code></li>
-<li><code>}</code></li>
-<li><code>};</code></li>
-<li><code>var options = ["yes", "no"]</code></li>
-<li><code>for (i = 0; i &amp;lt; options.length; i++) {</code></li>
-<li><code>var button = {</code></li>
-<li><code>"type": "postback",</code></li>
-<li><code>"title": options[i],</code></li>
-<li><code>"payload": options[i]</code></li>
-<li><code>};</code></li>
-<li><code>message.payload.buttons.push(button);</code></li>
-<li><code>}</code></li>
-<li><code>print(JSON.stringify(message));</code></li>
-</ul>
-<p><strong>Usage Example 4:</strong> To get the standard response for “<em>User needs to authorize or re-authorize</em>”</p>
-<ul>
-<li><code>var info = koreUtil.getCurrentOptions();</code></li>
-<li></li>
-<li><code>var message = {</code></li>
-<li><code>type: 'template',</code></li>
-<li><code>payload: {</code></li>
-<li><code>template_type: 'button',</code></li>
-<li><code>text: 'Please authorize before we continue...',</code></li>
-<li><code>buttons: [</code></li>
-<li><code>{</code></li>
-<li><code>type: 'url',</code></li>
-<li><code>title: 'Click here to authorize',</code></li>
-<li><code>url: info.authorizationURL</code></li>
-<li><code>}</code></li>
-<li><code>]</code></li>
-<li><code>}</code></li>
-<li><code>};</code></li>
-<li></li>
-<li><code>print(JSON.stringify(message));</code></li>
-</ul>
-<h3 id="koreutilgetambiguousintents">koreUtil.getAmbiguousIntents<a class="headerlink" href="#koreutilgetambiguousintents" title="Permanent link">&para;</a></h3>
-<p>The <code>koreUtil.getAmbiguousIntents</code> util function is used to obtain the ambiguous intents list when the <a href="https://developer.kore.ai/docs/bots/bot-intelligence/event-based-bot-actions/#Ambiguous_Intents_Identified_Event">Ambiguity Intents Identified</a> event gets triggered. Along with the list of ambiguous intents, the retrieved context object contains additional details such as ambiguity reasons – ‘multiple definite intents’, ‘multiple intents with similar scores’, etc., and the engine name that detects the intent (ML, FM, or KG), the score given by the respective engines, and so on. The <a href="https://developer.kore.ai/docs/bots/nlp/nlp-detection/">Ranking and Resolver</a> score is displayed wherever available.</p>
-<p>**Usage Example \
-**You can use the <code>koreUtil.getAmbiguousIntents()</code> function in the entity prompt or any other node to obtain the list of ambiguous intents.</p>
-<p><strong>Sample Response</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;intents&quot;: [
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>{
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&quot;intent&quot;: &quot;Transfer Money&quot;,
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&quot;name&quot;: &quot;Transfer Money&quot;,
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>&quot;intentType&quot;: &quot;dialog&quot;,
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&quot;mlScore&quot;: 100,
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&quot;rrScore&quot;: 7980,
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&quot;identifyingEngines&quot;: {
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>&quot;ml&quot;: true
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>}
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>},
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>{
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>&quot;intent&quot;: &quot;Pay Bills&quot;,
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>&quot;name&quot;: &quot;Pay Bills&quot;,
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>&quot;intentType&quot;: &quot;dialog&quot;,
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>&quot;rrScore&quot;: 0,
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>&quot;identifyingEngines&quot;: {
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>&quot;traits&quot;: true
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>}
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>},
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>{
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>&quot;intent&quot;: &quot;Status of Funds Transfer&quot;,
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>&quot;name&quot;: &quot;Status of Funds Transfer&quot;,
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>&quot;intentType&quot;: &quot;dialog&quot;,
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>&quot;fmScore&quot;: 5330,
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>&quot;rrScore&quot;: 5330,
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>&quot;identifyingEngines&quot;: {
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>&quot;fm&quot;: true
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>}
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>},
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>{
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>&quot;PrimaryQuestion&quot;: &quot;How to Send Money&quot;,
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>&quot;MatchedQuestion&quot;: &quot;How to Send Money&quot;,
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>&quot;intentType&quot;: &quot;FAQ&quot;,
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>&quot;faqScore&quot;: 100,
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>&quot;rrScore&quot;: 7960,
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>&quot;faqDemystification&quot;: {
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>&quot;path&quot;: [
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>&quot;Money Transfer&quot;
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>]
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>},
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>&quot;identifyingEngines&quot;: {
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>&quot;faq&quot;: true
-</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>}
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>}
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>],
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>&quot;cause&quot;: &quot;multipleChoices&quot;,
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>&quot;userInput&quot;: &quot;How do I make a payment or transfer&quot;
-</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>};
-</span></code></pre></div>
-<p>In this response, we obtain the details of multiple ambiguous intents from different engines.</p>
-<p>The type of intent is captured in the <code>intentType</code>object. For example, <code>Status of Funds Transfer</code> is a Dialog-type intent, and <code>How to Send Money</code> is a FAQ-type intent. The identifying engine for that respective intent and the confidence scores assigned by the engines for the intents are captured. For example, for the intent <code>Transfer Money</code>, the <code>mlScore</code>is 100. The <code>rrScore</code>is the <a href="https://developer.kore.ai/docs/bots/nlp/nlp-detection/">Ranking and Resolver</a> score for the winning intent. The object <code>faqDemystification</code>provides the bot path for the FAQ. The user input and the cause for the ambiguous intents are also captured.</p>
-<h3 id="koreutilgetsessionid">koreUtil.getSessionId<a class="headerlink" href="#koreutilgetsessionid" title="Permanent link">&para;</a></h3>
-<p>koreUtil.getSessionId is a Platform offered JS library for obtaining the current conversation session Id.</p>
-<p><strong>Usage Example: \
-<code>var sessionId = koreUtil.getSessionId();</code></strong></p>
-<p><strong>Output:</strong></p>
-<ul>
-<li>For sessionId: \
-<code>5x54321x11xx87654321xx12</code></li>
-</ul>
-<h3 id="koreutilgetsunshineconversationsmetadata">koreUtil.getSunshineConversationsMetadata<a class="headerlink" href="#koreutilgetsunshineconversationsmetadata" title="Permanent link">&para;</a></h3>
-<p>The XO Platform captures and stores the metadata sent as part of the Pass control action that routes the conversation to the bot via Switchboard integration API in Zendesk. Developers can use the <code>koreUtil.getSunshineConversationsMetadata()</code> function to access the stored metadata. For more information, read the <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-sunshine-conversations-channel/#Switchboard_Integration_for_Agent_Handoff">Switchboard Integration</a> section.</p>
-<p>The <strong>koreUtil.getSunshineConversationsMetadata</strong> function can be used by a bot developer to access the metadata captured in any node.</p>
-<p><strong>Usage Example: \
-<code>koreUtil.getSunshineConversationsMetadata();</code></strong></p>
-<p><strong>Output:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&quot;dataCapture.systemField.tags&quot; : &quot;TransferToBot&quot;,
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&quot;dataCapture.systemField.priority&quot; : &quot;high&quot;
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>}
-</span></code></pre></div>
-<p><strong>Note</strong>: The <strong>koreUtil.getSunshineConversationsMetadata</strong> is supported in the Platform v10.1.9 and above versions.</p>
-<h3 id="koreutilclearauthprofiles">koreUtil.ClearAuthProfiles<a class="headerlink" href="#koreutilclearauthprofiles" title="Permanent link">&para;</a></h3>
-<p>The <code>koreUtil.ClearAuthProfiles</code> is a Platform function to clear tokens associated with an authorization profile of an active conversation by passing a particular profile name in the custom script. This function can be invoked from any component that supports JavaScript.</p>
-<p><strong>Usage Example:</strong></p>
-<p>Example : To clear one or more authorization profile:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>koreUtil.ClearAuthProfiles([Auth_Profle_Name]);
-</span></code></pre></div>
-<p>Example: <code>koreUtil.ClearAuthProfiles(["Auth_openai", "Auth_hubspot"]);</code></p>
-<h3 id="koreutilclearallauthprofiles">koreUtil.ClearAllAuthProfiles<a class="headerlink" href="#koreutilclearallauthprofiles" title="Permanent link">&para;</a></h3>
-<p>The <code>koreUtil.ClearAllAuthProfiles</code> is a Platform function to clear tokens associated with all auth profiles associated with any active conversation. This function can be invoked from any component that supports JavaScript.</p>
-<p><strong>Usage Example:</strong></p>
-<p>Example : To clear all authorization profiles:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>koreUtil.ClearAllAuthProfiles ( );
-</span></code></pre></div>
-<h3 id="koreutilcloseconversationsession">koreUtil.closeConversationSession<a class="headerlink" href="#koreutilcloseconversationsession" title="Permanent link">&para;</a></h3>
-<p>koreUtil.closeConversationSession is a Platform function for force closing any active conversation. This function can be invoked from any component that supports JavaScript. When you invoke this function, the Platform will discard any ongoing task and the active conversation session  will be closed. The Platform also presents the session timeout message on the supported channels.</p>
-<p><strong>Usage Example:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>koreUtil.closeConversationSession();
-</span></code></pre></div>
-<p><strong>Output:</strong></p>
-<p>No response is returned and the session ends.</p>
-<p><strong>Note</strong>: The koreUtil.closeConversationSession is supported in the Platform v8.1 and above versions.</p>
-<h3 id="koreutilautotranslate">koreUtil.autoTranslate<a class="headerlink" href="#koreutilautotranslate" title="Permanent link">&para;</a></h3>
-<p>koreUtil.autotranslate is a Platform function that lets you automatically translate the virtual assistant response from a language in which the assistant is configured to the language in which the user is interacting or a language of your choice. This function uses a translation engine to translate the bot responses into user input language. For more information on how to configure a translation engine, <a href="https://developer.kore.ai/docs/bots/advanced-topics/multi-lingual/managing-translation-services/">refer here</a>.</p>
-<p>**Note: **To use the <code>koreUtil.autoTranlsate</code>function for language translation, you must have the Access Key provided by your translation service provider, such as Google Translator, Microsoft Translator, etc.</p>
-<p>Please refer below for the translation behavior:</p>
-<table>
-  <tr>
-   <td><strong>RESPONSE TYPES</strong>
-   </td>
-   <td><strong>COMPONENTS</strong>
-   </td>
-   <td><strong>TRANSLATION BEHAVIOR</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Plain Text Responses
-   </td>
-   <td>Refers to plain text responses defined anywhere in the virtual assistant. For example, prompts, responses etc.
-   </td>
-   <td>Default: Auto-translated
-<p>
-You can choose to translate only a specific part of the response by using the koreUtil.autoTranslate function only for that part.
-   </td>
-  </tr>
-  <tr>
-   <td>Advanced / JavaScript based Responses
-   </td>
-   <td>Refers to responses defined using JavaScript. For example, prompts, responses etc.
-   </td>
-   <td>Default: No auto-translation
-<p>
-You can use the AutoTranslation function inside the JavaScript to define the parts of the responses that need translation.
-   </td>
-  </tr>
-  <tr>
-   <td>Auto-formatted Responses
-   </td>
-   <td>Refers to the responses that are auto-formatted by the Platform as per the channel specifications—for example, confirmations, list of values, ambiguities, etc.
-   </td>
-   <td>Default: Auto-translated
-   </td>
-  </tr>
-</table>
-
-<p><strong>Usage Example:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>koreUtil.autoTranslate();
-</span></code></pre></div>
-<p>Here are a few use-case examples for your reference:</p>
-<p>**Use Case-1:**To translate part of a sentence in the user’s language:</p>
-<p><strong>Example:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>{{koreUtil.autoTranslate(&#39;Welcome! I am a virtual assistant powered by &#39;)}} General Insurance
-</span></code></pre></div>
-<p><strong>Output in Serbian</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Добредојдовте! Јас сум виртуелен асистент напојуван од General Insurance
-</span></code></pre></div>
-<p>**Use Case-2:**To translate the content of a customized JavaScript template, then use koreUtil.autoTranslate as follows:</p>
-<p><strong>Example:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>var accountBalance = getbalance(); var message = koreUtil.autoTranslate(&quot;Your account balance is &quot;); var message = message.concat(env.currency, &#39; &#39;, accountBalance); print(message);
-</span></code></pre></div>
-<p><strong>Output in Serbian</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Баланс вашего счета USD 5,278.00
-</span></code></pre></div>
-<p><strong>Use Case-3:</strong> To translate the bot responses in a particular language by passing the language code. An example where the assistant will respond only in German even though the user is interacting in any language:</p>
-<p><strong>Example</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>var message = koreUtil.autoTranslate(&quot;This is a sample message&quot;, &quot;de&quot;);print(message);
-</span></code></pre></div>
-<p><strong>Output in German</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Dies ist eine Beispielnachricht
-</span></code></pre></div>
 <h4 id="related-link">Related Link<a class="headerlink" href="#related-link" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong><a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-script-node/">Script Node</a></strong> (Write JavaScript code in a dialog task)</li>
