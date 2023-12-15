@@ -3926,14 +3926,14 @@
 <h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
 <p>The key features of dialog nodes are listed below:</p>
 <ul>
-<li>The ability to carry data from the current dialog task to the target dialog task as <em>entity pre-assignments,</em> described in a later section.</li>
+<li>The ability to carry data from the current dialog task to the target dialog task as <em>entity pre-assignments</em>, described in a later section.</li>
 <li>When a target dialog task is invoked, the current dialog flow begins at the root intent of the new dialog task. If you write transitions for the dialog node, then the flow returns to the source dialog task after completing the target. If you do not write transitions, the dialog task ends after executing the target dialog task. This differs from an optional User Intent node, where the dialog flow processes a related user intent and then continues in the same dialog task thereafter.</li>
 </ul>
 <h2 id="add-the-node">Add the Node<a class="headerlink" href="#add-the-node" title="Permanent link">&para;</a></h2>
 <p>Setting up an dialog node in a dialog task involves the following steps:</p>
 <ol>
 <li>Open the dialog task that you want to add the node to..</li>
-<li>Add a **Dialog **node in the designated place. <a href="https://developer.kore.ai/docs/bots/chatbot-overview/using-the-dialog-builder-tool/#Adding_Nodes">Read more about adding nodes.</a>.</li>
+<li>Add a <strong>Dialog</strong> node in the designated place. <a href="../../using-the-dialog-builder-tool/#add-nodes" target="_blank">Read more about adding nodes.</a>.</li>
 </ol>
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
@@ -3941,14 +3941,12 @@
 <h2 id="configure-the-node">Configure the Node<a class="headerlink" href="#configure-the-node" title="Permanent link">&para;</a></h2>
 <h3 id="component-properties">Component Properties<a class="headerlink" href="#component-properties" title="Permanent link">&para;</a></h3>
 <p>Once you place your node on the canvas, the dialog window is displayed with the <strong>Component Properties</strong> tab selected by default.</p>
-<p>The configurations you set up or edit in the **Component Properties **tab reflect in all the dialog tasks that use this node.</p>
+<p>The configurations you set up or edit in the <strong>Component Properties</strong> tab reflect in all the dialog tasks that use this node.</p>
+<p>On the <strong>Component Properties</strong> tab, under the <strong>General Settings</strong>, you can modify</p>
 <ol>
-<li>On the <strong>Component Properties</strong> tab, under the <strong>General Settings</strong>, you can modify<ol>
 <li>The <strong>Name,</strong></li>
 <li>The Display Name,</li>
 <li>The <strong>Description</strong>.</li>
-</ol>
-</li>
 </ol>
 <p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
@@ -3957,31 +3955,34 @@
 <p>The NLP Properties are related to the underlying intent associated with a dialog. You can add these properties here or in the NLP – Training section. They are used to train the machine learning model to help improve intent identification for the dialog task. These properties are not used to execute this node in the flow.</p>
 <p>To improve intent identification for the dialog task, add or define the following properties: </p>
 <ol>
-<li><strong>Machine Learning</strong> settings to provide user utterances to improve the detection of this intent.<a href="https://developer.kore.ai/docs/bots/nlp/user-utterances/"> Learn more</a>.</li>
-<li><strong>Patterns and Rules</strong> to capture this intent if the user’s utterance contains these specific patterns or matches the rule.<a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Navigate_to_the_Bot_Synonyms"> Learn more</a>.</li>
-<li><strong>Bot Synonyms</strong> or related phrases for the user intent.<a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Adding_Bot_Synonyms"> Learn more</a>.</li>
-<li><strong>Manage Context</strong> tags as preconditions to identify the intent and define the output context to be set when this task is initiated.<a href="https://developer.kore.ai/docs/bots/bot-intelligence/context-management/"> Learn more</a>.</li>
+<li><strong>Machine Learning</strong> settings to provide user utterances to improve the detection of this intent. <a href="../../../../natural-language/training/machine-learning-engine" target="_blank">Learn more</a>.</li>
+<li><strong>Patterns and Rules</strong> to capture this intent if the user’s utterance contains these specific patterns or matches the rule. <a href="../../../../natural-language/training/fundamental-meaning/#manage-patterns-and-rules" target="_blank">Learn more</a>.</li>
+<li><strong>Bot Synonyms</strong> or related phrases for the user intent. <a href="../../../../natural-language/training/fundamental-meaning/#manage-synonyms" target="_blank">Learn more</a>.</li>
+<li><strong>Manage Context</strong> tags as preconditions to identify the intent and define the output context to be set when this task is initiated. <a href="../../../../intelligence/context-management" target="_blank">Learn more</a>.</li>
 </ol>
 <p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.gif). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <p><a class="glightbox" href="images/image3.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.gif" title="image_tooltip" /></a></p>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
-<p>Click the **Connections **tab and set the transition properties to determine the node in the dialog task to execute next. You can write the conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use intents for transitions. If you have defined the <em>Transition Property</em> as <em>End of Dialog</em>, then these settings are ignored.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Note: The conditions configured here are applicable only for this instance and will not affect the node when being used in any other dialog.
-</span></code></pre></div>
-<p>To set up component connection conditions, please follow the steps outlined in <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/nodes-conditions/">Adding IF-Else Conditions to Node Connections.</a></p>
+<p>Click the <strong>Connections</strong> tab and set the transition properties to determine the node in the dialog task to execute next. You can write the conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use intents for transitions. If you have defined the <em>Transition Property</em> as <em>End of Dialog</em>, then these settings are ignored.</p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>The conditions configured here are applicable only for this instance and will not affect the node when being used in any other dialog.</p>
+</p>
+</div>
+<p>To set up component connection conditions, please follow the steps outlined in <a href="../../node-connections/nodes-conditions/" target="_blank">Adding IF-Else Conditions to Node Connections.</a></p>
 <p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <p><a class="glightbox" href="images/image4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
 <h3 id="instance-properties">Instance Properties<a class="headerlink" href="#instance-properties" title="Permanent link">&para;</a></h3>
 <p>Under the <strong>Instance Properties</strong> tab, you can configure the instance specific fields for the selected intent node. These settings are applicable only if you are connecting an existing intent node and only for the selected node instance and will not affect other dialog tasks that may invoke the node you are working with. Here is how to configure this section:</p>
-<p>In the** Entity Pre-Assignments** section, you can pre-assign values from this session or node data to the entities required by the Dialog Task. Any remaining required values are handled by the sub-intent.  (<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-dialog-node/#Entity_Pre-Assignments">see below for details</a>) If you want to reset the values, you need to use the keyword <em>“null”</em>, spaces would be ignored by the platform.</p>
-<p>In the** Entity Post-Assignments** section, there is a list of entities available in the current task with an option to add custom variables. These entities are assigned with values from the linked dialogs session data. For example, _context.entities. _lists the entities from the linked sub-dialog for selection. The values are assigned once the linked dialog execution is complete.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Important Notes:
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>This option is available only if the Transition Options is set to return to the current node on task completion.
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Currently, there is a limitation when using URL entity types. URL values with http as opposed to https or without the www suffix will not work. If you want to reset the values, you need to use the keyword &quot;null&quot;, spaces would be ignored by the platform.
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Many dialog transitions without user interference can lead to infinite dialog looping. To prevent such a situation, the Virtual Assistant displays the error, &#39;Sorry something went wrong and I cannot complete your request now,&#39; after 25 such transitions, as shown in the following screenshot. This error is displayed when the dialog nodes are connected either in a loop or in a linear manner.
-</span></code></pre></div>
+<p>In the <strong>Entity Pre-Assignments</strong> section, you can pre-assign values from this session or node data to the entities required by the Dialog Task. Any remaining required values are handled by the sub-intent.  (<a href="#entity-pre-assignments">see below for details</a>) If you want to reset the values, you need to use the keyword <em>“null”</em>, spaces would be ignored by the platform.</p>
+<p>In the <strong>Entity Post-Assignments</strong> section, there is a list of entities available in the current task with an option to add custom variables. These entities are assigned with values from the linked dialogs session data. For example, <em>context.entities.</em> lists the entities from the linked sub-dialog for selection. The values are assigned once the linked dialog execution is complete.</p>
+<div class="admonition important notes">
+<p class="admonition-title">Important<p>This option is available only if the Transition Options is set to return to the current node on task completion.
+Currently, there is a limitation when using URL entity types. URL values with http as opposed to https or without the www suffix will not work. If you want to reset the values, you need to use the keyword "null", spaces would be ignored by the platform.
+Many dialog transitions without user interference can lead to infinite dialog looping. To prevent such a situation, the Virtual Assistant displays the error, 'Sorry something went wrong and I cannot complete your request now,' after 25 such transitions, as shown in the following screenshot. This error is displayed when the dialog nodes are connected either in a loop or in a linear manner.</p>
+</p>
+</div>
 <p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <p><a class="glightbox" href="images/image5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
@@ -3992,15 +3993,19 @@
 </ul>
 <p>Click <strong>Advanced Controls</strong> to set up the below-listed options:</p>
 <ol>
-<li><strong>Interruptions Behavior</strong><ol>
-<li><strong>Use the task level _Interruptions Behavior _Setting</strong>: The VA refers to the <strong>Interruptions Behavior</strong> settings set at the dialog task level.</li>
-<li><strong>Customize for this node</strong>: By configuring this option you can customize the <strong>Interruptions Behavior</strong> settings for this node.Read the <a href="https://developer.kore.ai/docs/bots/bot-intelligence/interruption-handling-context-switching-intents/">Interruption Handling and Context Switching</a> article for more information.</li>
+<li>
+<p><strong>Interruptions Behavior</strong></p>
+<ol>
+<li><strong>Use the task level <em>Interruptions Behavior</em> Setting</strong>: The VA refers to the <strong>Interruptions Behavior</strong> settings set at the dialog task level.</li>
+<li><strong>Customize for this node</strong>: By configuring this option you can customize the <strong>Interruptions Behavior</strong> settings for this node.Read the <a href="../../../../intelligence/conversation-management/manage-interruptions" target="_blank">Interruption Handling and Context Switching</a> article for more information.</li>
 </ol>
 </li>
-<li>**Custom Tags **defines tags to build custom profiles of your bot conversations. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/custom-meta-tags/">See here for more</a>. You can add tags for the following:<ol>
-<li>**Message – **Define custom tags to be added to the current message in the conversation.</li>
-<li>**User – **Define custom tags to be added to the user’s profile information.</li>
-<li>**Session – **Define custom tags to be added to the current conversation session.</li>
+<li>
+<p>**Custom Tags**defines tags to build custom profiles of your bot conversations. <a href="../../../../../analytics/automations/custom-dashboard/custom-meta-tags" target="_blank">See here for more</a>. You can add tags for the following:</p>
+<ol>
+<li><strong>Message –</strong> Define custom tags to be added to the current message in the conversation.</li>
+<li><strong>User –</strong> Define custom tags to be added to the user’s profile information.</li>
+<li><strong>Session –</strong> Define custom tags to be added to the current conversation session.</li>
 </ol>
 </li>
 </ol>
@@ -4017,18 +4022,18 @@
 <p>Transitioning from the source dialog task to the destination dialog task occurs at the runtime when the user input matches one of any linked dialog tasks. When you map more than one dialog task, you can define which dialog tasks are displayed to the end-users using conditional transitions.</p>
 <p>When you call another dialog task, you want to carry information from the first dialog task to the next dialog task. For example, customer information collected in a <em>Book a Flight</em> dialog task is passed to the <em>Book a Hotel</em> dialog task.</p>
 <p>You can use the <code>mappedIntents</code> variable in the <code>Context</code> object which holds the reference of the intent nodes as well as the context of the source dialog task as shown in the following JSON syntax:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{ &#39;title&#39;: &#39;title of the link&#39;, &#39;link&#39;:&#39; url for the link&#39; ,&#39;postbackpayload&#39;: &#39;system generated payload&#39;}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{ &#39;title&#39;: &#39;title of the link&#39;, &#39;link&#39;:&#39; url for the link&#39; ,&#39;postbackpayload&#39;: &#39;system generated payload&#39;}
 </span></code></pre></div>
 <p>For example, a link to <code>GetEmail</code> in the <code>Context</code> object can be:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>   &quot;title&quot;:&quot;GetEmail&quot;,
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>   &quot;link&quot;:&quot;https://app.collab.ai/wf/1.1/market/users/bots/st-bb1eb3da-cfa7-5244-b241-b5042d333e76/dialogue/dg-15fd2927-219c-5795-b038-5b830718bea7/execute?nodeId=message2&amp;contextId=dcx-f9bae173-4d69-53e4-9aa7-21e89aae776d&amp;intent=GetEmail&quot;,
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>   &quot;postbackpayload&quot;:&quot;MappedDialog_dc-f7b42932-dc06-53ac-92c0-1db706794f91_dg-15fd2927-219c-5795-b038-5b830718bea7_dcx-f9bae173-4d69-53e4-9aa7-21e89aae776d&quot;
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   &quot;title&quot;:&quot;GetEmail&quot;,
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   &quot;link&quot;:&quot;https://app.collab.ai/wf/1.1/market/users/bots/st-bb1eb3da-cfa7-5244-b241-b5042d333e76/dialogue/dg-15fd2927-219c-5795-b038-5b830718bea7/execute?nodeId=message2&amp;contextId=dcx-f9bae173-4d69-53e4-9aa7-21e89aae776d&amp;intent=GetEmail&quot;,
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   &quot;postbackpayload&quot;:&quot;MappedDialog_dc-f7b42932-dc06-53ac-92c0-1db706794f91_dg-15fd2927-219c-5795-b038-5b830718bea7_dcx-f9bae173-4d69-53e4-9aa7-21e89aae776d&quot;
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>}
 </span></code></pre></div>
 <p>You can access and present these variables in a prompt message to a user to display a list of mapped dialog tasks with the link, or as a list of choices. You can pass the source dialog context to the target dialog task even if the source dialog task is no longer actively using the Context object.</p>
 <p>The value for the <code>postbackpayload</code> key is generated by the Platform and is used in some channels, such as <em>Facebook</em> and _Slack, _which defines when a link or choice is made for a target dialog task.</p>
-<p>For more information, refer to <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/using-session-and-context-variables-in-tasks/">Using Session and Context Variables in Tasks</a> and the <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/context-object/">Context Object</a>.</p>
+<p>For more information, refer to <a href="../../../using-session-and-context-variables" target="_blank">Using Session and Context Variables in Tasks</a> and the <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/context-object/" target="_blank">Context Object</a>.</p>
 
 
   
