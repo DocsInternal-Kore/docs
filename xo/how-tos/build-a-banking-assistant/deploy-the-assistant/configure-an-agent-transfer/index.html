@@ -3904,8 +3904,8 @@
 <li>In a Terminal window, run the <code>node -v</code> command to verify installation and version, for example, v6.10.2.</li>
 </ul>
 </li>
-<li>A test callback server application. We will be using NGROK from <a href="https://dl.equinox.io/ngrok/ngrok/stable" target="_blank"><a href="https://dl.equinox.io/ngrok/ngrok/stable">https://dl.equinox.io/ngrok/ngrok/stable</a></a> to simulate the callback server application. Following are the steps to install NGROK:<ul>
-<li>Open <a href="https://dl.equinox.io/ngrok/ngrok/stable" target="_blank"><a href="https://dl.equinox.io/ngrok/ngrok/stable">https://dl.equinox.io/ngrok/ngrok/stable</a></a>.</li>
+<li>A test callback server application. We will be using NGROK from <a href="https://dl.equinox.io/ngrok/ngrok/stable" target="_blank">here</a> to simulate the callback server application. Following are the steps to install NGROK:<ul>
+<li>Open this <a href="https://dl.equinox.io/ngrok/ngrok/stable" target="_blank">link</a>.</li>
 <li>
 <p>Download and install the ngrok file for your operating system.</p>
 <ul>
@@ -3934,11 +3934,11 @@ If the screen prompts you to enter a password, please enter your Mac’s user pa
 </ol>
 <h2 id="design-and-configuration">Design and Configuration<a class="headerlink" href="#design-and-configuration" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Open the Kore.ai XO Platform – <a href="https://bots.kore.ai/botbuilder/" target="_blank">here</a>.</li>
+<li>Open the <a href="https://bots.kore.ai/botbuilder/" target="_blank">XO Platform</a>.</li>
 <li>Select the VA for which Agent Transfer needs to be configured.</li>
 <li>
 <p>Open or create a dialog task (<em>Support Call Back)</em> and add an <strong>Agent transfer</strong> node.
-<a class="glightbox" href="../deploy-the-assistant/images/agent-transfer-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../deploy-the-assistant/images/agent-transfer-node.png" alt="agent transfer node" title="agent transfer node" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/agent-transfer-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/agent-transfer-node.png" alt="agent transfer node" title="agent transfer node" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Enter a <em>Name (LiveAgent)</em> and <em>Description</em> and <strong>Save</strong>.</p>
@@ -3952,7 +3952,7 @@ If the screen prompts you to enter a password, please enter your Mac’s user pa
 <ul>
 <li>In a <strong>Terminal</strong> Window, start <em>ngrok</em> to monitor port 8003 using the following command: <code>ngrok http 8003</code>.</li>
 <li>Copy ngrok forwarding URL. It will be in the format mentioned <a href="http://xxxxxxaa.ngrok.io/" target="_blank">here</a>.
-<a class="glightbox" href="../deploy-the-assistant/images/ngrok-dorwarding-url.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../deploy-the-assistant/images/ngrok-dorwarding-url.png" alt="ngrok forwarding url" title="ngrok forwarding url" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/ngrok-dorwarding-url.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/ngrok-dorwarding-url.png" alt="ngrok forwarding url" title="ngrok forwarding url" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 <p>Use this forwarding URL as the call back URL and save. </p>
 </li>
@@ -3971,20 +3971,20 @@ If the screen prompts you to enter a password, please enter your Mac’s user pa
     <li>Give the respective botId and botName of your VA, which you have copied earlier.</li>
     <li>This JS file contains 3 API’s of Kore – Initialization, Send Message, Get Message. If required, any new API’s written for human agent transfer should be put in here.    
     Example: If closing connection is required, then close connection api written needs to go into <code>livechatapi.js</code></li>
-        <a class="glightbox" href="../deploy-the-assistant/images/js-file-apis.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../deploy-the-assistant/images/js-file-apis.png" alt="js file apis" title="js file apis" style="border: 1px solid gray; zoom:75%;"></a>
+        <a class="glightbox" href="../images/js-file-apis.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/js-file-apis.png" alt="js file apis" title="js file apis" style="border: 1px solid gray; zoom:75%;"></a>
     <li>Edit <code>config.json.</code></li>
         <ul><li>Client ID, Client Secret key, respective server ports running and liveagent license of the third-party server goes here.</li>
         <li>Client Id, Client Secret can be copied from Events and Extensions – Agent Transfer.</li>
         <li><code>ngrok</code> forwarding url can be copied from ngrok running instance. It is the call back url. This should be the URL entry.</li>
         <li><code>Liveagentlicense</code> is the code given in the chatlink of livechat.</li>
-        <a class="glightbox" href="../deploy-the-assistant/images/live-agent-license.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../deploy-the-assistant/images/live-agent-license.png" alt="live agent license" title="live agent license" style="border: 1px solid gray; zoom:75%;"></a></ul>
+        <a class="glightbox" href="../images/live-agent-license.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/live-agent-license.png" alt="live agent license" title="live agent license" style="border: 1px solid gray; zoom:75%;"></a></ul>
     <li>Edit <code>LiveChat.js</code></li>
         <ul><li>Give the respective botId and botName, which you have copied earlier and save.</li>
-        <a class="glightbox" href="../deploy-the-assistant/images/give-bot-id-and-name.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../deploy-the-assistant/images/give-bot-id-and-name.png" alt="give bot id and name" title="give bot id and name" style="border: 1px solid gray; zoom:75%;"></a></ul>
+        <a class="glightbox" href="../images/give-bot-id-and-name.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/give-bot-id-and-name.png" alt="give bot id and name" title="give bot id and name" style="border: 1px solid gray; zoom:75%;"></a></ul>
     <li>Edit <code>app.js</code></li>
         <ul><li>Add the following line <code>sdk.registerBot(require('./LiveChat.js'))</code>.</li>
         <li>Delete any existing sdk.registerBot statements, if not needed.</li>
-        <a class="glightbox" href="../deploy-the-assistant/images/delete sdk bot statements.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../deploy-the-assistant/images/delete sdk bot statements.png" alt="delete sdk bot statements" title="delete sdk bot statements" style="border: 1px solid gray; zoom:75%;"></a></ul></ul></ol>
+        <a class="glightbox" href="../images/delete sdk bot statements.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/delete sdk bot statements.png" alt="delete sdk bot statements" title="delete sdk bot statements" style="border: 1px solid gray; zoom:75%;"></a></ul></ul></ol>
 
 <h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
 <ol>
