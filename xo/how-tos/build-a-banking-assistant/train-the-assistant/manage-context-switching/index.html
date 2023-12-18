@@ -3924,7 +3924,6 @@
 <li><strong>Sharing content across intents</strong> – Once the user has entered his/her account number, they should not be prompted again in the course of the conversation. </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title"></p>
 <p><b>User</b>: I want to transfer $200 from my account.</p>
 <p><b>Bot</b>: Sure, may I have your account number?
 // (initiating Transfer Amount task)</p> 
@@ -3940,7 +3939,6 @@
 </ul>
 <p>The extended version of the above example is given below:</p>
 <div class="admonition note">
-<p class="admonition-title"></p>
 <p><b>User</b>: I want to transfer $200 from my account.</p>
 <p><b>Bot</b>: Sure, may I have your account number?
 // (initiating Transfer Amount task)</p>
@@ -4035,7 +4033,7 @@
 <p><strong>Message Node</strong> to display the insufficient funds message</p>
 </li>
 </ul>
-<p>Next, let us modify the <strong>Get Balance</strong> dialog to check for transfer tag and populate the Bot Context variable if needed.</p>
+<p>Next, let us modify the <strong>Get Balance</strong> dialog to check for transfer tag and populate the Bot Context variable if needed with the steps below:</p>
 <ol>
 <li>Open the <strong>Get Balance</strong> dialog.</li>
 <li>Open the <strong>BalanceMessage</strong> (the final message node) node.</li>
@@ -4062,16 +4060,16 @@
 <li>Next, open the <strong>Manage Interruptions</strong> dialog from the <strong>more</strong> (vertical ellipses) option.</li>
 <li>Customize the settings for this task as <strong>Allow hold and resume</strong> and set the <strong>Hold Options</strong> to <em>Hold the current task and resume back once the new task is completed</em> and the <strong>Resume Options</strong> to <em>Resume the on hold task without any specific message to the user</em>.</li>
 </ol>
-<p>Next, modify the <strong>Get Balance</strong> dialog to capture the data sent by the Transfer Amount</p>
+<p>Next, modify the <strong>Get Balance</strong> dialog to capture the data sent by the Transfer Amount with the steps below:</p>
 <ol>
 <li>Open the <strong>Get Balance</strong> dialog.</li>
 <li>Add a <strong>Script node</strong> – <em>CheckAcId</em> to check if the Account Number is available in the context, after the Intent node.</li>
+<li>Add the following <strong>script</strong>. This script checks for the Intent “<em>Transfer Amount</em>." Captures the account number and populates the AccountNumber entity with that value.</li>
 </ol>
-<p>Add the following <strong>script</strong>. This script checks for the Intent “<em>Transfer Amount</em>." Captures the account number and populates the AccountNumber entity with that value.</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">koreUtil</span><span class="p">.</span><span class="nx">_</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">historicTags</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">tags</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Transfer Amount&#39;</span><span class="p">)</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nx">context</span><span class="p">.</span><span class="nx">entities</span><span class="p">.</span><span class="nx">AccountNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">historicTags</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">tags</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="p">]</span>
 </span></code></pre></div>
-<ol start="3"><li>Run the Bot and see the changes taking effect.</li></ol>
+<ol start="4"><li>Run the Bot and see the changes taking effect.</li></ol>
 
 <h3 id="follow-up-intents">Follow up Intents<a class="headerlink" href="#follow-up-intents" title="Permanent link">&para;</a></h3>
 <p>The <strong>Update Account</strong> intent should be invoked only through <strong>Transfer Amount</strong>. There are two things that can be done:</p>
