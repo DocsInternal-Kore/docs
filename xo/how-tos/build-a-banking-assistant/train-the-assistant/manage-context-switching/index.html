@@ -4012,13 +4012,11 @@
 <ul>
 <li><strong>Account Number</strong> – entity required in the Get Balance dialog set to <em>Payer Account</em> number</li>
 <li><strong>Add Key/Value</strong> – pair <code>context.type</code> and <em>transfer</em> identifying the Transfer Amount intent. This will be checked in the Get Balance dialog as shown in the next step to modify the flow.</li>
-<li>
-<p>Ensure that the <strong>Transition Option</strong> is set to Initiate <strong>Get Balance</strong>, once complete return to this node.
-<a class="glightbox" href="../images/transition-option.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/transition-option.png" alt="transition option" title="transition option" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p><strong>Script Node</strong> – <em>CheckBalance</em> to check the balance in the payer account with the amount to be transferred and proceed accordingly. Balance in the payer account is obtained from a BotContext variable that will be populated by the Get Balance dialog.</p>
-</li>
+<li>Ensure that the <strong>Transition Option</strong> is set to Initiate <strong>Get Balance</strong>, once complete return to this node.</li>
+</ul>
+<p><a class="glightbox" href="../images/transition-option.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/transition-option.png" alt="transition option" title="transition option" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ul>
+<li><strong>Script Node</strong> – <em>CheckBalance</em> to check the balance in the payer account with the amount to be transferred and proceed accordingly. Balance in the payer account is obtained from a BotContext variable that will be populated by the Get Balance dialog.</li>
 </ul>
 </li>
 </ol>
@@ -4064,7 +4062,7 @@
 <li>Next, open the <strong>Manage Interruptions</strong> dialog from the <strong>more</strong> (vertical ellipses) option.</li>
 <li>Customize the settings for this task as <strong>Allow hold and resume</strong> and set the <strong>Hold Options</strong> to <em>Hold the current task and resume back once the new task is completed</em> and the <strong>Resume Options</strong> to <em>Resume the on hold task without any specific message to the user</em>.</li>
 </ol>
-<p>Next, modify the Get Balance dialog to capture the data sent by the Transfer Amount</p>
+<p>Next, modify the <strong>Get Balance</strong> dialog to capture the data sent by the Transfer Amount</p>
 <ol>
 <li>Open the <strong>Get Balance</strong> dialog.</li>
 <li>Add a <strong>Script node</strong> – <em>CheckAcId</em> to check if the Account Number is available in the context, after the Intent node.</li>
@@ -4105,9 +4103,9 @@
 </ol>
 <h3 id="sharing-context-across-faqs">Sharing context across FAQs<a class="headerlink" href="#sharing-context-across-faqs" title="Permanent link">&para;</a></h3>
 <p>The following Knowledge Collection is used in this scenario:</p>
-<p><strong>Primary Question</strong>: <em>What are the interest rates for credit cards?</em>
-<strong>Primary Question</strong>: <em>What are the charges for credit cards?</em>
-<strong>Alternate</strong>: <em>What are the charges?</em></p>
+<p><strong>Primary Question</strong>: <em>What are the interest rates for credit cards?</em></p>
+<p><strong>Primary Question</strong>: <em>What are the charges for credit cards?</em></p>
+<p><strong>Alternate</strong>: <em>What are the charges?</em></p>
 <p><a class="glightbox" href="../images/sharing-context-across-faqs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/sharing-context-across-faqs.png" alt="sharing context across faqs" title="sharing context across faqs" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The use case is as follows:</p>
 <p><a class="glightbox" href="../images/use-case-sharing-context-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/use-case-sharing-context-faq.png" alt="use case sharing context faq" title="use case sharing context faq" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -4120,8 +4118,8 @@
 </ol>
 <h3 id="sharing-context-between-intents-and-faqs">Sharing context between intents and FAQs<a class="headerlink" href="#sharing-context-between-intents-and-faqs" title="Permanent link">&para;</a></h3>
 <p>The following Knowledge Collection is used in this scenario:</p>
-<p><strong>Primary Question</strong>: <em>What are your transfer rates?</em> 
-<strong>Alternate</strong>: <em>What are the rates?</em></p>
+<p><strong>Primary Question</strong>: <em>What are your transfer rates?</em> </p>
+<p><strong>Alternate</strong>: <em>What are the rates?</em></p>
 <p>The use case here is that the user might, during the transfer amount, ask about the rates. This should result in the appropriate FAQ being triggered to answer the query.</p>
 <p><a class="glightbox" href="../images/context-switching-test.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/context-switching-test.png" alt="context switching test" title="context switching test" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The default setting for the Interruption Behavior for FAQs will ensure that the FAQs are attended to while a Dialog Task is in progress.</p>
