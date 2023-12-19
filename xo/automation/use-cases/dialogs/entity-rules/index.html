@@ -3967,7 +3967,7 @@
 
 <h1 id="entity-rules">Entity Rules<a class="headerlink" href="#entity-rules" title="Permanent link">&para;</a></h1>
 <p>Validating user input before processing goes a long way in improving the bot’s efficiency and user experience. While the entity type does impose some basic restrictions, these are not always sufficient and does not cater to the specific business requirements. <strong>Entity rules</strong> can be used for additional processing hints and validations.</p>
-<p>Entity rules can be added from the <strong>Entity Rules</strong> section under <strong>Instance Properties</strong> of the corresponding entity. Add the rule in the JSON editor provided, <a href="node-types/working-with-the-entity-node/#instance-properties" target="_blank">see here for how</a>.</p>
+<p>Entity rules can be added from the <strong>Entity Rules</strong> section under <strong>Instance Properties</strong> of the corresponding entity. Add the rule in the JSON editor provided, <a href="../node-types/working-with-the-entity-node/#instance-properties" target="_blank">see here for how</a>.</p>
 <p>These rules can also be set in the script for an entity, in such cases, the rule needs to be set before the entity prompt in the dialog flow. Add a script node at the beginning of the dialog or just before the concerned entity node with the following script:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>context.entityRules.&lt;entityName&gt; = {
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>      &quot;ruleName&quot;: &quot;value&quot;
