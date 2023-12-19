@@ -17,7 +17,7 @@
     
     
       
-        <title>Nodes conditions - Kore ai Docs</title>
+        <title>Adding IF-Else Conditions to Node Connections - Kore ai Docs</title>
       
     
     
@@ -92,6 +92,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#adding-if-else-conditions-to-node-connections" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -193,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Nodes conditions
+              Adding IF-Else Conditions to Node Connections
             
           </span>
         </div>
@@ -3813,6 +3818,91 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-conditions" class="md-nav__link">
+    Types of Conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigate-to-node-connection-conditions" class="md-nav__link">
+    Navigate to Node Connection Conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-if-else-connection-conditions" class="md-nav__link">
+    Add If / Else Connection Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Add If / Else Connection Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity" class="md-nav__link">
+    Entity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    Context
+  </a>
+  
+    <nav class="md-nav" aria-label="Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-andor-logic" class="md-nav__link">
+    Add And/Or Logic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intent" class="md-nav__link">
+    Intent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-conditions" class="md-nav__link">
+    Delete Conditions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-type-applicability" class="md-nav__link">
+    Node Type Applicability
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3831,7 +3921,100 @@
 
 
 
+<h1 id="adding-if-else-conditions-to-node-connections">Adding IF-Else Conditions to Node Connections<a class="headerlink" href="#adding-if-else-conditions-to-node-connections" title="Permanent link">&para;</a></h1>
+<p>When working with <a href="../../node-types/nodes-transitions" target="_blank">Dialog Task nodes</a>, the Kore.ai XO Platform allows you to use If-Else conditions to configure node connections. You may want to use such conditions when you want the conversation to follow specific paths depending on specific information.</p>
+<p>For example, if you are working with a travel Virtual Assistant and are setting up a <em>Book a Flight</em> dialog task, you might want to provide a specific offer for group reservations. So, if during the conversation, the VA detects a certain number of passengers, you may want to direct the conversation to one path or another, depending on that number. Say for instance, if the passenger count is greater than 5, present the standard offer; else (otherwise) present a promotional offer.</p>
+<p>This is a simple example – you can use the conditions feature to design complex conversation paths based on the criteria that suit your business.</p>
+<p>This article, therefore, takes you to the options available within the XO Platform that allow you to configure node connection conditions.</p>
+<h2 id="types-of-conditions">Types of Conditions<a class="headerlink" href="#types-of-conditions" title="Permanent link">&para;</a></h2>
+<p>There are three types of available conditions:</p>
+<ul>
+<li><strong>If</strong>– This condition is used to direct the conversation on a specific path, if specific criteria are met. The <em>If</em> condition lets you configure Entity, Context and Intent criteria.</li>
+<li><strong>Else</strong>– This condition allows you to set the node connection that will occur when the criteria configured within the <em>If</em> condition are not met. The <em>Else</em> condition only allows you to configure the next node to connect to.</li>
+<li><strong>Else If</strong> – This condition allows you to configure another set of criteria to be met by the conversation path when the criteria in the initial <em>If</em> condition are not met. The <em>If</em> condition lets you configure Entity, Context and Intent criteria.</li>
+</ul>
+<p>For example, in the travel VA, you might want to present a group promotion if more than 5 passengers are travelling together, but if not, you may want to show a destination-specific package, based on the arrival city. If neither of these criteria are met, then you may want to continue with the standard flight booking procedure. Here is what such a use case could look like as node connection conditions:</p>
+<ul>
+<li><strong>IF</strong> <em>PassengerCount</em> is greater than <em>5</em>, connect to the Group <em>Promotion</em> node, (So, if there are more than 5 passengers, show the Group Promotion.)</li>
+<li><strong>ELSE IF</strong> ArrivalCity equals to <em>London</em>, connect to <em>London Destination Package</em> node. (If there are not more than 5 passengers, but the arrival city is London, then show the London Destination Package.)</li>
+<li><strong>ELSE</strong> connect to the next <em>Standard Flight Booking</em> node. (If there are neither more than 5 passengers, nor is London the flight destination, then connect to the next node in the standard flight booking process.)</li>
+</ul>
+<h2 id="navigate-to-node-connection-conditions">Navigate to Node Connection Conditions<a class="headerlink" href="#navigate-to-node-connection-conditions" title="Permanent link">&para;</a></h2>
+<p>Node connection conditions are available within the node configuration panel of all node types, under the <strong>Connection Properties</strong> tab.</p>
+<p>Below is an example from the Entity node type.</p>
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
+<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
+<h2 id="add-if-else-connection-conditions">Add <em>If / Else</em> Connection Conditions<a class="headerlink" href="#add-if-else-connection-conditions" title="Permanent link">&para;</a></h2>
+<p>Under the <strong>Connection Properties</strong> section, click <strong>Add IF or Add Else If</strong>. You can configure the conditional expression for both of these condition types based on one of the following criteria:</p>
+<h3 id="entity">Entity<a class="headerlink" href="#entity" title="Permanent link">&para;</a></h3>
+<p>This criterion allows you to compare an Entity node in the dialog with a specific value:</p>
+<ul>
+<li>Select the <strong>Entity</strong>. This is based on <a href="../../node-types/working-with-the-entity-node/" target="_blank">Entity node type</a>.</li>
+<li>Select an <strong>Operator</strong> from the drop-down list: exists, does not exist, equal to, greater than or equal to, less than or equal to, not equal to, greater than, less than and contains.</li>
+<li>Type in <strong>Value</strong>. This field is not displayed if it <em>exists</em> or <em>does not exist</em> and is used as operators.  </li>
+</ul>
+<p>You can enter a static value or dynamic variable, such as context, environment, or content. To use a variable, enter the variable type (content, context, or env) followed by a dot (.) and then select the variable from the pop-up list.
+* In the <strong>Then go to</strong> dropdown, choose the node to connect to if the condition is met.
+* Click <strong>Add Path Label</strong> to enter a label to designate this conversation path.</p>
+<p>If these parameters are met, then the condition is successful and the node connected under <em>Then go to</em> is triggered.</p>
+<p>For example, <em>PassengerCount (entity) greater than (operator) 5 (specified value).</em></p>
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h3>
+<p>The Context criterion allows you to compare a context object in the dialog task with a specific value. You can configure the following parameters:</p>
+<ul>
+<li>Select the <strong>Context</strong> object you want to use. Keep in mind to follow the required syntax – see the <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/context-object/" target="_blank">Context Object</a> article for details.</li>
+<li>Select an <strong>Operator</strong> from the drop-down list: exists, does not exist, equal to, greater than or equal to, less than or equal to, not equal to, greater than, less than and contains.</li>
+<li>Type the number in the <strong>Value</strong> field. This field is not displayed if it <em>exists</em> or <em>does not exist</em> and is used as operators. You can enter a static value or dynamic variable, such as context, environment, or content. To use a variable, enter the variable type (content, context, or env) followed by a dot (.) and then select the variable from the pop-up list.</li>
+<li>In the <strong>Then go to</strong> dropdown, choose the node to connect to if the condition is met.</li>
+<li>Click <strong>Add Path Label</strong> to enter a label to designate this conversation path.</li>
+</ul>
+<p>If these parameters are met, then the condition is successful and the node connected under <em>Then go to</em> is triggered.</p>
+<p>For example, if the <em>Passenger Type</em> (context object – entity) <em>equals to</em>(operator) <em>Infant</em>(value), then trigger a node that manages the booking process that is specific to infant passengers.</p>
+<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<h4 id="add-andor-logic">Add And/Or Logic<a class="headerlink" href="#add-andor-logic" title="Permanent link">&para;</a></h4>
+<p>You can configure multiple context-based if conditions using and/or logic. Within the same context-based if condition, can use either one or the other; not both. The and/or parameters work as follows:</p>
+<ul>
+<li><strong>AND</strong>– When using <em>AND</em> it means that you want both or all criteria to be met.</li>
+<li><strong>OR</strong>– When using <em>OR</em> it means that you want the condition to meet either one or another of the set criteria.</li>
+</ul>
+<p>To add either an <em>AND</em> or an <em>OR</em> logical operator, click the corresponding button within the Context condition criterion.</p>
+<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<p>Once you do so, you will be able to add the next criterion that the condition should meet. You can add multiple AND/OR criteria by clicking +AND or +OR.</p>
+<p>You can delete an existing AND/OR criterion by clicking the <strong>“-”</strong> sign on its left.</p>
+<p>For example: If the <em>Passenger Type</em>(context object – entity) <em>equals to</em>(operator) <em>Infant</em>(value) OR if <em>Passenger Age</em>(context object – entity) <em>is less than or equal to</em>(operator) <em>5</em>(value), then trigger the node that manages the booking process for infants.</p>
+<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
+<h3 id="intent">Intent<a class="headerlink" href="#intent" title="Permanent link">&para;</a></h3>
+<p>For Entity nodes, this criterion allows you to select a follow up intent that matches the user utterance, and based on which to select the next node to connect to.</p>
+<p>The <em>context.FollowupIntents</em> parameter is preselected and you can choose to connect to a specific node if a followup intent exists or if it contains a specific value. If any of these is met, then the condition is successful and the connecting node you set in <em>Then go to</em>, is triggered.</p>
+<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
+<p>For message nodes, you can either choose context.followupintent as described above, or select to wait for user input. Under the Equals dropdown, you can select which user input the VA should wait for before connecting to the node you set under <em>Then go to</em>.</p>
+<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
+<h3 id="delete-conditions">Delete Conditions<a class="headerlink" href="#delete-conditions" title="Permanent link">&para;</a></h3>
+<p>If you no longer require a specific condition, you can hover over it and click the <strong>bin icon</strong> on the top right.</p>
+<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.png" title="image_tooltip" /></a></p>
+<h2 id="node-type-applicability">Node Type Applicability<a class="headerlink" href="#node-type-applicability" title="Permanent link">&para;</a></h2>
+<p>Depending on the node type you are working with, you may see some differences in functionality. Some of the features presented in this article will apply to all node types, while others will only apply to some. Here is what to keep in mind:</p>
+<ul>
+<li>For all node types except for the Message, and Agent Transfer node types, the only available Intent condition criterion is <em>context.FollowupIntents</em> which lets you configure the connection based on the user utterance. The same applies to Primary Intent nodes.</li>
+<li>For Message Nodes, the Intent condition criterion provides two options: <em>context.followupintent</em> and <em>User Input</em>, as explained above</li>
+<li>Primary Intent nodes do not allow connection conditions at all. You can only choose the next node to connect to. Intent nodes that follow other nodes within the Dialog Task do allow connection conditions, keeping in mind that the Intent criterion only allows you to set a follow up intent using the context object.</li>
+<li>Agent Transfer nodes provide no options to connect to a subsequent node, so no conditions can apply. This node means the end of the VAs process and the intervention of a human agent, which sets the <em>End of Dialog</em> after the Agent Transfer node.</li>
+</ul>
 
 
   
