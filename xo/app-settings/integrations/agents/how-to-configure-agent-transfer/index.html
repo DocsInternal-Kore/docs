@@ -3906,7 +3906,7 @@
 <li>
 <p>A test callback server application. We will be using NGROK from <a href="https://dl.equinox.io/ngrok/ngrok/stable" target="_blank">https://dl.equinox.io/ngrok/ngrok/stable</a> to simulate the callback server application. Following are the steps to install NGROK:</p>
 <ol>
-<li>Open <a href="https://dl.equinox.io/ngrok/ngrok/stable">https://dl.equinox.io/ngrok/ngrok/stable</a>.</li>
+<li>Open <a href="https://dl.equinox.io/ngrok/ngrok/stable" target="_blank">https://dl.equinox.io/ngrok/ngrok/stable</a>.</li>
 <li>
 <p>Download and install the ngrok file for your operating system.</p>
 <ul>
@@ -4068,13 +4068,13 @@
 <p>The events and methods required for sending messages from User, bot, and transferring to Agent are outlined in LiveChat.JS.</p>
 </div>
 <ol>
-<li><em>~on_user_message</em> event is triggered when a user sends a message. This message is sent to the bot using the sendBotMessage method.</li>
-<li><em>~on_bot_message</em> is triggered when bot sends a message. This message is sent to the user using the SendUserMessage method.</li>
-<li><em>~on_agent_transfer</em> event is triggered when the service agentTransfer node is triggered in bot. This event connects to the agent using the connectToAgent method, which internally calls the initChat API.</li>
+<li><em>on_user_message</em> event is triggered when a user sends a message. This message is sent to the bot using the sendBotMessage method.</li>
+<li><em>on_bot_message</em> is triggered when bot sends a message. This message is sent to the user using the SendUserMessage method.</li>
+<li><em>on_agent_transfer</em> event is triggered when the service agentTransfer node is triggered in bot. This event connects to the agent using the connectToAgent method, which internally calls the initChat API.</li>
 <li><em>gethistory</em> method gives the chat history of the user with the bot to the transferred agent.</li>
 <li><em>scheduleJob</em> is run for every 5 secs, and it polls for the pending messages from the Agent, which internally calls the getPendingMessages.</li>
 <li><em>getPendingMessages</em> gets all the pending messages from Agent and delivers it to the User.</li>
-<li><em>~chat_closed</em> gets triggered when the agent closes the chat with the user.</li>
+<li><em>chat_closed</em> gets triggered when the agent closes the chat with the user.</li>
 </ol>
 
 
