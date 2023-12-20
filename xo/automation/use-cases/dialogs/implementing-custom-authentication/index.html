@@ -93,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#implementing-custom-authentication" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -3813,6 +3818,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generate-the-custom-authentication-url-from-the-service-node" class="md-nav__link">
+    Generate the Custom Authentication URL from the Service Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populate-the-context-and-present-the-custom-url-to-the-user" class="md-nav__link">
+    Populate the Context and Present the Custom URL to the User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receive-callback-after-authentication" class="md-nav__link">
+    Receive Callback after Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-the-custom-authentication-service" class="md-nav__link">
+    Configure the Custom Authentication Service
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3831,7 +3874,56 @@
 
 
 
+<!-----
 
+
+
+Conversion time: 0.716 seconds.
+
+
+Using this Markdown file:
+
+1. Paste this output into your source file.
+2. See the notes and action items below regarding this conversion run.
+3. Check the rendered output (headings, lists, code blocks, tables) for proper
+   formatting and use a linkchecker before you publish this page.
+
+Conversion notes:
+
+* Docs to Markdown version 1.0β35
+* Wed Dec 20 2023 01:13:16 GMT-0800 (PST)
+* Source doc: Implementing Custom Authentication
+----->
+
+<h1 id="implementing-custom-authentication">Implementing Custom Authentication<a class="headerlink" href="#implementing-custom-authentication" title="Permanent link">&para;</a></h1>
+<p>You can implement custom authentication for your VA by providing a URL from the service node to an external application that manages the authentication. The platform provides the necessary functionality to handle successful and failed authentication scenarios and manage the corresponding task flows.</p>
+<p>Implementing custom authentication involves the following steps:</p>
+<h2 id="generate-the-custom-authentication-url-from-the-service-node">Generate the Custom Authentication URL from the Service Node<a class="headerlink" href="#generate-the-custom-authentication-url-from-the-service-node" title="Permanent link">&para;</a></h2>
+<p>To implement custom authentication, you first need to configure a dialog tasks’ service node with the URL of the authenticating service. When you do so, the platform internally appends the authentication URL you entered with the VA’s webhook and creates a custom authentication URL. It performs to facilitate the authentication service to send back the necessary details to the Platform after completing the authentication process.</p>
+<h2 id="populate-the-context-and-present-the-custom-url-to-the-user">Populate the Context and Present the Custom URL to the User<a class="headerlink" href="#populate-the-context-and-present-the-custom-url-to-the-user" title="Permanent link">&para;</a></h2>
+<p>During task execution, when a dialog reaches the service node, the platform populates the customer authentication URL in the context and presents a message to the end-user requesting authentication credentials. Then, the platform waits for the external authentication service to send a response on the webhook.</p>
+<h2 id="receive-callback-after-authentication">Receive Callback after Authentication<a class="headerlink" href="#receive-callback-after-authentication" title="Permanent link">&para;</a></h2>
+<p>The external system, on its part, performs a callback to the platform using the webhook URL, which is populated in the Context Object. Once all this is complete, the dialog task progresses based on the transitions defined for the node.</p>
+<h2 id="configure-the-custom-authentication-service">Configure the Custom Authentication Service<a class="headerlink" href="#configure-the-custom-authentication-service" title="Permanent link">&para;</a></h2>
+<p>To configure the custom authentication service, please follow the steps below:</p>
+<ol>
+<li><strong>Open the dialog task</strong> in which you want to implement the custom authentication.</li>
+<li><strong>Add a Service node</strong> after the appropriate node in the task flow.</li>
+<li>On the <strong>Component Properties</strong> tab of the node, enter a <strong>Name</strong> for the node.</li>
+<li>In the <strong>Service Type</strong> drop-down list, select <strong>Custom Authentication Service</strong>.</li>
+<li>In the <strong>Auth URL</strong> field, enter the URL of the external authentication service.</li>
+<li>
+<p>Under the <strong>Response</strong> section, it shows the default authentication requisition message that the VA presents to the user. You can edit the message or click <strong>Manage</strong> to define advanced or channel-specific messages. Learn about <a href="../../../../web-mobile-SDK-message-formatting-and-templates/" target="_blank">message formatting and templates.
+</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default message here is based on the default name of the service node and is as follows: <strong><em>Please use the following URL to proceed with the authentication {{context.&lt;<Service Node Name>&gt;.customAuthenticationURL}}.</em></strong> If you change the node name later, ensure that you also update the message to reflect the revised name.</p>
+</div>
+</li>
+<li>
+<p>Define the transitions for the node.</p>
+</li>
+</ol>
 
 
   

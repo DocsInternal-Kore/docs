@@ -17,7 +17,7 @@
     
     
       
-        <title>Enabling 2 way ssl for service nodes - Kore ai Docs</title>
+        <title>Enabling 2-way SSL for Service nodes - Kore ai Docs</title>
       
     
     
@@ -92,6 +92,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#enabling-2-way-ssl-for-service-nodes" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -193,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Enabling 2 way ssl for service nodes
+              Enabling 2-way SSL for Service nodes
             
           </span>
         </div>
@@ -3813,6 +3818,50 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#koreai-implementation" class="md-nav__link">
+    Kore.ai Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Kore.ai Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-on-premises-users" class="md-nav__link">
+    For On-premises Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working" class="md-nav__link">
+    Working
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3831,7 +3880,34 @@
 
 
 
-
+<h1 id="enabling-2-way-ssl-for-service-nodes">Enabling 2-way SSL for Service nodes<a class="headerlink" href="#enabling-2-way-ssl-for-service-nodes" title="Permanent link">&para;</a></h1>
+<p><strong>Two-way SSL authentication</strong> is a certificate-based mutual authentication protocol that refers to two parties authenticating each other by verifying the provided digital certificate so that both parties are assured of the others’ identity.</p>
+<p>It refers to a client (web browser or client application) authenticating themselves to a server (website or server application) and the server also authenticating itself to the client through verifying the public key certificate/digital certificate issued by the trusted Certificate Authorities (CAs).</p>
+<h2 id="koreai-implementation">Kore.ai Implementation<a class="headerlink" href="#koreai-implementation" title="Permanent link">&para;</a></h2>
+<p>Kore.ai Bots platform offers this support by default in their cloud offering. In case, the services you use need a two-way SSL, the platform provides the certificate.</p>
+<h3 id="for-on-premises-users">For On-premises Users<a class="headerlink" href="#for-on-premises-users" title="Permanent link">&para;</a></h3>
+<p>During the bots platform installation, configure the SSL certificate following the instructions given in the Installation Guide.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>To establish a Two-Way SSL (Mutual Authentication) connection, you must have the following:</p>
+<ul>
+<li>Private Key</li>
+<li>Client Certificate</li>
+<li>Certificate Authority Root Certificate</li>
+<li>Certificate Authority Intermediate Certificates.</li>
+</ul>
+<p>The client can acquire a certificate from any of the trusted Certificate Authority (CA).</p>
+<h2 id="working">Working<a class="headerlink" href="#working" title="Permanent link">&para;</a></h2>
+<p>Whenever the bots platform makes a call to backend services for API invocation (from Service node) that requires mutual authentication (or two way SSL), the bots platform presents the configured certificate to the API endpoint for SSL handshake. If the certificate is not valid or not trusted by the API service, the bot cannot make that call.</p>
+<p>The authentication message exchange during SSL handshake between bots platform and API server includes the following steps:</p>
+<ol>
+<li>The bots platform makes a request to a configured API endpoint.</li>
+<li>The API server presents its certificate to the bots platform.</li>
+<li>The bots platform verifies the server’s certificate.</li>
+<li>If successful, the bots platform sends its configured two-way SSL certificate to the API server.</li>
+<li>The API server verifies the presented certificate credentials.</li>
+</ol>
+<p>If successful, the server grants API access to the bots platform.</p>
+<p>This process is applicable for service nodes (<a href="../node-types/working-with-the-service-node/" target="_blank">know more about service node</a>) in a bot.</p>
 
 
   
