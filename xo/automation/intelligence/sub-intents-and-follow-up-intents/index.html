@@ -3895,7 +3895,7 @@
 
 
 <h1 id="sub-intents-follow-up-intents">Sub-Intents &amp; Follow-up Intents<a class="headerlink" href="#sub-intents-follow-up-intents" title="Permanent link">&para;</a></h1>
-<p>Human conversations are dynamic in that they tend to switch between intents and entities, often combining multiple things into one.</p>
+<p>Human conversations are dynamic since they tend to switch between intents and entities, often combining multiple things into one.</p>
 <p>The XO Platform offers <strong>Sub Intents</strong> that are defined at the task level, and are the easiest way to shape dialog without having to manage context manually. This enables conversations to seamlessly branch into related intents as part of the primary intent, and work only within this context. An output context is added to the parent intent and an input context of the same name is added to the newly created child intent. Thus, the child intent can only be matched when the parent intent was matched during a previous portion of the conversation.</p>
 <p><strong>Follow-up Intents</strong> are helpful during the course of a dialog, a user utterance or intent cannot be attended to immediately. You can access such intents that come up during the execution of a different task, but that was never acted upon. These are stored in the <em>FollowupIntents</em> array. You can then opt to ask users at the end of the dialog flow to select and perform tasks from a list of identified follow-up intents. You can also access this list to further train and refine their dialog flows.</p>
 <h2 id="sub-intents">Sub Intents<a class="headerlink" href="#sub-intents" title="Permanent link">&para;</a></h2>
@@ -3975,15 +3975,11 @@
 <ol>
 <li>Open the dialog task whose settings you want to customize.</li>
 <li>On the top-right of the Dialog Builder, click the <strong>more</strong> options icon and then click <strong>Dialog Settings</strong>.</li>
-<li>
-<p>The Follow-up Task sections shows the following options:
-<a class="glightbox" href="../images/follow-up-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/follow-up-task.png" alt="follow up task" title="follow up task" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p><strong>Yes</strong>, at the end of this dialog ask the user to select and perform a task from the <em>Follow-up task</em> list: Select this option to show all the unattended intents to the user at the end of the dialog. To customize the message sent to the user, click <strong>Manager Response</strong> next to the option.</p>
-</li>
-<li><strong>No</strong>, the <em>Follow-up task</em> list is handled as part of the node connections: This is the default option. If this option is active, the VA does not present the Follow-up intents to the users at the end of the dialog. However, a developer can access this using the <em>FollowupIntents</em> array.</li>
+<li>The <strong>Follow-up Task</strong> section shows the following options:
+<a class="glightbox" href="../images/follow-up-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/follow-up-task.png" alt="follow up task" title="follow up task" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
+<ul><li><b>Yes</b>, at the end of this dialog ask the user to select and perform a task from the <i>Follow-up task</i> list: Select this option to show all the unattended intents to the user at the end of the dialog. To customize the message sent to the user, click <b>Manager Response</b> next to the option.</li>
+<li><b>No</b>, the <i>Follow-up task</i> list is handled as part of the node connections: This is the default option. If this option is active, the VA does not present the Follow-up intents to the users at the end of the dialog. However, a developer can access this using the <i>FollowupIntents</i> array.</li></ul>
 
 
   
