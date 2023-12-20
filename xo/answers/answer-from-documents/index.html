@@ -3925,7 +3925,7 @@
 
 <h1 id="answer-from-documents-beta">Answer from Documents (Beta)<a class="headerlink" href="#answer-from-documents-beta" title="Permanent link">&para;</a></h1>
 <p>The Answer from Documents feature helps answer end-user queries from unstructured PDF documents without the need to extract individual FAQs and train them. This feature leverages a Large Language Model (LLM) and Generative AI models from OpenAI or Azure OpenAI integration to generate answers by processing uploaded documents and user queries. This is a beta feature and is available in English and Non-English languages supported on the XO Platform.</p>
-<div class="admonition caution">
+<div class="admonition warning">
 <p class="admonition-title"><b>Important</b></p>
 <p>After redacting personally identifiable information, the documents and end-user queries are shared with OpenAI or Azure OpenAI integration to curate the answers. You must agree to enable the feature.</p></div>
 
@@ -3983,13 +3983,14 @@
 </li>
 <li>
 <p><strong>Drag and drop</strong> your document or click <strong>Browse</strong> to find it on your computer. </p>
-</li>
-</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Filenames must not be longer than 10 characters.</p>
 </div>
+</li>
+</ol>
 <ol start="3"><li>Once selecting the document, you can update its name if required. Click <b>Proceed</b> when ready.
+
 <a class="glightbox" href="../images/click-proceed-documents-upload.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/click-proceed-documents-upload.png" alt="click proceed" title="click proceed" style="border: 1px solid gray; zoom:75%;"></a></li>
 <li>Please wait a few moments until your document uploads. This action may take longer than expected, depending on the file size, your connection speed, and other factors.</li>
 <li>When the upload completes successfully, close the upload window.
@@ -4022,8 +4023,8 @@ The uploaded documents are listed under the <b>Answer from Documents</b> section
 <a class="glightbox" href="../images/delete-bot-vs-va.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/delete-bot-vs-va.png" alt="delete bot vs va" title="delete bot vs va" style="border: 1px solid gray; zoom:75%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
 <p>You cannot restore deleted documents. You must upload them again if you change your mind later.</p>
+</div>
 <h2 id="disable-answer-from-documents">Disable Answer from Documents<a class="headerlink" href="#disable-answer-from-documents" title="Permanent link">&para;</a></h2>
 <p>If you disable Answer from Documents, queries will no longer be sent to LLMs as a fallback, but documents are stored in the database, and you can enable the feature again later. To disable the feature, turn off the toggle at the far right of the section.
 <a class="glightbox" href="../images/disable-answer-from-documents.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/disable-answer-from-documents.png" alt="disable answer from documents" title="disable answer from documents" style="border: 1px solid gray; zoom:75%;"></a></p>
