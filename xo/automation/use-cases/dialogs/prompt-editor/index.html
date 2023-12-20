@@ -17,7 +17,7 @@
     
     
       
-        <title>Prompt editor - Kore ai Docs</title>
+        <title>User Prompts - Kore ai Docs</title>
       
     
     
@@ -92,6 +92,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#user-prompts" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -193,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Prompt editor
+              User Prompts
             
           </span>
         </div>
@@ -3813,6 +3818,78 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-types" class="md-nav__link">
+    Prompt Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-editor" class="md-nav__link">
+    Prompt Editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-the-user-prompt" class="md-nav__link">
+    Configure the User Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plain-text-prompts" class="md-nav__link">
+    Plain Text Prompts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-prompts-or-responses" class="md-nav__link">
+    JavaScript Prompts or Responses
+  </a>
+  
+    <nav class="md-nav" aria-label="JavaScript Prompts or Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customize-javascript-responses" class="md-nav__link">
+    Customize JavaScript Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preview-the-prompt-or-response" class="md-nav__link">
+    Preview the Prompt or Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#channel-specific-user-prompts" class="md-nav__link">
+    Channel-Specific User Prompts
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3831,7 +3908,365 @@
 
 
 
+<h1 id="user-prompts">User Prompts<a class="headerlink" href="#user-prompts" title="Permanent link">&para;</a></h1>
+<p>After creating an Entity, Confirmation, or Message node in the Dialog Builder, Kore.ai lets you do the following:</p>
+<ul>
+<li>Modify the default message or user prompt displayed to the end-user.</li>
+<li>Add new prompts or messages.</li>
+<li>Add channel-specific prompts or messages.</li>
+</ul>
+<h2 id="prompt-types">Prompt Types<a class="headerlink" href="#prompt-types" title="Permanent link">&para;</a></h2>
+<p>Dialog Tasks support two types of user prompts:</p>
+<ul>
+<li><strong>Standard</strong>: The prompt defined when adding a node in Dialog Builder is the standard or default prompt. When multiple standard prompts are defined for a node, the Platform chooses a random one to display to the end-user.</li>
+<li><strong>Channel-Specific</strong>: Optionally, define user prompts for specific channels such as email, SMS, Twitter, and more. Different widgets can be used based on channels such as a slider for numbers, date and time picker, and range selectors.</li>
+</ul>
+<h2 id="prompt-editor">Prompt Editor<a class="headerlink" href="#prompt-editor" title="Permanent link">&para;</a></h2>
+<p>The prompt editor has three tabs to offer the following features:</p>
+<ul>
+<li><strong>Simple</strong>: Basic editor controls and HTML to define and format the user prompt. Enter text, and then format it using buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting lines.</li>
+<li><strong>Advanced</strong>: Advanced JavaScript editor to define, format, and render the user prompt.</li>
+<li><strong>Preview</strong>: View a sample of the rendered output message with markup as displayed to the end-user.</li>
+</ul>
+<p>Below is the JavaScript message from the <em>Book Flights</em> VA that presents the response from a weather API to the users in a custom format:</p>
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
+<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
+<p>In the case of <strong>Error Prompts</strong>, if you have enabled the <em>Present Prompts</em> in the <strong>Order of Retries</strong> toggle, the handlebar icon will be visible before each error prompt message. You can use this to re-order the messages so that it is displayed in that sequence.</p>
+<h2 id="configure-the-user-prompt">Configure the User Prompt<a class="headerlink" href="#configure-the-user-prompt" title="Permanent link">&para;</a></h2>
+<p>You can add or edit the prompts or VA messages from the <strong>Component Properties</strong> tab of an Entity, Confirmation, or Message node.
+In the case of Entity and Confirmation nodes, you refer to Prompts whereas, for the Message node, they are referred to as Responses.</p>
+<ol>
+<li>On the dialog task builder, click the <strong>+</strong> icon next to the respective node for which you want to configure the prompts or responses.</li>
+<li>Select <strong>Confirmation (or Entity or Message) &gt; New Confirmation (or Entity or Message)</strong> Node.</li>
+<li>The <strong>Confirmation (or Entity or Message)</strong> window is displayed with the <strong>Components Properties</strong> tab selected by default.</li>
+<li>
+<p>Under the <strong>User Prompts</strong> (or VA Responses) section, click <strong>Manage</strong>.
+<strong>Note</strong>: If you want to make text edits to the default sample message, modify the message directly in the text box and press <strong>Enter</strong> without clicking <strong>Manage</strong>.</p>
+<p><p id="gdcalert2" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
+<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Do one of the following:</p>
+<ol>
+<li>To edit the default sample message by adding context object variables or javascript code, click the sample message. The Message editor opens.</li>
+<li>To add a new prompt message, click <strong>Add Prompt Message/Manage Prompts</strong>. The Message editor opens.</li>
+</ol>
+</li>
+<li>
+<p>In the <strong>Channel **drop-down list,</strong> All Channels** is the default value. To create a channel-specific message, select the channel from the list.</p>
+</li>
+<li>
+<p>On the Message Editor, the <strong>Plain Text</strong> tab is the default selection. If you want to compose a Javascript message, click the <strong>Advanced</strong> tab.</p>
+<p><p id="gdcalert3" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
+<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use stored context variables with {{variable brackets}}. For example, ‘Hello {{context.session.UserContext.firstName}}. How can I help you?’</p>
+</div>
+</li>
+<li>
+<p>Compose the message and click <strong>Save</strong>.</p>
+</li>
+</ol>
+<p>To add any more VA responses, repeat from step 2b.</p>
+<h2 id="plain-text-prompts">Plain Text Prompts<a class="headerlink" href="#plain-text-prompts" title="Permanent link">&para;</a></h2>
+<p>Use the <strong>Plain Text</strong> tab in the editor to compose the user prompts using basic editor controls and HTML. You can enter text, and then format the text using the formatting buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting a line.</p>
+<p>The plain text tab supports the following markups:</p>
+<table border="1">
+  <tr>
+   <td><strong>MARKDOWN</strong>
+   </td>
+   <td><strong>OUTPUT</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>#h1
+   </td>
+   <td>Heading One
+   </td>
+  </tr>
+  <tr>
+   <td>#h2
+   </td>
+   <td>Heading Two
+   </td>
+  </tr>
+  <tr>
+   <td>#h3
+   </td>
+   <td>Heading Three
+   </td>
+  </tr>
+  <tr>
+   <td>#h4
+   </td>
+   <td>Heading Four
+   </td>
+  </tr>
+  <tr>
+   <td>#h5
+   </td>
+   <td>Heading Five
+   </td>
+  </tr>
+  <tr>
+   <td>#h6
+   </td>
+   <td>Heading Six
+   </td>
+  </tr>
+  <tr>
+   <td>“`Hello“`
+   </td>
+   <td> 
+
+<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+<a class="glightbox" href="images/image4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="images/image4.png" width="" alt="alt_text" title="image_tooltip"></a>
+
+   </td>
+  </tr>
+  <tr>
+   <td>*Bold*
+   </td>
+   <td><strong>Bold</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>~Italic~
+   </td>
+   <td><em>Italic</em>
+   </td>
+  </tr>
+  <tr>
+   <td>[Link](http://www.google.com)
+   </td>
+   <td><a href="http://www.google.com/">Link</a>
+   </td>
+  </tr>
+  <tr>
+   <td>![Image](https://kbob.github.io/images/sample-4.jpg)
+   </td>
+   <td> 
+
+<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+<a class="glightbox" href="images/image5.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="images/image5.jpg" width="" alt="alt_text" title="image_tooltip"></a>
+
+   </td>
+  </tr>
+  <tr>
+   <td>Order
+<p>
+1. This is one
+<p>
+2. This is two
+   </td>
+   <td>Order
+<ol>
+
+<li>This is one
+
+<li>This is two
+</li>
+</ol>
+   </td>
+  </tr>
+  <tr>
+   <td>Bullet
+<p>
+* This is one
+<p>
+* This is two
+   </td>
+   <td>Bullet
+<ul>
+
+<li>This is one
+
+<li>This is two
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>This is
+<p>
+>>indented
+   </td>
+   <td> 
+
+<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+<a class="glightbox" href="images/image6.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="images/image6.jpg" width="" alt="alt_text" title="image_tooltip"></a>
+
+   </td>
+  </tr>
+  <tr>
+   <td>This is line ___
+   </td>
+   <td>This is line ___
+   </td>
+  </tr>
+  <tr>
+   <td>This is &lt;br> new line
+   </td>
+   <td>This is
+<p>
+new line
+   </td>
+  </tr>
+</table>
+
+<p>Default formatting of user prompts may not be supported on all channels.</p>
+<h2 id="javascript-prompts-or-responses">JavaScript Prompts or Responses<a class="headerlink" href="#javascript-prompts-or-responses" title="Permanent link">&para;</a></h2>
+<p>On the <strong>Advanced</strong> tab of the editor, you can add custom code to handle the user prompt message using system and session variables. The following is a sample code for displaying the weather forecast for a location:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>var loc=context.weatherapi.response.body.query.results.channel.item.condition.text.toLowerCase();
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>print(&quot;Here are the details:\n&quot;);
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>if(loc.indexOf(&quot;clear&quot;)&gt;=0)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>{
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>print(&#39;Its clear outside.&#39;);
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>}
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a> else if(loc.indexOf(&quot;sunny&quot;)&gt;=0)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>{
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    print(&quot;Its sunny outside&quot;);
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>}
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>else if(loc.indexOf(&quot;cloud&quot;)&gt;=0)
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>{
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    print(&quot;Its very cloudy day&quot;);
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>}
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>else if (loc.indexOf(&#39;snow&#39;)&gt;=0)
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>{
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    print(&#39;Its snowy day&#39;);
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>}
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>else if(loc.indexOf(&#39;rain&#39;)&gt;=0)
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>{
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>print(&#39;Yes, it looks like rainy day.&#39;);
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>}
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>else if(loc.indexOf(&#39;breeze&#39;)&gt;=0)
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>{
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    print(&quot;It&#39;s very breezy out there.&quot;);
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>}
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>else if(loc.indexOf(&#39;wind&#39;)&gt;=0)
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>{
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>     print(&quot;It&#39;s very windy out there.&quot;);
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>}
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>else if(loc.indexOf(&#39;shower&#39;)&gt;=0)
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>{
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    print(&quot;It showering outside.&quot;);
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>}
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>print(&quot;Weather condition: &quot; + context.weather +&quot;\n&quot;);
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>print(&quot;Updated at: &quot; + context.lastupdate+&quot;\n&quot;);
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>print(&quot;Temperature: &quot; + context.temp+&quot;\n&quot;);
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>print(&quot;Wind: &quot; + context.wind+&quot;\n&quot;);
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>print(&quot;Pressure: &quot; + context.pressure+&quot;\n&quot;);
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>print(&quot;Visibility: &quot; + context.humidity+&quot;\n&quot;);
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>print(&quot;Humidity: &quot; + context.visibility+&quot;\n&quot;);
+</span></code></pre></div>
+<p>For more information, see <a href="../../using-session-and-context-variables" target="_blank">Using Session and Context Variables in Tasks</a>.</p>
+<h3 id="customize-javascript-responses">Customize JavaScript Responses<a class="headerlink" href="#customize-javascript-responses" title="Permanent link">&para;</a></h3>
+<p>JavaScript will not have any list of templates displayed (see the following screenshot), because one template/JSON may not work for ‘All’ channels.</p>
+<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
+<p><strong>Key Points</strong></p>
+<ul>
+<li>If JavaScript template is used for an ‘<em>All channel</em>’ response, the template will be shown as is in JSON format and may not render correctly on the channel. You need to choose a channel-specific template for rendering a specific template for your channel.</li>
+<li>If any channel-specific override is present, the platform will use that over the <em>‘All channel’</em> response while responding on that specific channel. For example, if you have a specific message or template for MS Teams, the bot prefers that specific template while responding to a user over the MS Teams channel instead of the ‘All channel’ response.</li>
+<li>You can have more than one response configured for a channel. The bot randomly chooses if more than one response is configured for any given channel. This holds true for all-channel responses too if no other channel-specific responses are configured.</li>
+</ul>
+<p>If your bot has multiple channels, most probably each channel has its own template.</p>
+<p>For a few channel options in the <strong>Channel</strong> drop-down, you can see a list of templates displayed for <strong>JavaScript</strong> response. For example, select the <strong>Web/Mobile Client</strong> channel and choose any template from the <strong>Channel Templates</strong> list for your response as illustrated below.</p>
+<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.png" title="image_tooltip" /></a></p>
+<p>For more information on templates, see <a href="https://developer.kore.ai/docs/bots/sdks/widget-sdk-message-formatting-and-templates/" target="_blank">Widget SDK – Message Formatting and Templates</a>.</p>
+<p>The same message configuration rules and principles apply while configuring any entity prompt or KG responses too.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The channel template options are different for each channel. The template definitions provided in the platform are only for reference purposes. Please refer to the documentation of the channel provider to obtain the latest template definitions.</p>
+</div>
+<h2 id="preview-the-prompt-or-response">Preview the Prompt or Response<a class="headerlink" href="#preview-the-prompt-or-response" title="Permanent link">&para;</a></h2>
+<p>On the <strong>Preview</strong> tab, you can view a sample of the rendered output message that is displayed to the end-user with markup. To render the output for the code involving context variables, define them to use the <strong>Key</strong> and <strong>Value</strong> boxes in the tab to render a valid sample output for preview.</p>
+<h2 id="channel-specific-user-prompts">Channel-Specific User Prompts<a class="headerlink" href="#channel-specific-user-prompts" title="Permanent link">&para;</a></h2>
+<p>By default, the Dialog Tasks configures the standard user prompts for all channels. However, you can define a specific response for one or more channels to display to the end-user in that channel instead of the <strong>Default</strong> response.
+To define a channel-specific response, select a channel, for example, <strong>Kore.ai</strong>, and then define the user prompt on the <strong>Advanced</strong> tab as needed. Only one response can be defined for each channel.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use the following keys to return default values for:</p>
+<ul>
+<li>response.message – Returns the default message as a string.</li>
+<li>response.message.choices – Returns the options choice or confirmation message types as an array.</li>
+</ul>
+</div>
+<p><strong>Slack Channel Override Example</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>var message = {};
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>var attachments = [];
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>var attachment = {
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    &#39;text&#39;: &quot;Exception occurred during API execution&quot;,
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &#39;color&#39;: &#39;#FFCC00&#39;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &#39;attachment_type&#39;: &#39;default&#39;
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>};
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>attachments.push(attachment);
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>message.attachments = attachments;
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>print(JSON.stringify(message));
+</span></code></pre></div>
+<p><strong>FaceBook Channel Override Example</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>var message = {
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    text: response.message
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>};
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>var buttons = [];
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>for (var i = 0; i &lt; response.choices.length; i++) {
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    var choiceItem = response.choices[i];
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    if (choiceItem.length &gt; 20) {
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        choiceItem = choiceItem.substring(
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>            0, 18) + &#39;..&#39;;
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    }
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    var element = {
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        content_type: &#39;text&#39;,
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        title: choiceItem,
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        payload: choiceItem
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    };
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    buttons.push(element);
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>}
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>message.quick_replies = buttons;
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>print(JSON.stringify(message));
+</span></code></pre></div>
+<p><strong>Email Channel Override Example</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>var message = {};
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>var text = response.message + &#39; &lt;br&gt; &#39;;
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>for (var i = 0; i &lt; response.choices.length; i++) {
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    text = text.concat(
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        &#39;&lt;u&gt; + response.choices[i] + &#39; &lt;
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        /u&gt; &lt;br&gt;&#39;);
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    }
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    message.text = text;
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>print(JSON.stringify(message));
+</span></code></pre></div>
+<p><strong>SMS Channel Override Example</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>var message = {};
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    var indexArray = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;,
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        &#39;d&#39;, &#39;e&#39;,
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;,
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        &#39;k&#39;, &#39;l&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;,
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;,
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;,
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        &#39;z&#39;
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    ];
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    var text = response.message + &#39;\\n&#39;;
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    for (var i = 0; i &lt; response.choices
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        .length; i++) {
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        text = text.concat(indexArray[i] +
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>            &#39;) &#39; + response.choices[
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>                i] + &#39;\\n&#39;);
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    }
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    message.text = text;
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>print(JSON.stringify(message));
+</span></code></pre></div>
 
 
   
