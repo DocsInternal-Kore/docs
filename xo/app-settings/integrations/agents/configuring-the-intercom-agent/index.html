@@ -17,7 +17,7 @@
     
     
       
-        <title>Configuring the intercom agent - Kore ai Docs</title>
+        <title>Configuring the Intercom Agent - Kore ai Docs</title>
       
     
     
@@ -92,6 +92,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#configuring-the-intercom-agent" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -193,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuring the intercom agent
+              Configuring the Intercom Agent
             
           </span>
         </div>
@@ -3813,6 +3818,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-create-an-app" class="md-nav__link">
+    Step1: Create an App
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step2-retrieve-access-token" class="md-nav__link">
+    Step2: Retrieve Access Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-a-webhook" class="md-nav__link">
+    Step 3: Configure a Webhook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step4-enable-the-intercom-agent" class="md-nav__link">
+    Step4: Enable the Intercom Agent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    Execution
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3831,7 +3901,132 @@
 
 
 
-
+<h1 id="configuring-the-intercom-agent">Configuring the Intercom Agent<a class="headerlink" href="#configuring-the-intercom-agent" title="Permanent link">&para;</a></h1>
+<p>Intercom is a Customer Communications Platform. It shows you who is using your product or website and makes it easy to communicate . Kore.ai XO Platform’s Intercom Agent integration allows you to seamlessly hand-off the virtual assistant conversations to your live agents on Intercom. </p>
+<p>This post provides the configuration steps to be followed to enable the Intercom Agent integration. Use the configurations provided below as general guidelines as there could be some differences based on the version of the Intercom that you are using. </p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Kore.ai’s virtual assistant (VA) serves as the central point of interaction for the users. In addition to its regular capabilities, the VA acts as a proxy or intermediary between the users and the Intercom agents to handover conversations seamlessly. The VA also allows you to integrate with the Intercom platform. The VA facilitates the communication and interaction between the user and the Intercom agent using the chat module.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<p>To configure the Intercom agent follow the instructions in the sections below.</p>
+<h3 id="step1-create-an-app">Step1: Create an App<a class="headerlink" href="#step1-create-an-app" title="Permanent link">&para;</a></h3>
+<p>To set up Intercom to receive messages, you will first need to create an app in Intercom.</p>
+<ol>
+<li>Log in to the <a href="https://app.intercom.com/a/apps/_/developer-hub" target="_blank">https://app.intercom.com/a/apps/_/developer-hub</a> with your intercom credentials.</li>
+<li>
+<p>Go to the App Store and click the <strong>Build your own app</strong>.</p>
+<p><a class="glightbox" href="../images/configuring-the-intercom-agent-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configuring-the-intercom-agent-img1.png" alt="App store -  Build your own app" title="App store -  Build your own app" style="border: 1px solid gray;"></a></p>
+</li>
+<li>
+<p>In the App Store page, click the <strong>Your Apps</strong> menu on the top right corner.</p>
+</li>
+<li>
+<p>Click <strong>New App</strong> and enter the following details to build an app:</p>
+<ol>
+<li>Enter the App name.</li>
+<li>Select the Kore.ai Workspace.</li>
+</ol>
+<p><a class="glightbox" href="../images/configuring-the-intercom-agent-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configuring-the-intercom-agent-img2.png" alt="App name and workspace" title="App name and workspace" style="border: 1px solid gray;"></a></p>
+</li>
+<li>
+<p>Click <strong>Create App</strong>.</p>
+</li>
+</ol>
+<h3 id="step2-retrieve-access-token">Step2: Retrieve Access Token<a class="headerlink" href="#step2-retrieve-access-token" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Once you create the App, click on authentication and copy the <strong>AccessToken</strong> value.</p>
+<p><a class="glightbox" href="../images/configuring-the-intercom-agent-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configuring-the-intercom-agent-img3.png" alt="Retrieve access token value" title="Retrieve access token value" style="border: 1px solid gray;"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This token will be used to access your Intercom data via API.</p>
+</div>
+</li>
+<li>
+<p>Copy the Access Token and keep it for future use.</p>
+</li>
+</ol>
+<h3 id="step-3-configure-a-webhook">Step 3: Configure a Webhook<a class="headerlink" href="#step-3-configure-a-webhook" title="Permanent link">&para;</a></h3>
+<ol>
+<li>To set up the webhook, Log in to your Intercom account.</li>
+<li>From the main menu on the left, navigate to <strong>Configure &gt; Webhooks</strong>.</li>
+<li>
+<p>Navigate back to Intercom Developer Hub, and</p>
+<ol>
+<li>To add a new webhook, click on the <strong>Add Webhook</strong> button.</li>
+<li>In the <strong>New Webhook</strong> form, you can enter the details for the new webhook.</li>
+<li>Copy the webhook URL listed under <strong>Integrations → Agent Transfer → Intercom → Configuration</strong>.</li>
+<li>Navigate back to Intercom and paste the copied Webhook URL in the <strong>WebHook</strong> field.</li>
+</ol>
+</li>
+<li>
+<p>Under Webhook topics, navigate to <strong>Select a Topic</strong> and select the following topics:</p>
+<ol>
+<li>conversation.admin.closed</li>
+<li>conversation.admin.replied</li>
+<li>conversation.admin.assigned</li>
+<li>conversation.admin.single.created</li>
+</ol>
+</li>
+<li>
+<p>Click on <strong>Save</strong> to preserve these settings</p>
+</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3 id="step4-enable-the-intercom-agent">Step4: Enable the Intercom Agent<a class="headerlink" href="#step4-enable-the-intercom-agent" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Log in to the Kore.ai XO Platform <a href="https://bots.kore.ai/botbuilder" target="_blank">https://bots.kore.ai/botbuilder</a></li>
+<li>Select a Virtual Assistant for which you want to configure the Intercom agent. </li>
+<li>
+<p>Navigate to <strong>Build &gt; Integrations &gt; Agent Transfer</strong> and click the <strong>Intercom</strong> button.</p>
+<p><a class="glightbox" href="../images/configuring-the-intercom-agent-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configuring-the-intercom-agent-img4.png" alt="Agent Transfer - Intercom" title="Agent Transfer - Intercom" style="border: 1px solid gray;"></a></p>
+</li>
+<li>
+<p>Click the <strong>Configurations</strong> tab and enter the following credentials for the Intercom Agent:</p>
+<ol>
+<li><strong>Access Token</strong>: The access token ID for the Intercom, which was copied step 2.</li>
+<li><strong>Webhook URL</strong>: The WebHook URL found in the Kore.ai’s Intercom Agent Configuration page.</li>
+</ol>
+</li>
+<li>
+<p>If you want to make Intercom as the default agent, enable the <strong>Default Agent System for all bot channels</strong> option.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option will be available only when you have multiple agents configured for your VA.</p>
+</div>
+</li>
+<li>
+<p>You can also customize the channel mapping by clicking the <strong>Manage</strong> link as shown below:</p>
+<p><a class="glightbox" href="../images/configuring-the-intercom-agent-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configuring-the-intercom-agent-img5.png" alt="Customize the channel mapping" title="Customize the channel mapping" style="border: 1px solid gray;"></a></p>
+</li>
+<li>
+<p>Once you click <strong>Manage</strong>, you can map the channels which you want to use Intercom agent for handovering the conversations. To learn more about channel enablement, read the<a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/" target="_blank"> Adding channels to your bot</a> article.</p>
+<p><a class="glightbox" href="../images/configuring-the-intercom-agent-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configuring-the-intercom-agent-img6.png" alt="Map channels to intercom agent" title="Map channels to intercom agent" style="border: 1px solid gray;"></a></p>
+</li>
+<li>
+<p>After mapping channels, click <strong>Done</strong>.</p>
+</li>
+<li>Click <strong>Save</strong> to enable the Intercom agent.</li>
+<li>Publish the VA. For more information, see <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/" target="_blank">Publishing Bot</a>.</li>
+</ol>
+<h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
+<p>This section helps you verify how the conversations from the Kore.ai XO Platform are being handed over to the Intercom agent after enabling it. </p>
+<p>To verify the data exchange between the Kore.ai’s VA and Intercom agent, follow these steps:</p>
+<ol>
+<li>Open a virtual assistant for which you have enabled the Intercom agent.</li>
+<li>
+<p>Create a new Agent Transfer Node task. For example, create a PlatformAgent task with the UserChats node and configure it to use the Intercom agent. For more information, read the <a href="../../../../automation/use-cases/dialogs/node-types/working-with-the-agent-transfer-node" target="_blank">Agent Transfer Node</a> article.</p>
+<p><a class="glightbox" href="../images/configuring-the-intercom-agent-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configuring-the-intercom-agent-img7.png" alt="New Agent Transfer node task" title="New Agent Transfer node task" style="border: 1px solid gray;"></a></p>
+</li>
+<li>
+<p>Click the <strong>Talk to Bot</strong> icon to launch the VA and enter <strong>Help</strong>.</p>
+</li>
+<li>Once you invoke the agent transfer dialog, the Intercom Developer Hub receives a notification alert.</li>
+<li>When a user initiates the chat from the VA, it transfers the conversation to the Intercom agent and sends a message to the user. Agent receives a notification about this on the Intercom.</li>
+<li>
+<p>Now the connection between Intercom agent and the user has been established and the conversation continues.</p>
+<p><a class="glightbox" href="../images/configuring-the-intercom-agent-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configuring-the-intercom-agent-img8.png" alt="Connection established between Intercom agent and user" title="Connection established between Intercom agent and user" style="border: 1px solid gray;"></a></p>
+</li>
+</ol>
 
 
   
