@@ -4275,7 +4275,7 @@ or <em>Tell Clea I want today’s schedule</em>
 <h2 id="configurations"><strong>Configurations</strong><a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
 <p>For each linked bot, you can set the <strong>Bot Qualification Threshold</strong> as the minimum score needed to qualify the bot for the intent identification process.</p>
 <p>By default, it is set to 0.3 and can be set to any value between 0 and 1.</p>
-<p><a class="glightbox" href="images/tub45.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/tub45.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/tub4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/tub4.png" title="image_tooltip" /></a></p>
 <h2 id="fallback-bots"><strong>Fallback Bots</strong><a class="headerlink" href="#fallback-bots" title="Permanent link">&para;</a></h2>
 <p>You can mark certain bots as fallback bots which would be used for detecting intents when no other bots are identified from other training options.</p>
 <p><strong>Points to note</strong>:</p>
@@ -4287,8 +4287,10 @@ or <em>Tell Clea I want today’s schedule</em>
 <p>Inclusive bots need not be trained with sample utterances to participate in the bot scoping process. These bots will always be considered for Intent Detection at the time of evaluating the user utterances, except when the user invokes a linked bot either using ‘Invocation Phrases’ or ‘Trigger Phrases’. 
  Up to 3 linked bots can be marked as inclusive bots.</p>
 <p><a class="glightbox" href="../images/tub6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/tub6.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>    A linked bot can be marked either as Fallback or Inclusive, not both.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A linked bot can be marked either as Fallback or Inclusive, not both.</p>
+</div>
 <h2 id="linked-bots"><strong>Linked Bots</strong><a class="headerlink" href="#linked-bots" title="Permanent link">&para;</a></h2>
 <p>The information related to the in-context linked bot would be available in the Session context under the following key:</p>
 <ul>
@@ -4342,7 +4344,6 @@ or <em>Tell Clea I want today’s schedule</em>
 <li><em>Do not Assign any Child Bot</em>: The user is not eligible for any of the linked bots.</li>
 </ul>
 </li>
-<li></li>
 </ul>
 <p><a class="glightbox" href="../images/image8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image8.png" title="image_tooltip" /></a></p>
 <p>If your bot is trained in one or more languages that use NLP Version 2, you will see a banner notifying you about the upcoming<a href="https://developer.kore.ai/docs/bots/nlp/optimizing-bots/#NLP_Version_3"> auto-upgrade to NLP Version 3</a>.</p>
