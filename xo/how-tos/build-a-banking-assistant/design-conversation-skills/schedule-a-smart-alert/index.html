@@ -4182,7 +4182,7 @@
 
 <h1 id="schedule-a-smart-alert">Schedule a Smart Alert<a class="headerlink" href="#schedule-a-smart-alert" title="Permanent link">&para;</a></h1>
 <p>In this post, we explore a scenario for a travel Bot, where the user needs to be provided with weather updates daily for a preferred location. We use an Alert task to achieve the same. We also see how auto-subscription can be enabled on this Alert task, making it smart.</p>
-<p>For details on what Alert task is and how it is implemented in the Kore.ai Bots platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/" target="_blank"> here</a>.</p>
+<p>For details on what Alert task is and how it is implemented in the XO platform, click <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/" target="_blank"> here</a>.</p>
 <h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
 <p>A registered user of a Bot needs to be sent a weather update in the form of an alert, on a pre-specified time of the day and/or at a specified interval of time. A sample is given below:
 <a class="glightbox" href="../images/sample-weather-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/sample-weather-bot.png" alt="sample weather bot" title="sample weather bot" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -4226,7 +4226,7 @@
 <li>
 <p>We will not need any <strong>Initializer</strong> requirements for our use case. Use this in case any JavaScript needs to be executed before the request is sent.</p>
 </li>
-<li>Under <strong>Request</strong> click <strong>Add API</strong> to add the service API that needs to be invoked. We are using a <em>GET</em> method from the following API: <code>http://api.openweathermap.org/data/2.5/weather?q={cityname}&amp;APPID=&amp;lt;your-app-id&gt;</code>.<ul>
+<li>Under <strong>Request</strong> click <strong>Add API</strong> to add the service API that needs to be invoked. We are using a <em>GET</em> method from the following API: <code>http://api.openweathermap.org/data/2.5/weather?q={cityname}&amp;APPID=&lt;your-app-id&gt;</code>.<ul>
 <li>The <strong>APPID</strong> in the above url is assigned to you by OpenWeather when you sign up. You can find it from the <a href="https://home.openweathermap.org/api_keys" target="_blank">API keys</a> section after you login to your account.</li>
 <li>Notice that the <strong>Parameters</strong> list is populated automatically with the parameters entered earlier.</li>
 </ul>

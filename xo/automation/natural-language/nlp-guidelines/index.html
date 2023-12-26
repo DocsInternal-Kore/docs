@@ -4518,7 +4518,7 @@
 <li>Don’t use special characters such as () &amp; /  $ [ ] + *.</li>
 <li>Don’t use punctuation such as – , . ! ? ‘ “.</li>
 </ul>
-<p>For a quick guide towards the usage of patterns, refer to <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-use-patterns-for-intents-entities/">How to use Patterns</a>.</p>
+<p>For a quick guide towards the usage of patterns, refer to <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/train-the-assistant/use-patterns-for-intents-and-entities/" target="_blank">How to use Patterns</a>.</p>
 <h3 id="pattern-operators">Pattern Operators<a class="headerlink" href="#pattern-operators" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>AND: ( X Y )</strong>: An ordered relationship of words in sequence. This is the default setting. i.e. when you specify a pattern as <em>cancel booking, it _is the same as _(cancel booking )</em>. 
@@ -4593,7 +4593,7 @@ patterns for entity ToFlight–  <em>to * from</em>, and <em>from to *1</em> pat
 <li><strong>Pattern</strong>: ~concept *n – pattern built using concepts. 
 pattern for entity ToFlight–  <em>to *1</em> the pattern for entity FromFlight –  <em>~from *1</em>, where <em>from</em> is a concept as (using) (from) <em>ToFlight</em> &amp; <em>FromFlight</em> are captured from user utterance <em>change flight from XYZ321 to ABC123</em> and <em>change flight  to ABC123 using XYZ321</em> but not from <em>change flight for ABC123 using XYZ321.</em></li>
 </ul>
-<p>For more information on how to add patterns, refer to <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Manage_Patterns_and_Rules">Managing Patterns</a>.</p>
+<p>For more information on how to add patterns, refer to <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/fundamental-meaning/#manage-patterns-and-rules" target="_blank">Manage Patterns</a>.</p>
 <h3 id="negative-patterns">Negative Patterns<a class="headerlink" href="#negative-patterns" title="Permanent link">&para;</a></h3>
 <p>Negative patterns are used to eliminate intents detected by the Fundamental Meaning or Machine Learning models.</p>
 <p>For example, a user says <em>I was trying to Book a Flight when I faced an issue</em>. Though the machine identifies the intent as <em>Book a Flight</em>, that is not what the user wants to do. In such a case, defining <code>was trying to *</code> as a negative pattern, would ensure that the matched intent is ignored.</p>
@@ -4637,7 +4637,7 @@ pattern for entity ToFlight–  <em>to *1</em> the pattern for entity FromFlight
 <p>Synonyms can be added to identify intents as well as entities. Entity identification is triggered only after an Intent is identified.</p>
 </div>
 
-<p>For more information on how to add synonyms, refer to <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Manage_Synonyms">Managing Synonyms</a>.</p>
+<p>For more information on how to add synonyms, refer to <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/fundamental-meaning/#manage-synonyms" target="_blank">Managing Synonyms</a>.</p>
 <h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
 <p>Concepts are clusters of related and synonymous terms that you want to be considered as a group identified by a single term.</p>
 <p><strong>Allowed concept naming conventions:</strong></p>
@@ -4668,7 +4668,7 @@ pattern for entity ToFlight–  <em>to *1</em> the pattern for entity FromFlight
 <li>~123test</li>
 </ul>
 <p>You can also define custom concepts using emojis.</p>
-<p>For more information, refer to <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Manage_Concepts">Custom Concepts</a>.</p>
+<p>For more information, refer to <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/fundamental-meaning/#manage-concepts" target="_blank">Custom Concepts</a>.</p>
 <h2 id="standard-responses">Standard Responses<a class="headerlink" href="#standard-responses" title="Permanent link">&para;</a></h2>
 <p>Standard Responses are template messages that the Platform uses to respond to specific situations during a conversation. Examples of these situations include resolution of ambiguous user inputs, requisition for authorization, obtaining confirmations, informing about interruptions and resumptions, and more. Standard Responses are categorized into the following:</p>
 <ul>

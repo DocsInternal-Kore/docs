@@ -4236,7 +4236,7 @@
 <p><ul><li>Patterns are to be used as a last resort, only for cases where the ML engine cannot be used. Examples of such cases would be to train the VA in recognizing idiomatic utterances, command like utterances.</li>
 <li>Patterns are evaluated in the order of their listing. Once a match is found the rest of the patterns are not evaluated. So ensure when adding patterns to add in the order of most restrictive to least restrictive.</li>
 <li>Only one wildcard (*) is allowed in a pattern.</li>
-<li>While most of the features are supported in all languages, there are some exceptions, see <a href="https://developer.kore.ai/docs/bots/how-tos/multi-lingual-bot-behavior/" target="_blank">here</a> for more details.</li></p>
+<li>While most of the features are supported in all languages, there are some exceptions, see <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/language-management/multi-lingual-bot-behavior/" target="_blank">here</a> for more details.</li></p>
 </div>
 
 <h2 id="pattern-creation-guidelines">Pattern Creation Guidelines<a class="headerlink" href="#pattern-creation-guidelines" title="Permanent link">&para;</a></h2>
@@ -4456,7 +4456,7 @@ Add a space after the angular bracket
   <tr>
    <td><strong>Sample Pattern</strong>
    </td>
-   <td>“<em>Change &lt; seat t</em>“
+   <td>“<em>Change < seat t</em>“
    </td>
   </tr>
   <tr>
@@ -4723,7 +4723,7 @@ Due to the risk of running into false positives, you are advised not to use this
   <tr>
    <td><strong>Sample Pattern</strong>
    </td>
-   <td>“<em><&lt; change seat  >></em>“
+   <td>“<em><< change seat  >></em>“
    </td>
   </tr>
   <tr>
@@ -4899,7 +4899,7 @@ For example, <em>(Cancel Booking)</em> matches <em>Cancel my flight booking</em>
 <p><strong>Entity Extracted</strong>: <em>ArrivalCity</em> = <em>London</em> and <em>DepartureCity</em>= Paris</p>
 <p><strong>User Utterance not resulting in entity extraction</strong>: “<em>book flight for London from Paris</em>."</p>
 <h3 id="pattern-4-word1-word2">Pattern 4: [ word1 word2 ] *<a class="headerlink" href="#pattern-4-word1-word2" title="Permanent link">&para;</a></h3>
-<p>This can be for patterns using a group of words or concepts of which at least one should be present in the utterance. The order within the group is important (see above in <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-use-patterns-for-intents-entities/#Patterns_for_Intent_Detection" target="_blank">intent detection</a> .</p>
+<p>This can be for patterns using a group of words or concepts of which at least one should be present in the utterance. The order within the group is important (see above in <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-travel-planning-assistant/train-the-assistant/using-patterns/" target="_blank">intent detection</a> .</p>
 <p><strong>Pattern for <em>ArrivalCity</em> entity</strong>: <em>“to * [ from ]”</em> and <em>“[ from ] to *1”</em></p>
 <p><strong>Pattern for <em>DepartureCity</em> entity</strong>: “[ from ] * to” and “to [ from ] *”</p>
 <p><strong>User Utterance</strong>: <em>Book flight to London from Paris</em> or <em>Book flight from London to Paris.</em></p>

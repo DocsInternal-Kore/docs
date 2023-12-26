@@ -4589,12 +4589,12 @@
 <p><a class="glightbox" href="../images/utterance-display-confidence-score.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/utterance-display-confidence-score.png" alt="display confidence score for utterances" title="display confidence score for utterances" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Further, if you have enabled Entity Placeholders, the Platform will replace the entity values in the training utterance with entity name placeholders for training the ML model. Using actual entity values as well as multiple additions of an utterance with just a change in the entity value will have an adverse impact on the ML training model. The name of entities also starts contributing highly to the intent detection model.</p>
 <h4 id="using-negative-patterns">Using Negative Patterns<a class="headerlink" href="#using-negative-patterns" title="Permanent link">&para;</a></h4>
-<p>Negative patterns can be used to eliminate intents detected by the Fundamental Meaning or Machine Learning models. <a href="https://developer.kore.ai/docs/bots/nlp/fundamental-meaning/#Negative_Patterns">Learn more</a>.</p>
+<p>Negative patterns can be used to eliminate intents detected by the Fundamental Meaning or Machine Learning models.  <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/fundamental-meaning/#negative-patterns" target="_blank">Learn more</a>.</p>
 <h2 id="training-your-assistant">Training your Assistant<a class="headerlink" href="#training-your-assistant" title="Permanent link">&para;</a></h2>
 <p>After you added user utterances, you should train the Kore.ai interpreter to recognize the utterances and the associated user intent. When you have untrained utterances in your VA, the following message is displayed:</p>
 <p><em>“You have untrained utterances in your ML model. Train your VA to update with all your utterances.”</em></p>
-<p>Click <strong>Train</strong>. A status bar is displayed to show progress for utterance training. When complete, the <em>Utterances trained successfully</em> message is displayed. The user utterances are added to the Machine Learning Database. You can further configure the ML engine, identify the dummy intents when a user utterance contains the words that are not used in the VA’s training i.e. vocabulary, <a href="https://developer.kore.ai/docs/bots/nlp/advanced-nlp-configurations/">Learn more</a>.</p>
-<p>Once you have trained your VA, you can test it on the newly trained data. <a href="https://developer.kore.ai/docs/bots/test-your-bot/testing-your-bot-with-nlp/">Learn how to test your </a>assistant.</p>
+<p>Click <strong>Train</strong>. A status bar is displayed to show progress for utterance training. When complete, the <em>Utterances trained successfully</em> message is displayed. The user utterances are added to the Machine Learning Database. You can further configure the ML engine, identify the dummy intents when a user utterance contains the words that are not used in the VA’s training i.e. vocabulary, <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlu-configurations/engine-tuning/" target="_blank">Learn more</a>.</p>
+<p>Once you have trained your VA, you can test it on the newly trained data. <a href="https://docsinternal-kore.github.io/docs/xo/automation/testing/testing-your-bot-with-nlp/" target="_blank">Learn</a> how to test your assistant.</p>
 <h3 id="auto-training">Auto-Training<a class="headerlink" href="#auto-training" title="Permanent link">&para;</a></h3>
 <p>By default, machine learning is automatically trained for any defined user utterances whenever a task is:</p>
 <ul>
@@ -4630,7 +4630,7 @@
 <p>The Threshold &amp; Configurations for the ML engine are discussed in detail in the following sections.</p>
 <h3 id="machine-learning-model-configuration-overview">Machine Learning Model Configuration Overview<a class="headerlink" href="#machine-learning-model-configuration-overview" title="Permanent link">&para;</a></h3>
 <p>The XO  Platform ver 6.3 upgraded its Machine Learning (ML) model to v3. This includes a host of improvements and also allows developers to fine-tune the model using parameters to suit business requirements. The developers can change parameters like stop word usage, synonym usage, thresholds, and n-grams, as well as opt between <a href="https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks">Deep Neural Network</a> or <a href="https://en.wikipedia.org/wiki/Conditional_random_field">Conditional Random Field-based</a> algorithms for the <a href="https://en.wikipedia.org/wiki/Named-entity_recognition">Named-Entity Recognition (NER) </a>model.</p>
-<p>In v8.0 of the Platform, provision has been enabled to use the v5 of the ML intent model and externalize several hyperparameters. This can be achieved through the Advanced NLP Configuration, <a href="https://developer.kore.ai/docs/bots/nlp/advanced-nlp-configurations/">Learn more</a>.</p>
+<p>In v8.0 of the Platform, provision has been enabled to use the v5 of the ML intent model and externalize several hyperparameters. This can be achieved through the Advanced NLP Configuration. <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlu-configurations/engine-tuning/" target="_blank">Learn more</a>.</p>
 <p>When the Multiple Intents Model =is enabled, the ML Engine maintains multiple intent models for the VA as follows:</p>
 <ul>
 <li><strong>Bot level Intent Model</strong> containing all the Primary Intents of the assistant which includes Primary Dialog Intents, and Alert Task Intents.</li>
@@ -4639,13 +4639,13 @@
 <p>You can configure the Thresholds and Configurations separately for each of the intent models. This includes:</p>
 <ul>
 <li>All the configurations under Thresholds and Configurations – ML Engine as discussed in the below section;</li>
-<li>All the ML Engine configurations under the Advanced NLP Configurations <a href="https://developer.kore.ai/docs/bots/nlp/advanced-nlp-configurations/">discussed in detail here</a>.</li>
+<li>All the ML Engine configurations under the Advanced NLP Configurations discussed <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlu-configurations/engine-tuning/" target="_blank">here</a>.</li>
 </ul>
 <h4 id="the-multiple-intent-model">The Multiple Intent Model<a class="headerlink" href="#the-multiple-intent-model" title="Permanent link">&para;</a></h4>
 <p>Training of “similar intents” with different purposes is usually difficult as the training given for an intent can add noise or conflict with the training given to the other intent. This is more evident in cases where the intents have a contextually different meaning or purpose.</p>
 <p>Consider the following case: A user is in the <strong>Make a Booking</strong> task, so any query related to the Booking refund policy should be answered within this context. However, the query can also trigger FAQs from <strong>Cancel a Booking</strong>. </p>
 <p><a class="glightbox" href="../images/multiple-intent-model-example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/multiple-intent-model-example.png" alt="multiple intent model example" title="multiple intent model example" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>Enabling the Multiple Intent Models from the Advanced NLP Configurations (<a href="https://developer.kore.ai/docs/bots/nlp/advanced-nlp-configurations/">see here for how</a>) allows you to have a dedicated ML model only for the primary intents and separate ML Models for each of the dialogs with their associated sub-intents so that the intent detection of sub-intents gets preferential treatment.</p>
+<p>Enabling the Multiple Intent Models from the <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlu-configurations/engine-tuning/" target="_blank">Advanced NLP Configurations</a> allows you to have a dedicated ML model only for the primary intents and separate ML Models for each of the dialogs with their associated sub-intents so that the intent detection of sub-intents gets preferential treatment.</p>
 <p>Continuing with the above example, with a Multiple Intent Model, you can define a separate <em>context-based</em> FAQ and ensure a proper response to the user.</p>
 <p><a class="glightbox" href="../images/context-based-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/context-based-faq.png" alt="context-based faq" title="context-based faq" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>All the primary intents of the VA will be part of the <strong>Bot Level Intent Model</strong>. Each of the Dialog tasks will have its own ML Model consisting of all the sub-intents added to it. The Thresholds and Configurations can be individually configured for each of the models. For example, the Bot Level Intent Model can use ‘Standard’ Network Type and a specific Dialog’s intent model can use ‘LSTM’ Network Type.</p>
@@ -4663,7 +4663,7 @@
 
 <h4 id="network-type">Network Type<a class="headerlink" href="#network-type" title="Permanent link">&para;</a></h4>
 <p>You can choose the Neural Network that you would like to use to train the intent models. This setting has been moved to Machine Learning from Advanced NLP Configurations in v8.1.</p>
-<p>You can choose between the following types. Based on the selection additional configurations can be done from the Advanced NLP Configurations section, <a href="https://developer.kore.ai/docs/bots/nlp/advanced-nlp-configurations/#Externalization_of_ML_Engine">Learn more</a>.</p>
+<p>You can choose between the following types. Based on the selection additional configurations can be done from the Advanced NLP Configurations section. <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlu-configurations/engine-tuning/#network-type" target="_blank">Learn more</a>.</p>
 <ul>
 <li><strong>Standard.</strong></li>
 <li><strong>MLP-BOW</strong> – The bag-of-words model is a simplifying representation used in natural language processing and information retrieval. In this model, a text is represented as the bag of its words, disregarding grammar and even word order but keeping multiplicity.</li>
@@ -4679,7 +4679,7 @@ The Universal Sentence Encoder encodes text into high-dimensional vectors that c
 <h3 id="zero-shot-learning-model-with-openai">Zero-Shot Learning Model with OpenAI<a class="headerlink" href="#zero-shot-learning-model-with-openai" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-<p>Before using this feature, enable the <a href="https://developer.kore.ai/docs/bots/nlp/llm-and-generative-ai/#Integration_Setup">OpenAI Integration</a>.</p>
+<p>Before using this feature, enable the <a href="https://developer.kore.ai/docs/bots/nlp/llm-and-generative-ai/#Integration_Setup" target="_blank">OpenAI Integration</a>.</p>
 </div>
 
 <p>The XO platform allows developers to create a Natural Language Understanding (NLU) model through <strong>OpenAI integration</strong> integration for use in a virtual assistant. The <strong>Zero-Shot Learning (ZSL) Model</strong> allows developers to quickly create the model without needing training data. Instead, it relies on a pre-trained language model and a logic learning machine (LLM) to identify the intention of a user through the utterance based on semantic similarity. This feature uses the intent name to map or identify the intent name’s similarity with the user input to predict the utterances accurately. Thus, the intents have to be defined very well. This approach is well-suited for virtual assistants with relatively fewer intents and distinct use cases.</p>
@@ -4825,7 +4825,7 @@ The Universal Sentence Encoder encodes text into high-dimensional vectors that c
 <li>You may need to add training utterances to identify entities by the NER model for specific scenarios.</li>
 <li>When using FSL, dialog intents and FAQs need to be treated the same.</li>
 <li>Bot Synonyms, Stop Words and a few other ML Configurations are not used by the Few-Shot Model (Kore.ai Hosted Embeddings).</li>
-<li>The new Few-Shot Model (Kore.ai Hosted Embeddings) for Traits in NLP V3 allows the NLP Engine to train and identify Traits when set as the default model. This feature is available for only the new bots that have English as the NLU language. <a href="https://developer.kore.ai/docs/bots/nlp/user-utterances/#Support_for_Standard_Bot_Traits"> Learn more</a>.
+<li>The new Few-Shot Model (Kore.ai Hosted Embeddings) for Traits in NLP V3 allows the NLP Engine to train and identify Traits when set as the default model. This feature is available for only the new bots that have English as the NLU language. <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/machine-learning-engine/?h=support+for+standard+bot#support-for-standard-bot-traits" target="_blank"> Learn more</a>.
 <li>Intents are rescored by the R&R Engine by comparing the closest training sentences (including the task name) with the user utterance.</li></ul>
 </div>
 

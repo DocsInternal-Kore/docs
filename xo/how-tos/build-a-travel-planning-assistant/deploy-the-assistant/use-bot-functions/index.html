@@ -4176,20 +4176,20 @@
 
 <h1 id="travel-va-use-bot-functions">Travel VA: Use Bot Functions<a class="headerlink" href="#travel-va-use-bot-functions" title="Permanent link">&para;</a></h1>
 <p>In this document we explore Bot Functions for a travel VA that can help reuse the same functionality in several places. We will see how a travel spend report can be programmed as a function and used, for example, to send to users upon request in different circumstances, to integrate with apps or create digital views. </p>
-<p>For details on the Bot Functions are and how they are implemented in the XO Platform, click <a href="https://developer.kore.ai/docs/bots/bot-settings/bot-functions/reusing-bot-functions-custom-script-file/#Updating_Custom_Script_File" target="_blank">here</a>.</p>
+<p>For details on the Bot Functions are and how they are implemented in the XO Platform, click <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/dev-tools/reusing-bot-functions-custom-script-file/#updating-the-custom-script-file" target="_blank">here</a>.</p>
 <h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
 <p>In a Travel Planning Assistant used by a travel agency, we have a reporting task that requires the VA to provide information on how much a traveller has spent in different categories, as part of a booking made via the agency. </p>
 <p>This information can be provided in several ways. For the purpose of this article, we will demonstrate how to create a dialog task that sends the user these details upon request, and how to create a widget, as part of a Digital View, that will display the information, say within an app that is integrated via the Widget SDK.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>To go through these configurations, you need to know at least the basics of <a href="https://developer.kore.ai/docs/bots/chatbot-overview/getting-started-bots/" target="_blank">building a Virtual Assistant</a>. </p>
+<p>To go through these configurations, you need to know at least the basics of <a href="https://docsinternal-kore.github.io/docs/xo/virtual-assistants-overview/?h=overview#building-intelligent-conversational-virtual-assistants" target="_blank">building a Virtual Assistant</a>. </p>
 </li>
 <li>
 <p>A pre-built Virtual Assistant. We will use the <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-travel-planning-assistant/create-a-travel-virtual-assistant/" target="_blank">Travel Planning VA</a> for this example.</p>
 </li>
 <li>
-<p>The Script file has the following functions that use the message templates to display the data. (Refer <a href="https://developer.kore.ai/docs/bots/sdks/message-templates/" target="_blank">here</a> for more information on message templates): </p>
+<p>The Script file has the following functions that use the message templates to display the data. (Refer <a href="https://docsinternal-kore.github.io/docs/xo/web-mobile-SDK-message-formatting-and-templates/" target="_blank">here</a> for more information on message templates): </p>
 <ul>
 <li>
 <p><strong>tableTemplate</strong> – </em>takes a two-dimensional array and displays the content in a tabular format.</p>

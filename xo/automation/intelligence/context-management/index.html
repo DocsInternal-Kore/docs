@@ -4459,7 +4459,7 @@ To achieve the above conversation, the context object can be used as follows:</p
 <li><strong>Conversation Flows</strong> to customize the flows.</li>
 </ul>
 <h3 id="output-context">Output Context<a class="headerlink" href="#output-context" title="Permanent link">&para;</a></h3>
-<p><strong>Context Tags</strong> are generated and stored in the <strong>context object</strong> to be used for managing the assistant’s behavior and user experience. The Platform creates a context object for every user intent, like dialog tasks and FAQs. (<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/context-object/">Refer here for more on Context Object</a>).</p>
+<p><strong>Context Tags</strong> are generated and stored in the <strong>context object</strong> to be used for managing the assistant’s behavior and user experience. The Platform creates a context object for every user intent, like dialog tasks and FAQs. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/context-object/" target="_blank">Learn more</a>.</p>
 <p><strong>Default Contexts Tags</strong></p>
 <p>Intent names, Entity names, and FAQ Term/Node names are emitted by default.</p>
 <p><strong>Custom Context Tags</strong></p>
@@ -4544,7 +4544,7 @@ To achieve the above conversation, the context object can be used as follows:</p
 <h3 id="contextual-intent-detection">Contextual Intent Detection<a class="headerlink" href="#contextual-intent-detection" title="Permanent link">&para;</a></h3>
 <p>Contextual intent detection helps in detecting relevant intents using the output context set by previously executed intents.</p>
 <h4 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h4>
-<p>You can define <em>Rules</em> for identifying contextually relevant intents by using output context tags the same as traits (<a href="https://developer.kore.ai/docs/bots/nlp/traits/">Learn more</a>).</p>
+<p>You can define <em>Rules</em> for identifying contextually relevant intents by using output context tags the same as traits <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/traits/" target="_blank">Learn more</a>.</p>
 <h4 id="knowledge-graph_2">Knowledge Graph<a class="headerlink" href="#knowledge-graph_2" title="Permanent link">&para;</a></h4>
 <p>The Platform consumes the output context tags and uses them for improving intent detection in the Knowledge Graph engine based on the flag set by the developer. This flag ensures that the context tags are used to qualify paths in the Knowledge Graph. Context tags are used to extract terms and these terms are clubbed with any other terms present in user utterance. The consolidated list of terms is used for qualifying the path.</p>
 <p>You can configure this as follows:</p>

@@ -4223,7 +4223,7 @@
 <li>Patterns are to be used as a last resort only for cases where ML engine cannot be used. Examples of such cases would be to train bot in recognizing idiomatic utterances, command like utterances.</li>
 <li>Patterns are evaluated in the order of their listing. Once a match is found the rest of the patterns are not evaluated. So ensure when adding patterns to add in the order of most restrictive to least restrictive.</li>
 <li>Only one wildcard (*) is allowed in a pattern.</li>
-<li>While most of the features are supported in all languages, there are some exceptions, click <a href="https://developer.kore.ai/docs/bots/how-tos/multi-lingual-bot-behavior/" target="_blank">here</a> for more details.</li>
+<li>While most of the features are supported in all languages, there are some exceptions, click <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/language-management/multi-lingual-bot-behavior/" target="_blank">here</a> for more details.</li>
 </ul>
 <p>The following are some general guideline for creating intent patterns:</p>
 <ul>
@@ -4504,7 +4504,7 @@ _“<em>can you tell me what the credit on my card is</em>?”
   <tr>
    <td><strong>Sample Pattern</strong>
    </td>
-   <td>“&lt; cancel card”
+   <td>“< cancel card”
    </td>
   </tr>
   <tr>
@@ -4765,7 +4765,7 @@ Due to the risk of running into false positives, you are advised <span style="te
   <tr>
    <td><strong>Sample Pattern</strong>
    </td>
-   <td>“<em><&lt; credit limit on the card >></em>“
+   <td>“<em><< credit limit on the card >></em>“
    </td>
   </tr>
   <tr>
@@ -4989,7 +4989,7 @@ or <em>Transfer funds from my account to ABC123.</em> </li>
 <strong>User Utterance not resulting in entity extraction</strong>: “transfer funds <span style="text-decoration:underline;">for</span> ABC123 using my account”</em></li>
 </ul>
 <h3 id="pattern-4-word1-word2">Pattern 4: [ word1 word2 ] *<a class="headerlink" href="#pattern-4-word1-word2" title="Permanent link">&para;</a></h3>
-<p>This can be for patterns using a group of words or concepts of which at least one should be present in the utterance. The order within the group is important (See <a href="https://developer.kore.ai/docs/bots/how-tos/how-to-use-patterns-for-intents-entities/#Patterns_for_Intent_Detection" target="_blank">intent detection</a> for details). </p>
+<p>This can be for patterns using a group of words or concepts of which at least one should be present in the utterance. The order within the group is important (See <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-travel-planning-assistant/train-the-assistant/using-patterns/?h=use+pattern#patterns-for-intent-detection" target="_blank">intent detection</a> for details). </p>
 <ul>
 <li><strong>Pattern for <em>ToAccount</em> entity</strong>: <em>“to * [ using from ]”</em> and <em>“[ using from ] to *1”</em>. </li>
 <li><strong>Pattern for FromAccount entity</strong>: “<em>[using from] * to” and “to [using from] *</em>” .</li>
