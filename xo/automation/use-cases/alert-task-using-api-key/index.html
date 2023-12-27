@@ -4245,13 +4245,11 @@
 <h2 id="authorization-fields">Authorization Fields<a class="headerlink" href="#authorization-fields" title="Permanent link">&para;</a></h2>
 <p>By default, authorization fields are configured as part of the header of the task request message. If your task request requires additional authorization fields or the expected authorization is not part of the header, for example, social security number or PIN,</p>
 <ol>
-<li>
-<p>Click <strong>+ Add Authorization Field</strong> and then define the fields as shown in the following illustration.
-<a class="glightbox" href="../images/add-auth-field-api-key.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-auth-field-api-key.png" alt="add authorization field" title="add authorization field" style="border: 1px solid gray; zoom:75%;"></a> </p>
-</li>
-<li>
-<p>In the <strong>Field Type</strong> field, you can select one of the following depending on where in the task request message and the type of authorization fields that are required. </p>
-</li>
+<li>Click <strong>+ Add Authorization Field</strong> and then define the fields as shown in the following illustration.</li>
+</ol>
+<p><a class="glightbox" href="../images/add-auth-field-api-key.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-auth-field-api-key.png" alt="add authorization field" title="add authorization field" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<ol>
+<li>In the <strong>Field Type</strong> field, you can select one of the following depending on where in the task request message and the type of authorization fields that are required. </li>
 <li><strong>Header</strong> – The VA expects the authorization fields as part of the header of the request.</li>
 <li><strong>Payload</strong> – The VA expects the authorization fields as part of the content of the body of the request.</li>
 <li><strong>Query String</strong> – The VA expects the authorization fields as a query in the body of the request.</li>
@@ -4265,7 +4263,8 @@
 <h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
 <p>After you save the authentication, if you have defined an <strong>Authorization Check URL</strong> for your new authorization type, you can test your authorization definition on the <strong>Authentication</strong> tab when you click <strong>Test Authorization</strong> before continuing to develop the remaining steps of your task.
 <a class="glightbox" href="../images/click-test-auth-v2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/click-test-auth-v2.png" alt="click test authorization" title="click test authorization" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>After you click <strong>Test Authorization</strong>, the <strong>Test Authorization</strong> window is displayed and populated with the URL you specified in the <strong>Authorization Check URL</strong> section, as shown in the following illustration.<a class="glightbox" href="../images/test-auth-window-api-key.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-auth-window-api-key.png" alt="test auth window" title="test auth window" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>After you click <strong>Test Authorization</strong>, the <strong>Test Authorization</strong> window is displayed and populated with the URL you specified in the <strong>Authorization Check URL</strong> section, as shown in the following illustration.</p>
+<p><a class="glightbox" href="../images/test-auth-window-api-key.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-auth-window-api-key.png" alt="test auth window" title="test auth window" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>To configure the <strong>Test Authorization API Key</strong>, follow the steps below:</p>
 <ol>
 <li>In the <strong>Auth Check URL</strong> field, verify or enter the URL to test the authentication configuration.</li>

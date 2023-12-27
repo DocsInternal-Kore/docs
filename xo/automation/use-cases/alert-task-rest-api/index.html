@@ -4280,21 +4280,21 @@
 <p>We have seen how an Alert task can be set up in Kore.ai XO Platform <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks/" target="_blank">here</a>. In this section, we will see how to configure an API Request for a REST service.</p>
 <h2 id="general-setup">General Setup<a class="headerlink" href="#general-setup" title="Permanent link">&para;</a></h2>
 <p>The following illustration is an example of the <strong>API Request</strong> tab available when editing an Alert Task, with the <strong>Connection Type</strong> specified as <strong>Webservice</strong> and the <strong>Connection Mode</strong> set to <strong>REST</strong> defined on the <strong>General</strong> tab.
-<a class="glightbox" href="../use-cases/images/web-service-general-set-up.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/web-service-general-set-up.png" alt="web service general setup" title="web service general setup" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/web-service-general-set-up.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/web-service-general-set-up.png" alt="web service general setup" title="web service general setup" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>For such an Alert Task you will need to define: </p>
 <ul>
-<li><strong>Content Type</strong> – The type of data exchanged between Kore.ai and your web application. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/alert-task-rest-api-request/#Defining_the_Content_Type" target="_blank">Learn more</a>.</li>
-<li><strong>Authentication</strong> – If required for your alert task, you will need to define the authentication to access the API, for example, using basic authorization, OAuth, or API Key. <a href="https://developer.kore.ai/docs/bots/advanced-topics/authorization/bot-authentication/" target="_blank">Learn more</a>.</li>
-<li><strong>Parameters</strong> – Define one or more parameters used to process the API request, for example, input from user prompts, selection by an end-user from a list of choices, a URL, and so forth. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/alert-task-rest-api-request/#Defining_Parameters" target="_blank">Learn more</a>.</li>
-<li><strong>Initializer</strong> – Specify custom JavaScript to run, or set session variables prior to creating a task instance when web services require code to be executed, or session variables set, or modification of user context details before an API request is executed. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/alert-task-rest-api-request/#Defining_an_Initializer" target="_blank">Learn more</a>.</li>
-<li><strong>Request</strong> – Define a request chain used to make an API call to a web service to initiate the task using URLs and paths to your Bot to initiate the delivery of the data payload from the web service to the Bots Platform. The request chain can consist of pre-processors, API requests, and post-processors. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/alert-task-rest-api-request/#Defining_the_Request_Chain" target="_blank">Learn more</a>.</li>
-<li><strong>Response Sample</strong> – Define key/value pairs that you expect to receive in the task payload. The keys that you provide are available as drop-down choices for handling the data to display to the end-user. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/alert-task-rest-api-request/#Adding_the_Response_Sample" target="_blank">Learn more</a>.</li>
-<li><strong>Preview Website Link Content in Post</strong> – The website preview content displayed in the task notification message. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/alert-task-rest-api-request/#Preview_Website_Link_Content" target="_blank">Learn more</a>.</li>
+<li><strong>Content Type</strong> – The type of data exchanged between Kore.ai and your web application. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-task-rest-api/#content-type" target="_blank">Learn more</a>.</li>
+<li><strong>Authentication</strong> – If required for your alert task, you will need to define the authentication to access the API, for example, using basic authorization, OAuth, or API Key. <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/dev-tools/bot-authorization/setting-up-authorization-using-an-api-key/" target="_blank">Learn more</a>.</li>
+<li><strong>Parameters</strong> – Define one or more parameters used to process the API request, for example, input from user prompts, selection by an end-user from a list of choices, a URL, and so forth. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-task-rest-api/#parameters" target="_blank">Learn more</a>.</li>
+<li><strong>Initializer</strong> – Specify custom JavaScript to run, or set session variables prior to creating a task instance when web services require code to be executed, or session variables set, or modification of user context details before an API request is executed. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-task-rest-api/#define-an-initializer" target="_blank">Learn more</a>.</li>
+<li><strong>Request</strong> – Define a request chain used to make an API call to a web service to initiate the task using URLs and paths to your Bot to initiate the delivery of the data payload from the web service to the Bots Platform. The request chain can consist of pre-processors, API requests, and post-processors. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-task-rest-api/#define-the-request-chain" target="_blank">Learn more</a>.</li>
+<li><strong>Response Sample</strong> – Define key/value pairs that you expect to receive in the task payload. The keys that you provide are available as drop-down choices for handling the data to display to the end-user. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-task-rest-api/#add-the-response-sample" target="_blank">Learn more</a>.</li>
+<li><strong>Preview Website Link Content in Post</strong> – The website preview content displayed in the task notification message. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-task-rest-api/#preview-website-link-content" target="_blank">Learn more</a>.</li>
 </ul>
 <p>Click <strong>Save</strong> to save the API request settings.</p>
 <h2 id="content-type">Content Type<a class="headerlink" href="#content-type" title="Permanent link">&para;</a></h2>
 <p>The <strong>Content Type</strong> describes the type of data exchanged between Kore.ai and your Bot website or application, and the key-value pairs expected in the task payload response. To define the Content Type for the API Request (REST), expand the <strong>Content Type</strong> tab and select one of these options:</p>
-<p><a class="glightbox" href="../use-cases/images/select-content-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/select-content-type.png" alt="select content type" title="select content type" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/select-content-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-content-type.png" alt="select content type" title="select content type" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li><strong>JSON</strong> – JavaScript Object Notation is an open standard format using human-readable text to transmit data objects as attribute-value pairs. You can use JSON to transmit data between the Kore.ai servers and your Bot web application.</li>
 <li><strong>RSS</strong> – Rich Site Summary, or Really Simple Syndication, is a family of standardized formats used to publish frequently updated information such as blog entries, news headlines, audio, and video.</li>
@@ -4314,7 +4314,7 @@
 <ol>
 <li>
 <p>Click the <strong>Parameters</strong> section, and then click <strong>Add</strong>. The <em>Set Up Task Parameter</em> dialog opens.
-<a class="glightbox" href="../use-cases/images/set-task-parameter-rest-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/set-task-parameter-rest-api.png" alt="set task parameter" title="set task parameter" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/set-task-parameter-rest-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-task-parameter-rest-api.png" alt="set task parameter" title="set task parameter" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Depending on your Alert Task configuration, enter the values for the relevant fields as described in the following table. </p>
@@ -4533,12 +4533,10 @@ When selected, specify the <strong>Type</strong> for the array of end-user input
   </tr>
 </table>
 
-<ol>
-<li>
-<p>Click the <strong>Advanced Settings</strong> tab to define additional optional settings for the task fields.</p>
-<p><a class="glightbox" href="../use-cases/images/advanced-settings-rest-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/advanced-settings-rest-api.png" alt="advanced settings" title="advanced settings" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-</ol>
+<ol start="3"><li>Click the <b>Advanced Settings</b> tab to define additional optional settings for the task fields.</li>
+
+<a class="glightbox" href="../images/advanced-settings-rest-api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/advanced-settings-rest-api.png" alt="advanced settings" title="advanced settings" style="border: 1px solid gray; zoom:75%;"></a></ol>
+
 <table border="1.5">
   <tr bgcolor="#ECECEC">
    <td>
@@ -4610,10 +4608,9 @@ The JIRA API to ‘Post a comment’ requires one query field and one payload fi
   </tr>
 </table>
 
-<ol>
-<li>Click <strong>Add &amp; Continue</strong> to save the parameter for the task request and add another parameter, or click <strong>Add &amp; Exit</strong> to save the parameter for the task request and close the dialog. You should organize multiple parameters in the order that the bot user should provide inputs. Use the up and down icons to move the parameters.
-<a class="glightbox" href="../use-cases/images/add-and-continue.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/add-and-continue.png" alt="add and continue" title="add and continue" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ol>
+<ol start="4"><li>Click <b>Add & Continue</b> to save the parameter for the task request and add another parameter, or click <b>Add & Exit</b> to save the parameter for the task request and close the dialog. You should organize multiple parameters in the order that the bot user should provide inputs. Use the up and down icons to move the parameters.</li>
+<a class="glightbox" href="../images/add-and-continue.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-and-continue.png" alt="add and continue" title="add and continue" style="border: 1px solid gray; zoom:75%;"></a></ol>
+
 <h2 id="define-an-initializer">Define an Initializer<a class="headerlink" href="#define-an-initializer" title="Permanent link">&para;</a></h2>
 <p>To run a task, you may need to put or get values from a session before executing the task using Kore.ai session-specific variables.  For more information, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/using-session-and-context-variables/" target="_blank">Using Session and Context Variables in Tasks</a>.</p>
 <p>Some web services require executed code, session variables, or modification of user context details before executing an API request. </p>
@@ -4621,7 +4618,7 @@ The JIRA API to ‘Post a comment’ requires one query field and one payload fi
 <p>Using the <strong>Initializer</strong>, you can complete partner authorization and retrieve the access token from the response of the user authentication. </p>
 <p>The access token can be stored as a custom session variable and set as the header for subsequent API calls.</p>
 <p>To configure the task initializer, click the <strong>Initializer</strong> tab. It opens a JavaScript editor in which you can write the required code.</p>
-<p><a class="glightbox" href="../use-cases/images/task-initializer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/task-initializer.png" alt="task initializer" title="task initializer" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/task-initializer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/task-initializer.png" alt="task initializer" title="task initializer" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>In the JavaScript editor, define the <strong>Key</strong> and the <strong>Scope</strong> as follows:</p>
 <p><strong>EnterpriseContext</strong> – A key-value pair available to all bots and all users in an enterprise. For example, for a GitHub assistant, a user needs to access one or more enterprise repositories. In the <strong>Initializer</strong>, you can persist the repository data as <strong>Gitrepository (Enterprise Context)</strong> with the following JavaScript code:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">userRepository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -4757,7 +4754,7 @@ The JIRA API to ‘Post a comment’ requires one query field and one payload fi
 <ol>
 <li>On the <strong>API Request</strong> tab, expand the <strong>Request</strong> section, and then click, <strong>Add API</strong>. The Add API dialog opens, and you can now configure the request.</li>
 <li>
-<p>Specify the values for the fields in the <strong>Add API</strong> dialog as described in the following procedure.<a class="glightbox" href="../use-cases/images/add-api-window.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/add-api-window.png" alt="add api window" title="add api window" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Specify the values for the fields in the <strong>Add API</strong> dialog as described in the following procedure.<a class="glightbox" href="../images/add-api-window.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-api-window.png" alt="add api window" title="add api window" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>In the <strong>Name</strong> field, enter the name of your API request, for example, <em>My API Request</em>.</p>
@@ -4773,7 +4770,7 @@ The JIRA API to ‘Post a comment’ requires one query field and one payload fi
 </ul>
 </li>
 <li>
-<p>In the <strong>URL</strong> field, specify the URL for the bot task response to the process. For example, <a href="http://koremessenger.com/postURL">http://koremessenger.com/postURL</a>. You can also use session variables in the URL as shown in the following example:
+<p>In the <strong>URL</strong> field, specify the URL for the bot task response to the process. For example, <code><a href="http://koremessenger.com/postURL">http://koremessenger.com/postURL</a></code>. You can also use session variables in the URL as shown in the following example:
 <code><a href="https://mySite.crm.ondemand.com/sap/c4c/odata/v1/c4codata/ServiceRequestCollection">https://mySite.crm.ondemand.com/sap/c4c/odata/v1/c4codata/ServiceRequestCollection</a>?<span class="arithmatex">\(filter=ID eq '{id}' and ReporterEmail eq '{userEmail}'&amp;\)</span>expand=ServiceRequestHistoricalVersion,ServiceRequestDescription</code></p>
 </li>
 <li>
@@ -4796,11 +4793,11 @@ The JIRA API to ‘Post a comment’ requires one query field and one payload fi
 </li>
 <li>
 <p>In the <strong>Authorization Headers</strong> section, select or clear keys to enable or disable the key for the header as shown in the following illustration.
-<a class="glightbox" href="../use-cases/images/select-auth-headers.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/select-auth-headers.png" alt="select auth headers" title="select auth headers" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/select-auth-headers.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-auth-headers.png" alt="select auth headers" title="select auth headers" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>On the <strong>Parameters</strong> tab, select or clear any <strong>Auth Parameters</strong> or <strong>Parameters</strong> to include in the header as shown in the following illustration.
-<a class="glightbox" href="../use-cases/images/set-parameters-api-request.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/set-parameters-api-request.png" alt="set parameters" title="set parameters" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/set-parameters-api-request.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-parameters-api-request.png" alt="set parameters" title="set parameters" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Click <strong>Save</strong> to save and close the API Request configuration.</p>
@@ -4822,7 +4819,7 @@ If the processor is sequentially placed after the API Request, it is a post-proc
 <ol>
 <li>
 <p>On the <strong>API Request</strong> page, expand the <strong>Request</strong> tab, and then click <strong>Add Processor</strong>.
-<a class="glightbox" href="../use-cases/images/add-pre-processor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/add-pre-processor.png" alt="add pre processor" title="add pre processor" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/add-pre-processor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-pre-processor.png" alt="add pre processor" title="add pre processor" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Enter the name of your processor in the <strong>Name</strong> field.</p>
@@ -4880,7 +4877,7 @@ If the processor is sequentially placed after the API Request, it is a post-proc
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When a processor is placed in the **Request** section before the API Request, the processor is considered as a pre-processor. When placed after an API Request, the processor is considered a post-processor.</p></div>
+<p>When a processor is placed in the <b>Request</b> section before the API Request, the processor is considered as a pre-processor. When placed after an API Request, the processor is considered a post-processor.</p></div>
 
 <h4 id="adding-a-post-processor">Adding a Post-Processor<a class="headerlink" href="#adding-a-post-processor" title="Permanent link">&para;</a></h4>
 <p>You may need more than one API request to get the desired data payload from your web service, using Kore.ai post-processors.</p>
@@ -5120,12 +5117,8 @@ For more information, see <a href="https://docsinternal-kore.github.io/docs/xo/a
 </span></code></pre></div>
 <ol start="3"><li>Click <b>Add</b> to save the API request and then create another, or click <b>Add & Exit</b> to save the API request and close the dialog.</li></ol>
 
-<ul>
-<li>
 <p>For multiple API requests, you should order the requests in the sequential order needed to get to entire data response. </p>
 <p>For example, you may need to request a list of workspaces, then a list of projects, and finally, a list of users. Use the <strong>Move Up</strong> icon and the <strong>Move Down</strong> icon to reorder the API requests.</p>
-</li>
-</ul>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
 <p>No confirmation dialog is displayed when deleting an API request. If you click Continue or Save, the delete action is permanent and cannot be undone.</p></div>
@@ -5140,7 +5133,7 @@ For more information, see <a href="https://docsinternal-kore.github.io/docs/xo/a
 </li>
 <li>
 <p>To format the view of the response as a JSON structure with indentation as shown in the following illustration, click the <strong>Formatted</strong>  icon.
-  <a class="glightbox" href="../use-cases/images/format-response.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/format-response.png" alt="format response" title="format response" style="border: 1px solid gray; zoom:75%;"></a></p>
+  <a class="glightbox" href="../images/format-response.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/format-response.png" alt="format response" title="format response" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>To format the view of the response in serialized compact form as shown in the following illustration, click the <strong>Unformatted</strong> icon.</p>
@@ -5148,7 +5141,7 @@ For more information, see <a href="https://docsinternal-kore.github.io/docs/xo/a
 </ol>
 <h2 id="preview-website-link-content">Preview Website Link Content<a class="headerlink" href="#preview-website-link-content" title="Permanent link">&para;</a></h2>
 <p>Some web services send links to preview media as part of the payload response. In this section, you can enable or disable preview links, and define the path to the links in the payload. By default, website preview links are disabled. The following illustration is an example of the <strong>Preview Website Link Content in Post</strong> section when <strong>Yes</strong> is selected.
-<a class="glightbox" href="../use-cases/images/preview-website-link.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../use-cases/images/preview-website-link.png" alt="preview link" title="preview link" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/preview-website-link.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/preview-website-link.png" alt="preview link" title="preview link" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>When enabled, define the path to the preview links in the payload in the <strong>Path to the Link(toPreview)</strong> field, if the path is not in the root of the payload. For example, in the following code example from an RSS payload, the path to the preview is</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="s2">&quot;item&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="p">{</span>
