@@ -4266,13 +4266,17 @@
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
 </span></code></pre></div>
 <ul>
-<li><strong><em>tenant</em></strong> – Returns the tenant for the enterprise when defined. For example, <em>JIRA</em> requires a tenant for URLs, such as koreteam, in <a href="https://koreteam.atlassian.net/browse/BBF-3265">https://koreteam.atlassian.net/browse/BBF-3265</a>. You can use the <code>_tenant_</code> key to build a link in a task response such as:</li>
+<li>
+<p><strong><em>tenant</em></strong> – Returns the tenant for the enterprise when defined. For example, <em>JIRA</em> requires a tenant for URLs, such as koreteam, in <a href="https://koreteam.atlassian.net/browse/BBF-3265">https://koreteam.atlassian.net/browse/BBF-3265</a>. You can use the <code>_tenant_</code> key to build a link in a task response such as:</p>
+<ul>
 <li><strong><em>fields</em></strong> – Used to return a task field input provided by the end-user that is not part of a payload response. For example, in a <em>JIRA</em> task, the end-user is prompted to enter a workspace name. You can use the <code>_fields_</code> key to store the end-user input as: <code>_fields_["workspace"]</code></li>
 <li><strong>_last_run</strong> – Used to return the UTC date timestamp of a web service poll using ISO 8601 format, for example, 2016-03-05T12:44:38+00:00. For example, if a web service request returns all activity in a payload response, you can use the <code>_last_run</code> key to filter results displayed before or after the value for <code>_last_run</code>.</li>
 </ul>
+</li>
+</ul>
 <h3 id="session-keys">Session Keys<a class="headerlink" href="#session-keys" title="Permanent link">&para;</a></h3>
-<p><strong>Session Keys</strong> are Kore.ai variable placeholders for user data specific to a single session instance.
-<a class="glightbox" href="../images/session-keys.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/session-keys.png" alt="session keys" title="session keys" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><strong>Session Keys</strong> are Kore.ai variable placeholders for user data specific to a single session instance.</p>
+<p><a class="glightbox" href="../images/session-keys.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/session-keys.png" alt="session keys" title="session keys" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li><strong>UserContext.get(“_id”)</strong> – The Kore.ai userId.</li>
 <li><strong>UserContext.get(“emailId”)</strong> – The email address associated with the userId.</li>

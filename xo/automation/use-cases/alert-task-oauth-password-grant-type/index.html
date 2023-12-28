@@ -4267,9 +4267,13 @@
 <h2 id="token-url">Token URL<a class="headerlink" href="#token-url" title="Permanent link">&para;</a></h2>
 <p>To define the token URL, follow the below steps:</p>
 <ol>
-<li>In the <strong>Token URL</strong> field, optionally define a URL that can be used to test the authentication settings from the XO Platform  before you deploy the task with the authorization mechanism. You can use dynamic fields, path parameter fields, query fields, and so forth, to define the test URL, for example, 
-http://{tenant}.someCompany.com/test/{{tokenId}}</li>
-<li>In the <strong>Token URL Method</strong> field, select the HTTP request method type for the <strong>Token URL</strong>. One of <strong>PUT</strong>, <strong>POST</strong>, <strong>PATCH</strong>, <strong>DELETE,</strong> and <strong>GET</strong>.</li>
+<li>
+<p>In the <strong>Token URL</strong> field, optionally define a URL that can be used to test the authentication settings from the XO Platform  before you deploy the task with the authorization mechanism. You can use dynamic fields, path parameter fields, query fields, and so forth, to define the test URL, for example, 
+<code>http://{tenant}.someCompany.com/test/{{tokenId}}</code></p>
+</li>
+<li>
+<p>In the <strong>Token URL Method</strong> field, select the HTTP request method type for the <strong>Token URL</strong>. One of <strong>PUT</strong>, <strong>POST</strong>, <strong>PATCH</strong>, <strong>DELETE,</strong> and <strong>GET</strong>.</p>
+</li>
 <li>In the <strong>Token URL Content Type</strong> field, select the content type expected from the <strong>Token URL</strong>. One of: <strong>JSON, RSS, XML, URL Encoded JSON, CSV, Text, Twitter Encoded JSON, Multipart/Form-data,Multipart/Related</strong>, or <strong>Oracle ADF</strong>.</li>
 <li>In the <strong>Refresh Token URL</strong>, enter the refresh token URL if required. </li>
 <li>For situations when there may be authentication errors, enter the <strong>Auth Error Status Code</strong>.</li>

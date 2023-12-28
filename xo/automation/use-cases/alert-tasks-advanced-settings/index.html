@@ -4186,13 +4186,10 @@
 <ul>
 <li><strong>RRule</strong> – A JavaScript library for working with recurrence rules for calendar dates. Use it in the <strong>Format to Identify Recurrence</strong> section, select the type of recurrence pattern format used in the payload as one of <strong>RRule</strong> or <strong>Cron.</strong></li>
 <li>For iCalendar events. For more information, see <a href="https://www.kanzaki.com/docs/ical/rrule.html" target="_blank">Recurrence Rule</a>.</li>
-<li>
-<p><strong>Cron</strong> – Used for scheduling tasks in the future. For more information, see <a href="https://en.wikipedia.org/wiki/Cron#CRON_expression" target="_blank">Cron Expressions</a>.</p>
-</li>
-<li>
-<p>In the <strong>Recurrence Pattern</strong> section, define the string displayed to the end-user to show the frequency of a repeating event, such as a recurring weekly meeting. For example: </p>
-</li>
+<li><strong>Cron</strong> – Used for scheduling tasks in the future. For more information, see <a href="https://en.wikipedia.org/wiki/Cron#CRON_expression" target="_blank">Cron Expressions</a>.</li>
 </ul>
+<ol start="6"><li>In the <b>Recurrence Pattern</b> section, define the string displayed to the end-user to show the frequency of a repeating event, such as a recurring weekly meeting. For example:
+
 <div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="p">(</span><span class="nx">Recurrence</span><span class="p">)</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">Recurrence</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Object</span><span class="p">();</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nx">map</span><span class="p">[</span><span class="s1">&#39;Daily&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;DAILY&quot;</span><span class="p">;</span>
@@ -4250,10 +4247,10 @@
 </span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">    </span><span class="nx">print</span><span class="p">(</span><span class="nx">rrule</span><span class="p">);</span>
 </span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="p">}</span>
 </span></code></pre></div>
-<ol>
-<li>If the <strong>Format to Identify Recurrence</strong> field is set to <strong>Cron</strong>, then define the <strong>Event End</strong> section to define the string displayed to the end-user to show the date and time of the last recurring event.</li>
-<li>Click <strong>Save</strong> to save the settings.</li>
-</ol>
+</li>
+<li>If the <b>Format to Identify Recurrence</b> field is set to <b>Cron</b>, then define the <b>Event End</b> section to define the string displayed to the end-user to show the date and time of the last recurring event.</li>
+<li>Click <b>Save</b> to save the settings.</li></ol>
+
 <h2 id="preventing-duplicate-message-alerts">Preventing Duplicate Message Alerts<a class="headerlink" href="#preventing-duplicate-message-alerts" title="Permanent link">&para;</a></h2>
 <p>After you add your filters for the response object, you should determine if you need to apply a strategy to prevent the display of duplicate messages to the end-user. For example, if you set up an RSS task, you may want to prevent duplicate messages for the same subject, or for <em>Facebook</em>, prevent duplicate messages each time a comment is added to a post.</p>
 <p>In the XO Platform , you can choose one of two options for <strong>Deduplicate Strategy</strong>:</p>
