@@ -4255,26 +4255,32 @@ Once the <strong>Target Audience</strong> is defined and saved, you cannot chang
 <a href="https://kore-wordpress.s3.us-east-2.amazonaws.com/developer.kore.ai/wp-content/uploads/20230215113143/general-settings-error-messages.png"> 
 </a></p>
 <h3 id="custom-status-codes"><strong>Custom Status Codes</strong><a class="headerlink" href="#custom-status-codes" title="Permanent link">&para;</a></h3>
-<p>There are approximately 25 HTTP Status codes defined by default for a Bot or task. <strong>To customize an HTTP Status code</strong></p>
+<p>There are approximately 25 HTTP Status codes defined by default for a Bot or task. <strong>To customize an HTTP Status code</strong>.</p>
 <ol>
 <li>Open the Bot or task in Bot Builder.</li>
 <li>Select the <strong>Build</strong> tab from the top menu.</li>
-<li>From the left menu click <strong>Configurations &gt; General Settings</strong></li>
+<li>From the left menu click <strong>Configurations &gt; General Settings</strong>.</li>
 <li>Scroll down to locate the <strong>Error Messages</strong> section.</li>
 <li>
-<p>Click the <strong>Edit</strong> icon for the code that you want to customize to open the <strong>Setup Error Message</strong> dialog.<a href="https://kore-wordpress.s3.us-east-2.amazonaws.com/developer.kore.ai/wp-content/uploads/20230215113604/general-settings-error-messages-setup.png"> </a></p>
-<p><img alt="alt_text" src="../images/gs3.png" title="image_tooltip" />
-<a href="https://kore-wordpress.s3.us-east-2.amazonaws.com/developer.kore.ai/wp-content/uploads/20230215113604/general-settings-error-messages-setup.png"> 
-</a>
-6. In the <strong>Message Type</strong> field, select one of:
-* <strong>Custom</strong> – Displays a <strong>Custom Message</strong> field to define an error-specific message for the end-user.
-* <strong>Source</strong> – Displays the <strong>Error Paths</strong> field where you can define the JSON path from the JSON response payload for HTTP Status codes other than those in the 2XX range (success messages).
-7. In the <strong>Action</strong> field, specify the action to take when the number of consecutive errors defined in the <strong>Error Recurrence</strong> field is reached. Select one of:
-* <strong>Disable</strong> – The task is set to <strong>Inactive</strong> when the error occurs. The end-user can activate the task when needed.
-* <strong>Reschedule</strong> – Displays the <strong>Retry Interval</strong> field used to define the elapsed time in minutes after which to retry the task when the error occurs.
-* <strong>Disable Auth</strong> – When the error occurs, the authorization mechanism defined for the task is disabled. Any other task that uses the same authorization mechanism is also disabled.
-* <strong>Notify</strong> – Displays the error message in the end-user interface. </p>
-<p><a class="glightbox" href="../images/gs4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/gs4.png" title="image_tooltip" /></a></p>
+<p>Click the <strong>Edit</strong> icon for the code that you want to customize to open the <strong>Setup Error Message</strong> dialog.
+    <a class="glightbox" href="../images/gs3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/gs3.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>In the <strong>Message Type</strong> field, select one of:</p>
+<ul>
+<li><strong>Custom</strong> – Displays a <strong>Custom Message</strong> field to define an error-specific message for the end-user.</li>
+<li><strong>Source</strong> – Displays the <strong>Error Paths</strong> field where you can define the JSON path from the JSON response payload for HTTP Status codes other than those in the 2XX range (success messages).</li>
+</ul>
+</li>
+<li>
+<p>In the <strong>Action</strong> field, specify the action to take when the number of consecutive errors defined in the <strong>Error Recurrence</strong> field is reached. Select one of:</p>
+<ul>
+<li><strong>Disable</strong> – The task is set to <strong>Inactive</strong> when the error occurs. The end-user can activate the task when needed.</li>
+<li><strong>Reschedule</strong> – Displays the <strong>Retry Interval</strong> field used to define the elapsed time in minutes after which to retry the task when the error occurs.</li>
+<li><strong>Disable Auth</strong> – When the error occurs, the authorization mechanism defined for the task is disabled. Any other task that uses the same authorization mechanism is also disabled.</li>
+<li><strong>Notify</strong> – Displays the error message in the end-user interface.
+<a class="glightbox" href="../images/gs4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/gs4.png" title="image_tooltip" /></a></li>
+</ul>
 </li>
 <li>
 <p>In the <strong>Message</strong> field (available only for the default messages), enter the text message displayed to the end user.</p>
@@ -4282,7 +4288,7 @@ Once the <strong>Target Audience</strong> is defined and saved, you cannot chang
 <li>In the <strong>Error Recurrence</strong> field, specify the number of consecutive error codes that must be returned before the action is executed. By default, the <strong>Error Recurrence</strong> field is set to ” 1 “.</li>
 <li>Click <strong>Add</strong> to save and close the <strong>Setup Error Message</strong> dialog for your custom error message.</li>
 </ol>
-<p>To create a new HTTP Status code, click <strong>Add Error Message</strong>, define the fields for your new code as described in the preceding section, and then click <strong>Add.</strong></p>
+<p>To create a new HTTP Status code, click <strong>Add Error Message</strong>, define the fields for your new code as described in the preceding section, and then click <strong>Add</strong>.</p>
 
 
   
