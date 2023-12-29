@@ -4220,10 +4220,11 @@ IVR: Sorry, I don’t understand the input.
 <li>Go to the <strong>Deploy</strong> tab from the top menu.
     <a class="glightbox" href="../images/ivr%2820%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ivr%2820%29.png" title="image_tooltip" /></a></li>
 <li>The <strong>Channels</strong> page is displayed. Locate and click the <strong>IVR</strong> under Voice Channels. 
-    <a class="glightbox" href="../images/ivr%288%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ivr%288%29.png" title="image_tooltip" /></a></li>
+    <a class="glightbox" href="../images/ivr%288%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ivr%288%29.png" title="image_tooltip" /></a>
+The IVR Panel with Instructions is displayed.
+ <a class="glightbox" href="../images/ivr%2816%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ivr%2816%29.png" title="image_tooltip" /></a></li>
 </ol>
-<p>4.On the <strong>Configurations</strong> tab, perform the following steps: 
-    <a class="glightbox" href="../images/ivr%2816%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ivr%2816%29.png" title="image_tooltip" /></a></p>
+<p>4.On the <strong>Configurations</strong> tab, perform the following steps: </p>
 <p>a. Use <strong>Kore.ai IVR Sandbox</strong> for testing your VA. See<a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#ivr-sandbox"> Sandbox Configuration</a><span style="text-decoration:underline;"> </span>for more details.
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Note: If you save the configuration after associating an app without enabling IVR Settings, the platform pre-populates the required settings for Sandbox.
 </span></code></pre></div></p>
@@ -4311,16 +4312,17 @@ IVR: Sorry, I don’t understand the input.
 </ol>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Note: The Webhook Payload is used to test the IVR channel configuration for your VA. It can be tested using Postman.
 </span></code></pre></div>
-<p>The <strong>IVR Voice Sample CURL</strong> request is as follows: </p>
-<p>`curl --location --request POST 
- '{{host}}/ivr/hooks/{{streamId}}?token={{token}}' 
- --header 'Content-Type: application/json' 
- --data-raw '{ 
- "callId":"98ab212987ce868ad546", 
- "message":"check balance", 
- "from":"14022334455", 
- "app_root":"app.vxml" 
- }' </p>
+<p>The <strong>IVR Voice Sample CURL</strong> request is as follows:</p>
+<div class="language-text highlight"><pre><span></span><code>    curl --location --request POST
+    &#39;{{host}}/ivr/hooks/{{streamId}}?token={{token}}&#39; \
+    --header &#39;Content-Type: application/json&#39; \
+    --data-raw &#39;{
+    &quot;callId&quot;:&quot;98ab212987ce868ad546&quot;,
+    &quot;message&quot;:&quot;check balance&quot;,
+    &quot;from&quot;:&quot;14022334455&quot;,
+    &quot;app_root&quot;:&quot;app.vxml&quot;
+    }&#39;
+</code></pre></div>
 <p>The following table provides the descriptions of all the mandatory and optional request parameters: </p>
 <table>
   <tr>
@@ -4381,7 +4383,7 @@ IVR: Sorry, I don’t understand the input.
 
 <ol>
 <li>
-<p>Click the **Configurations**tab. </p>
+<p>Click the <strong>Configurations</strong> tab. </p>
 <p><a class="glightbox" href="../images/ivr%2819%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ivr%2819%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
@@ -4454,15 +4456,14 @@ IVR: Sorry, I don’t understand the input.
 <p><a class="glightbox" href="../images/ivr%2814%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ivr%2814%29.png" title="image_tooltip" /></a></p>
 </li>
 </ol>
-<p>In this example, the parameters like <strong>ASR Confidence</strong> <strong>score</strong>,** input mode**, **utterance, **etc. are extracted in the syntax shown below:
-{{
-<em>“data”: {</em></p>
-<p>_“text”: 
+<p>In this example, the parameters like <strong>ASR Confidence</strong> <strong>score</strong>,** input mode**, **utterance, **etc. are extracted in the syntax shown below:</p>
+<div class="language-text highlight"><pre><span></span><code>“data”: 
+“text”: 
 “{“confidence”:”0.810000″, 
 “Inputmode”:”voice”, 
 “interpretation”:”Login.”, 
-“utterance”:”Login.”}”</p>
-<p>}}</p>
+“utterance”:”Login.”}”
+</code></pre></div>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Note: The information is available for the existing and new virtual assistants whose IVR channel is enabled. 
 </span></code></pre></div>
 
