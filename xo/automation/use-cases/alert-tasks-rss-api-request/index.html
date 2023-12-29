@@ -4221,8 +4221,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-standard-postprocessors" class="md-nav__link">
-    Configure Standard Postprocessors
+  <a href="#configure-standard-post-processors" class="md-nav__link">
+    Configure Standard Post-processors
   </a>
   
 </li>
@@ -4282,11 +4282,11 @@
 <ul>
 <li><strong>Content Type</strong> – The type of data exchanged between the XO Platform and your web application,</li>
 <li><strong>Authentication</strong> – If required for your alert task, you will need to define the authentication to access the API, for example, using basic authorization, OAuth, or API Key. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks/#authorization" target="_blank">Learn more</a>.</li>
-<li><strong>Parameters</strong> – Define one or more parameters used to process the API request, for example, input from user prompts, selection by an end-user from a list of choices, a URL, and so forth, <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks/#authorization" target="_blank">Learn more</a>.</li>
-<li><strong>Initializer</strong> – Specify custom JavaScript to run, or set session variables prior to creating a task instance when web services require code to be executed, or session variables set, or modification of user context details before an API request is executed, <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks/#authorization" target="_blank">Learn more</a>.</li>
-<li><strong>Request</strong> – Define a request chain used to make an API call to a web service to initiate the task using URLs and paths to your VA to initiate the delivery of the data payload from the web service to the XO Platform. The request chain can consist of preprocessors, API requests, and post-processors, <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks/#authorization" target="_blank">Learn more</a>.</li>
-<li><strong>Response Sample</strong> – Define key/value pairs that you expect to receive in the task payload. The keys that you provide are available as drop-down choices for handling the data to display to the end-user, <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks/#authorization" target="_blank">Learn more</a>.</li>
-<li><strong>Preview Website Link Content in Post</strong> – The website preview content displayed in the task notification message, <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks/#authorization" target="_blank">Learn more</a>.</li>
+<li><strong>Parameters</strong> – Define one or more parameters used to process the API request, for example, input from user prompts, selection by an end-user from a list of choices, a URL, and so forth, <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks-rss-api-request/#define-parameters" target="_blank">Learn more</a>.</li>
+<li><strong>Initializer</strong> – Specify custom JavaScript to run, or set session variables prior to creating a task instance when web services require code to be executed, or session variables set, or modification of user context details before an API request is executed, <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks-rss-api-request/#define-an-initializer" target="_blank">Learn more</a>.</li>
+<li><strong>Request</strong> – Define a request chain used to make an API call to a web service to initiate the task using URLs and paths to your VA to initiate the delivery of the data payload from the web service to the XO Platform. The request chain can consist of pre-processors, API requests, and post-processors, <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks-rss-api-request/#define-the-request-chain" target="_blank">Learn more</a>.</li>
+<li><strong>Response Sample</strong> – Define key/value pairs that you expect to receive in the task payload. The keys that you provide are available as drop-down choices for handling the data to display to the end-user, <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks-rss-api-request/#add-the-response-sample" target="_blank">Learn more</a>.</li>
+<li><strong>Preview Website Link Content in Post</strong> – The website preview content displayed in the task notification message, <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks-rss-api-request/#website-preview-content" target="_blank">Learn more</a>.</li>
 </ul>
 <h2 id="define-the-content-type">Define the Content Type<a class="headerlink" href="#define-the-content-type" title="Permanent link">&para;</a></h2>
 <p>The <strong>Content Type</strong> describes the type of data exchanged between Kore.ai and your website or application, and the key-value pairs expected in the task payload response.
@@ -4305,12 +4305,16 @@
 <li><strong>Oracle ADF</strong> – For Oracle Application Development Framework.</li>
 </ul>
 <h2 id="define-parameters">Define Parameters<a class="headerlink" href="#define-parameters" title="Permanent link">&para;</a></h2>
-<p>Follow these steps to define the API Request (REST) parameters:
-1. Expand the <strong>Parameters</strong> section, and then click <strong>Create Parameter</strong>.
-<a class="glightbox" href="../images/parameters-section.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/parameters-section.png" alt="parameters section" title="parameters section" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Follow these steps to define the API Request (REST) parameters:</p>
 <ol>
-<li>In the <strong>Set up Task Parameter</strong> panel that opens up, enter the values for the relevant fields.
-<a class="glightbox" href="../images/set-up-task-parameter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-up-task-parameter.png" alt="task parameter" title="task parameter" style="border: 1px solid gray; zoom:75%;"></a></li>
+<li>
+<p>Expand the <strong>Parameters</strong> section, and then click <strong>Create Parameter</strong>.
+<a class="glightbox" href="../images/parameters-section.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/parameters-section.png" alt="parameters section" title="parameters section" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>In the <strong>Set up Task Parameter</strong> panel that opens up, enter the values for the relevant fields.
+<a class="glightbox" href="../images/set-up-task-parameter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-up-task-parameter.png" alt="task parameter" title="task parameter" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
 </ol>
 <p>The following table explains how to use each field within the <em>Set up Task Parameter</em> panel.</p>
 <table border="1.5">
@@ -4889,7 +4893,7 @@ With the <strong>Visibility</strong> field set to <strong>Custom</strong>, you c
 </span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nx">finalObject</span><span class="p">.</span><span class="nx">fields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fields</span><span class="p">;</span>
 </span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">finalObject</span><span class="p">));</span>
 </span></code></pre></div>
-<p>In the previous code, if <strong>firstName</strong> and <strong>lastName</strong> are stored as session variables, as John and Smith respectively, then the JSON response payload from the pre-processor would be:</p>
+<p>In the previous code, if <strong>firstName</strong> and <strong>lastName</strong> are stored as session variables, as <i>John</i> and <i>Smith</i> respectively, then the JSON response payload from the pre-processor would be:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nx">fields</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="s2">&quot;pathFields&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -4935,7 +4939,7 @@ With the <strong>Visibility</strong> field set to <strong>Custom</strong>, you c
 <p>For custom processors, you must print the final response as shown in the preceding code, otherwise, an empty response is returned. Use the following syntax:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="w"> </span><span class="o">&lt;&lt;-</span><span class="nx">object</span><span class="o">-&gt;&gt;</span><span class="w"> </span><span class="p">));</span>
 </span></code></pre></div>
-<h5 id="configure-standard-postprocessors">Configure Standard Postprocessors<a class="headerlink" href="#configure-standard-postprocessors" title="Permanent link">&para;</a></h5>
+<h5 id="configure-standard-post-processors">Configure Standard Post-processors<a class="headerlink" href="#configure-standard-post-processors" title="Permanent link">&para;</a></h5>
 <p>Follow these steps to add a standard postprocessor:</p>
 <ol>
 <li>On the <strong>API Request</strong> tab, expand the <strong>Request</strong> tab, and then click <strong>Add Processor</strong>.</li>
@@ -4951,7 +4955,7 @@ With the <strong>Visibility</strong> field set to <strong>Custom</strong>, you c
 </span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="mf">73114591129714</span><span class="p">,</span>
 </span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;jaganmohan.evuri&quot;</span><span class="w"> </span><span class="p">},</span>
 </span></code></pre></div>
-<ol start="3"><li><p>It is then used as a variable input as shown in the following <b>Post URL</b></p> 
+<ol start="3"><li><p>It is then used as a variable input as shown in the following <b>Post URL:</b></p> 
 <p><code>https://app.asana.com/api/1.0/projects/<b>{id}</b>/tasks?opt_fields=completed,modified_at</code>
 You must also specify the HTML <b>Content Type</b> expected in the payload response as well as the HTML <b>Request</b> method. For more information, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/using-session-and-context-variables/" target="_blank">Using Session and Context Variables in Tasks</a>.</p></li>
 
@@ -5051,7 +5055,7 @@ You must also specify the HTML <b>Content Type</b> expected in the payload respo
 
 <ol start="4"><li><b>Extract</b>: For payloads that contain multiple objects, you can specify a path to the specific object.
 
-For example, click **Add Processor**, enter a **Name** for your processor, set the **Key** field to data, and then **Type of Process** to **extract** to use the object data in the following payload response.
+For example, click <b>Add Processor</b>, enter a <b>Name</b> for your processor, set the <b>Key</b> field to data, and then <b>Type of Process</b> to <b>extract</b> to use the object data in the following payload response.
 
 <div class="language-js highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">{</span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="s2">&quot;user&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -5175,8 +5179,7 @@ For example, set <b>Type of Process</b> to assign, and then in the <b>Output Var
 
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-<p>No confirmation dialog is displayed when deleting an API request.</p>
-<p>If you click Continue or Save, the delete action is permanent and cannot be undone.</p></div>
+<p>No confirmation dialog is displayed when deleting an API request. If you click Continue or Save, the delete action is permanent and cannot be undone.</p></div>
 </ol>
 
 <h2 id="add-the-response-sample">Add the Response Sample<a class="headerlink" href="#add-the-response-sample" title="Permanent link">&para;</a></h2>
@@ -5197,7 +5200,7 @@ For example, set <b>Type of Process</b> to assign, and then in the <b>Output Var
 <h2 id="website-preview-content">Website Preview Content<a class="headerlink" href="#website-preview-content" title="Permanent link">&para;</a></h2>
 <p>Some web services send links to preview media as part of the payload response. In this section, you can enable or disable preview links, and define the path to the links in the payload. By default, website preview links are disabled. The following illustration is an example of the <strong>Preview Website Link Content in Post</strong> section, when <strong>Yes</strong> is selected.
 <a class="glightbox" href="../images/preview-website-rss.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/preview-website-rss.png" alt="preview website" title="preview website" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>When enabled, define the path to the preview links in the payload in the <strong>Path to the Link(toPreview)</strong> field, if the path is not in the root of the payload. For example, in the following code example from an RSS payload, the path to the preview is</p>
+<p>When enabled, define the path to the preview links in the payload in the <strong>Path to the Link (toPreview)</strong> field, if the path is not in the root of the payload. For example, in the following code example from an RSS payload, the path to the preview is given by <i>link</i>.</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="s2">&quot;item&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="p">{</span>
 </span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">        </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;U.S. to Boost Refugee Intake by 30,000 by 2017&quot;</span><span class="p">,</span>
