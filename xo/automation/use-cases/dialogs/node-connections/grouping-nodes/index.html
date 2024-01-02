@@ -4169,7 +4169,7 @@
 
 <h1 id="sub-intent-scoping-using-node-groups">Sub-Intent Scoping Using Node Groups<a class="headerlink" href="#sub-intent-scoping-using-node-groups" title="Permanent link">&para;</a></h1>
 <p>Node groups are primarily used for defining a group of nodes and representing them on the dialog canvas. Note that it is not a part of the dialog flow.</p>
-<p>Node groups can be used to improve the user experience with follow-ups, digressions, and amending entity values. For a use case example, <a href="https://developer.kore.ai/docs/bots/how-tos/intent-scoping-using-group-node/" target="_blank">refer here</a>.</p>
+<p>Node groups can be used to improve the user experience with follow-ups, digressions, and amending entity values. For a use case example, <a href="../../../../../how-tos/build-a-banking-assistant/deploy-the-assistant/intent-scoping-using-group-node" target="_blank">refer here</a>.</p>
 <h2 id="add-a-node-group">Add a Node Group<a class="headerlink" href="#add-a-node-group" title="Permanent link">&para;</a></h2>
 <p>To add a node group to the dialog task, follow the below steps:</p>
 <ol>
@@ -4255,7 +4255,7 @@
 <p>Following are the changes in sub-intent behavior within a group:</p>
 <ol>
 <li>
-<p>For every sub-intent identified, the context object will be updated with an array of objects with the identified sub-intent details with the latest at the top. The following information is captured:</p>
+<p>For every sub-intent identified, the context object will be updated with an array of objects with the identified sub-intent details with the latest at the top. The following information is captured:  </p>
 <ol>
 <li>Name of the sub-intent;</li>
 <li>Entities that are identified along with the sub-intent;</li>
@@ -4283,7 +4283,7 @@
 <p>The intent would be executed if the sub-intent identified from the user utterance is within the group scope and all the input preconditions are satisfied and the transition flow directs to the concerned node.</p>
 </li>
 <li>
-<p>The execution of sub-intents would involve:</p>
+<p>The execution of sub-intents would involve:  </p>
 <ol>
 <li>Updated context variables as per the defined mapping,</li>
 <li>Setting the Output Context as per the defined mapping,</li>
@@ -4291,7 +4291,7 @@
 </ol>
 </li>
 <li>
-<p>The current dialog execution should continue as per the transition flow defined.</p>
+<p>The current dialog execution should continue as per the transition flow defined.  </p>
 <ol>
 <li>Jump to the specified node; or</li>
 <li>Resume from the point where the sub-intent was identified.</li>
