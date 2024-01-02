@@ -4254,11 +4254,11 @@
 </div>
 
 <p>Negative emotion scenarios like anger or disgust are typically considered factors that would determine a transfer of the conversation to a live agent.</p>
-<p>The <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlp-introduction/" target="_blank">NLP</a> interpreter can parse user utterances for specific words and phrases, and then provide an average tone score based on the connotation, word placement, and any added modifiers. <a href="https://developer.kore.ai/docs/bots/advanced-topics/working-with-tone-processing/" target="_blank">Learn more</a>.</p>
+<p>The <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlp-introduction/" target="_blank">NLP</a> interpreter can parse user utterances for specific words and phrases, and then provide an average tone score based on the connotation, word placement, and any added modifiers. <a href="https://docsinternal-kore.github.io/docs/xo/automation/intelligence/sentiment-management/tone-analysis/" target="_blank">Learn more</a>.</p>
 <p>The tone or sentiment scores are stored as context and used to drive the flow of a dialog task through conditional transition statements. You can use these scores to steer user-assistant conversations or seamlessly invoke escalation to a live agent.</p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>You can define multiple sentiment events from under <strong>Build</strong> &gt; <strong>Intelligence</strong> &gt; <strong>Sentiment Management</strong>. Click <strong>New Event</strong> to define an event based on which to capture the user’s emotion.</p>
-<p><a class="glightbox" href="../sentiment-management/images/new-event.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../sentiment-management/images/new-event.png" alt="new event" title="new event" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/new-event.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/new-event.png" alt="new event" title="new event" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The following parameters can be configured for a sentiment event:</p>
 <ul>
 <li><strong>Event Name</strong> – Name of the event.</li>
@@ -4272,7 +4272,7 @@
 <li>The Message-level tone value is a tone value calculated for a given message from the user.</li>
 <li>Select the required emotions to be captured from a list of six tones, anger, disgust, fear, sadness, joy, and positive.</li>
 <li>Select if the tone should be considered at the <em>Session</em> level or <em>Message</em> level</li>
-<li>Define the range to be considered for each of these tones, the range can be between -3 to +3. <a href="https://developer.kore.ai/docs/bots/advanced-topics/working-with-tone-processing/" target="_blank">Learn more</a>.</li>
+<li>Define the range to be considered for each of these tones, the range can be between -3 to +3. <a href="https://docsinternal-kore.github.io/docs/xo/automation/intelligence/sentiment-management/tone-analysis/" target="_blank">Learn more</a>.</li>
 <li>When multiple emotions are selected, the event is triggered when <strong>ALL</strong> the tone rules are met. In case you want the event to trigger when any tone rule is met, add them as separate rules.</li>
 </ul>
 </li>
@@ -4281,7 +4281,7 @@
 <p class="admonition-title">Note</p>
 <p>Post v8.1, the Platform can identify the emojis in user utterance and set the tone accordingly.</p>
 </div>
-<p><a class="glightbox" href="../sentiment-management/images/add-sentiment-based-event.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../sentiment-management/images/add-sentiment-based-event.png" alt="add sentiment based event" title="add sentiment based event" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/add-sentiment-based-event.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-sentiment-based-event.png" alt="add sentiment based event" title="add sentiment based event" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h2 id="event-flow">Event Flow<a class="headerlink" href="#event-flow" title="Permanent link">&para;</a></h2>
 <p>Emotion tones are continuously updated whenever a message is received from the users and as such the sentiment events are also continuously evaluated. When an event’s criteria are met, the Platform triggers the defined behavior.</p>
 <ul>
