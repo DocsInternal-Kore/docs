@@ -4183,7 +4183,7 @@
 <p>You can use the Kore.ai Connector Agent to establish and maintain secure data connectivity between Kore.ai and your on-premises applications within your intranet.</p>
 <p>The Kore.ai Connector is a stand-alone application that is installed and configured within your company intranet configured with restricted and secure connectivity to specified bots applications. The Kore.ai Connector Agent is designed to pass requests for data access between your on-premises applications and Kore.ai to process the specific Bot tasks configured by an end-user with rights and privileges for those applications.</p>
 <p>The following illustration shows the <strong>Kore.ai Connector</strong> page in the Bots Admin Console <strong>Security &amp; Control</strong> module.</p>
-<p><a class="glightbox" href="../images/kore-ai-connector-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img1.png" alt="Kore.ai connector page" title="Kore.ai connector page" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<p><a class="glightbox" href="../images/kore-ai-connector-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img1.png" alt="Kore.ai connector page" title="Kore.ai connector page" style="border: 1px solid gray;zoom:70%;"/></a></p>
 <p><strong>Kore.ai Connector Page Controls</strong></p>
 <p>The following controls are available on the <strong>Kore.ai Connector</strong> page in the Bots Admin Console.</p>
 <p><strong>Download Connector</strong> – Click the <strong>Download Connector</strong> drop-down arrow in and then select one of the following operating systems:</p>
@@ -4204,7 +4204,7 @@
 <h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
 <p>The Kore.ai Connector is an agent that runs behind your bots firewall within your company Intranet or perimeter network (DMZ) to provide secure data exchange between Kore.ai which operates in the cloud and your on-premises applications.</p>
 <p>In the following diagram, end-users configure a Kore.ai Bot that connects to Kore.ai in the cloud. The Kore.ai Bot servers (5) contact the Kore.ai Connector Gateway (2) with the Bot request. The Kore.ai Connector Gateway relays the request to the Kore.ai Connector (3) installed and securely configured in your on-premises Intranet or DMZ to interact with your bots applications. The response from your applications is sent through the Kore.ai Connector back out to the Kore.ai cloud and processed. Optionally, you can enable your on-premises applications to push data, for example, alert messages, to the Kore.ai cloud using webhooks.</p>
-<p><a class="glightbox" href="../images/kore-ai-connector-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img2.png" alt="About Kore.ai connector" title="About Kore.ai connector" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<p><a class="glightbox" href="../images/kore-ai-connector-img2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img2.png" alt="About Kore.ai connector" title="About Kore.ai connector" style="border: 1px solid gray;zoom:70%;"/></a></p>
 <p><strong>How it Works</strong></p>
 <p>After you install the Kore.ai Connector in your network, you configure the agent with details to specifically access, communicate, and request or post data to the bots application you define.</p>
 <p>When started, the Kore.ai Connector Agent initiates a persistent SSL connection with Kore.ai and monitors requests for data transfer to or from your bots applications and Kore.ai. If the persistent connection is broken, the Kore.ai Connector automatically attempts to reestablish communication. You can monitor connectivity directly in the Bots Admin console.</p>
@@ -4262,7 +4262,7 @@
 <li>Optionally, in the first field, edit the name of the connector, and then enter a <strong>Description</strong> for the connector in the second field.</li>
 <li>
 <p>Click <strong>Add</strong>. The <strong>Connector Instructions</strong> dialog is displayed as shown in the following illustration.<br />
-<a class="glightbox" href="../images/kore-ai-connector-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img3.png" alt="Adding Kore.ai connector - Connector instructions" title="Adding Kore.ai connector - Connector instructions" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<a class="glightbox" href="../images/kore-ai-connector-img3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img3.png" alt="Adding Kore.ai connector - Connector instructions" title="Adding Kore.ai connector - Connector instructions" style="border: 1px solid gray;zoom:70%;"/></a></p>
 </li>
 <li>
 <p>In the <strong>Connector Instructions</strong> dialog, click <strong>OK</strong>. The <strong>Kore.ai Connector</strong> page is displayed.</p>
@@ -4288,25 +4288,25 @@
 </li>
 </ol>
 <p>The Kore.ai Connector Agent file is uncompressed into the following directory structure.</p>
-<p><a class="glightbox" href="../images/kore-ai-connector-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img4.png" alt="Kore.ai connector directory structure" title="Kore.ai connector directory structure" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<p><a class="glightbox" href="../images/kore-ai-connector-img4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img4.png" alt="Kore.ai connector directory structure" title="Kore.ai connector directory structure" style="border: 1px solid gray;zoom:70%;"/></a></p>
 <p><strong>Generating a Signed Security Certificate</strong></p>
 <p>For secure data exchange between the Kore.ai servers in the cloud and your intranet, you need to generate a signed security certificate. First, create a .csr file on your application server using the command displayed in the Bots Admin Console, and then paste the content of the .csr file into the <strong>Generate Signed Certificate</strong> dialog. The .csr content is used to generate and download the .pem file. You will then copy the .pem file back to the Kore.ai Connector Agent installed on your application server.</p>
 <ol>
 <li>In the Bots Admin Console, in the <strong>Security &amp; Control</strong> module, on the <strong>Kore.ai Connector</strong> page, click the <strong>Ellipsis</strong>  icon.</li>
 <li>
 <p>On the <strong>Actions</strong> menu, click <strong>Generate Certificate</strong>. The <strong>Generate Signed Certificate</strong> dialog is displayed as shown in the following illustration.<br />
-<a class="glightbox" href="../images/kore-ai-connector-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img5.png" alt="Generate Signed Certificate dialog" title="Generate Signed Certificate dialog" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<a class="glightbox" href="../images/kore-ai-connector-img5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img5.png" alt="Generate Signed Certificate dialog" title="Generate Signed Certificate dialog" style="border: 1px solid gray;zoom:70%;"/></a></p>
 </li>
 <li>
 <p>Review the instructions, and then copy your custom command displayed after step 6 in the instructions as shown in the following illustration.<br />
-<a class="glightbox" href="../images/kore-ai-connector-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img6.png" alt="Review the instructions and copy custom command" title="Review the instructions and copy custom command" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<a class="glightbox" href="../images/kore-ai-connector-img6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img6.png" alt="Review the instructions and copy custom command" title="Review the instructions and copy custom command" style="border: 1px solid gray;zoom:70%;"/></a></p>
 </li>
 <li>
 <p>Paste and run the command on your application server within your company intranet in the <em>/Credentials</em> directory created when you installed the Kore.ai Connector Agent.</p>
 </li>
 <li>
 <p>In the <em>/Credentials</em> directory, the Kore.aiConnector.csr file is created, along with the Kore.aiConnector.key file. Open the Kore.aiConnector.csr file using a text editor, and copy the entire contents of the file, and then paste the contents into the <strong>Certificate signing request</strong> field in the <strong>Generate Signed Certificate</strong> dialog as shown in the following illustration.<br />
-<a class="glightbox" href="../images/kore-ai-connector-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img7.png" alt="Paste file contents in Generate Signed Certificate dialog" title="Paste file contents in Generate Signed Certificate dialog" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<a class="glightbox" href="../images/kore-ai-connector-img7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img7.png" alt="Paste file contents in Generate Signed Certificate dialog" title="Paste file contents in Generate Signed Certificate dialog" style="border: 1px solid gray;zoom:70%;"/></a></p>
 </li>
 <li>
 <p>Click <strong>Generate</strong>. The <strong>Download Certificate</strong> and <strong>View Certificate</strong> buttons are displayed.</p>
@@ -4433,7 +4433,7 @@ You must configure access control for each bot application that will use the Kor
 <li><strong>allowedPaths</strong> – Specify all paths as “/*” or a specific array of paths for the host, not to include any parameters. The Kore.ai Connector checks the path up to, but not including parameters beginning with " ? "</li>
 </ul>
 <p>The following image is an example of a configured accesscontrol.json file with four Bot configurations.</p>
-<p><a class="glightbox" href="../images/kore-ai-connector-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img8.png" alt="configured accessconteol.json" title="configured accesscontrol.json" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<p><a class="glightbox" href="../images/kore-ai-connector-img8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img8.png" alt="configured accessconteol.json" title="configured accesscontrol.json" style="border: 1px solid gray;zoom:70%;"/></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Comments cannot be used in configuration files.</p>
@@ -4449,7 +4449,7 @@ You must configure access control for each bot application that will use the Kor
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>./koreconnector.sh status
 </span></code></pre></div>
 <p>The following image shows the response for a successful start and status check of the Kore.ai Connector.</p>
-<p><a class="glightbox" href="../images/kore-ai-connector-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img9.png" alt="successful start and status check of the Kore.ai Connector" title="successful start and status check of the Kore.ai Connector" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<p><a class="glightbox" href="../images/kore-ai-connector-img9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img9.png" alt="successful start and status check of the Kore.ai Connector" title="successful start and status check of the Kore.ai Connector" style="border: 1px solid gray;zoom:70%;"/></a></p>
 <p><strong>Configuring Kore.ai Connector for Autostart on Linux</strong></p>
 <p>This section describes how to set the Kore.ai Connector Agent to automatically start when the Linux server is started or rebooted.</p>
 <p>To configure the autostart for the Kore.ai Connector Agent, on the application server, in the …/etc/rc.local file, add the following command:</p>
@@ -4469,7 +4469,7 @@ You must configure access control for each bot application that will use the Kor
 <ol>
 <li>
 <p>In the Bots Admin Console, in the <strong>Security &amp; Control</strong> module, on the <strong>Kore.ai Connector</strong> page, verify the Kore.ai Connector status as CONNECTED, click the <strong>Ellipsis</strong> icon, and then on the <strong>Actions</strong> menu, click <strong>Enable</strong> as shown in the following illustration.<br />
-<a class="glightbox" href="../images/kore-ai-connector-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img10.png" alt="Enable bots" title="Enable bots" style="border: 1px solid gray;zoom:70%;"/></a></p>
+<a class="glightbox" href="../images/kore-ai-connector-img10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kore-ai-connector-img10.png" alt="Enable bots" title="Enable bots" style="border: 1px solid gray;zoom:70%;"/></a></p>
 </li>
 <li>
 <p>In Bot Builder, for each Bot task that you want to run using the Kore.ai Connector, clone or upgrade each Bot.  </p>

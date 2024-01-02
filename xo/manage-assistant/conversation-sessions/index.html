@@ -4175,7 +4175,7 @@
 <h2 id="manage-sessions"><strong>Manage Sessions</strong><a class="headerlink" href="#manage-sessions" title="Permanent link">&para;</a></h2>
 <p>This feature is only available post v8.0 of the platform release.</p>
 <p>You can define the Conversation Session behavior using the <strong>Manage Sessions</strong> option under <strong>Configurations</strong> from the <strong>Build</strong> tab.</p>
-<p><a class="glightbox" href="../images/conversationsessions1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions1.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/conversationsessions1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions1.png" title="image_tooltip" /></a></p>
 <p>The following details explain the options available on the page, to define the conversation sessions.</p>
 <ul>
 <li><strong>Do not proactively close the sessions after inactivity</strong> – Select this option to close the session only when the user returns after 15 minutes of inactivity and provides a new intent. This was the default behavior before the release of ver8.0 of the platform. <span style="text-decoration:underline;">This option will be deprecated in future releases</span>.</li>
@@ -4191,20 +4191,20 @@
 </li>
 <li>
 <p><strong>Session Closure Behavior</strong> – You can choose to close the session without informing the user or inform the user about the session closure by sending out a message. This message can be customized using the <strong>Manage Response</strong> link. You can click <strong>Add Response</strong> if you want to add a new response. </p>
-<p><a class="glightbox" href="../images/conversationsessions2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions2.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/conversationsessions2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions2.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p><strong>Clear Auth Profile</strong> – You can enable the <strong>Clear Auth Profiles</strong> option to clear all authorization tokens and session variables associated with a particular session. Once you enable this setting, you are required to provide the authorization profile details again to re-authorize the session. </p>
 </li>
 </ul>
-<p><a class="glightbox" href="../images/conversationsessions3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions3.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/conversationsessions3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions3.png" title="image_tooltip" /></a></p>
 <ul>
 <li>
 <p><strong>Run Custom Script</strong> – You can use the custom script to invoke koreUtil.ClearAuthProfiles function to clear the authorization profile and associated session variables for that particular profile. For example, if you have enabled multiple authorization profiles for a session, you can use the <code>koreUtil.ClearAuthProfiles</code> to disable a particular authorization profile that is not needed for this session using this custom script: 
  <code>koreUtil.ClearAuthProfiles ( [Auth_Profile_Name] )</code> 
 You can also clear all authorization profiles using this script: 
 <code>koreUtil.ClearAllAuthProfiles ( )</code> For more information, see<a href="https://developer.kore.ai/docs/bots/advanced-topics/koreutil-libraries/"> kore.UtilLibraries</a><span style="text-decoration:underline;"> </span>article.</p>
-<p><a class="glightbox" href="../images/conversationsessions4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions4.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/conversationsessions4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions4.png" title="image_tooltip" /></a></p>
 </li>
 </ul>
 <h2 id="implementation"><strong>Implementation</strong><a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>

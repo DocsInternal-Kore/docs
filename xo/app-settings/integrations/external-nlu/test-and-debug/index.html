@@ -4196,7 +4196,7 @@
 <li>Go to your VA and click <strong>Talk to Bot</strong>.</li>
 <li>Enter a user utterance which matches the intent entered in the Dialogflow Essentials page.</li>
 <li>In the <strong>Debug Log</strong> panel of the user conversation, you can see a message that, <strong>intent identified using External NLU is initiated</strong>.<br />
-<a class="glightbox" href="../images/external-nlu-test-and-debug-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img1.png" alt="Debug Log - intent identified using External NLU is initiated" title="Debug Log - intent identified using External NLU is initiated" style="border: 1px solid gray;zoom:50%;"/></a></li>
+<a class="glightbox" href="../images/external-nlu-test-and-debug-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img1.png" alt="Debug Log - intent identified using External NLU is initiated" title="Debug Log - intent identified using External NLU is initiated" style="border: 1px solid gray;zoom:50%;"/></a></li>
 </ol>
 <p>You can also analyze the <strong>Debug Log, NL Analysis,</strong> and <strong>Session Context &amp; Variables</strong> to understand the intent detection mechanism.</p>
 <h3 id="debug-log">Debug Log<a class="headerlink" href="#debug-log" title="Permanent link">&para;</a></h3>
@@ -4205,13 +4205,13 @@
 <ul>
 <li>
 <p>Intent detected by the External NLU engine is always marked as a Definitive Match.<br />
-<a class="glightbox" href="../images/external-nlu-test-and-debug-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img2.png" alt="Intent detected by the External NLU engine" title="Intent detected by the External NLU engine" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/external-nlu-test-and-debug-img2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img2.png" alt="Intent detected by the External NLU engine" title="Intent detected by the External NLU engine" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p>If intent is not detected by the External NLU engine, it is tracked in Debug Log.</p>
 </li>
 <li>
 <p>Under <strong>Session Context &amp; Variables</strong>, you can see the variables for intents and entities in detail as shown in the following screenshots.<br />
-<a class="glightbox" href="../images/external-nlu-test-and-debug-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img3.png" alt="Session Context & Variables" title="Session Context & Variables" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><a class="glightbox" href="../images/external-nlu-test-and-debug-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img4.png" alt="Custom Variables" title="Custom Variables" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/external-nlu-test-and-debug-img3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img3.png" alt="Session Context & Variables" title="Session Context & Variables" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
+<p><a class="glightbox" href="../images/external-nlu-test-and-debug-img4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img4.png" alt="Custom Variables" title="Custom Variables" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ul>
 <h3 id="nlp-analysis">NLP Analysis<a class="headerlink" href="#nlp-analysis" title="Permanent link">&para;</a></h3>
@@ -4222,19 +4222,19 @@
 <ul>
 <li>
 <p>If the intent is detected by an external engine, the utterance is not sent to the Kore.ai NLP engine.<br />
-<a class="glightbox" href="../images/external-nlu-test-and-debug-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img5.png" alt="Intent is detected by an external engine" title="Intent is detected by an external engine" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/external-nlu-test-and-debug-img5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img5.png" alt="Intent is detected by an external engine" title="Intent is detected by an external engine" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
 <p>Click the <strong>View Response</strong> link to view the API response in the JSON format, received from the external NLU engine in both cases of whether intent is detected or not detected by the external NLU.<br />
-<a class="glightbox" href="../images/external-nlu-test-and-debug-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img6.png" alt="View the API response in the JSON format" title="View the API response in the JSON format" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/external-nlu-test-and-debug-img6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img6.png" alt="View the API response in the JSON format" title="View the API response in the JSON format" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
 <p>If the intent is not detected by the external engine, the Kore.ai NLU engine acts as a fallback. So, in this case, the NLP analysis shows the analysis of intent detection results from our three engines along with the ranking and resolver. For more information, see <a href="../../../../automation/natural-language/training/ranking-and-resolver" target="_blank">Ranking and Resolver</a>.<br />
-<a class="glightbox" href="../images/external-nlu-test-and-debug-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img7.png" alt="Intent is not detected by an external engine" title="Intent is not detected by an external engine" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/external-nlu-test-and-debug-img7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img7.png" alt="Intent is not detected by an external engine" title="Intent is not detected by an external engine" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
 <p>If the intent is detected by the external engine but cannot be mapped to any intent on the XO platform, even then the Kore.ai NLU engine acts as a fallback. In this case, the NLP analysis displays a relevant message along with the API response containing the detected Intents and parameters.<br />
-<a class="glightbox" href="../images/external-nlu-test-and-debug-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img8.png" alt="Intent detected by external engine but cannot be mapped to any intent on platform" title="Intent detected by external engine but cannot be mapped to any intent on platform" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/external-nlu-test-and-debug-img8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img8.png" alt="Intent detected by external engine but cannot be mapped to any intent on platform" title="Intent detected by external engine but cannot be mapped to any intent on platform" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ul>
 <h2 id="batch-testing">Batch Testing<a class="headerlink" href="#batch-testing" title="Permanent link">&para;</a></h2>
@@ -4245,7 +4245,7 @@
 </p>
 </div>
 <p>For any intent detected by the external NLU, it should be considered that the thresholds have been met and in the ‘<strong>Matched Intent Score</strong>’ column, this is indicated as <em>ExtNLU (without any score against it)</em> in place of ML, FM, or KG scores. This can be viewed in the downloaded CSV under NLU of Batch Testing. To know more, see <a href="../../../../automation/testing/regression-testing/batch-testing" target="_blank">Batch Testing</a>.</p>
-<p><a class="glightbox" href="../images/external-nlu-test-and-debug-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img9.png" alt="ExtNLU Matched intent score" title="ExtNLU Matched intent score" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><a class="glightbox" href="../images/external-nlu-test-and-debug-img9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img9.png" alt="ExtNLU Matched intent score" title="ExtNLU Matched intent score" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p>If the ExtNLU returns multiple intents, the thresholds met for all those intents are considered and accordingly the test result is concluded.</p>
 <h2 id="health-and-monitoring">Health and Monitoring<a class="headerlink" href="#health-and-monitoring" title="Permanent link">&para;</a></h2>
 <p>In Health and Monitoring go to <strong>Test Cases —&gt; Detailed Analysis</strong> to see the Intents and Entities identified by External NLU, without any scores. The Traits engine is not dependent on the external NLU.</p>
@@ -4253,11 +4253,11 @@
 <p class="admonition-title">Note<p>If the external NLU is enabled, some of the recommendations may not be relevant because they are for the Kore.ai NLU engines. The recommendations are displayed based on the training done on the Kore.ai Platform.</p>
 </p>
 </div>
-<p><a class="glightbox" href="../images/external-nlu-test-and-debug-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img10.png" alt="Intents and Entities identified by External NLU" title="Intents and Entities identified by External NLU" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><a class="glightbox" href="../images/external-nlu-test-and-debug-img10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img10.png" alt="Intents and Entities identified by External NLU" title="Intents and Entities identified by External NLU" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p>For more information, see <a href="../../../../automation/testing/regression-testing/health-and-monitoring/virtual-assistants-health-and-monitoring" target="_blank">Virtual Assistant Health and Monitoring</a>.</p>
 <h2 id="nlp-insights">NLP Insights<a class="headerlink" href="#nlp-insights" title="Permanent link">&para;</a></h2>
 <p>NLP Insights have Intent Identified, Intent Not Identified utterances and their NLP analysis details captured. You can view the details of all the failed External NLU API calls in the debug logs of NLP Insights.</p>
-<p><a class="glightbox" href="../images/external-nlu-test-and-debug-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img11.png" alt="Failed External NLU API calls" title="Failed External NLU API calls" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><a class="glightbox" href="../images/external-nlu-test-and-debug-img11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img11.png" alt="Failed External NLU API calls" title="Failed External NLU API calls" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p>For more information, see <a href="../../../../analytics/automations/nlp-insights" target="_blank">NLP Insights</a>.</p>
 <h2 id="conversation-behavior">Conversation Behavior<a class="headerlink" href="#conversation-behavior" title="Permanent link">&para;</a></h2>
 <p>This list describes the conversation behavior while using external NLU adapter:</p>

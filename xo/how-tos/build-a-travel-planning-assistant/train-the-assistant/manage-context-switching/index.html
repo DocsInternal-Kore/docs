@@ -4243,18 +4243,18 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 <li>A Virtual Assistant with the Dialog Tasks mentioned below – See an overview <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-travel-planning-assistant/travel-assistant-overview/" target="_blank">here</a>.</li>
 <li>
 <p><strong>Check Flight Status</strong>– This task prompts the user to enter their flight number and displays its status.</p>
-<p><a class="glightbox" href="../images/flightstatus-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/flightstatus-task.png" alt="flight status task" title="flight status task" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<p><a class="glightbox" href="../images/flightstatus-task.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/flightstatus-task.png" alt="flight status task" title="flight status task" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
 <li>
 <p><strong>Change Flight</strong> – This task prompts the user for their Current Flight and New Flight, then performs the flight change.</p>
-<p><a class="glightbox" href="../images/changeflight-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/changeflight-task.png" alt="change flight task" title="change flight task" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/changeflight-task.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/changeflight-task.png" alt="change flight task" title="change flight task" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p><strong>Update Booking</strong> – A Dialog Task that asks the user for the number of the booking to update and the update that needs to be made, then performs the update.<a class="glightbox" href="../images/update-booking.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/update-booking.png" alt="update booking" title="update booking" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><strong>Update Booking</strong> – A Dialog Task that asks the user for the number of the booking to update and the update that needs to be made, then performs the update.<a class="glightbox" href="../images/update-booking.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-booking.png" alt="update booking" title="update booking" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p><strong>Knowledge Graph</strong>– Frequently asked questions that the assistant handles.
-<a class="glightbox" href="../images/kg-faqs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kg-faqs.png" alt="knowledge graph FAQs" title="knowledge graph FAQs" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/kg-faqs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kg-faqs.png" alt="knowledge graph FAQs" title="knowledge graph FAQs" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ul>
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
@@ -4267,7 +4267,7 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 </ul>
 <h3 id="task-driven-context-switching">Task-driven Context switching<a class="headerlink" href="#task-driven-context-switching" title="Permanent link">&para;</a></h3>
 <p>The following is the scenario where the Change Flight dialog invokes the Check Flight Status task to ensure that the flight is available to book.</p>
-<p><a class="glightbox" href="../images/task-driven-context-switching.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/task-driven-context-switching.png" alt="task driven context switching" title="task driven context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/task-driven-context-switching.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/task-driven-context-switching.png" alt="task driven context switching" title="task driven context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>We will be using the Context Variables and Entity Pre-Assignments to achieve this.</p>
 <p>We need to invoke Check Flight Status from Change Flight, check flight availability and follow the steps below:</p>
 <ol>
@@ -4282,7 +4282,7 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 <li><strong>Add Key/Value</strong> – pair <code>context.type</code> and <em>change</em> identifying the Change Flight  intent. This will be checked in the Check Flight Status  dialog as shown in the next step to modify the flow.</li>
 <li>Ensure that the <strong>Transition Option</strong> is set to Initiate <em>Check Flight Status</em>,., once complete return to this node.</li>
 </ul>
-<p><a class="glightbox" href="../images/transition-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/transition-node.png" alt="transition node" title="transition node" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/transition-node.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/transition-node.png" alt="transition node" title="transition node" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p><strong>Message Node</strong> to display a message that the new flight is not available to book. Connect this message back to the <strong>New Flight</strong> Entity node, so that the user be prompted to select a different flight.</p>
@@ -4296,10 +4296,10 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">nextStep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;update&quot;</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">context</span><span class="p">.</span><span class="nx">nextStep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nextStep</span><span class="p">;</span><span class="w"> </span>
 </span></code></pre></div>
-<p><a class="glightbox" href="../images/script-node-check-status.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/script-node-check-status.png" alt="script node check status" title="script node check status" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/script-node-check-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/script-node-check-status.png" alt="script node check status" title="script node check status" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li><strong>Connection Settings</strong> Bot Action Connections should indicate to proceed to UpdateBooking in case the new flight is available (if the <code>context.nextStep</code> is <em>updated</em> from the above script) else go to the message node.
-<a class="glightbox" href="../images/connection-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/connection-settings.png" alt="connection settings" title="connection settings" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/connection-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/connection-settings.png" alt="connection settings" title="connection settings" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 <p>Next, let us modify the <strong>Check Flight Status</strong> dialog to check for the <em>change</em> tag and populate the Bot Context variable if needed.</p>
 <ol>
@@ -4316,7 +4316,7 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 <p>Talk to the Bot to see the changes in action.</p>
 <h3 id="user-triggered-context-switching">User triggered context switching<a class="headerlink" href="#user-triggered-context-switching" title="Permanent link">&para;</a></h3>
 <p>While asking to change their flight, users might ask for the status of the flight that they want to switch to.</p>
-<p><a class="glightbox" href="../images/user-triggered-context-switching.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/user-triggered-context-switching.png" alt="user triggered context switching" title="user triggered context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/user-triggered-context-switching.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/user-triggered-context-switching.png" alt="user triggered context switching" title="user triggered context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Let us see how this can be achieved. We will be using historic tags – system generated and custom tags. The historic tags get transmitted from one intent to another automatically.</p>
 <p>First, modify the Change Flight task to populate the appropriate tags and configure the Hold and Resume settings. Follow the steps below to complete the process:</p>
 <ol>
@@ -4367,7 +4367,7 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 <p><strong>Primary Question</strong>: What are the compensations for a canceled flight?</p>
 <p><strong>Primary Question</strong>: What are the charges for changing flights?</p>
 <p><strong>Alternate</strong>: What are the charges?
-<a class="glightbox" href="../images/sharing-context-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/sharing-context-faq.png" alt="sharing context faq" title="sharing context faq" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/sharing-context-faq.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/sharing-context-faq.png" alt="sharing context faq" title="sharing context faq" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>In the second question, the word <em>charges</em> is in the context of changing flights. To enable it, all you need is to set a flag. For each question answered the Context tags are set automatically, we just instruct the Platform to use them appropriately.</p>
 <ol>
 <li>Go to <strong>Natural Language &gt; Thresholds &amp; Configurations</strong>.</li>

@@ -4227,7 +4227,7 @@
 <ul>
 <li>
 <p><strong>Standard Text</strong>: Use basic editor controls and HTML markup, and variable keys to define and format the response. Enter text, and then format it using buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting lines.</p>
-<p><a class="glightbox" href="../images/standard-text-editor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/standard-text-editor.png" alt="standard text editor" title="standard text editor" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/standard-text-editor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/standard-text-editor.png" alt="standard text editor" title="standard text editor" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p><strong>JavaScript</strong>: Add custom code to handle the end-user task response message, declare variables, use variable keys, and interact with third-party applications.</p>
@@ -4240,7 +4240,7 @@
 <li>Whether you are using Standard Text or JavaScript mode, to add a variable key, place the cursor where you want to add the variable and then click <strong>Variable Keys</strong>.</li>
 <li>
 <p>In the <strong>Request/Response Keys</strong> dialog, expand the type of key node  containing the variable you want to insert.</p>
-<p><a class="glightbox" href="../images/request-response-variable-keys.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/request-response-variable-keys.png" alt="request response keys" title="request response keys" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/request-response-variable-keys.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/request-response-variable-keys.png" alt="request response keys" title="request response keys" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Select the variable that you want to add, for example, <code>env.FlightData</code>and then click <strong>Ok</strong>,</p>
@@ -4248,7 +4248,7 @@
 </ol>
 <h3 id="standard-keys">Standard Keys<a class="headerlink" href="#standard-keys" title="Permanent link">&para;</a></h3>
 <p><strong>Standard Keys</strong> are the following Kore.ai variable placeholders for reusable data.
-<a class="glightbox" href="../images/standard-keys.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/standard-keys.png" alt="standard keys" title="standard keys" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/standard-keys.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/standard-keys.png" alt="standard keys" title="standard keys" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li><strong>_labels _</strong>: Returns the friendly label in place of a GUID. For example, when user data is requested from a web service API, the ID of a project or workspace returned is a GUID. You can use the <code>_labels_</code> key to show the user-friendly name of the GUID to the end-user instead of the GUID. On the XO Platform, a drop-down control stores the response for the <code>_labels_</code> key as, for example: </li>
 </ul>
@@ -4276,7 +4276,7 @@
 </ul>
 <h3 id="session-keys">Session Keys<a class="headerlink" href="#session-keys" title="Permanent link">&para;</a></h3>
 <p><strong>Session Keys</strong> are Kore.ai variable placeholders for user data specific to a single session instance.</p>
-<p><a class="glightbox" href="../images/session-keys.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/session-keys.png" alt="session keys" title="session keys" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/session-keys.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/session-keys.png" alt="session keys" title="session keys" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li><strong>UserContext.get(“_id”)</strong> – The Kore.ai userId.</li>
 <li><strong>UserContext.get(“emailId”)</strong> – The email address associated with the userId.</li>
@@ -4293,7 +4293,7 @@
 <p>Additional session keys may be available depending on how the task is defined and the context of keys available for that task. For more information about session and context keys, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/using-session-and-context-variables/" target="_blank">Using Session and Context Variables in Tasks</a>.</p>
 <h3 id="response-keys">Response Keys<a class="headerlink" href="#response-keys" title="Permanent link">&para;</a></h3>
 <p>Response Keys are parsed directly from your <strong>Response Sample</strong> text in the <strong>API Response</strong> tab. Response Keys vary depending on the Response Sample defined.</p>
-<p><a class="glightbox" href="../images/response-keys.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/response-keys.png" alt="response keys" title="response keys" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/response-keys.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/response-keys.png" alt="response keys" title="response keys" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The following list is an example of Response Keys available for an <em>Asana</em> task.</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">request</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">workspace</span><span class="w"> </span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">request</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">projects</span><span class="w"> </span>
@@ -4328,7 +4328,7 @@
 </span></code></pre></div>
 <h3 id="report-keys">Report Keys<a class="headerlink" href="#report-keys" title="Permanent link">&para;</a></h3>
 <p>Report Keys are Kore.ai variable placeholders that you can use in Report Template Definitions and Bot Responses to show links for additional information in a message that a user can click.
-<a class="glightbox" href="../images/report-keys.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/report-keys.png" alt="report keys" title="report keys" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/report-keys.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/report-keys.png" alt="report keys" title="report keys" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li><code>reportInfo.reportLink</code> – The link defined in the <strong>Report Template Definition</strong> section for this task.</li>
 <li><code>reportInfo.reportTitle</code> – The title defined in the <strong>Report Template Definition</strong> for this task.</li>
@@ -4338,7 +4338,7 @@
 <ul>
 <li><strong>Test &amp; Preview</strong> – Opens the task setup page for your VA to define the task settings, authenticate, and then shows a preview of your response generated through your third-party web service, for example, <em>Asana</em>.</li>
 <li><strong>Preview with sample response</strong> – Generates the preview using the sample data provided with the key-value pairs defined in the <strong>Response Sample</strong> section on the <strong>API Request</strong> tab for the task.
-<a class="glightbox" href="../images/preview-response.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/preview-response.png" alt="preview response" title="preview response" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/preview-response.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/preview-response.png" alt="preview response" title="preview response" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 <h2 id="examples-of-custom-javascript-responses">Examples of Custom JavaScript Responses<a class="headerlink" href="#examples-of-custom-javascript-responses" title="Permanent link">&para;</a></h2>
 <p>The following examples show response objects using JavaScript to define the <strong>Post Title</strong> and <strong>Post Description</strong> sections that display output messages to the end-user when the task response message is sent.</p>

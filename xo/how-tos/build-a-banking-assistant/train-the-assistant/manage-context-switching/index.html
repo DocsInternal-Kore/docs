@@ -4241,19 +4241,19 @@
 <ul>
 <li>
 <p><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-a-sample-banking-assistant/#get-balance-intent" target="_blank">Get Balance</a> – Dialog task prompting the user for their Account Number and displaying the available balance in the account.
-<a class="glightbox" href="../images/get-balance-context-switching.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/get-balance-context-switching.png" alt="get balance context switching" title="get balance context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/get-balance-context-switching.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/get-balance-context-switching.png" alt="get balance context switching" title="get balance context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-transfer-funds-task/" target="_blank">Transfer Funds</a> – Dialog task prompting the user for Payer and Payee account numbers and the amount to be transferred and transferring the specified amount from the payer account to the payee account.
-<a class="glightbox" href="../images/transfer-funds-context-switching.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/transfer-funds-context-switching.png" alt="transfer funds context switching" title="transfer funds context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/transfer-funds-context-switching.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/transfer-funds-context-switching.png" alt="transfer funds context switching" title="transfer funds context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-balance-task/" target="_blank">Update Account</a> – Dialog task prompting the user for Account Number that needs to be updated, the Amount to be updated and whether the amount needs to be credited or debited and updating the Account balance accordingly.
-<a class="glightbox" href="../images/update-account-context-switching.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/update-account-context-switching.png" alt="update account context switching" title="update account context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/update-account-context-switching.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-account-context-switching.png" alt="update account context switching" title="update account context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p><a href="https://docsinternal-kore.github.io/docs/xo/answers/knowledge-ai/build-a-knowledge-graph/" target="_blank">Knowledge Collection</a> – Frequently asked questions related to the bank.
-<a class="glightbox" href="../images/faq-knowledge-collection.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/faq-knowledge-collection.png" alt="FAQ knowledge collection" title="FAQ knowledge collection" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/faq-knowledge-collection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/faq-knowledge-collection.png" alt="FAQ knowledge collection" title="FAQ knowledge collection" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ul>
 </li>
@@ -4268,7 +4268,7 @@
 </ul>
 <h3 id="task-driven-context-switching">Task-driven Context switching<a class="headerlink" href="#task-driven-context-switching" title="Permanent link">&para;</a></h3>
 <p>The following is the scenario where the <strong>Transfer Amount</strong> dialog invokes the <strong>Get Balance</strong> task to check if the Payer Account has sufficient funds for the transfer.
-<a class="glightbox" href="../images/task-driven-context-switching-scenario.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/task-driven-context-switching-scenario.png" alt="task driven context switching" title="task driven context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/task-driven-context-switching-scenario.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/task-driven-context-switching-scenario.png" alt="task driven context switching" title="task driven context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>We will be using the Bot scoped Context Variables and Entity pre-assignments to achieve this.</p>
 <p><strong>Steps to Check Funds and Transfer</strong></p>
 <p>We need to invoke Get Balance from Transfer Amount, check for funds and proceed accordingly</p>
@@ -4276,7 +4276,7 @@
 <li>Open the <strong>Transfer Amount</strong> dialog.</li>
 <li>
 <p>Add a <em>Dialog Node</em>, <em>Bot Action Node</em> with a <em>Script Node</em>, and a <em>Message Node</em> as follows:
-<a class="glightbox" href="../images/add-dialog-node-context-switching.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-dialog-node-context-switching.png" alt="add dialog node" title="add dialog node" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/add-dialog-node-context-switching.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-dialog-node-context-switching.png" alt="add dialog node" title="add dialog node" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p><strong>Dialog Node</strong> will invoke the Get Balance using the Entity Pre-Assignments to populate:</p>
@@ -4285,7 +4285,7 @@
 <li><strong>Add Key/Value</strong> – pair <code>context.type</code> and <em>transfer</em> identifying the Transfer Amount intent. This will be checked in the Get Balance dialog as shown in the next step to modify the flow.</li>
 <li>Ensure that the <strong>Transition Option</strong> is set to Initiate <strong>Get Balance</strong>, once complete return to this node.</li>
 </ul>
-<p><a class="glightbox" href="../images/transition-option.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/transition-option.png" alt="transition option" title="transition option" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/transition-option.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/transition-option.png" alt="transition option" title="transition option" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li><strong>Script Node</strong> – <em>CheckBalance</em> to check the balance in the payer account with the amount to be transferred and proceed accordingly. Balance in the payer account is obtained from a BotContext variable that will be populated by the Get Balance dialog.</li>
 </ul>
@@ -4296,11 +4296,11 @@
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">nextStep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;update&quot;</span><span class="p">;</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">context</span><span class="p">.</span><span class="nx">nextStep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nextStep</span><span class="p">;</span>
 </span></code></pre></div>
-<p><a class="glightbox" href="../images/script-node-properties.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/script-node-properties.png" alt="script node properties" title="script node properties" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/script-node-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/script-node-properties.png" alt="script node properties" title="script node properties" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li>
 <p><strong>Connection Settings</strong>: Bot Action Connections should indicate to proceed to UpdateBalance in case of sufficient funds (if the <code>context.nextStep</code> is <em>update</em> from the above script) else go to message node.
-<a class="glightbox" href="../images/bot-connections.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-connections.png" alt="bot connections" title="bot connections" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/bot-connections.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-connections.png" alt="bot connections" title="bot connections" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p><strong>Message Node</strong> to display the insufficient funds message</p>
@@ -4322,7 +4322,7 @@
 
 <h3 id="user-triggered-context-switching">User triggered context switching<a class="headerlink" href="#user-triggered-context-switching" title="Permanent link">&para;</a></h3>
 <p>The following is an example of this use case. Users can at any point and time during the Transfer Amount check account balance before proceeding with the transfer.</p>
-<p><a class="glightbox" href="../images/user-triggered-cs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/user-triggered-cs.png" alt="user triggered context switching" title="user triggered context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/user-triggered-cs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/user-triggered-cs.png" alt="user triggered context switching" title="user triggered context switching" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Let us see how this can be achieved. We will be using historic tags – system generated and custom tags. The historic tags get transmitted from one intent to another automatically.</p>
 <p><strong>Steps to Check Funds Balance During Transfer</strong></p>
 <p>First, modify the Transfer Amount to populate the appropriate tags and configure the Hold and Resume settings:</p>
@@ -4377,9 +4377,9 @@
 <p><strong>Primary Question</strong>: <em>What are the interest rates for credit cards?</em></p>
 <p><strong>Primary Question</strong>: <em>What are the charges for credit cards?</em></p>
 <p><strong>Alternate</strong>: <em>What are the charges?</em></p>
-<p><a class="glightbox" href="../images/sharing-context-across-faqs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/sharing-context-across-faqs.png" alt="sharing context across faqs" title="sharing context across faqs" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/sharing-context-across-faqs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/sharing-context-across-faqs.png" alt="sharing context across faqs" title="sharing context across faqs" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The use case is as follows:</p>
-<p><a class="glightbox" href="../images/use-case-sharing-context-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/use-case-sharing-context-faq.png" alt="use case sharing context faq" title="use case sharing context faq" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/use-case-sharing-context-faq.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/use-case-sharing-context-faq.png" alt="use case sharing context faq" title="use case sharing context faq" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>In the second question, the word <em>charges</em> is in the context of the credit card. To enable it, all you need is set a flag, rest the platform takes care. For each question answered the Context tags are set automatically, we just instruct the platform to use them appropriately.</p>
 <ol>
 <li>Go to <strong>Natural Language</strong> &gt; <strong>Thresholds &amp; Configurations</strong>.</li>
@@ -4392,7 +4392,7 @@
 <p><strong>Primary Question</strong>: <em>What are your transfer rates?</em> </p>
 <p><strong>Alternate</strong>: <em>What are the rates?</em></p>
 <p>The use case here is that the user might, during the transfer amount, ask about the rates. This should result in the appropriate FAQ being triggered to answer the query.</p>
-<p><a class="glightbox" href="../images/context-switching-test.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/context-switching-test.png" alt="context switching test" title="context switching test" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/context-switching-test.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/context-switching-test.png" alt="context switching test" title="context switching test" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The default setting for the Interruption Behavior for FAQs will ensure that the FAQs are attended to while a Dialog Task is in progress.</p>
 <p>But this will not solve the use case described. It would answer the direct question – “<em>What are the transfer rates</em>” but not “<em>What are the rates</em>”. The reason being the FAQ not picking the context. To ensure that the context is picked by the FAQ:</p>
 <ol>

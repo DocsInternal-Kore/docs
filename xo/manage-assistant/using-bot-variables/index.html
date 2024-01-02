@@ -4212,11 +4212,11 @@
 <ul>
 <li>
 <p>The <strong>Access Key</strong> field for Google Translator or Microsoft Translator. </p>
-<p><a class="glightbox" href="../images/ubv%282%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%282%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%282%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%282%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>The <strong>Value</strong> field in the <strong>Configure Translation Engine</strong> panel for Custom Translation Engine Configurations. </p>
-<p><a class="glightbox" href="../images/ubv%287%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%287%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%287%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%287%29.png" title="image_tooltip" /></a></p>
 </li>
 </ul>
 </li>
@@ -4233,7 +4233,7 @@
 </li>
 </ul>
 <p>The availability of the environment variables has been extended to the <strong>Field Key</strong> and <strong>Field Value</strong> parameters. </p>
-<p><a class="glightbox" href="../images/ubv%2814%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%2814%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%2814%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%2814%29.png" title="image_tooltip" /></a></p>
 <h2 id="content-variables"><strong>Content Variables</strong><a class="headerlink" href="#content-variables" title="Permanent link">&para;</a></h2>
 <p>Bot building essentially requires extensive content management efforts. When it comes to multi-language bots, it also involves tedious coordination efforts between the developers and globally-distributed content authors or copyright team. Content variables enable you to overcome that by abstracting bot flow development efforts from authoring or editing the content. Using Content Variables, programmers can avoid hard-coding the bot content, such as prompts, messages, or any data presented to the user, into bot components, and instead point to specific variables in centrally managed Content Variables files for each bot language. You can export the language-specific content variable files to content editors, without exposing any bot configurations. The writers can author the content in the exported file, which you can import back into the bot. </p>
 <h2 id="defining-bot-variables-and-securing-them"><strong>Defining Bot Variables and Securing Them</strong><a class="headerlink" href="#defining-bot-variables-and-securing-them" title="Permanent link">&para;</a></h2>
@@ -4251,36 +4251,36 @@
 </li>
 <li>
 <p>Enable the <strong>secure variable</strong> by switching to the <strong>Enabled</strong> state (<strong>Disabled</strong> is the default setting). 
-     <a class="glightbox" href="../images/ubv%285%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%285%29.png" title="image_tooltip" /></a></p>
+     <a class="glightbox" href="../images/ubv%285%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%285%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>Click <strong>Save</strong>. </p>
-<p><a class="glightbox" href="../images/ubv%283%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%283%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%283%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%283%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>The environment variable and its encrypted value appear in the list.</p>
-<p><a class="glightbox" href="../images/ubv%286%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%286%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%286%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%286%29.png" title="image_tooltip" /></a></p>
 </li>
 </ol>
 <h2 id="entering-language-specific-values"><strong>Entering Language-Specific Values</strong><a class="headerlink" href="#entering-language-specific-values" title="Permanent link">&para;</a></h2>
 <p>To add language-specific values for content variables, you first need to switch the bot language. You can switch the language by clicking the name of the currently-enabled language from the top-right corner of the bot’s page and then selecting another language as follows: </p>
-<p><a class="glightbox" href="../images/ubv%288%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%288%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%288%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%288%29.png" title="image_tooltip" /></a></p>
 <p>After switching the language, go to <strong>Build &gt; Configurations &gt; Content Variables</strong> page and click the <strong>edit**icon next to the relevant variable. Replace the text in the **Value</strong> field in the enabled language.</p>
 <h2 id="using-environment-variables"><strong>Using Environment Variables</strong><a class="headerlink" href="#using-environment-variables" title="Permanent link">&para;</a></h2>
 <p>You can invoke an environment variable in plain text mode (Standard editor) using the following syntax: <code>{{env.variableName}}</code> If you are using it in JavaScript mode, it is <em>env.variableName</em> Here’s an example from a bot that uses two environment variables called <em>botType</em> and <em>parameters _to determine different bot environments such as development, testing, and production. The following script node in one of the bot’s tasks captures the _base URL</em> of the bot, depending on the current bot environment.</p>
-<p><a class="glightbox" href="../images/ubv%289%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%289%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%289%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%289%29.png" title="image_tooltip" /></a></p>
 <p>The URL in the following service node changes based on the captured URL.</p>
-<p><a class="glightbox" href="../images/ubv%281%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%281%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%281%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%281%29.png" title="image_tooltip" /></a></p>
 <h2 id="updating-the-environment-variable"><strong>Updating the Environment Variable</strong><a class="headerlink" href="#updating-the-environment-variable" title="Permanent link">&para;</a></h2>
 <p>For on-premise deployments, the user can update the encryption key/secured variable value with a new one. To edit the value, follow these steps:</p>
 <ol>
 <li>
 <p>Click the <strong>Edit</strong> icon of the secure variable listing. </p>
-<p><a class="glightbox" href="../images/ubv%286%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%286%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%286%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%286%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>In the <strong>Edit Environment Variable</strong> panel, click the <strong>Edit</strong> icon next to the <strong>Value</strong> textbox. </p>
-<p><a class="glightbox" href="../images/ubv%2812%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%2812%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%2812%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%2812%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>Enter the new variable value to be encrypted and click <strong>Done</strong>.</p>
@@ -4288,10 +4288,10 @@
 <li>Click <strong>Save</strong>.</li>
 </ol>
 <p>The new encrypted secure variable value is updated in the list as shown below:</p>
-<p><a class="glightbox" href="../images/ubv%2811%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%2811%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%2811%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%2811%29.png" title="image_tooltip" /></a></p>
 <h2 id="using-content-variables"><strong>Using Content Variables</strong><a class="headerlink" href="#using-content-variables" title="Permanent link">&para;</a></h2>
 <p>You can invoke a content variable in plain text mode (Standard editor) using the following syntax. <code>{{content.variableName}}</code> If you are using it in JavaScript mode, it is <em>content.variableName</em> Here’s an entity node of a multi-language flight booking bot that captures the source airport of the users. It uses a content variable instead of a hard-coded user prompt. </p>
-<p><a class="glightbox" href="../images/ubv%284%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%284%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%284%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%284%29.png" title="image_tooltip" /></a></p>
 <p>When the bot reaches this node as a part of the user interaction, the user prompt changes depending on the language of the interaction (provided you entered the respective variable values for all the enabled languages).</p>
 <h2 id="importing-and-exporting"><strong>Importing and Exporting</strong><a class="headerlink" href="#importing-and-exporting" title="Permanent link">&para;</a></h2>
 <p>You can import and export bot variables between bots.</p>
@@ -4310,7 +4310,7 @@
 <li>Bot variables are exported in the form of a JSON, CSV file based upon your selection.</li>
 <li>This file includes both environment and content variables. </li>
 </ul>
-<p><a class="glightbox" href="../images/ubv%2813%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%2813%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%2813%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%2813%29.png" title="image_tooltip" /></a></p>
 </li>
 </ol>
 <p>The <strong>Bot Variable file</strong> contains the following information, the same needs to be present in your Import file. CSV files need a header row. You are advised to refer to the Export (or backup) file and use the same format for the Import file.</p>
@@ -4336,7 +4336,7 @@
 <li><strong>Language-specific variable</strong></li>
 </ul>
 <p><strong>Sample CSV file</strong>:</p>
-<p><a class="glightbox" href="../images/ubv%2815%29.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%2815%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/ubv%2815%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ubv%2815%29.png" title="image_tooltip" /></a></p>
 <p><strong>Sample JSON file</strong>:
 `{{
 [</p>

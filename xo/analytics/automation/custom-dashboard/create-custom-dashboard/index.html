@@ -4319,7 +4319,7 @@
 </ul>
 <p>You can create a custom dashboard to achieve all the scenarios listed above, with detailed step-by-step instructions described in the following sections.</p>
 <p>Once the Dashboard is configured for the listed scenarios, it looks like the following:</p>
-<p><a class="glightbox" href="./../images/configured-custom-dashboard.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/configured-custom-dashboard.png" alt="Configured Custom Dashboard" title="Configured Custom Dashboard" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p><a class="glightbox" href="./../images/configured-custom-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/configured-custom-dashboard.png" alt="Configured Custom Dashboard" title="Configured Custom Dashboard" style="border: 1px solid gray; zoom:80%;"></a></p>
 <h2 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Bot building knowledge.</li>
@@ -4327,7 +4327,7 @@
 <li>A Banking Bot with the dialogs as follows:</li>
 </ul>
 <p><strong>Transfer Funds</strong> – The Dialog task walks the user through the transfer steps.</p>
-<p><a class="glightbox" href="./../images/transfer-funds.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/transfer-funds.png" alt="Transfer Funds" title="Transfer Funds" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p><a class="glightbox" href="./../images/transfer-funds.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/transfer-funds.png" alt="Transfer Funds" title="Transfer Funds" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p>In this dialog, we have included a Script node to add Custom Meta Tag, TransferValue, based upon the amount transferred. The following script is used:</p>
 <p><code>if(context.entities.TransferAmount[0].amount &gt; 50000){</code></p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>   tags.addSessionLevelTag(&quot;TransferValue&quot;, &quot;HighValue&quot;);
@@ -4339,9 +4339,9 @@
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>if(context.entities.TransferAmount[0].amount &gt; 0)
 </span></code></pre></div>
 <code>tags.addSessionLevelTag("TransferValue","LowValue");</code></p>
-<p><a class="glightbox" href="./../images/transfer-funds-add-scripts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/transfer-funds-add-scripts.png" alt="Transfer Funds Add Scripts" title="Transfer Funds Add Scripts" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p><a class="glightbox" href="./../images/transfer-funds-add-scripts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/transfer-funds-add-scripts.png" alt="Transfer Funds Add Scripts" title="Transfer Funds Add Scripts" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p><strong>Manage Payee</strong> – For the user to manage their payee list.</p>
-<p><a class="glightbox" href="./../images/manage-payee.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/manage-payee.png" alt="Manage Payee" title="Manage Payee" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p><a class="glightbox" href="./../images/manage-payee.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/manage-payee.png" alt="Manage Payee" title="Manage Payee" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p>Here we have a Script that assigns a value to the customerType meta tags: </p>
 <p><code>if(context.custType == 3){</code></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>   tags.addUserLevelTag(&quot;CustomerType&quot;,&quot;Premium&quot;);
@@ -4359,7 +4359,7 @@
 <li>From the left navigation panel, under <strong>Dashboard</strong> click <strong>Custom Dashboard.</strong></li>
 <li>
 <p><strong>Create a New Dashboard</strong>.
-<a class="glightbox" href="./../images/create-new-dashboard.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/create-new-dashboard.png" alt="Create New Dashboard" title="Create New Dashboard" style="border: 1px solid gray; zoom:80%;"></a></p>
+<a class="glightbox" href="./../images/create-new-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/create-new-dashboard.png" alt="Create New Dashboard" title="Create New Dashboard" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 <li>
 <p>Use the <strong>Add Widget</strong> button to add widgets for the above scenarios. You can add up to 4 widgets per row and organize them by moving anywhere within the row or across the rows on the dashboard. You can also manually resize the widgets.</p>
@@ -4383,12 +4383,12 @@ _This will let the platform know what data to fetch. Here we are using the sessi
 <li>Select <strong>Pie chart</strong></li>
 <li>Set <strong>Dimension</strong> to TransferValue</li>
 <li>Set <strong>Metrics</strong> to count(taskName)
-<a class="glightbox" href="./../images/dollar-value-breakup1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/dollar-value-breakup1.png" alt="Dollar Value Breakup1" title="Dollar Value Breakup1" style="border: 1px solid gray; zoom:80%;"></a></li>
+<a class="glightbox" href="./../images/dollar-value-breakup1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/dollar-value-breakup1.png" alt="Dollar Value Breakup1" title="Dollar Value Breakup1" style="border: 1px solid gray; zoom:80%;"></a></li>
 </ol>
 </li>
 <li>
 <p>See the <strong>Preview</strong> and if all is fine, click <strong>Update to Dashboard</strong>.
-<a class="glightbox" href="./../images/dollar-value-breakup2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/dollar-value-breakup2.png" alt="Dollar Value Breakup2" title="Dollar Value Breakup2" style="border: 1px solid gray; zoom:80%;"></a></p>
+<a class="glightbox" href="./../images/dollar-value-breakup2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/dollar-value-breakup2.png" alt="Dollar Value Breakup2" title="Dollar Value Breakup2" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 </ol>
 <h3 id="customer-type-summary">Customer Type Summary<a class="headerlink" href="#customer-type-summary" title="Permanent link">&para;</a></h3>
@@ -4409,7 +4409,7 @@ _This will let the platform know what data to fetch. Here we are using the sessi
 <li>Select <strong>Bar chart</strong></li>
 <li>Set <strong>Dimension</strong> to <em>CustomerCategory</em></li>
 <li>Set <strong>Metrics</strong> to <em>count(taskName)</em>
-<a class="glightbox" href="./../images/customer-type-summary.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/customer-type-summary.png" alt="Customer Type Summary" title="Customer Type Summary" style="border: 1px solid gray; zoom:80%;"></a></li>
+<a class="glightbox" href="./../images/customer-type-summary.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/customer-type-summary.png" alt="Customer Type Summary" title="Customer Type Summary" style="border: 1px solid gray; zoom:80%;"></a></li>
 </ol>
 </li>
 <li>
@@ -4436,7 +4436,7 @@ _We want to see only Success or Failed Tasks</li>
 <li>Set <strong>Dimension</strong> to <em>date</em></li>
 <li>Set <strong>Metrics</strong> to <em>TotalTasks</em></li>
 <li>Set <strong>Overlay</strong> to <em>metricType</em>
-<a class="glightbox" href="./../images/task-fulfiment-trend.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/task-fulfiment-trend.png" alt="Task Fulfiment Trend" title="Task Fulfiment Trend" style="border: 1px solid gray; zoom:80%;"></a></li>
+<a class="glightbox" href="./../images/task-fulfiment-trend.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/task-fulfiment-trend.png" alt="Task Fulfiment Trend" title="Task Fulfiment Trend" style="border: 1px solid gray; zoom:80%;"></a></li>
 </ol>
 </li>
 <li>
@@ -4461,7 +4461,7 @@ _We want to see only Failed Tasks</li>
 <ol>
 <li>Select <strong>Table chart</strong></li>
 <li>Set <strong>Dimension</strong> to <em>TaskName</em> and <em>Failures</em>
-<a class="glightbox" href="./../images/top-failure-tasks.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/top-failure-tasks.png" alt="Top Failure Tasks" title="Top Failure Tasks" style="border: 1px solid gray; zoom:80%;"></a></li>
+<a class="glightbox" href="./../images/top-failure-tasks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/top-failure-tasks.png" alt="Top Failure Tasks" title="Top Failure Tasks" style="border: 1px solid gray; zoom:80%;"></a></li>
 </ol>
 </li>
 <li>
@@ -4486,7 +4486,7 @@ _We want to see only Failed Tasks</li>
 <li>Set <strong>Dimension</strong> to <em>date</em></li>
 <li>Set <strong>Metrics</strong> to <em>count(messageId)</em></li>
 <li>Set <strong>Overlay</strong> to <em>channel</em>
-<a class="glightbox" href="./../images/channel-volume-trend.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/channel-volume-trend.png" alt="Channel Volume Trend" title="Channel Volume Trend" style="border: 1px solid gray; zoom:80%;"></a></li>
+<a class="glightbox" href="./../images/channel-volume-trend.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/channel-volume-trend.png" alt="Channel Volume Trend" title="Channel Volume Trend" style="border: 1px solid gray; zoom:80%;"></a></li>
 </ol>
 </li>
 <li>
@@ -4512,18 +4512,18 @@ _We want to see only Failed Tasks</li>
 <li>Select <strong>Table chart</strong></li>
 <li>Set <strong>Dimension</strong> to <em>count(messageId),userId</em></li>
 <li>The following results when you just retrieve the count of all messages, grouping by the userId.
-<a class="glightbox" href="./../images/filter-the-mesage-using-having-clause%201.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/filter-the-mesage-using-having-clause%201.png" alt="Filter the Mesage Using Having Clause 1" title="Filter the Mesage Using Having Clause 1" style="border: 1px solid gray; zoom:80%;"></a></li>
+<a class="glightbox" href="./../images/filter-the-mesage-using-having-clause%201.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/filter-the-mesage-using-having-clause%201.png" alt="Filter the Mesage Using Having Clause 1" title="Filter the Mesage Using Having Clause 1" style="border: 1px solid gray; zoom:80%;"></a></li>
 </ol>
 </li>
 <li>
 <p>The following results when you retrieve the count of messages, grouping by the userId, using the Having clause.
-<a class="glightbox" href="./../images/filter-the-mesage-using-having-clause%202.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/filter-the-mesage-using-having-clause%202.png" alt="Filter the Mesage Using Having Clause 2" title="Filter the Mesage Using Having Clause 2" style="border: 1px solid gray; zoom:80%;"></a></p>
+<a class="glightbox" href="./../images/filter-the-mesage-using-having-clause%202.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/filter-the-mesage-using-having-clause%202.png" alt="Filter the Mesage Using Having Clause 2" title="Filter the Mesage Using Having Clause 2" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 <li>
 <p>See the <strong>Preview</strong> and then click <strong>Add to Dashboard</strong>.
-<a class="glightbox" href="./../images/filter-the-mesage-using-having-clause%203.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/filter-the-mesage-using-having-clause%203.png" alt="Filter the Mesage Using Having Clause 3" title="Filter the Mesage Using Having Clause 3" style="border: 1px solid gray; zoom:80%;"></a>
+<a class="glightbox" href="./../images/filter-the-mesage-using-having-clause%203.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/filter-the-mesage-using-having-clause%203.png" alt="Filter the Mesage Using Having Clause 3" title="Filter the Mesage Using Having Clause 3" style="border: 1px solid gray; zoom:80%;"></a>
 The Having clause widget is added to the dashboard as shown in the following screenshot.
-<a class="glightbox" href="./../images/filter-the-mesage-using-having-clause%204.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./../images/filter-the-mesage-using-having-clause%204.png" alt="Filter the Mesage Using Having Clause 4" title="Filter the Mesage Using Having Clause 4" style="border: 1px solid gray; zoom:80%;"></a></p>
+<a class="glightbox" href="./../images/filter-the-mesage-using-having-clause%204.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/filter-the-mesage-using-having-clause%204.png" alt="Filter the Mesage Using Having Clause 4" title="Filter the Mesage Using Having Clause 4" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 </ol>
 

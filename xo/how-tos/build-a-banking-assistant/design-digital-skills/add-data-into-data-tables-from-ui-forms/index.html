@@ -4322,7 +4322,7 @@
   </tr>
 </table>
 
-<p><a class="glightbox" href="../images/update-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/update-form.png" alt="update form" title="update form" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/update-form.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-form.png" alt="update form" title="update form" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>UI Form we will be using the UI Form configured as shown <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-digital-skills/configure-digital-forms/" target="_blank"> here</a>.</p>
 <h2 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
 <p>Let us consider each of the following scenarios one by one:</p>
@@ -4334,7 +4334,7 @@
 </ul>
 <h3 id="dialog-task-configuration">Dialog Task Configuration<a class="headerlink" href="#dialog-task-configuration" title="Permanent link">&para;</a></h3>
 <p>We will be creating a dialog task and adding a form node to trigger the UI Form created in the above step and use a service node to make a service call to add the new account from the form data.
-<a class="glightbox" href="../images/dialog-task-configuration-ui-form.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-task-configuration-ui-form.png" alt="dialog task configuration" title="dialog task configuration" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/dialog-task-configuration-ui-form.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-task-configuration-ui-form.png" alt="dialog task configuration" title="dialog task configuration" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h4 id="create-dialog-task">Create Dialog Task<a class="headerlink" href="#create-dialog-task" title="Permanent link">&para;</a></h4>
 <ol>
 <li>From the left navigation menu, select <strong>Bot Tasks</strong> -&gt; <strong>Dialog Tasks</strong>.</li>
@@ -4353,9 +4353,9 @@
 </li>
 <li>Add a <strong>Service</strong> node to check for the validity of the customer id entered.</li>
 </ol>
-<p><a class="glightbox" href="../images/check-customer-id-validity.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/check-customer-id-validity.png" alt="check customer id validity" title="check customer id validity" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/check-customer-id-validity.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/check-customer-id-validity.png" alt="check customer id validity" title="check customer id validity" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ol start="6"><li>Add a <b>Logic</b> node to proceed with the Form if the customer id is valid else prompt for the customer id.</li>
-<a class="glightbox" href="../images/logic-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a></ol>
+<a class="glightbox" href="../images/logic-node.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a></ol>
 
 <p>The <em>InvalidCustId</em> is a <strong>Message</strong> node with the following JavaScript:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">context</span><span class="p">.</span><span class="nx">entities</span><span class="p">.</span><span class="nx">CustId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
@@ -4408,7 +4408,7 @@
 </span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="p">}</span>
 </span></code></pre></div>
 <ol start="10"><li>Use a <b>Service</b> node to add the account details using the context variables populated in the previous Script node.</li>
-<a class="glightbox" href="../images/service-node-to-add-account-details.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-to-add-account-details.png" alt="service node to add account details" title="service node to add account details" style="border: 1px solid gray; zoom:75%;"></a>
+<a class="glightbox" href="../images/service-node-to-add-account-details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-to-add-account-details.png" alt="service node to add account details" title="service node to add account details" style="border: 1px solid gray; zoom:75%;"></a>
 
 <li>Your dialog with form and service nodes to update the data table is ready.</li>
 <li><b>Talk to bot</b> and follow the steps to add an account to a given customer id.</li></ol>

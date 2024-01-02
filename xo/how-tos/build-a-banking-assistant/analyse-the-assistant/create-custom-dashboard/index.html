@@ -4212,7 +4212,7 @@
 
 <p>You can create a custom dashboard to achieve all the scenarios listed above, with detailed step-by-step instructions as described in the following sections.</p>
 <p>Once the Dashboard is configured for the listed scenarios, it looks like below.</p>
-<p><a class="glightbox" href="../images/configured-dashboard.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configured-dashboard.png" alt="configured dashboard" title="configured dashboard" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/configured-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configured-dashboard.png" alt="configured dashboard" title="configured dashboard" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul><li>Bot building knowledge.</li>
 
@@ -4223,7 +4223,7 @@
 
 <ul><li><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-transfer-funds-task/" target="_blank">Transfer Funds</a> – The Dialog task walking the user through the steps in transferring money.</li>
 
-<a class="glightbox" href="../images/transfer-funds-dialog-task.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/transfer-funds-dialog-task.png" alt="transfer funds" title="transfer funds" style="border: 1px solid gray; zoom:75%;"></a></ul></ul>
+<a class="glightbox" href="../images/transfer-funds-dialog-task.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/transfer-funds-dialog-task.png" alt="transfer funds" title="transfer funds" style="border: 1px solid gray; zoom:75%;"></a></ul></ul>
 
 <p>In this dialog, we have included a Script node to add Custom Meta Tag, TransferValue, based upon the amount transferred. The following script is used:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">if</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">entities</span><span class="p">.</span><span class="nx">TransferAmount</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">50000</span><span class="p">){</span><span class="sb">`</span>
@@ -4234,9 +4234,9 @@
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="sb">if(context.entities.TransferAmount[0].amount &gt; 0)</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="sb">    tags.addSessionLevelTag(&quot;TransferValue&quot;,&quot;LowValue&quot;);</span>
 </span></code></pre></div>
-<p><a class="glightbox" href="../images/add-custom-metatag.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-custom-metatag.png" alt="add custom metatag" title="add custom metatag" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/add-custom-metatag.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-custom-metatag.png" alt="add custom metatag" title="add custom metatag" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p><strong>Manage Payee</strong> – For the user to manage their payee list.</p>
-<p><a class="glightbox" href="../images/manage-payee-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/manage-payee-dialog.png" alt="manage payee dialog" title="manage payee dialog" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/manage-payee-dialog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/manage-payee-dialog.png" alt="manage payee dialog" title="manage payee dialog" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Here we have a Script that assigns a value to the customerType meta tags:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">if</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">custType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">3</span><span class="p">){</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">     </span><span class="nx">tags</span><span class="p">.</span><span class="nx">addUserLevelTag</span><span class="p">(</span><span class="s2">&quot;CustomerType&quot;</span><span class="p">,</span><span class="s2">&quot;Premium&quot;</span><span class="p">);</span>
@@ -4254,7 +4254,7 @@
 <li>From the left navigation panel, under <strong>Dashboard</strong> click <strong>Custom Dashboard.</strong></li>
 <li>
 <p>Click <strong>Create New Dashboard</strong>.
-<a class="glightbox" href="../images/create-custom-dashboard.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/create-custom-dashboard.png" alt="create custom dashboard" title="create custom dashboard" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/create-custom-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/create-custom-dashboard.png" alt="create custom dashboard" title="create custom dashboard" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Use the <strong>Add Widget</strong> button to add widgets for the above scenarios. You can add up to 4 widgets per row and organize them by moving anywhere within the row or across the rows on the dashboard. You can also manually resize the widgets.</p>
@@ -4277,12 +4277,12 @@
 <li>Select <strong>Pie chart</strong>.</li>
 <li>Set <strong>Dimension</strong> to TransferValue.</li>
 <li>Set <strong>Metrics</strong> to count(taskName).
-<a class="glightbox" href="../images/create-new-dashboard.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/create-new-dashboard.png" alt="create new dashboard" title="create new dashboard" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/create-new-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/create-new-dashboard.png" alt="create new dashboard" title="create new dashboard" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 <li>
 <p>See the <strong>Preview</strong> and if all is fine, click <strong>Update to Dashboard</strong>.
-    <a class="glightbox" href="../images/dollar-value-breakup.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dollar-value-breakup.png" alt="dollar value breakup" title="dollar value breakup" style="border: 1px solid gray; zoom:75%;"></a></p>
+    <a class="glightbox" href="../images/dollar-value-breakup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dollar-value-breakup.png" alt="dollar value breakup" title="dollar value breakup" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
 <h3 id="customer-type-summary">Customer Type Summary<a class="headerlink" href="#customer-type-summary" title="Permanent link">&para;</a></h3>
@@ -4305,7 +4305,7 @@
 <li>Select <strong>Bar chart</strong>.</li>
 <li>Set <strong>Dimension</strong> to <em>CustomerCategory</em>.</li>
 <li>Set <strong>Metrics</strong> to <em>count(taskName)</em>.
-<a class="glightbox" href="../images/customer-type-summary.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/customer-type-summary.png" alt="customer type summary" title="customer type summary" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/customer-type-summary.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/customer-type-summary.png" alt="customer type summary" title="customer type summary" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 <li>
@@ -4339,7 +4339,7 @@
 <li>Set <strong>Dimension</strong> to <em>date</em>.</li>
 <li>Set <strong>Metrics</strong> to <em>TotalTasks</em>.</li>
 <li>Set <strong>Overlay</strong> to <em>metricType</em>.
-<a class="glightbox" href="../images/widget-set-up-bar-chart.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/widget-set-up-bar-chart.png" alt="widget setup bar chart" title="widget setup bar chart" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/widget-set-up-bar-chart.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/widget-set-up-bar-chart.png" alt="widget setup bar chart" title="widget setup bar chart" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 <li>
@@ -4371,7 +4371,7 @@
 <ul>
 <li>Select <strong>Table chart</strong>.</li>
 <li>Set <strong>Dimension</strong> to <em>TaskName</em> and <em>Failures</em>.
-<a class="glightbox" href="../images/set-dimension.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-dimension.png" alt="set dimension" title="set dimension" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/set-dimension.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/set-dimension.png" alt="set dimension" title="set dimension" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 <li>
@@ -4397,7 +4397,7 @@
 <li>Set <strong>Dimension</strong> to <em>date.</em></li>
 <li>Set <strong>Metrics</strong> to <em>count(messageId).</em></li>
 <li>Set <strong>Overlay</strong> to <em>channel</em>.
-<a class="glightbox" href="../images/widget-setup.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/widget-setup.png" alt="widget setup" title="widget setup" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/widget-setup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/widget-setup.png" alt="widget setup" title="widget setup" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 <li>
@@ -4425,19 +4425,19 @@
 </li>
 <li>
 <p>The following is a result when you just retrieve the count of all messages, grouping by the userId.
-<a class="glightbox" href="../images/retrieve-count-of-messages.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/retrieve-count-of-messages.png" alt="retrieve count" title="retrieve count" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<a class="glightbox" href="../images/retrieve-count-of-messages.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/retrieve-count-of-messages.png" alt="retrieve count" title="retrieve count" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
 <li>
 <p>The following is a result when you retrieve the count of messages, grouping by the userId, using the Having clause.
-<a class="glightbox" href="../images/retrieve-information.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/retrieve-information.png" alt="retrieve information" title="retrieve information" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<a class="glightbox" href="../images/retrieve-information.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/retrieve-information.png" alt="retrieve information" title="retrieve information" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
 <li>
 <p>See the <strong>Preview</strong> and then click <strong>Add to Dashboard</strong>.
-<a class="glightbox" href="../images/click-add-to-dashboard.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/click-add-to-dashboard.png" alt="add to dashboard" title="add to dashboard" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<a class="glightbox" href="../images/click-add-to-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/click-add-to-dashboard.png" alt="add to dashboard" title="add to dashboard" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
 </ol>
 <p>The Having clause widget is added to the dashboard as shown in the following screenshot.
-<a class="glightbox" href="../images/having-clause-widget.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/having-clause-widget.png" alt="having clause widget" title="having clause widget" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/having-clause-widget.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/having-clause-widget.png" alt="having clause widget" title="having clause widget" style="border: 1px solid gray; zoom:75%;"></a></p>
 
 
   

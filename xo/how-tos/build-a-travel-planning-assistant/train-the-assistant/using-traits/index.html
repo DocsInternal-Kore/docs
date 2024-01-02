@@ -4171,15 +4171,15 @@
 <ul>
 <li>
 <p><strong>Book a Flight Dialog Task</strong> – This task allows the user to make a flight booking via the assistant.
-<a class="glightbox" href="../images/bookflight-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bookflight-dialog.png" alt="book flight dialog" title="book flight dialog" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+<a class="glightbox" href="../images/bookflight-dialog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bookflight-dialog.png" alt="book flight dialog" title="book flight dialog" style="border: 1px solid gray; zoom:75%;"></a>  </p>
 </li>
 <li>
 <p><strong>Issue Resolution Dialog Task</strong>– This task assists in any issues faced by the user. It displays a regret message and transfers the conversation to a Live Agent.
-<a class="glightbox" href="../images/issue-resolution-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/issue-resolution-dialog.png" alt="issue resolution dialog" title="issue resolution dialog" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+<a class="glightbox" href="../images/issue-resolution-dialog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/issue-resolution-dialog.png" alt="issue resolution dialog" title="issue resolution dialog" style="border: 1px solid gray; zoom:75%;"></a>  </p>
 </li>
 <li>
 <p><strong>Knowledge Graph Booking FAQ</strong>– A Booking node with an FAQ for How do I make a Booking?
-<a class="glightbox" href="../images/kg-booking-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/kg-booking-faq.png" alt="kg booking faq" title="kg booking faq" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+<a class="glightbox" href="../images/kg-booking-faq.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/kg-booking-faq.png" alt="kg booking faq" title="kg booking faq" style="border: 1px solid gray; zoom:75%;"></a>  </p>
 </li>
 </ul>
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
@@ -4195,7 +4195,7 @@
 <li>Add a <strong>Trait Type</strong> as <em>Problem Statement</em> and <strong>Traits</strong> as <em>issue</em>. A given Trait Type can have multiple Traits grouped together logically.</li>
 <li>
 <p>Optionally you can add utterances for Issues as <em>‘problem’, ‘unable to’</em>, and <em>‘not working’</em>. These are the alternate words that users might use to indicate an issue.
-<a class="glightbox" href="../images/optional-add-utterance.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/optional-add-utterance.png" alt="optionally add utterance" title="optionally add utterance" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+<a class="glightbox" href="../images/optional-add-utterance.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/optional-add-utterance.png" alt="optionally add utterance" title="optionally add utterance" style="border: 1px solid gray; zoom:75%;"></a>  </p>
 </li>
 <li>
 <p><strong>Save &amp; Add Rule</strong></p>
@@ -4204,7 +4204,7 @@
 <li><strong>Select Intent</strong> – <em>Issue Resolution</em> to be triggered in the presence of this trait.</li>
 <li>
 <p>Add the <strong>Trait Rules</strong> – <em>issue</em> as the trait that should trigger the above selected intent.
-<a class="glightbox" href="../images/add-trait-rule.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-trait-rule.png" alt="add trait rule" title="add trait rule" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+<a class="glightbox" href="../images/add-trait-rule.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-trait-rule.png" alt="add trait rule" title="add trait rule" style="border: 1px solid gray; zoom:75%;"></a>  </p>
 </li>
 <li>
 <p><strong>Save</strong> the Trait Mapping.</p>
@@ -4216,11 +4216,11 @@
 </li>
 <li>
 <p>Open the Issue Resolution Intent to see the Trait <strong>Rules</strong> under the <strong>NLP</strong> properties panel updated with the <em>issue</em> trait.
-<a class="glightbox" href="../images/issue-resolution-intent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/issue-resolution-intent.png" alt="issue resolution intent" title="issue resolution intent" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+<a class="glightbox" href="../images/issue-resolution-intent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/issue-resolution-intent.png" alt="issue resolution intent" title="issue resolution intent" style="border: 1px solid gray; zoom:75%;"></a>  </p>
 </li>
 <li>
 <p><strong>Talk to the Bot</strong> and see the conversation flow. As you can see in the illustration below, rather than detect the <em>Make a Booking</em> intent, the VA uses the Issue Resolution task to transfer the conversation to an agent. This is despite the fact that the user utterance contains the full <em>Make a Booking</em> sentence. The VA picks up on the presence of an utterance which we have set up under the <em>Issue</em> trait – the word <em>problem</em> – and thus triggers the intent that we selected as the rule, rather than the other one.
-<a class="glightbox" href="../images/traits-talk-to-bot.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/traits-talk-to-bot.png" alt="talk to bot" title="talk to bot" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+<a class="glightbox" href="../images/traits-talk-to-bot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/traits-talk-to-bot.png" alt="talk to bot" title="talk to bot" style="border: 1px solid gray; zoom:75%;"></a>  </p>
 </li>
 </ol>
 <h3 id="knowledge-intent-using-traits">Knowledge Intent using Traits<a class="headerlink" href="#knowledge-intent-using-traits" title="Permanent link">&para;</a></h3>
@@ -4234,7 +4234,7 @@
 <li>Add a <strong>Trait Type</strong> as <em>Inquiry</em>, and <strong>Traits</strong> as <em>ask</em>. A given Trait Type can have multiple Traits grouped together logically.</li>
 <li>
 <p>Optionally you can add utterances for Issues as <em>‘wondering’</em> and <em>‘want to know’</em>. These are the alternate words that the user might use to indicate an inquiry.
-<a class="glightbox" href="../images/add-trait-details.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-trait-details.png" alt="add trait details" title="add trait details" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/add-trait-details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-trait-details.png" alt="add trait details" title="add trait details" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p><strong>Save &amp; Exit</strong> the Trait.</p>
@@ -4245,7 +4245,7 @@
 <li>Click the <strong>Settings</strong> icon.</li>
 <li>
 <p>Under <strong>Traits</strong> type and select <em>ask</em> trait.
-<a class="glightbox" href="../images/associate-to-faq.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/associate-to-faq.png" alt="associate to faq" title="associate to faq" style="border: 1px solid gray; zoom:75%;"></a>  </p>
+<a class="glightbox" href="../images/associate-to-faq.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/associate-to-faq.png" alt="associate to faq" title="associate to faq" style="border: 1px solid gray; zoom:75%;"></a>  </p>
 </li>
 <li>
 <p><strong>Train</strong> the Knowledge Graph.</p>
@@ -4259,7 +4259,7 @@
 </li>
 <li>Type the utterance, you will see that the <strong>Trait</strong> has been identified.</li>
 <li>Select the <strong>Ranking and Resolver</strong>. You will see that both the intent and FAQ were identified but the intent got a higher score.
-<a class="glightbox" href="../images/select-ranking-and-resolver.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/select-ranking-and-resolver.png" alt="select ranking and resolver" title="select ranking and resolver" style="border: 1px solid gray; zoom:75%;"></a>  </li>
+<a class="glightbox" href="../images/select-ranking-and-resolver.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/select-ranking-and-resolver.png" alt="select ranking and resolver" title="select ranking and resolver" style="border: 1px solid gray; zoom:75%;"></a>  </li>
 </ul>
 </li>
 <li>
@@ -4269,7 +4269,7 @@
 <li>Select the <strong>primary intent node</strong> and go to its <strong>NLP Properties</strong>. </li>
 <li>Under <strong>Patterns</strong> click <strong>Add Pattern</strong>.</li>
 <li>Select the <strong>Negative Patterns</strong> tab. Add the words <em>know</em>, <em>ask,</em> any any other question identifiers.This will ensure that the ‘Book Flight’ intent is not identified when either of the negative patterns is present in the user utterance.
-<a class="glightbox" href="../images/add-negative-pattern.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-negative-pattern.png" alt="add negative pattern" title="add negative pattern" style="border: 1px solid gray; zoom:75%;"></a>   </li>
+<a class="glightbox" href="../images/add-negative-pattern.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-negative-pattern.png" alt="add negative pattern" title="add negative pattern" style="border: 1px solid gray; zoom:75%;"></a>   </li>
 </ul>
 </li>
 </ol>

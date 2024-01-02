@@ -4165,7 +4165,7 @@
 <p>We have seen how an Alert task can be set up in the XO Platform <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks/" target="_blank">here</a>. In this section, we will see how basic authorization for the alert tasks can be set up.</p>
 <h2 id="how-it-works">How it Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
 <p>When basic authorization is used for a task, the XO Platform automatically prompts the user for login credentials to access the web application or web service, as shown in the following illustration.
-<a class="glightbox" href="../images/authorize-to-use-account.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/authorize-to-use-account.png" alt="authorize to use account" title="authorize to use account" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/authorize-to-use-account.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/authorize-to-use-account.png" alt="authorize to use account" title="authorize to use account" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>After the end-user is authorized, the settings are saved using the following naming syntax:</p>
 <p><code>{{ First Name }} {{ Last Name }} {{ VA Name }} {{ Account # }} {{ Sequence # }}</code></p>
 
@@ -4180,20 +4180,20 @@
 <li>Click the <strong>API Request</strong> tab within the Alert Task.</li>
 <li>
 <p>Expand the <strong>Authorization</strong> section and click <strong>Create New</strong> to configure a new authorization.
-<a class="glightbox" href="../images/create-new-authorization.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/create-new-authorization.png" alt="create new authorization" title="create new authorization" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/create-new-authorization.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/create-new-authorization.png" alt="create new authorization" title="create new authorization" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Next, the <strong>New Authorization Mechanism</strong> window opens, as shown in the illustration below.
-<a class="glightbox" href="../images/new-auth-mechanism.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/new-auth-mechanism.png" alt="new auth mechanism" title="new auth mechanism" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/new-auth-mechanism.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/new-auth-mechanism.png" alt="new auth mechanism" title="new auth mechanism" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
 <p>To define Basic Authorization, select <strong>Basic Auth</strong> in the <strong>Authorization Type</strong> field. Then specify a <strong>Name</strong> for the authorization to be displayed in the XO Platform  user interface. Next, please make your configuration according to the steps below.</p>
 <h2 id="tenancy">Tenancy<a class="headerlink" href="#tenancy" title="Permanent link">&para;</a></h2>
 <p>If required, in the <strong>Subdomain</strong> section, select <strong>Yes</strong> if the base URL for a web application or user interface uses a tenant name in the URL. For example, kore is the tenant organization for a web service using tenants as www.<strong><em>kore</em></strong>.someCompany.com. In the following example configuration, the tenancy URL contains the {tenant} organization placeholder.
-<a class="glightbox" href="../images/set-tenancy.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/set-tenancy.png" alt="set tenancy" title="set tenancy" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/set-tenancy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/set-tenancy.png" alt="set tenancy" title="set tenancy" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h2 id="form-fields">Form Fields<a class="headerlink" href="#form-fields" title="Permanent link">&para;</a></h2>
 <p>If the default username and password fields do not meet your needs, you can add new fields displayed to the end-user by adding authorization form fields. To add fields on the authorization form, click <strong>+ Add Form Field</strong>. The following illustration is an example of a definition to add a password field to the authorization dialog.
-<a class="glightbox" href="../images/add-form-field.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-form-field.png" alt="Form fields" title="Form Fields" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/add-form-field.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-form-field.png" alt="Form fields" title="Form Fields" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The following table describes the fields used to define an authorization IDP form field.</p>
 <table border="1.5">
   <tr bgcolor="#ECECEC">
@@ -4255,7 +4255,7 @@
 
 <h2 id="authorization-fields">Authorization Fields<a class="headerlink" href="#authorization-fields" title="Permanent link">&para;</a></h2>
 <p>By default, authorization fields are configured as part of the header of the task request message. If your task request requires additional authorization fields or the expected authorization is not part of the header, for example, a verification code, click <strong>+ Add Authorization Field</strong> and then define the fields as shown in the following illustration.
-<a class="glightbox" href="../images/authorization-fields.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/authorization-fields.png" alt="auth fields" title="auth fields" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/authorization-fields.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/authorization-fields.png" alt="auth fields" title="auth fields" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ol>
 <li>In the <strong>Field Type</strong> field, you can select one of the following depending on where in the task request message and the type of authorization fields that are required. <strong>Header</strong> – The VA expects the authorization fields as part of the header of the request.<strong>Payload</strong> – The assistant expects the authorization fields as part of the content of the body of the request. <strong>Query String</strong> – The VA expects the authorization fields as a query in the body of the request. <strong>Path Param</strong> – The VA expects the authorization fields as part of the URL path for the request.</li>
 <li>In the <strong>Field Key</strong> field, enter the name of the field for the selected <strong>Field Type</strong>.</li>
@@ -4270,13 +4270,13 @@
 <ol>
 <li>
 <p>Click <strong>Test Authorization</strong> before continuing to develop the remaining steps of your task.
-<a class="glightbox" href="../images/click-test-authorization.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/click-test-authorization.png" alt="test authorization" title="test authorization" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/click-test-authorization.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/click-test-authorization.png" alt="test authorization" title="test authorization" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>After you click <strong>Test Authorization</strong>, the <strong>Test Authorization</strong> window is displayed and populated with the URL you specified in the <strong>Authorization Check URL</strong> section, as shown in the following illustration.</p>
 </li>
 </ol>
-<p><a class="glightbox" href="../images/test-authorization-window.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/test-authorization-window.png" alt="test authorization window" title="test authorization window" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/test-authorization-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/test-authorization-window.png" alt="test authorization window" title="test authorization window" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>To configure the Test Authorization – Basic Auth, follow the below steps:</p>
 <ol>
 <li>In the <strong>Auth Check URL</strong> field, verify or enter the URL to test the authentication configuration.</li>
@@ -4288,7 +4288,7 @@
 </ol>
 <p>When the validation of authentication is complete, the <strong>Test Authorization</strong> window is closed and the results of the validation, either success or failure, is displayed to the immediate right of the <strong>Test Authorization</strong> button as shown in the following illustration. </p>
 <p>If the authorization fails, the <em>Auth Test Failed</em> message is displayed along with the <strong>Headers</strong> and <strong>Response</strong> tabs as shown in the following illustration.
-<a class="glightbox" href="../images/configure-test-authorization.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-test-authorization.png" alt="auth fails message" title="auth fails message" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/configure-test-authorization.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-test-authorization.png" alt="auth fails message" title="auth fails message" style="border: 1px solid gray; zoom:75%;"></a></p>
 
 
   

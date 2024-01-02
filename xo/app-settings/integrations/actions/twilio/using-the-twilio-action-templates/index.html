@@ -4160,15 +4160,15 @@
 <li>Go to <strong>Build &gt; Conversation Skills &gt; Dialog Tasks</strong>.</li>
 <li>
 <p>Click <strong>Create a Dialog Task</strong>.<br />
-<a class="glightbox" href="../images/twilio-tem-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img1.png" alt="Create a Dialog Task" title="Create a Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img1.png" alt="Create a Dialog Task" title="Create a Dialog Task" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
 <p>On the Dialog Task pop-up, under the Integration, select the Twilio Verify option to view the action templates.<br />
-<a class="glightbox" href="../images/twilio-tem-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img2.png" alt="Integration - Twilio Verify" title="Integration - Twilio Verify" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img2.png" alt="Integration - Twilio Verify" title="Integration - Twilio Verify" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
 <p>If you have not configured any integration for your virtual assistant, you will see the <strong>Explore Integrations</strong> option. Once you click this option, you will be redirected to the <strong>Actions</strong> page to configure an integration for your VA. For more information, see <a href="../../actions/" target="_blank">Actions Overview</a>.<br />
-<a class="glightbox" href="../images/twilio-tem-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img3.png" alt="Explore integrations" title="Explore integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img3.png" alt="Explore integrations" title="Explore integrations" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ol>
 <h2 id="twilio-verify-actions">Twilio Verify Actions<a class="headerlink" href="#twilio-verify-actions" title="Permanent link">&para;</a></h2>
@@ -4214,14 +4214,14 @@
 <li>Refer to the <a href="../configuring-the-twilio-action/#step-2-install-the-twilio-verify-action-templates" target="_blank">Installing the Twilio Verify Templates</a> section to install this template.</li>
 <li>
 <p>The <em>Send SMS</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/twilio-tem-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img4.png" alt="Send SMS dialog task is added" title="Send SMS dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img4.png" alt="Send SMS dialog task is added" title="Send SMS dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <ol>
 <li><strong>sendSms</strong> – A user intent to send SMS.</li>
 <li><strong>accountSid</strong>, <strong>twilioNumber</strong>, <strong>receiverNumber</strong>, and <strong>message</strong> – Entity nodes for gathering the required for sending SMS.</li>
 <li><strong>sendSmsService</strong> – A bot action service to send sms from an external integration. Click the <strong>Plus</strong> icon to expand to view the <em>sendSmsService</em> bot action component properties.</li>
 <li>
 <p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/twilio-tem-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img5.png" alt="Send SMS - Edit request" title="Send SMS - Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img5.png" alt="Send SMS - Edit request" title="Send SMS - Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p><strong>Sample Request</strong>:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Body = {{message}}
@@ -4230,7 +4230,7 @@
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>}
 </span></code></pre></div>
 <p>To add one or more response, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/twilio-tem-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img6.png" alt="Send SMS - Add response" title="Send SMS - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img6.png" alt="Send SMS - Add response" title="Send SMS - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p><strong>Sample Response</strong>:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;body&quot;: &quot;Sent from your Twilio trial account - Hi Kore&quot;,
@@ -4270,7 +4270,7 @@
 <li>Follow the prompts in the VA console to send sms.</li>
 <li>
 <p>Enter an sms message when prompted by the VA as shown below:<br />
-<a class="glightbox" href="../images/twilio-tem-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img7.png" alt="VA prompt to Send SMS" title="VA prompt to Send SMS" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img7.png" alt="VA prompt to Send SMS" title="VA prompt to Send SMS" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p><strong>Note</strong>: You must add the country code before the receiver's phone number to deliver the SMS. For example, to send an SMS to a phone number in the United States, add the country code as +1.</p>
 </li>
 <li>
@@ -4283,14 +4283,14 @@
 <li>Refer to the <a href="../configuring-the-twilio-action/#step-2-install-the-twilio-verify-action-templates" target="_blank">Installing the Twilio Verify Templates</a> section to install this template.</li>
 <li>
 <p>The <em>Start Verification</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/twilio-tem-img8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img8.png" alt="Start Verification dialog task is added" title="Start Verification dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img8.png" alt="Start Verification dialog task is added" title="Start Verification dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <ol>
 <li><strong>startVerifcation</strong> – A user intent to start verification of the service.</li>
 <li><strong>serviceSid</strong>, <strong>receiverNumber</strong>, and <strong>channel</strong> – Entity nodes to gather required details to start the verification process.</li>
 <li><strong>startVerificationService</strong> – A bot action service to start verification in a Twilio integration. Click the <strong>Plus</strong> icon to expand to view the <em>startVerificationService</em> bot action component properties.</li>
 <li>
 <p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/twilio-tem-img9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img9.png" alt="Start Verification - Edit request" title="Start Verification - Edit Request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img9.png" alt="Start Verification - Edit request" title="Start Verification - Edit Request" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p><strong>Sample Request</strong>:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>To ={{receiverNumber}}
@@ -4298,7 +4298,7 @@
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>}
 </span></code></pre></div>
 <p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/twilio-tem-img10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img10.png" alt="Start Verification - Add response" title="Start Verification - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img10.png" alt="Start Verification - Add response" title="Start Verification - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p><strong>Sample Response</strong>:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&quot;status&quot;: &quot;pending&quot;,
@@ -4338,7 +4338,7 @@
 <li>Follow the prompts in the VA console to start verification.</li>
 <li>
 <p>Enter the phone numbers when prompted by the VA.<br />
-<a class="glightbox" href="../images/twilio-tem-img11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img11.png" alt="VA prompt to Start Verification" title="VA prompt to Start Verification" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img11.png" alt="VA prompt to Start Verification" title="VA prompt to Start Verification" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
 <p>The VA now starts the verification process based on the phone numbers entered.</p>
@@ -4350,14 +4350,14 @@
 <li>Refer to the <a href="../configuring-the-twilio-action/#step-2-install-the-twilio-verify-action-templates" target="_blank">Installing the Twilio Verify Templates</a> section to install this template.</li>
 <li>
 <p>The <em>Verification Check</em> dialog task is added with the following components:<br />
-<a class="glightbox" href="../images/twilio-tem-img12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img12.png" alt="Verification Check dialog task is added" title="Verification Check dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img12.png" alt="Verification Check dialog task is added" title="Verification Check dialog task is added" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <ol>
 <li><strong>verificationCheck</strong> – A user intent to check verification of the service.</li>
 <li><strong>serviceSid</strong>, <strong>receiverNumber</strong>, and <strong>code</strong> – Entity nodes to gather required details to check the verification process.</li>
 <li><strong>verificationCheckService</strong> – A bot action service to check the verification in a Twilio integration. Click the <strong>Plus</strong> icon to expand to view the <em>verificationCheckService</em> bot action component properties.</li>
 <li>
 <p>In the Component Properties window, click the <strong>Edit Request</strong> link to edit the request parameters as shown below:<br />
-<a class="glightbox" href="../images/twilio-tem-img13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img13.png" alt="Verification Check - Edit request" title="Verification Check - Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img13.png" alt="Verification Check - Edit request" title="Verification Check - Edit request" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p><strong>Sample Request</strong>:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>To ={{receiverNumber}}
@@ -4365,7 +4365,7 @@
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>}
 </span></code></pre></div>
 <p>To add one or more responses, scroll down and click the <strong>+Add Response</strong> button:<br />
-<a class="glightbox" href="../images/twilio-tem-img14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img14.png" alt="Verification Check - Add response" title="Verification Check - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img14.png" alt="Verification Check - Add response" title="Verification Check - Add response" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p><strong>Sample Response</strong>:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>{
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&quot;status&quot;: &quot;approved&quot;,
@@ -4394,7 +4394,7 @@
 <li>Follow the prompts in the VA console to check verification.</li>
 <li>
 <p>Enter the phone numbers when prompted by the VA.<br />
-<a class="glightbox" href="../images/twilio-tem-img15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img15.png" alt="VA prompt - Enter phone number" title="VA prompt - Enter phone number" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/twilio-tem-img15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-tem-img15.png" alt="VA prompt - Enter phone number" title="VA prompt - Enter phone number" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
 <p>The VA now checks the verification based on the phone numbers entered.</p>

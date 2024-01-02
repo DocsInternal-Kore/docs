@@ -4215,7 +4215,7 @@ We will also see how the Panel can be hosted on Web/Mobile Client using the Widg
 <li>Bot building knowledge</li>
 <li>A <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-a-sample-banking-assistant/" target="_blank"> Banking Bot</a> with a dialog as mentioned below:<ul>
 <li><a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-conversation-skills/create-a-sample-banking-assistant/#get-balance-intent" target="_blank"> Get Balance</a> – Dialog task prompting the user for their Account Number and Account Type and displaying the available balance in the account.
-<a class="glightbox" href="../images/get-balance-dialog-digital-views.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/get-balance-dialog-digital-views.png" alt="get balance dialog" title="get balance dialog" style="border: 1px solid gray; zoom:75%;"></a> </li>
+<a class="glightbox" href="../images/get-balance-dialog-digital-views.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/get-balance-dialog-digital-views.png" alt="get balance dialog" title="get balance dialog" style="border: 1px solid gray; zoom:75%;"></a> </li>
 </ul>
 </li>
 </ul>
@@ -4228,7 +4228,7 @@ We will also see how the Panel can be hosted on Web/Mobile Client using the Widg
 </ol>
 <h3 id="message-template">Message Template<a class="headerlink" href="#message-template" title="Permanent link">&para;</a></h3>
 <p>First, the Dialog task which would be triggered from the Widget should have a message definition for the Widget SDK channel.
-<a class="glightbox" href="../images/dialog-task-message-template.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-task-message-template.png" alt="dialog task message template" title="dialog task message template" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/dialog-task-message-template.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-task-message-template.png" alt="dialog task message template" title="dialog task message template" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>We are using the following message to display the account details:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;The Balance in your&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">entities</span><span class="p">.</span><span class="nx">AccountType</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; account is &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">GetAccountBalance</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">Balance</span><span class="p">;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -4260,7 +4260,7 @@ We will also see how the Panel can be hosted on Web/Mobile Client using the Widg
 <li><strong>AccountType</strong> to <em>current</em>.</li>
 <li><strong>AccountNumber</strong> to <em>1</em>.
 You can use the <strong>Open Dialog Task</strong> icon, next to the select Dialog Task drop down, to open the dialog and check the entities needed.
-<a class="glightbox" href="../images/open-dialog-task-digital-views.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/open-dialog-task-digital-views.png" alt="open dialog tasks" title="open dialog tasks" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/open-dialog-task-digital-views.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/open-dialog-task-digital-views.png" alt="open dialog tasks" title="open dialog tasks" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 <li>
@@ -4270,25 +4270,25 @@ You can use the <strong>Open Dialog Task</strong> icon, next to the select Dialo
 <li><strong>Save as preview</strong> will set the output as the thumbnail against the widget.</li>
 </ul>
 <p><strong>Savings Account</strong>: Repeat the above steps for Account View from <em>savings</em> account of the same account number.</p>
-<p><a class="glightbox" href="../images/savings-account-widget.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/savings-account-widget.png" alt="savings account widget" title="savings account widget" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/savings-account-widget.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/savings-account-widget.png" alt="savings account widget" title="savings account widget" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h3 id="panel-configuration">Panel Configuration<a class="headerlink" href="#panel-configuration" title="Permanent link">&para;</a></h3>
 <p>The Widgets thus created need to be attached to a Panel for runtime display and execution.</p>
 <ol>
 <li>Click the <strong>Create Panel</strong> button to create a Panel.</li>
 <li>
 <p>In the <strong>New Panel</strong> window, enter Panel Name, Display Name and a URL for Icon.
-<a class="glightbox" href="../images/new-panel-window.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/new-panel-window.png" alt="new panel window" title="new panel window" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/new-panel-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/new-panel-window.png" alt="new panel window" title="new panel window" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Click the <strong>Add Widget</strong> button to open the <strong>Panel Management</strong> window.</p>
 </li>
 <li>
 <p>Use the <strong>Add Widget</strong> to select and add the Widgets that we want to display, in this case Account Balance and Current Account widgets.
-<a class="glightbox" href="../images/add-widgets.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/add-widgets.png" alt="add widgets" title="add widgets" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/add-widgets.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-widgets.png" alt="add widgets" title="add widgets" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Use the <strong>Test</strong> button to see the widgets in action.
-<a class="glightbox" href="../images/see-widgets-in-action.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/see-widgets-in-action.png" alt="see widgets in action" title="see widgets in action" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/see-widgets-in-action.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/see-widgets-in-action.png" alt="see widgets in action" title="see widgets in action" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
 <h3 id="panel-with-json-widgets">Panel with JSON Widgets<a class="headerlink" href="#panel-with-json-widgets" title="Permanent link">&para;</a></h3>
@@ -4297,11 +4297,11 @@ You can use the <strong>Open Dialog Task</strong> icon, next to the select Dialo
 <li>Click on <strong>Create Panel</strong> to create a new panel and name it <strong>JSON Example</strong>.</li>
 <li>
 <p>Use the <strong>More</strong> icon and select <strong>Panel Management</strong>, there you will find the option to <strong>Create Widget</strong>. Click on that.</p>
-<p><a class="glightbox" href="../images/panel-management.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/panel-management.png" alt="panel management" title="panel management" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/panel-management.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/panel-management.png" alt="panel management" title="panel management" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
 <ol start="3"><li>In the <b>New Widget</b> dialog, enter the Name, and set the source to JSON.</li>
-<a class="glightbox" href="../images/configure-new-widget-dialog.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-new-widget-dialog.png" alt="configure new widget dialog" title="configure new widget dialog" style="border: 1px solid gray; zoom:75%;"></a></ol>
+<a class="glightbox" href="../images/configure-new-widget-dialog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-new-widget-dialog.png" alt="configure new widget dialog" title="configure new widget dialog" style="border: 1px solid gray; zoom:75%;"></a></ol>
 
 <p>Enter the following in the JavaScript Editor. This is a message template to display a pie chart with a break up for amounts spent under various heads like travel, food, and accommodation. For more on supported message templates, click <a href="https://docsinternal-kore.github.io/docs/xo/web-mobile-SDK-message-formatting-and-templates/" target="_blank"> here</a>. </p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span>
@@ -4332,7 +4332,7 @@ You can use the <strong>Open Dialog Task</strong> icon, next to the select Dialo
 </span></code></pre></div>
 <ol start="4"><li><b>Test</b> the panel and you will see both the panel icons, click on each to see them in action.</li></ol>
 
-<p><a class="glightbox" href="../images/json-example-panel.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/json-example-panel.png" alt="json example panel" title="json example panel" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/json-example-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/json-example-panel.png" alt="json example panel" title="json example panel" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h2 id="publish">Publish<a class="headerlink" href="#publish" title="Permanent link">&para;</a></h2>
 <p>To publish the Bot first enable channels:</p>
 <ol>
@@ -4358,7 +4358,7 @@ You can use the <strong>Open Dialog Task</strong> icon, next to the select Dialo
 </li>
 <li>
 <p>Make other changes as per your requirements.
-<a class="glightbox" href="../images/configure-bot-options.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/configure-bot-options.png" alt="configure bot options" title="configure bot options" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<a class="glightbox" href="../images/configure-bot-options.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-bot-options.png" alt="configure bot options" title="configure bot options" style="border: 1px solid gray; zoom:75%;"></a> </p>
 </li>
 <li>
 <p>Open the <code>kore-widgets-config.js</code>.</p>
@@ -4373,11 +4373,11 @@ You can use the <strong>Open Dialog Task</strong> icon, next to the select Dialo
 </li>
 <li>
 <p>Make other changes as per your requirements.
-<a class="glightbox" href="../images/widget-config-changes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/widget-config-changes.png" alt="widget configuration changes" title="widget configuration changes" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/widget-config-changes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/widget-config-changes.png" alt="widget configuration changes" title="widget configuration changes" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Open the <code>index_widgets_chat.html</code> file in the browser and see the chat window along with the widgets.
-<a class="glightbox" href="../images/index-widgets-chat.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/index-widgets-chat.png" alt="index widgets" title="index widgets" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/index-widgets-chat.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/index-widgets-chat.png" alt="index widgets" title="index widgets" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>If you want to host the Panels individually use the <code>index_widgets.html</code> file. See the GitHub for hosting the same in your web site.</p>

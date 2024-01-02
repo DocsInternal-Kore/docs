@@ -4218,7 +4218,7 @@
 </ol>
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
 <p><strong>Entity and Multilingual Bots:</strong> If you add a new entity to a multilingual bot, the platform adds the entity for all languages, as it follows a consistent flow definition across all languages. The flow definition includes the list of nodes, transitions between the nodes, and some essential properties of nodes like node id, node type, entity type, etc. However, language-specific properties, such as prompts, error messages, lists of synonyms, etc., must have separate values for each language.</p>
 <h2 id="configure-the-node">Configure the Node<a class="headerlink" href="#configure-the-node" title="Permanent link">&para;</a></h2>
 <h3 id="component-properties">Component Properties<a class="headerlink" href="#component-properties" title="Permanent link">&para;</a></h3>
@@ -4261,7 +4261,7 @@ The <strong>Entity Type</strong> provides the NLP Interpreter with the expected 
 <li>
 <p>Enable the <strong>Present Prompts in the Order of Retries</strong> toggle. Once you enable this option, the handlebar icon would be visible before each error     prompt message. You can use this to re-order the messages so that they will be displayed in that sequence.<br />
     <p id="gdcalert2" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
 <p>This image corresponds to the new Dialog Builder, you will find this feature in the legacy builder at the same location: i.e. Entity node -&gt; Component Properties.</p>
 </li>
 </ul>
@@ -4271,13 +4271,13 @@ The <strong>Entity Type</strong> provides the NLP Interpreter with the expected 
 <li>
 <p>You can enable the <strong>Sensitive Entity</strong> option to redact, replace, or mask sensitive data input at the entity node level. This setting helps you secure sensitive data input during the conversation.
     <p id="gdcalert3" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
 <p>By default, this setting is disabled. Once you <strong>Enable</strong> the <strong>Sensitive Entity</strong> setting, you can do the following:</p>
 <ol>
 <li>
 <p>Enter a regular expression(regex) to identify the sensitive data using the custom regex pattern. To add a regex pattern, click <strong>+Add Pattern</strong>. For example, add the regex <code>[a-zA-Z]{3}[-]\d{4}</code> pattern to validate user input and return a sample response as: <code>{"regex":"NLP-1234"}</code>. For more information, see <a href="https://www.geeksforgeeks.org/write-regular-expressions/" target="_blank">write regular expressions</a> and <a href="../../entity-types/#custom" target="_blank">custom entity type</a> articles.
     <p id="gdcalert4" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>Select one of the following options about how you want to display the sensitive data to unauthorized users:</p>
@@ -4293,7 +4293,7 @@ The <strong>Entity Type</strong> provides the NLP Interpreter with the expected 
 <li>
 <p>You can use <strong>Rephrase Responses</strong> to rewrite VA replies using AI based on conversation context and user emotions. For Entity nodes, this feature helps rephrase the responses entered under <em>User Prompts</em> and <em>Error Prompts</em>. To see this feature in your node’s Component Properties, please first enable the <a href="../../../../../app-settings/integrations/actions/open-ai/configuring-the-openai-action" target="_blank">OpenAI</a> or <a href="../../../../../app-settings/integrations/actions/azure-open-ai/configuring-the-azure-openai-action" target="_blank">Azure-OpenAI</a> integration and the <strong>Dynamic Prompt and Message Rephrasing</strong> feature under <a href="https://developer.kore.ai/docs/bots/nlp/llm-and-generative-ai/#Enable_LLM_Features" target="_blank">LLM and Generative AI</a>. This feature is disabled by default for each node. Turn on the toggle to enable Rephrase Responses. You can configure the <strong>number of previous user inputs</strong> to determine how many previous user messages should be sent to OpenAI as context based on which to rephrase the response sent through the node. You can choose between 0 and 5, where 0 means that no previous input is considered, while 5 means that the previous 5 responses are sent as context.
     <p id="gdcalert5" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>In the <strong>Variable Namespaces</strong> section, associate the Variable Namespaces to execute this node and its transitions. This option is visible only when the Variable Namespace is enabled for the bot. You can go with the task level settings or customize it for this node. For more information, refer to <a href="../../../../../app-settings/managing-namespace/" target="_blank">Managing Namespace</a>.</p>
@@ -4433,7 +4433,7 @@ You can set a value under the <strong>Default Value</strong> field. This value w
 <li>
 <p>If the user exceeds the retry limit, the behavior defined for exceeding retries would be triggered. Note that if this is a child task and the behavior is set to end the dialog then the parent task would also be terminated.</p>
 <p><p id="gdcalert6" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image6.gif). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image6.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.gif" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="images/image6.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.gif" title="image_tooltip" /></a></p>
 </li>
 </ul>
 <h3 id="nlp-properties">NLP Properties<a class="headerlink" href="#nlp-properties" title="Permanent link">&para;</a></h3>
@@ -4444,14 +4444,14 @@ You can set a value under the <strong>Default Value</strong> field. This value w
 <li>
 <p>You can select <strong>Auto emits the entity values captured</strong> option as part of the Context Object. (<a href="../../../../intelligence/context-management" target="_blank">Click here to learn more about Context Management</a>)</p>
 <p><p id="gdcalert7" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
 </li>
 </ol>
 <h3 id="ivr-properties">IVR Properties<a class="headerlink" href="#ivr-properties" title="Permanent link">&para;</a></h3>
 <p>You can use this tab to define the input mode, grammar, prompts, and call behavior parameters for this node to use in IVR Channel. You can define this at the node level. <a href="../../../../../channels/IVR-integration/#configure-dialog-node-ivr-properties" target="_blank">Click here for details</a>.</p>
 <p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.gif). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><a class="glightbox" href="images/image8.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.gif" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="images/image8.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.gif" title="image_tooltip" /></a></p>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
 <p>From the node’s <strong>Connections</strong> tab, you can determine which node in the dialog task to execute next. You can write the conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use intents for transitions.</p>
 <div class="admonition note">
@@ -4462,7 +4462,7 @@ You can set a value under the <strong>Default Value</strong> field. This value w
 <p>If you want to delete a condition, hover over it and click the bin icon at its top right. Keep in mind that deleted conditions cannot be restored.</p>
 <p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><a class="glightbox" href="images/image9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image9.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="images/image9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image9.png" title="image_tooltip" /></a></p>
 <h4 id="related-links">Related Links<a class="headerlink" href="#related-links" title="Permanent link">&para;</a></h4>
 <ol>
 <li><a href="../../entity-types" target="_blank">Supported Entity Types</a></li>

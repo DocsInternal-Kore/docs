@@ -4115,7 +4115,7 @@
 <p>Bot Functions is a feature that uses a custom Script file that enables you to collate and manage reusable utility JavaScript functions that can be used by different tasks, nodes, and other elements. Once you upload a custom script file to the assistant, it reduces the redundant development efforts by making all the functions in the file accessible anywhere in the assistant.</p>
 <h1 id="using-the-custom-script-file">Using the Custom Script File<a class="headerlink" href="#using-the-custom-script-file" title="Permanent link">&para;</a></h1>
 <p>Let’s consider one use case from a Travel Planning Assistant, to understand how you can leverage the custom script file to reduce development overhead considerably. Take a look at the following conversation flow of this assistant, that frequently presents customers with options to make a choice. In the below chat, the assistant first prompts the user to select what they want to book, by clicking Flight or Hotel, and then also prompts them to select a Fare, such as Economy, Premium Economy or First Class. </p>
-<p><a class="glightbox" href="../images/bot-functions-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-functions-img1.png" alt="Custom script file - use case" title="Custom script file - use case" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p><a class="glightbox" href="../images/bot-functions-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-functions-img1.png" alt="Custom script file - use case" title="Custom script file - use case" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p>You can observe that both the booking and fare options in the above chat are identical in functionality, but only the choices that they show differ. Instead of hard-coding the functionality of the button template into each node, you can write a function in the custom script file that can be invoked by these nodes by passing options. Below is the sample function script to accomplish the functionality.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>function custTemplatel(info){
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>var message = {
@@ -4147,14 +4147,14 @@
 <li>Select <strong>App Settings</strong> from the left menu.</li>
 <li>
 <p>Select <strong>Dev Tools</strong> from the menu, and then the <strong>Bot Functions</strong> tab.<br />
-<a class="glightbox" href="../images/bot-functions-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-functions-img2.png" alt="Navigate to Bot Functions" title="Navigate to Bot Functions" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<a class="glightbox" href="../images/bot-functions-img2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-functions-img2.png" alt="Navigate to Bot Functions" title="Navigate to Bot Functions" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
 <p>Under <strong>Custom Script</strong>, click <strong>Import</strong>.</p>
 </li>
 <li>On the <em>Import Custom Script</em> dialog, click <strong>Browse</strong> and navigate to the script file in your local machine. Click <strong>Import</strong>.</li>
 <li>After the import is successful, click <strong>Done</strong>.<br />
-<a class="glightbox" href="../images/bot-functions-import-function-file.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/bot-functions-import-function-file.gif" alt="Import Bot Functions file" title="Import Bot Functions file" style="border: 1px solid gray;zoom:50%;"/></a></li>
+<a class="glightbox" href="../images/bot-functions-import-function-file.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-functions-import-function-file.gif" alt="Import Bot Functions file" title="Import Bot Functions file" style="border: 1px solid gray;zoom:50%;"/></a></li>
 </ol>
 <h1 id="updating-the-custom-script-file">Updating the Custom Script File<a class="headerlink" href="#updating-the-custom-script-file" title="Permanent link">&para;</a></h1>
 <p>You can add or modify functions in the custom script file by downloading the file, making changes, and then importing it back to the assistant. Importing a new custom script file replaces the existing file, which cannot be retrieved later. Therefore, we recommend you exercise caution and keep a copy of the downloaded file for backup.</p>

@@ -4312,7 +4312,7 @@ This step is valid for older Web SDK file downloaded <strong>before ver7.2</stro
 <li>Save your changes. <em>You are ready to start the JWT token generation service and access the test application with the configured Web SDK in your local web browser.</em></li>
 <li>Go to home directory<code>cd SDKApp</code>.</li>
 <li>Install dependencies using the following command <code>npm install</code>.</li>
-<a class="glightbox" href="../images/web-sdk-json.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/web-sdk-json.png" alt="web sdk json" title="web sdk json" style="border: 1px solid gray; zoom:75%;"></a> 
+<a class="glightbox" href="../images/web-sdk-json.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/web-sdk-json.png" alt="web sdk json" title="web sdk json" style="border: 1px solid gray; zoom:75%;"></a> 
 <li>Start SDKApp <code>node startServer.js</code>.</li>
 <li>Access the application in any browser using <em>localhost:3000</em>.</li></ol>
 
@@ -4336,7 +4336,7 @@ This step is valid for older Web SDK file downloaded <strong>before ver7.2</stro
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">                                   </span><span class="p">}</span>
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">                           </span><span class="p">};</span>
 </span></code></pre></div>
-<p><a class="glightbox" href="../images/install-deendencies.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/install-deendencies.png" alt="install dependencies" title="install dependencies" style="border: 1px solid gray; zoom:75%;"></a> </p>
+<p><a class="glightbox" href="../images/install-deendencies.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/install-deendencies.png" alt="install dependencies" title="install dependencies" style="border: 1px solid gray; zoom:75%;"></a> </p>
 <h3 id="passing-mapped-identities">Passing Mapped Identities<a class="headerlink" href="#passing-mapped-identities" title="Permanent link">&para;</a></h3>
 <p>The Web/Mobile SDKs support the passing of mapped identities of the users when they switch from one identity to another while interacting with the assistant. This process allows the users to continue any ongoing conversation initiated using a previous identity. For example, a user may have started the conversation with the assistant using an anonymous or randomly generated identity. After exchanging a few messages, the user may become an authenticated or known user by logging into your website or any application. At this point, the user’s known identity can be passed to the bot from the SDK as part of the <a href="https://developer.kore.ai/docs/bots/sdks/user-authorization-and-assertion/#About_JWT" target="_blank">JWT Grant API</a> call using the parameter identityToMerge. The Platform uses this information to merge the user identities and allows the user to resume an ongoing conversation using the new known identity.</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>

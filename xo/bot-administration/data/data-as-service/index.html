@@ -4187,7 +4187,7 @@
 <li><strong>Display Name</strong> – enter a display name for the node;</li>
 <li><strong>Service Type</strong> – choose <em>Data Service</em>;</li>
 <li><strong>Type</strong> – select <em>Table</em>.<br />
-<a class="glightbox" href="../images/data-as-service-img1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img1.png" alt="Component properties - General settings" title="Component properties - General settings" style="border: 1px solid gray;zoom:80%;"/></a></li>
+<a class="glightbox" href="../images/data-as-service-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img1.png" alt="Component properties - General settings" title="Component properties - General settings" style="border: 1px solid gray;zoom:80%;"/></a></li>
 </ul>
 </li>
 <li>
@@ -4202,7 +4202,7 @@
 <li><em>Update Data</em> – to modify existing data (<a href="#update-data">see below for details</a>);</li>
 <li><em>Delete data</em> – to delete rows from the data table (<a href="#delete-data">see below for details</a>).</li>
 </ul>
-<p><a class="glightbox" href="../images/data-as-service-img2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img2.png" alt="Component properties - Request definition" title="Component properties - Request definition" style="border: 1px solid gray;zoom:80%;"/></a></p>
+<p><a class="glightbox" href="../images/data-as-service-img2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img2.png" alt="Component properties - Request definition" title="Component properties - Request definition" style="border: 1px solid gray;zoom:80%;"/></a></p>
 </li>
 <li>
 <p>You can <strong>Test</strong> the service request. Remember testing with context reference will fail as they will be evaluated at run time and the data will not be available till then.</p>
@@ -4220,7 +4220,7 @@
 <ul>
 <li>provide values for each column in the data table;</li>
 <li>these values can be static or a reference to a context object  for example <code>{{context.entities.&amp;lt;entity-name&gt;}}</code><br />
-<a class="glightbox" href="../images/data-as-service-img3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img3.png" alt="Add Data" title="Add Data" style="border: 1px solid gray;zoom:80%;"/></a></li>
+<a class="glightbox" href="../images/data-as-service-img3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img3.png" alt="Add Data" title="Add Data" style="border: 1px solid gray;zoom:80%;"/></a></li>
 </ul>
 <p>The response from this call would be:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;stringTable&quot;: {
@@ -4258,7 +4258,7 @@
 </li>
 <li>
 <p><strong>Offset</strong> property can be used to specify the records to be skipped from the result data set.<br />
-<a class="glightbox" href="../images/data-as-service-img4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img4.png" alt="Get Data" title="Get Data" style="border: 1px solid gray;zoom:80%;"/></a></p>
+<a class="glightbox" href="../images/data-as-service-img4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img4.png" alt="Get Data" title="Get Data" style="border: 1px solid gray;zoom:80%;"/></a></p>
 </li>
 <li>
 <p>Data values can be accessed using: <code>{{context.&amp;lt;service_node_name&gt;.response.body.queryResult[&amp;lt;index&gt;].&amp;lt;column_name&gt;}}</code></p>
@@ -4334,7 +4334,7 @@
 <li>
 <p><strong>Assign Values</strong> against each column to be updated.<br />
   If you check a particular column for the update and leave the value field blank, then the corresponding column original values will NOT be retained but will be set as empty.<br />
-  <a class="glightbox" href="../images/data-as-service-img5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img5.png" alt="Update Data" title="Update Data" style="border: 1px solid gray;zoom:80%;"/></a></p>
+  <a class="glightbox" href="../images/data-as-service-img5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img5.png" alt="Update Data" title="Update Data" style="border: 1px solid gray;zoom:80%;"/></a></p>
 </li>
 <li>
 <p>The columns which are not checked for updating will retain the original values.</p>
@@ -4345,7 +4345,7 @@
 <li>an operator and</li>
 <li>filter value – these values can be static or a reference to a context object  for example <code>{{context.entities.&amp;lt;entity-name&gt;}}</code>.</li>
 <li>Multiple filter criteria can be defined using AND/OR connectors.<br />
-<a class="glightbox" href="../images/data-as-service-img6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img6.png" alt="Update data - Choose filters" title="Update data - Choose filters" style="border: 1px solid gray;zoom:80%;"/></a></li>
+<a class="glightbox" href="../images/data-as-service-img6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img6.png" alt="Update data - Choose filters" title="Update data - Choose filters" style="border: 1px solid gray;zoom:80%;"/></a></li>
 </ul>
 </li>
 </ul>
@@ -4365,7 +4365,7 @@
 <li>an operator and</li>
 <li>filter value, these values can be static or a reference to a context object  for example <code>{{context.entities.&amp;lt;entity-name&gt;}}</code>. Multiple filter criteria can be defined using AND/OR connectors.</li>
 </ul>
-<p><a class="glightbox" href="../images/data-as-service-img7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img7.png" alt="Delete data" title="Delete data" style="border: 1px solid gray;zoom:80%;"/></a></p>
+<p><a class="glightbox" href="../images/data-as-service-img7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/data-as-service-img7.png" alt="Delete data" title="Delete data" style="border: 1px solid gray;zoom:80%;"/></a></p>
 <p>The response from this service request would be:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&quot;customerdetails&quot;: {
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    &quot;response&quot;: {

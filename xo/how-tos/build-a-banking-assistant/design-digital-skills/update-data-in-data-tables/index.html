@@ -4192,7 +4192,7 @@
 <li>Address; and</li>
 <li>Type</li>
 </ul>
-<p><a class="glightbox" href="../images/problem-statement-update-data.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/problem-statement-update-data.png" alt="problem statement update data" title="problem statement update data" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/problem-statement-update-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/problem-statement-update-data.png" alt="problem statement update data" title="problem statement update data" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Bot building knowledge.</li>
@@ -4209,7 +4209,7 @@
 </ol>
 <h3 id="dialog-task-configuration">Dialog Task Configuration<a class="headerlink" href="#dialog-task-configuration" title="Permanent link">&para;</a></h3>
 <p>We will create a dialog task to gather the required information, and use a <strong>Service</strong> node to update the data table with the values thus gathered.</p>
-<p><a class="glightbox" href="../images/dialog-task-configuration-update.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-task-configuration-update.png" alt="dialog task configuration" title="dialog task configuration" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/dialog-task-configuration-update.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-task-configuration-update.png" alt="dialog task configuration" title="dialog task configuration" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h4 id="create-dialog-task">Create Dialog Task<a class="headerlink" href="#create-dialog-task" title="Permanent link">&para;</a></h4>
 <ol>
 <li>From the left navigation menu, select <strong>Bot Tasks -&gt; Dialog Tasks</strong>.</li>
@@ -4268,7 +4268,7 @@
 </ul>
 </li>
 </ol>
-<p><a class="glightbox" href="../images/data-service-request-definition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-service-request-definition.png" alt="data service request definition" title="data service request definition" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/data-service-request-definition.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/data-service-request-definition.png" alt="data service request definition" title="data service request definition" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ol start="6"><li><b>Save</b> the definition and close the service node.</li>
 <li>Add a <b>Message Node</b> to display the records fetches using the following context variable values, since we are fetching only one record, we are using a static _[0]_ reference to the row:</li></ol>
 
@@ -4309,11 +4309,11 @@
 
 <ol start="3"><li>Add a <b>Logic Node</b> and based upon the value from the entity node above fetch either Email ID or Address from the customer, here <i>CustEmail</i> and <i>CustAddress</i> are the entities to capture customer email id and customer address.</li>
 
-<a class="glightbox" href="../images/logic-node.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a>
+<a class="glightbox" href="../images/logic-node.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/logic-node.png" alt="logic node" title="logic node" style="border: 1px solid gray; zoom:75%;"></a>
 
 <li>Also populate the context variables with the current details, these variables would be used to update the data table.</li>
 
-<a class="glightbox" href="../images/populate-context-variables.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/populate-context-variables.png" alt="populate context varoiable" title="banking bot configure columns" style="border: 1px solid gray; zoom:75%;"></a></ol>
+<a class="glightbox" href="../images/populate-context-variables.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/populate-context-variables.png" alt="populate context varoiable" title="banking bot configure columns" style="border: 1px solid gray; zoom:75%;"></a></ol>
 
 <p>From the Email Id and Address entity trigger a <strong>Script Node</strong> to modify the context variables appropriately using the following script:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">entities</span><span class="p">.</span><span class="nx">CustUpdateChoice</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Address&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="sb">`</span>
@@ -4387,7 +4387,7 @@
   </tr>
 </table>
 
-<p><a class="glightbox" href="../images/data-service-request-update.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../images/data-service-request-update.png" alt="data service request update" title="data service request update" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/data-service-request-update.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/data-service-request-update.png" alt="data service request update" title="data service request update" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ol start="9"><li>Add a <b>Message node</b> to display the success message.</li>
 <li>Using <b>Talk to bot</b> option, enter the values when prompted and see the message being displayed.</li></ol>
 
