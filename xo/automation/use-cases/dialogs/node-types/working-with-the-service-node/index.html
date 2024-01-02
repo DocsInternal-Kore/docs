@@ -4378,8 +4378,10 @@
 <ol>
 <li>
 <p>Optionally, click <strong>Show Advanced</strong>, and select  </p>
-<p>1 <strong>Yes</strong> in the <strong>Access Using A Connector</strong> field if access for Kore.ai assistants is using the Kore.ai connector agent. For more information, refer to <a href="../../../../../bot-administration/kore-ai-connector" target="_blank">Using the Kore.ai Connector</a>.
-2 <strong>Yes</strong> in the <strong>De-Identification of PII Data</strong> to redact any sensitive information types that users share with your assistants. For more information, refer to <a href="../../../../../app-settings/advanced-settings/pii-data-masking" target="_blank">Redacting Personally Identifiable Information</a></p>
+<ol>
+<li><strong>Yes</strong> in the <strong>Access Using A Connector</strong> field if access for Kore.ai assistants is using the Kore.ai connector agent. For more information, refer to <a href="../../../../../bot-administration/kore-ai-connector" target="_blank">Using the Kore.ai Connector</a>.  </li>
+<li><strong>Yes</strong> in the <strong>De-Identification of PII Data</strong> to redact any sensitive information types that users share with your assistants. For more information, refer to <a href="../../../../../app-settings/advanced-settings/pii-data-masking" target="_blank">Redacting Personally Identifiable Information</a></li>
+</ol>
 </li>
 <li>
 <p>In the <strong>Auth</strong> tab, select the type of authorization needed for this service node call, or define a new authorization type if needed. For more information, refer to <a href="../../../../../app-settings/dev-tools/bot-authorization/bot-authentication" target="_blank">Setting Up Authentication</a>.</p>
@@ -4390,7 +4392,7 @@
 <ul>
 <li><strong>application/x-www-form-urlencoded</strong> – Also known as Multipart/Form-data, which is an encoding type that allows files to be sent through an HTTP POST request method if you want to allow a user to upload a file from a form. You can add key/value pairs that are encoded by the XO Platform.</li>
 <li><strong>application/json</strong> – Use JSON to transmit data between the Kore.ai servers and your VA’s web application. Any JSON is sent with the request without any processing.</li>
-<li><strong>application/xml</strong> – For SOAP services, pass XML payload using POST methods. You can pass entity node values as part of the XML, using the following syntax for accessing the <code>Context</code> object: <a href="https://myDomain.com/{{context.entities.topic">https://myDomain.com/{{context.entities.topic</a>}} for the <code>context.entities.topic</code>. You must use the double brackets <code>{{ context.object }}</code>. For more information, refer to <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/context-object/" target="_blank">Context Object</a>.</li>
+<li><strong>application/xml</strong> – For SOAP services, pass XML payload using POST methods. You can pass entity node values as part of the XML, using the following syntax for accessing the <code>Context</code> object: <a href="https://myDomain.com/{{context.entities.topic">https://myDomain.com/{{context.entities.topic</a>}} for the <code>context.entities.topic</code>. You must use the double brackets <code>{{ context.object }}</code>. For more information, refer to <a href="../../../context-object/" target="_blank">Context Object</a>.</li>
 </ul>
 </li>
 <li>
