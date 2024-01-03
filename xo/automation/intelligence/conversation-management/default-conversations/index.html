@@ -4360,7 +4360,7 @@
 <li>Select a tab category for the standard response. For example, <strong>Greeting</strong>, and then hover the situation for which you want to add the response. </li>
 <li>Click <strong>Add Response</strong>.</li>
 <li>
-<p><strong>When t**he **Add Channel Overrides</strong> dialog is displayed, follow the steps below:</p>
+<p>When the <strong>Add Channel Overrides</strong> dialog is displayed, follow the steps below:</p>
 <ul>
 <li>In the <strong>Choose a channel</strong> drop-down list, select a channel to create a channel-specific response. You can go with the Any Channel option to enable the response for all channels.</li>
 <li>In the case of channel-specific response, from the <strong>Choose a Task</strong> drop-down list, select <strong>Any Task</strong> to apply this channel-specific response to all tasks or select a specific task.</li>
@@ -4369,9 +4369,9 @@
 <a class="glightbox" href="../images/add-channel-override.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-channel-override.png" alt="add channel override" title="add channel override" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>In the bot <strong>Response</strong> editor, you can override the default Bot Response for this channel using basic editor controls on the <strong>Simple Mode</strong> tab, or write custom JavaScript for the response on the <strong>Advanced Mode</strong> tab. For the:</p>
+<p>In the bot <strong>Response</strong> editor, you can override the default Bot Response for this channel using basic editor controls on the <strong>Simple Mode</strong> tab, or write custom JavaScript for the response on the <strong>Advanced Mode</strong> tab as follows:</p>
 <ul>
-<li><strong>Simple Mode</strong> tab – Enter the text for the default standard response. For example, <em>There</em> you are, I was <sub>hoping</sub> you would return soon! and then optionally, format the text using the formatting buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting a line. For more information, refer to <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/prompt-editor/#prompt-editor" target="_blank">Using the Prompt Editor</a>.</li>
+<li><strong>Simple Mode</strong> tab – Enter the text for the default standard response. For example, <em>There</em> you are, I was <em>hoping</em> you would return soon! and then optionally, format the text using the formatting buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting a line. For more information, refer to <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/prompt-editor/#prompt-editor" target="_blank">Using the Prompt Editor</a>.</li>
 <li><strong>Advanced Mode tab</strong> – Enter JavaScript to override the channel message as described in the following code examples.</li>
 </ul>
 </li>
@@ -4449,7 +4449,7 @@
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="nx">message</span><span class="p">.</span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">text</span><span class="p">;</span>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
 </span></code></pre></div>
-<p>Using the <code>getChoices()</code> function, you can also customize the <strong>response display format</strong> using the <a href="https://docsinternal-kore.github.io/docs/xo/web-mobile-SDK-message-formatting-and-templates/" target="_blank">message formatting templates</a>. When the <code>getChoices()</code> function is called and there is an ambuguity, the platform returns the ambiguous choices information as an array which can be used to present the options to the end users.</p>
+<p>Using the <code>getChoices()</code> function, you can also customize the <strong>response display format</strong> using the <a href="https://docsinternal-kore.github.io/docs/xo/web-mobile-SDK-message-formatting-and-templates/" target="_blank">message formatting templates</a>. When the <code>getChoices()</code> function is called and there is an ambiguity, the platform returns the ambiguous choices information as an array which can be used to present the options to the end users.</p>
 <p>For example, to display the standard response for <em>Did you mean in</em> a button format, you can use the following code:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">info</span><span class="w"> </span><span class="o">=</span><span class="nx">getChoices</span><span class="p">();</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>

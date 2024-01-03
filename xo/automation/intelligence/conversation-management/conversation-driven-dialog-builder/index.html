@@ -4383,7 +4383,7 @@
 
 
 <h1 id="conversation-driven-dialog-builder">Conversation-driven Dialog Builder<a class="headerlink" href="#conversation-driven-dialog-builder" title="Permanent link">&para;</a></h1>
-<p>Conversation Builder is a new dialog task editor which allows you to design and build a dialog task using conversational elements. It leverages the features of <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/bot-creation/storyboard/" target="_blank">Storyboard</a> and the <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/dialog-tasks-overview/" target="_blank">Flow-based Dialog Task Builder</a>.</p>
+<p>Conversation Builder is a new dialog task editor which allows you to design and build a dialog task using conversational elements. It leverages <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/dialog-tasks-overview/" target="_blank">Flow-based Dialog Task Builder</a>.</p>
 <p>While the Storyboard helps in designing and visualizing the user conversations, the bot needs to be developed in the Dialog Task Builder. This involves a manual effort in understanding and converting the conversation components into dialog components. </p>
 <p>Often, a lot gets missed in the translation. Validation of a Dialog against a Scene also requires significant manual effort and there is not much collaboration between a conversation designer/BA and the implementation engineers due to the different implementation styles. </p>
 <p>Also, the ongoing changes in the Scene or in the Dialog need to be manually synchronized and can get very complicated</p>
@@ -4406,7 +4406,7 @@
 <a class="glightbox" href="../images/conversation-view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/conversation-view.png" alt="conversation view" title="conversation view" style="border: 1px solid gray; zoom:75%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This document lists the features available exclusively in the conversation builder. This is in addition to the features available on Storyboard that are common to both storyboard and conversation builder. For the common features refer here.</p>
+<p>This document lists the features available exclusively in the conversation builder. This is in addition to the features available on Storyboard that are common to both storyboard and conversation builder. </p>
 </div>
 <h2 id="build-view">Build View<a class="headerlink" href="#build-view" title="Permanent link">&para;</a></h2>
 <p>The conversation view can be expanded by providing the necessary logic and fulfillment elements in the Build View. This is the new dialog builder with the options to drag and drop or add the necessary nodes. </p>
@@ -4422,29 +4422,29 @@
 </ul>
 <h3 id="create-scene">Create Scene<a class="headerlink" href="#create-scene" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Open the bot you want to design the conversation</li>
-<li>Select the <strong>Build</strong> tab from the top menu</li>
-<li>From the left menu, click <strong>Conversation Skills -&gt; Storyboard</strong></li>
+<li>Open the bot you want to design the conversation.</li>
+<li>Select the <strong>Build</strong> tab from the top menu.</li>
+<li>From the left menu, click <strong>Conversation Skills -&gt; Storyboard</strong>.</li>
 <li>
-<p>Click <strong>New Scene</strong> and enter the following details</p>
+<p>Click <strong>New Scene</strong> and enter the following details.</p>
 <ul>
 <li><strong>Scene Name</strong></li>
 <li><strong>Description</strong></li>
 <li><strong>Status</strong> of the scene</li>
 <li>
 <p>Select <strong>Auto-generate a Dialog Task</strong> option. </p>
-<p>This will ensure that a dialog task is automatically created in the background as you build the scene.
-    <a class="glightbox" href="../images/create-new-scene.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/create-new-scene.png" alt="create new scene" title="create new scene" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>This will ensure that a dialog task is automatically created in the background as you build the scene.</p>
 </li>
 </ul>
+<p><a class="glightbox" href="../images/create-new-scene.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/create-new-scene.png" alt="create new scene" title="create new scene" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
 <h3 id="create-dialog">Create Dialog<a class="headerlink" href="#create-dialog" title="Permanent link">&para;</a></h3>
 <p>You can initiate Conversation Driven Dialog Builder from the Create Dialog flow</p>
 <ol>
-<li>Open the bot you want to design the conversation</li>
-<li>Select the <strong>Build</strong> tab from the top menu</li>
-<li>From the left menu, click <strong>Conversation Skills</strong> -&gt; <strong>Dialog Task</strong></li>
+<li>Open the bot you want to design the conversation.</li>
+<li>Select the <strong>Build</strong> tab from the top menu.</li>
+<li>From the left menu, click <strong>Conversation Skills</strong> -&gt; <strong>Dialog Task</strong>.</li>
 <li>
 <p>Click <strong>Create Dialog</strong> and enter the following details:</p>
 <ul>
@@ -4500,7 +4500,7 @@ If you select Abandonment as Self-Service, then any conversation abandoned by th
 <p><strong>Ask a Question</strong> with the intention of gathering information from the user. This gets converted to an <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/node-types/working-with-the-entity-node/" target="_blank">Entity Node</a> in the dialog task.</p>
 <ul>
 <li>You can further specify the type of user input expected like string, number, date, etc. It gets translated to an entity type in the dialog task</li>
-<li>You can format the message using simple formatting options or by selecting a template for presenting the bot message</li>
+<li>You can format the message using simple formatting options or by selecting a template for presenting the bot message.</li>
 <li><strong>Ask Confirmation</strong> with the intention to decide the path of the conversation. This gets converted to a <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/node-types/working-with-the-confirmation-nodes/" target="_blank">Confirmation Node</a> in the dialog task.</li>
 <li><strong>Inform the User</strong> like a help message, welcome message, or as a response to the user query. These get converted to a <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/node-types/working-with-the-message-nodes/" target="_blank">Message Node</a> in the dialog task.</li>
 </ul>
@@ -4535,10 +4535,10 @@ In the following section, we see the various configurations available from the c
 <ul>
 <li>Define <strong>Entity Type</strong> – select from the drop-down list. This list includes the <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/entity-types/" target="_blank">entity types</a> supported by the XO Platform.</li>
 <li>Apply <strong>Formatting Options</strong> like bold, italics, etc.</li>
-<li>Use <strong>Templates</strong> like buttons, carousel, etc to present the query.</li>
+<li>Use <strong>Templates</strong> like buttons, carousel, etc to present the query.
+<a class="glightbox" href="../images/define-entity-type-formatting.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/define-entity-type-formatting.png" alt="define entity type formatting" title="define entity type formatting" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
-<p><a class="glightbox" href="../images/define-entity-type-formatting.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/define-entity-type-formatting.png" alt="define entity type formatting" title="define entity type formatting" style="border: 1px solid gray; zoom:75%;"></a>
-Once added you can <strong>configure properties</strong>:</p>
+<p>Once added you can <strong>configure properties</strong>:</p>
 <ul>
 <li>Display name</li>
 <li>Node name</li>
