@@ -4248,7 +4248,7 @@
 
 <h1 id="adding-the-webmobile-client-channel"><strong>Adding the Web/Mobile Client Channel</strong><a class="headerlink" href="#adding-the-webmobile-client-channel" title="Permanent link">&para;</a></h1>
 <p>To use any Kore.ai Bot SDKs, you must first register your app to get the authentication credentials to communicate between the Kore.ai bot and your application hosting the bot. The Kore.ai bot SDKs can be used to add a chat widget to your company application that enables users to chat with the application using natural language input. The Kore.ai bots platform interprets the user input, processes the request, and responds to the user.</p>
-<p>The bots Platform accepts requests only from authorized clients for connection and exchanging messages. To authorize the connection, you must register your app and get the required client credentials. The credentials authorize the client app and provide for user assertion. \
+<p>The bots Platform accepts requests only from authorized clients for connection and exchanging messages. To authorize the connection, you must register your app and get the required client credentials. The credentials authorize the client app and provide for user assertion.
 This topic describes how to register your application and generate credentials for your clients that are required to exchange messages between your application and the Kore.ai bots Platform and then configure and add the Web/Mobile Client Channel to your bot.</p>
 <p>To add the Web/Mobile Client Channel to your bot, you must first register or create an app in Bot Builder. When you create an app, you are provisioning credentials for your application to communicate securely with Kore.ai servers. After you create an app, you can use that app registration in the configuration to add the Web/Mobile Client Channel to your bot.</p>
 <h2 id="add-webmobile-client-channel">Add Web/Mobile Client Channel<a class="headerlink" href="#add-webmobile-client-channel" title="Permanent link">&para;</a></h2>
@@ -4262,10 +4262,8 @@ This topic describes how to register your application and generate credentials f
 <ol>
 <li>Open the bot on which you want to add the Web/Mobile Client channel.</li>
 <li>On the bots menu, click <strong>Channel &gt; Web/Mobile</strong> <strong>Client</strong>.</li>
-<li>In the <strong>Select App</strong> drop-down list, select your existing app registration or click <strong>Add App</strong> to create a new app. \</li>
-</ol>
-<p><a class="glightbox" href="../images/Web_Mobile.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile.png" alt="Web Mobile Client channel" title="Web Mobile client channel" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ol>
+<li>In the <strong>Select App</strong> drop-down list, select your existing app registration or click <strong>Add App</strong> to create a new app.
+<a class="glightbox" href="../images/Web_Mobile.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile.png" alt="Web Mobile Client channel" title="Web Mobile client channel" style="border: 1px solid gray; zoom:70%;"></a></li>
 <li>In the <strong>Name</strong> field, enter the name for the app registration used in Bot Builder. For example, <strong>weather app</strong>.</li>
 <li>Select one of these scopes for the app:<ul>
 <li><strong>Allow anonymous users to chat with the bot</strong>: Enables anonymous users to interact with the bot.</li>
@@ -4297,23 +4295,31 @@ This topic describes how to register your application and generate credentials f
 </ul>
 <p><a class="glightbox" href="../images/Web_Mobile2_New.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile2_New.png" alt="Web Push Notifications   configuration" title="Web Push Notifications configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
 <ul>
-<li>Click <strong>Manage Responses</strong> to add custom messages in the push notification. To learn more about adding responses, see <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-standard-responses/">Default Standard Responses</a> and <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-dialog/">Default Conversations</a>. \</li>
+<li>Click <strong>Manage Responses</strong> to add custom messages in the push notification. To learn more about adding responses, see <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-standard-responses/">Default Standard Responses</a> and <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-dialog/">Default Conversations</a>.
+<a class="glightbox" href="../images/Web_Mobile3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile3.png" alt="manage responses" title="manage responses" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ul>
-<p><a class="glightbox" href="../images/Web_Mobile3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile3.png" alt="manage responses" title="manage responses" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Click <strong>Save **and then **Create</strong>. The app registration details appear. \</p>
+<p>Click <strong>Save</strong> and then <strong>Create</strong>. The app registration details appear.</p>
 </li>
 </ol>
 <p><a class="glightbox" href="../images/Web_Mobile4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile4.png" alt="create web app" title="create web app" style="border: 1px solid gray; zoom:70%;"></a></p>
 <ol>
-<li>To copy the app registration details to the clipboard for your application, you can click <strong>Copy</strong> for <strong>Bot Name</strong>, <strong>Bot ID</strong>, and <strong>Client ID</strong>. For <strong>Client Secret</strong>, click <strong>View</strong>, and then click <strong>Copy</strong>.</li>
-<li>In the <strong>Allow Alert Task Setup</strong> section, select <strong>Yes</strong> to enable your application users to set up their own alert tasks using the web client. By default, this setting is disabled for web client users, but mobile client users can always set up their own alerts.</li>
-<li>In the <strong>Enable Channel</strong> section, select <strong>Yes</strong> to enable the channel immediately after saving.</li>
-<li>Click <strong>Save</strong> to save the settings and close the <strong>Web/Mobile Client Channel</strong> page.</li>
+<li>
+<p>To copy the app registration details to the clipboard for your application, you can click <strong>Copy</strong> for <strong>Bot Name</strong>, <strong>Bot ID</strong>, and <strong>Client ID</strong>. For <strong>Client Secret</strong>, click <strong>View</strong>, and then click <strong>Copy</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Allow Alert Task Setup</strong> section, select <strong>Yes</strong> to enable your application users to set up their own alert tasks using the web client. By default, this setting is disabled for web client users, but mobile client users can always set up their own alerts.</p>
+</li>
+<li>
+<p>In the <strong>Enable Channel</strong> section, select <strong>Yes</strong> to enable the channel immediately after saving.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong> to save the settings and close the <strong>Web/Mobile Client Channel</strong> page.</p>
+</li>
 </ol>
-<p>The <em>Channel Information updated successfully</em> message is displayed on the top-right of the page. \
-Once enabled <a href="https://developer.kore.ai/docs/bots/sdks/kore-ai-web-sdk-tutorial/">click here</a> for steps to integrate your bot into your web application.</p>
+<p>The <em>Channel Information updated successfully</em> message is displayed on the top-right of the page.</p>
+<p>Once enabled <a href="https://developer.kore.ai/docs/bots/sdks/kore-ai-web-sdk-tutorial/">click here</a> for steps to integrate your bot into your web application.</p>
 <h2 id="choose-deployment-options">Choose Deployment Options<a class="headerlink" href="#choose-deployment-options" title="Permanent link">&para;</a></h2>
 <p>There are two different ways of deploying the Web/mobile client. You can either use the Kore.ai hosted Client or set up your own client and host it.</p>
 <p>If you are using the Kore.ai hosted client, then there are two different approaches:</p>
@@ -4334,16 +4340,16 @@ Once enabled <a href="https://developer.kore.ai/docs/bots/sdks/kore-ai-web-sdk-t
 <li>In the <strong>Whitelist Domains</strong> section, click **+Add Domain **to add URLs which want to include in the whitelist for your assistant.</li>
 <li>Click the <strong>Download SDK</strong> link to download, setup and configure the Web/Mobile SDK using the prebuilt SDK libraries.</li>
 <li>Select an appropriate option to Allow Alert Task setup. You can choose either <strong>Yes</strong> or <strong>No</strong> to let users to set up Alerts using Web Client.</li>
-<li>Click <strong>Save</strong> to save the settings and close the Web/Mobile Client Channel page. \</li>
+<li>Click <strong>Save</strong> to save the settings and close the Web/Mobile Client Channel page.
+<a class="glightbox" href="../images/Web_Mobile7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile7.png" alt="whitelist domains" title="whitelist domains" style="border: 1px solid gray;"></a></li>
 </ol>
-<p><a class="glightbox" href="../images/Web_Mobile7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile7.png" alt="whitelist domains" title="whitelist domains" style="border: 1px solid gray;"></a></p>
 <h2 id="edit-webmobile-channel">Edit Web/Mobile Channel<a class="headerlink" href="#edit-webmobile-channel" title="Permanent link">&para;</a></h2>
 <p>To edit the Web/Mobile Client channel, follow the below steps:</p>
 <ol>
 <li>Hover over the channel to modify, and then click the <strong>Settings</strong>.</li>
 </ol>
 <p><a class="glightbox" href="../images/Web_Mobile8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile8.png" alt="modify configuration" title="modify configuration" style="border: 1px solid gray;"></a></p>
-<p>icon displayed to view the command menu, as shown in the screenshot below. \</p>
+<p>icon displayed to view the command menu, as shown in the screenshot below.</p>
 <p><a class="glightbox" href="../images/Web_Mobile9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile9.png" alt="whitelist domains" title="whitelist domains" style="border: 1px solid gray;"></a></p>
 <ol>
 <li>Select one of the following commands to modify the channel:</li>
