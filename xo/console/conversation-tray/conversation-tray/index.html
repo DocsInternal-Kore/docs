@@ -17,7 +17,7 @@
     
     
       
-        <title>Conversation tray - Kore ai Docs</title>
+        <title>Conversation Tray - Kore ai Docs</title>
       
     
     
@@ -92,6 +92,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#conversation-tray" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -193,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Conversation tray
+              Conversation Tray
             
           </span>
         </div>
@@ -210,7 +215,7 @@
     <div class="nav-links">
       <a class="nav-item" 
           target="_blank" 
-          href="https://community.kore.ai/?__hstc=48303737.3349b4c86fed311d945dbec6899be857.1528698434671.1528698434671.1528698434671.1&__hssc=48303737.1.1528698434672&__hsfp=2270402703"
+          href="https://developer.kore.ai/docs/bots/whats-new/10-1-x-release-notes/"
       >Release Notes</a>
 
       <!-- <a class="nav-item"
@@ -4192,6 +4197,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -4210,7 +4217,62 @@
 
 
 
-
+<h1 id="conversation-tray">Conversation Tray<a class="headerlink" href="#conversation-tray" title="Permanent link">&para;</a></h1>
+<p>The conversation tray helps agents track their workload by displaying all conversations that are currently assigned to them.
+<a class="glightbox" href="../images/conversation-tray.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/conversation-tray.png" alt="Conversation Tray" title="Conversation Tray" style="border: 1px solid gray; zoom:80%;"></a></p>
+<h1 id="conversation-status">Conversation Status<a class="headerlink" href="#conversation-status" title="Permanent link">&para;</a></h1>
+<p>The conversation tray divides conversations into different statuses, which are displayed at the top. Conversations can have any of the following four statuses:</p>
+<ul>
+<li><strong>Overdue</strong>: These are conversations where the agent has not responded to the customer within the system-specified time.</li>
+<li><strong>Ongoing</strong>: These are conversations where the last sent or received message was within the system-specified time.</li>
+<li><strong>Idle</strong>: These are conversations where the last message was sent or received more than the system-specified time ago.</li>
+<li><strong>Expired</strong>: These are conversations where the user left the conversation, or the conversation was auto-closed after the system-specified time of inactivity. These conversations are also known as dropped-off conversations.
+<a class="glightbox" href="../images/conversation-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/conversation-status.png" alt="Conversation Status" title="Conversation Status" style="border: 1px solid gray; zoom:100%;"></a></li>
+</ul>
+<h1 id="conversation-information">Conversation Information<a class="headerlink" href="#conversation-information" title="Permanent link">&para;</a></h1>
+<p>This section displays data about the conversations you are handling.</p>
+<p>Each entry in this tray includes the following information:</p>
+<ul>
+<li>Customer Name (if available)</li>
+<li>Skills that have been identified based on customer intent</li>
+<li>The last exchange in the conversation</li>
+<li>Customer profile picture</li>
+<li>Interaction channel icon</li>
+<li>Conversation status icon.
+<a class="glightbox" href="../images/conversation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/conversation.png" alt="Conversation" title="Conversation" style="border: 1px solid gray; zoom:80%;"></a></li>
+</ul>
+<h1 id="manual-call-using-the-dialer">Manual Call using the Dialer<a class="headerlink" href="#manual-call-using-the-dialer" title="Permanent link">&para;</a></h1>
+<p>You can use the Dialer to call external contacts, as follows:</p>
+<ol>
+<li>
+<p>Click the <strong>Dialer</strong> icon on the Conversation Tray to display the <strong>Outbound Call</strong> window.<br />
+<a class="glightbox" href="../images/dialer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dialer.png" alt="Dialer" title="Dialer" style="border: 1px solid gray; zoom:80%;"></a></p>
+</li>
+<li>
+<p>To initiate an outbound call using the <strong>Dialer</strong> tab, select the country, dial any phone number, and click the <strong>Call</strong> button.
+<a class="glightbox" href="../images/outbound_call_dialer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/outbound_call_dialer.png" alt="Outbound Call Dialer" title="Outbound Call Dialer" style="border: 1px solid gray; zoom:80%;"></a></p>
+</li>
+<li>
+<p>The <strong>Contacts</strong> tab is a public directory (published by Administrators using <a href="https://docs.kore.ai/smartassist/api/apis-list/#Contacts_Public_APIs">Public APIs</a>) where you can view saved contacts – <strong>Name</strong> and <strong>Phone Number</strong>.</p>
+</li>
+<li>You can search for a specific name and click the <strong>Call</strong> button to initiate an Outbound Call with the selected contact.
+<a class="glightbox" href="../images/contacts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/contacts.png" alt="Contacts" title="Contacts" style="border: 1px solid gray; zoom:80%;"></a></li>
+</ol>
+<h1 id="call-history">Call History<a class="headerlink" href="#call-history" title="Permanent link">&para;</a></h1>
+<p>To view the Outbound Call History, follow these steps:</p>
+<ol>
+<li>Click the <strong>Dialpad</strong> icon to display the <strong>Outbound Call</strong> window.</li>
+<li>Click the <strong>Call History</strong> tab to view the following:<ul>
+<li>Name</li>
+<li>Phone Number</li>
+<li>Day (<em>Today, Yesterday, Monday, etc.</em>)</li>
+<li>Date</li>
+<li>Time of call and duration</li>
+<li>Type of call (Incoming, Outgoing, or Transferred)
+<a class="glightbox" href="../images/call_history.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/call_history.png" alt="Call History" title="Call History" style="border: 1px solid gray; zoom:80%;"></a></li>
+</ul>
+</li>
+</ol>
 
 
   
