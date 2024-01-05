@@ -3902,7 +3902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../insiders/changelog/" class="md-nav__link">
+      <a href="../../../../insiders/changelog.md" class="md-nav__link">
         Changelog
       </a>
     </li>
@@ -4664,9 +4664,8 @@
 <li>Click <strong>Utterances &gt; + Utterance</strong> against the Intent for which you want to add the utterances. </li>
 </ol>
 <p><a class="glightbox" href="../images/add-utterances.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-utterances.png" alt="add utterance" title="add utterance" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li>The user utterance page opens.</li>
-</ol>
+<ol start="7"><li>The user utterance page opens.</li></ol>
+
 <p>Here is where you can enter the utterances. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -4735,7 +4734,7 @@
 
 <p>The Threshold &amp; Configurations for the ML engine are discussed in detail in the following sections.</p>
 <h3 id="machine-learning-model-configuration-overview">Machine Learning Model Configuration Overview<a class="headerlink" href="#machine-learning-model-configuration-overview" title="Permanent link">&para;</a></h3>
-<p>The XO  Platform ver 6.3 upgraded its Machine Learning (ML) model to v3. This includes a host of improvements and also allows developers to fine-tune the model using parameters to suit business requirements. The developers can change parameters like stop word usage, synonym usage, thresholds, and n-grams, as well as opt between <a href="https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks">Deep Neural Network</a> or <a href="https://en.wikipedia.org/wiki/Conditional_random_field">Conditional Random Field-based</a> algorithms for the <a href="https://en.wikipedia.org/wiki/Named-entity_recognition">Named-Entity Recognition (NER) </a>model.</p>
+<p>The XO  Platform ver 6.3 upgraded its Machine Learning (ML) model to v3. This includes a host of improvements and also allows developers to fine-tune the model using parameters to suit business requirements. The developers can change parameters like stop word usage, synonym usage, thresholds, and n-grams, as well as opt between <a href="https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks" target="_blank">Deep Neural Network</a> or <a href="https://en.wikipedia.org/wiki/Conditional_random_field" target="_blank">Conditional Random Field-based</a> algorithms for the <a href="https://en.wikipedia.org/wiki/Named-entity_recognition" target="_blank">Named-Entity Recognition</a> model.</p>
 <p>In v8.0 of the Platform, provision has been enabled to use the v5 of the ML intent model and externalize several hyperparameters. This can be achieved through the Advanced NLP Configuration. <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlu-configurations/engine-tuning/" target="_blank">Learn more</a>.</p>
 <p>When the Multiple Intents Model =is enabled, the ML Engine maintains multiple intent models for the VA as follows:</p>
 <ul>
@@ -4778,7 +4777,7 @@
 <li><strong>CNN</strong> (convolutional neural networks) is a class of deep neural networks in deep learning most commonly applied to analyzing visual imagery. It makes use of the word order for a specific region size and has achieved remarkable results on various text classification tasks.</li>
 <li><strong>Transformers</strong> use a Universal Sentence encoder in the vectorization stage of the Training pipeline. The output of the sentence encoder is fed to a Multi-Layer perceptron network for training. SentenceEncoder has an inbuilt capability of understanding the semantic similarity between sentences taking into account the synonyms and various usage patterns of the same sentence. 
 The Universal Sentence Encoder encodes text into high-dimensional vectors that can be used for text classification, semantic similarity, clustering, and other natural language tasks. The model is trained and optimized for greater-than-word length text, such as sentences, phrases, or short paragraphs. It is trained on a variety of data sources and a variety of tasks with the aim of dynamically accommodating a wide variety of natural language understanding tasks. The input is the variable-length English text and the output is a 512-dimensional vector.</li>
-<li><strong>KAEN</strong> (Kore Advanced Embeddings Network) – Models trained with Sentence Embeddings alone can not understand the domain-specific terminology especially if the words from training are non-dictionary words. Kore.ai provides a model which can understand the meaning of the sentence and at the same time give importance to the domain-specific terminology. There are two parallel layers in work in this model – one to optimize the weights against the sentence embeddings and the other to optimize the word importance for a given sentence.  The activation function used for these two layers is RReLU (Randomized Leaky Rectified Linear Unit, <a href="https://arxiv.org/pdf/1505.00853.pdf">Learn more</a>)</li>
+<li><strong>KAEN</strong> (Kore Advanced Embeddings Network) – Models trained with Sentence Embeddings alone can not understand the domain-specific terminology especially if the words from training are non-dictionary words. Kore.ai provides a model which can understand the meaning of the sentence and at the same time give importance to the domain-specific terminology. There are two parallel layers in work in this model – one to optimize the weights against the sentence embeddings and the other to optimize the word importance for a given sentence.  The activation function used for these two layers is RReLU (Randomized Leaky Rectified Linear Unit, <a href="https://arxiv.org/pdf/1505.00853.pdf" target="_blank">Learn more</a>.</li>
 <li><strong>Zero-Shot Model with OpenAI</strong>: Helps define descriptive intents that the VA identifies in the user utterance based on semantic similarity without requiring training data.</li>
 <li><strong>Few-shot Model (Kore.ai Hosted Embeddings)</strong>: Helps define more number of granular intents that describe the user’s intention in the utterance more accurately with limited training requirement.</li>
 </ul>
@@ -4856,10 +4855,9 @@ The Universal Sentence Encoder encodes text into high-dimensional vectors that c
 <a class="glightbox" href="../images/test-utterance-example-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/test-utterance-example-1.png" alt="test utterance example" title="test utterance example" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p><strong>Example 2</strong>: “<em>Where is my delivery?</em>”
 <a class="glightbox" href="../images/test-utterance-example-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/test-utterance-example-2.png" alt="test utterance example" title="test utterance example" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li>Click <strong>Save &amp; Run</strong>.</li>
-<li>The Machine Learning Model identifies and displays the following intents in the <strong>NLP Analysis</strong> window for each example.</li>
-</ol>
+<ol start="3"><li>Click <b>Save & Run</b>.</li>
+<li>The Machine Learning Model identifies and displays the following intents in the <b>NLP Analysis</b> window for each example.</li></ol>
+
 <p><strong>Example 1</strong>: <strong><em>Cancel My Order</em></strong> for “<em>I don’t want the product</em>.”
 <a class="glightbox" href="../images/cancel-my-order.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/cancel-my-order.png" alt="cancel order" title="cancel order" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p><strong>Example 2</strong>: <strong><em>Show the status of my order</em></strong> for “<em>Where is my delivery?</em>”
