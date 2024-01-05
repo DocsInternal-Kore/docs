@@ -4817,14 +4817,13 @@ The Universal Sentence Encoder encodes text into high-dimensional vectors that c
 
 <p><strong>How it works</strong></p>
 <ol>
-<li>The user defines the intent to be identified by the system. For example, in the banking use case, instead of saying “<em>I see invalid transactions</em>“, the intent you provide has to be more descriptive within a subject, object, and nouns. It should be something more descriptive like “<em>I received an alert on my phone about transactions that I have not done.</em>“. This helps the virtual assistant correctly identify the intent “<em>Dispute credit card Transaction.</em>“
-<a class="glightbox" href="../images/user-defines-intent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/user-defines-intent.png" alt="user defines intent" title="user defines intent" style="border: 1px solid gray; zoom:75%;"></a></li>
+<li>The user defines the intent to be identified by the system. For example, in the banking use case, instead of saying “<em>I see invalid transactions</em>“, the intent you provide has to be more descriptive within a subject, object, and nouns. It should be something more descriptive like “<em>I received an alert on my phone about transactions that I have not done.</em>“. This helps the virtual assistant correctly identify the intent “<em>Dispute credit card Transaction.</em>“</li>
 </ol>
+<p><a class="glightbox" href="../images/user-defines-intent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/user-defines-intent.png" alt="user defines intent" title="user defines intent" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>If required, the user can add dialogs for the intents.</p>
-<ol>
-<li>The user should enable the <strong><em>Zero-Shot Network Type</em></strong> under <strong>Training</strong>.</li>
-<li>The system identifies the most logical intent by matching the user utterance with the defined intent names (without training utterances). It then responds with the relevant intent. Intents identified by the <strong>Zero-Shot</strong> model are considered definitive matches.</li>
-</ol>
+<ol start="2"><li>The user should enable the <b>Zero-Shot Network Type</b> under <b>Training</b>.</li>
+<li>The system identifies the most logical intent by matching the user utterance with the defined intent names (without training utterances). It then responds with the relevant intent. Intents identified by the <b>Zero-Shot</b> model are considered definitive matches.</li></ol>
+
 <p><strong>Rescoring of Intents for Definitive Matches</strong></p>
 <p>When <strong>Prefer Definite Matches</strong> is disabled, and <strong>Rescoring of Intents</strong> is enabled, the platform continues rescoring for definite matches based on the similarity between the training data and user utterance to discover the winning intent(s). However, enabling Prefer Definite Matches is recommended to rescore for definitive matches based on the similarity between the intent names and user utterances.</p>
 <p><strong>Demonstrating with an Example</strong></p>

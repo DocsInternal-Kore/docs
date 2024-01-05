@@ -4349,7 +4349,7 @@
 <li>From the left menu, click <strong>Natural Language</strong> -&gt; <strong>Training</strong>.</li>
 <li>Click the <strong>Validate Model</strong> drop-down list on the top-right and select the model.</li>
 <li>The results page of the corresponding validation method is displayed.
-<a class="glightbox" href="../training/images/validate-model-training.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../training/images/validate-model-training.png" alt="validate model" title="validate model" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/validate-model-training.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/validate-model-training.png" alt="validate model" title="validate model" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
 <p>In the sections below, we will look into each of these methods in detail.</p>
 <h2 id="k-fold-cross-validation">K-fold Cross-Validation<a class="headerlink" href="#k-fold-cross-validation" title="Permanent link">&para;</a></h2>
@@ -4371,8 +4371,8 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Validations are performed only when the total number of ML utterances used for training is at least 250. This number is configurable for the on-premises installation. Contact our support team for details.</p>
-</div>
+<p>Validations are performed only when the total number of ML utterances used for training is at least 250. This number is configurable for the on-premises installation. <a href="https://kore.ai/support/" target="_blank">Contact</a> our support team for details.</p></div>
+
 <h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
 <p>Following are the steps followed by the platform while performing the K-fold cross-validation:</p>
 <ul>
@@ -4385,7 +4385,7 @@
 </ul>
 <h3 id="understand-the-results">Understand the Results<a class="headerlink" href="#understand-the-results" title="Permanent link">&para;</a></h3>
 <p>The following metrics are provided post the K fold cross-validation:</p>
-<p><a class="glightbox" href="../training/images/k-fold-cross-matrix.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../training/images/k-fold-cross-matrix.png" alt="k fold cross matrix" title="k fold cross matrix" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/k-fold-cross-matrix.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/k-fold-cross-matrix.png" alt="k fold cross matrix" title="k fold cross matrix" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li>The <strong>Precision</strong> score of each testing fold – to define how precise/accurate your model is and is calculated as the ratio of true positives over total predicted positives (sum of true and false positives).</li>
 <li>The <strong>Recall</strong> score of each testing fold – defines the fraction of the relevant utterances that are successfully identified and is calculated as the ratio of true positives over actual positives (sum of true positives and false negatives).</li>
@@ -4418,7 +4418,7 @@
 <p>A quick look at the graph and you know which utterance-intent matches are accurate and which can be further trained to produce better results.</p>
 <p>The higher the utterance in the <em>True</em> quadrants the better it exhibits expected behavior. <strong>True +ve</strong> represents a strong match with the task for which they are trained and the True -ve represents a mismatch with the irrelevant intents as expected. Utterances at a moderate level in the <em>True</em> quadrants can be further trained for better scores.</p>
 <p>The utterances falling into the <em>False</em> quadrants need immediate attention. These are the utterances that are either not matching with the intended tasks or are matching with the wrong ones. To read the utterance text in any quadrant, hover over the dot in the graph.</p>
-<p><a class="glightbox" href="../training/images/confusion-matrix.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../training/images/confusion-matrix.jpg" alt="confusion matrix" title="confusion matrix" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/confusion-matrix.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/confusion-matrix.jpg" alt="confusion matrix" title="confusion matrix" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h3 id="true-positive-quadrant">True Positive Quadrant<a class="headerlink" href="#true-positive-quadrant" title="Permanent link">&para;</a></h3>
 <p>When utterances trained for an intent receive a positive confidence score for that intent, they fall into its True Positive quadrant. This quadrant represents a favorable outcome. However, the higher the utterance on the quadrant’s scale the more chances of it finding the right intent.</p>
 <div class="admonition note">
@@ -4448,9 +4448,9 @@
 </ul>
 <h3 id="understand-a-goodbad-ml-model">Understand a Good/Bad ML model<a class="headerlink" href="#understand-a-goodbad-ml-model" title="Permanent link">&para;</a></h3>
 <p>Let us consider a travel assistant as an example to understand good or bad ML Mode. The assistant has multiple tasks with more than 300 trained utterances. The below image depicts 4 tasks and the associated utterances.
-<a class="glightbox" href="../training/images/good-bad-ml-models.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../training/images/good-bad-ml-models.png" alt="good bad ml models" title="good bad ml models" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/good-bad-ml-models.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/good-bad-ml-models.png" alt="good bad ml models" title="good bad ml models" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The model in this scenario is fairly well trained with most of the utterances pertaining to a task are concentrated in the True Positive quadrant and most of the utterances for other tasks are in the True Negative quadrant.</p>
-<p><a class="glightbox" href="../training/images/true-negative-quadrant.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../training/images/true-negative-quadrant.png" alt="true negative quadrant" title="true negative quadrant" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/true-negative-quadrant.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/true-negative-quadrant.png" alt="true negative quadrant" title="true negative quadrant" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The developer can work to improve on the following aspects of this model:</p>
 <ul>
 <li>In the ML model for task ‘Get Account Balance’ we can see a few utterances (B) in the <em>False Positive</em> quadrant.</li>
@@ -4466,15 +4466,15 @@
 <li>The task named <strong>Report Loss of Card</strong> contains limited utterances that are concentrated together.</li>
 </ul>
 <p>Let us now compare it with the ML Model for the Travel Assistant below:</p>
-<p><a class="glightbox" href="../training/images/ml-model-comparison.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../training/images/ml-model-comparison.png" alt="ml model comparison" title="ml model comparison" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/ml-model-comparison.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ml-model-comparison.png" alt="ml model comparison" title="ml model comparison" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The model is trained with a lot of conflicting utterances, resulting in a scattered view of utterances. This will be considered as a bad model and must be re-trained with a smaller set of utterances that do not relate to multiple tasks in a VA.</p>
 <h3 id="view-the-graph-for-specific-task-utterances">View the Graph for Specific Task Utterances<a class="headerlink" href="#view-the-graph-for-specific-task-utterances" title="Permanent link">&para;</a></h3>
 <p>By default, the ML Model Graph shows the performance of all the trained utterances against all tasks. To view the performance of a specific task’s trained utterances against all the other intents, toggle the switch for the task as shown in the image below.</p>
-<p><a class="glightbox" href="../training/images/view-graph.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../training/images/view-graph.jpg" alt="view graph" title="view graph" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/view-graph.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/view-graph.jpg" alt="view graph" title="view graph" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Since these are the trained utterances of the first task, ideally the utterances should appear at the top of the True +ve quadrant of that task and the bottom of the True -ve quadrant of all the other tasks.</p>
 <h3 id="filter-the-ml-model-graph">Filter the ML Model Graph<a class="headerlink" href="#filter-the-ml-model-graph" title="Permanent link">&para;</a></h3>
 <p>You can filter the ML Model Graph based on the following criteria:</p>
-<p><a class="glightbox" href="../training/images/filter-ml-model-graph.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../training/images/filter-ml-model-graph.jpg" alt="filter ml model graph" title="filter ml model graph" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/filter-ml-model-graph.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/filter-ml-model-graph.jpg" alt="filter ml model graph" title="filter ml model graph" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ul>
 <li><strong>In Development or Published</strong>: By default the graph shows the graph for all the tasks <strong>In Development</strong> and <strong>Published</strong> tasks. Toggle the switch to view the graph for only the published tasks.</li>
 <li><strong>Weak to Strong</strong>: View the graph from the least accurate task scores to the most accurate.</li>
@@ -4484,13 +4484,13 @@
 </ul>
 <h3 id="edit-and-reassign-utterances">Edit and Reassign Utterances<a class="headerlink" href="#edit-and-reassign-utterances" title="Permanent link">&para;</a></h3>
 <p>You can edit user utterances and re-assign them to other tasks to improve their scores directly from the ML graph. To do this, click on a quadrant and the Quadrant view opens with the name of the task and all the utterances related to it.</p>
-<p><a class="glightbox" href="../training/images/quadrant-view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../training/images/quadrant-view.png" alt="quadrant view" title="quadrant view" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/quadrant-view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/quadrant-view.png" alt="quadrant view" title="quadrant view" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>To edit an individual utterance,</p>
 <ol>
 <li>Click the edit icon on the respective utterance row.</li>
 <li>
 <p>On the Edit Utterance window, make changes to the text in the <strong>Utterance</strong> field or reassign the utterance to another task using the <strong>Expected Task</strong> drop-down list.</p>
-<p><a class="glightbox" href="../training/images/edit-individual-utterance.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../training/images/edit-individual-utterance.png" alt="edit utterance" title="edit utterance" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/edit-individual-utterance.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/edit-individual-utterance.png" alt="edit utterance" title="edit utterance" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
 <div class="admonition note">
