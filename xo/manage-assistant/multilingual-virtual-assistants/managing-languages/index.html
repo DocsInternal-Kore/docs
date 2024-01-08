@@ -4274,10 +4274,10 @@
 <li>Log in to your Kore.ai XO Platform account.</li>
 <li>On the Virtual Assistant landing page, click <strong>New Bot</strong> on the top-right and select the <strong>Start from Scratch</strong> option.</li>
 <li>
-<p>On the _Create New Bot _window, enter the Assistant details:</p>
+<p>On the <em>Create New Bot</em> window, enter the Assistant details:</p>
 <ol>
 <li><strong>Name</strong> – Give a name to your Assistant. For example, Banking Assistant. If the name is already used, try something else</li>
-<li><strong>Select the language from the Default Bot Language drop-down</strong> list.
+<li><strong>Select the language</strong> from the <strong>Default Bot Language</strong> drop-down list.
 <a class="glightbox" href="../images/image8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image8.png" title="image_tooltip" /></a></li>
 </ol>
 </li>
@@ -4292,11 +4292,14 @@
 <p><strong>User Input Translation</strong> – This approach uses language translation services to translate the user input into a base language. The conversation is executed in the base language and the responses are auto-translated back to the user’s language using translation services. (Supported from v9.1)</p>
 </li>
 <li>
-<p><strong>Runtime Response Translation</strong> – The Kore.ai XO Platform can automatically translate all the prebuilt responses as well as plain text messages to the user’s language. For this, you will need to provide your API keys for either Google Cloud Translation or Microsoft Translator service in the **Translation Configurations **section. You can also translate the content of the templated messages inside the JavaScript using the <code>koreUtil.AutoTranslate()</code> function by passing a string or a context variable. For example, <code>koreUtil.AutoTranslate(context.variable1) 
+<p><strong>Runtime Response Translation</strong> – The Kore.ai XO Platform can automatically translate all the prebuilt responses as well as plain text messages to the user’s language. For this, you will need to provide your API keys for either Google Cloud Translation or Microsoft Translator service in the <strong>Translation Configurations</strong> section. You can also translate the content of the templated messages inside the JavaScript using the <code>koreUtil.AutoTranslate()</code> function by passing a string or a context variable. For example, <code>koreUtil.AutoTranslate(context.variable1) 
     <a class="glightbox" href="../images/image9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image9.png" title="image_tooltip" /></a></p>
-<p>Note: If you select Multilingual as the NLU language option, by default the Assistant will be able to understand the user input in 100 plus languages supported by the Kore.ai XO Platform. The Multilingual NLU model is a language-agnostic model, it understands user input in 100 plus languages without the need for translation. However, you could enable Response Translation if the responses are configured in a language other than the assistant language.</p>
 </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you select Multilingual as the NLU language option, by default the Assistant will be able to understand the user input in 100 plus languages supported by the Kore.ai XO Platform. The Multilingual NLU model is a language-agnostic model, it understands user input in 100 plus languages without the need for translation. However, you could enable Response Translation if the responses are configured in a language other than the assistant language.</p>
+</div>
 </li>
 </ol>
 <p>6.Click <strong>Create</strong>.</p>
@@ -4309,7 +4312,10 @@
 </ol>
 <p>3.The Platform will display all the 100 plus languages that are supported. You can click on the Configure button to enable a language.
 <a class="glightbox" href="../images/image11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image11.png" title="image_tooltip" /></a></p>
-<p>Note: You can also search for a language by entering its name in the Search field.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also search for a language by entering its name in the Search field.</p>
+</div>
 <p>4.Once you click configure, you can setup the following language configurations:
 <a class="glightbox" href="../images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image2.png" title="image_tooltip" /></a></p>
 <ul>
@@ -4317,11 +4323,14 @@
 <li>
 <p><strong>Select the Language Definition Mode</strong> -You can choose any of the following options to copy the language definitions:</p>
 <ul>
-<li>
-<p><strong>Basic Mode</strong> – Lets you only copy dialog prompts and messages. 
-Note: A base language is a language that is already enabled in the assistant. You need to choose a Base Language for your assistant from which you want to copy your assistant’s data for both Basic and Advanced modes.*</p>
+<li><strong>Basic Mode</strong> – Lets you only copy dialog prompts and messages.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A base language is a language that is already enabled in the assistant. You need to choose a Base Language for your assistant from which you want to copy your assistant’s data for both Basic and Advanced modes.*</p>
 <p><a class="glightbox" href="../images/image13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image13.png" title="image_tooltip" /></a></p>
-</li>
+</div>
+<ul>
 <li>
 <p><strong>Advanced Mode</strong> – Lets you copy dialog prompts, messages, knowledge graph, small talks, traits, and training data as per your need. </p>
 <p><a class="glightbox" href="../images/image6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image6.png" title="image_tooltip" /></a></p>
@@ -4344,8 +4353,8 @@ Note: A base language is a language that is already enabled in the assistant. Yo
 <p>If you want to enable/disable input translation, change the NLU language of the already enabled language for an assistant or modify the dialog prompts then you can use the update feature. </p>
 <p>To update an already enabled language for an assistant, follow the below steps:</p>
 <ol>
-<li>Go to** Build &gt; Configurations &gt; Languages**.</li>
-<li>The platform will display all the languages under the **Language Management* *section.</li>
+<li>Go to <strong>Build &gt; Configurations &gt; Languages</strong>.</li>
+<li>The platform will display all the languages under the <strong>Language Management</strong> section.</li>
 <li>
 <p>Click on the language that is already enabled in the VA. The <em>Manage Language</em> dialog appears, here you can:</p>
 <ol>
@@ -4356,25 +4365,33 @@ Note: A base language is a language that is already enabled in the assistant. Yo
 <p><a class="glightbox" href="../images/image5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image5.png" title="image_tooltip" /></a></p>
 </li>
 <li>
-<p>Click the **Update **button once all the necessary changes are made.</p>
+<p>Click the <strong>Update</strong> button once all the necessary changes are made.</p>
 </li>
 </ol>
-<p>Notes:
-After you have configured a new language, to make the new language work, you must re-publish the VA. Until then, the VA continues to function with the previously published languages.
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>AfterAfter you have configured a new language, to make the new language work, you must re-publish the VA. Until then, the VA continues to function with the previously published languages. 
 The default Synonym library is available only for English, French, Spanish, German, and Chinese languages. However, you can add custom synonyms for any language. </p>
+</div>
 <h2 id="switching-languages">Switching Languages<a class="headerlink" href="#switching-languages" title="Permanent link">&para;</a></h2>
 <p>If you have configured multiple languages for a virtual assistant, you can switch the language to configure the virtual assistant from the top right corner (language dropdown) from within any area of your VA. The dropdown will display all the other supported languages with the corresponding NLU model that is configured for the language. </p>
 <p><a class="glightbox" href="../images/image12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image12.png" title="image_tooltip" /></a></p>
-<p>Note: The language dropdown will display the Bot Language and NLU language for the languages where the Bot Language is not equal to NLU language. If the Bot Language and the NLU language are the same then the language drop down will display only the Bot Language.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The language dropdown will display the Bot Language and NLU language for the languages where the Bot Language is not equal to NLU language. If the Bot Language and the NLU language are the same then the language drop down will display only the Bot Language.</p>
+</div>
 <h3 id="disablingenabling-languages">Disabling/Enabling Languages<a class="headerlink" href="#disablingenabling-languages" title="Permanent link">&para;</a></h3>
-<p>Languages can be enabled or disabled by going to <strong>Build &gt; Configurations &gt; Languages &lt; Standard Languages.</strong> Use the toggle to enable/disable a language.</p>
+<p>Languages can be enabled or disabled by going to <strong>Build &gt; Configurations &gt; Languages &lt; Standard Languages</strong>. Use the toggle to enable/disable a language.</p>
 <p><a class="glightbox" href="../images/image10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image10.png" title="image_tooltip" /></a></p>
 <p>Once you have configured and enabled a language you can:</p>
 <ul>
 <li>Disable or deactivate a language that is previously enabled for the VA. The actual language-specific data that has been added while enabling the language will continue to exist in the VA even after disabling the language. Disabling would prevent the users from talking  to the assistant in that language (can be viewed in the VA export copy).</li>
 <li>If a language is disabled you can enable it again, since the data is preserved, you need not enter all the details.</li>
 </ul>
-<p>Note: Any change in language settings needs to be published before it can take effect in the published assistant.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Any change in language settings needs to be published before it can take effect in the published assistant.</p>
+</div>
 
 
   

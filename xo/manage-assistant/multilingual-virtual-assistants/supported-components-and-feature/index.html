@@ -17,7 +17,7 @@
     
     
       
-        <title>**Multilingual VAs: Components & Feature Support** - Kore ai Docs</title>
+        <title>Multilingual VAs: Components & Feature Support - Kore ai Docs</title>
       
     
     
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Multilingual VAs: Components & Feature Support**
+              Multilingual VAs: Components & Feature Support
             
           </span>
         </div>
@@ -4200,6 +4200,84 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dialog-tasks" class="md-nav__link">
+    Dialog Tasks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dialog-components" class="md-nav__link">
+    Dialog Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-templates" class="md-nav__link">
+    Message Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-task" class="md-nav__link">
+    Alert Task
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-fields" class="md-nav__link">
+    Alert Fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bot-filters" class="md-nav__link">
+    Bot Filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idp-config-form-fields" class="md-nav__link">
+    IDP Config Form Fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-support" class="md-nav__link">
+    Pattern Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nlp-support" class="md-nav__link">
+    NLP Support
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4217,12 +4295,12 @@
 
 
 
-<h1 id="multilingual-vas-components-feature-support"><strong>Multilingual VAs: Components &amp; Feature Support</strong><a class="headerlink" href="#multilingual-vas-components-feature-support" title="Permanent link">&para;</a></h1>
+<h1 id="multilingual-vas-components-feature-support">Multilingual VAs: Components &amp; Feature Support<a class="headerlink" href="#multilingual-vas-components-feature-support" title="Permanent link">&para;</a></h1>
 <p>In the case of multilingual VAs, while much of the assistant’s behavior does not change with the language, the semantics does impose some restrictions. In this document we will list out the different behaviors that would be language-dependent, so you can cater for such scenarios.</p>
 <p>This article discusses language-specific components for multilingual VAs, as well as feature support and behavior, as compared to single language assistants. </p>
 <p>This article lists the VA elements for which you can provide language-specific values. You need not translate Standard Responses as the Platform automatically translates them when you enable a language.</p>
-<h1 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h1>
-<p>JSON object consisting of the following translatable elements</p>
+<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
+<p>JSON object consisting of the following translatable elements.</p>
 <table>
   <tr>
    <td><strong>FIELD NAME</strong>
@@ -4266,7 +4344,7 @@
   </tr>
 </table>
 
-<h1 id="dialog-tasks">Dialog Tasks<a class="headerlink" href="#dialog-tasks" title="Permanent link">&para;</a></h1>
+<h2 id="dialog-tasks">Dialog Tasks<a class="headerlink" href="#dialog-tasks" title="Permanent link">&para;</a></h2>
 <p>JSON object consisting of the following translatable components of your VA’s<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/dialog-tasks/"> Dialog Tasks</a>.</p>
 <table>
   <tr>
@@ -4303,7 +4381,7 @@
   </tr>
 </table>
 
-<h1 id="dialog-components">Dialog Components<a class="headerlink" href="#dialog-components" title="Permanent link">&para;</a></h1>
+<h2 id="dialog-components">Dialog Components<a class="headerlink" href="#dialog-components" title="Permanent link">&para;</a></h2>
 <p>JSON object consisting of the following translatable components related to the NLP settings of a dialog task.</p>
 <table>
   <tr>
@@ -4348,8 +4426,8 @@
   </tr>
 </table>
 
-<h1 id="message-templates">Message Templates<a class="headerlink" href="#message-templates" title="Permanent link">&para;</a></h1>
-<p>JSON object with arrays of Message Template IDs and Message Template Text values. They correspond to the <strong>User Responses **field in the Message node and the</strong> Bot Prompts **and **Error Prompts **fields in the<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-entity-node/"> Entity node</a> of the dialog tasks.</p>
+<h2 id="message-templates">Message Templates<a class="headerlink" href="#message-templates" title="Permanent link">&para;</a></h2>
+<p>JSON object with arrays of Message Template IDs and Message Template Text values. They correspond to the <strong>User Responses</strong> field in the Message node and the <strong>Bot Prompts</strong> and <strong>Error Prompts</strong> fields in the<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-entity-node/"> Entity node</a> of the dialog tasks.</p>
 <table>
   <tr>
    <td><strong>FIELD NAME</strong>
@@ -4369,7 +4447,7 @@
   </tr>
 </table>
 
-<h1 id="alert-task">Alert Task<a class="headerlink" href="#alert-task" title="Permanent link">&para;</a></h1>
+<h2 id="alert-task">Alert Task<a class="headerlink" href="#alert-task" title="Permanent link">&para;</a></h2>
 <p>JSON object consisting of the following translatable components of your assistant’s Alert Tasks.</p>
 <table>
   <tr>
@@ -4470,7 +4548,7 @@
   </tr>
 </table>
 
-<h1 id="alert-fields">Alert Fields<a class="headerlink" href="#alert-fields" title="Permanent link">&para;</a></h1>
+<h2 id="alert-fields">Alert Fields<a class="headerlink" href="#alert-fields" title="Permanent link">&para;</a></h2>
 <p>JSON object consisting of the following translatable components in the<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/alert/notification-tasks/"> API Request tab</a> of the Alert task.</p>
 <table>
   <tr>
@@ -4507,7 +4585,7 @@
   </tr>
 </table>
 
-<h1 id="bot-filters">Bot Filters<a class="headerlink" href="#bot-filters" title="Permanent link">&para;</a></h1>
+<h2 id="bot-filters">Bot Filters<a class="headerlink" href="#bot-filters" title="Permanent link">&para;</a></h2>
 <p>JSON object consisting of the following translatable components related to Bot filters</p>
 <table>
   <tr>
@@ -4528,7 +4606,7 @@
   </tr>
 </table>
 
-<h1 id="idp-config-form-fields">IDP Config Form Fields<a class="headerlink" href="#idp-config-form-fields" title="Permanent link">&para;</a></h1>
+<h2 id="idp-config-form-fields">IDP Config Form Fields<a class="headerlink" href="#idp-config-form-fields" title="Permanent link">&para;</a></h2>
 <p>JSON object consisting of the following translatable components related to IDP configuration form</p>
 <table>
   <tr>
@@ -4549,7 +4627,7 @@
   </tr>
 </table>
 
-<h1 id="pattern-support">Pattern Support<a class="headerlink" href="#pattern-support" title="Permanent link">&para;</a></h1>
+<h2 id="pattern-support">Pattern Support<a class="headerlink" href="#pattern-support" title="Permanent link">&para;</a></h2>
 <p>We have seen in<a href="https://developer.kore.ai/docs/bots/how-tos/how-to-use-patterns-for-intents-entities/"> this document</a>, how Patterns can be used for Intent detection and Entity extraction. These rules are for VAs in the English language. In other languages, there may be differences. </p>
 <p>Patterns can be used in<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/small-talk/#Terminology"> Small Talk</a> (while defining queries),<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/creating-a-knowledge-graph/#Adding_FAQs"> Knowledge Graph</a> (using alternate question fields), and<a href="https://developer.kore.ai/docs/bots/nlp/traits/#Trait_Definition"> Trait</a> identification but their behavior might differ slightly. The table below provides an overview of how this may occur.</p>
 <table>
@@ -5000,7 +5078,7 @@ Tagalog
 </table>
 
 <p>* in these cases, developer concepts are not supported in entity extraction</p>
-<h1 id="nlp-support">NLP Support<a class="headerlink" href="#nlp-support" title="Permanent link">&para;</a></h1>
+<h2 id="nlp-support">NLP Support<a class="headerlink" href="#nlp-support" title="Permanent link">&para;</a></h2>
 <p>Here are the NLP features supported by Multilingual VAs:</p>
 <table>
   <tr>

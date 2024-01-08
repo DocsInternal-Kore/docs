@@ -17,7 +17,7 @@
     
     
       
-        <title>**Training a Universal Bot** - Kore ai Docs</title>
+        <title>Training a Universal Bot - Kore ai Docs</title>
       
     
     
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Training a Universal Bot**
+              Training a Universal Bot
             
           </span>
         </div>
@@ -4200,6 +4200,178 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    Training
+  </a>
+  
+    <nav class="md-nav" aria-label="Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invocation-phrases" class="md-nav__link">
+    Invocation Phrases
+  </a>
+  
+    <nav class="md-nav" aria-label="Invocation Phrases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patterns" class="md-nav__link">
+    Patterns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-words" class="md-nav__link">
+    Trigger Words
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invocation-names" class="md-nav__link">
+    Invocation Names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utterances" class="md-nav__link">
+    Utterances
+  </a>
+  
+    <nav class="md-nav" aria-label="Utterances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exit-phrase" class="md-nav__link">
+    Exit Phrase
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#none-intent" class="md-nav__link">
+    None Intent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallback-bots" class="md-nav__link">
+    Fallback Bots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inclusive-bots" class="md-nav__link">
+    Inclusive Bots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked-bots" class="md-nav__link">
+    Linked Bots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eligible-bots" class="md-nav__link">
+    Eligible Bots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-scoping-of-bots" class="md-nav__link">
+    Stage 1 – Scoping of Bots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-2-fork-input-to-linked-bots" class="md-nav__link">
+    Stage 2 – Fork input to linked bots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3-ranking-and-disambiguation" class="md-nav__link">
+    Stage 3 – Ranking and Disambiguation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-4-invoke-fulfillment" class="md-nav__link">
+    Stage 4 – Invoke fulfillment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4217,7 +4389,7 @@
 
 
 
-<h1 id="training-a-universal-bot"><strong>Training a Universal Bot</strong><a class="headerlink" href="#training-a-universal-bot" title="Permanent link">&para;</a></h1>
+<h1 id="training-a-universal-bot">Training a Universal Bot<a class="headerlink" href="#training-a-universal-bot" title="Permanent link">&para;</a></h1>
 <p>You can train a Universal Bot to guide it to the most relevant link bot(s) from which the intents are to be identified. You can use a combination of Invocation Phrases and Training Utterances to define the Bot Identification Training.</p>
 <p>Training a Universal Bot is essential for the following reasons:</p>
 <ul>
@@ -4226,20 +4398,22 @@
 <li>In case no linked bots are qualified, then the utterances are routed to the linked bots as Fallback Bots.</li>
 <li>You must review the linked bot identification flow from the Utterance Testing module.</li>
 </ul>
-<h1 id="training"><strong>Training</strong><a class="headerlink" href="#training" title="Permanent link">&para;</a></h1>
+<h2 id="training">Training<a class="headerlink" href="#training" title="Permanent link">&para;</a></h2>
 <p>In the following section, we elaborate on the training steps and best practices to make your Universal Bot efficient and functional.</p>
 <p>Remember that the training for Universal bot should be aimed at ‘<span style="text-decoration:underline;">bot identification</span>‘ and <span style="text-decoration:underline;">not</span> for ‘<span style="text-decoration:underline;">intent identification</span>‘ as provided for any standard bot. The utterance will be routed to the identified linked bots (or fallback bot if nothing is identified).</p>
 <p>Training a Universal Bot is a three-way process:</p>
 <ol>
 <li>Train with Invocation Phrases to identify a specific intent in a specific linked bot;</li>
 <li>Train with Invocation Names that would help identify a specific linked bot;</li>
-<li>Train with user utterance for scoping linked bots.<div class="language-text highlight"><pre><span></span><code>Inclusive bots need not be trained. If you choose to train the same, the training will not be used for bot scoping but will be used later if the linked bot is deselected as an Inclusive Bot.
-</code></pre></div>
-</li>
+<li>Train with user utterance for scoping linked bots.</li>
 </ol>
-<p>Training can be done from the <strong>Build</strong> tab from the top menu, by selecting the <strong>Natural Language **&gt;</strong> Linked Bot Training** option.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Inclusive bots need not be trained. If you choose to train the same, the training will not be used for bot scoping but will be used later if the linked bot is deselected as an Inclusive Bot.</p>
+</div>
+<p>Training can be done from the <strong>Build</strong> tab from the top menu, by selecting the <strong>Natural Language &gt; Linked Bot Training</strong> option.</p>
 <p>Note the expectation of this document is that you have already created a Universal Bot and have linked bots to the same.<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/creating-a-universal-bot/"> Refer here for steps</a>.</p>
-<h2 id="invocation-phrases"><strong>Invocation Phrases</strong><a class="headerlink" href="#invocation-phrases" title="Permanent link">&para;</a></h2>
+<h3 id="invocation-phrases">Invocation Phrases<a class="headerlink" href="#invocation-phrases" title="Permanent link">&para;</a></h3>
 <p>Invocation Phrases refer to the typical phrases that contain a reference to a specific linked bot and intent from that specific linked bot.</p>
 <p>For example – ‘<em>Can you check with HR if I have enough leave balance</em>’, or ‘<em>Show my latest leads from salesforce</em>’, etc.</p>
 <p>Each invocation phrases constitute the following components</p>
@@ -4251,7 +4425,7 @@
 </li>
 <li><strong>Intent Phrase</strong> would be the task related to the linked bot that the user wants to perform.</li>
 </ul>
-<h3 id="patterns"><strong>Patterns</strong><a class="headerlink" href="#patterns" title="Permanent link">&para;</a></h3>
+<h4 id="patterns">Patterns<a class="headerlink" href="#patterns" title="Permanent link">&para;</a></h4>
 <p>The presence of a trigger phrase and invocation name should follow the below-mentioned pattern rules:</p>
 <table>
   <tr>
@@ -4338,7 +4512,7 @@ or <em>Tell Clea I want today’s schedule</em>
   </tr>
 </table>
 
-<h3 id="trigger-words"><strong>Trigger Words</strong><a class="headerlink" href="#trigger-words" title="Permanent link">&para;</a></h3>
+<h4 id="trigger-words">Trigger Words<a class="headerlink" href="#trigger-words" title="Permanent link">&para;</a></h4>
 <p>The following trigger words are supported by default in the platform (<a href="https://developer.kore.ai/docs/bots/how-tos/multi-lingual-bot-behavior/#TriggerExit_Phrase_Support">see here for multi-lingual support</a>):</p>
 <ul>
 <li>Ask</li>
@@ -4359,11 +4533,11 @@ or <em>Tell Clea I want today’s schedule</em>
 <li>Talk to</li>
 <li>Run</li>
 </ul>
-<h2 id="invocation-names"><strong>Invocation Names</strong><a class="headerlink" href="#invocation-names" title="Permanent link">&para;</a></h2>
+<h3 id="invocation-names">Invocation Names<a class="headerlink" href="#invocation-names" title="Permanent link">&para;</a></h3>
 <p>The Linked bot’s name is considered an implicit invocation name.</p>
 <p>Apart from this, you can define one or more Invocation Names for each of the linked bots. These will be treated as a special set of synonyms defined against linked bot names and the bot users might be using these when referring to the linked bots.</p>
 <p><a class="glightbox" href="../images/tub7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/tub7.png" title="image_tooltip" /></a></p>
-<h2 id="utterances"><strong>Utterances</strong><a class="headerlink" href="#utterances" title="Permanent link">&para;</a></h2>
+<h3 id="utterances">Utterances<a class="headerlink" href="#utterances" title="Permanent link">&para;</a></h3>
 <p>Training utterances refer to the typical ways in which the users are expected to ask for intent from a linked bot. This usually includes the key training utterances used for training the intents of the linked bots. Keep in mind unlike the ML training, these utterances can identify multiple linked bots, not zero it on one.</p>
 <p>You can add up to 500 training utterances.</p>
 <p><a class="glightbox" href="../images/tub8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/tub8.png" title="image_tooltip" /></a></p>
@@ -4371,25 +4545,25 @@ or <em>Tell Clea I want today’s schedule</em>
 <p><a class="glightbox" href="../images/tub2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/tub2.png" title="image_tooltip" /></a></p>
 <p>From the Linked Bot listing page, you can get an overview of their training status and invocation names, and training utterances.</p>
 <p><a class="glightbox" href="../images/tub5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/tub5.png" title="image_tooltip" /></a></p>
-<h3 id="exit-phrase"><strong>Exit Phrase</strong><a class="headerlink" href="#exit-phrase" title="Permanent link">&para;</a></h3>
+<h4 id="exit-phrase">Exit Phrase<a class="headerlink" href="#exit-phrase" title="Permanent link">&para;</a></h4>
 <p>The following trigger words can be used by the user to exit from an exclusive context of a linked bot.</p>
 <ul>
 <li>Exit</li>
 </ul>
-<h2 id="none-intent"><strong>None Intent</strong><a class="headerlink" href="#none-intent" title="Permanent link">&para;</a></h2>
+<h3 id="none-intent">None Intent<a class="headerlink" href="#none-intent" title="Permanent link">&para;</a></h3>
 <p>The None Intents are used to qualify/disqualify the linked bots based on user utterances defined in them. The None intent is a placeholder that prevents the Machine Learning model from identifying the wrong intent for untrained or ambiguous utterances. For more information, see<a href="https://developer.kore.ai/docs/bots/nlp/advanced-nlp-configurations/#None_Intent"> None Intent</a> and<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/creating-a-universal-bot/#Step_3_Training"> Creating a Universal Bot</a> articles.</p>
-<h2 id="configurations"><strong>Configurations</strong><a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
+<h3 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h3>
 <p>For each linked bot, you can set the <strong>Bot Qualification Threshold</strong> as the minimum score needed to qualify the bot for the intent identification process.</p>
 <p>By default, it is set to 0.3 and can be set to any value between 0 and 1.</p>
 <p><a class="glightbox" href="../images/tub4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/tub4.png" title="image_tooltip" /></a></p>
-<h2 id="fallback-bots"><strong>Fallback Bots</strong><a class="headerlink" href="#fallback-bots" title="Permanent link">&para;</a></h2>
+<h3 id="fallback-bots">Fallback Bots<a class="headerlink" href="#fallback-bots" title="Permanent link">&para;</a></h3>
 <p>You can mark certain bots as fallback bots which would be used for detecting intents when no other bots are identified from other training options.</p>
 <p><strong>Points to note</strong>:</p>
 <ul>
 <li>A maximum of 15 bots can be marked as Fallback Bots</li>
 <li>You can change the list of preferred bots at any time to suit the business needs</li>
 </ul>
-<h2 id="inclusive-bots"><strong>Inclusive Bots</strong><a class="headerlink" href="#inclusive-bots" title="Permanent link">&para;</a></h2>
+<h3 id="inclusive-bots">Inclusive Bots<a class="headerlink" href="#inclusive-bots" title="Permanent link">&para;</a></h3>
 <p>Inclusive bots need not be trained with sample utterances to participate in the bot scoping process. These bots will always be considered for Intent Detection at the time of evaluating the user utterances, except when the user invokes a linked bot either using ‘Invocation Phrases’ or ‘Trigger Phrases’. 
  Up to 3 linked bots can be marked as inclusive bots.</p>
 <p><a class="glightbox" href="../images/tub6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/tub6.png" title="image_tooltip" /></a></p>
@@ -4397,13 +4571,13 @@ or <em>Tell Clea I want today’s schedule</em>
 <p class="admonition-title">Note</p>
 <p>A linked bot can be marked either as Fallback or Inclusive, not both.</p>
 </div>
-<h2 id="linked-bots"><strong>Linked Bots</strong><a class="headerlink" href="#linked-bots" title="Permanent link">&para;</a></h2>
+<h3 id="linked-bots">Linked Bots<a class="headerlink" href="#linked-bots" title="Permanent link">&para;</a></h3>
 <p>The information related to the in-context linked bot would be available in the Session context under the following key:</p>
 <ul>
 <li><strong>currentLinkedBotid</strong> for Linked Bot ID;</li>
 <li><strong>currentLinkedBotName</strong> for Linked Bot name.</li>
 </ul>
-<h2 id="eligible-bots"><strong>Eligible Bots</strong><a class="headerlink" href="#eligible-bots" title="Permanent link">&para;</a></h2>
+<h3 id="eligible-bots">Eligible Bots<a class="headerlink" href="#eligible-bots" title="Permanent link">&para;</a></h3>
 <p>As Universal Bot developer you can assign specific bots to specific end-users so that only the intents from these bots are made available to them.</p>
 <p>The following functions can be used with eligible bots:</p>
 <ul>
@@ -4417,8 +4591,8 @@ or <em>Tell Clea I want today’s schedule</em>
 </ul>
 <p>You can set the eligible bots based on the user authorization or any other approach that your organization may have in place.</p>
 <p>You can also define the bot behavior when the bot assignments are not provided, from the settings,<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/training-a-universal-bot/#Settings"> see below</a>.</p>
-<h2 id="settings"><strong>Settings</strong><a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
-<p>The configuration settings can be accessed from the <strong>Build</strong> top menu tab, left menu, under <strong>Natural Language &gt; Settings</strong></p>
+<h3 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h3>
+<p>The configuration settings can be accessed from the <strong>Build</strong> top menu tab, left menu, under <strong>Natural Language &gt; Settings</strong>.</p>
 <p>The following configurations are to be provided in the Bot Builder so that you can configure these thresholds:</p>
 <ul>
 <li><strong>Use of Bot Synonyms</strong> – toggle to enable or disable the use of bot synonyms in intent detection. Disabled by default.</li>
@@ -4453,25 +4627,25 @@ or <em>Tell Clea I want today’s schedule</em>
 </ul>
 <p><a class="glightbox" href="../images/image8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/image8.png" title="image_tooltip" /></a></p>
 <p>If your bot is trained in one or more languages that use NLP Version 2, you will see a banner notifying you about the upcoming<a href="https://developer.kore.ai/docs/bots/nlp/optimizing-bots/#NLP_Version_3"> auto-upgrade to NLP Version 3</a>.</p>
-<h1 id="implementation"><strong>Implementation</strong><a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h1>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
 <p>Let us look at how the Universal Bot works.</p>
 <p>The universal bot processes user input in multiple stages to identify the appropriate bot and invoke the appropriate intent.</p>
-<h4 id="stage-1-scoping-of-bots"><strong>Stage 1 – Scoping of Bots</strong><a class="headerlink" href="#stage-1-scoping-of-bots" title="Permanent link">&para;</a></h4>
+<h4 id="stage-1-scoping-of-bots">Stage 1 – Scoping of Bots<a class="headerlink" href="#stage-1-scoping-of-bots" title="Permanent link">&para;</a></h4>
 <p>Users should be able to use trigger phrases like “Talk to Salesforce”, “Ask Eva” (Eva being HR bot), or patterns like “Schedule a meeting” or “add a task” to invoke the linked bot.</p>
 <ul>
 <li>The user utterance (invocation phrase) is evaluated for the linked bot name (invocation name).</li>
 <li>This bot name is compared with all linked bot names or eligible bot names (in case eligibility criteria for the user is defined) to shortlist one or more scoped linked bots. 
  <strong>Bot</strong> <strong>Eligibility</strong>: Different users may have access to a different set of bots/skills based on their role or association with teams, in the organization. Using the restricted scope, the universal bot will be able to identify a more appropriate bot based on the user’s access controls.</li>
 </ul>
-<h4 id="stage-2-fork-input-to-linked-bots"><strong>Stage 2 – Fork input to linked bots</strong><a class="headerlink" href="#stage-2-fork-input-to-linked-bots" title="Permanent link">&para;</a></h4>
+<h4 id="stage-2-fork-input-to-linked-bots">Stage 2 – Fork input to linked bots<a class="headerlink" href="#stage-2-fork-input-to-linked-bots" title="Permanent link">&para;</a></h4>
 <p>Once a set of bots has been scoped, the user input is sent to all the in-scope linked bots. The ranking of intents from each of the linked bots is accumulated and further evaluated.</p>
 <ul>
 <li>The utterance is sent to the scoped linked bots for intent identification.</li>
 <li>Identified intents are then forwarded back to the universal bot’s ranking and resolver for further evaluation and action.</li>
 </ul>
-<h4 id="stage-3-ranking-and-disambiguation"><strong>Stage 3 – Ranking and Disambiguation</strong><a class="headerlink" href="#stage-3-ranking-and-disambiguation" title="Permanent link">&para;</a></h4>
+<h4 id="stage-3-ranking-and-disambiguation">Stage 3 – Ranking and Disambiguation<a class="headerlink" href="#stage-3-ranking-and-disambiguation" title="Permanent link">&para;</a></h4>
 <p>Response from the linked bots is ranked and, if more than one bot is qualified for user input, disambiguated using additional context. If not possible then a disambiguation dialog is presented to the bot user.</p>
-<h4 id="stage-4-invoke-fulfillment"><strong>Stage 4 – Invoke fulfillment</strong><a class="headerlink" href="#stage-4-invoke-fulfillment" title="Permanent link">&para;</a></h4>
+<h4 id="stage-4-invoke-fulfillment">Stage 4 – Invoke fulfillment<a class="headerlink" href="#stage-4-invoke-fulfillment" title="Permanent link">&para;</a></h4>
 <ul>
 <li>The winning intent is executed.</li>
 <li>In the case of no winning intent:<ul>
@@ -4481,7 +4655,7 @@ or <em>Tell Clea I want today’s schedule</em>
 </li>
 </ul>
 <p><a class="glightbox" href="../images/tub3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/tub3.png" title="image_tooltip" /></a></p>
-<h2 id="next-steps"><strong>Next Steps</strong><a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<h3 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h3>
 <ul>
 <li>You can also look into how the Universal Bot can be customized by defining the default dialog and variables<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/customizing-the-universal-bots-default-dialog-task/"> from here</a>.</li>
 <li>Learn to enable additional languages<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/enabling-additional-languages-for-the-universal-bot/"> from here</a>.</li>

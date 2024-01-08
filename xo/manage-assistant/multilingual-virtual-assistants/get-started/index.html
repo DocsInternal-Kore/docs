@@ -17,7 +17,7 @@
     
     
       
-        <title>**Getting Started with Multilingual Virtual Assistants** - Kore ai Docs</title>
+        <title>Getting Started with Multilingual Virtual Assistants - Kore ai Docs</title>
       
     
     
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Getting Started with Multilingual Virtual Assistants**
+              Getting Started with Multilingual Virtual Assistants
             
           </span>
         </div>
@@ -4217,7 +4217,7 @@
 
 
 
-<h1 id="getting-started-with-multilingual-virtual-assistants"><strong>Getting Started with Multilingual Virtual Assistants</strong><a class="headerlink" href="#getting-started-with-multilingual-virtual-assistants" title="Permanent link">&para;</a></h1>
+<h1 id="getting-started-with-multilingual-virtual-assistants">Getting Started with Multilingual Virtual Assistants<a class="headerlink" href="#getting-started-with-multilingual-virtual-assistants" title="Permanent link">&para;</a></h1>
 <p>Consumers are more likely to engage with virtual assistants that communicate in their preferred language. The Kore.ai XO Platform supports enabling multiple languages within an assistant without having to rebuild the definitions. The platform supports over 100 languages and you can choose to enable any of these languages for your assistant. You can start building with one language and enable additional languages as and when you need them.  </p>
 <p>This article takes you through the general context within which multilingual VAs work. It discusses language use in VA-user conversations and in NLU processes, language enablement options, as well as language detection and selection. </p>
 <h1 id="building-a-multilingual-va">Building a Multilingual VA<a class="headerlink" href="#building-a-multilingual-va" title="Permanent link">&para;</a></h1>
@@ -4232,7 +4232,7 @@
 <p>Enabling a language requires you to train the model to understand the user’s input and present the responses in the user’s language. To achieve this, the platform allows you to choose a <strong>Conversation (Bot) Language</strong> and <strong>NLU Language</strong> for every language that you would like to enable. In most cases, the Conversation Language can be the same as the NLU Language.</p>
 <p>Conversation Language is the one that users use to interact with the assistant. You can choose any of the over 100 languages as the Conversation Language. You can define the responses (prompts, messages. etc.,) in the Conversation Language. </p>
 <p>You can also use the automatic response translation feature when you or your team does not have expertise in the user’s language. You can write the responses in your preferred language and the platform will automatically translate them to the user’s language during the conversation. </p>
-<h2 id="supported-bot-languages"><strong>Supported Bot Languages</strong><a class="headerlink" href="#supported-bot-languages" title="Permanent link">&para;</a></h2>
+<h2 id="supported-bot-languages">Supported Bot Languages<a class="headerlink" href="#supported-bot-languages" title="Permanent link">&para;</a></h2>
 <p>The following are the Conversation Languages supported by the Platform:</p>
 <table>
   <tr>
@@ -4779,7 +4779,7 @@
 <p>Note that the current conversation will be discarded in case the user wants to switch languages.</p>
 </li>
 <li>
-<p>Language selection settings – In addition, you may want to configure the language selection options. From the menu under the <strong>Build</strong> tab, click <strong>Configurations -&gt; Languages. **Under **Language Selection Logic</strong> (scroll down for the option), for <strong>language selection time frame</strong>, set to one of the following:</p>
+<p>Language selection settings – In addition, you may want to configure the language selection options. From the menu under the <strong>Build</strong> tab, click <strong>Configurations &gt; Languages</strong>. Under <strong>Language Selection Logic</strong> (scroll down for the option), for <strong>language selection time frame</strong>, set to one of the following:</p>
 <ul>
 <li><strong>Lifetime</strong>: The auto-detected language will be set as the user’s preferred language and used for all subsequent communications until the user interacts in another enabled language anytime later. If the user starts to talk in another enabled language, the virtual assistant changes to that language.</li>
 <li>
@@ -4787,18 +4787,21 @@
 </li>
 <li>
 <p><strong>Every User Message</strong>: Identifies the user’s language from every utterance. In case a change is detected, the VA will get a confirmation from the user regarding the switch and proceed as per the user response. </p>
-<p>Note that the current conversation will be discarded in case the user wants to switch languages. This feature was introduced in release 7.2 and is the default setting for multilingual virtual assistants.</p>
 </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the current conversation will be discarded in case the user wants to switch languages. This feature was introduced in release 7.2 and is the default setting for multilingual virtual assistants.</p>
+</div>
 <p><a class="glightbox" href="../images/language-selection-logic.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/language-selection-logic.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>For testing and debugging purposes, you can override the language selection settings by using the cheat command during a chat session. Replace the language name or code with one of these values:</p>
 <ol>
-<li>English:** English <strong>or **EN</strong></li>
-<li>German: <strong>German **or **DE</strong></li>
-<li>French: <strong>French **or **FR</strong></li>
-<li>Spanish: <strong>Spanish **or **ES</strong></li>
+<li>English: <strong>English</strong> or <strong>EN</strong></li>
+<li>German: <strong>German</strong> or <strong>DE</strong></li>
+<li>French: <strong>French</strong> or <strong>FR</strong></li>
+<li>Spanish: <strong>Spanish</strong> or <strong>ES</strong></li>
 </ol>
 </li>
 </ol>

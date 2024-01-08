@@ -17,7 +17,7 @@
     
     
       
-        <title>**Customizing the Universal Bot’s Default Dialog Task** - Kore ai Docs</title>
+        <title>Customizing the Universal Bot’s Default Dialog Task - Kore ai Docs</title>
       
     
     
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              **Customizing the Universal Bot’s Default Dialog Task**
+              Customizing the Universal Bot’s Default Dialog Task
             
           </span>
         </div>
@@ -4300,7 +4300,7 @@
 
 
 
-<h1 id="customizing-the-universal-bots-default-dialog-task"><strong>Customizing the Universal Bot’s Default Dialog Task</strong><a class="headerlink" href="#customizing-the-universal-bots-default-dialog-task" title="Permanent link">&para;</a></h1>
+<h1 id="customizing-the-universal-bots-default-dialog-task">Customizing the Universal Bot’s Default Dialog Task<a class="headerlink" href="#customizing-the-universal-bots-default-dialog-task" title="Permanent link">&para;</a></h1>
 <p>While a Universal Bot acts as a container for Standard Bots and has limited functionality. Listed here are the aspects that can be customized:</p>
 <ul>
 <li>Training,<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/training-a-universal-bot/"> refer here</a></li>
@@ -4311,11 +4311,11 @@
 <li>Sentiment Management,<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/customizing-the-universal-bots-default-dialog-task/#Sentiment_Management"> refer here</a></li>
 <li>Digital Views,<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/customizing-the-universal-bots-default-dialog-task/#Digital_Views"> refer here</a></li>
 </ul>
-<h2 id="default-dialog-task"><strong>Default Dialog Task</strong><a class="headerlink" href="#default-dialog-task" title="Permanent link">&para;</a></h2>
+<h2 id="default-dialog-task">Default Dialog Task<a class="headerlink" href="#default-dialog-task" title="Permanent link">&para;</a></h2>
 <p><strong>Before you Begin</strong></p>
 <p>This article assumes that you understand the fundamentals of creating dialog tasks using the Kore.ai Bots Platform and therefore focuses on the aspects specific to the universal bots. To refer to the fundamentals of dialog tasks, read<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/dialog-tasks/"> Dialog Tasks</a>.</p>
 <p>Universal bots come with a built-in dialog task that triggers automatically for unidentified intents. You can customize this dialog task, or import another, but cannot replace it with other standard responses. You can add more nodes to the default dialog task to build a custom experience.</p>
-<h4 id="default-dialog-nodes"><strong>Default Dialog Nodes</strong><a class="headerlink" href="#default-dialog-nodes" title="Permanent link">&para;</a></h4>
+<h4 id="default-dialog-nodes">Default Dialog Nodes<a class="headerlink" href="#default-dialog-nodes" title="Permanent link">&para;</a></h4>
 <p>Nodes that can be added to universal bot are limited compared to the standard bots. Below is the list of nodes that can be added to the default dialog task in the universal bot:</p>
 <ul>
 <li>Send a message</li>
@@ -4326,12 +4326,12 @@
 <li>Initiate Agent Transfer</li>
 <li>Enable WebHook connections</li>
 </ul>
-<h4 id="customize-the-default-dialog"><strong>Customize the Default Dialog</strong><a class="headerlink" href="#customize-the-default-dialog" title="Permanent link">&para;</a></h4>
+<h4 id="customize-the-default-dialog">Customize the Default Dialog<a class="headerlink" href="#customize-the-default-dialog" title="Permanent link">&para;</a></h4>
 <p>Follow these steps to customize the default dialog message:</p>
 <ol>
 <li>Open the universal bot for which you want to configure the default dialog.</li>
 <li>Select the <strong>Build</strong> tab from the top menu.</li>
-<li>Select <strong>Intelligence -&gt; Default Dialog</strong>.</li>
+<li>Select <strong>Intelligence &gt; Default Dialog</strong>.</li>
 <li>
 <p>Listed will be the default dialog – <strong>Intent Not Identified</strong>. 
 <a href="https://kore-wordpress.s3.us-east-2.amazonaws.com/developer.kore.ai/wp-content/uploads/20210630123543/ub_defaultDialog.png"> </a></p>
@@ -4342,15 +4342,15 @@
 </li>
 <li>You can customize the default dialog like any other dialog task adding the above-mentioned nodes.</li>
 </ol>
-<h4 id="customizing-the-default-dialog-for-an-enabled-language"><strong>Customizing the Default Dialog for an Enabled Language</strong><a class="headerlink" href="#customizing-the-default-dialog-for-an-enabled-language" title="Permanent link">&para;</a></h4>
+<h4 id="customizing-the-default-dialog-for-an-enabled-language">Customizing the Default Dialog for an Enabled Language<a class="headerlink" href="#customizing-the-default-dialog-for-an-enabled-language" title="Permanent link">&para;</a></h4>
 <p>If the Kore.ai NLP engine cannot recognize the user intent, the universal bot responds to the users with the default dialog. You must create language-specific versions of the default dialog for each enabled language so that such bot responses go in the users’ preferred language. Otherwise, the universal bot responds applies the default bot language regardless of the user’s preferred language.<a href="https://developer.kore.ai/docs/bots/advanced-topics/universal-bot/enabling-additional-languages-for-the-universal-bot/"> Learn more</a>.</p>
-<h2 id="event-handlers"><strong>Event Handlers</strong><a class="headerlink" href="#event-handlers" title="Permanent link">&para;</a></h2>
+<h2 id="event-handlers">Event Handlers<a class="headerlink" href="#event-handlers" title="Permanent link">&para;</a></h2>
 <p><strong>Before you Begin</strong></p>
 <p>This article assumes that you understand the fundamentals of Event Handler functionality using the Kore.ai Bots Platform and therefore focuses on the aspects specific to the universal bots. To refer to the fundamentals of Event Handling, read<a href="https://developer.kore.ai/docs/bots/bot-intelligence/event-based-bot-actions/"> Event Based Bot Actions</a>.</p>
 <p>The ‘Events’ in the Universal Bot support triggering of the Dialog Tasks from the linked bots. For events that support the execution of tasks, you can choose the linked bot and a task from the linked bot.</p>
 <p><a class="glightbox" href="../images/cusbotdiat2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/cusbotdiat2.png" title="image_tooltip" /></a></p>
 <p>The linked task will be executed at the trigger of the event. If the linked bot task is not available at the run time or in the language that the end-user is having the conversation in, then the end-user would be presented with the relevant Standard Response ‘Dialog task required for conversation is not available’</p>
-<h2 id="variable-management"><strong>Variable Management</strong><a class="headerlink" href="#variable-management" title="Permanent link">&para;</a></h2>
+<h2 id="variable-management">Variable Management<a class="headerlink" href="#variable-management" title="Permanent link">&para;</a></h2>
 <p>While building Universal bots you might want to propagate a few values to the linked bots, like:</p>
 <ul>
 <li>the environment details, when building multi-lingual bots, while migrating the universal bot from one environment to another.</li>
@@ -4358,7 +4358,7 @@
 </ul>
 <p><strong>Before you Begin</strong></p>
 <p>This article assumes that you understand the fundamentals of creating variables using the Kore.ai Bots Platform and therefore focuses on the aspects specific to the universal bots. To refer to the fundamentals of variable management, read<a href="https://developer.kore.ai/docs/bots/bot-settings/bot-management/using-bot-variables/"> Using Bot Variables</a>.</p>
-<h3 id="variable-declaration"><strong>Variable Declaration</strong><a class="headerlink" href="#variable-declaration" title="Permanent link">&para;</a></h3>
+<h3 id="variable-declaration">Variable Declaration<a class="headerlink" href="#variable-declaration" title="Permanent link">&para;</a></h3>
 <p>As with Standard bots, you can</p>
 <ul>
 <li>Define Global and Content variables.</li>
@@ -4370,13 +4370,13 @@
 <li>You can access these variables in the script using <code>{{env.&amp;lt;variable-name}}</code> and <code>{{content.&amp;lt;variable-name&gt;&gt;}}</code></li>
 <li>In case the variable name is defined in both linked and universal bot, the Universal bot variable value would take precedence.</li>
 </ul>
-<h2 id="sentiment-management"><strong>Sentiment Management</strong><a class="headerlink" href="#sentiment-management" title="Permanent link">&para;</a></h2>
+<h2 id="sentiment-management">Sentiment Management<a class="headerlink" href="#sentiment-management" title="Permanent link">&para;</a></h2>
 <p><strong>Before you Begin</strong></p>
 <p>This article assumes that you understand the fundamentals of Sentiment functionality using the Kore.ai Bots Platform and therefore focuses on the aspects specific to the universal bots. To refer to the fundamentals of Sentiment Management,<a href="https://developer.kore.ai/docs/bots/advanced-topics/sentiment-management/"> refer here</a>.</p>
 <p>The Sentiment Based Events in the Universal Bot support triggering of the Dialog Tasks from the linked bots. For events that support the execution of tasks, you can choose the linked bot and a task from the linked bot.</p>
 <p><a class="glightbox" href="../images/cusbotdiat3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/cusbotdiat3.png" title="image_tooltip" /></a></p>
 <p>The linked task will be executed at the trigger of the event. If the linked bot task is not available at the run time or in the language that the end-user is having the conversation in, then the end-user would be presented with the relevant Standard Response ‘Dialog task required for conversation is not available’.</p>
-<h2 id="digital-views"><strong>Digital Views</strong><a class="headerlink" href="#digital-views" title="Permanent link">&para;</a></h2>
+<h2 id="digital-views">Digital Views<a class="headerlink" href="#digital-views" title="Permanent link">&para;</a></h2>
 <p><strong>Before you Begin</strong></p>
 <p>This article assumes that you understand the fundamentals of Digital Views functionality using the Kore.ai Bots Platform and therefore focuses on the aspects specific to the universal bots. To refer to the fundamentals of Digital Views,<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/digital-views/"> refer here</a>.</p>
 <p>The Digital Views in the Universal Bot allows you to view the desired information (via widgets) from various linked bots in a single UB panel so that you can get the relevant details without conversing with the bot.</p>
