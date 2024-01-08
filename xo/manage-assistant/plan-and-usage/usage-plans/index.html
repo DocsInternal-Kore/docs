@@ -4252,6 +4252,19 @@
     Navigating to Plan and Usage
   </a>
   
+    <nav class="md-nav" aria-label="Navigating to Plan and Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimum-and-maximum-limits" class="md-nav__link">
+    Minimum and Maximum Limits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4485,10 +4498,7 @@
 <p>The following plans are currently available on the latest version of the Kore.ai XO Platform:</p>
 <h2 id="standard-plan">Standard Plan<a class="headerlink" href="#standard-plan" title="Permanent link">&para;</a></h2>
 <p>As a new user, you get free credits worth $500 at the workspace level, which you can share among the Virtual Assistants in the workspace. The plan follows <strong>Conversation-based billing</strong> where each conversation handled by a Bot linked to your account is billed at a unit price of $ 0.2, deducted from your free credits (if available), otherwise paid credits balance.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p><strong>Definition</strong>: A conversation is an interaction with the bot for any length with no more than 15 minutes of inactivity.</p>
-</div>
 <p>You can leverage the<a href="https://developer.kore.ai/docs/bots/bot-settings/plan-usage/usage-plans/#Usage_Plan_Features"> basic features</a> for your bots with a Standard Plan.</p>
 <p>A Standard Plan’s key features include the following:</p>
 <ol>
@@ -4510,10 +4520,7 @@
 <li>The free credits expiry impacts the utilization of credits, triggers low balance or zero balance emails, and highlights low or zero balance in the system warnings and messages.</li>
 <li>The number of free credits that lapsed on expiry displays on the account owner’s dashboard.</li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note<p><strong>Important</strong>: For an existing Standard Workspace, the remaining or unutilized free credit will expire in 90 days from the release date of this policy – March 19, 2023.</p>
-</p>
-</div>
+<p><strong>Important</strong>: For an existing Standard Workspace, the remaining or unutilized free credit will expire in 90 days from the release date of this policy – March 19, 2023.</p>
 <h3 id="free-credits-utilization"><strong>Free Credits Utilization</strong><a class="headerlink" href="#free-credits-utilization" title="Permanent link">&para;</a></h3>
 <p>The usage deduction from the paid balance starts only after the free credits are fully utilized or expired. This ensures that the Free Credits available can be used before they expire.</p>
 <p>Here are other important considerations:</p>
@@ -4537,47 +4544,726 @@
 <li>The paid credits can be mapped to the designated virtual assistant or shared among other VAs in the workspace.</li>
 </ol>
 <h2 id="enterprise-plan">Enterprise Plan<a class="headerlink" href="#enterprise-plan" title="Permanent link">&para;</a></h2>
+<p>The <strong>Enterprise Plan</strong> is available for all the instances of the Kore.ai XO Platform (Global, EU, and JP). It is a pay-as-you-go plan that supports enterprise bots with high volume interactions and enterprise administration needs. The plan follows a <strong>Session-based billing</strong> model where a <strong>Session</strong> is the billing unit clocked for 15 minutes of interaction with the bot. It includes both active interactions and inactivity. You can leverage the<a href="https://developer.kore.ai/docs/bots/bot-settings/plan-usage/usage-plans/#Usage_Plan_Features"> basic features</a> for your bots with an Enterprise Plan.</p>
+<p>The important features include the following:</p>
+<ul>
+<li>Every <strong>15 minutes</strong> of user interaction with the virtual assistant is billed as a <strong>session</strong>.</li>
+<li>The Enterprise Plan can be customized to your business needs. Please<a href="https://kore.ai/contact-us/"> contact</a> the Kore AI support team for more information.</li>
+<li>To initiate a Custom Enterprise Plan subscription, you must create a contract with the Kore.ai Team.</li>
+<li>The real-time billing usage data of your Enterprise Virtual Assistant is available on the <strong>Plan &amp; Usage</strong> page.</li>
+<li>
+<p>As a Workspace owner, you can view and manage your bot usage and balance by clicking the <strong>Manage</strong> menu item. </p>
+<p><a class="glightbox" href="../images/up%2811%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2811%29.png" title="image_tooltip" /></a></p>
+</li>
+</ul>
+<p>This redirects to the <strong>Plan &amp; Usage</strong> page where all the virtual assistants linked to your account are listed with the following details:</p>
+<ul>
+<li>Bot Name</li>
+<li>Bot Owner</li>
+<li>
+<p>Publish Status</p>
+</li>
+<li>
+<p>You can view the Usage &amp; Plan details for individual Bots by clicking the <strong>Manage</strong> button.</p>
+</li>
+<li>Usage trends are based on actual conversations billed for both Paid and Free credits.</li>
+<li>Daily and Monthly aggregation types are supported for the Enterprise plan to view the usage trend as follows:</li>
+</ul>
+<p><strong>Daily</strong></p>
+<ul>
+<li>This is the default aggregation type and displays the usage trends each day for the selected date range. By default, the system displays the daily aggregation graph from the past 7 days (1 week). The <strong>To Date</strong> is set to one day before the current date.</li>
+<li>If you select <strong>Custom</strong>, the date range for daily aggregation cannot exceed 90 days.</li>
+</ul>
+<p><strong>Monthly</strong></p>
+<ul>
+<li>Select this aggregation type to view the usage trends of conversations consumed each month for the selected date range. By default, the system displays the monthly aggregation graph for the previous month. You can explicitly select any other month(s) to view the information.</li>
+<li>The system allows to select 1 month, 2 months, or 3 months date ranges.</li>
+<li>If you select <strong>Custom</strong>, the date range for monthly aggregation cannot exceed 365 days.</li>
+</ul>
+<p><strong>Billing Units</strong></p>
+<p>The Enterprise Plan billing is done on the basis of the following primary units types:</p>
+<ul>
+<li><strong>Number of Sessions</strong>: The number of sessions consumed by a bot linked to the enterprise workspace. The aggregate of all the sessions consumed by all the bots in the workspace reflect on the enterprise workspace owner’s dashboard.</li>
+<li><strong>Proactive Notifications</strong>: The number of event-based system notifications triggered on the Platform to the account owner.</li>
+<li><strong>Alert Notifications</strong>: The number of system alerts triggered on the Platform to the account owner.</li>
+</ul>
+<p><strong>Support Plan</strong></p>
+<ol>
+<li>All published virtual assistants get <strong>Basic Support</strong> (Access to Community, Academy, and Documentation) by default with their Standard or Enterprise Plan subscription.</li>
+<li>You can choose to subscribe to a paid Standard Support plan for comprehensive support from Kore.ai experts. </li>
+<li>Basic Support for a Standard Plan provides an option to upgrade to support for Email tickets on weekdays. This plan Starts at $1,000/month.</li>
+<li>You can reach out to us from there (<a href="https://kore.ai/contact-us/">https://kore.ai/contact-us/</a>) for upgrading to Enterprise Support. </li>
+</ol>
+<p>The<a href="https://developer.kore.ai/docs/bots/bot-settings/plan-usage/support-plans/"> Support Plans</a> article provides complete information about the Support plans.</p>
 <h2 id="usage-plan-features">Usage Plan Features<a class="headerlink" href="#usage-plan-features" title="Permanent link">&para;</a></h2>
+<p>The Platform applies various limits and enforcements on the usage of the virtual assistant based on the plan associated with it.</p>
+<table>
+  <tr>
+   <td><strong>Feature</strong>
+   </td>
+   <td><strong>Standard Plan</strong>
+   </td>
+   <td><strong>Enterprise Plan</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Plan Type</strong>
+   </td>
+   <td>Conversation-based model.
+   </td>
+   <td>Session-based model.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Price</strong>
+   </td>
+   <td>A Pay-as-you-go model with $0.20 per session.
+   </td>
+   <td>Session-based pricing.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Usage Limits</strong>
+<p>
+Every user-bot conversation is billed. The VA stops responding when the free or paid credits are exhausted.
+   </td>
+   <td>As per credits. Minimum block purchase starts from $100.
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Exclusive Features</strong>
+   </td>
+   <td>Premium features include <em>Conversation Designer</em>, <em>Knowledge Graph</em>, <em>Multi-engine NLP</em> and <em>Omnichannel Experience</em>.
+   </td>
+   <td>Exclusive features include <em>Premium Features</em> + <em>Topic Modeler</em>, <em>Universal Bots</em>, <em>Higher Limits</em>, and <em>On-premise Deployments</em>.
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong>Conversation Builder</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Conversation Designer</strong>
+<p>
+Prototype, collaborate and design multi-turn conversations
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Dialog Builder</strong>
+<p>
+Build conversation flows, define business rules and integration with business systems using a low code builder.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Dialog Tasks (Up to)</strong>
+<p>
+Dialog Tasks are business use cases involving multi-turn conversations.
+   </td>
+   <td>200
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Topic Modeler</strong>
+<p>
+Analyze agent transcripts to auto-identify intents, entities and flows.
+   </td>
+   <td>No
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Proactive Notifications</strong>
+<p>
+Deliver users timely, relevant, and personalized information.
+   </td>
+   <td>Up to 500 notifications per hour.
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Small Talk</strong>
+<p>
+Engage users in casual conversations.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Visual Experience</strong>
+<p>
+Complement the conversational experience using visual forms and widgets to collect and present information.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong>Knowledge Management</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Knowledge Extraction</strong>
+<p>
+Extract FAQs from your existing documents like PDFs and webpages.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Knowledge Graph</strong>
+<p>
+Turn static FAQs into an intelligent, personalized conversational experience.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>FAQs (Up to)</strong>
+<p>
+Maximum FAQs allowed.
+   </td>
+   <td>1,000
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong>Advanced Features</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Multichannel Support</strong>
+<p>
+Deploy on users’ preferred voice and text channels.
+   </td>
+   <td>All available channels.
+   </td>
+   <td>All available channels.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Multilingual Assistants</strong>
+<p>
+Interact with the assistant in multiple languages.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Universal Assistants </strong>
+<p>
+Link multiple standard assistants to a Universal Virtual Assistant for enabling collaboration between teams and providing a unified experience for your customers.
+   </td>
+   <td>No
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong>Training and Intelligence</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Multi-Engine NLP</strong>
+<p>
+Leverage the power of FM, KG and ML engines for better NLP accuracy. 
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>ML Training Models</strong>
+<p>
+Experiment with various training models to get the best NLP accuracy.
+   </td>
+   <td>Standard
+   </td>
+   <td>Advanced
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Total Training Utterances (Up to)</strong>
+<p>
+Utterances are the training data for the ML Models.
+   </td>
+   <td>10,000
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Conversational Intelligence</strong>
+<p>
+Handle contextual intents, follow-ups and interruptions.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Multi-intent Management</strong>
+<p>
+Identify and follow up on multiple intents from a single-user input.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Entity Amendments</strong>
+<p>
+Intelligent handling of amendments to entities anytime during the conversation.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Sentiment Analysis</strong>
+<p>
+Analyze the sentiment of the user and dynamically manage the conversations.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong>Testing and Validation</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Test Cases per Batch Test Suite (Up to)</strong>
+<p>
+Measure the NLP accuracy by running automated tests. 
+   </td>
+   <td>10,000
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Test Cases for Conversation Testing (Up to)</strong>
+<p>
+Test intent fulfillment by automating end-to-end conversational flows.
+   </td>
+   <td>1000
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Rate Limit for Batch Testing</strong>
+<p>
+Maximum batch test executions allowed.
+   </td>
+   <td>10 per day
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Rate Limit for Conversation Testing</strong>
+<p>
+Maximum conversation test executions allowed.
+   </td>
+   <td>10 per day
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td><strong>IVR Sandbox</strong>
+<p>
+Test end-to-end IVR experience using Kore.ai’s Sandbox environment.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong>Integrations and Deployments</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Service Orchestration</strong>
+<p>
+Securely integrate with your business systems for authenticating users, transactions, and information exchange.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Agent Transfer</strong>
+<p>
+Seamlessly hand off the conversations to your live agents when predefined business rules are met.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Platform SDK</strong>
+<p>
+Build powerful extensions to the Platform using the SDK.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Web and Mobile Clients</strong>
+<p>
+Instantly launch your virtual assistants on web or mobile devices. Use the SDKs to embed them in your websites and mobile apps.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Variables</strong>
+<p>
+Automate the SDLC process using variables to define environment-specific values.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Versions</strong>
+<p>
+Create, store and restore versions of the assistant for promoting across different environments.
+   </td>
+   <td>20
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Version Comparison</strong>
+<p>
+Visually compare definition versions of the assistant to identify the changes made over time.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong>Insights and Analytics</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Prebuilt Conversation & NLP Analytics</strong>
+<p>
+Evaluate the assistant’s performance using out-of-the-box metrics.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Custom KPIs & Analytics (Widgets)</strong>
+<p>
+Create custom dashboards based on your business requirements. 
+   </td>
+   <td>10 Widgets
+   </td>
+   <td>Unlimited
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Analytics History</strong>
+<p>
+Data retention and data viewing limits.
+   </td>
+   <td>3 Months
+   </td>
+   <td>Custom
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong>Administration</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Deployment Model</strong>
+<p>
+Choose from On-premise, Hybrid & Cloud models for hosting the assistants. 
+   </td>
+   <td>Cloud
+   </td>
+   <td>Cloud, Hybrid & On-Premises
+   </td>
+  </tr>
+  <tr>
+   <td><strong>SSO</strong>
+<p>
+Single Sign-On authentication for your domain users.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Data Retention</strong>
+<p>
+Limit on user data retention.
+   </td>
+   <td>Standard
+   </td>
+   <td>Advanced
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Collaborators (per assistant)</strong>
+<p>
+Invite team members for collaborative development. 
+   </td>
+   <td>Unlimited
+   </td>
+   <td>Unlimited
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Access to Public APIs</strong>
+<p>
+Design, build and monitor the assistants using APIs. 
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>AD Sync</strong>
+<p>
+Sync and import key user info from your organization’s directory.
+   </td>
+   <td>No
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Cloud Connector</strong>
+<p>
+Connectors to establish secure communications through the firewall.
+   </td>
+   <td>No
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong>Support</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Basic Support</strong>
+<p>
+Access to Community, Academy, and Documentation.
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Standard Support</strong>
+<p>
+Access email support on weekdays from 8 am-5 pm with a 24-hour initial response time
+   </td>
+   <td>Option to upgrade to Standard Support. Plans start at $1,000/month.
+   </td>
+   <td>Guided Success Program
+<p>
+24*7 availability (Email, Phone & Video).
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Enterprise Support</strong>
+<p>
+Email, phone, and video support (24*7). Guided success program.
+   </td>
+   <td>Not Available
+   </td>
+   <td>Yes, with an option to upgrade to the Enterprise Support Plan.
+   </td>
+  </tr>
+</table>
+
 <h2 id="navigating-to-plan-and-usage">Navigating to Plan and Usage<a class="headerlink" href="#navigating-to-plan-and-usage" title="Permanent link">&para;</a></h2>
-<!-----
-
-You have some errors, warnings, or alerts. If you are using reckless mode, turn it off to see inline alerts.
-* ERRORs: 0
-* WARNINGs: 0
-* ALERTS: 37
-
-Conversion time: 8.868 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β35
-* Tue Jan 02 2024 04:45:05 GMT-0800 (PST)
-* Source doc: Usage Plans
-* Tables are currently converted to HTML tables.
-* This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server. NOTE: Images in exported zip file from Google Docs may not appear in  the same order as they do in your doc. Please check the images!
-
------>
-
+<p>To access the <strong>Plan and Usage</strong> feature on the Bot Builder, follow the steps below:</p>
+<ol>
+<li>Click your Virtual Assistant on the <strong>Virtual Assistants</strong> page.</li>
+<li>
+<p>Navigate to the <strong>Manage</strong> section and click <strong>Plan and Usage</strong> on the left menu.</p>
+<p><a class="glightbox" href="../images/up%2827%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2827%29.png" title="image_tooltip" /></a></p>
+</li>
+</ol>
+<p>Alternatively, the Bot Owner can view the <strong>Plan and Usage</strong> summary data for multiple bots with the steps below:</p>
+<ol>
+<li>On the Virtual Assistants page, click the workspace tab on the top right.</li>
+<li>
+<p>In the Workspaces slider, click the <strong>Manage</strong> button to navigate to the required workspace. </p>
+<p><a class="glightbox" href="../images/up%2829%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2829%29.png" title="image_tooltip" /></a></p>
+</li>
+</ol>
+<p>In the <strong>Plan &amp; Usage</strong> section, you can do the following:</p>
+<ul>
+<li>View the billing conversations handled by an assistant in a given period.</li>
+<li>Filter the billing conversations graph based on the selected filters.</li>
+<li>Export the conversations billing report as a <em>.csv file</em>.</li>
+<li>Upgrade to an Enterprise Custom Plan.</li>
+<li>Add Funds to your Standard Account mapped to the Standard Plan.</li>
+</ul>
+<p><strong>View Plan and Usage Information</strong></p>
+<p>You can now view the in-depth usage trends, current workspace balance for free and paid credits, the number of billing units consumed and available, the allowed conversations/sessions, and the average daily conversations for daily and monthly date ranges on your Standard or Enterprise workspace. This information helps track how efficiently your bots are used and managed.</p>
+<p>The <strong>Plan &amp; Usage</strong> summary panel for a <strong>Standard Plan</strong> displays the following information:</p>
+<p><strong>Summary View</strong></p>
+<ul>
+<li>The <strong>Workspace Plan Name</strong>.</li>
+<li>An <strong>Upgrade Plan</strong> button to initiate the upgrade to an Enterprise Plan.</li>
+<li><strong>Paid Bot Summary</strong>: Displays the number of paid and inactive bots.</li>
+<li>
+<p>A list view of the Bots summary with the following details:</p>
+<ul>
+<li>Bot Name</li>
+<li>Bot Owner</li>
+<li>Balance Status</li>
+<li>Remaining Balance</li>
+<li>Support Plan </li>
+</ul>
+<p><a class="glightbox" href="../images/up%2839%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2839%29.png" title="image_tooltip" /></a></p>
+</li>
+</ul>
+<p><strong>Usage Plan Dashboard</strong></p>
+<p>At an individual Virtual Assistant level, the following <strong>Usage Information</strong> appears when you click the <strong>Manage</strong> Button on the Summary page.</p>
+<ul>
+<li>Plan Name</li>
+<li>Current Paid credits balance</li>
+<li>Upgrade Plan link</li>
+<li>Auto-reload status</li>
+<li>Add Funds button</li>
+<li>A bar graph depicting the billing conversations count based on the applied filters <strong>Date</strong>, <strong>Month</strong>, <strong>Custom</strong>, and <strong>Week</strong> (one to four weeks).</li>
+<li>Button to switch between graph and tabular view of the conversations billing data.</li>
+</ul>
+<p><strong>Paid Credits Status Information</strong></p>
+<p>For paid credits, the system displays the following:</p>
+<ul>
+<li><strong>Sufficient funds</strong> when there are sufficient funds for VA sessions.</li>
+<li><strong>Low Balance</strong> when there is <em>0</em> or <em>lesser than minimum</em> paid credits balance.</li>
+</ul>
+<p>For free credits, <strong>Using Free Credits</strong> is displayed.</p>
+<p><strong>Inactive</strong> is displayed if the VA is inactive (suspended due to <em>zero</em> or <em>insufficient credits</em> in the account).</p>
+<ul>
+<li><strong>Remaining Balance</strong>: The balance after the credits have been used for sessions by the VA.</li>
+<li><strong>Support Plan</strong>; The name of the support plan if subscribed by the account owner.</li>
+</ul>
+<p><strong>Free Credits Details</strong></p>
+<p>The<a href="https://developer.kore.ai/docs/bots/bot-settings/plan-usage/usage-plans/#Usage_Plan_Dashboard"> Usage Plan dashboard</a> displays the usage summary of the free credits in the <strong>Standard Account</strong> including the following:</p>
+<ul>
+<li>The <strong>Free Credits in Workspace</strong> displayed in USD.</li>
+<li>The validity date of the Free Credits.</li>
+<li>The Usage Trend which includes the <strong>Avg. Daily Conversations</strong>.</li>
+</ul>
+<p><strong>Add Funds to your Account to Buy Paid Credits</strong></p>
+<p>You can add funds to your virtual assistant standard account in one of the following scenarios: </p>
+<ul>
+<li>To reload/add paid credits for the first publish flow of your VA.</li>
+<li>To ensure continued bot responses through paid credits/additional free credits after your first publish or when there is zero balance (for paid/free credits) in your account.</li>
+</ul>
+<p><strong>Important Considerations</strong></p>
+<ul>
+<li>You can specify the minimum credit (funds) to be maintained in your account.</li>
+<li>You’re redirected to our payment gateway to complete the payment.</li>
+<li>You can automate your balance top-ups by specifying the <strong>auto-reload amount</strong>. Once the credit falls below this limit, the auto-reload amount you’ve defined will be automatically debited from your card and credited to your account.</li>
+<li>You can view the transaction, order, and invoice details in the <strong>Orders and Invoices</strong> section.</li>
+<li>The available credits and the corresponding billing units get updated automatically on the <strong>Plan and Usage</strong> panel.</li>
+<li>The usage details for the added funds are updated after 30 minutes.</li>
+<li>If your virtual assistant is mapped to an Enterprise account, the Billing Units are presented as Billing Sessions.</li>
+<li>If your virtual assistant is mapped to a Standard account, the Billing Units are presented as Billing Conversations.</li>
+</ul>
+<p>Adding funds can be done either <strong>manually</strong> or by <strong>enabling auto-reload</strong> or automatic balance top-up as follows: </p>
+<p><strong>Manual Recharge</strong></p>
+<ul>
+<li>The reloaded amount is added to the available balance.</li>
+<li>An invoice is generated for every account reload.</li>
+</ul>
+<p><strong>Automatic Recharge</strong></p>
+<ol>
+<li><strong>Auto-reload/recharge</strong> refers to the automatic addition of funds to the virtual assistant or the automatic balance top-up when it drops below the minimum limit (for end-user and admin user accounts) you define. Enabling this feature reduces the hassle of manual payment and ensures your Bot is published and implemented without interruptions.</li>
+<li>The system checks your preferred payment authorization method in the auto-reload settings before automatically recharging the account.</li>
+<li>If <strong>Automate your balance top-ups</strong> is enabled, the balance will be automatically updated with the recharge amount you define when it drops below the minimum limit. You should provide the following inputs to configure auto-recharge:<ul>
+<li><strong>Auto Reload for</strong> – The amount (in USD) to be reloaded when the minimum balance is reached.</li>
+<li><strong>When Balance Drops Below</strong> – The minimum balance or threshold below which the system triggers auto-reload.</li>
+<li><strong>Note</strong>: You can specify the minimum credits your account should maintain. Once the credit falls below this limit, the set amount will be automatically recharged using the saved payment method.</li>
+</ul>
+</li>
+<li>The system enables auto-reload as a part of the manual reload flow and only if at least one manual fund addition completes.</li>
+<li>The system regularly monitors the available balance for an account and triggers auto-reload when the account reaches the minimum balance. Once the system completes an auto-reload transaction using your payment authorization method, the system adds the recharge amount to your virtual assistant account’s available balance.</li>
+<li>An invoice is generated automatically after the auto-reload.</li>
+</ol>
+<h3 id="minimum-and-maximum-limits"><strong>Minimum and Maximum Limits</strong><a class="headerlink" href="#minimum-and-maximum-limits" title="Permanent link">&para;</a></h3>
+<p>The threshold limits for the balance top-up are as follows:</p>
+<p><strong>Minimum Reload Amount</strong></p>
+<p>The minimum top-up amount depends on the current plan. For a Standard plan, it is $ 100.</p>
+<p><strong>Maximum Reload Amount</strong></p>
+<p>The <strong>maximum top-up amount</strong> for a single transaction is <strong>$20,000</strong> by default. This limit is configurable and doesn’t cause functional limitations. The Kore.ai XO Platform ensures protection against unsolicited issues or conflicts with this threshold limit.</p>
 <h2 id="payment-methods">Payment Methods<a class="headerlink" href="#payment-methods" title="Permanent link">&para;</a></h2>
 <p>The following payment modes are available on the Payment page when you add funds to the Platform:</p>
 <h3 id="paypal-default-selection"><strong>PayPal (Default Selection)</strong><a class="headerlink" href="#paypal-default-selection" title="Permanent link">&para;</a></h3>
 <p>Link your PayPal email account to the Platform’s payment gateway to add paid credits.</p>
+<p><a class="glightbox" href="../images/up%2824%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2824%29.png" title="image_tooltip" /></a></p>
 <h3 id="creditdebit-card"><strong>Credit/Debit Card</strong><a class="headerlink" href="#creditdebit-card" title="Permanent link">&para;</a></h3>
 <p>Initiate the transaction for paid credits using a valid credit/debit card. Add the <em>card number</em>, <em>account holder’s name</em>, <em>expiry date</em>, and <em>CVV security code</em> to authorize the transaction and validate using an OTP.</p>
+<p><a class="glightbox" href="../images/up%2810%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2810%29.png" title="image_tooltip" /></a></p>
 <h3 id="wire-transfer"><strong>Wire Transfer</strong><a class="headerlink" href="#wire-transfer" title="Permanent link">&para;</a></h3>
 <p>Select the wire transfer payment mode while adding funds. A wire transfer is a form of electronic payment that sends money directly from one bank account (Payer) to another (Payee). </p>
+<p><a class="glightbox" href="../images/up%284%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%284%29.png" title="image_tooltip" /></a></p>
 <p><strong>Important Considerations</strong></p>
 <ul>
 <li>
 <p><strong>View Order Details</strong>: When you place an order by selecting the wire transfer method, it gets registered with pending payment clearance status. The order summary page provides you the total amount to transfer along with the break-up summary. Meanwhile, you should also receive an email from Paypro with the detailed steps to complete your Wire Transfer order. </p>
+<p><a class="glightbox" href="../images/up%2812%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2812%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p><strong>Ability to Add Funds during pending Wire Transfer</strong>: A Wire Transfer process may take four to eight days to complete. The paid credits are loaded only after the transfer is successful. If the VA runs out of balance and your Wire Transfer order is still in ‘Pending’ status, you can add funds using an alternative payment method like a credit card or PayPal.</p>
@@ -4595,21 +5281,24 @@ Conversion notes:
 <p>In the <strong>Add Funds</strong> window, follow the steps below:</p>
 <ul>
 <li>Enter the value for <strong>Amount to Credit</strong> to specify the amount you’d like to add to your account.</li>
-<li>Enable <strong>Automate your balance top-ups</strong> if you want to automatically add funds to your account. Otherwise, disable this option. \
+<li>Enable <strong>Automate your balance top-ups</strong> if you want to automatically add funds to your account. Otherwise, disable this option. 
 <strong>Note</strong>: The automatic top-up will not work if you select the <em>Wire Transfer</em> payment method.</li>
 <li>Enter the value for <strong>Auto reload for</strong> (minimum value is $100).</li>
 <li>Enter the value for <strong>When Balance Drops Below</strong> to specify the minimum credits to be maintained in your account reaching which the auto-recharge is done.</li>
 </ul>
 </li>
-<li>Click <strong>Authorize Payment</strong>. You will be redirected to the <strong>Payment</strong> Page hosted by <strong>PayPro Global</strong> to complete the purchase.</li>
+<li>
+<p>Click <strong>Authorize Payment</strong>. You will be redirected to the <strong>Payment</strong> Page hosted by <strong>PayPro Global</strong> to complete the purchase.
+<a class="glightbox" href="../images/up%2835%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2835%29.png" title="image_tooltip" /></a></p>
+</li>
 <li>
 <p>Enter the <strong>Billing Information</strong>, select a <strong>Payment Method</strong>, and enter the payment details.</p>
 </li>
 <li>
-<p>Click <strong>Submit Order</strong>.</p>
+<p>Click <strong>Submit Order</strong>. The bot will be published after the payment is successful.</p>
+<p><a class="glightbox" href="../images/up%2825%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2825%29.png" title="image_tooltip" /></a></p>
 </li>
 </ol>
-<p>The bot will be published after the payment is successful.</p>
 <h2 id="publishing-your-virtual-assistant">Publishing your Virtual Assistant<a class="headerlink" href="#publishing-your-virtual-assistant" title="Permanent link">&para;</a></h2>
 <p>You can publish your Virtual Assistants for a Standard Account under the standard or enterprise custom plans. For a standard plan with Free Credits, an <strong>Admin Approval</strong> is required to publish. However, the virtual assistant is <strong>auto-published</strong> when it is enabled for paid plans. For an <strong>Enterprise Custom Plan</strong>, the virtual assistants are auto-published. Please click<a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/"> here</a> to learn more about publishing a Virtual Assistant.</p>
 <p><strong>Note</strong>: A messaging channel should be enabled under <strong>Deploy</strong> &gt; <strong>Channels</strong> before publishing a VA.</p>
@@ -4644,7 +5333,7 @@ Conversion notes:
 <p>When you first publish a VA after subscribing to a Standard Plan, the following scenarios may apply:</p>
 <p><strong>First Publish: Zero Balance</strong></p>
 <p>For the first publish, when there is zero balance in your account, the following notification is displayed:</p>
-<p><a class="glightbox" href="../images/up%2821%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2821%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/up%2833%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2833%29.png" title="image_tooltip" /></a></p>
 <p><strong>Payment Processed</strong></p>
 <p>For the first publish, you will be automatically upgraded to the Standard account when the payment is processed and the credits are added. The following notification appears:</p>
 <p><a class="glightbox" href="../images/up%2821%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2821%29.png" title="image_tooltip" /></a></p>
@@ -4666,7 +5355,7 @@ Conversion notes:
 <p><a class="glightbox" href="../images/up%282%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%282%29.png" title="image_tooltip" /></a></p>
 <p><strong>Zero Paid Credits and Leftover/Existing Free Credits Balance</strong></p>
 <p>The subsequent publish status is when the balance is zero paid credits/no funds are added, and leftover free credits are used for shared VAs.</p>
-<p><a class="glightbox" href="../images/up%2816%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2816%29.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/up%2837%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2837%29.png" title="image_tooltip" /></a></p>
 <p><strong>Paid Credits Available, and Zero/Positive Free Credits Balance Available</strong></p>
 <p>When there is a positive paid credits balance but there are no free credits in your account, the following message appears:</p>
 <p><a class="glightbox" href="../images/up%287%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%287%29.png" title="image_tooltip" /></a></p>
@@ -4774,6 +5463,399 @@ Conversion notes:
 </ul>
 <h3 id="system-triggered-email-templates"><strong>System-Triggered Email Templates</strong><a class="headerlink" href="#system-triggered-email-templates" title="Permanent link">&para;</a></h3>
 <p>The following table describes the automatic emails triggered by the system when an event occurs:</p>
+<table>
+  <tr>
+   <td><strong>Email Template Name</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" ><strong>Sign-up and Sign-in Flows</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Sign-up – Email Confirmation
+   </td>
+   <td>An account verification link is sent to the user to complete the setup.
+   </td>
+  </tr>
+  <tr>
+   <td>Signup – Resend Email Confirmation
+   </td>
+   <td>Account sign-up confirmation email with the verification link triggered on the user’s request.
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" ><strong>Ecommerce Flows for the Free Plan- Virtual Assistant</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>First Time Publish – Auto Approval – Free Credits
+   </td>
+   <td>This email is sent to the VA owner when a VA is published for the first time, and the account has leftover free credits shared by all the VAs and zero paid credits.
+   </td>
+  </tr>
+  <tr>
+   <td>First Time Publish – Admin Approval – Free Credits
+   </td>
+   <td>This email is sent to the VA owner after the administrator approves a VA’s publish request for the first time. In this case, the account has leftover free credits shared by all the VAs and zero paid credits.
+   </td>
+  </tr>
+  <tr>
+   <td>First Time Publish – Auto Approval – Paid Credits
+   </td>
+   <td>When a VA is published for the first time using auto-approval, this email is sent to the owner, and the account has paid credits.
+   </td>
+  </tr>
+  <tr>
+   <td>First Time Publish – Admin Approval – Paid Credits
+   </td>
+   <td>This email is sent to the owner when a VA is published for the first time after the admin’s approval and the account has paid credits.
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" ><strong>Ecommerce Flows for the Standard Plan- Virtual Assistant</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Standard Plan – Purchases for a Bot
+   </td>
+   <td>This email is sent to the VA owner/admin who makes a purchase (first or subsequent) for a Usage plan for a VA that is published. The email contains the following information:
+<ul>
+
+<li>Bot Name
+
+<li>Previous Balance
+
+<li>Order Amount
+
+<li>Purchase Date
+
+<li>Current Balance
+
+<li>Auto-Recharge Status (Activated / Not Activated).
+
+<li>Auto Recharge Amount (shown if auto-reload is enabled).
+
+<li>Minimum Credit to be Maintained (shown only if auto-reload is enabled).
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Standard Plan – Auto Reloads
+   </td>
+   <td>This email is sent to the VA owner when an automatic purchase is successful (auto-reload is enabled for the account).
+<p>
+The email contains the following information:
+<ul>
+
+<li>Bot Name
+
+<li>Previous Balance
+
+<li>Order Amount
+
+<li>Purchase Date
+
+<li>Current Balance
+
+<li>Auto-Recharge Status (Activated / Not Activated).
+
+<li>Auto Recharge Amount (shown if auto-reload is enabled).
+
+<li>Minimum Credit to be Maintained (shown only if auto-reload is enabled).
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Order Confirmation</strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Order Invoice
+   </td>
+   <td>This email is sent to the VA owner for a PayPal order confirmation along with the following invoice details:
+<ul>
+
+<li>Order Invoice link
+
+<li>Invoice Number
+
+<li>Date
+
+<li>Plan
+
+<li>Plan Price
+
+<li>Invoice Total
+
+<li>Customer Control Panel URL
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Auto-Recharge</strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Auto Recharge is Enabled
+   </td>
+   <td>This email is sent to the VA owner when auto-recharge is enabled for a VA. The email contains the following details:
+<ul>
+
+<li>Bot Name
+
+<li>Auto Reload Status – Activated
+
+<li>Auto Reload Amount
+
+<li>Minimum Credit to be Maintained
+
+<li>Payment (mode)
+
+<p>
+<strong>Note</strong>: Auto-reload can only be enabled if the user has made one or more previous purchases.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Auto Recharge is Disabled
+   </td>
+   <td>This email is sent to the VA owner when auto-recharge is deactivated for a VA. The email contains the following details along with the reactivation link:
+<ul>
+
+<li>Bot Name
+
+<li>Auto Reload Status – Not Activated
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Wallet Balance and Credits</strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Low Balance Alert
+   </td>
+   <td>This email is sent as a reminder when auto-reload is disabled or fails and the account balance reaches the lower threshold limit. A link to activate auto-reload is available in the email.
+<p>
+<strong>Note</strong>: The low balance limit is set to <strong>$ 50</strong>.
+   </td>
+  </tr>
+  <tr>
+   <td>Paid Wallet Balance 0 and No free credits to backup
+   </td>
+   <td>This email is sent to the owner when the paid and free credits have been exhausted.
+<p>
+When there are no free credits to back up the zero balance for paid credits, this email triggers and displays a <strong>recharge now</strong> link.
+   </td>
+  </tr>
+  <tr>
+   <td>Paid Wallet Balance goes below 0 – Free credits available
+   </td>
+   <td>The email is sent to the owner when the paid credits have been exhausted but shared free credits are available at the workspace level. This email displays a <strong>recharge now</strong> link.
+   </td>
+  </tr>
+  <tr>
+   <td>Free credits exhausted – Inactive bots
+   </td>
+   <td>The email is sent to the VA owner when the free credits have been exhausted at the workspace level and paid credits have not been added or have been exhausted. This email displays a <strong>recharge now</strong> link.
+   </td>
+  </tr>
+  <tr>
+   <td>Free credits exhausted – Workspace Summary
+   </td>
+   <td>The email is sent to the workspace owner when the free credits have been exhausted at the workspace level. The email displays a usage summary for each VA with the Free Credits consumption and current status information.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>WorkSpace Plan Switch</strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Workspace Plan Switch
+   </td>
+   <td>The email is sent to the workspace owner when the workspace plan is switched to a new plan.
+   </td>
+  </tr>
+  <tr>
+   <td>Workspace Plan Switch – Impacted VAs
+   </td>
+   <td>The email is sent to the VA owner (only once, if a user is a VA owner for multiple bots) when the workspace plan is switched to a new plan. An <strong>Explore Benefits</strong> link is displayed in the email.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Auto-reload Failure</strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Auto-recharge Failure – Credit Card
+   </td>
+   <td>This email is triggered to the VA owner if the credit card cannot be authorized for payment. The subscription plan name and the subscription price are displayed in the email.
+   </td>
+  </tr>
+  <tr>
+   <td>Auto-recharge Failure – PayPal
+   </td>
+   <td>This email is triggered to the VA owner if there is an error when charging the card for the payment via PayPal. The following details are displayed in the email:
+<ul>
+
+<li>Previous Charge Attempted On (date).
+
+<li>Invoiced Amount
+
+<li>Payment Method – <em>Payment mode information on the card</em>.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Payment Method Expiry</strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Reminder – Payment Method Nearing Expiry
+   </td>
+   <td>This email is sent when the payment method (card) is nearing the expiration date. A link to update the payment information is displayed in the email.
+   </td>
+  </tr>
+  <tr>
+   <td>The payment method has expired
+   </td>
+   <td>This email is sent when the payment method (card) has expired. A link to update the payment information is displayed in the email.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Subscription Cancellation</strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Subscription has been Canceled
+   </td>
+   <td>This email is sent when the VA owner cancels the subscription made via the PayPal payment mode. The following details are displayed:
+<ul>
+
+<li>Plan
+
+<li>Plan price
+
+<li>Plan Cancellation Date
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Support Plans</strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Purchase
+   </td>
+   <td>This email is sent to the VA owner for a paid support plan purchase confirmation. The following details are displayed:
+<ul>
+
+<li>Bot Name
+
+<li>Plan: <em>Enhanced Support/Enterprise Support</em>.
+
+<li>Plan Price: <em>$x charged Annually / Monthly</em>.
+
+<li>Plan Activated on: <em>Date</em>
+
+<li>Next Renewal on: <em>Date</em>
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Invoice
+   </td>
+   <td>This email is sent to the VA owner to share the invoice for a support plan purchase. The following details are displayed in the email:
+<ul>
+
+<li>Order Invoice link
+
+<li>Invoice Number
+
+<li>Date
+
+<li>Plan
+
+<li>Plan Price
+
+<li>Invoice Total
+
+<li>Customer Control Panel URL
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Support Plan Auto-renewal
+   </td>
+   <td>This email is sent five days before the renewal to the VA owner. It notifies about the automatic renewal on the specific date along with the following details:
+<ul>
+
+<li>Bot Name
+
+<li>Plan: <em>Enhanced Support/Enterprise Support</em>.
+
+<li>Plan Price: <em>$x charged Annually / Monthly</em>.
+
+<li>Renewal Date: <em>Date</em>
+
+<p>
+<strong>Note</strong>: A URL to update the payment method is provided to help the user update the payment information.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Support Plan Problem with Processing the Renewal Payment
+   </td>
+   <td>This email is sent to the VA owner when the payment for a renewal fails. The following details are displayed:
+<ul>
+
+<li>Bot Name
+
+<li>Plan: <em>Enhanced Support/Enterprise Support</em>.
+
+<li>Plan Price: <em>$x charged Annually / Monthly</em>.
+
+<li>Charge Attempted On: <em>Date</em>
+
+<li>Payment method
+
+<p>
+<strong>Note</strong>: A URL to update the payment method is provided to help the user switch to an alternative payment method.
+</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
 <h2 id="change-the-bot-owner"><strong>Change the Bot Owner</strong><a class="headerlink" href="#change-the-bot-owner" title="Permanent link">&para;</a></h2>
 <p>Similar to how the Admin user can change a Bot owner on the Bot Admin Console (BAC), the workspace owner or admin can also transfer the bot ownership from one user to another on the <strong>Plan and Usage</strong> page – for both published and unpublished bots.</p>
 <p><strong>Important Considerations</strong></p>
@@ -4843,7 +5925,8 @@ Conversion notes:
 <li>Log in to your workspace.</li>
 <li>Select the bot you want to manage the plan details for.</li>
 <li>Click the <strong>Profile Name</strong> at the top-right corner.</li>
-<li>Click <strong>Manage</strong>.</li>
+<li>Click <strong>Manage</strong>.
+<a class="glightbox" href="../images/up%2817%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%2817%29.png" title="image_tooltip" /></a></li>
 <li>
 <p>On the Plan &amp; Usage page, click <strong>Upgrade Plan</strong>.
 <a class="glightbox" href="../images/up%288%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%288%29.png" title="image_tooltip" /></a></p>
@@ -4856,7 +5939,7 @@ Conversion notes:
 <a class="glightbox" href="../images/up%285%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/up%285%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
-<p>On the Usage Plan page, you can add funds or upgrade plan details. For information, see the<a href="https://developer.kore.ai/docs/bots/bot-settings/plan-usage/usage-plans/#Add_Funds_to_your_Account_to_Buy_Paid_Credits"> Add Funds to Your Plan</a><span style="text-decoration:underline;"> </span>section.</p>
+<p>On the Usage Plan page, you can add funds or upgrade plan details. For information, see the<a href="https://developer.kore.ai/docs/bots/bot-settings/plan-usage/usage-plans/#Add_Funds_to_your_Account_to_Buy_Paid_Credits"> Add Funds to Your Plan</a> </span>section.</p>
 </li>
 </ol>
 <h4 id="manage-the-plan-details-in-bot-admin-console"><strong>Manage the Plan Details in Bot Admin Console</strong><a class="headerlink" href="#manage-the-plan-details-in-bot-admin-console" title="Permanent link">&para;</a></h4>
