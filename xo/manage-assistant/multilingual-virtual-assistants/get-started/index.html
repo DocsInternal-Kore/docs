@@ -4774,10 +4774,12 @@
 <p>If the assistant fails to detect a user’s language with high confidence, it requests the user to select a preferred language from the list of enabled options.</p>
 <h2 id="language-selection">Language Selection<a class="headerlink" href="#language-selection" title="Permanent link">&para;</a></h2>
 <ol>
-<li>
-<p>The virtual assistant identifies user language from every utterance. In case a change is detected, it will get a confirmation from the user regarding the switch and will proceeds as per the user response.  These standard responses can be customized using the getCurrentOptions utility,<a href="https://developer.kore.ai/docs/bots/advanced-topics/koreutil-libraries/#koreUtilgetCurrentOptions"> see here for more</a>. </p>
-<p>Note that the current conversation will be discarded in case the user wants to switch languages.</p>
-</li>
+<li>The virtual assistant identifies user language from every utterance. In case a change is detected, it will get a confirmation from the user regarding the switch and will proceeds as per the user response.  These standard responses can be customized using the getCurrentOptions utility,<a href="https://developer.kore.ai/docs/bots/advanced-topics/koreutil-libraries/#koreUtilgetCurrentOptions"> see here for more</a>. </li>
+</ol>
+<p>!!! note</p>
+<div class="language-text highlight"><pre><span></span><code>  Note that the current conversation will be discarded in case the user wants to switch languages.
+</code></pre></div>
+<ol>
 <li>
 <p>Language selection settings – In addition, you may want to configure the language selection options. From the menu under the <strong>Build</strong> tab, click <strong>Configurations &gt; Languages</strong>. Under <strong>Language Selection Logic</strong> (scroll down for the option), for <strong>language selection time frame</strong>, set to one of the following:</p>
 <ul>
