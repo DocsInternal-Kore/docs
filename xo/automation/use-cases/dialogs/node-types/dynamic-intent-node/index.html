@@ -4244,12 +4244,12 @@
 
 
 <h1 id="dynamic-intent-node">Dynamic Intent Node<a class="headerlink" href="#dynamic-intent-node" title="Permanent link">&para;</a></h1>
-<p>The Dynamic Intent node lets you dynamically trigger any of the flows in the bot by defining the intent name using variables. The target intent can be either a Dialog Task or a FAQ. You can use this node to proactively disambiguate an intent and choose different intents based on the user or conversation context.</p>
+<p>The Dynamic Intent node lets you dynamically trigger any of the flows in the bot by defining the intent's display name using variables. The target intent can be either a Dialog Task or a FAQ. You can use this node to proactively disambiguate an intent and choose different intents based on the user or conversation context.</p>
 <p>In the case of linked bots associated with Universal Bots, you can also use this node to trigger flows present in any other linked bots of the corresponding Universal Bot. This feature allows you to invoke reusable or utility flows in one linked bot from another, for example, user authentication, OTP verification, etc. It simplifies switching between tasks in different linked bots of a Universal Bot.</p>
 <h2 id="key-points">Key Points<a class="headerlink" href="#key-points" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The target task can be within the current bot, or if connected to a Universal Bot, it can be in any of the other linked bots of the Universal Bot.</li>
-<li>You can define the name of the target intent using Context or Environment variables.</li>
+<li>You can define the display name of the target intent using Context or Environment variables.</li>
 <li>The platform resolves the context or environment variable during runtime to identify the target intent.</li>
 <li>If the variable fails to provide a valid Dialog Task or FAQ Name, the current task will be discarded, and the Task Failure Event will be triggered.</li>
 </ul>
@@ -4272,15 +4272,15 @@
 <h4 id="general-settings">General Settings<a class="headerlink" href="#general-settings" title="Permanent link">&para;</a></h4>
 <p>In this section, you can provide <strong>Name</strong>, <strong>Display Name</strong>, and <strong>Description</strong> for the node. The node name cannot contain spaces.</p>
 <h4 id="target-intent-name">Target Intent Name<a class="headerlink" href="#target-intent-name" title="Permanent link">&para;</a></h4>
-<p>In this section, you can define the name of the intent (Dialog Task or FAQ) that you want to switch to. Use context variable or environment variable to define the name as follows:</p>
+<p>In this section, you can define the display name of the intent (Dialog Task or FAQ) that you want to switch to. Use context variable or environment variable to define the display name as follows:</p>
 <ul>
 <li>Context Variable – <code>{{context.targetTaskName}}</code></li>
-<li>Environment Variable – <code>{{env.targetTaskName}}</code>Where <code>targetTaskName</code> is a variable that contains the target intent name as the value.</li>
+<li>Environment Variable – <code>{{env.targetTaskName}}</code>Where <code>targetTaskName</code> is a variable that contains the target intent's display name as the value.</li>
 </ul>
 <p>Example Scenarios:</p>
 <ul>
-<li><strong>If the target intent is present within the same bot</strong>: The variable must use a valid intent name within the bot. The target intent can be associated with a Dialog Task or FAQ. Consider the following intent names – <code>reset_password</code>, <code>apply_paid_leave</code>, or <code>how often should I reset my password</code>. In the <strong>Target Intent Name</strong> field, you can use either the intent name <code>reset_password</code> as static text or the context variable <code>{{context.targetTaskName}}</code> where the variable <code>targetTaskName</code> contains the intent name <code>reset_password</code> as the value.</li>
-<li><strong>If the target intent is present in a different linked bot</strong> (the target bot and the current bot are linked to a common Universal Bot): The variable must refer to the target linked bot name and the name of the intent within the target bot, separated by a ‘dot’. Consider the following intent names – <code>HRBot.apply_paid_leave</code>, <code>ITBot.reset_password</code>, or <code>ITBot.how often should I reset my password</code>. In the <strong>Target Intent Name</strong> field, you can use either the intent name <code>ITBot.reset_password</code> as static text or the context variable <code>{{context.targetTaskName}}</code> where the variable <code>targetTaskName</code> contains the intent name <code>ITBot.reset_password</code> as the value.</li>
+<li><strong>If the target intent is present within the same bot</strong>: The variable must use a valid display name of an intent within the bot. The target intent can be associated with a Dialog Task or FAQ. Consider the following intent display names – <code>reset_password</code>, <code>apply_paid_leave</code>, or <code>how often should I reset my password</code>. In the <strong>Target Intent Name</strong> field, you can use either the display name <code>reset_password</code> as static text or the context variable <code>{{context.targetTaskName}}</code> where the variable <code>targetTaskName</code> contains the display name <code>reset_password</code> as the value.</li>
+<li><strong>If the target intent is present in a different linked bot</strong> (the target bot and the current bot are linked to a common Universal Bot): The variable must refer to the target linked bot name and the display name of the intent within the target bot, separated by a ‘dot’. Consider the following intent names – <code>HRBot.apply_paid_leave</code>, <code>ITBot.reset_password</code>, or <code>ITBot.how often should I reset my password</code>. In the <strong>Target Intent Name</strong> field, you can use either the display name <code>ITBot.reset_password</code> as static text or the context variable <code>{{context.targetTaskName}}</code> where the variable <code>targetTaskName</code> contains the display name <code>ITBot.reset_password</code> as the value.</li>
 </ul>
 <h4 id="target-intent-error-transition">Target Intent Error Transition<a class="headerlink" href="#target-intent-error-transition" title="Permanent link">&para;</a></h4>
 <p>In this section, you can select the flow of execution to be followed in case the Platform fails to resolve the defined target intent:</p>
