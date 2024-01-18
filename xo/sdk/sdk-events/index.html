@@ -3971,8 +3971,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#onbotmessage" class="md-nav__link">
+    onBotMessage
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onwebhook" class="md-nav__link">
+    onWebHook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onagenttransfer" class="md-nav__link">
+    onAgentTransfer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onevent" class="md-nav__link">
+    OnEvent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onalert" class="md-nav__link">
+    OnAlert
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onvariableupdate" class="md-nav__link">
+    OnVariableUpdate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onclientevent" class="md-nav__link">
+    OnClientEvent
+  </a>
   
 </li>
       
@@ -3998,8 +4047,8 @@
 <h1 id="events-for-the-botkit-sdk">Events for the BotKit SDK<a class="headerlink" href="#events-for-the-botkit-sdk" title="Permanent link">&para;</a></h1>
 <p>You can use the Kore.ai BotKit SDK to capture and handle events in the Bots Platform for better control and customization of the user’s experience with the Virtual Assistant that you are building. The following events are supported by the BotKit SDK:</p>
 <ul>
-<li><a href="https://developer.kore.ai/docs/bots/sdks/sdk-events/#message">onMessage</a></li>
-<li><a href="https://developer.kore.ai/docs/bots/sdks/sdk-events/#web">onWebhook</a></li>
+<li><a href="#onUserMessage">onMessage</a></li>
+<li><a href="#onWebHook">onWebhook</a></li>
 <li><a href="https://developer.kore.ai/docs/bots/sdks/sdk-events/#agent">onAgentTransfer</a></li>
 <li><a href="https://developer.kore.ai/docs/bots/sdks/sdk-events/#onevent">onEventNode</a></li>
 <li><a href="https://developer.kore.ai/docs/bots/sdks/sdk-events/#onalert">onAlertNode</a></li>
@@ -4012,302 +4061,281 @@
 <li><span style="text-decoration:underline;">onUserMessage:</span> This event is triggered when a user sends a message to the assistant and it is received by the channel adapter. The user message is wrapped in this event and sent to the SDK.</li>
 <li><span style="text-decoration:underline;">onBotMessage</span>: This event is triggered when any messages need to be sent to the user. These messages are sent to the SDK along with <code>context</code> object.</li>
 </ul>
-<h3 id="onusermessage"><strong>onUserMessage</strong><a class="headerlink" href="#onusermessage" title="Permanent link">&para;</a></h3>
+<h3 id="onusermessage">onUserMessage<a class="headerlink" href="#onusermessage" title="Permanent link">&para;</a></h3>
 <p>Syntax:</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>on_user_message : function(requestId, data, callback)
 </span></code></pre></div>
 Parameters:</p>
 <ul>
-<li>
-<p><code>requestId</code> – A unique ID for each message event.</p>
-</li>
-<li>
-<p>```
-payload – A JSON response payload as follows:
-{
+<li>requestId – A unique ID for each message event.</li>
+<li>payload – A JSON response payload as follows:</li>
+</ul>
+<p>```{
    "message":"message sent by the assistant to the user",
    "taskId":"Dialog task Id",
    "nodeId":"current node id in the dialog flow",
    "channel":"channel name",
    "context":"context object"
-}
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>* `callback` – The function to call at event completion used to send the updated message and context back to the XO Platform.
+    }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>* callback – The function to call at event completion used to send the updated message and context back to the XO Platform.
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Example: In the following code example for the onUserMessage event, the user message is evaluated for transfer to a live agent and transferred, otherwise, the message is passed on to the BotKit SDK for processing.
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>```javascript
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>/*
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a> * OnUserMessage event handler
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a> */
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>function onUserMessage(requestId, payload, callback){
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    debug(&quot;user message&quot;, payload);
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    var visitorId = _.get(payload, &#39;channel.from&#39;);
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    visitorId = payload.context.session.UserContext._id;
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    var entry = _map[visitorId];
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    if (payload.message === &quot;clearagent&quot;) // disconnect from LiveChat on user utterance
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    {
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        sdk.clearAgentSession(payload);
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    }
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    if(entry){//check for live agent
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        //route to live agent
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        var formdata = {};
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>        formdata.secured_session_id = entry.secured_session_id;
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        formdata.licence_id = config.liveagentlicense;
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        formdata.message = payload.message;
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>        return api.sendMsg(visitorId, formdata)
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>            .catch(function(e){
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>                console.error(e);
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>                delete userDataMap[visitorId];
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>                delete _map[visitorId];
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>                return sdk.sendBotMessage(payload, callback);
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>            });
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>    }
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>    else {
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>        return sdk.sendBotMessage(payload, callback);
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>    }
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>}
+</span></code></pre></div></p>
+<h3 id="onbotmessage">onBotMessage<a class="headerlink" href="#onbotmessage" title="Permanent link">&para;</a></h3>
+<p>Syntax:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>on_bot_message : function(requestId, data, callback)
 </span></code></pre></div>
-/*</p>
-</li>
-<li>OnUserMessage event handler
- */
-function onUserMessage(requestId, payload, callback){
-    debug("user message", payload);
-    var visitorId = _.get(payload, 'channel.from');
-    visitorId = payload.context.session.UserContext._id;
-    var entry = _map[visitorId];
-    if (payload.message === "clearagent") // disconnect from LiveChat on user utterance
-    {
-        sdk.clearAgentSession(payload);
-    }
-    if(entry){//check for live agent
-        //route to live agent
-        var formdata = {};
-        formdata.secured_session_id = entry.secured_session_id;
-        formdata.licence_id = config.liveagentlicense;
-        formdata.message = payload.message;
-        return api.sendMsg(visitorId, formdata)
-            .catch(function(e){
-                console.error(e);
-                delete userDataMap[visitorId];
-                delete _map[visitorId];
-                return sdk.sendBotMessage(payload, callback);
-            });
-    }
-    else {
-        return sdk.sendBotMessage(payload, callback);
-    }
-}
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>### **onBotMessage**
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Syntax:
-</span></code></pre></div>
- on_bot_message : function(requestId, data, callback)
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Parameters:
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>* `requestId` – A unique ID for each message event.
-</span></code></pre></div>
-payload – A JSON response payload as follows:
-{
-   "message":"message sent to the user",
-   "channel":"channel name",
-   "context":"context object"</li>
+Parameters:</p>
+<ul>
+<li>requestId – A unique ID for each message event.</li>
+<li>payload – A JSON response payload as follows:</li>
 </ul>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>* `}`
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>* `callback` – The function to call at event completion used to send the updated message and context back to the user.
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Example: The following code snippet onBotMessage event evaluates the user message for content and then for message tone. If the message tone is greater than or equal to 2 for the angry tone, then the communication between the user and the assistant is switched to a live agent.
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>   &quot;message&quot;:&quot;message sent to the user&quot;,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>   &quot;channel&quot;:&quot;channel name&quot;,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>   &quot;context&quot;:&quot;context object&quot;
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>}
 </span></code></pre></div>
-/*
- * onBotMessage event handler
- */
-function onBotMessage(requestId, payload, callback){
-    debug("Bot Message Data",payload);
-    console.log("in bot message");
-    var visitorId = _.get(paylod, 'channel.from');
-    var entry = _map[visitorId];
-    if(data.message.length === 0 || payload.message === '') {
-        return;
-    }
-    var message_tone = _.get(payload, 'context.message_tone');console.log("message tone -----",message_tone);
-    if(message_tone &amp;&amp; message_tone.length&gt; 0){
-        var angry = _.filter(message_tone, {tone_name: 'angry'});
-        if(angry.length){
-            angry = angry[0];
-            if(angry.level &gt;=2){
-              return  connectToAgent(requestId, data);
-            }
-        }
-    }
-    if(!entry)
-    {
-        sdk.sendUserMessage(payload, callback);
-    }
-}
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>## onWebHook
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>This event is triggered when the Kore NL Engine processes the Webhook node in the dialog flow. This event is sent to the SDK with `componentId` and context. The SDK can execute business logic and send the updated context back to the Platform. Syntax:
+* callback – The function to call at event completion used to send the updated message and context back to the user.</p>
+<p>Example: The following code snippet onBotMessage event evaluates the user message for content and then for message tone. If the message tone is greater than or equal to 2 for the angry tone, then the communication between the user and the assistant is switched to a live agent.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cm">/*</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cm"> * onBotMessage event handler</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cm"> */</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">onBotMessage</span><span class="p">(</span><span class="nx">requestId</span><span class="p">,</span><span class="w"> </span><span class="nx">payload</span><span class="p">,</span><span class="w"> </span><span class="nx">callback</span><span class="p">){</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nx">debug</span><span class="p">(</span><span class="s2">&quot;Bot Message Data&quot;</span><span class="p">,</span><span class="nx">payload</span><span class="p">);</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;in bot message&quot;</span><span class="p">);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">visitorId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">paylod</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;channel.from&#39;</span><span class="p">);</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_map</span><span class="p">[</span><span class="nx">visitorId</span><span class="p">];</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">payload</span><span class="p">.</span><span class="nx">message</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">message_tone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">payload</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;context.message_tone&#39;</span><span class="p">);</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;message tone -----&quot;</span><span class="p">,</span><span class="nx">message_tone</span><span class="p">);</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">message_tone</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">message_tone</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">){</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">angry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">message_tone</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">tone_name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;angry&#39;</span><span class="p">});</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="nx">angry</span><span class="p">.</span><span class="nx">length</span><span class="p">){</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">            </span><span class="nx">angry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">angry</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="nx">angry</span><span class="p">.</span><span class="nx">level</span><span class="w"> </span><span class="o">&gt;=</span><span class="mf">2</span><span class="p">){</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">              </span><span class="k">return</span><span class="w">  </span><span class="nx">connectToAgent</span><span class="p">(</span><span class="nx">requestId</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">entry</span><span class="p">)</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">        </span><span class="nx">sdk</span><span class="p">.</span><span class="nx">sendUserMessage</span><span class="p">(</span><span class="nx">payload</span><span class="p">,</span><span class="w"> </span><span class="nx">callback</span><span class="p">);</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="p">}</span>
 </span></code></pre></div>
-on_webhook = function(requestId, componentId, payload, callback)
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Parameters:
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>* `requestId` – A unique ID for each webhook event.
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>* `componentId` – The unique ID for the SDKWebhook node.
+<h2 id="onwebhook">onWebHook<a class="headerlink" href="#onwebhook" title="Permanent link">&para;</a></h2>
+<p>This event is triggered when the Kore NL Engine processes the Webhook node in the dialog flow. This event is sent to the SDK with <code>componentId</code> and context. The SDK can execute business logic and send the updated context back to the Platform. Syntax:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>on_webhook = function(requestId, componentId, payload, callback)
 </span></code></pre></div>
-payload – A JSON response payload as follows:
-{
-   "message":"message sent by the assistant to the XO Platform",
-   "taskId":"Dialog task Id",
-   "nodeId":"current node id in the dialog flow",
-   "channel":"channel name",
-   "context":"context object"</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>* `}`
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>* `callback` – The function to call at event completion used to send the updated message and context back to the XO Platform.
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Examples In the following example for the `on_webhook` event, two hotel names are returned as results as a response to user input.
+<p>Parameters:</p>
+<ul>
+<li><code>requestId</code> – A unique ID for each webhook event.</li>
+<li><code>componentId</code> – The unique ID for the SDKWebhook node.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>payload – A JSON response payload as follows:
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>{
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>   &quot;message&quot;:&quot;message sent by the assistant to the XO Platform&quot;,
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>   &quot;taskId&quot;:&quot;Dialog task Id&quot;,
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>   &quot;nodeId&quot;:&quot;current node id in the dialog flow&quot;,
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>   &quot;channel&quot;:&quot;channel name&quot;,
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>   &quot;context&quot;:&quot;context object&quot;
 </span></code></pre></div>
-   //on_webhook handler
-    on_webhook  : function(requestId, payload, componentId, callback) {
-        if (componentId === 'sendResponse') {
-          var hotels = {
-            "hotels":[
-                  "Taj Banjara",
-                  "Novotel"
-            ]
-          };
-          payload.context.hotelResults = hotels;
-          callback(null,data);
-        }
-    }
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>In this example for the `on_webhook` event, for the _Flights Info_ node in a dialog task, either a list of departure or destination airports based on the requested date is returned based on the flow of the dialog, as a list of results displayed to the end user.
+<ul>
+<li><code>}</code></li>
+<li><code>callback</code> – The function to call at event completion used to send the updated message and context back to the XO Platform.</li>
+</ul>
+<p>Examples In the following example for the <code>on_webhook</code> event, two hotel names are returned as results as a response to user input.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>   //on_webhook handler
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    on_webhook  : function(requestId, payload, componentId, callback) {
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        if (componentId === &#39;sendResponse&#39;) {
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>          var hotels = {
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>            &quot;hotels&quot;:[
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>                  &quot;Taj Banjara&quot;,
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>                  &quot;Novotel&quot;
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>            ]
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>          };
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>          payload.context.hotelResults = hotels;
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>          callback(null,data);
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>        }
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    }
 </span></code></pre></div>
-   on_webhook : function(requestId, payload, componentId, callback) {
-        var context = payload.context;
-        if (componentName === 'FlightsInfo') {
-          var origin = context.entities.Source;
-          var destination = context.entities.Dest;
-          var departureDate = context.entities.Date;
-          findFlights(origin,destination,departureDate)
-            .then(function(flightResults) {
-                payload.context.flightResults = flightResults;
-                callback(null, data);
-            });
-        } else if(componentId === 'GetSourceAirports'){
-             var searchTerm = context.entities.SourceName;
-             findAirports(searchTerm)
-            .then(function(airportResults) {
-                payload.context.sourceAirports = airportResults;
-                callback(null, data);
-            });
-        } else if(componentId === 'GetDestAirports'){
-           var searchTerm = context.entities.DestName;
-             findAirports(searchTerm)
-            .then(function(airportResults) {
-                payload.context.destAirports = airportResults;
-                callback(null, data);
-            });
-        }
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>## onAgentTransfer
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>This event is triggered when the Kore NL Engine processes an Agent Transfer node in the dialog flow. This event is sent to the SDK with `requestId` and context. The SDK can execute a business logic to switch the user seamlessly to a Live Agent. Syntax:
+<p>In this example for the <code>on_webhook</code> event, for the <em>Flights Info</em> node in a dialog task, either a list of departure or destination airports based on the requested date is returned based on the flow of the dialog, as a list of results displayed to the end user.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>   on_webhook : function(requestId, payload, componentId, callback) {
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>        var context = payload.context;
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        if (componentName === &#39;FlightsInfo&#39;) {
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>          var origin = context.entities.Source;
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>          var destination = context.entities.Dest;
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>          var departureDate = context.entities.Date;
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>          findFlights(origin,destination,departureDate)
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>            .then(function(flightResults) {
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>                payload.context.flightResults = flightResults;
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>                callback(null, data);
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>            });
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>        } else if(componentId === &#39;GetSourceAirports&#39;){
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>             var searchTerm = context.entities.SourceName;
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>             findAirports(searchTerm)
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>            .then(function(airportResults) {
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>                payload.context.sourceAirports = airportResults;
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>                callback(null, data);
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>            });
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>        } else if(componentId === &#39;GetDestAirports&#39;){
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>           var searchTerm = context.entities.DestName;
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>             findAirports(searchTerm)
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>            .then(function(airportResults) {
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>                payload.context.destAirports = airportResults;
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>                callback(null, data);
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>            });
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>        }
 </span></code></pre></div>
-function onAgentTransfer(requestId, data, callback){
-connectToAgent(requestId, data, callback);
-}
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Parameters:
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>* `requestId` – A unique ID for each message event.
+<h2 id="onagenttransfer">onAgentTransfer<a class="headerlink" href="#onagenttransfer" title="Permanent link">&para;</a></h2>
+<p>This event is triggered when the Kore NL Engine processes an Agent Transfer node in the dialog flow. This event is sent to the SDK with <code>requestId</code> and context. The SDK can execute a business logic to switch the user seamlessly to a Live Agent. Syntax:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>function onAgentTransfer(requestId, data, callback){
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>connectToAgent(requestId, data, callback);
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>}
 </span></code></pre></div>
-payload – A JSON response payload as follows:
-{
-   OnAgentTransferPayload ","
-      requestId ":1501244156289,"
-      botId ":"st - b4a22e86 - e95b - 575 c - b888 - e106d083a251 ","
-      callbackUrl ":"https: //bots.kore.ai/api/botsdk/stream/st-b4a22e86-e95b-575c-b888-e106d083a251/serviceCallback/1501244156289","context": ...</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>* `}`
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>* `callback` – The function to call at event completion used to send the updated message and context back to the XO Platform.
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Example: The following code snippet onAgentTransfer event connects the user to a Live Agent and passing the user message, bot message, and historical chat messages of the session.
+<p>Parameters:</p>
+<ul>
+<li><code>requestId</code> – A unique ID for each message event.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>payload – A JSON response payload as follows:
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>{
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>   OnAgentTransferPayload &quot;,&quot;
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>      requestId &quot;:1501244156289,&quot;
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>      botId &quot;:&quot;st - b4a22e86 - e95b - 575 c - b888 - e106d083a251 &quot;,&quot;
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>      callbackUrl &quot;:&quot;https: //bots.kore.ai/api/botsdk/stream/st-b4a22e86-e95b-575c-b888-e106d083a251/serviceCallback/1501244156289&quot;,&quot;context&quot;: ...
 </span></code></pre></div>
-function connectToAgent(requestId, data, cb){
-var formdata = {}; console.log("userlog",JSON.stringify(data.context.session.UserContext._id));
-formdata.licence_id = config.liveagentlicense;
-formdata.welcome_message = "";
-var visitorId = _.get(data, 'channel.channelInfos.from');
-if(!visitorId){
-visitorId = _.get(data, 'channel.from');
-}
-visitorId = data.context.session.UserContext._id;
-userDataMap[visitorId] = data;
-data.message="An Agent will be assigned to you shortly!!!";
-var d = new Date();
-data.context.session.BotUserSession.startTime = new Date().toLocaleString();
-console.log("userlog",JSON.stringify(data.context.session));
-sdk.sendUserMessage(data, cb);
-formdata.welcome_message = "Link for user Chat history with the assistant : "+ config.app.url +"/history/index.html?visitorId=" + visitorId;
-return api.initChat(visitorId, formdata)
-.then(function(res){
-_map[visitorId] = {
-secured_session_id: res.secured_session_id,
-visitorId: visitorId,
-last_message_id: 0
-};
-});
-}</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>## OnEvent
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>This event is triggered when Dialog Task or FAQ ends in the assistant and sends request ID and context to the SDK. Syntax: on_event : function (requestId, data, callback) Parameters:
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>* requestId – A unique ID for each message event.
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>* data– A JSON response payload as shown in the example below:
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>* callback – The function to call after event completion; it is used to send the updated message and context back to the XO Platform.
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>Example:
+<ul>
+<li><code>}</code></li>
+<li><code>callback</code> – The function to call at event completion used to send the updated message and context back to the XO Platform.</li>
+</ul>
+<p>Example: The following code snippet onAgentTransfer event connects the user to a Live Agent and passing the user message, bot message, and historical chat messages of the session.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>function connectToAgent(requestId, data, cb){
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>var formdata = {}; console.log(&quot;userlog&quot;,JSON.stringify(data.context.session.UserContext._id));
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>formdata.licence_id = config.liveagentlicense;
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>formdata.welcome_message = &quot;&quot;;
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>var visitorId = _.get(data, &#39;channel.channelInfos.from&#39;);
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>if(!visitorId){
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>visitorId = _.get(data, &#39;channel.from&#39;);
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>}
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>visitorId = data.context.session.UserContext._id;
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>userDataMap[visitorId] = data;
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>data.message=&quot;An Agent will be assigned to you shortly!!!&quot;;
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>var d = new Date();
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>data.context.session.BotUserSession.startTime = new Date().toLocaleString();
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>console.log(&quot;userlog&quot;,JSON.stringify(data.context.session));
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>sdk.sendUserMessage(data, cb);
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>formdata.welcome_message = &quot;Link for user Chat history with the assistant : &quot;+ config.app.url +&quot;/history/index.html?visitorId=&quot; + visitorId;
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>return api.initChat(visitorId, formdata)
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>.then(function(res){
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>_map[visitorId] = {
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>secured_session_id: res.secured_session_id,
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>visitorId: visitorId,
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>last_message_id: 0
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>};
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>});
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>}
 </span></code></pre></div>
-on_event : function (requestId, data, callback)
-{
-return sdk.sendAlertMessage(data, callback);
-}
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>The event adds the following code in the Data object sent to kit:
+<h2 id="onevent">OnEvent<a class="headerlink" href="#onevent" title="Permanent link">&para;</a></h2>
+<p>This event is triggered when Dialog Task or FAQ ends in the assistant and sends request ID and context to the SDK. Syntax: on_event : function (requestId, data, callback) Parameters:</p>
+<ul>
+<li>requestId – A unique ID for each message event.</li>
+<li>data– A JSON response payload as shown in the example below:</li>
+<li>callback – The function to call after event completion; it is used to send the updated message and context back to the XO Platform.</li>
+</ul>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>on_event : function (requestId, data, callback)
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>{
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>return sdk.sendAlertMessage(data, callback);
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>}
 </span></code></pre></div>
-"event":
-{
-"event Type": "endDialog"/ "endFAQ"
-}</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>## OnAlert
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>This event is triggered when a user receives an alert. Syntax: on_alert : function (requestId, data, callback) Parameters:
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>* `requestId` – A unique ID for each message event.
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>* `data`– A JSON response payload.
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>* `callback` – The function to call at event completion; it is used to send the updated message and context back to the XO Platform.
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>Example:
+<p>The event adds the following code in the Data object sent to kit:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&quot;event&quot;:
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>{
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>&quot;event Type&quot;: &quot;endDialog&quot;/ &quot;endFAQ&quot;
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>}
 </span></code></pre></div>
-on_alert: function(requestId, data, callback)
-{
- return sdk.sendAlertMessage(data, callback);
-}
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>The alert response data is found in the data object sent to the kit.
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>## OnVariableUpdate
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>This event is triggered on **variable_update** when the assistant is published. Syntax: variable_update : function (requestId, data, callback) Parameters:
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>* `requestId` – A unique ID for each message event.
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>* `data`– A JSON response payload
-</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>* `callback` – The function to call after event completion; it is used to send the updated message and context back to the XO Platform.
+<h2 id="onalert">OnAlert<a class="headerlink" href="#onalert" title="Permanent link">&para;</a></h2>
+<p>This event is triggered when a user receives an alert. Syntax: on_alert : function (requestId, data, callback) Parameters:</p>
+<ul>
+<li><code>requestId</code> – A unique ID for each message event.</li>
+<li><code>data</code>– A JSON response payload.</li>
+<li><code>callback</code> – The function to call at event completion; it is used to send the updated message and context back to the XO Platform.</li>
+</ul>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>on_alert: function(requestId, data, callback)
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>{
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a> return sdk.sendAlertMessage(data, callback);
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>}
 </span></code></pre></div>
-var event = data.eventType;
-console.log("event-----------&gt;", event);
-if (first || event == "variable_update") {
-// fetch BotVariables List for published assistants
-sdk.fetchBotVariable(data, langArr, function(err, response) {
-dataStore.saveAllVariables(response, langArr);
-first = false;
-});
-} else {
-var lang = data.language;
-//update Existing BotVariables in Storage
-updateBotVariableInDataStore(botVariables, data, event, lang);
-}
-console.log(dataStore);
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>## OnClientEvent
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>This event is triggered on **client_event** when the assistant receives client events sent by the third party application. Syntax: on_client_event : function (requestId, data, callback) Parameters:
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>* `requestId` – A unique ID for each message event.
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>* `data`– A JSON response payload
-</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>* `callback` – The function to call after event completion; it is used to send the updated message and context back to the XO Platform.
+<p>The alert response data is found in the data object sent to the kit.</p>
+<h2 id="onvariableupdate">OnVariableUpdate<a class="headerlink" href="#onvariableupdate" title="Permanent link">&para;</a></h2>
+<p>This event is triggered on <strong>variable_update</strong> when the assistant is published. Syntax: variable_update : function (requestId, data, callback) Parameters:</p>
+<ul>
+<li><code>requestId</code> – A unique ID for each message event.</li>
+<li><code>data</code>– A JSON response payload</li>
+<li><code>callback</code> – The function to call after event completion; it is used to send the updated message and context back to the XO Platform.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>var event = data.eventType;
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>console.log(&quot;event-----------&gt;&quot;, event);
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>if (first || event == &quot;variable_update&quot;) {
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>// fetch BotVariables List for published assistants
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>sdk.fetchBotVariable(data, langArr, function(err, response) {
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>dataStore.saveAllVariables(response, langArr);
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>first = false;
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>});
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>} else {
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>var lang = data.language;
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>//update Existing BotVariables in Storage
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>updateBotVariableInDataStore(botVariables, data, event, lang);
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>}
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>console.log(dataStore);
 </span></code></pre></div>
-on_client_event : function (requestId, data, callback) {
-    console.log("on_client_event &rarr;  : ", data.preDefinedEvent, data.customEvent);
-    return sdk.sendBotEvent(data, callback);
-    }
-```</p>
+<h2 id="onclientevent">OnClientEvent<a class="headerlink" href="#onclientevent" title="Permanent link">&para;</a></h2>
+<p>This event is triggered on <strong>client_event</strong> when the assistant receives client events sent by the third party application. Syntax: on_client_event : function (requestId, data, callback) Parameters:</p>
+<ul>
+<li><code>requestId</code> – A unique ID for each message event.</li>
+<li><code>data</code>– A JSON response payload</li>
+<li><code>callback</code> – The function to call after event completion; it is used to send the updated message and context back to the XO Platform.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>on_client_event : function (requestId, data, callback) {
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    console.log(&quot;on_client_event --&gt;  : &quot;, data.preDefinedEvent, data.customEvent);
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    return sdk.sendBotEvent(data, callback);
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    }
+</span></code></pre></div>
 <p>These events are associated with the application subscribing to botkit event type – <strong>onMessage</strong> and <strong>onagenttransfer</strong>. These event can be used to track the events like user is typing, user has stopped typing or user has read the message. Examples:</p>
 <ul>
 <li><strong>User started typing: <em>Request</em></strong>: { “resourceid”: “/bot.clientEvent”, “preDefinedEvent” : { “type”: “TYPING_STARTED” }, “customEvent”: {“test”:”test”}, “botInfo”: {“chatBot”:”&lt;bot-name&gt;”, “taskBotId”:”&lt;bot-id&gt;”} } <em>Response1</em>: {“ok”:true,”type”:”ack”} <em>Response2</em>: {“type”:”events”, “from”:”bot”, “botInfo”: {“chatBot”:”&lt;bot-name&gt;”, “taskBotId”:”&lt;bot-id&gt;”} }, “preDefinedEvent”:{“type”:”TYPING_STARTED”}, “customEvent”:{“test”:”test”},”traceId”:”6b12f4cc73c806dd”}</li>
