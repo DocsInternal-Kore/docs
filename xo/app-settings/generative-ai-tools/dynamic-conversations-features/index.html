@@ -4320,7 +4320,10 @@
 <p>This feature uses LLM to reiterate the recent bot responses when the Repeat Response event is triggered. Bot developers can enable the event and customize the trigger conditions. This empowers end-users to ask the bot to repeat its recent responses at any point during the conversation. Currently, this event is supported for IVR, Audiocodes, and Twilio Voice channels.<a href="https://developer.kore.ai/docs/bots/bot-intelligence/event-based-bot-actions/#Repeat_Bot_Response_Event"> Learn more</a>.</p>
 <h3 id="few-shot-ml-model">Few-shot ML Model<a class="headerlink" href="#few-shot-ml-model" title="Permanent link">&para;</a></h3>
 <p>The Few-shot model uses Kore Ai’s hosted embeddings to train virtual assistants based on intent names and training utterances. The model identifies the intents based on semantic similarity between user and training utterances.</p>
-<p><strong>Note:</strong> The Few-shot model is production-ready in English but experimental in other languages. We advise caution before using it in production for non-English languages.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Few-shot model is production-ready in English but experimental in other languages. We advise caution before using it in production for non-English languages.</p>
+</div>
 <p><strong>Usage</strong></p>
 <p>Before performing utterance testing, the user selects the <strong>Few-Shot Model (Kore.ai Hosted Embeddings)</strong> network type. </p>
 <p>During utterance testing, the user provides a more descriptive intent name with a subject, object, and nouns, as well as the training utterances. Once the test runs, the system identifies the most logical intent as the definitive match based on the following:</p>

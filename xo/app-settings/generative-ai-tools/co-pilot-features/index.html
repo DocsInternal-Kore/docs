@@ -4092,18 +4092,20 @@
 <p><a class="glightbox" href="../images/cpf%283%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/cpf%283%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
-<p>Click the <strong>Advance Setting</strong>. The <strong>Advance Settings</strong> dialog box is displayed. </p>
-<p><a class="glightbox" href="../images/cpf%282%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/cpf%282%29.png" title="image_tooltip" /></a></p>
+<p>Click the <strong>Advance Setting</strong>. The <strong>Advance Settings</strong> dialog box is displayed. 
+    <a class="glightbox" href="../images/cpf%282%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/cpf%282%29.png" title="image_tooltip" /></a></p>
 </li>
 </ol>
-<p>Adjusting the settings allows you to fine-tune the model’s behavior to meet your needs. The default settings work fine for most cases. You can tweak the settings and find the right balance for your use case. A few settings are common in the features, and a few are feature-specific:
-* <strong>Model</strong>: The selected model for which the settings are displayed.
-* <strong>Instructions or Context</strong>: Add feature/use case-specific instructions or context to guide the model.
-* <strong>Temperature</strong>: The setting controls the randomness of the model’s output. A higher temperature, like 0.8 or above, can result in unexpected, creative, and less relevant responses. On the other hand, a lower temperature, like 0.5 or below, makes the output more focused and relevant.
-* <strong>Max Tokens</strong>: It indicates the total number of tokens used in the API call to the model. It affects the cost and the time taken to receive a response. A token can be as short as one character or as long as one word, depending on the text.
-* <strong>Number of Previous User Inputs</strong>: Indicates how many previous user messages should be sent to the model as context for rephrasing the response sent through the respective node. For example, 5 means that the previous 5 responses are sent as context.
-* <strong>Additional Instructions</strong>: Add specific instructions on how prompts should be rephrased. You can create a persona, ask it to rephrase in a particular tone, etc.
-* <strong>Similarity Threshold</strong>: The Similarity Threshold is applicable for the Answer from Docs feature. This threshold refers to the similarity between the user utterance and the document chunks. The platform shortlists all chunks that are above the threshold and sends these chunks to the LLMs to auto-generate the responses. Define a suitable threshold that works best for your use case. Setting a higher threshold limits the number of chunks and may not generate any result. Setting a lower threshold might qualify too many chunks and might dilute the response.</p>
+<p>Adjusting the settings allows you to fine-tune the model’s behavior to meet your needs. The default settings work fine for most cases. You can tweak the settings and find the right balance for your use case. A few settings are common in the features, and a few are feature-specific:</p>
+<ul>
+<li><strong>Model</strong>: The selected model for which the settings are displayed.</li>
+<li><strong>Instructions or Context</strong>: Add feature/use case-specific instructions or context to guide the model.</li>
+<li><strong>Temperature</strong>: The setting controls the randomness of the model’s output. A higher temperature, like 0.8 or above, can result in unexpected, creative, and less relevant responses. On the other hand, a lower temperature, like 0.5 or below, makes the output more focused and relevant.</li>
+<li><strong>Max Tokens</strong>: It indicates the total number of tokens used in the API call to the model. It affects the cost and the time taken to receive a response. A token can be as short as one character or as long as one word, depending on the text.</li>
+<li><strong>Number of Previous User Inputs</strong>: Indicates how many previous user messages should be sent to the model as context for rephrasing the response sent through the respective node. For example, 5 means that the previous 5 responses are sent as context.</li>
+<li><strong>Additional Instructions</strong>: Add specific instructions on how prompts should be rephrased. You can create a persona, ask it to rephrase in a particular tone, etc.</li>
+<li><strong>Similarity Threshold</strong>: The Similarity Threshold is applicable for the Answer from Docs feature. This threshold refers to the similarity between the user utterance and the document chunks. The platform shortlists all chunks that are above the threshold and sends these chunks to the LLMs to auto-generate the responses. Define a suitable threshold that works best for your use case. Setting a higher threshold limits the number of chunks and may not generate any result. Setting a lower threshold might qualify too many chunks and might dilute the response.</li>
+</ul>
 <h3 id="change-settings-for-a-custom-model">Change Settings for a Custom Model<a class="headerlink" href="#change-settings-for-a-custom-model" title="Permanent link">&para;</a></h3>
 <p>For a custom model, you can only change the post-processor script to adjust the actual response with the expected response.</p>
 <p>Follow these steps:</p>
@@ -4267,7 +4269,9 @@
 <li>You can create a test suite by recording a live conversation with a VA by initiating the interaction or letting the VA initiate it.</li>
 <li>An icon displays to indicate the user input suggestions from Generative AI.</li>
 <li>The Platform triggers OpenAI or Anthropic Claude-1 based on your model selection to generate suggestions for user input where expected in English or a Non-English Bot Language.</li>
-<li>The Platform shares the following information with OpenAI/Anthropic to generate suggestions</li>
+<li>
+<p>The Platform shares the following information with OpenAI/Anthropic to generate suggestions.</p>
+<ul>
 <li>Randomly picked intents from the VA (Dialog, FAQ),</li>
 <li>Conversation flow,</li>
 <li>Current Intent, if any,</li>
@@ -4291,6 +4295,8 @@
 <li>You can regenerate suggestions if required.</li>
 <li>You can accept the suggestions shown or type custom input at every step.</li>
 <li>Create a Test Suite after stopping the recording and validating the model.</li>
+</ul>
+</li>
 </ol>
 <p>If the feature is disabled, the Platform doesn’t display the Generative AI suggestions icon and the suggestions themselves.<a href="https://developer.kore.ai/docs/bots/test-your-bot/create-a-test-suite/#Generated_User_Response_Suggestions"> Learn more.</a></p>
 <h3 id="nlp-batch-test-cases-suggestions">NLP Batch Test Cases Suggestions<a class="headerlink" href="#nlp-batch-test-cases-suggestions" title="Permanent link">&para;</a></h3>
