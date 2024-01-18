@@ -4084,21 +4084,21 @@
 <p>The Kore.ai BotKit SDK provides functions that you can use for greater control of your assistant and provide a better user experience. \
 The following functions are supported by the BotKit SDK.</p>
 <ul>
-<li><a href="#sdk.sendusermessage">sdk.sendUserMessage</a></li>
-<li><a href="#sdk.sendbotmessage">sdk.sendBotMessage</a></li>
-<li><a href="#sdk.asyncresponse">sdk.AsyncResponse</a></li>
-<li><a href="#sdk.respondtohook">sdk.respondToHook</a></li>
-<li><a href="#sdk.savedata">sdk.saveData</a></li>
-<li><a href="#sdk.registerbot">sdk.registerBot</a></li>
-<li><a href="#sdk.getsaveddata">sdk.getSavedData</a></li>
-<li><a href="#sdk.getmessages">sdk.getMessages</a></li>
-<li><a href="#sdk.resetbot">sdk.resetBot</a></li>
-<li><a href="#sdk.startagentsession">sdk.startAgentSession</a></li>
-<li><a href="#sdk.clearagentsession">sdk.clearAgentSession</a></li>
-<li><a href="#sdk.extendrequestid">sdk.extendRequestId</a></li>
-<li><a href="#sdk.skipusermessage">sdk.skipUserMessage</a></li>
-<li><a href="#sdk.skipbotmessage">sdk.skipBotMessage</a></li>
-<li><a href="#sdk.closeconversationsession">sdk.closeConversationSession</a></li>
+<li><a href="#sdksendusermessage">sdk.sendUserMessage</a></li>
+<li><a href="#sdksendbotmessage">sdk.sendBotMessage</a></li>
+<li><a href="#sdkasyncresponse">sdk.AsyncResponse</a></li>
+<li><a href="#sdkrespondtohook">sdk.respondToHook</a></li>
+<li><a href="#sdksavedata">sdk.saveData</a></li>
+<li><a href="#sdkregisterbot">sdk.registerBot</a></li>
+<li><a href="#sdkgetsaveddata">sdk.getSavedData</a></li>
+<li><a href="#sdkgetmessages">sdk.getMessages</a></li>
+<li><a href="#sdkresetbot">sdk.resetBot</a></li>
+<li><a href="#sdkstartagentsession">sdk.startAgentSession</a></li>
+<li><a href="#sdkclearagentsession">sdk.clearAgentSession</a></li>
+<li><a href="#sdkextendrequestid">sdk.extendRequestId</a></li>
+<li><a href="#sdkskipusermessage">sdk.skipUserMessage</a></li>
+<li><a href="#sdkskipbotmessage">sdk.skipBotMessage</a></li>
+<li><a href="#sdkcloseconversationsession">sdk.closeConversationSession</a></li>
 </ul>
 <h2 id="sdksendusermessage">sdk.sendUserMessage<a class="headerlink" href="#sdksendusermessage" title="Permanent link">&para;</a></h2>
 <p>This function sends the message to the user.</p>
@@ -4756,28 +4756,28 @@ At run time, during the execution of dialog, instead of waiting for the BotKit t
 </span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Post the release of ver8.0 of the Platform, you can add User, Message, and Session Meta Tags. The following would be the syntax for the necessary payload:</p>
-<p>```json
-metaTags":
-{
-    "userMetaTags":[
-        {
-            "name":"<string>",
-            "value":"<string>"
-       }
-    ],
-    "sessionMetaTags":[
-      {
-         "name":"<string>",
-         "value":"<string>"
-      }
-    ],
-    "messageMetaTags":[
-     {
-          "name":"<string>",
-          "value":"<string>"
-     }
-    ]
-}</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="err">me</span><span class="kc">ta</span><span class="err">Tags</span><span class="s2">&quot;:</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="s2">{</span>
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="s2">    &quot;</span><span class="err">userMe</span><span class="kc">ta</span><span class="err">Tags</span><span class="s2">&quot;:[</span>
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="s2">        {</span>
+</span><span id="__span-46-5"><a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="s2">            &quot;</span><span class="kc">na</span><span class="err">me</span><span class="s2">&quot;:&quot;</span><span class="err">&lt;s</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g&gt;</span><span class="s2">&quot;,</span>
+</span><span id="__span-46-6"><a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a><span class="s2">            &quot;</span><span class="err">value</span><span class="s2">&quot;:&quot;</span><span class="err">&lt;s</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g&gt;</span><span class="s2">&quot;</span>
+</span><span id="__span-46-7"><a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="s2">       }</span>
+</span><span id="__span-46-8"><a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a><span class="s2">    ],</span>
+</span><span id="__span-46-9"><a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a><span class="s2">    &quot;</span><span class="err">sessio</span><span class="kc">n</span><span class="err">Me</span><span class="kc">ta</span><span class="err">Tags</span><span class="s2">&quot;:[</span>
+</span><span id="__span-46-10"><a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a><span class="s2">      {</span>
+</span><span id="__span-46-11"><a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a><span class="s2">         &quot;</span><span class="kc">na</span><span class="err">me</span><span class="s2">&quot;:&quot;</span><span class="err">&lt;s</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g&gt;</span><span class="s2">&quot;,</span>
+</span><span id="__span-46-12"><a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a><span class="s2">         &quot;</span><span class="err">value</span><span class="s2">&quot;:&quot;</span><span class="err">&lt;s</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g&gt;</span><span class="s2">&quot;</span>
+</span><span id="__span-46-13"><a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a><span class="s2">      }</span>
+</span><span id="__span-46-14"><a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a><span class="s2">    ],</span>
+</span><span id="__span-46-15"><a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a><span class="s2">    &quot;</span><span class="err">messageMe</span><span class="kc">ta</span><span class="err">Tags</span><span class="s2">&quot;:[</span>
+</span><span id="__span-46-16"><a id="__codelineno-46-16" name="__codelineno-46-16" href="#__codelineno-46-16"></a><span class="s2">     {</span>
+</span><span id="__span-46-17"><a id="__codelineno-46-17" name="__codelineno-46-17" href="#__codelineno-46-17"></a><span class="s2">          &quot;</span><span class="kc">na</span><span class="err">me</span><span class="s2">&quot;:&quot;</span><span class="err">&lt;s</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g&gt;</span><span class="s2">&quot;,</span>
+</span><span id="__span-46-18"><a id="__codelineno-46-18" name="__codelineno-46-18" href="#__codelineno-46-18"></a><span class="s2">          &quot;</span><span class="err">value</span><span class="s2">&quot;:&quot;</span><span class="err">&lt;s</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g&gt;&quot;</span>
+</span><span id="__span-46-19"><a id="__codelineno-46-19" name="__codelineno-46-19" href="#__codelineno-46-19"></a><span class="err">     }</span>
+</span><span id="__span-46-20"><a id="__codelineno-46-20" name="__codelineno-46-20" href="#__codelineno-46-20"></a><span class="err">    ]</span>
+</span><span id="__span-46-21"><a id="__codelineno-46-21" name="__codelineno-46-21" href="#__codelineno-46-21"></a><span class="err">}</span>
+</span></code></pre></div>
 
 
   
