@@ -4037,7 +4037,7 @@ The VA receives the user's voice response from Twilio Voice only after a few mom
 <li>From Twilio’s main menu, select <strong>Phone Numbers &gt; Manage &gt; TwiML Apps</strong>, then click <strong>Create New TwiML App</strong>.</li>
 <li>Enter a name for the app and copy the <strong>Webhook URL</strong> from the <strong>Configurations</strong> tab of the Twilio Voice Channel page (<strong>XO Platform Assistant &gt; Deploy &gt; Channels &gt; Twilio Voice</strong>) and enter in the <strong>Request URL</strong> for <strong>Voice</strong>.</li>
 <li>Click <strong>Save</strong> to complete the app creation.<br />
-<a class="glightbox" href="../images/twilio-voice-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-voice-img1.png" alt="Create new TwiML App" title="Create new TwiML App" style="border: 1px solid gray; zoom:70%;"></a></li>
+<a class="glightbox" href="../channels/images/twilio-voice-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../channels/images/twilio-voice-img1.png" alt="Create new TwiML App" title="Create new TwiML App" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
 <h2 id="step-2-associate-a-phone-number">Step 2: Associate a Phone Number<a class="headerlink" href="#step-2-associate-a-phone-number" title="Permanent link">&para;</a></h2>
 <p>To associate the TwiML App with your Twilio Phone Number:</p>
@@ -4047,7 +4047,7 @@ The VA receives the user's voice response from Twilio Voice only after a few mom
 <li>Under the <strong>Voice &amp; Fax</strong> section, select <strong>TwiML App</strong> as the choice in the <strong>Configure With</strong> field.</li>
 <li>A new field called <strong>TWIML APP</strong> is displayed. Select the app you have configured in the previous steps.</li>
 <li>Click <strong>Save</strong> to complete this app association.<br />
-<a class="glightbox" href="../images/twilio-voice-img2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-voice-img2.png" alt="Associate app to phone number" title="Associate app to phone number" style="border: 1px solid gray; zoom:70%;"></a></li>
+<a class="glightbox" href="../channels/images/twilio-voice-img2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../channels/images/twilio-voice-img2.png" alt="Associate app to phone number" title="Associate app to phone number" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
 <h2 id="step-3-set-up-agent-transfer-optional">Step 3: Set Up Agent Transfer (Optional)<a class="headerlink" href="#step-3-set-up-agent-transfer-optional" title="Permanent link">&para;</a></h2>
 <p>Optionally, you can also set up <strong>Agent Transfer</strong> functionality to transfer the user’s call conversation to another Twilio number. For this, you must configure the Kore.ai Agent Transfer SDK. Download the <strong>Agent Transfer SDK</strong> from the <a href="https://github.com/Koredotcom/BotKit" target="_blank">Kore.ai GitHub repository</a> and define <strong>data.message, transferCallToAgent</strong> and <strong>agentPhonenumber</strong> parameters.</p>
@@ -4067,11 +4067,11 @@ The VA receives the user's voice response from Twilio Voice only after a few mom
 <li>Enter your Twilio Number to associate with the Kore.ai assistant.</li>
 <li>Select a <strong>Language</strong> to communicate with the VA by end-users.</li>
 <li>In the <strong>Enable Channel</strong> section, select <strong>Yes</strong>, and then click <strong>Save</strong> to complete the user creation process and channel activation.<br />
-<a class="glightbox" href="../images/twilio-voice-img3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio-voice-img3.png" alt="Enable channel" title="Enable channel" style="border: 1px solid gray; zoom:70%;"></a></li>
+<a class="glightbox" href="../channels/images/twilio-voice-img3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../channels/images/twilio-voice-img3.png" alt="Enable channel" title="Enable channel" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
 </li>
 <li>
-<p>From the <strong>Voice Call Properties</strong> tab, enter the details to configure the channel level voice properties, <a href="../call-properties/#channel-settings" target="_blank">click here for more details</a>.</p>
+<p>From the <strong>Voice Call Properties</strong> tab, enter the details to configure the channel level voice properties, <a href="../channels/call-properties#channel-settings" target="_blank">click here for more details</a>.</p>
 </li>
 <li>
 <p>Once you have enabled the Twilio channel, it is recommended to configure the <strong>Telephony Welcome Event</strong> for Voice Call Settings. This plays a welcome message for users when they connect to the VA through the Twilio channel. For this:  </p>
@@ -4082,9 +4082,9 @@ The VA receives the user's voice response from Twilio Voice only after a few mom
 </ol>
 </li>
 </ol>
-<p>For details regarding the configuration of voice properties at the Dialog Task level, please , refer to <a href="../call-properties/#dialog-node-settings" target="_blank">Configuring Voice Call Settings for a Node</a>.</p>
-<p>After the channel is enabled and all configurations are verified, you can optionally publish the assistant to make it available for end-users, with the new channel. Learn more about<a href="../../deploy/publishing-bot/" target="_blank"> Publishing your Virtual Assistant</a>.</p>
-<p>To learn more about working with Channels within the Kore.ai XO Platform, please see<a href="../adding-channels-to-your-bot/" target="_blank"> Channel Enablement.</a></p>
+<p>For details regarding the configuration of voice properties at the Dialog Task level, please , refer to <a href="../channels/call-properties#dialog-node-settings" target="_blank">Configuring Voice Call Settings for a Node</a>.</p>
+<p>After the channel is enabled and all configurations are verified, you can optionally publish the assistant to make it available for end-users, with the new channel. Learn more about<a href="../deploy/publishing-bot" target="_blank"> Publishing your Virtual Assistant</a>.</p>
+<p>To learn more about working with Channels within the Kore.ai XO Platform, please see<a href="../channels/adding-channels-to-your-bot" target="_blank"> Channel Enablement.</a></p>
 
 
   
