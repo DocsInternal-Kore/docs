@@ -4066,19 +4066,25 @@
 <p>If you are creating an app for the first-time, click the <strong>Create App</strong> button. Otherwise, click the <strong>New App</strong> button.</p>
 </li>
 <li>On the Create Client App page, enter a <strong>name</strong> for the app.</li>
-<li>Select <strong>Enforce JTI</strong>, <strong>JWE</strong>, or both as per your requirements to secure the connections with the Platform:<ul>
+<li>
+<p>Select <strong>Enforce JTI</strong>, <strong>JWE</strong>, or both as per your requirements to secure the connections with the Platform:</p>
+<ul>
 <li><strong>Enforce JTI (JWT ID) Claim</strong> – Once enabled, the Platform accepts the requests only from calls with the JTI Claim in the requests and those without JTI Claim are rejected.</li>
-<li><strong>Enforce JWE Encryption</strong> (Generating JWT token) – To access the XO Platform’s public APIs, the application making the API request requires authentication. Kore.ai uses the JWT (JSON Web Token) mechanism to handle the authentication. For a quick overview of the JWT token, read <a href="https://jwt.io/introduction/">Introduction to JWT tokens</a>. \</li>
+<li><strong>Enforce JWE Encryption</strong> (Generating JWT token) – To access the XO Platform’s public APIs, the application making the API request requires authentication. Kore.ai uses the JWT (JSON Web Token) mechanism to handle the authentication. For a quick overview of the JWT token, read <a href="https://jwt.io/introduction/">Introduction to JWT tokens</a>.
+<a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></li>
 </ul>
 </li>
+<li>
+<p>Click <strong>Next</strong> and <strong>Done</strong>. You are directed to the Manage Apps page, which lists all the apps associated with this virtual assistant. </p>
+</li>
+<li>Click the app name or anywhere in the row to see the app’s details, such as <strong>Bot Name</strong>, <strong>Bot ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong>. Also, the App Usage column lists where this app is used – Web SDK, BotKit, APIs, WebHook and IVR Channels. </li>
 </ol>
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use the <strong>Client ID</strong> and <strong>Client Secret</strong> of the client app from above to generate a JWT token. This token must be passed as a part of each API request for authorization.</p>
+</div>
 <ol>
-<li>Click <strong>Next</strong> and <strong>Done</strong>. \
-You are directed to the Manage Apps page, which lists all the apps associated with this virtual assistant. </li>
-<li>Click the app name or anywhere in the row to see the app’s details, such as <strong>Bot Name</strong>, <strong>Bot ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong>. Also, the App Usage column lists where this app is used – Web SDK, BotKit, APIs, WebHook and IVR Channels. \
-<strong>Note:</strong> Use the <strong>Client ID</strong> and <strong>Client Secret</strong> of the client app from above to generate a JWT token. This token must be passed as a part of each API request for authorization.</li>
-<li>To delete apps, click the <strong>Delete</strong> icon against the respective app. \
+<li>To delete apps, click the <strong>Delete</strong> icon against the respective app. 
 <strong>Note:</strong> Only the Bot Owner can delete an app.</li>
 </ol>
 <h2 id="creating-and-managing-apps-in-bots-admin-console">Creating and Managing Apps in Bots Admin Console<a class="headerlink" href="#creating-and-managing-apps-in-bots-admin-console" title="Permanent link">&para;</a></h2>
@@ -4087,16 +4093,18 @@ You are directed to the Manage Apps page, which lists all the apps associated wi
 <li>Log in to the Admin Console.</li>
 <li>Go to <strong>Security &amp; Control</strong> &gt; <strong>API Scopes</strong>.</li>
 <li>On the API Scopes page, click <strong>New</strong>.</li>
-<li>Click the <strong>Manage Apps</strong> link to create a new app. \</li>
-</ol>
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<li>
+<p>Click the <strong>Manage Apps</strong> link to create a new app. 
+<a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Click <strong>New App</strong> and then do the following:</p>
 <ol>
-<li>Click <strong>New App</strong> and then do the following:<ol>
 <li>Enter a name.</li>
 <li>Select <strong>Enforce JTI</strong>, <strong>JWE</strong>, or both as per your requirements.</li>
 </ol>
 </li>
-<li>Click** Save**.</li>
+<li>Click <strong>Save</strong>.</li>
 </ol>
 <h2 id="data-tables">Data Tables<a class="headerlink" href="#data-tables" title="Permanent link">&para;</a></h2>
 <p>Access control from the Data Tables module is different from the XO Platform and Bot Admin Console access controls.</p>
@@ -4117,16 +4125,20 @@ You are directed to the Manage Apps page, which lists all the apps associated wi
 <h3 id="adding-api-scopes-in-the-xo-platform">Adding API Scopes in the XO Platform<a class="headerlink" href="#adding-api-scopes-in-the-xo-platform" title="Permanent link">&para;</a></h3>
 <p>Steps to associate API Scopes to a Client App from the XO Platform:</p>
 <ol>
-<li>Go to <strong>Deploy</strong> &gt; <strong>API &amp; EXTENSIONs</strong> &gt; <strong>API Scopes</strong> and click <strong>Create API Scope</strong>. \</li>
-</ol>
-<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
-<ol>
-<li>On the New API Scope Mapping page, from the <strong>App</strong> drop-down list, select an existing client app for authentication.</li>
-<li>The app’s <strong>Client ID</strong> and <strong>Client Secret</strong> are displayed on the screen. Copy these values. \</li>
-</ol>
-<p><a class="glightbox" href="images/image6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
-<ol>
-<li>Under the Scopes section, select the appropriate scopes to allow the client app to access the respective APIs. (If appropriate scopes are not selected, then the client apps cannot access the APIs).</li>
+<li>
+<p>Go to <strong>Deploy</strong> &gt; <strong>API &amp; EXTENSIONs</strong> &gt; <strong>API Scopes</strong> and click <strong>Create API Scope</strong>.
+<a class="glightbox" href="images/image5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>On the New API Scope Mapping page, from the <strong>App</strong> drop-down list, select an existing client app for authentication.</p>
+</li>
+<li>
+<p>The app’s <strong>Client ID</strong> and <strong>Client Secret</strong> are displayed on the screen. Copy these values. 
+<a class="glightbox" href="images/image6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Under the Scopes section, select the appropriate scopes to allow the client app to access the respective APIs. (If appropriate scopes are not selected, then the client apps cannot access the APIs).</p>
+</li>
 <li>Click <strong>Save</strong>.</li>
 </ol>
 <h3 id="adding-api-scopes-in-the-bots-admin-console">Adding API Scopes in the Bots Admin Console<a class="headerlink" href="#adding-api-scopes-in-the-bots-admin-console" title="Permanent link">&para;</a></h3>
@@ -4135,15 +4147,17 @@ You are directed to the Manage Apps page, which lists all the apps associated wi
 <li>Log in to the Admin Console.</li>
 <li>Go to <strong>Security &amp; Control</strong> &gt; <strong>API Scopes</strong>.</li>
 <li>On the API Scopes page, click <strong>New</strong>.</li>
-<li>On the New API Scope Mapping page, from the **App **drop-down list, select an existing client app for authentication.</li>
-<li>Click the** Manage Apps **link to create a new app.</li>
+<li>On the New API Scope Mapping page, from the <strong>App</strong> drop-down list, select an existing client app for authentication.</li>
+<li>Click the <strong>Manage Apps</strong> link to create a new app.</li>
 <li>Once you select an app, the <strong>Client ID</strong> and <strong>Client Secret</strong> appear. Copy these values.</li>
 <li>Under the Scopes section, select the appropriate Scopes to allow the client app to access the respective APIs.<a href="https://developer.kore.ai/docs/bots/bot-admin/security-control/security-module-overview/#API_Scopes">Learn more</a>.</li>
-<li>Click <strong>Save</strong>. The app and associated scopes are listed on the API Scopes page. \</li>
-</ol>
-<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
-<ol>
-<li>If you want to delete an app and its associated API Scope, click the <strong>Delete</strong> icon against the respective app.</li>
+<li>
+<p>Click <strong>Save</strong>. The app and associated scopes are listed on the API Scopes page. 
+<a class="glightbox" href="images/image7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>If you want to delete an app and its associated API Scope, click the <strong>Delete</strong> icon against the respective app.</p>
+</li>
 </ol>
 <h2 id="list-of-available-api-scopes">List of Available API Scopes<a class="headerlink" href="#list-of-available-api-scopes" title="Permanent link">&para;</a></h2>
 <table>
@@ -4293,21 +4307,29 @@ You are directed to the Manage Apps page, which lists all the apps associated wi
   </tr>
 </table>
 
-<p><strong>Note:</strong> Once enabled, the API Scopes must be Published. <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/#Publishing_Tasks">Follow the Publish</a> process to ensure that the API Scopes are selected.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once enabled, the API Scopes must be Published. <a href="/deploy/publishing-bot">Follow the Publish</a> process to ensure that the API Scopes are selected.</p>
+</div>
 <h2 id="generating-the-jwt-token">Generating the JWT Token<a class="headerlink" href="#generating-the-jwt-token" title="Permanent link">&para;</a></h2>
 <p>Once you have associated the API scopes with a client app, you must generate the JWT token for API requests.</p>
 <p>Steps to generate the token:</p>
 <ol>
 <li>Visit <a href="https://developer.kore.ai/tools/jwt/">https://developer.kore.ai/tools/jwt/</a>.</li>
 <li>In the <strong>Algorithm</strong> drop-down list, select <strong>HS256</strong>.</li>
-<li>Scroll down to the <strong>Decoded</strong> section, and update the <strong>Playload **and the **Secret</strong>.
-        1. Replace the content of the <strong>Payload</strong> field with the code block shown below, and add the Client ID of the app copied in the previous section. \
-<code>{ \
-"sub": "1234567890", \
-"appId": "add-Client-ID-here" \
-}</code></li>
-<li><strong>Note:</strong> The XO Platform validates the token only when it is entered exactly as “appId”. Don’t use “App ID”, “appid”, or “app ID”.</li>
-<li>In the <strong>Verify Signature</strong> field, replace <strong>your-256-bit-secret</strong> with the Client Secret copied in the previous section.</li>
+<li>
+<p>Scroll down to the <strong>Decoded</strong> section, and update the <strong>Payload</strong> and the <strong>Secret</strong>.
+        1. Replace the content of the <strong>Payload</strong> field with the code block shown below, and add the Client ID of the app copied in the previous section.
+        <code>json
+        {
+            "sub": "1234567890",
+            "appId": "add-Client-ID-here"
+        }</code>
+        Note that the XO Platform validates the token only when it is entered exactly as “appId”. Don’t use “App ID”, “appid”, or “app ID”.</p>
+</li>
+<li>
+<p>In the <strong>Verify Signature</strong> field, replace <strong>your-256-bit-secret</strong> with the Client Secret copied in the previous section.</p>
+</li>
 <li>Click <strong>Copy JWT</strong> to copy the generated token. You can pass this token as a part of the API request for authorization.</li>
 </ol>
 
