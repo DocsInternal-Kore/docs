@@ -4047,7 +4047,7 @@
    </td>
    <td><code>auth: {{JWT}}</code>
 <p>
-See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_JWT_Token">How to generate the JWT Token</a>.
+See <a href="../api-introduction/#generating-the-jwt-token">How to generate the JWT Token</a>.
    </td>
   </tr>
   <tr>
@@ -4222,24 +4222,19 @@ Usage:
    <td>Optional
    </td>
    <td>This will indicate incremental import options for the ML utterances, whether to replace or append. <a href="https://developer.kore.ai/docs/bots/bot-settings/bot-management/bot-management-2/#Steps_in_Importing_to_an_Existing_Bot">Learn more</a>.
-<p>
-Usage:
-<p>
-<code>"options": {</code>
-<p>
-<code>     "utterances": {</code>
-<p>
-<code>        "replace": true</code>
-<p>
-<code>  "append":false</code>
-<p>
-<code>        }</code>
+    Usage:
+      <code>"options": {
+                "utterances": {
+                "replace": true
+                "append":false
+              }
+      </code>
    </td>
   </tr>
 </table>
 
-<p>**Universal Bot \
-**For the Universal bot, the <em>import</em> the <em>importOptions</em> may differ as shown below:</p>
+<p><strong>Universal Bot</strong>
+For the Universal bot, the <em>import</em> the <em>importOptions</em> may differ as shown below:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&quot;importOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;nlpData&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="s2">&quot;training_data&quot;</span><span class="p">,</span>
