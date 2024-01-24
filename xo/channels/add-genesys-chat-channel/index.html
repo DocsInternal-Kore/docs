@@ -17,7 +17,7 @@
     
     
       
-        <title>Adding Genesys Chat as a Channel - Kore ai Docs</title>
+        <title>Adding Genesys Cloud CX Messaging as a Channel - Kore ai Docs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adding-genesys-chat-as-a-channel" class="md-skip">
+        <a href="#adding-genesys-cloud-cx-messaging-as-a-channel" class="md-skip">
           Skip to content
         </a>
       
@@ -198,7 +198,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adding Genesys Chat as a Channel
+              Adding Genesys Cloud CX Messaging as a Channel
             
           </span>
         </div>
@@ -3985,29 +3985,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-create-an-inbound-message-flow" class="md-nav__link">
-    Step 2: Create an Inbound Message Flow
+  <a href="#step-2-create-an-app-on-the-koreai-xo-platform" class="md-nav__link">
+    Step 2: Create an App on the Kore.ai XO Platform
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-configure-the-messenger-sdk" class="md-nav__link">
-    Step 3: Configure the Messenger SDK
+  <a href="#step-3-create-the-oauth-client-app-on-genesys-developer-console" class="md-nav__link">
+    Step 3: Create the OAuth Client App on Genesys Developer Console
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-enable-the-channel" class="md-nav__link">
-    Step 4: Enable the Channel
+  <a href="#step-4-create-an-inbound-message-flow" class="md-nav__link">
+    Step 4: Create an Inbound Message Flow
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-publish-the-bot" class="md-nav__link">
-    Step 5: Publish the Bot
+  <a href="#step-5-configure-the-messenger-sdk" class="md-nav__link">
+    Step 5: Configure the Messenger SDK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-enable-the-channel" class="md-nav__link">
+    Step 6: Enable the Channel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-publish-the-bot" class="md-nav__link">
+    Step 7: Publish the Bot
   </a>
   
 </li>
@@ -4031,9 +4045,13 @@
 
 
 
-<h1 id="adding-genesys-chat-as-a-channel">Adding Genesys Chat as a Channel<a class="headerlink" href="#adding-genesys-chat-as-a-channel" title="Permanent link">&para;</a></h1>
-<p>The Kore.ai XO Platform now allows you to add <strong>Genesys Chat</strong> as a messaging channel for your Virtual Assistants (VAs). Genesys Chat helps instantly share your ideas with people inside your organization with the persistent chat history feature to start a conversation with your colleagues and continue it anywhere any time.</p>
-<p>With the <strong>Genesys Chat</strong> integration on the Kore.ai XO Platform, you can achieve the following:</p>
+<h1 id="adding-genesys-cloud-cx-messaging-as-a-channel">Adding Genesys Cloud CX Messaging as a Channel<a class="headerlink" href="#adding-genesys-cloud-cx-messaging-as-a-channel" title="Permanent link">&para;</a></h1>
+<p>The Kore.ai XO Platform now allows you to add <strong>Genesys Cloud CX Messaging</strong> as a messaging channel for your Virtual Assistants (VAs). Genesys Cloud CX Messaging integration helps instantly share your ideas with people inside your organization with the persistent chat history feature to start a conversation with your colleagues and continue it anywhere, anytime.</p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>This integration works only with Genesys Cloud CX Messaging channel, not the older Genesys web chat.</p>
+</p>
+</div>
+<p>With the <strong>Genesys Cloud CX Messaging</strong> integration on the Kore.ai XO Platform, you can achieve the following:</p>
 <ul>
 <li>Set up the <em>REST API</em> and authorization flow for events and conversations.</li>
 <li>Link the app to the Kore.ai XO Platform using the app’s credentials.</li>
@@ -4044,57 +4062,109 @@
 <p>After the integration, you can do the following:</p>
 <ul>
 <li>Track Virtual Assistant conversations.</li>
-<li>Listen to new messages from Genesys Chat.</li>
-<li>Have VAs post and respond to messages in Genesys Chat conversations.</li>
-<li>Have VAs handle incoming notifications from your apps into Genesys Chat.</li>
+<li>Listen to new messages from Genesys Cloud CX Messaging.</li>
+<li>Have VAs post and respond to messages in Genesys Cloud CX Messaging conversations.</li>
+<li>Have VAs handle incoming notifications from your apps into Genesys Cloud CX Messaging.</li>
 </ul>
-<p>To set up <strong>Genesys Chat</strong> as a channel, you should create an account on the <a href="https://genesyspartner.force.com/customercare/RequestAccount">Genesys Cloud</a> Platform and enable a <em>webhook</em> for the platform to receive messages.</p>
+<p>To set up <strong>Genesys Cloud CX Messaging</strong> as a channel, use your account on the <a href="https://genesyspartner.force.com/customercare/RequestAccount">Genesys Cloud</a> Platform and enable a <em>webhook</em> for the platform to receive messages.</p>
 <p>The steps to add the channel are summarized below:</p>
 <ol>
-<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-1-create-a-bot-connector">Create a Bot Connector</a>.</li>
-<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-2-create-an-inbound-message-flow">Create an inbound message flow</a>.</li>
-<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-3-configure-the-messenger-sdk">Configure the Messenger SDK</a>.</li>
-<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-4-enable-the-channel">Enable the Channel</a>.</li>
-<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-5-publish-the-bot">Publish the Bot</a>.</li>
+<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-1-create-a-bot-connector">Create a Bot Connector</a> and <a href="/docs/xo/channels/add-genesys-chat-channel/#step-1-create-a-bot-connector">Link the Virtual Assistant to the Bot Connector</a></li>
+<li><a href="/docs/xo/channels/add-genesys-chat-channel/#Step-2-Create-an-App-on-the-Kore.ai-XO-Platform">Create an App in the Kore.ai Web/Mobile Client</a></li>
+<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-3-create-the-oauth-client-app-in-the-genesys-developer-console">Create the OAuth Client App in the Genesys Developer Console</a></li>
+<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-4-create-an-inbound-message-flow">Create an inbound message flow</a>.</li>
+<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-5-configure-the-messenger-sdk">Configure the Messenger SDK</a></li>
+<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-6-enable-the-channel">Enable the Channel</a>.</li>
+<li><a href="/docs/xo/channels/add-genesys-chat-channel/#step-7-publish-the-bot">Publish the Bot</a>.</li>
 </ol>
 <h2 id="step-1-create-a-bot-connector">Step 1: Create a Bot Connector<a class="headerlink" href="#step-1-create-a-bot-connector" title="Permanent link">&para;</a></h2>
-<p>A <strong>Bot Connector service</strong> enables your bot to exchange messages with the <em>Genesys Agent System</em> configured on the Kore.ai XO Platform by using industry-standard <em>REST</em> and <em>JSON</em> over HTTPS.</p>
+<p>A <strong>Bot Connector integration</strong> enables your bot to exchange messages with the <em>Genesys Agent System</em> configured on the Kore.ai XO Platform by using industry-standard <em>REST</em> and <em>JSON</em> over HTTPS.</p>
 <ol>
-<li>Log in to the <strong><a href="https://login.mypurecloud.com/#/authenticate">Genesys Developer Portal</a></strong>.</li>
-<li>
-<p>Create a Bot Connector with the steps below:</p>
-<ul>
-<li>Navigate to <strong>Admin</strong> &gt; <strong>Integrations</strong> on the left menu.</li>
-<li>Click the <strong>Configuration</strong> tab.</li>
-<li>
-<p>On the Kore.ai XO Platform, navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>Genesys Chat</strong>.
-<a class="glightbox" href="../images/genesys-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-1.png" alt="genesys chat" title="genesys chat" style="border: 1px solid gray; zoom:70%;"></a></p>
+<li>Log in to the <strong><a href="https://login.mypurecloud.com/">Genesys Developer Portal</a></strong>.</li>
+<li>Create a Bot Connector with the steps below:</li>
+<li><strong>On the Genesys Cloud CX Admin portal</strong><ol>
+<li>In the Genesys Cloud Admin portal, navigate to <strong>Admin</strong> &gt; <strong>Integrations</strong>.</li>
+<li>Use the <strong>+ Integrations</strong> button to find integration options.</li>
+<li>Search for “bot connector” and find the <strong>Genesys Bot Connector</strong>. Install it to your instance.
+<a class="glightbox" href="../images/genesys_m1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_m1.png" /></a></li>
+</ol>
 </li>
-<li>
-<p>Copy the <strong>Webhook URL</strong> from the <strong>Configurations</strong> section.</p>
+<li><strong>On the Kore.ai XO Platform</strong><ol>
+<li>On the Kore.ai XO Platform, navigate to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Genesys Cloud CX Messaging</strong>.
+<a class="glightbox" href="../images/genesys_m2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_m2.png" /></a></li>
+<li>Copy the <strong>Webhook URL</strong> from the <strong>Configurations</strong> section of the Kore.ai XO Platform for the Genesys Cloud CX Messaging Channel screen.
+<a class="glightbox" href="../images/genesys_m3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_m3.png" /></a></li>
+</ol>
 </li>
-<li>Paste it in the <strong>Value</strong> field of the <strong>Properties</strong> section under <strong>Configuration</strong> on the <strong>Genesys Chat</strong> Portal.
-<a class="glightbox" href="../images/genesys-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-2.png" alt="Properties " title="Properties" style="border: 1px solid gray; zoom:70%;"></a></li>
-<li>In the <strong>Genesys Cloud login URL</strong> field under <strong>Configuration</strong>, provide the URL of your Genesys AWS Region which will allow the platform to correctly route the conversation requests. This is a <strong>mandatory field.</strong> You can find the URL of your region through the link provided with the field.
-<a class="glightbox" href="../images/genesys-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-3.png" alt="mandatory configuration" title="mandatory configuration " style="border: 1px solid gray; zoom:70%;"></a></li>
-<li>Create an app on the Kore.ai XO platform. A JWT Token is created with the <em>clientId</em> and <em>clientSecret</em> credentials. To create an app, follow the steps below:</li>
-<li>Click the <strong>Create App</strong> link under the <strong>Configurations</strong> section of the <strong>Genesys Chat</strong> Channel.
-<a class="glightbox" href="../images/genesys-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-4.png" alt="genesys configuration" title="genesys configuration" style="border: 1px solid gray; zoom:70%;"></a></li>
-<li>Follow the steps mentioned <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-webmobile-client-channel/">here</a>.
-<strong>Note</strong>: Select <em>HS256</em> for <strong>JWT Signing Algorithms Used For Client App Authentication</strong>.</li>
-<li>Copy the <strong><em>Client Secret</em></strong> value of the app you’ve created.</li>
-<li>Navigate to the <strong>Configuration</strong> &gt; <strong>Credentials</strong> page, and click <strong>Change</strong>.
-<a class="glightbox" href="../images/genesys-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-5.png" alt="genesys credentials" title="genesys credentials" style="border: 1px solid gray; zoom:70%;"></a></li>
-<li>Paste the copied <strong><em>Client Secret</em></strong> in the <strong>Value</strong> field when the <strong>Change Credentials</strong> window appears.</li>
-<li>Click <strong>OK</strong>.
-<a class="glightbox" href="../images/genesys-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-6.png" alt="change credentials" title="change credentials" style="border: 1px solid gray; zoom:70%;"></a></li>
-<li>Once you paste all the required credentials, click <strong>Authorize</strong> to validate the authorization.
-<a class="glightbox" href="../images/genesys-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-1.png" alt="authorize " title="authorize " style="border: 1px solid gray; zoom:70%;"></a></li>
-</ul>
-<p>Your Bot Connector is created successfully!</p>
+<li><strong>On the Genesys Cloud CX Admin portal</strong><ol>
+<li>Go back to the Genesys Admin portal. In the <strong>Properties</strong> section under <strong>Configuration</strong> for the Bot Connector, paste the webhook in the <strong>Value</strong> field for <strong>Bot Connector Handle Utterance URI</strong>.
+<a class="glightbox" href="../images/genesys_m4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_m4.png" /></a></li>
+<li>Leave this page open for additional configuration.</li>
+</ol>
+</li>
+<li><strong>On the Kore.ai XO Platform</strong><ol>
+<li>In the <strong>Genesys Cloud login URL</strong> field under <strong>Configuration</strong>, provide the URL of your Genesys AWS Region, which will allow the platform to route the conversation requests correctly. This is a <strong>mandatory field.</strong> You can find the URL of your region through the link provided in the field description on the screen.
+<a class="glightbox" href="../images/genesys_m5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_m5.png" /></a></li>
+<li>Leave the <strong>Genesys Cloud CX Messaging</strong> channel configuration open for further configuration.</li>
+</ol>
 </li>
 </ol>
-<h2 id="step-2-create-an-inbound-message-flow">Step 2: Create an Inbound Message Flow<a class="headerlink" href="#step-2-create-an-inbound-message-flow" title="Permanent link">&para;</a></h2>
+<h2 id="step-2-create-an-app-on-the-koreai-xo-platform">Step 2: Create an App on the Kore.ai XO Platform<a class="headerlink" href="#step-2-create-an-app-on-the-koreai-xo-platform" title="Permanent link">&para;</a></h2>
+<p>Create an app on the Kore.ai XO platform. A JWT Token is created with the <strong>clientId</strong> and <strong>clientSecret</strong> credentials. For more information, read<a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-webmobile-client-channel/"> Adding the Web/Mobile Client Channel</a> article.</p>
+<ol>
+<li>
+<p>Click the <strong>Create App</strong> link under the <strong>Configurations</strong> section of the <strong>Genesys Cloud CX Messaging</strong> Channel. </p>
+<p><a class="glightbox" href="../images/genesys_cloud_2.1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_cloud_2.1.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Use the <strong><em>Client ID</em></strong> and <strong><em>Client Secret</em></strong> value of the new app to create a JWT token using the steps mentioned<a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-webmobile-client-channel/"> here</a>.</p>
+<p><a class="glightbox" href="../images/genesys_cloud_2.2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_cloud_2.2.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Navigate back to the <strong>Bot Connector</strong> configuration screen in the Genesys Cloud Admin portal.</p>
+</li>
+<li>Navigate to the <strong>Configuration</strong> &gt; <strong>Credentials</strong> section and click <strong>Change</strong>.</li>
+<li>Create a new <strong>Field Name</strong> called <strong>Authorization</strong>.</li>
+<li>
+<p>Paste the following in the <strong>Value</strong> field on the <strong>Change Credentials</strong> window.</p>
+<ol>
+<li>The word <strong>bearer</strong></li>
+<li>A space</li>
+<li>
+<p>The <strong>JWT</strong> created in before. </p>
+<p><a class="glightbox" href="../images/genesys_chat_beare_2.3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_chat_beare_2.3.png" title="image_tooltip" /></a></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <strong>Ok</strong>.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Select HS256 for JWT Signing Algorithms Used For Client App Authentication.</p>
+</div>
+<h2 id="step-3-create-the-oauth-client-app-on-genesys-developer-console">Step 3: Create the OAuth Client App on Genesys Developer Console<a class="headerlink" href="#step-3-create-the-oauth-client-app-on-genesys-developer-console" title="Permanent link">&para;</a></h2>
+<p>Steps to create an app on the Genesys Developer Console:
+1. Log in to the<a href="https://login.mypurecloud.com/#/authenticate"> Genesys Developer Portal</a>. 
+2. Navigate to <strong>Admin &gt; Integrations &gt; OAuth</strong>.
+3. Click <strong>Add Client</strong> on the OAuth Screen.
+4. Enter the <strong>App Name</strong> and <strong>Description</strong>.
+5. Select the <strong>Grant Types</strong> as <em>Code Authorization</em>.
+    <a class="glightbox" href="../images/genesys_chat_create_app.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_chat_create_app.png" title="image_tooltip" /></a>
+6. Copy the <strong>Callback URL</strong> from the <strong>Configurations</strong> tab of the Kore.ai XO Platform for Genesys Cloud CX Messaging channel.
+    <a class="glightbox" href="../images/genesys_chat_create_app2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_chat_create_app2.png" title="image_tooltip" /></a>
+7. In the Genesys Console, go back to the <strong>Integrations &gt; OAuth</strong> page and paste the <strong>Callback URL</strong> that you have copied in the <strong>Authorized redirect URI</strong> field.
+8. Add the <em>architect</em>, <em>integrations</em>, and <em>textbot</em> scopes in the <strong>Scopes</strong> field.
+    <a class="glightbox" href="../images/genesys_chat_bearer1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_chat_bearer1.png" title="image_tooltip" /></a>
+9. Click <strong>Save</strong> to update the OAuth Client configuration.
+10. Copy the <strong>Client ID</strong> and <strong>Client Secret</strong> from the OAuth Client App page.
+11. In the Kore.ai XO Platform, return to the <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Genesys Cloud CX Messaging</strong> &gt; <strong>Configurations</strong> tab and paste the <strong>Client ID</strong> and <strong>Client Secret</strong> values.
+12. Once you paste all the required credentials, click <strong>Authorize</strong> to validate the authorization.
+    <a class="glightbox" href="../images/genesys_cloud_cx6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_cloud_cx6.png" title="image_tooltip" /></a>
+13. If you are still logged into your Genesys Cloud instance, your current credentials are used. Otherwise, a login screen will open. Use valid credentials for the Genesys cloud instance you are configuring.</p>
+<p>Your Bot Connector is created successfully!</p>
+<h2 id="step-4-create-an-inbound-message-flow">Step 4: Create an Inbound Message Flow<a class="headerlink" href="#step-4-create-an-inbound-message-flow" title="Permanent link">&para;</a></h2>
 <p>To create an inbound message flow after connecting your VA to the Bot Connector, follow the steps below:</p>
 <ol>
 <li>Navigate to <strong>Admin</strong> &gt; <strong>Architect</strong> on the <strong>Genesys Bot Connector</strong> page.</li>
@@ -4119,10 +4189,10 @@
 <p>Click <strong>Publish</strong> on the top panel.</p>
 </li>
 </ol>
-<h2 id="step-3-configure-the-messenger-sdk">Step 3: Configure the Messenger SDK<a class="headerlink" href="#step-3-configure-the-messenger-sdk" title="Permanent link">&para;</a></h2>
+<h2 id="step-5-configure-the-messenger-sdk">Step 5: Configure the Messenger SDK<a class="headerlink" href="#step-5-configure-the-messenger-sdk" title="Permanent link">&para;</a></h2>
 <p>After creating the inbound messaging flow, you should configure and deploy the messenger with the steps below:</p>
 <ol>
-<li>Navigate to <strong>Admin</strong> &gt; <strong>Message</strong> &gt; <strong>Messenger Deployments</strong>.</li>
+<li>In the Genesys Cloud CX Admin portal, navigate to <strong>Admin</strong> &gt; <strong>Message</strong> &gt; <strong>Messenger Deployments</strong>.</li>
 <li>Enter the values for <strong>Name</strong> and <strong>Description</strong>.</li>
 <li>Set <strong>Status</strong> to <em>Active</em>.</li>
 <li>For <strong>Select your Configuration</strong>, select the <em>Messenger Configuration</em> to assign it to the deployment.</li>
@@ -4138,15 +4208,15 @@
   <a class="glightbox" href="../images/genesys-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="paste script" src="../images/genesys-12.png" title="paste script" /></a></p>
 </li>
 </ol>
-<h2 id="step-4-enable-the-channel">Step 4: Enable the Channel<a class="headerlink" href="#step-4-enable-the-channel" title="Permanent link">&para;</a></h2>
-<p>After you’ve configured the Genesys Messenger and deployed it for your Virtual Assistant, you must enable the <strong>Genesys Chat</strong> Channel by following the steps below:</p>
+<h2 id="step-6-enable-the-channel">Step 6: Enable the Channel<a class="headerlink" href="#step-6-enable-the-channel" title="Permanent link">&para;</a></h2>
+<p>After you’ve configured the Genesys Messenger and deployed it for your Virtual Assistant, you must enable the <strong>Genesys Cloud CX Messaging</strong> Channel by following the steps below:</p>
 <ol>
-<li>Navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>Genesys Chat</strong> on the Kore.ai XO Platform.</li>
+<li>Navigate to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Genesys Cloud CX Messaging</strong> on the Kore.ai XO Platform.</li>
 <li>Click the <strong>Configurations</strong> tab.</li>
 <li>Select <em>YES</em> for <strong>Enable Channel</strong>.</li>
 <li>Click <strong>Save</strong>.</li>
 </ol>
-<h2 id="step-5-publish-the-bot">Step 5: Publish the Bot<a class="headerlink" href="#step-5-publish-the-bot" title="Permanent link">&para;</a></h2>
+<h2 id="step-7-publish-the-bot">Step 7: Publish the Bot<a class="headerlink" href="#step-7-publish-the-bot" title="Permanent link">&para;</a></h2>
 <p>After enabling the channel and verifying all the configurations, you can test the new channel integration by publishing your virtual assistant. <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/">Learn more</a>.</p>
 <p>To learn more about working with messaging channels within the Kore.ai XO Platform, please see <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/">Channel Enablement</a>.</p>
 
