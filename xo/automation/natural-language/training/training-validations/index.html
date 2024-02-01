@@ -4822,8 +4822,8 @@ Hover on the <b>Error</b> icon to view the recommendations to resolve the error.
 <p>Click the <strong>+Utterance</strong>, <strong>+Pattern</strong>, or <strong>+Rule</strong> link for an intent issue type to add the relevant values for training.</p>
 </li>
 <li>
-<p>Enter the values in the relevant textbox and click enter under the <strong>Intent summary</strong> window’s <strong>Utterance/Pattern/Rule</strong> tab. The <strong>Intent Summary</strong> window displays the context to resolve the filtered issue.
-<a class="glightbox" href="../images/intent-summary-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/intent-summary-window.png" alt="intent summary window" title="intent summary window" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Enter the values in the relevant textbox and click enter under the <strong>Intent summary</strong> window’s <strong>Utterance/Pattern/Rule</strong> tab. The <strong>Intent Summary</strong> window displays the context to resolve the filtered issue.</p>
+<p><a class="glightbox" href="../images/intent-summary-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/intent-summary-window.png" alt="intent summary window" title="intent summary window" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>The <strong>utterance/pattern/rule</strong> is created successfully and mapped to the intent.
@@ -4856,9 +4856,17 @@ Hover on the <b>Error</b> icon to view the recommendations to resolve the error.
 </ol>
 <h3 id="refreshing-recommendations">Refreshing Recommendations<a class="headerlink" href="#refreshing-recommendations" title="Permanent link">&para;</a></h3>
 <p>In the recommendation summary, you can refresh recommendations as explained in the previous section in some of the scenarios like:</p>
+<ul>
+<li>
 <p><strong>Modify training data:</strong> When the training data is modified, you can check for new recommendations.</p>
+</li>
+<li>
 <p><strong>Implement recommendations:</strong> When a recommendation is implemented, you can verify if it is resolved.</p>
+</li>
+<li>
 <p><strong>Add new training data:</strong> When new intents or utterances are added, you can check for new recommendations.</p>
+</li>
+</ul>
 <p>When you click the <strong>Refresh</strong> icon, a timestamp of the last refresh is displayed along with the refreshed recommendations list. The timestamp is updated with every refresh.</p>
 <p><a class="glightbox" href="../images/recommendation-timestamp.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/recommendation-timestamp.png" alt="recommendation timestamp" title="recommendation timestamp" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>If there are untrained utterances in the training model, the platform provides you with the following options:</p>
@@ -4882,9 +4890,9 @@ Hover on the <b>Error</b> icon to view the recommendations to resolve the error.
 </li>
 <li>
 <p>Once training and regeneration of recommendations is completed, the status is displayed in the status docker.</p>
+<p><a class="glightbox" href="../images/training-and-regeneration-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-and-regeneration-status.png" alt="training and regeneration status" title="training and regeneration status" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
-<p><a class="glightbox" href="../images/training-and-regeneration-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-and-regeneration-status.png" alt="training and regeneration status" title="training and regeneration status" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h3 id="regenerate">Regenerate<a class="headerlink" href="#regenerate" title="Permanent link">&para;</a></h3>
 <p>Click the <strong>Regenerate</strong> button in the displayed pop-up if you want to trigger a background task that generates recommendations from the current model.
 <a class="glightbox" href="../images/click-regenerate-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/click-regenerate-button.png" alt="click regenerate" title="click regenerate" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -4894,9 +4902,9 @@ Hover on the <b>Error</b> icon to view the recommendations to resolve the error.
 
 <ol start="6"><li><p>When you click the <b>Refresh</b> icon, the recommendations summary is refreshed and the count of recommendations is either increased, or decreased, or the recommendations are updated based on the latest results.</p>
 
-<p>For example, if new utterances are added to the intent, a new recommendation may get added to the summary list. Similarly, if a recommendation is implemented, the count of recommendations decreases. In a recommendation like <i>13 intents have very short utterances, if 2 intents are fixed, then the recommendation is updated to 11 intents have very short utterances</i>.</p></li>
+<p>For example, if new utterances are added to the intent, a new recommendation may get added to the summary list. Similarly, if a recommendation is implemented, the count of recommendations decreases. In a recommendation like <i>13 intents have very short utterances, if 2 intents are fixed, then the recommendation is updated to 11 intents have very short utterances</i>.</p>
 
-<a class="glightbox" href="../images/recommendation-information.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/recommendation-information.png" alt="recommendation information" title="recommendation information" style="border: 1px solid gray; zoom:75%;"></a></ol>
+<a class="glightbox" href="../images/recommendation-information.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/recommendation-information.png" alt="recommendation information" title="recommendation information" style="border: 1px solid gray; zoom:75%;"></a></li></ol>
 
 <h3 id="nlu-validation-options">NLU Validation Options<a class="headerlink" href="#nlu-validation-options" title="Permanent link">&para;</a></h3>
 <p>Next to the <strong>Validate Model</strong>, there is a drop-down with options to select either the <strong>Confusion matrix</strong> or <strong>K-fold Cross Validations</strong>.</p>
