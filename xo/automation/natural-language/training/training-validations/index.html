@@ -4495,6 +4495,54 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#reset-the-intent-recommendation-filter" class="md-nav__link">
+    Reset the Intent Recommendation Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refreshing-recommendations" class="md-nav__link">
+    Refreshing Recommendations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-and-regenerate" class="md-nav__link">
+    Train and Regenerate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nlu-validation-options" class="md-nav__link">
+    NLU Validation Options
+  </a>
+  
+    <nav class="md-nav" aria-label="NLU Validation Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confusion-matrix" class="md-nav__link">
+    Confusion Matrix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-fold-cross-validation" class="md-nav__link">
+    K-Fold Cross Validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4632,58 +4680,56 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Important Considerations</p>
-<ul><li>The user can filter only one recommendation at a time.</li>
-<li>When a filter is selected, it applies to the <i>Intent training</i>, <i>utterance</i>, <i>rule</i>, and <i>pattern-level</i> recommendations for the selected intent type.</li></ul>
+<p><ul><li>The user can filter only one recommendation at a time.</li>
+<li>When a filter is selected, it applies to the <i>Intent training</i>, <i>utterance</i>, <i>rule</i>, and <i>pattern-level</i> recommendations for the selected intent type.</li></ul></p></div>
 
-### Reset the Intent Recommendation Filter
-
-With the **CLEAR FILTER** option, you can clear or reset a filter selection for an **intent type** issue. Once the filter is reset, an unfiltered view of all the intent names and intent types (errors and warnings) with all the training data (Utterances, Patterns, Negative Patterns, etc.) is displayed.
-
-To reset the **intents recommendation** filter, follow the steps below:
-
-1. Click the **CLEAR FILTER** link under the **Training** > **Intents** tab.
-<a class="glightbox" href="../images/intent-clear-filter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/intent-clear-filter.png" alt="clear intent filter" title="clear intent filter" style="border: 1px solid gray; zoom:75%;"></a>
-
-2. All the intent type entries are displayed without filtering the data.
-
-
-### Refreshing Recommendations
-
-In the recommendation summary, you can refresh recommendations as explained in the previous section in some of the scenarios like:
-
-**Modify training data:** When the training data is modified, you can check for new recommendations.
-
-**Implement recommendations:** When a recommendation is implemented, you can verify if it is resolved.
-
-**Add new training data:** When new intents or utterances are added, you can check for new recommendations.
-
-When you click the **Refresh** icon, a timestamp of the last refresh is displayed along with the refreshed recommendations list. The timestamp is updated with every refresh.
-
-<a class="glightbox" href="../images/recommendation-timestamp.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/recommendation-timestamp.png" alt="recommendation timestamp" title="recommendation timestamp" style="border: 1px solid gray; zoom:75%;"></a>
-
-If there are untrained utterances in the training model, the platform provides you with the following options:
-
-### Train and Regenerate
-
-This option allows you to train the model with untrained utterances, and then triggers a background task to generate recommendations from the latest model.
-
-The following steps explain the **Train & Generate** usage with an example.
-
-1. Click any intent and add a new utterance.
-<a class="glightbox" href="../images/add-utterance-to-intent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-utterance-to-intent.png" alt="add utterance to intent" title="add utterance to intent" style="border: 1px solid gray; zoom:75%;"></a>
-
-2. Once the utterance is added, go to the main page and click the **Refresh** icon to refresh the recommendations. The following pop-up is displayed when there are untrained utterances.
-<a class="glightbox" href="../images/untrained-data-pop-up.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/untrained-data-pop-up.png" alt="untrained data pop up" title="untrained data pop up" style="border: 1px solid gray; zoom:75%;"></a>
-
-3. Click the **Train & Regenerate** button to train the utterances and regenerate the recommendations.
-4. A message about training initiation is displayed.<a class="glightbox" href="../images/training-initiation-message.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-initiation-message.png" alt="training initiation message" title="training initiation message" style="border: 1px solid gray; zoom:75%;"></a>
-
-5. Once training and regeneration of recommendations is completed, the status is displayed in the status docker.
-<a class="glightbox" href="../images/training-and-regeneration-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-and-regeneration-status.png" alt="training and regeneration status" title="training and regeneration status" style="border: 1px solid gray; zoom:75%;"></a>
-
-6. Click the **Regenerate** button in the displayed pop-up if you want to trigger a background task that generates recommendations from the current model.
-<a class="glightbox" href="../images/click-regenerate-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/click-regenerate-button.png" alt="click regenerate" title="click regenerate" style="border: 1px solid gray; zoom:75%;"></a>
-
+<h3 id="reset-the-intent-recommendation-filter">Reset the Intent Recommendation Filter<a class="headerlink" href="#reset-the-intent-recommendation-filter" title="Permanent link">&para;</a></h3>
+<p>With the <strong>CLEAR FILTER</strong> option, you can clear or reset a filter selection for an <strong>intent type</strong> issue. Once the filter is reset, an unfiltered view of all the intent names and intent types (errors and warnings) with all the training data (Utterances, Patterns, Negative Patterns, etc.) is displayed.</p>
+<p>To reset the <strong>intents recommendation</strong> filter, follow the steps below:</p>
+<ol>
+<li>
+<p>Click the <strong>CLEAR FILTER</strong> link under the <strong>Training</strong> &gt; <strong>Intents</strong> tab.
+<a class="glightbox" href="../images/intent-clear-filter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/intent-clear-filter.png" alt="clear intent filter" title="clear intent filter" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>All the intent type entries are displayed without filtering the data.</p>
+</li>
+</ol>
+<h3 id="refreshing-recommendations">Refreshing Recommendations<a class="headerlink" href="#refreshing-recommendations" title="Permanent link">&para;</a></h3>
+<p>In the recommendation summary, you can refresh recommendations as explained in the previous section in some of the scenarios like:</p>
+<p><strong>Modify training data:</strong> When the training data is modified, you can check for new recommendations.</p>
+<p><strong>Implement recommendations:</strong> When a recommendation is implemented, you can verify if it is resolved.</p>
+<p><strong>Add new training data:</strong> When new intents or utterances are added, you can check for new recommendations.</p>
+<p>When you click the <strong>Refresh</strong> icon, a timestamp of the last refresh is displayed along with the refreshed recommendations list. The timestamp is updated with every refresh.</p>
+<p><a class="glightbox" href="../images/recommendation-timestamp.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/recommendation-timestamp.png" alt="recommendation timestamp" title="recommendation timestamp" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>If there are untrained utterances in the training model, the platform provides you with the following options:</p>
+<h3 id="train-and-regenerate">Train and Regenerate<a class="headerlink" href="#train-and-regenerate" title="Permanent link">&para;</a></h3>
+<p>This option allows you to train the model with untrained utterances, and then triggers a background task to generate recommendations from the latest model.</p>
+<p>The following steps explain the <strong>Train &amp; Generate</strong> usage with an example.</p>
+<ol>
+<li>
+<p>Click any intent and add a new utterance.
+<a class="glightbox" href="../images/add-utterance-to-intent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-utterance-to-intent.png" alt="add utterance to intent" title="add utterance to intent" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Once the utterance is added, go to the main page and click the <strong>Refresh</strong> icon to refresh the recommendations. The following pop-up is displayed when there are untrained utterances.
+<a class="glightbox" href="../images/untrained-data-pop-up.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/untrained-data-pop-up.png" alt="untrained data pop up" title="untrained data pop up" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Click the <strong>Train &amp; Regenerate</strong> button to train the utterances and regenerate the recommendations.</p>
+</li>
+<li>
+<p>A message about training initiation is displayed.<a class="glightbox" href="../images/training-initiation-message.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-initiation-message.png" alt="training initiation message" title="training initiation message" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Once training and regeneration of recommendations is completed, the status is displayed in the status docker.
+<a class="glightbox" href="../images/training-and-regeneration-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-and-regeneration-status.png" alt="training and regeneration status" title="training and regeneration status" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p>Click the <strong>Regenerate</strong> button in the displayed pop-up if you want to trigger a background task that generates recommendations from the current model.
+<a class="glightbox" href="../images/click-regenerate-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/click-regenerate-button.png" alt="click regenerate" title="click regenerate" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>While performing the refresh, you cannot trigger the task again. If you click the <b>Refresh</b> icon when the model is being trained, recommendations from the latest Validate model are generated only once the training is completed.</p></div>
@@ -4694,36 +4740,22 @@ For example, if new utterances are added to the intent, a new recommendation may
 
 <a class="glightbox" href="../images/recommendation-information.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/recommendation-information.png" alt="recommendation information" title="recommendation information" style="border: 1px solid gray; zoom:75%;"></a></ol>
 
-### NLU Validation Options
-
-Next to the **Validate Model**, there is a drop-down with options to select either the **Confusion matrix** or **K-fold Cross Validations**.
-
-<a class="glightbox" href="../images/nlu-validation-options.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/nlu-validation-options.png" alt="nlu validation options" title="nlu validation options" style="border: 1px solid gray; zoom:75%;"></a>
-
-You can also click the **Go** button to access Confusion Matrix and K-fold Cross Validation reports.
-
-<a class="glightbox" href="../images/click-go-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/click-go-button.png" alt="click go button" title="click go button" style="border: 1px solid gray; zoom:75%;"></a>
-
-#### Confusion Matrix
-
-Confusion Matrix is useful in describing the performance of a classification model (or classifier) on a set of test data for which the true values are known. The graph generated by the confusion matrix presents an at-a-glance view of the performance of your trained utterances against the virtual assistant’s tasks. To learn more, see the Confusion Matrix section in <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/model-validation/" target="_blank">Model Validation</a>.
-
-The following screenshot shows the confusion matrix report.
-<a class="glightbox" href="../images/confusion-matrix-report.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/confusion-matrix-report.png" alt="confusion matrix report" title="confusion matrix report" style="border: 1px solid gray; zoom:75%;"></a>
-
-If no data is available in the Confusion Matrix, you click the **Generate** button to create a report.
-
-Whenever the Validate model is updated, you can click the **Re-Run Model** to generate the latest matrix. Once you rerun the model, the platform prompts you to either <a href="https://developer.kore.ai/docs/bots/nlp/training-validations/#Train_and_Regenerate" target="_blank">Train and Regenerate</a> the recommendations if the model has unsaved changes or <a href="https://developer.kore.ai/docs/bots/nlp/training-validations/#Regenerate" target="_blank">Regenerate</a> the recommendations if the model is up to date.
-
-Whenever you <a href="https://developer.kore.ai/docs/bots/nlp/training-validations/#Train_and_Regenerate" target="_blank">Train and Regenerate</a> the recommendations, the matrix will also be regenerated. Similarly, whenever you regenerate the matrix, the recommendations are updated too.
-
-#### K-Fold Cross Validation
-
-K-Fold Cross-Validation is a resampling procedure used to evaluate machine learning models on a limited data sample. The technique involves partitioning the data into subsets, training the data on a subset, and using the other subsets to evaluate the model’s performance. To learn more, see the K-Fold Cross Validation section in <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/model-validation/" target="_blank">Model Validation</a>.
-
-The following screenshot shows the K-Fold Cross-Validation report.
-
-<a class="glightbox" href="../images/k-fold-cross-validation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/k-fold-cross-validation.png" alt="k-fold cross validation" title="k-fold cross validation" style="border: 1px solid gray; zoom:75%;"></a>
+<h3 id="nlu-validation-options">NLU Validation Options<a class="headerlink" href="#nlu-validation-options" title="Permanent link">&para;</a></h3>
+<p>Next to the <strong>Validate Model</strong>, there is a drop-down with options to select either the <strong>Confusion matrix</strong> or <strong>K-fold Cross Validations</strong>.</p>
+<p><a class="glightbox" href="../images/nlu-validation-options.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/nlu-validation-options.png" alt="nlu validation options" title="nlu validation options" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>You can also click the <strong>Go</strong> button to access Confusion Matrix and K-fold Cross Validation reports.</p>
+<p><a class="glightbox" href="../images/click-go-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/click-go-button.png" alt="click go button" title="click go button" style="border: 1px solid gray; zoom:75%;"></a></p>
+<h4 id="confusion-matrix">Confusion Matrix<a class="headerlink" href="#confusion-matrix" title="Permanent link">&para;</a></h4>
+<p>Confusion Matrix is useful in describing the performance of a classification model (or classifier) on a set of test data for which the true values are known. The graph generated by the confusion matrix presents an at-a-glance view of the performance of your trained utterances against the virtual assistant’s tasks. To learn more, see the Confusion Matrix section in <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/model-validation/" target="_blank">Model Validation</a>.</p>
+<p>The following screenshot shows the confusion matrix report.
+<a class="glightbox" href="../images/confusion-matrix-report.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/confusion-matrix-report.png" alt="confusion matrix report" title="confusion matrix report" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>If no data is available in the Confusion Matrix, you click the <strong>Generate</strong> button to create a report.</p>
+<p>Whenever the Validate model is updated, you can click the <strong>Re-Run Model</strong> to generate the latest matrix. Once you rerun the model, the platform prompts you to either <a href="https://developer.kore.ai/docs/bots/nlp/training-validations/#Train_and_Regenerate" target="_blank">Train and Regenerate</a> the recommendations if the model has unsaved changes or <a href="https://developer.kore.ai/docs/bots/nlp/training-validations/#Regenerate" target="_blank">Regenerate</a> the recommendations if the model is up to date.</p>
+<p>Whenever you <a href="https://developer.kore.ai/docs/bots/nlp/training-validations/#Train_and_Regenerate" target="_blank">Train and Regenerate</a> the recommendations, the matrix will also be regenerated. Similarly, whenever you regenerate the matrix, the recommendations are updated too.</p>
+<h4 id="k-fold-cross-validation">K-Fold Cross Validation<a class="headerlink" href="#k-fold-cross-validation" title="Permanent link">&para;</a></h4>
+<p>K-Fold Cross-Validation is a resampling procedure used to evaluate machine learning models on a limited data sample. The technique involves partitioning the data into subsets, training the data on a subset, and using the other subsets to evaluate the model’s performance. To learn more, see the K-Fold Cross Validation section in <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/model-validation/" target="_blank">Model Validation</a>.</p>
+<p>The following screenshot shows the K-Fold Cross-Validation report.</p>
+<p><a class="glightbox" href="../images/k-fold-cross-validation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/k-fold-cross-validation.png" alt="k-fold cross validation" title="k-fold cross validation" style="border: 1px solid gray; zoom:75%;"></a></p>
 
 
   
