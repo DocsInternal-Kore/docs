@@ -4670,10 +4670,10 @@ Hover on the **Error** icon to view the recommendations to resolve the error.
 <li>
 <p>Click the <strong>+Utterance</strong>, <strong>+Pattern</strong>, or <strong>+Rule</strong> link for an intent issue type to add the relevant values for training.</p>
 </li>
-<li>Enter the values in the relevant textbox and click enter under the <strong>Intent summary</strong> window’s <strong>Utterance/Pattern/Rule</strong> tab. The <strong>Intent Summary</strong> window displays the context to resolve the filtered issue.</li>
-</ol>
-<p><a class="glightbox" href="../images/intent-summary-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/intent-summary-window.png" alt="intent summary window" title="intent summary window" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
+<li>
+<p>Enter the values in the relevant textbox and click enter under the <strong>Intent summary</strong> window’s <strong>Utterance/Pattern/Rule</strong> tab. The <strong>Intent Summary</strong> window displays the context to resolve the filtered issue.
+<a class="glightbox" href="../images/intent-summary-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/intent-summary-window.png" alt="intent summary window" title="intent summary window" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
 <li>
 <p>The <strong>utterance/pattern/rule</strong> is created successfully and mapped to the intent.
 <a class="glightbox" href="../images/intent-mapping.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/intent-mapping.png" alt="intent mapping" title="intent mapping" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -4730,10 +4730,10 @@ Hover on the **Error** icon to view the recommendations to resolve the error.
 <p>A message about training initiation is displayed.<a class="glightbox" href="../images/training-initiation-message.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-initiation-message.png" alt="training initiation message" title="training initiation message" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>Once training and regeneration of recommendations is completed, the status is displayed in the status docker.
-<a class="glightbox" href="../images/training-and-regeneration-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-and-regeneration-status.png" alt="training and regeneration status" title="training and regeneration status" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Once training and regeneration of recommendations is completed, the status is displayed in the status docker.</p>
 </li>
 </ol>
+<p><a class="glightbox" href="../images/training-and-regeneration-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-and-regeneration-status.png" alt="training and regeneration status" title="training and regeneration status" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h3 id="regenerate">Regenerate<a class="headerlink" href="#regenerate" title="Permanent link">&para;</a></h3>
 <p>Click the <strong>Regenerate</strong> button in the displayed pop-up if you want to trigger a background task that generates recommendations from the current model.
 <a class="glightbox" href="../images/click-regenerate-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/click-regenerate-button.png" alt="click regenerate" title="click regenerate" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -4741,9 +4741,9 @@ Hover on the **Error** icon to view the recommendations to resolve the error.
 <p class="admonition-title">Note</p>
 <p>While performing the refresh, you cannot trigger the task again. If you click the <b>Refresh</b> icon when the model is being trained, recommendations from the latest Validate model are generated only once the training is completed.</p></div>
 
-<ol start="6"><li>When you click the <b>Refresh</b> icon, the recommendations summary is refreshed and the count of recommendations is either increased, or decreased, or the recommendations are updated based on the latest results.
+<ol start="6"><li><p>When you click the <b>Refresh</b> icon, the recommendations summary is refreshed and the count of recommendations is either increased, or decreased, or the recommendations are updated based on the latest results.</p>
 
-For example, if new utterances are added to the intent, a new recommendation may get added to the summary list. Similarly, if a recommendation is implemented, the count of recommendations decreases. In a recommendation like <i>13 intents have very short utterances, if 2 intents are fixed, then the recommendation is updated to 11 intents have very short utterances</i>.</li>
+<p>For example, if new utterances are added to the intent, a new recommendation may get added to the summary list. Similarly, if a recommendation is implemented, the count of recommendations decreases. In a recommendation like <i>13 intents have very short utterances, if 2 intents are fixed, then the recommendation is updated to 11 intents have very short utterances</i>.</p></li>
 
 <a class="glightbox" href="../images/recommendation-information.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/recommendation-information.png" alt="recommendation information" title="recommendation information" style="border: 1px solid gray; zoom:75%;"></a></ol>
 
@@ -4757,7 +4757,7 @@ For example, if new utterances are added to the intent, a new recommendation may
 <p>The following screenshot shows the confusion matrix report.
 <a class="glightbox" href="../images/confusion-matrix-report.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/confusion-matrix-report.png" alt="confusion matrix report" title="confusion matrix report" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>If no data is available in the Confusion Matrix, you click the <strong>Generate</strong> button to create a report.</p>
-<p>Whenever the Validate model is updated, you can click the <strong>Re-Run Model</strong> to generate the latest matrix. Once you rerun the model, the platform prompts you to either <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/training-validations/#train-and-regenerate" target="_blank">Train and Regenerate</a> the recommendations if the model has unsaved changes or <a href="https://developer.kore.ai/docs/bots/nlp/training-validations/#Regenerate" target="_blank">Regenerate</a> the recommendations if the model is up to date.</p>
+<p>Whenever the Validate model is updated, you can click the <strong>Re-Run Model</strong> to generate the latest matrix. Once you rerun the model, the platform prompts you to either <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/training-validations/#train-and-regenerate" target="_blank">Train and Regenerate</a> the recommendations if the model has unsaved changes or <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/training-validations/#regenerate" target="_blank">Regenerate</a> the recommendations if the model is up to date.</p>
 <p>Whenever you <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/training-validations/#train-and-regenerate" target="_blank">Train and Regenerate</a> the recommendations, the matrix will also be regenerated. Similarly, whenever you regenerate the matrix, the recommendations are updated too.</p>
 <h4 id="k-fold-cross-validation">K-Fold Cross Validation<a class="headerlink" href="#k-fold-cross-validation" title="Permanent link">&para;</a></h4>
 <p>K-Fold Cross-Validation is a resampling procedure used to evaluate machine learning models on a limited data sample. The technique involves partitioning the data into subsets, training the data on a subset, and using the other subsets to evaluate the model’s performance. To learn more, see the K-Fold Cross Validation section in <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/model-validation/" target="_blank">Model Validation</a>.</p>
