@@ -95,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#directory" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -3711,10 +3716,66 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Directory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Directory
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-files-and-directories" class="md-nav__link">
+    Viewing Files and Directories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-files-and-directories" class="md-nav__link">
+    Uploading Files and Directories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-files-and-directories" class="md-nav__link">
+    Deleting Files and Directories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#searching-for-directories-and-files" class="md-nav__link">
+    Searching for Directories and Files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4902,6 +4963,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-files-and-directories" class="md-nav__link">
+    Viewing Files and Directories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-files-and-directories" class="md-nav__link">
+    Uploading Files and Directories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-files-and-directories" class="md-nav__link">
+    Deleting Files and Directories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#searching-for-directories-and-files" class="md-nav__link">
+    Searching for Directories and Files
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4920,7 +5019,47 @@
 
 
 
-
+<h1 id="directory">Directory<a class="headerlink" href="#directory" title="Permanent link">&para;</a></h1>
+<p>Business information is available in a variety of formats and at various locations. A lot of this information is also available as documents and files on internal servers. XO Answers provides a capability to upload and index files or directories hosted on local machines or remote servers. This functionality streamlines the process of locating information, eliminating the need to manually locate specific documents and sift through their contents, thus reducing manual efforts and enabling efficient retrieval of information. saving users both time and energy.</p>
+<p>The <strong>Answers</strong> module allows you to <strong>upload one or more files, directories from the local device or from a given URL</strong>. The uploaded files are organized into directories in the application. A default directory is always present to store files. Once a file is successfully uploaded to the application, it is automatically indexed and the file data is readily available as answers to the user’s queries.  XO applications supports files in various formats - PDF, DOCX, PPT, XLSX, JPEG, PNG and TXT. However, currently scanned PDFs and password-protected files are not supported.  </p>
+<h2 id="viewing-files-and-directories">Viewing Files and Directories<a class="headerlink" href="#viewing-files-and-directories" title="Permanent link">&para;</a></h2>
+<p>Go to <strong>Sources</strong> under the Answers Module and click on <strong>Directory</strong> tab. This lists all the directories configured as content sources.</p>
+<p><a class="glightbox" href="../images/directory/directory-home.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Directory Home" src="../images/directory/directory-home.png" title="directory home" /></a></p>
+<p>For each directory, it lists the number of files that it contains, the user who created this, timestamp of the last update made to this directory and the status of file uploads to the directory.  By default, the <strong>Default Directory</strong> always exists. You can upload files to this default directory or create new directories and upload files to those directories. </p>
+<p>Click on any of the directories in the list to view the details. The <strong>Directory Details</strong> page shows the properties of the directory and the <strong>Files</strong> tab lists the files in the directory along with their type and number of pages in the file.</p>
+<p><a class="glightbox" href="../images/directory/directory-details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Directory Details" src="../images/directory/directory-details.png" title="Directory Details" /></a></p>
+<p>Click on any of the files to see more details about the file like file type, total number of pages in the file and a preview of the file.</p>
+<p><a class="glightbox" href="../images/directory/file-summary.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="File Summary" src="../images/directory/file-summary.png" title="File Summary" /></a></p>
+<p>Click on the <strong>JSON view</strong> button to see the file details as extracted from the file in JSON format. </p>
+<p><a class="glightbox" href="../images/directory/file-json-view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="JSON View" src="../images/directory/file-json-view.png" title="JSON View" /></a></p>
+<h2 id="uploading-files-and-directories">Uploading Files and Directories<a class="headerlink" href="#uploading-files-and-directories" title="Permanent link">&para;</a></h2>
+<p>To upload one or more files or directories, click the <strong>Upload</strong> button on the top right corner of the page.</p>
+<p><a class="glightbox" href="../images/directory/upload-file.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Upload" src="../images/directory/upload-file.png" title="upload" /></a></p>
+<p>There are <strong>three upload options</strong> to upload files.
+<a class="glightbox" href="../images/directory/new-upload.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Upload options" src="../images/directory/new-upload.png" title="upload options" /></a></p>
+<ol>
+<li><strong>File</strong>: Use this option to upload one or more files to any of the existing directories from the local device. Select the directory where the files are to be uploaded, drag and drop file from local device and click Proceed.</li>
+<li>
+<p><strong>URL</strong>: Use this option to upload a file hosted remotely via its URL. Enter a title for the file to be uploaded from the URL, select the directory to which it is to be uploaded, enter description for the file, the URL where it is available and click Proceed.
+<a class="glightbox" href="../images/directory/upload-from-URL.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Upload from URL" src="../images/directory/upload-from-URL.png" title="Upload from URL" /></a></p>
+</li>
+<li>
+<p><strong>Directory</strong>: Use this option to upload a complete directory from the local device to the application. All the files under the directory are uploaded to the application under a new folder created using the source title.
+<a class="glightbox" href="../images/directory/upload-directory.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Upload Directory" src="../images/directory/upload-directory.png" title="Upload Directory" /></a></p>
+</li>
+</ol>
+<h2 id="deleting-files-and-directories">Deleting Files and Directories<a class="headerlink" href="#deleting-files-and-directories" title="Permanent link">&para;</a></h2>
+<p>To delete a complete directory from the application, click on the <strong>Actions</strong> and select <strong>Delete</strong>. This will delete the directory and all the files in the directory.</p>
+<p><a class="glightbox" href="../images/directory/delete-directory.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Directory" src="../images/directory/delete-directory.png" title="Delete Directory" /></a></p>
+<p>To delete a specific file from a directory, go to the Directory Details and select the <strong>Delete</strong> action corresponding to the file to be deleted.
+<a class="glightbox" href="../images/directory/file-delete.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete File" src="../images/directory/file-delete.png" title="Delete File" /></a></p>
+<p>Alternatively, you can go to the details page of the file and click the <strong>Delete</strong> button.
+<a class="glightbox" href="../images/directory/file-delete-detailspage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete File" src="../images/directory/file-delete-detailspage.png" title="Delete File" /></a></p>
+<h2 id="searching-for-directories-and-files">Searching for Directories and Files<a class="headerlink" href="#searching-for-directories-and-files" title="Permanent link">&para;</a></h2>
+<p>Use the search bar at the top of the Directory page to look for a specific directory.</p>
+<p><a class="glightbox" href="../images/directory/search-directory.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Search Directory" src="../images/directory/search-directory.png" title="Search Directory" /></a></p>
+<p>Similarly to look for a specific file in a particular directory, go to the Directory details and use the search bar at the top.
+<a class="glightbox" href="../images/directory/search-file.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Search File" src="../images/directory/search-file.png" title="Search File" /></a></p>
 
 
   
