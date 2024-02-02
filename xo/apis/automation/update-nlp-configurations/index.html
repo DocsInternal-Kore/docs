@@ -5138,7 +5138,7 @@
    </td>
    <td><code>auth: {{JWT}}</code>
 <p>
-See <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_JWT_Token">How to generate the JWT Token</a>.
+See <a href="../api-introduction/#generating-the-jwt-token">How to generate the JWT Token</a>.
    </td>
   </tr>
   <tr>
@@ -5253,35 +5253,35 @@ for Multiple ML Model
 <p>The parameters depend on the threshold configuration that needs to be updated. The comprehensive list of the parameters for the various threshold configurations is given below:</p>
 <h3 id="update-settings">Update Settings<a class="headerlink" href="#update-settings" title="Permanent link">&para;</a></h3>
 <h4 id="machine-learning-engine">Machine Learning Engine<a class="headerlink" href="#machine-learning-engine" title="Permanent link">&para;</a></h4>
-<p>This section refers to the configurations related to the Machine Learning engine. For details on the configurations, please click <a href="https://developer.kore.ai/docs/bots/nlp/user-utterances/#Threshold_Configurations">here</a>.</p>
-<p>```json
-{
-    "configurations": [
-        {
-            "mode": "ml",               // Machine Learning Engine
-            "exactMatchThreshold": 90,  // ML Definitive Score - value in range [80-100]
-            "minThreshold": 0.4        // ML threshold - value in range [0-1]
-        }
-    ],
-    "mlParams": {
-        "intentParams": {
-            "useSynonyms": true,       // Bot Synonyms
-            "useStopwords": true,      // Stopwords
-            "usePlaceholders": true,   // Entity Placeholders
-            "features": "skip_gram",       // Feature Extraction - value in range [skip_gram, n_gram]
-            "skip_gram": {             // features should be 'skip_gram'
-                "seqLength": 2,        // Sequence Length - value in range [2-4]
-                "maxSkipDistance": 1   // Maximum Skip Distance - value in range [1-3]
-              }               // ngram Sequence Length - value in range [1-4]
-                                       // features should be 'n_gram'
-        },
-        "nerParams": {
-            "type": "corenlp"          // NER Model
-                                       // could be "corenlp" for  Conditional Random Field
-                                       //       or "spacy" -  Deep Neural Network
-         }
-    }
-}</p>
+<p>This section refers to the configurations related to the Machine Learning engine. For details on the configurations, please click <a href="/docs/xo/automation/natural-language/training/machine-learning-engine.md">here</a>.</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ml&quot;</span><span class="p">,</span><span class="w">               </span><span class="c1">// Machine Learning Engine</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="nt">&quot;exactMatchThreshold&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">  </span><span class="c1">// ML Definitive Score - value in range [80-100]</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="nt">&quot;minThreshold&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.4</span><span class="w">        </span><span class="c1">// ML threshold - value in range [0-1]</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">&quot;mlParams&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nt">&quot;intentParams&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="nt">&quot;useSynonyms&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">       </span><span class="c1">// Bot Synonyms</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="nt">&quot;useStopwords&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">      </span><span class="c1">// Stopwords</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="nt">&quot;usePlaceholders&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">   </span><span class="c1">// Entity Placeholders</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;skip_gram&quot;</span><span class="p">,</span><span class="w">       </span><span class="c1">// Feature Extraction - value in range [skip_gram, n_gram]</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="nt">&quot;skip_gram&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">             </span><span class="c1">// features should be &#39;skip_gram&#39;</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                </span><span class="nt">&quot;seqLength&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">        </span><span class="c1">// Sequence Length - value in range [2-4]</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                </span><span class="nt">&quot;maxSkipDistance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">   </span><span class="c1">// Maximum Skip Distance - value in range [1-3]</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">              </span><span class="p">}</span><span class="w">               </span><span class="c1">// ngram Sequence Length - value in range [1-4]</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                                       </span><span class="c1">// features should be &#39;n_gram&#39;</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="nt">&quot;nerParams&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;corenlp&quot;</span><span class="w">          </span><span class="c1">// NER Model</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">                                       </span><span class="c1">// could be &quot;corenlp&quot; for  Conditional Random Field</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">                                       </span><span class="c1">//       or &quot;spacy&quot; -  Deep Neural Network</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">         </span><span class="p">}</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="p">}</span>
+</span></code></pre></div>
 
 
   
