@@ -5960,7 +5960,7 @@
 <h1 id="installing-the-botkit-sdk"><strong>Installing the BotKit SDK</strong><a class="headerlink" href="#installing-the-botkit-sdk" title="Permanent link">&para;</a></h1>
 <p>The Kore.ai BotKit SDK runs as a Node.js application. You can add your own reverse proxy, firewall, and load balancer to meet your functional requirements for availability, scalability, and performance.</p>
 <p>This section provides a high-level overview of BotKit SDK installation and configuration.</p>
-<p>For a detailed end-to-end tutorial on installation and setup using our Kore.ai Sample Assistants, see this <a href="https://developer.kore.ai/docs/bots/sdks/kore-ai-botkit-sdk-tutorial/">Kore.ai BotKit SDK Tutorial</a>.</p>
+<p>For a detailed end-to-end tutorial on installation and setup using our Kore.ai Sample Assistants, see this <a href="../tutorials/flight-search-sample-bot">Kore.ai BotKit SDK Tutorial</a>.</p>
 <p>To install the BotKit SDK, you will need to:</p>
 <ul>
 <li>Register your application on the Kore.ai XO Platform by creating a Virtual Assistant, and then configuring it for the Web/Mobile channel.</li>
@@ -5979,7 +5979,7 @@
 <li>appId = ClientID</li>
 <li>appKey – Client Secret</li>
 </ul>
-<p>For more information, see <a href="https://developer.kore.ai/docs/bots/sdks/sdk-app-registration/">SDK App Registration</a>.</p>
+<p>For more information, see <a href="../app-registration">SDK App Registration</a>.</p>
 <h2 id="installation-and-setup">Installation and Setup<a class="headerlink" href="#installation-and-setup" title="Permanent link">&para;</a></h2>
 <p>The Kore.ai BotKit SDK libraries can be downloaded from the Github repository at:</p>
 <p><a href="https://github.com/Koredotcom/BotKit">https://github.com/Koredotcom/BotKit</a></p>
@@ -6025,14 +6025,16 @@
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that the JWT token would expire in 60 seconds, by default. You can change this using the following KoreConfig setting:
-“botkit”:{</p>
-<div class="language-text highlight"><pre><span></span><code>“jwt_expiry”: 300 //seconds
-</code></pre></div>
-<p>}</p>
 </div>
+<p>By default, the JWT token would expire in 60 seconds. You can change this using the following KoreConfig setting:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>“botkit”:{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>     “jwt_expiry”: 300 //seconds
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> }
+</span></code></pre></div>
 <p>To run BotKit SDK, in a <strong>Terminal</strong> window, enter:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>node app.js
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>node app.js
 </span></code></pre></div></p>
 <p>Ensure that the node.js version is 10 or higher.</p>
 

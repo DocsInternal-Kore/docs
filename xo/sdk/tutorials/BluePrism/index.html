@@ -5987,7 +5987,7 @@
 <h1 id="botkit-sdk-tutorial-blue-prism">BotKit SDK Tutorial – Blue Prism<a class="headerlink" href="#botkit-sdk-tutorial-blue-prism" title="Permanent link">&para;</a></h1>
 <p>The integration of Kore.ai bots with Blue Prism helps you drive business process automation using conversational flows. Kore.ai bots execute conversation flows by understanding user intents, entities, context, and sentiment. Blue Prism RPA services can consume the contextually relevant information and effectively automate business processes.</p>
 <h2 id="integration-approach">Integration Approach<a class="headerlink" href="#integration-approach" title="Permanent link">&para;</a></h2>
-<p>Kore.ai’s Blue Prism Connector is a generic reference integration for connecting Kore.ai bots with your enterprise Blue Prism RPA services. Conversation flow can be defined to invoke RPA services using <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-web-hook-node/">Webhook nodes</a> via BotKit SDK integration. The following is a typical integration flow:</p>
+<p>Kore.ai’s Blue Prism Connector is a generic reference integration for connecting Kore.ai bots with your enterprise Blue Prism RPA services. Conversation flow can be defined to invoke RPA services using <a href="../../automation/use-cases/dialogs/node-types/working-with-the-web-hook-node">Webhook nodes</a> via BotKit SDK integration. The following is a typical integration flow:</p>
 <ul>
 <li>Conversation flows in Kore.ai bots can be configured to pass the contextually relevant information like intent in progress, entities collected, etc. to the BotKit SDK (platform extension)</li>
 <li>BotKit SDK can be used to invoke the RPA process using the Kore.ai Blue Prism Connector.</li>
@@ -6006,8 +6006,8 @@
 <ul>
 <li><strong>Step 1</strong>: Create a Dialog task and build flow to meet your business use case</li>
 <li><strong>Step 2</strong>: Identify the specific locations in your flow that require integration with Blue Prism to invoke RPA services</li>
-<li><strong>Step 3</strong>: Build your RPA service request JSON object (BluePrismRequest) using Script nodes (<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-script-node/">refer here for how</a>). Refer to the ‘<a href="https://developer.kore.ai/docs/bots/sdks/botkit-sdk-tutorial-blue-prism/#request">Sample Request Object</a>‘ section given below for a sample representation.</li>
-<li><strong>Step 4</strong>: Place Webhook nodes in the identified locations. Ensure that you have setup BotKit SDK and configured the connections. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-web-hook-node/">Refer here for more details on Webhook Node</a>.</li>
+<li><strong>Step 3</strong>: Build your RPA service request JSON object (BluePrismRequest) using Script nodes (<a href="../../automation/use-cases/dialogs/node-types/working-with-the-script-node">refer here for how</a>). Refer to the ‘<a href="#sample-request-object">Sample Request Object</a>‘ section given below for a sample representation.</li>
+<li><strong>Step 4</strong>: Place Webhook nodes in the identified locations. Ensure that you have setup BotKit SDK and configured the connections. <a href="../../automation/use-cases/dialogs/node-types/working-with-the-web-hook-node">Refer here for more details on Webhook Node</a>.</li>
 <li><strong>Step 5</strong>: Review the request payload that the Kore.ai platform passes to BotKit for invoking the RPA service.</li>
 <li><strong>Step 6</strong>: Response payload (BluePrismResponse) received from RPA services is now available in the dialog context. You can use the data from the BluePrismResponse object to compose a response to the user or define conversation flows of your bot.</li>
 </ul>

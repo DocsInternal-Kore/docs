@@ -6005,9 +6005,9 @@
 <p>When a feedback survey is created for a conversation over a specific channel, a user responds to the virtual assistant for a survey question based on the configured survey type (NPS, CSAT, or Thumbs-up/down). The feedback survey score sent by the user is captured in the system.</p>
 <p>All the feedback survey messages exchanged between the user and the assistant are sent to the BotKit SDK as message events.</p>
 <h3 id="webhooks">Webhooks<a class="headerlink" href="#webhooks" title="Permanent link">&para;</a></h3>
-<p>Your BotKit SDK receives webhook events whenever the natural language processor enters the SDK <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-web-hook-node/">Webhook node</a> in an XO Platform dialog task flow. In the following sequence diagram, flow for a user sending a message via a channel until the user response is shown.</p>
+<p>Your BotKit SDK receives webhook events whenever the natural language processor enters the SDK <a href="../../automation/use-cases/dialogs/node-types/working-with-the-web-hook-node">Webhook node</a> in an XO Platform dialog task flow. In the following sequence diagram, flow for a user sending a message via a channel until the user response is shown.</p>
 <p><a class="glightbox" href="../images/send-message-via-channel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/send-message-via-channel.png" title="send message via a channel" /></a></p>
-<p>For webhook events, you should add a <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-web-hook-node/">Webhook node</a> in the dialog task flow whenever there is a need for server-side validation, execution of business logic, or a backend server call is required. Business logic and the response is sent on the same on_webhook event. The response is an HTTP status code 202. To send response data to the XO Platform from the SDK, call the sdk.sendWebhookResponse() event.</p>
+<p>For webhook events, you should add a <a href="../../automation/use-cases/dialogs/node-types/working-with-the-web-hook-node">Webhook node</a> in the dialog task flow whenever there is a need for server-side validation, execution of business logic, or a backend server call is required. Business logic and the response is sent on the same on_webhook event. The response is an HTTP status code 202. To send response data to the XO Platform from the SDK, call the sdk.sendWebhookResponse() event.</p>
 <p>Webhook events are received by the SDK when the Kore.ai NL Engine processes a Webhook node in a dialog task flow. The Kore.ai NLP engine processes each node, and then transitions to the next node based on the conditions defined. When a Webhook node is processed, a webhook call is executed and the XO Platform sends the on_webhook event to the SDK. The following sequence diagram shows the message flow with a webhook.</p>
 <p><a class="glightbox" href="../images/message-flow-with-webhook.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/message-flow-with-webhook.png" title="Message flow with Webhook" /></a></p>
 <h3 id="agent-transfer">Agent Transfer<a class="headerlink" href="#agent-transfer" title="Permanent link">&para;</a></h3>
@@ -6015,7 +6015,7 @@
 <p><a class="glightbox" href="../images/switch-to-live-agent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/switch-to-live-agent.png" title="Switch to live agent" /></a></p>
 <p>To set up an Agent Transfer in your dialog conversation flow, you will need to:</p>
 <ol>
-<li>Create an app on the XO Platform under <strong>Build &gt; Integrations &gt; BotKit</strong> section. \</li>
+<li>Create an app on the XO Platform under <strong>Build &gt; Integrations &gt; BotKit</strong> section. </li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6026,7 +6026,7 @@
 <li>Identify the steps and define the transition conditions to meet to transfer to an agent.</li>
 <li>Add the Agent Transfer node in the dialog flow as shown in the following illustration</li>
 </ol>
-<p>For more information, see <a href="https://developer.kore.ai/docs/bots/sdks/botkit-sdk-tutorial-agent-transfer/">BotKit SDK Tutorial – Agent Transfer</a>.</p>
+<p>For more information, see <a href="../tutorials/agent-transfer">BotKit SDK Tutorial – Agent Transfer</a>.</p>
 
 
   
