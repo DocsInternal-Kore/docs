@@ -5994,7 +5994,7 @@
 <h1 id="koreai-web-sdk-tutorial">Kore.ai Web SDK Tutorial<a class="headerlink" href="#koreai-web-sdk-tutorial" title="Permanent link">&para;</a></h1>
 <p>This tutorial is an end-to-end walkthrough for setting up and running an instance of the Kore.ai Bots Web SDK which is a collection of libraries that you can use to integrate Kore.ai bots with your own web applications.</p>
 <h2 id="web-sdk-tutorial-overview">Web SDK Tutorial Overview<a class="headerlink" href="#web-sdk-tutorial-overview" title="Permanent link">&para;</a></h2>
-<p>In this tutorial, you will install a Kore.ai sample bot, a test application to host the bot, and then a JSON Web Token (JWT) generation web service using your local host server to communicate between the bot on your local server and the Kore.ai Bots Platform. \
+<p>In this tutorial, you will install a Kore.ai sample bot, a test application to host the bot, and then a JSON Web Token (JWT) generation web service using your local host server to communicate between the bot on your local server and the Kore.ai Bots Platform.
 The following list describes the general steps you will take to install and configure the Web SDK.</p>
 <ol>
 <li><strong>Build the Bot to be integrated</strong> - For this tutorial, you will install the <em>Travel Planning Sample</em> bot that uses open APIs to get flight and location information, along with weather reports.</li>
@@ -6014,7 +6014,7 @@ The following list describes the general steps you will take to install and conf
 <li>Log on to Bot Builder, click the <strong>down arrow</strong> next to the  <strong>+New Bot,</strong> and select <strong>Install Sample Bots.</strong></li>
 <li>Hover over <strong>Travel Planning Sample</strong>, and then click <strong>Install</strong>.</li>
 <li>The Travel Planning Sample installed successfully message is displayed and the sample bot is added to your <strong>Bots</strong> left-hand navigation menu.
-In this next section, you will define the Web/Mobile Client channel for the Travel Planning Sample bot by creating a new client app and defining channel settings. <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-webmobile-client-channel/">See here</a> for a detailed explanation of the steps.</li>
+In this next section, you will define the Web/Mobile Client channel for the Travel Planning Sample bot by creating a new client app and defining channel settings. <a href="../../channels/add-web-mobile-client">See here</a> for a detailed explanation of the steps.</li>
 <li>On the bot builder top menu, select the <strong>Deploy</strong> tab.</li>
 <li>From the left menu, click <strong>Integrations &gt; Web/Mobile SDK</strong>.</li>
 <li>In the <strong>Select App</strong> drop-down list, click <strong>Create App</strong>. The <strong>Create Client App</strong> dialog is displayed.</li>
@@ -6028,24 +6028,22 @@ In this next section, you will define the Web/Mobile Client channel for the Trav
 <li>Client Secret</li>
 </ol>
 </li>
-<li>Click <strong>Save</strong>. 
+<li>Click <strong>Save</strong>.
 Now that the bot is created and defined for the Web/Mobile Client channel, you are ready to publish and deploy your bot.
 !!!note:
     By default, the Travel Sample Planning bot is configured with the Target Audience set to Enterprise Users on the Build tab in the Configurations -&gt; General Settings. Optionally, you can define this bot for General Public use. Once this bot is published, the Target Audience cannot be changed.</li>
-<li>On the <strong>Deploy</strong> tab, click <strong>Bot Management -&gt; Publish</strong>. </li>
+<li>On the <strong>Deploy</strong> tab, click <strong>Bot Management -&gt; Publish</strong>.</li>
 <li>On the <strong>Publish</strong> page, select all tasks, and then click <strong>Proceed</strong>.</li>
 <li>Enter a comment and <strong>Confirm</strong> publication. </li>
+<li>After an enterprise developer publishes a bot, it must be approved and assigned to the users for use.</li>
+<li>Complete one of the following bot deployments in the Bots Admin Console depending if your bot <strong>Target Audience</strong> is set to <strong>Enterprise Users</strong> or the <strong>General Public</strong>. Complete one of the following:<ol>
+<li>In the Bots Admin Console, in the <strong>Bots Management</strong> module, on the <strong>Enterprise Bots</strong> page, click the <strong>Ellipses</strong> icon for the Travel Planning Sample bot that you want to deploy, and then click <strong>Manage bot tasks</strong>. The <strong>Manage Bot Tasks</strong> dialog is displayed.</li>
+<li>In the <strong>Bot tasks</strong> field, click the <strong>Expand</strong> icon to display the available and deployed tasks, select all tasks for this bot, and then click <strong>Confirm</strong>.</li>
+<li>In the <strong>Manage Bots tasks</strong> dialog, click <strong>Confirm</strong>. The Bot status changed successfully message is displayed.</li>
+<li>On the <strong>Enterprise Bots</strong> page, click the <strong>Ellipses</strong> icon for the Travel Planning Sample bot that you want to assign the users to, and then click <strong>Bot &amp; task assignments</strong>.</li>
+<li>The <strong>Bot &amp; task assignments</strong> dialog is displayed. Assign the bot to your users, for all tasks, including yourself. Now it is time to download, decompress, install, and configure the software packages required for the Web SDK and a test application to run the bot locally on your local host server.</li>
 </ol>
-<p>After an enterprise developer publishes a bot, it must be approved and assigned to the users for use.
-15. Complete one of the following bot deployments in the Bots Admin Console depending if your bot <strong>Target Audience</strong> is set to <strong>Enterprise Users</strong> or the <strong>General Public</strong>. Complete one of the following:
-    1. In the Bots Admin Console, in the <strong>Bots Management</strong> module, on the <strong>Enterprise Bots</strong> page, click the <strong>Ellipses</strong> icon for the Travel Planning Sample bot that you want to deploy, and then click <strong>Manage bot tasks</strong>. The <strong>Manage Bot Tasks</strong> dialog is displayed.
-    2. In the <strong>Bot tasks</strong> field, click the <strong>Expand</strong> icon to display the available and deployed tasks, select all tasks for this bot, and then click <strong>Confirm</strong>.
-    3. In the <strong>Manage Bots tasks</strong> dialog, click <strong>Confirm</strong>. The Bot status changed successfully message is displayed.
-    4. On the <strong>Enterprise Bots</strong> page, click the <strong>Ellipses</strong> icon for the Travel Planning Sample bot that you want to assign the users to, and then click <strong>Bot &amp; task assignments</strong>.
-    5. The <strong>Bot &amp; task assignments</strong> dialog is displayed. Assign the bot to your users, for all tasks, including yourself.</p>
-<div class="language-text highlight"><pre><span></span><code>Now it is time to download, decompress, install, and configure the software packages required for the Web SDK and a test application to run the bot locally on your local host server.
-</code></pre></div>
-<ol>
+</li>
 <li>To download and install node.js on your computer, go to <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>, and then select your OS as .pkg for Mac, and .msi for Windows.</li>
 <li>In a <strong>Terminal</strong> window, run the <code>node -v</code> command to verify installation and version, for example, <code>v6.10.2</code>.</li>
 <li>Locate the <strong>SDKApp/sdk</strong> folder of your <span style="text-decoration:underline;">web server hosting the app</span> where you want to integrate the Kore bot. For this tutorial, to download the test application and JWT web service, click <a href="https://s3.amazonaws.com/static-kore/downloads/SDKApp.zip">SDKApp</a>, and unzip it.</li>
@@ -6056,133 +6054,136 @@ Now that the bot is created and defined for the Web/Mobile Client channel, you a
 <li>Bot Name</li>
 </ol>
 </li>
-<li>For ver7.2 of the platform, the Web SDK repo structure has undergone a major change. The steps would vary based on which repo you are using.<ol>
+<li>
+<p>For ver7.2 of the platform, the Web SDK repo structure has undergone a major change. The steps would vary based on which repo you are using.</p>
+<ol>
 <li>
 <p>Follow this step for the latest Web SDK file downloaded <span style="text-decoration:underline;">after ver7.2</span> of the platform i.e. <span style="text-decoration:underline;">after Feb 2020.</span></p>
 <ul>
 <li>Open the index.html file from the …/SDKApp/sdk/UI folder using a text editor. Update the following lines to add the path to the UI folder.</li>
 </ul>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery.tmpl.min.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&gt; </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery-ui.min.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&gt; </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">link</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;libs/jquery-ui.min.css&quot;</span><span class="w"> </span><span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/link&gt; </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;chatWindow.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&gt; </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">link</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;chatWindow.css&quot;</span><span class="w"> </span><span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/link&gt; </span>
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code>```javascript
-&lt;script src=&quot;libs/jquery.tmpl.min.js&quot; type=&quot;text/javascript&quot;&gt;&amp;lt;/script&gt; 
-```
-```javascript
-&lt;script src=&quot;libs/jquery-ui.min.js&quot; type=&quot;text/javascript&quot;&gt;&amp;lt;/script&gt; 
-```
-```javascript
-&lt;link href=&quot;libs/jquery-ui.min.css&quot; rel=&quot;stylesheet&quot;&gt;&amp;lt;/link&gt; 
-```
-```javascript
-&lt;script src=&quot;chatWindow.js&quot; type=&quot;text/javascript&quot;&gt;&amp;lt;/script&gt; 
-```
-```javascript
-&lt;link href=&quot;chatWindow.css&quot; rel=&quot;stylesheet&quot;&gt;&amp;lt;/link&gt; 
-```
-</code></pre></div>
 <ul>
 <li>Open the kore-config.js and update the botOptions parameters botInfo, clientId, and clientSecret, and your email id as userIdentity.</li>
 </ul>
-<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="s2">&quot;clientSecret&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;{client secret}&quot;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/api/users/getJWT&quot;</span><span class="p">,</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="c1">//this is sample url of a localhost. </span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span><span class="c1">//This should include the url where you are hosting the bot.</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nx">botOptions</span><span class="p">.</span><span class="nx">userIdentity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">;</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="c1">// Provide users email id here</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nx">botOptions</span><span class="p">.</span><span class="nx">clientId</span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;{client id} &quot;</span><span class="p">;</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="c1">// secure client-id</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="nx">_botOptions</span><span class="p">.</span><span class="nx">botInfo</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;{bot name}&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;{bot id&quot;</span><span class="p">};</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="c1">// Kore bot name is case sensitive</span>
+<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="s2">&quot;clientSecret&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;{client secret}&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/api/users/getJWT&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="c1">//this is sample url of a localhost. </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="c1">//This should include the url where you are hosting the bot.</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nx">botOptions</span><span class="p">.</span><span class="nx">userIdentity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="c1">// Provide users email id here</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nx">botOptions</span><span class="p">.</span><span class="nx">clientId</span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;{client id} &quot;</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="c1">// secure client-id</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nx">_botOptions</span><span class="p">.</span><span class="nx">botInfo</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;{bot name}&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;{bot id&quot;</span><span class="p">};</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="c1">// Kore bot name is case sensitive</span>
 </span></code></pre></div>
-The JWTUrl refers to the location where your app (where you want the Kore.ai Bot to be integrated) is hosted. For this tutorial, we are using the JWT server (as setup in step 19) and hence using the same here.</em></code>
-* Ensure that in kore-config.js you set the audience for your bot. Choose one of the following:
-    1. <code><em>"isAnonymous": &lt; <strong>false </strong>&gt;; if bot is deployed for the <strong>enterprise users</strong>, and then set botOptions.userIdentity = '<strong>&lt;</strong> <strong>Your email ID &gt;</strong>'; \
-    <strong>– or –</strong></em></code>
-    2. <code><em>"isAnonymous": &lt; <strong>true </strong>&gt;if bot is deployed for <strong>Consumer Use</strong></em></code>
-    5. <em>This step is valid for older Web SDK file downloaded <span style="text-decoration:underline;">before ver7.2</span> of the platform i.e. <span style="text-decoration:underline;">before Feb 2020</span></em>
-* <em>Open the index.html file from the …/SDKApp/sdk/UI folder using a text editor:</em>
-    3. <em>Update the following lines to add the path to the UI folder: \
-<code>&lt;script src="libs/jquery.js" type="text/javascript"&gt;&lt;/script&gt; \
-&lt;script src="libs/jquery.tmpl.min.js" type="text/javascript"&gt;&lt;/script&gt; \
-&lt;script src="libs/jquery-ui.min.js" type="text/javascript"&gt;&lt;/script&gt; \
-&lt;link href="libs/jquery-ui.min.css" rel="stylesheet"&gt;&lt;/link&gt; \
-&lt;script src="chatWindow.js" type="text/javascript"&gt;&lt;/script&gt; \
-&lt;link href="chatWindow.css" rel="stylesheet"&gt;&lt;/link&gt;</code></em></p>
-</li>
+The JWTUrl refers to the location where your app (where you want the Kore.ai Bot to be integrated) is hosted. For this tutorial, we are using the JWT server (as setup in step 19) and hence using the same here.</em></code></p>
+<ul>
+<li>Ensure that in kore-config.js you set the audience for your bot. Choose one of the following:<ol>
+<li><code><em>"isAnonymous": &lt; <strong>false </strong>&gt;; if bot is deployed for the <strong>enterprise users</strong>, and then set botOptions.userIdentity = '<strong>&lt;</strong> <strong>Your email ID &gt;</strong>'; \
+<strong>– or –</strong></em></code></li>
+<li><code><em>"isAnonymous": &lt; <strong>true </strong>&gt;if bot is deployed for <strong>Consumer Use</strong></em></code></li>
+<li>This step is valid for older Web SDK file downloaded <span style="text-decoration:underline;">before ver7.2</span> of the platform i.e. <span style="text-decoration:underline;">before Feb 2020</span></li>
 </ol>
 </li>
-</ol>
-<p><em>Update the following parameters to run as local host \
-<code>"clientSecret": "{client secret}"</code></em></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$.ajax({
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  url: &quot;http://localhost:3000/api/users/getJWT&quot;,
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>     //this is a sample URL of a local host. 
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>     //This should include the URL where you are hosting the bot.
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  botOptions.userIdentity = &#39; &#39;;
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>     // Provide users email id here
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  botOptions.clientId= &quot;{client id} &quot;;
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>     // secure client-id
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  _botOptions.botInfo= {name:&quot;{bot name}&quot;,&quot;id&quot;:&quot;{bot id&quot;};
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>     // Kore bot name is case sensitive
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code>        4. &lt;code&gt;&lt;em&gt; }) \
-</code></pre></div>
-<p><strong><span style="text-decoration:underline;">Note</span></strong>: The URL mentioned in the above code snippet, refers to the location where your app (where you want the Kore.ai Bot to be integrated) is hosted. For this tutorial, we are using the JWT server (as setup i step 18) and hence using the same here.</em></code>
-            5. <em>Choose one of the following:</em>
-                * <code><em>"isAnonymous": &lt; <strong>false </strong>&gt;; if bot is deployed for the <strong>enterprise users</strong>, and then set botOptions.userIdentity = '<strong>&lt;</strong> <strong>Your email ID &gt;</strong>'; \
-<strong>       – or –</strong></em></code>
-                * <code><em>"isAnonymous": &lt; <strong>true </strong>&gt;; if bot is deployed for <strong>Consumer Use</strong></em></code>
-7. <em>Save your changes. \
-You are ready to start the JWT token generation service and access the test application with the configured Web SDK in your local web browser.</em>
-8. <em>Go to home directory <code>cd SDKApp</code></em>
-9. <em>Install dependencies using the following command \
-<code>npm install \
-</code></em></p>
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<li>
+<p>Open the index.html file from the …/SDKApp/sdk/UI folder using a text editor:</p>
 <ol>
-<li><em>Start SDKApp \
-<code>node startServer.js</code></em></li>
-<li><em>Access the application in any browser using localhost:3000</em></li>
-</ol>
-<h3 id="passing-data-via-web-sdk"><em>Passing data via web SDK</em><a class="headerlink" href="#passing-data-via-web-sdk" title="Permanent link">&para;</a></h3>
-<p><em>You can pass additional information of the user accessing the channel by adding the custom data at <strong>botInfo</strong> inside the index.html file.</em></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>botOptions.botInfo = {name: &quot;Banking Bot&quot;, 
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>                              &quot;_id&quot;: &quot;&lt;bot_id&gt;&quot;, 
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>                              customData: &quot;value&quot;
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>              };
+<li>
+<p>Update the following lines to add the path to the UI folder: 
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&gt; </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery.tmpl.min.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&gt; </span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;libs/jquery-ui.min.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&gt; </span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nx">link</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;libs/jquery-ui.min.css&quot;</span><span class="w"> </span><span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/link&gt; </span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;chatWindow.js&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&gt; </span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nx">link</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;chatWindow.css&quot;</span><span class="w"> </span><span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/link&gt;</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Update the following parameters to run as local host 
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">   </span><span class="s2">&quot;clientSecret&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;{client secret}&quot;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/api/users/getJWT&quot;</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">            </span><span class="c1">//this is a sample URL of a local host. </span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">            </span><span class="c1">//This should include the URL where you are hosting the bot.</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="nx">botOptions</span><span class="p">.</span><span class="nx">userIdentity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">            </span><span class="c1">// Provide users email id here</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="nx">botOptions</span><span class="p">.</span><span class="nx">clientId</span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;{client id} &quot;</span><span class="p">;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">            </span><span class="c1">// secure client-id</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="nx">_botOptions</span><span class="p">.</span><span class="nx">botInfo</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;{bot name}&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;{bot id&quot;</span><span class="p">};</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">            </span><span class="c1">// Kore bot name is case sensitive</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">})</span>
 </span></code></pre></div>
-<p><em>Details like phone number, address, location, etc., are examples of data that can be passed inside the <span style="text-decoration:underline;">customData</span>.</em></p>
-<p><code><em>customData can be accessed from lastMessage under the BotUserSession of the context object. This data will be specific to the user using web SDK and will last for the user session.</em></code></p>
-<p>_Multiple values can also be added to the <code>customData</code> in the <code>index.html</code> file as key-value pairs:</em></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>botOptions.botInfo = {name:&quot;&lt;bot_name&gt;&quot;,
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>                      &quot;_id&quot;:&quot;&lt;bot_id&quot;,
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>                      customData:{&quot;name&quot;:&quot;John&quot;,
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>                                  &quot;age&quot;:30,
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>                                   &quot;cars&quot;: {&quot;car1&quot;:&quot;Ford&quot;,
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>                                            &quot;car2&quot;:&quot;BMW&quot;,
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>                                            &quot;car3&quot;:&quot;Fiat&quot;
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>                                             }
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>                                   }
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>                           };
+!!!note</span></strong>: The URL mentioned in the above code snippet, refers to the location where your app (where you want the Kore.ai Bot to be integrated) is hosted. For this tutorial, we are using the JWT server (as setup i step 18) and hence using the same here.</p>
+</li>
+<li>
+<p>Choose one of the following:</p>
+<ul>
+<li><code><em>"isAnonymous": &lt; <strong>false </strong>&gt;; if bot is deployed for the <strong>enterprise users</strong>, and then set botOptions.userIdentity = '<strong>&lt;</strong> <strong>Your email ID &gt;</strong>'; \
+<strong>– or –</strong></em></code></li>
+<li><code><em>"isAnonymous": &lt; <strong>true </strong>&gt;; if bot is deployed for <strong>Consumer Use</strong></em></code></li>
+</ul>
+</li>
+<li><em>Save your changes. You are ready to start the JWT token generation service and access the test application with the configured Web SDK in your local web browser.</em></li>
+<li><em>Go to home directory <code>cd SDKApp</code></em></li>
+<li>Install dependencies using the following command
+    <code>npm install</code>
+    <a class="glightbox" href="../images/start-nodejs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Node JS" src="../images/start-nodejs.png" title="start nodejs" /></a></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><em>Start SDKApp \
+    <code>node startServer.js</code></p>
+</li>
+<li>Access the application in any browser using localhost:3000.</li>
+</ol>
+<h3 id="passing-data-via-web-sdk">Passing data via web SDK<a class="headerlink" href="#passing-data-via-web-sdk" title="Permanent link">&para;</a></h3>
+<p>You can pass additional information of the user accessing the channel by adding the custom data at <strong>botInfo</strong> inside the index.html file.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>botOptions.botInfo = {name: &quot;Banking Bot&quot;, 
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>                              &quot;_id&quot;: &quot;&lt;bot_id&gt;&quot;, 
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>                              customData: &quot;value&quot;
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>              };
+</span></code></pre></div>
+<p>Details like phone number, address, location, etc., are examples of data that can be passed inside the <span style="text-decoration:underline;">customData</span>.</p>
+<p>customData can be accessed from lastMessage under the BotUserSession of the context object. This data will be specific to the user using web SDK and will last for the user session.</p>
+<p>Multiple values can also be added to the <code>customData</code> in the <code>index.html</code> file as key-value pairs:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>botOptions.botInfo = {name:&quot;&lt;bot_name&gt;&quot;,
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                      &quot;_id&quot;:&quot;&lt;bot_id&quot;,
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>                      customData:{&quot;name&quot;:&quot;John&quot;,
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>                                  &quot;age&quot;:30,
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>                                   &quot;cars&quot;: {&quot;car1&quot;:&quot;Ford&quot;,
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>                                            &quot;car2&quot;:&quot;BMW&quot;,
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>                                            &quot;car3&quot;:&quot;Fiat&quot;
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>                                             }
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>                                   }
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>                           };
 </span></code></pre></div>
 <p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/custom-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Custom Data" src="../images/custom-data.png" title="custom data" /></a></p>
 <h3 id="passing-mapped-identities"><em>Passing Mapped Identities</em><a class="headerlink" href="#passing-mapped-identities" title="Permanent link">&para;</a></h3>
 <p><em>The Web/Mobile SDKs support the passing of mapped identities of the users when they switch from one identity to another while interacting with the bot. This process allows the users to continue any ongoing conversation initiated using a previous identity. \
 For example, a user may have started a conversation with the bot using an anonymous or randomly generated identity. After exchanging a few messages, the user may become an authenticated or known user by logging into your website or any application. At this point, the user’s known identity can be passed to the bot from the SDK as part of the ‘<a href="https://developer.kore.ai/docs/bots/sdks/user-authorization-and-assertion/#About_JWT">JWT Grant API</a>’ call using the parameter identityToMerge. The Platform uses this information to merge the user identities and allows the user to resume an ongoing conversation using the new known identity.</em></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>{
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a> &quot;iat&quot;: 1611810186883,
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a> &quot;exp&quot;: 1611813786.883,
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a> &quot;aud&quot;: &quot;https://idproxy.kore.com/authorize&quot;,
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a> &quot;iss&quot;: &quot;cs-d3042d3e-7da4-55da-a94d-783349270cc0&quot;,
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a> &quot;sub&quot;: &quot;knowuser1@test.com&quot;,
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a> &quot;isAnonymous&quot;: &quot;false&quot;,
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a> &quot;identityToMerge&quot;: &quot;anonymoususer1@test.com&quot;
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a> &quot;iat&quot;: 1611810186883,
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a> &quot;exp&quot;: 1611813786.883,
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a> &quot;aud&quot;: &quot;https://idproxy.kore.com/authorize&quot;,
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a> &quot;iss&quot;: &quot;cs-d3042d3e-7da4-55da-a94d-783349270cc0&quot;,
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a> &quot;sub&quot;: &quot;knowuser1@test.com&quot;,
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a> &quot;isAnonymous&quot;: &quot;false&quot;,
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a> &quot;identityToMerge&quot;: &quot;anonymoususer1@test.com&quot;
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>}
 </span></code></pre></div>
 <p><em>The following scenarios describe the bot's behavior when dealing with the new identity and merged identity:</em></p>
 <ul>
@@ -6200,14 +6201,14 @@ For example, a user may have started a conversation with the bot using an anonym
 </ul>
 <h3 id="custom-meta-tags-via-web-sdk"><em>Custom Meta Tags via web SDK</em><a class="headerlink" href="#custom-meta-tags-via-web-sdk" title="Permanent link">&para;</a></h3>
 <p><em>With the release of ver8.0 of the platform, you can directly add Custom Meta Tags from all supported internal channels (Web SDK/IVR / IVRVoice / Webhook channels). You can define Session, User, and Message level meta-tags. These tags will be added to the Conversation Session as soon as it is created.</em></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>botOptions.botInfo = {name:&quot;&lt;bot_name&gt;&quot;, &quot;_id&quot;:&quot;&lt;bot_id&quot;,
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>                           customData :{&quot;name&quot;:&quot;John&quot;},
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>                           &quot;metaTags&quot;: { 
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>                                 &quot;messageLevelTags&quot;: [{ &quot;name&quot;: &quot;tag1&quot;, value: &quot;message&quot;}],
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>                                 &quot;sessionLevelTags&quot;: [{ &quot;name&quot;: &quot;tag2&quot;, value: &quot;session&quot;}],
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>                                 &quot;userLevelTags&quot;: [{ &quot;name&quot;: &quot;tag3&quot;, value: &quot;user&quot;}]
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>                                 }  
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>                          };
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>botOptions.botInfo = {name:&quot;&lt;bot_name&gt;&quot;, &quot;_id&quot;:&quot;&lt;bot_id&quot;,
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>                           customData :{&quot;name&quot;:&quot;John&quot;},
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>                           &quot;metaTags&quot;: { 
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>                                 &quot;messageLevelTags&quot;: [{ &quot;name&quot;: &quot;tag1&quot;, value: &quot;message&quot;}],
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>                                 &quot;sessionLevelTags&quot;: [{ &quot;name&quot;: &quot;tag2&quot;, value: &quot;session&quot;}],
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>                                 &quot;userLevelTags&quot;: [{ &quot;name&quot;: &quot;tag3&quot;, value: &quot;user&quot;}]
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>                                 }  
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>                          };
 </span></code></pre></div>
 <h3 id="some-commonly-encountered-errors"><em>Some commonly encountered errors</em><a class="headerlink" href="#some-commonly-encountered-errors" title="Permanent link">&para;</a></h3>
 <ul>

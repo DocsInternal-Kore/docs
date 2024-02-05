@@ -5933,6 +5933,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#installing-and-running-ngrok" class="md-nav__link">
+    Installing and running ngrok
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#installing-nodejs" class="md-nav__link">
     Installing node.js
   </a>
@@ -6060,22 +6067,17 @@
 <p>To get your <em>LiveChat</em> license code for your BotKit SDK configuration:</p>
 <ol>
 <li>Log into your LiveChat account and click the <strong>Settings</strong> icon on the left navigation bar.</li>
-<li>You will be taken to the <em>Website Channel Settings</em> page and you will find the <strong>License ID</strong> right underneath the area that lets you <em>Install LiveChat Code Manually</em>, as illustrated below. 
+<li>You will be taken to the <em>Website Channel Settings</em> page and you will find the <strong>License ID</strong> right underneath the area that lets you <em>Install LiveChat Code Manually</em>, as illustrated below.
 <a class="glightbox" href="../images/livechat-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/livechat-settings.png" title="LiveChat Settings" /></a></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Make sure url-template and node-schedule modules (and any other modules as referenced in js file related to LiveChat) are installed on your computer.</p>
 </div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>### Installing and running _ngrok_
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>To download the test callback server application, click [https://ngrok.com/download](https://ngrok.com/download), and then download and install the _ngrok_ file for your operating system.
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>In a **Terminal** Window, start _ngrok_ to monitor port 8003 using the following command:
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>```json
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>ngrok http 8003
+<h3 id="installing-and-running-ngrok">Installing and running <em>ngrok</em><a class="headerlink" href="#installing-and-running-ngrok" title="Permanent link">&para;</a></h3>
+<p>To download the test callback server application, click <a href="https://ngrok.com/download">https://ngrok.com/download</a>, and then download and install the <em>ngrok</em> file for your operating system.</p>
+<p>In a <strong>Terminal</strong> Window, start <em>ngrok</em> to monitor port 8003 using the following command:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kc">n</span><span class="err">grok</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="w"> </span><span class="mi">8003</span>
 </span></code></pre></div>
 <p><a class="glightbox" href="../images/ngrok-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/ngrok-status.png" title="ngrok status" /></a></p>
 <p>Copy the https <strong>Forwarding URL</strong> as shown in the previous illustration, for example, <a href="https://1b47f1d2.ngrok.io">https://1b47f1d2.ngrok.io</a>. Leave the terminal window open and <em>ngrok</em> running.</p>
@@ -6099,24 +6101,20 @@
 <li>Log on to XO Platform, and then click <strong>New Bot &gt; Start from the Store</strong>.</li>
 <li>Point to <strong>Airlines Airlines Travel Planning</strong>, and then click <strong>Install</strong>. The Airlines <em>Airlines Travel Planning_KORE NAME_Instance# The installed successful</em> message is displayed and the sample assistant is added to the left-hand navigation menu.</li>
 </ol>
-<p>Once the sample assistant is installed, create an <strong><em>Agent Transfer</em></strong> dialog task. Learn more about the <a href="automation/use-cases/using-the-dialog-builder-tool">Dialog Builder</a> and with the <a href="automation/use-cases/dialogs/node-types/working-with-the-agent-transfer-node.md">Agent Transfer node</a>.</p>
+<p>Once the sample assistant is installed, create an <strong><em>Agent Transfer</em></strong> dialog task. Learn more about the <a href="../../automation/use-cases/using-the-dialog-builder-tool">Dialog Builder</a> and with the <a href="../../../automation/use-cases/dialogs/node-types/working-with-the-agent-transfer-node/">Agent Transfer node</a>.</p>
 <h3 id="registering-your-app-and-generating-client-credentials">Registering Your App and Generating Client Credentials<a class="headerlink" href="#registering-your-app-and-generating-client-credentials" title="Permanent link">&para;</a></h3>
 <p>To register your BotKit SDK with the Kore.ai XO Platform, you will need to create an app registration, and then generate security credentials used to securely communicate between the SDK installed on your server platform and the Kore.ai XO Platform.</p>
 <p><strong>Creating an App Registration</strong></p>
 <ol>
 <li>In the XO Platform, go to <strong>Build &gt; Integrations &gt; BotKit</strong>.
-!!!note:
+  !!!note:
     RS256 and RS512 JWT signing algorithms are not supported for Custom BotKit or Botkit.</li>
 <li>Click the <strong>Add</strong> button next to the <strong>App name</strong> drop-down list.</li>
 <li>Enter a name for the app and then click Next.</li>
 <li>The Client ID and Client Secret details appear. Click <strong>Done</strong>.</li>
-<li>In the <strong>Callback URL</strong> field, enter the URL for your application that you copied from the <strong>Forwarding URL</strong> from the <em>ngrok</em> application that you installed and ran as part of the prerequisites, for example,  <a href="https://1bXXXXd2.ngrok.io">https://1bXXXXd2.ngrok.io</a>.</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Each running instance of ngrok will generate a session unique URL. You need to update the Callback URL field if you stop and restart ngrok._**</p>
-</div>
-<ol>
+<li>In the <strong>Callback URL</strong> field, enter the URL for your application that you copied from the <strong>Forwarding URL</strong> from the <em>ngrok</em> application that you installed and ran as part of the prerequisites, for example,  <a href="https://1bXXXXd2.ngrok.io">https://1bXXXXd2.ngrok.io</a>.
+  !!!note
+    Each running instance of ngrok will generate a session unique URL. You need to update the Callback URL field if you stop and restart ngrok._**</li>
 <li>In the <strong>Events</strong> section, select:<ul>
 <li><strong>OnMessage</strong> – An event is triggered when a message from a user is received.</li>
 <li><strong>OnAgentTransferNode</strong> – An event is triggered when an Agent Transfer node is encountered in the dialog task flow.</li>
@@ -6132,7 +6130,7 @@
 </ul>
 <h2 id="publishing-the-assistant">Publishing the Assistant<a class="headerlink" href="#publishing-the-assistant" title="Permanent link">&para;</a></h2>
 <p>A developer can use any installed assistant immediately for testing as it is available to the owner on save. If you only want to run and test this assistant for this tutorial, you can skip to the next section, <em>Installing and Configuring the BotKit SDK</em>.</p>
-<p>To enable the assistant for other users, you must publish it so the Admin can approve and deploy the assistant for other users. For more information, see <a href="/docs/xo/deploy/publishing-bot">Publishing an Assistant</a>.</p>
+<p>To enable the assistant for other users, you must publish it so the Admin can approve and deploy the assistant for other users. For more information, see <a href="../../deploy/publishing-bot">Publishing an Assistant</a>.</p>
 <p>After you publish an assistant in XO Platform, an Admin must complete one of the following deployments tasks in the Admin Console depending on whether your assistant’s <strong>Target Audience</strong> is set to <strong>Enterprise Users</strong> or the <strong>General Public</strong>.</p>
 <ul>
 <li>

@@ -6084,7 +6084,7 @@
 <p><strong>To install the Flight Search assistant:</strong></p>
 <ol>
 <li>Log on to XO Platform, and then click <strong>New Bot &gt; Start from the Store</strong>.</li>
-<li>Find the <strong>Flight Search</strong> assistant and install it. </li>
+<li>Find the <strong>Flight Search</strong> assistant and install it.</li>
 </ol>
 <h3 id="registering-your-app-and-generating-client-credentials">Registering Your App and Generating Client Credentials<a class="headerlink" href="#registering-your-app-and-generating-client-credentials" title="Permanent link">&para;</a></h3>
 <p>To register your BotKit SDK with the Kore.ai XO Platform, you will need to create an app registration, and then generate security credentials used to securely communicate between the SDK installed on your server platform and the Kore.ai XO Platform.</p>
@@ -6094,11 +6094,14 @@
 <li>Next to the <strong>App name **drop-down list, click **Add</strong>.</li>
 <li>Enter a name for the app and then click <strong>Next</strong>.</li>
 <li>The Client ID and Client Secret details appear. Click <strong>Done</strong>.</li>
-<li>In the <strong>Callback URL</strong> field, enter the URL for your application that you copied from the <strong>Forwarding URL</strong> from the <em>ngrok</em> application that you installed and ran as part of the prerequisites, for example,  <a href="https://1b47f1d2.ngrok.io">https://1b47f1d2.ngrok.io</a>. \
-<strong><em>Note: Each running instance of ngrok will generate a session unique URL. You will need to update the Callback URL field if you stop and restart ngrok.</em></strong></li>
-<li>In the <strong>Events</strong> section, select <strong>OnHookNode</strong> – An event is triggered when a <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-web-hook-node/">Webhook node</a> is encountered in the dialog task flow.</li>
-<li>Click <strong>Save</strong>. The <em>Successfully subscribed</em> message is displayed.</li>
+<li>In the <strong>Callback URL</strong> field, enter the URL for your application that you copied from the <strong>Forwarding URL</strong> from the <em>ngrok</em> application that you installed and ran as part of the prerequisites, for example,  <a href="https://1b47f1d2.ngrok.io">https://1b47f1d2.ngrok.io</a>.</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>Each running instance of ngrok will generate a session unique URL. You will need to update the Callback URL field if you stop and restart ngrok.<em>**
+6. In the <strong>Events</strong> section, select <strong>OnHookNode</strong> – An event is triggered when a <a href="../../automation/use-cases/dialogs/node-types/working-with-the-web-hook-node">Webhook node</a> is encountered in the dialog task flow.
+7. Click <strong>Save</strong>. The _Successfully subscribed</em> message is displayed.</p>
 <p>To configure the BotKit SDK settings, you will need to:</p>
 <ul>
 <li>Copy the <strong>Client ID</strong>, for example, <code>cs-6e5eb411-e592-50d9-9ba2-ccc748d4f719</code>.</li>
@@ -6106,7 +6109,7 @@
 </ul>
 <h2 id="publishing-the-assistant">Publishing the Assistant<a class="headerlink" href="#publishing-the-assistant" title="Permanent link">&para;</a></h2>
 <p>A developer can use any installed assistant immediately for testing as it is available to the owner on save. If you only want to run and test this assistant for this tutorial, you can skip to the next section, <em>Installing and Configuring the BotKit SDK</em>.</p>
-<p>To enable the assistant for other users, you must publish it so the Admin can approve and deploy the assistant for users. For more information, see <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/#Publishing_Tasks">Publishing Your Assistant</a>.</p>
+<p>To enable the assistant for other users, you must publish it so the Admin can approve and deploy the assistant for users. For more information, see <a href="../../deploy/publishing-bot">Publishing Your Assistant</a>.</p>
 <p>After you publish an assistant in the XO Platform, an Admin must complete one of the following deployments in the Admin Console depending on whether your assistant’s <strong>Target Audience</strong> is set to <strong>Enterprise Users</strong> (managed users) or <strong>General Public</strong> (unmanaged users):</p>
 <ul>
 <li><strong>For Enterprise Users</strong><ol>
@@ -6114,7 +6117,7 @@
 <li>Expand the <strong>Bot Tasks</strong> field to view the available and deployed tasks.</li>
 <li>Select all tasks of the bot and then click <strong>Confirm</strong>.</li>
 <li>In the <strong>Manage bot tasks</strong> dialog, click <strong>Confirm</strong>. The <em>Bot status changed successfully</em> message is displayed.</li>
-<li>On the <strong>Enterprise Bots</strong> page, click the <strong>Ellipses</strong> icon for the _Flight Search assistant _that you want to assign enterprise users to, and then click <strong>Bot &amp; task assignments</strong>. The <strong>Bot &amp; task assignments</strong> dialog is displayed.</li>
+<li>On the <strong>Enterprise Bots</strong> page, click the <strong>Ellipses</strong> icon for the _Flight Search assistant_that you want to assign enterprise users to, and then click <strong>Bot &amp; task assignments</strong>. The <strong>Bot &amp; task assignments</strong> dialog is displayed.</li>
 <li>Assign the assistant to the selected users in the enterprise.</li>
 </ol>
 </li>
