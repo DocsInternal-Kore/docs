@@ -6289,10 +6289,14 @@
 
 
 <h1 id="configuring-the-servicenow-action">Configuring the ServiceNow Action<a class="headerlink" href="#configuring-the-servicenow-action" title="Permanent link">&para;</a></h1>
-<p>The XO Platform lets you easily connect the ServiceNow integration to create, view, update, search and delete incidents. You can also create, view, update, search and delete requests using the pre-built templates. Click the <a href="https://www.servicenow.com/" target="_blank">ServiceNow</a> link to know more. </p>
+<p>The XO Platform lets you easily connect the ServiceNow integration to create, view, update, search and delete incidents. You can also create, view, update, search and delete requests using the pre-built templates. Click the <a href="https://www.servicenow.com/">ServiceNow</a> link to know more. </p>
 <p>This article explains how to authorize and enable the <strong>ServiceNow</strong> action and install the pre-built templates.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ServiceNow Actions Integration is supported for the ServiceNow cloud versions (Tokyo, Utah, and Vancouver) but not for on-premises instances.</p>
+</div>
 <h2 id="authorizations-supported">Authorizations Supported<a class="headerlink" href="#authorizations-supported" title="Permanent link">&para;</a></h2>
-<p>The Kore.ai XO Platform supports basic authentication to allow a ServiceNow integration to exchange data. For more information, see <a href="../../../../dev-tools/bot-authorization/bot-authentication" target="_blank">Bot Authorization Overview</a> . </p>
+<p>The Kore.ai XO Platform supports only basic authentication to allow a ServiceNow integration to exchange data. For more information, see <a href="../../../../dev-tools/bot-authorization/bot-authentication">Bot Authorization Overview</a>. </p>
 <p>The Kore.ai XO Platform supports the following authorization types for the ServiceNow integration:</p>
 <ul>
 <li><strong>Pre-Authorize the Integration</strong> – To make the integration process smoother for developers and customers, you can pre-authorize it by providing the necessary authorization credentials to obtain the access token. </li>
@@ -6324,7 +6328,7 @@
 <p><strong>Prerequisites</strong>:</p>
 <p>Before enabling the ServiceNow action, complete the following prerequisites:</p>
 <ul>
-<li>If you already have ServiceNow account credentials, then enter it.  Otherwise, create a developer account in the ServiceNow and note down login credentials. Use the <a href="https://developer.servicenow.com/dev.do#!/learn/learning-plans/rome/new_to_servicenow/app_store_learnv2_buildmyfirstapp_rome_personal_developer_instances" target="_blank">ServiceNow Developer Instance Documentation</a> for more information.</li>
+<li>If you already have ServiceNow account credentials, then enter it.  Otherwise, create a developer account in the ServiceNow and note down login credentials. Use the <a href="https://developer.servicenow.com/dev.do#!/learn/learning-plans/rome/new_to_servicenow/app_store_learnv2_buildmyfirstapp_rome_personal_developer_instances">ServiceNow Developer Instance Documentation</a> for more information.</li>
 <li>Copy the User sub domain, username/email and password of your ServiceNow account and keep them ready to enable the integration.</li>
 </ul>
 <p>Steps to enable the ServiceNow action:</p>
@@ -6366,9 +6370,9 @@
 <ol>
 <li>Go to <strong>Build &gt; Integrations</strong> and select the <strong>Actions</strong> menu item.</li>
 <li>Select the <strong>ServiceNow</strong> action in the <strong>Available Actions</strong> region.</li>
-<li>In the Configurations dialog, select the <strong>Authorization</strong> tab </li>
+<li>In the Configurations dialog, select the <strong>Authorization</strong> tab.</li>
 <li>
-<p>Select the type of authorization mechanism. For example, select the <strong>Basic Auth</strong> option. To create Basic Auth profiles, see <a href="../../../../dev-tools/bot-authorization/bot-authentication" target="_blank">Bot Authorization Overview </a>.<br />
+<p>Select the type of authorization mechanism. For example, select the <strong>Basic Auth</strong> option. To create Basic Auth profiles, see <a href="../../../../dev-tools/bot-authorization/bot-authentication">Bot Authorization Overview </a>.<br />
 <a class="glightbox" href="../images/servicenow-action-img4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/servicenow-action-img4.png" alt="Auth mechanism -- Basic auth" title="Auth mechanism -- Basic auth" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
