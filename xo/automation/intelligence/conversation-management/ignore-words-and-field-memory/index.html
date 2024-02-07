@@ -2798,8 +2798,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#edit-a-task" class="md-nav__link">
-    Edit a Task
+  <a href="#manage-an-alert-task" class="md-nav__link">
+    Manage an Alert Task
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-an-alert-task" class="md-nav__link">
+    Edit an Alert Task
   </a>
   
 </li>
@@ -6291,8 +6298,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#edit-a-task" class="md-nav__link">
-    Edit a Task
+  <a href="#manage-an-alert-task" class="md-nav__link">
+    Manage an Alert Task
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-an-alert-task" class="md-nav__link">
+    Edit an Alert Task
   </a>
   
 </li>
@@ -6325,25 +6339,30 @@
 
 <h1 id="ignore-words-and-field-memory">Ignore Words and Field Memory<a class="headerlink" href="#ignore-words-and-field-memory" title="Permanent link">&para;</a></h1>
 <p>Developers can include words for the NLP engine to ignore when interpreting the user input for a task. Assistants can then respond faster to user input and improve the probability of correct task recognition. The NLP engine comes pre-built with a large set of generic ignore words.</p>
-<p>To manage this setting,</p>
+<h2 id="manage-an-alert-task">Manage an Alert Task<a class="headerlink" href="#manage-an-alert-task" title="Permanent link">&para;</a></h2>
+<p>To manage this setting, follow the steps below:</p>
 <ol>
-<li>Open the assistant where you want to configure these ignore words.</li>
-<li>From the top menu, select <strong>Build</strong>.</li>
-<li>On the left pane, click <strong>Intelligence</strong> &gt; <strong>Ignore Words &amp; Field Memory</strong>.</li>
+<li>On the Bot Builder, select <strong>Build</strong> on the top menu.</li>
+<li>On the left navigation menu, click <strong>Intelligence</strong> &gt; <strong>Ignore Words &amp; Field Memory</strong>.
+   <a class="glightbox" href="../images/ignore-words-edit-alert-tasks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ignore-words-edit-alert-tasks.png" alt="edit alert tasks for ignore words" title="edit alert tasks for ignore words" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This option is available only if an Alert task is configured for the Assistant. Otherwise, the option is hidden from the menu.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>This feature is available only if you create and configure an Alert/Action/Information task for the Assistant. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/alert-tasks/#general-settings/" target="_blank">Learn more</a>.</p>
 </div>
 
-<p>You can edit each task to persist data for that task to pre-populate in another related task for the same VA in the <strong>Field Memory</strong> settings for each task. For example, for a travel planning assistant, <em>Get Wait Times for Boarding</em> task, you can pre-populate task fields into the related task, <em>Book a FastPass</em> task. </p>
-<p>You can also configure words to ignore in the user input at the task level. For example, for a <em>7-day Weather Forecast</em> task, you might want days of the week, such as <em>Monday</em>, <em>Tuesday</em>, and so forth to be ignored since all weekdays are included.</p>
-<p><a class="glightbox" href="../images/ignore-words-edit-alert-tasks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ignore-words-edit-alert-tasks.png" alt="edit alert tasks for ignore words" title="edit alert tasks for ignore words" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>Click a task name to show task fields that can be configured or edited for Field Memory and other field settings. </p>
-<p>The task fields are the parameters defined for the selected task. To define ignore words for a task, hover over the task, and then click the <strong>Edit</strong> icon.</p>
-<h2 id="edit-a-task">Edit a Task<a class="headerlink" href="#edit-a-task" title="Permanent link">&para;</a></h2>
-<p>To modify or add a configuration for a task,</p>
+<ol start="3"><li>Edit each task in the <b>Field Memory</b> settings to persist its data and pre-populate the data in another related task for the same VA. For example, for a travel planning assistant, <i>Get Wait Times for Boarding</i> task, you can pre-populate task fields into the related task, <i>Book a FastPass</i> task.</li> 
+
+<li>Additionally. configure words to ignore in the user input at the task level. For example, for a <i>7-day Weather Forecast</i> task, you might want days of the week, such as <i>Monday</i>, <i>Tuesday</i>, and so forth to be ignored since all weekdays are included.</li>
+
+<li>Click a task name to show task fields that can be configured or edited for Field Memory and other field settings.</li> 
+
+<li>The task fields are the parameters defined for the selected task. To define ignore words for a task, hover over the task, and then click the <b>Edit</b> icon.</li></ol>
+
+<h2 id="edit-an-alert-task">Edit an Alert Task<a class="headerlink" href="#edit-an-alert-task" title="Permanent link">&para;</a></h2>
+<p>To modify or add a configuration for a task, follow the steps below:</p>
 <ol>
+<li>Navigate to <strong>Intelligence</strong> &gt; <strong>Ignore Words &amp; Field Memory</strong>.</li>
 <li>Hover over the name of the task, and then click <strong>Edit.</strong> The <strong>Edit Task</strong> window is displayed.</li>
 <li><strong>Turn Off Confirmation Messages</strong> – Select <strong>Yes</strong> to disable confirmation of the execution of a task when using NLP. When <strong>No</strong> is selected, the user is asked to confirm the task before running it.</li>
 <li><strong>Ignore Words</strong> – Enter one or more ignore words for the task name. The list of words to ignore is processed by the XO Platform before interpreting the user input.

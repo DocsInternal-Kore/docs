@@ -2788,23 +2788,24 @@
     Interruptions Hierarchy
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Interruptions Hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#node-level-settings" class="md-nav__link">
     Node Level Settings
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#dialog-level-settings" class="md-nav__link">
     Dialog Level Settings
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#bot-level-settings" class="md-nav__link">
     Bot Level Settings
   </a>
@@ -2872,6 +2873,11 @@
   <a href="#manage-behavior-for-user-authorization" class="md-nav__link">
     Manage Behavior for User Authorization
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -6378,23 +6384,24 @@
     Interruptions Hierarchy
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Interruptions Hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#node-level-settings" class="md-nav__link">
     Node Level Settings
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#dialog-level-settings" class="md-nav__link">
     Dialog Level Settings
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#bot-level-settings" class="md-nav__link">
     Bot Level Settings
   </a>
@@ -6469,6 +6476,11 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -6495,8 +6507,9 @@
 <p><a class="glightbox" href="../images/flight-usecase-manage-interruptions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/flight-usecase-manage-interruptions.png" alt="Flight use case manage interruptions" title="Flight use case manage interruptions" style="border: 1px solid gray; zoom:65%;"></a></p>
 <p>It includes an entity value for the assistant to proceed with the current intent, while also presenting a new user requirement or intent.</p>
 <p>VAs must account for this by allowing users to pause a task, start and complete another task, and seamlessly return to the original task without losing important contextual data and conversation continuity.</p>
-<p>Kore.ai provides you with granular control over hold and resume functionality at the VA, task, and node levels, and allows you to <a href="https://docsinternal-kore.github.io/docs/xo/automation/intelligence/context-management" target="_blank">control context switching</a> rules and behaviors. You can handle such interruptions in intent flows by providing a whole range of options to define the task-switching experience.</p>
-<p>The <strong>Manage Interruptions</strong> options allow you to select if and how a user can switch to another task, as well as the exit strategies. It can be set up at the VA, task, and node levels to ensure the configurations are layered to suit your various business requirements. You can also add conditional exceptions between tasks with the ability to pass contextual data between them.</p>
+<p>Kore.ai provides granular control over the hold and resume functionality at the VA, task, and node levels, and allows you to <a href="https://docsinternal-kore.github.io/docs/xo/automation/intelligence/context-management" target="_blank">control context switching</a> rules and behaviors with the <strong>Manage Interruptions</strong> feature. You can handle such interruptions in intent flows by providing a whole range of options to select if and how a user can switch to another task, the exit strategies, and the task-switching experience.</p>
+<p>Managing Interruptions ensures the configurations for interruptions are layered to suit your various business requirements. This includes allowing, disallowing, and letting the user manage interruptions. You can also add conditional exceptions between tasks with the ability to pass contextual data between them.</p>
+<p>Interruptions can be managed for FAQs, Small Talk, and Ambiguous intents on the UXO Platform.</p>
 <p>The following sections describe:</p>
 <ul>
 <li>The configuration hierarchy at the VA, task, and node levels.</li>
@@ -6505,11 +6518,11 @@
 <h3 id="interruptions-hierarchy">Interruptions Hierarchy<a class="headerlink" href="#interruptions-hierarchy" title="Permanent link">&para;</a></h3>
 <p>Apart from defining the generic interruptions options at the VA level, you can customize these options at the dialog task or dialog node level. When you set up the Hold and Resume options in more than one levels, the order of precedence of the settings works as follows:</p>
 <ol>
-<li>Node level settings,</li>
-<li>Dialog task level settings,</li>
-<li>VA level settings.</li>
+<li>Node level settings</li>
+<li>Dialog task level settings</li>
+<li>VA level settings</li>
 </ol>
-<h3 id="node-level-settings">Node Level Settings<a class="headerlink" href="#node-level-settings" title="Permanent link">&para;</a></h3>
+<h4 id="node-level-settings">Node Level Settings<a class="headerlink" href="#node-level-settings" title="Permanent link">&para;</a></h4>
 <p>You can customize the interruptions settings at the node level. If you customize the settings for a node, this configuration takes the highest precedence.</p>
 <p>To customize the interruptions settings for a node:</p>
 <ol>
@@ -6518,7 +6531,7 @@
 <li>Under the <strong>Interruptions Behavior</strong> section, select <strong>Customize for this node</strong> and make the necessary configurations. These configurations are the same as discussed above for the VA level <a href="https://docsinternal-kore.github.io/docs/xo/automation/intelligence/conversation-management/manage-interruptions/" target="_blank">interruptions</a>.</li>
 </ol>
 <p><a class="glightbox" href="../images/node-level-customization.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/node-level-customization.gif" alt="node level customization" title="node level customization" style="border: 1px solid gray; zoom:65%;"></a></p>
-<h2 id="dialog-level-settings">Dialog Level Settings<a class="headerlink" href="#dialog-level-settings" title="Permanent link">&para;</a></h2>
+<h4 id="dialog-level-settings">Dialog Level Settings<a class="headerlink" href="#dialog-level-settings" title="Permanent link">&para;</a></h4>
 <p>The dialog level Interruptions customizations have higher priority over VA level settings but rank lower than the node level customizations or any exceptions.</p>
 <p>To customize the Interruptions settings for a dialog:</p>
 <ol>
@@ -6537,7 +6550,7 @@
 <p>If you do not customize Interruptions settings at the node or task level, the VA level settings apply.</p>
 </div>
 
-<h2 id="bot-level-settings">Bot Level Settings<a class="headerlink" href="#bot-level-settings" title="Permanent link">&para;</a></h2>
+<h4 id="bot-level-settings">Bot Level Settings<a class="headerlink" href="#bot-level-settings" title="Permanent link">&para;</a></h4>
 <p>The VA Level interruptions settings can be overridden at the task level as discussed above.</p>
 <p>You can access the interruption settings for your VA from under <strong>Build &gt; Intelligence &gt; Manage Interruptions</strong> page.
 <a class="glightbox" href="../images/bot-level-settings-manageinterruptions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-level-settings-manageinterruptions.png" alt="bot level settings manage interruptions" title="bot level settings manage interruptions" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -6552,7 +6565,7 @@
 <p>When the user provides input after a session has ended, i.e. after at least 15 minutes of inactivity, and if the input is within the previous session context, it is treated as an interruption scenario. If instead, the user comes back with a new utterance, then the old context is discarded and a new conversation is started.</p>
 </div>
 
-<h3 id="allow-interruptions">Allow Interruptions<a class="headerlink" href="#allow-interruptions" title="Permanent link">&para;</a></h3>
+<h5 id="allow-interruptions">Allow Interruptions<a class="headerlink" href="#allow-interruptions" title="Permanent link">&para;</a></h5>
 <p>Once you allow for task interruption, you need to specify the VA’s  behavior in such scenarios as what should happen to the current task, where should the conversation go once the interruption task has been completed, etc.</p>
 <p>Following are the options under <strong>Allow interruptions</strong>.</p>
 <table border="1.5">
@@ -6571,8 +6584,7 @@
  <tr bgcolor="#FAFAFA">
    <td><strong>Discard the current task and switch to new</strong>
    </td>
-   <td>When you select this option, the VA discards the current task and switches to a new task soon after it encounters another intent. The VA sends a message to notify the user before switching to the new task and the current task would be discarded. You can customize the message from the <strong>Manage Response </strong>setting.
-   </td>
+   <td>When you select this option, the VA discards the current task and switches to a new task soon after it encounters another intent. The VA sends a message to notify the user before switching to the new task and the current task would be discarded. You can customize the response message by clicking <strong>Manage Response </strong> and setting the message for the <b>Notify the user that we have cancelled the current task to switch to another</b> option. In addition to the avalable responses, click <b>+ Add Response</b> to add a custom response text.</td>
   </tr>
   <tr>
    <td><strong>Switch to a new task without any notification to the user and discard the current task</strong>
@@ -6581,19 +6593,18 @@
    </td>
   </tr>
   <tr bgcolor="#FAFAFA">
-   <td><strong>Continue with the current task and add a new task to the follow-up task list</strong>
+   <td><strong>Continue the current task and add new task to the follow-up task list.</strong>
    </td>
-   <td>When you select this option, the VA continues on the current task even if it encounters a new intent. It, however, adds the new intent to the Follow-up intents array. Refer to the <a href="https://docsinternal-kore.github.io/docs/xo/automation/intelligence/sub-intents-and-follow-up-intents/#follow-up-intents" target="_blank">Follow-up Intents</a> documentation for more information.
-   </td>
+   <td>When you select this option, the VA continues on the current task even if it encounters a new intent. It, however, adds the new intent to the Follow-up intents array. Refer to the <a href="https://docsinternal-kore.github.io/docs/xo/automation/intelligence/sub-intents-and-follow-up-intents/#follow-up-intents" target="_blank">Follow-up Intents</a> documentation for more information. You can customize the response message by clicking <strong>Manage Response </strong> and setting the message for the <b>Notify the user that we have cancelled the current task to switch to another</b> option. In addition to the avalable responses, click <b>+ Add Response</b> to add a custom response text.</td>
   </tr>
 </table>
 
-<h3 id="do-not-allow-interruptions">Do not allow interruptions<a class="headerlink" href="#do-not-allow-interruptions" title="Permanent link">&para;</a></h3>
+<h5 id="do-not-allow-interruptions">Do not allow interruptions<a class="headerlink" href="#do-not-allow-interruptions" title="Permanent link">&para;</a></h5>
 <p>When you select this option, the assistant-level <strong>interruptions</strong> are turned off. However, you may override this behavior for selected tasks, linked dialogs (exceptions), or node levels. Refer to the <a href="https://docsinternal-kore.github.io/docs/xo/automation/intelligence/conversation-management/manage-interruptions/#interruptions-hierarchy" target="_blank">Interruptions Hierarchy</a> section above for more information.</p>
-<h3 id="allow-the-end-user-to-select-the-behavior">Allow the end user to select the behavior<a class="headerlink" href="#allow-the-end-user-to-select-the-behavior" title="Permanent link">&para;</a></h3>
+<h5 id="allow-the-end-user-to-select-the-behavior">Allow the end user to select the behavior<a class="headerlink" href="#allow-the-end-user-to-select-the-behavior" title="Permanent link">&para;</a></h5>
 <p>When you select this option, the VA presents the end-user with a confirmation message asking if the user wants to switch to a new task. The VA switches to the new task only if the end-user chooses to do so. You can customize the confirmation message sent to the user by clicking the <strong>Manage Response</strong> link next to the option.</p>
 <p>You need to define a <em>Resume</em> option that the VA should take if the user decides to switch the task. Refer to the <a href="https://docsinternal-kore.github.io/docs/xo/automation/intelligence/conversation-management/manage-interruptions/#resume-options" target="_blank">Resume Options</a> section below for details.</p>
-<h3 id="resume-options">Resume Options<a class="headerlink" href="#resume-options" title="Permanent link">&para;</a></h3>
+<h5 id="resume-options">Resume Options<a class="headerlink" href="#resume-options" title="Permanent link">&para;</a></h5>
 <p>Once you allow the task to be put on hold and proceed with the interruption task, you must configure the <em>Resume</em> option i.e. how the on-hold task should be handled once the interrupting task is completed.</p>
 <table border="1.5">
   <tr bgcolor="#ECECEC">
@@ -6690,44 +6701,45 @@ In such cases, if you select this option, the assistant switches back to the tas
 </tr>
 </table>
 
-<h3 id="on-hold-quantity">On Hold Quantity<a class="headerlink" href="#on-hold-quantity" title="Permanent link">&para;</a></h3>
-<p>You can select the number of tasks that you want to keep on hold from the <strong>On Hold Quantity</strong> field. The assistant keeps a maximum of this number of tasks on hold and ignores the tasks once this value is reached.</p>
+<h5 id="on-hold-quantity">On Hold Quantity<a class="headerlink" href="#on-hold-quantity" title="Permanent link">&para;</a></h5>
+<p>You can select the number of tasks that you want to keep on hold from the <strong>On Hold Quantity</strong> field. The default value is <b>1</b>. The assistant keeps a maximum of this number of tasks on hold and ignores the tasks once this value is reached.</p>
 <p>For example, if you specify the On Hold Quantity as 1 and if a third intent comes into play, the VA will not allow the new task to be initiated regardless of interruptions options.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tasks always resume in reverse chronological order. So, if you kept task 2 on hold after task 1, task 2 resumes before task 1.</p>
+<p><ul><li>Tasks always resume in reverse chronological order. So, if you kept task 2 on hold after task 1, task 2 resumes before task 1.</li>
+<li>We recommend only having one or two levels of tasks on hold to avoid confusion during user interaction.</li></ul></p>
 </div>
 
-<h3 id="manage-behavior-for-faqs">Manage Behavior for FAQs<a class="headerlink" href="#manage-behavior-for-faqs" title="Permanent link">&para;</a></h3>
+<h5 id="manage-behavior-for-faqs">Manage Behavior for FAQs<a class="headerlink" href="#manage-behavior-for-faqs" title="Permanent link">&para;</a></h5>
 <p>You can choose whether FAQs should honor the interruptions settings or if FAQs should be always responded to.</p>
 <p><a class="glightbox" href="../images/faq-interruption-behavior.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/faq-interruption-behavior.png" alt="faq interruption behavior" title="faq interruption behavior" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The flag <strong>Interruption Behavior for FAQs</strong> will allow you to:</p>
 <ul>
-<li>Always identify and respond to FAQs when interruptions are enabled. This is the default setting.</li>
-<li>Always identify FAQs when interruptions are enabled and proceed as per the Hold and Resume settings.</li>
+<li><b>Respond to FAQs and resume the on-hold task</b>: This is the default setting where first, the VA responds to the FAQs and then, resumes executing the task on hold.</li>
+<li><b>Execute the FAQs using Hold &amp; Resume Settings</b>: The VA always identifies FAQs when interruptions are enabled and proceeds as per the Hold and Resume settings you've configured.</li>
 </ul>
-<h3 id="manage-behavior-for-ambiguous-intents">Manage Behavior for Ambiguous Intents<a class="headerlink" href="#manage-behavior-for-ambiguous-intents" title="Permanent link">&para;</a></h3>
+<h5 id="manage-behavior-for-ambiguous-intents">Manage Behavior for Ambiguous Intents<a class="headerlink" href="#manage-behavior-for-ambiguous-intents" title="Permanent link">&para;</a></h5>
 <p>You can handle ambiguous intents during a conversation flow by setting the flag <strong>Behavior for Ambiguous Interruptions</strong>.</p>
 <p><a class="glightbox" href="../images/ambiguous-interruption-behavior.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ambiguous-interruption-behavior.png" alt="ambiguous intent interruption behavior" title="ambiguous intent interruption behavior" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>These settings allow you to:</p>
+<p>These settings allow you to do the following:</p>
 <ul>
-<li>Present the ambiguous intents to the end-user and proceed as per the Hold and Resume Settings. In case the user selects a task and the interruptions setting is:<ul>
+<li><b>Present the ambiguous intents to the end-user and proceed as per the <i>Hold and Resume</i> Settings</b>: Select this option in case the user selects a task and the interruptions setting is as follows:<ul>
 <li><em>Continue the current task and add a new task to the follow-up task list</em>, then the current task will be kept on hold and the new task will be initiated.</li>
 <li><em>Allow the end-user to select the behavior</em>, then the new task will be initiated without asking the user since the selection has been already made.</li>
 <li>All other <em>hold</em> options will be applied as usual.</li>
 </ul>
 </li>
-<li>Do not present ambiguous intents to the end-users and continue on the current task. This is the default setting.</li>
+<li><b>Do not present ambiguous intents to the end users and continue on the current task</b>: This is the default setting where the VA continues with the current task without presenting the ambiguous intents to the user.</li>
 </ul>
-<h3 id="manage-behavior-for-small-talk">Manage Behavior for Small Talk<a class="headerlink" href="#manage-behavior-for-small-talk" title="Permanent link">&para;</a></h3>
-<p>You can handle small talk during a conversation flow by setting the flag <strong>Interruption Behavior for Small Talk</strong>. </p>
+<h5 id="manage-behavior-for-small-talk">Manage Behavior for Small Talk<a class="headerlink" href="#manage-behavior-for-small-talk" title="Permanent link">&para;</a></h5>
+<p>You can handle Small Talk during a conversation flow by setting the flag <strong>Interruption Behavior for Small Talk</strong>. </p>
 <p><a class="glightbox" href="../images/smalltalk-interruption-behavior.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/smalltalk-interruption-behavior.png" alt="small talk interruption behavior" title="small talk interruption behavior" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>These settings allow you to:</p>
 <ul>
-<li><em>Respond to Small Talk and resume the on-hold task</em> – this is the default setting.</li>
-<li><em>Execute the Small Talk using Hold &amp; Resume settings</em>.</li>
+<li><b>Respond to Small Talk and resume the on-hold task</b>: This is the default setting where the VA responds to the Small Talk message by putting the current task on hold. Then, the VA resumes the on-hold task.</li>
+<li><b>Execute the Small Talk using Hold &amp; Resume settings</b>: Executes the Small Talk task based on your configurations for <b>Hold &amp; Resume</b>.</li>
 </ul>
-<h3 id="manage-behavior-for-user-authorization">Manage Behavior for User Authorization<a class="headerlink" href="#manage-behavior-for-user-authorization" title="Permanent link">&para;</a></h3>
+<h5 id="manage-behavior-for-user-authorization">Manage Behavior for User Authorization<a class="headerlink" href="#manage-behavior-for-user-authorization" title="Permanent link">&para;</a></h5>
 <p>When a user gives any input at a prompt message for authorization that is not relevant, the following flow is followed:</p>
 <ul>
 <li>If Small Talk intent is identified, then the Small Talk’s response is displayed, and the authorization is re-prompted.</li>
