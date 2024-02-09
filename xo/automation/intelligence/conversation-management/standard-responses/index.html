@@ -2763,20 +2763,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-responses" class="md-nav__link">
-    Default Responses
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-and-edit-responses" class="md-nav__link">
-    Add and Edit Responses
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#statements" class="md-nav__link">
     Statements
   </a>
@@ -6884,20 +6870,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-responses" class="md-nav__link">
-    Default Responses
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-and-edit-responses" class="md-nav__link">
-    Add and Edit Responses
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#statements" class="md-nav__link">
     Statements
   </a>
@@ -6960,160 +6932,6 @@
 
 <h1 id="default-standard-responses">Default Standard Responses<a class="headerlink" href="#default-standard-responses" title="Permanent link">&para;</a></h1>
 <p>Kore.ai Bot Builder tool provides a few default text responses, Natural Language Processing, or NLP interpreter responses to user inputs or events. This section lists them and gives an explanation as to when these responses are triggered. </p>
-<p>For example, a reply to a user input of <em>Hi!</em> The bot replies with one of the following responses, chosen randomly at runtime:</p>
-<ul>
-<li>Hi!</li>
-<li>Hello</li>
-<li>Hi there!</li>
-<li>Hey 🙂</li>
-</ul>
-<p>The NLP interpreter displays pre-defined text responses to users based on an event, condition, trigger, or user input. Depending on your custom bot and users of that bot, you may want to modify the default responses to users displayed for an event or request for input.</p>
-<p>Example</p>
-<ul>
-<li><strong>User Input</strong> – When were you born?</li>
-<li><strong>Event</strong> – Authorization Failure</li>
-<li><strong>Trigger</strong> – Task canceled</li>
-</ul>
-<p>You can define both standard bot responses, or if desired, add a channel override response that is displayed only in the specified channel the user is in, otherwise, one of the standard default responses is displayed. </p>
-<p>For example, in the SMS channel, you may only want to use short bot responses to save data.</p>
-<h3 id="default-responses">Default Responses<a class="headerlink" href="#default-responses" title="Permanent link">&para;</a></h3>
-<p>To access and manage the default responses in bot builder, follow the below steps:</p>
-<ol>
-<li>Select the <strong>Build</strong> tab from the top menu</li>
-<li>From the left menu, click <strong>Intelligence &gt; Standard Responses</strong>.
-<a class="glightbox" href="../images/navigate-standard-responses.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/navigate-standard-responses.png" alt="edit alert tasks for ignore words" title="edit alert tasks for ignore words" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ol>
-<p>For each standard response category tab, the event or user input is listed followed by one or more NLP interpreter standard responses. You can modify the default response, and if needed, add additional responses selected randomly by the NLP interpreter in response to user input or system event.</p>
-<p>In the <strong>Standard Response</strong> section, the standard bot responses are categorized in the following sections:</p>
-<ul>
-<li><strong>Statements</strong> – Responses displayed to the user as the result of an action by the bot or user. For example, a user cancels a task, or a user gives an invalid response to your bot request.</li>
-<li><strong>Queries</strong> – Statements from the bot to the user to ask for more information. For example, <em>Which field do you want to change?</em></li>
-<li><strong>Error &amp; Warnings</strong> – Statements from the bot to the user when an error occurs during the scenario, such as the <em>End date cannot be before or same as the start date!</em></li>
-<li><strong>Questions</strong> – Questions the bot may pose to the user when not included in any other category.</li>
-<li><strong>Choices</strong> – The bot is asking for Yes/No input. For example, <em>Would you like to receive push notifications every time this task occurs?</em></li>
-<li><strong>Greeting</strong> – Initial responses by the bot when the bot is installed, or other initial contacts. For example, when a user returns to the interaction after a period of inactivity.</li>
-</ul>
-<h3 id="add-and-edit-responses">Add and Edit Responses<a class="headerlink" href="#add-and-edit-responses" title="Permanent link">&para;</a></h3>
-<p><strong>Add a New Standard Response</strong></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If the standard responses are updated at the conditions wherein an ambiguity is presented to the user, the bot response will not display the ambiguous choices to the user and you need to use the function <b>getChoices</b> to present the ambiguity list (refer to point 7 below).</p>
-</div>
-
-<ol>
-<li>Select a tab category for the standard response. For example, <strong>Greeting</strong>, and then hover the situation for which you want to add the response. </li>
-<li>Click <strong>Add Response</strong>.
-   The <strong>Add Channel Overrides</strong> dialog is displayed.</li>
-<li>In the <strong>Choose a channel</strong> drop-down list, select a channel to create a channel-specific response. You can go with the <strong>Any Channel</strong> option to enable the response for all channels.</li>
-<li>In the case of channel-specific response, from the <strong>Choose a Task</strong> drop-down list, select <strong>Any Task</strong> to apply this channel-specific response to all tasks or select a specific task.</li>
-<li>When a specific task is selected, the <strong>Choose a Field is</strong> drop-down is displayed. Select <strong>Any Field</strong> or a specific field for this channel-specific response.
-<a class="glightbox" href="../images/select-field-for-response.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/select-field-for-response.png" alt="edit alert tasks for ignore words" title="edit alert tasks for ignore words" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ol>
-<ol start="6"><li>In the bot <b>Response</b> editor, you can override the default Bot Response for this channel using basic editor controls on the <b>Simple Mode</b> tab, or write custom JavaScript for the response on the <b>Advanced Mode</b> tab as follows:</li></ol>
-
-<ul>
-<li><strong>Simple Mode</strong> – Enter the text for the default standard response. For example, <em>There</em> you are, I was <sub>hoping</sub> you would return soon! and then optionally, format the text using the formatting buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting a line. For more information. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/prompt-editor/#prompt-editor" target="_blank">Learn more</a>.</li>
-<li><strong>Advanced Mode</strong> – Enter JavaScript to override the channel message as described in the following code examples.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Use the following keys to return default values for:</p>
-<ol>
-<li>response.message – Returns the default message as a string. </li>
-<li>response.choices – Returns the options choice or confirmation message types as an array.</li>
-</ol>
-</div>
-<p><strong>Slack Channel Override Example</strong></p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="sb">`</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="sb">var attachments = [];</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="sb">var attachment = {</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="sb">    &#39;text&#39;: &quot;Exception occurred during API execution&quot;,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="sb">    &#39;color&#39;: &#39;#FFCC00&#39;,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="sb">    &#39;attachment_type&#39;: &#39;default&#39;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="sb">};</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="sb">attachments.push(attachment);</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sb">message.attachments = attachments;</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="sb">print(JSON.stringify(message));</span>
-</span></code></pre></div>
-<p><strong>FaceBook Channel Override Example</strong></p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">message</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">};</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">var</span><span class="w"> </span><span class="nx">buttons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">choices</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">choiceItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">choiceItem</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nx">choiceItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">choiceItem</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">            </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;..&#39;</span><span class="p">;</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nx">content_type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">choiceItem</span><span class="p">,</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="nx">payload</span><span class="o">:</span><span class="w"> </span><span class="nx">choiceItem</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nx">buttons</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="nx">message</span><span class="p">.</span><span class="nx">quick_replies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">buttons</span><span class="p">;</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
-</span></code></pre></div>
-<p><strong>Email Channel Override Example</strong></p>
-<p><div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; &lt;br&gt; &#39;</span><span class="p">;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">choices</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">text</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="s1">&#39;&lt;u&gt; + response.choices[i] + &#39;</span><span class="w"> </span><span class="o">&lt;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="err">/u&gt; &lt;br&gt;&#39;);</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nx">message</span><span class="p">.</span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">text</span><span class="p">;</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
-</span></code></pre></div>
-<strong>SMS Channel Override Example</strong></p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">indexArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;c&#39;</span><span class="p">,</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;e&#39;</span><span class="p">,</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;j&#39;</span><span class="p">,</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;l&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;q&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;t&#39;</span><span class="p">,</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="s1">&#39;u&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="s1">&#39;z&#39;</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">];</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;\\n&#39;</span><span class="p">;</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">choices</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">text</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">indexArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">            </span><span class="s1">&#39;) &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">                </span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;\\n&#39;</span><span class="p">);</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="nx">message</span><span class="p">.</span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">text</span><span class="p">;</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
-</span></code></pre></div>
-<ol start="7"><li>Using the <code>getChoices()</code> function, you can also customize the <b>response display format</b> using the <a href="https://docsinternal-kore.github.io/docs/xo/web-mobile-SDK-message-formatting-and-templates/">message formatting templates</a>. When the <code>getChoices()</code> function is called and there is an ambuguity, the platform returns the ambiguous choices information as an array which can be used to present the options to the end users.
-
-For example, to display the standard response for <i>Did you mean</i> in a button format, you can use the following code:
-
-<pre>
-var info =getChoices() ;
-var message = {
-"type": "template",
-"payload": {
-  "template_type": "button",
-  "text": "Did you mean",
-  "subText": "You can now customize response for did you mean",
-  "buttons": []
- }
-};
-for (i = 0; i < info.length; i++) {
-var button = {
-  "type": "postback",
-  "title": info[i],
-  "payload": "payload1"
-};
-message.payload.buttons.push(button);
-}
-print(JSON.stringify(message)); 
-</pre></li>
-<li>Click <b>Done</b> to save and close the <b>Edit Response</b> dialog and apply the new standard response.</li></ol>
-
 <h2 id="statements">Statements<a class="headerlink" href="#statements" title="Permanent link">&para;</a></h2>
 <table border="1.5">
   <tr bgcolor="#ECECEC">
