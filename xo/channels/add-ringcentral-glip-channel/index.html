@@ -9193,34 +9193,40 @@
 </li>
 <li>
 <p>Enter the values to the following fields on the     <strong>App Properties (internal-use only)</strong> page:</p>
-</li>
+<ul>
 <li>App Name</li>
 <li>App Description (optional)</li>
 <li>Primary Contact</li>
-<li>
-<p>Select the relevant option for <strong>Do you intend to promote this app in the RingCentral App Gallery?</strong>
-<a class="glightbox" href="../images/ringcentral_glip2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip2.png" alt="app properties" title="app properties" style="border: 1px solid gray; zoom:90%;"></a></p>
+<li>Select the relevant option for <strong>Do you intend to promote this app in the RingCentral App Gallery?</strong>
+<a class="glightbox" href="../images/ringcentral_glip2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip2.png" alt="app properties" title="app properties" style="border: 1px solid gray; zoom:90%;"></a></li>
+</ul>
 </li>
 <li>
 <p>(Optional) In the <strong>App Card panel</strong>, enter the values for the given fields to configure how your application will be presented within our App Gallery.</p>
 </li>
 <li>
 <p>In the <strong>Auth</strong> panel, enter the values for the following fields to select the authentication method your app will use:</p>
-</li>
+<ul>
 <li>Select <strong>3-legged OAuth flow authorization code</strong>.</li>
 <li>
 <p>Select <strong>Server-side web app (most common)</strong> or <strong>Client-side web app</strong> based on your app type for <strong>From what type of app will you be calling the API?</strong>
-  <a class="glightbox" href="../images/ringcentral_glip4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip4.png" alt="OAuth flow" title="OAuth flow" style="border: 1px solid gray; zoom:70%;"></a></p>
+<a class="glightbox" href="../images/ringcentral_glip4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip4.png" alt="OAuth flow" title="OAuth flow" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
 <p>On the Kore.ai XO Platform, copy the <strong>OAuth Redirect URI</strong> under the <strong>Configurations</strong> tab in the <strong>RingCentral Glip</strong> window.</p>
 </li>
-</ol>
+</ul>
 <p><a class="glightbox" href="../images/ringcentral_glip5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip5.png" alt="ringcentral glip configuration" title="ringcentral glip configuration" style="border: 1px solid gray; "></a></p>
 <ul>
-<li>Paste the copied <strong>OAuth Redirect URI</strong> link in the <strong>Auth</strong> panel.</li>
 <li>
-<p>Select <strong><em>Yes</em></strong> for <strong>Issue refresh tokens?</strong></p>
+<p>Paste the copied <strong>OAuth Redirect URI</strong> link in the <strong>Auth</strong> panel.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The OAuth Redirect URI now includes the streamid in the API request to identify the virtual assistant being accessed. When an incoming request is qualified with this identifier, it helps with traceability, troubleshooting, and remediation at the network level during anomalies like malicious calls or unusual bot activity.
+* Select <strong><em>Yes</em></strong> for <strong>Issue refresh tokens?</strong></p>
+</div>
+</li>
+</ul>
 </li>
 <li>
 <p>In the Security panel, to define the permissions to associate with the app, follow the steps below:</p>
@@ -9232,7 +9238,7 @@
 <li>
 <p>Click Create. Your App is created successfully and the system redirects to the <strong>App Dashboard</strong> page.</p>
 </li>
-</ul>
+</ol>
 <p>If you do not have a <strong>Sandbox Account</strong> to test your app in the Sandbox environment, follow the steps below:</p>
 <ul>
 <li>
@@ -9259,8 +9265,7 @@
 <a class="glightbox" href="../images/ringcentral_glip9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip9.png" alt="application credentials" title="application credentials" style="border: 1px solid gray; "></a></p>
 </li>
 <li>
-<p>On the Kore.ai XO Platform, navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> and click <strong>RingCentral Glip</strong>.
-<a class="glightbox" href="../images/ringcentral_glip10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip10.png" alt="deploy channel" title="deploy channel" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>On the Kore.ai XO Platform, navigate to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> and click <strong>RingCentral Glip</strong>.</p>
 </li>
 <li>
 <p>In the <strong>RingCentral Glip</strong> window, click the <strong>Configurations</strong> tab.</p>
@@ -9283,25 +9288,19 @@
 <li>Click <strong>Add Unassigned Ext</strong>.
 <a class="glightbox" href="../images/ringcentral_glip13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip13.png" alt="unassigned extension" title="unassigned extension" style="border: 1px solid gray; zoom:70%;"></a></li>
 <li>On the <strong>user profile information</strong> page, enter all the required information.</li>
-<li>Click <strong>Save &amp; Enable</strong> to enable the extension.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please provide a meaningful name like <em>Travel Bot</em> or <em>HR Assistant</em> to the virtual assistant inside <strong>Teams Messaging</strong>.</p>
 </div>
-<p>Notes</p>
-<ul>
-<li>
+<ol>
+<li>Click <strong>Save &amp; Enable</strong> to enable the extension.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>If you receive an account activation email on your registered email address, please note the username and password to authorize the virtual assistant on the Kore.ai XO Platform.</p>
-</li>
-<li>
-<p>Alternatively, select the “pre-assigned credentials” option and just provide/save the password.**.</p>
-</li>
-<li>
-<p>If you receive an account activation email on your registered email address, please note the username and password to authorize the virtual assistant on the Kore.ai XO Platform.</p>
-</li>
-<li>Alternatively, select the “pre-assigned credentials” option and just provide/save the password.</li>
-</ul>
+<p>Alternatively, select the “pre-assigned credentials” option and just provide/save the password.</p>
+</div>
 <h3 id="step-3a-test-the-validation">Step 3(a): Test the Validation<a class="headerlink" href="#step-3a-test-the-validation" title="Permanent link">&para;</a></h3>
 <p>To access the admin portal from the Sandbox account screen and test the validation, follow the steps below:</p>
 <ol>
@@ -9320,7 +9319,7 @@
 <a class="glightbox" href="../images/ringcentral_glip15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip15.png" alt="authorize app" title="authorize app" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>In the <strong>Sign-in</strong> window, click <strong>Continue as **to sign in with the existing user’s account, or click **Use Another Account</strong>. 
+<p>In the <strong>Sign-in</strong> window, click <strong>Continue as</strong> to sign in with the existing user’s account, or click <strong>Use Another Account</strong>.
 <a class="glightbox" href="../images/ringcentral_glip16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip16.png" alt="use another account" title="use another account" style="border: 1px solid gray; zoom:70%; "></a></p>
 </li>
 <li>
@@ -9339,7 +9338,7 @@
 <p><a class="glightbox" href="../images/ringcentral_glip19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ringcentral_glip19.png" alt="apply for production" title="apply for production" style="border: 1px solid gray; zoom:70%;"></a></p>
 <p>Once your app is production ready, follow the steps below on the Kore.ai XO Platform:</p>
 <ol>
-<li>Navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>RingCentral Glip</strong>.</li>
+<li>Navigate to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>RingCentral Glip</strong>.</li>
 <li>Under the <strong>Configurations</strong> tab, select <strong>Production for Ringcentral Environment</strong>.</li>
 <li>Follow <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-ringcentral-glip-channel/#Step_3b_Channel_Setup_on_the_Platform">these</a> steps to complete the configuration.</li>
 </ol>
