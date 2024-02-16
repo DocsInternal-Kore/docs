@@ -9258,17 +9258,19 @@
 <a class="glightbox" href="../images/whatsapp4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp4.png" alt="edit infobib configuration" title="edit infobib configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>On the <strong>Edit Configuration</strong> page, click the <strong>edit</strong> icon, add the <strong>URL for incoming messages</strong> (copy the Webhook URL from the Kore Platform under <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>WhatsApp Business Messaging</strong> &gt; <strong>Configurations</strong> tab) and click <strong>Back</strong>.
+<p>On the <strong>Edit Configuration</strong> page, click the <strong>edit</strong> icon, add the <strong>URL for incoming messages</strong> (copy the Webhook URL from the Kore Platform under <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>WhatsApp Business Messaging</strong> &gt; <strong>Configurations</strong> tab) and click <strong>Back</strong>.
 <a class="glightbox" href="../images/whatsapp5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp5.png" alt="deploy infobib" title="deploy infobib " style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
 <p>Next, to add Infobip’s <strong>Base URL</strong>, follow these steps:</p>
 <ul>
-<li>On the Kore.ai Platform, click the <strong>Virtual Assistants</strong> tab, and select the published virtual assistant to add the <strong>WhatsApp Business Message</strong> channel.</li>
-</ul>
-<p><a class="glightbox" href="../images/whatsapp6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp6.png" alt="infobib sender" title="infobib sender" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ul>
-<li>Under <strong>Deploy</strong> &gt; <strong>Channels</strong>, click <strong>WhatsApp Business Messaging</strong>.</li>
+<li>
+<p>On the Kore.ai Platform, click the <strong>Virtual Assistants</strong> tab, and select the published virtual assistant to add the <strong>WhatsApp Business Message</strong> channel.
+<a class="glightbox" href="../images/whatsapp6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp6.png" alt="infobib sender" title="infobib sender" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>On the Kore.ai Platform, go to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> and click <strong>WhatsApp Business Messaging</strong>.</p>
+</li>
 <li>
 <p>On the <strong>WhatsApp Business Messaging</strong> panel, click the <strong>Configurations</strong> tab and provide inputs for the following fields:</p>
 <ul>
@@ -9323,10 +9325,11 @@
 <p>The Platform supports integration with <strong>GupShup</strong> to enable WhatsApp business as a channel. In this integration, the platform provides a Webhook URL to be called by GupShup during a conversation to enable events and exchange messages.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The important steps in completing this channel enablement are as follows:</p>
+<p>To enable WhatsApp Messaging on this channel, you must have a GupShup enterprise account.</p>
 </div>
+<p>The important steps in completing this channel enablement are as follows:</p>
 <ol>
-<li><a href="/docs/xo/add-whatsapp-business-channel/#step-1-create-a-gupshup-application">Create a GupShup Application</a>. \</li>
+<li><a href="/docs/xo/add-whatsapp-business-channel/#step-1-create-a-gupshup-application">Create a GupShup Application</a>. </li>
 <li>
 <p><a href="/docs/xo/add-whatsapp-business-channel/#step-2-configure-the-channel-enablement">Configure the Channel Enablement</a>.</p>
 </li>
@@ -9392,28 +9395,32 @@
 <p>To integrate your GupShup service using the WBM channel to the Kore.ai XO Platform, follow the steps below:</p>
 <ol>
 <li>Copy the <strong>Mobile number</strong>, <strong>WABA ID</strong>, and the <strong>Password</strong> from the GupShup WhatsApp Dashboard.</li>
-<li>On the Kore.ai Bot Builder, navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>WhatsApp Business Messaging</strong> (under <strong>Enterprise Channels</strong>).</li>
+<li>On the Kore.ai Bot Builder, navigate to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>WhatsApp Business Messaging</strong>.</li>
 <li>Click the <strong>Configurations</strong> tab on the <strong>WhatsApp Business Messaging</strong> window.</li>
 <li>Select <strong>GupShup</strong> from the dropdown list for <strong>Messaging Partner</strong>.</li>
-<li>Paste the copied values for <strong>Mobile number</strong>, <strong>WABA ID</strong>, and &lt;b.Password in the respective input fields.
+<li>Paste the copied values for <strong>Mobile number</strong>, <strong>WABA ID</strong>, and <strong>Password</strong> in the respective input fields.
 <a class="glightbox" href="../images/whatsapp19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp19.png" alt="add gupshup WABA ID" title="add gupshup WABA ID" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
 <h3 id="step-2c-configure-the-callback-urlwebhook-url">Step 2c: Configure the Callback URL/Webhook URL<a class="headerlink" href="#step-2c-configure-the-callback-urlwebhook-url" title="Permanent link">&para;</a></h3>
 <p>To link to your bot on the Kore.ai Platform to receive inbound messages/events, you must configure the <strong>Callback/Webhook URL</strong> on your <strong>GupShup WhatsApp Dashboard</strong>.</p>
 <p>To set up the <strong>Callback URL</strong>, follow the steps below:</p>
 <ol>
-<li>On the Kore.ai Bot Builder, navigate to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>WhatsApp Business Messaging</strong> (under <strong>Enterprise Channels</strong>).</li>
+<li>On the Kore.ai Bot Builder, navigate to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>WhatsApp Business Messaging</strong>.</li>
 <li>Click the <strong>Configurations</strong> tab on the <strong>WhatsApp Business Messaging</strong> window.</li>
-<li>Ensure you have selected <strong>GupShup</strong> for the <strong>Messaging Partner</strong> field. Click <strong>Copy</strong> to copy the <strong>Webhook URL</strong>.</li>
-</ol>
-<p><a class="glightbox" href="../images/whatsapp20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp20.png" alt="enter gupshup webhook" title="enter gupshup webhook" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ol>
-<li>Navigate to your <strong>GupShup WhatsApp Dashboard</strong>.</li>
-<li>Click the <strong>Settings</strong> icon for your app of type <strong>Access API</strong>.</li>
-</ol>
-<p><a class="glightbox" href="../images/whatsapp21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp21.png" alt="enter gupshup settings" title="enter gupshup settings" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ol>
-<li>On the <strong>Settings</strong> page, scroll down to the **Test Access API and set callback URL **section.</li>
+<li>
+<p>Ensure you have selected <strong>GupShup</strong> for the <strong>Messaging Partner</strong> field. Click <strong>Copy</strong> to copy the <strong>Webhook URL</strong>.
+<a class="glightbox" href="../images/whatsapp20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp20.png" alt="enter gupshup webhook" title="enter gupshup webhook" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Navigate to your <strong>GupShup WhatsApp Dashboard</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Settings</strong> icon for your app of type <strong>Access API</strong>.
+<a class="glightbox" href="../images/whatsapp21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp21.png" alt="enter gupshup settings" title="enter gupshup settings" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>On the <strong>Settings</strong> page, scroll down to the <strong>Test Access API and set callback URL</strong> section.</p>
+</li>
 <li>Click the <strong>Callback URL / Link your Bot</strong> tab.</li>
 <li>
 <p>Turn on the toggle switch and paste the <strong>Webhook URL</strong> you copied from the Bot Builder in the <strong>Enter your Callback URL</strong> input field.
@@ -9438,8 +9445,8 @@
 </ol>
 <h3 id="step-3-secure-the-integration">Step 3: Secure the Integration<a class="headerlink" href="#step-3-secure-the-integration" title="Permanent link">&para;</a></h3>
 <p>The Webhook URL used on the WhatsApp Business Messaging Channel for GupShup is a public URL that may cause security vulnerabilities. The Kore.ai XO Platform enforces an authentication mechanism by securing the webhook URL and associating it with a Kore.ai App. The <strong>Associate an App</strong> feature is used for this purpose.</p>
-<p>This feature is available under <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>WhatsApp Business Messaging</strong> &gt; <strong>Configurations</strong>.</p>
-<p><a class="glightbox" href="../images/whatsapp23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp23.png" alt="secure gupshup integration" title="secure gupshup integration" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>This feature is available under**Channels &amp; Flows** &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>WhatsApp Business Messaging</strong> &gt; <strong>Configurations</strong>.
+<a class="glightbox" href="../images/whatsapp23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp23.png" alt="secure gupshup integration" title="secure gupshup integration" style="border: 1px solid gray; zoom:70%;"></a></p>
 <p><strong>How it Works</strong></p>
 <p>When <strong>Associate an App</strong> is enabled, the following happens:</p>
 <ol>
@@ -9448,7 +9455,10 @@
 <li>However, if the Token is missing, the Platform rejects the incoming API call(s) and responds with an error code.</li>
 </ol>
 <p>Once you enable <strong>Associate an App</strong>, you must manually select an app and configure it for the GupShup app (by clicking <strong>Copy</strong> and pasting the <em>Client ID</em> and <em>Client Secret</em> (shown above) from the Kore.ai XO Platform).</p>
-<p><strong>Note</strong>: This channel configuration is not a part of the Bot Import/Export feature. The user should manually enable the channel for the target Bot. The integration flow remains the same even with the <strong>App Association</strong> feature.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This channel configuration is not a part of the Bot Import/Export feature. The user should manually enable the channel for the target Bot. The integration flow remains the same even with the <strong>App Association</strong> feature.</p>
+</div>
 <h3 id="messaging-templates_1"><strong>Messaging Templates</strong><a class="headerlink" href="#messaging-templates_1" title="Permanent link">&para;</a></h3>
 <p>As part of the GupShup WhatsApp channel integration, the Platform supports the following Gupshup outbound message types to provide an engaging, interactive end-user experience:</p>
 <ul>
@@ -9457,9 +9467,33 @@
 </ul>
 <p>You may have to switch between these message types depending on the timing and initiation of the chat.</p>
 <p>Whether you are messaging clients inside the messaging window determines the type of message you send. When messaging customers outside of this window, you must follow pre-approved message template rules. <a href="https://docs.gupshup.io/docs/message-types-templates#message-templates">Learn more</a>.</p>
-<p>The Kore.ai XO Platform supports public APIs for the above WhatsApp Outbound Templates on the GupShup channel. These templates can be used during virtual assistant conversations to structure the messages exchanged.</p>
+<p>Message templates for outbound messages play a crucial role in ensuring businesses adhere to WhatsApp policies when initiating communications. These templates come preformatted with predefined text, providing a structured framework for messages sent to end users. Their reusability is particularly valuable when sending the same message multiple times.</p>
+<p>Instead of transmitting the actual message content, the template name serves as the identifier for the message content when sending a message template.</p>
+<p>Templates can incorporate placeholders, allowing for the inclusion of values or customized information before sending the template message. Additionally, template headers may include media that provides more detailed information. Introducing buttons to messages further enhances interactivity and engagement.</p>
+<p>Message templates typically consist of Header, Body, Footer, and Buttons. For detailed see <a href="https://docs.gupshup.io/docs/whatsapp-message-types-outbound-templates#header">Gupshup docs</a></p>
+<p>The Document with Text template is also supported for outbound messages. With this template, developers can send a document along with informative text for end users to download.</p>
+<p>A sample template script is given below:</p>
+<p>'''
+    var msg = {</p>
+<div class="language-text highlight"><pre><span></span><code>&quot;type&quot;: &quot;document&quot;,
+
+&quot;message_text&quot;:&quot;This is document caption&quot;,
+
+&quot;caption&quot;:&quot;This document talks about Gupshup features&quot;,
+
+&quot;filename&quot;: &quot;Developer.pdf&quot;,
+
+&quot;document&quot;: {&quot;url&quot;:&quot;http://enterprise.smsgupshup.com/help/in/EnterpriseAPIDocument.pdf&quot;}
+
+};
+
+print(JSON.stringify(msg))
+</code></pre></div>
+<p>'''</p>
+<p>Prior to submitting notifications through the WhatsApp Business Solution or the WhatsApp Cloud Business Solution, it is imperative to create and register your message templates. This step ensures that the templates comply with WhatsApp’s review requirements, facilitating effective communication within the platform.</p>
+<p>The Kore.ai XO Platform supports public APIs for the integration and utilization of WhatsApp Outbound Templates on the GupShup channel. Contact(<a href="https://kore.ai/contact-us/">https://kore.ai/contact-us/</a>) our experts to learn more. </p>
 <h3 id="support-for-whatsapp-pay"><strong>Support for WhatsApp Pay</strong><a class="headerlink" href="#support-for-whatsapp-pay" title="Permanent link">&para;</a></h3>
-<p>The XO Platform supports WhatsApp Pay, a digital payment service that enables instant money transfers between banks through mobile devices using the Unified Payments Interface (UPI) system for the GupShup channel. GupShup, as a WhatsApp Business integration provider, supports outbound message types <strong>Order Details [Text]</strong> and** Order Status** templates, which are also supported on the XO Platform via APIs.</p>
+<p>The XO Platform supports WhatsApp Pay, a digital payment service that enables instant money transfers between banks through mobile devices using the Unified Payments Interface (UPI) system for the GupShup channel. GupShup, as a WhatsApp Business integration provider, supports outbound message types <strong>Order Details [Text]</strong> and <strong>Order Status</strong> templates, which are also supported on the XO Platform via APIs.</p>
 <p><strong>How it Works</strong></p>
 <ol>
 <li>When the end user completes the transaction using the WhatsApp Pay template rendered on the WhatsApp channel, the Platform receives an inbound message.</li>
@@ -9469,7 +9503,7 @@
 <li><strong>Object</strong>: A message template is used if the JS result is an object.</li>
 </ul>
 </li>
-<li>The Platform accepts this JSON object format as the **Composite **entity type and stores it in the context object under the respective entity.</li>
+<li>The Platform accepts this JSON object format as the <strong>Composite</strong> entity type and stores it in the context object under the respective entity.</li>
 </ol>
 <p>An example of a success payload is given below:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> {
@@ -9483,7 +9517,10 @@
 </span></code></pre></div>
 <h2 id="adding-the-whatsapp-channel-using-karix-application">Adding the WhatsApp Channel Using Karix Application<a class="headerlink" href="#adding-the-whatsapp-channel-using-karix-application" title="Permanent link">&para;</a></h2>
 <p>To integrate <strong>Karix</strong> to your <em>WhatsApp Business Messaging</em> channel and enable it for a bot, you’ll need to perform the following setup under the <strong>Configuration</strong> tab.</p>
-<p><strong>Note</strong>: To complete this procedure, you must already have a _Karix _account. This is one of the messaging provider for enabling WhatsApp Business Messaging.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To complete this procedure, you must already have a _Karix _account. This is one of the messaging provider for enabling WhatsApp Business Messaging.</p>
+</div>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Gather the following details from the <strong>Karix support team</strong>.<ul>
@@ -9500,7 +9537,7 @@
 <li>Select <em>Karix</em> from the list for <strong>Messaging Partner</strong>.</li>
 <li>Enter the <strong>Phone Number</strong> to map to the WhatsApp Business Messaging channel.</li>
 <li>Provide the <strong>Account Key</strong> you’ve received from the Karix support team.</li>
-<li>Provide the **Webhook URL ** shared with the Karix support team.</li>
+<li>Provide the <strong>Webhook URL</strong> shared with the Karix support team.</li>
 <li>Select <strong>Yes</strong> for <strong>Enable Channel</strong>.</li>
 <li>Click <strong>Save</strong>.
 <a class="glightbox" href="../images/whatsapp24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/whatsapp24.png" alt="configure karix" title="configure karix" style="border: 1px solid gray; zoom:70%;"></a></li>

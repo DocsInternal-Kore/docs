@@ -9167,16 +9167,18 @@
 <h2 id="step-1-create-an-app-on-slack">Step 1: Create an App on Slack<a class="headerlink" href="#step-1-create-an-app-on-slack" title="Permanent link">&para;</a></h2>
 <ol>
 <li>In the XO Platform, select the assistant to which you want to add the Slack Channel.</li>
-<li>Go to <strong>Deploy &gt; Channels &gt; Slack</strong>, and open the **Configuration **tab.</li>
 <li>
-<p>In a new browser tab, <a href="https://api.slack.com/">Login </a>to the Slack developer portal and go to the Apps section <a href="https://api.slack.com/apps">https://api.slack.com/apps</a>. If this is your first app, click <strong>Create an App</strong> and if you already have some apps, then click <strong>Create New App</strong>. \
+<p>Go to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Slack</strong>, and open the <strong>Configuration</strong> tab.</p>
+</li>
+<li>
+<p>In a new browser tab, <a href="https://api.slack.com/">Login </a>to the Slack developer portal and go to the Apps section <a href="https://api.slack.com/apps">https://api.slack.com/apps</a>. If this is your first app, click <strong>Create an App</strong> and if you already have some apps, then click <strong>Create New App</strong>.
 <a class="glightbox" href="../images/slack.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="slack app" src="../images/slack.png" title="slack app" /></a></p>
 </li>
 <li>
 <p>You will now be asked to choose how you’d like to configure your app’s scopes and settings. Select <strong>From Scratch</strong>.</p>
 </li>
 <li>
-<p>On the <strong>Create App</strong> window, enter the <strong>App Name</strong> and select a team from the Development Slack Team drop-down list. Use your assistant’s name as the App Name. \
+<p>On the <strong>Create App</strong> window, enter the <strong>App Name</strong> and select a team from the Development Slack Team drop-down list. Use your assistant’s name as the App Name.
 <a class="glightbox" href="../images/slack1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="slack assistant" src="../images/slack1.png" title="slack assistant" /></a></p>
 </li>
 <li>
@@ -9187,25 +9189,25 @@
 <ol>
 <li>Go to the <strong>OAuth &amp; Permissions</strong> tab and click <strong>Add a new Redirect URL</strong>. Copy the Redirect URL provided in the <strong>Configurations</strong> tab of the Slack channel page within the XO Platform and enter in the <strong>Redirect URLs</strong> field.</li>
 <li>
-<p>Click <strong>Add</strong> <strong>a new Redirect URL</strong>, then click <strong>Save URLs</strong>. \
+<p>Click <strong>Add</strong> <strong>a new Redirect URL</strong>, then click <strong>Save URLs</strong>. 
 <a class="glightbox" href="../images/slack2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="redirect URL" src="../images/slack2.png" title="redirect URL" /></a></p>
 </li>
 <li>
 <p>Proceed to <strong>Scopes &gt;</strong> <strong>Bot Token Scopes</strong> section.</p>
 </li>
-<li>Add ‘<em>incoming-webhook</em>‘,‘<em>chat:write</em>‘, ‘<em>users:read.email</em>‘, and ‘<em>users:read</em>‘ scopes.</li>
+<li>Add ‘<em>incoming-webhook</em>‘, ‘<em>chat:write</em>‘, ‘<em>users:read.email</em>‘, and ‘<em>users:read</em>‘ scopes.</li>
 <li>If you would like your users to send attachments to your bot, then select the ‘<em>files:write</em>’ scope.</li>
-<li>If you would like to send Proactive Notifications to your users on Slack, then select the <em>users:read</em>, <em>users:read.email</em>, <em>team:read</em> scopes. \
+<li>If you would like to send Proactive Notifications to your users on Slack, then select the <em>users:read</em>, <em>users:read.email</em>, <em>team:read</em> scopes. 
 <a class="glightbox" href="../images/slack3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="bot token scopes" src="../images/slack3.png" title="bot token scopes" /></a></li>
 </ol>
 <h2 id="step-3-install-the-app">Step 3: Install the App<a class="headerlink" href="#step-3-install-the-app" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Next, navigate to the <strong>OAuth Tokens &amp; Redirect URLs</strong> section, and select the <strong>Install to Workspace</strong> option. Choose the required Workspace and complete the process. \
+<p>Next, navigate to the <strong>OAuth Tokens &amp; Redirect URLs</strong> section, and select the <strong>Install to Workspace</strong> option. Choose the required Workspace and complete the process. 
 <a class="glightbox" href="../images/slack4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="OAuth tokens" src="../images/slack4.png" title="OAuth tokens" /></a></p>
 </li>
 <li>
-<p>Optionally, if you would like to send Proactive Notifications to your users on Slack, copy the <strong>Bot User OAuth Token</strong> from the **OAuth Tokens for Your Workspace **section and provide it in the Slack Channel Configurations tab within the XO Platform.
+<p>Optionally, if you would like to send Proactive Notifications to your users on Slack, copy the <strong>Bot User OAuth Token</strong> from the <strong>OAuth Tokens for Your Workspace</strong> section and provide it in the Slack Channel Configurations tab within the XO Platform.
 <a class="glightbox" href="../images/slack5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="slack workspace" src="../images/slack5.png" title="slack workspace" /></a></p>
 </li>
 </ol>
@@ -9218,10 +9220,9 @@
 <p>Click <strong>Save Changes</strong>.</p>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The Webhook URL now includes the <strong><em>streamid</em></strong> in the API request to identify the virtual assistant being accessed. When an incoming request is qualified with this identifier, it helps with traceability, troubleshooting, and remediation at the network level during anomalies like malicious calls or unusual bot activity.</p>
-</div>
+<p>!!! note</p>
+<div class="language-text highlight"><pre><span></span><code>  The Webhook URL now includes the **_streamid_** in the API request to identify the virtual assistant being accessed. When an incoming request is qualified with this identifier, it helps with traceability, troubleshooting, and remediation at the network level during anomalies like malicious calls or unusual bot activity.
+</code></pre></div>
 <p><a class="glightbox" href="../images/slack6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="interactivity" src="../images/slack6.png" title="interactivity" /></a></p>
 <h2 id="step-5-enable-events">Step 5 : Enable Events<a class="headerlink" href="#step-5-enable-events" title="Permanent link">&para;</a></h2>
 <ol>
@@ -9257,7 +9258,7 @@
 <ol>
 <li>Go to the <strong>Configurations</strong> tab to review and complete the channel setup.</li>
 <li>Click <strong>Authorize</strong> under the app credentials area.</li>
-<li>Under <strong>Enable Channel</strong>, select **Yes **and click on **Save **to enable the Slack channel.
+<li>Under <strong>Enable Channel</strong>, select <strong>Yes</strong> and click on <strong>Save</strong> to enable the Slack channel.
 <a class="glightbox" href="../images/slack11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="enable channel" src="../images/slack11.png" title="enable channel" /></a></li>
 </ol>
 <p>The <em>Successfully added Slack channel</em> message is displayed at the top of the XO Platform. In <em>Slack</em>, it is optional to submit your app to the Slack App Directory.</p>

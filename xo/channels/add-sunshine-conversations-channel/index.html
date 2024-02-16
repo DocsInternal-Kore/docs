@@ -9091,6 +9091,19 @@
     Switchboard Integration for Agent Handoff
   </a>
   
+    <nav class="md-nav" aria-label="Switchboard Integration for Agent Handoff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-set-up-agent-handoff" class="md-nav__link">
+    Steps to Set up Agent Handoff
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -9118,12 +9131,14 @@
 <p>To enable the integration, you need to provide authorization using your Zendesk credentials. Follow the steps below to complete the <strong>OAuth-based authorization</strong>:</p>
 <ol>
 <li>Log into the Kore.ai XO Platform.</li>
-<li>Navigate to <strong>Deploy</strong> → <strong>Channels</strong> → <strong>Sunshine Conversations</strong> Channel.</li>
-<li>Click the <strong>Authorize</strong> button under <strong>Configurations</strong> on the <strong>Sunshine Conversations</strong> panel.</li>
-</ol>
-<p><a class="glightbox" href="../images/Sunshine-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Sunshine-1.png" alt="Sunshine Channel" title="Sunshine Channel" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ol>
-<li>On the <strong>Zendesk subdomain</strong> page, provide the subdomain and click <strong>Sign in</strong>.</li>
+<li>Navigate to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Sunshine Conversations</strong> Channel.</li>
+<li>
+<p>Click the <strong>Authorize</strong> button under <strong>Configurations</strong> on the <strong>Sunshine Conversations</strong> panel.
+    <a class="glightbox" href="../images/Sunshine-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Sunshine-1.png" alt="Sunshine Channel" title="Sunshine Channel" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>On the <strong>Zendesk subdomain</strong> page, provide the subdomain and click <strong>Sign in</strong>.</p>
+</li>
 <li>On the Zendesk sign-in page, provide your login credentials and click <strong>Sign in</strong>.</li>
 <li>After you have signed in successfully, a pop-up window will appear asking you to allow Kore.ai to access your Zendesk account. Click on <strong>Allow</strong>.</li>
 <li>Once the integration is created successfully, you’ll be redirected to the Kore.ai XO Platform to complete the channel enablement process.</li>
@@ -9131,29 +9146,72 @@
 <h2 id="switchboard-integration-for-agent-handoff">Switchboard Integration for Agent Handoff<a class="headerlink" href="#switchboard-integration-for-agent-handoff" title="Permanent link">&para;</a></h2>
 <p>The Kore.ai XO Platform lets you hand off the conversation to your Zendesk agents via <strong>Zendesk Switchboard</strong> using the <strong>Agent Transfer</strong> node.</p>
 <p>The <strong>Switchboard Integration API</strong> is used to route the user’s conversations from Zendesk to the XO platform. This API has a pass control system to decide whether the conversation is to be routed to a Bot or a live agent.</p>
-<p>The <strong>Pass Control</strong> action is triggered when the conversation is switched to the Bot and also when the conversation is switched to the agent helpdesk. This action lets developers define custom metadata to be sent with the existing metadata from the XO Platform to Zendesk when the conversation session is closed.</p>
-<p>To enable the Agent Handoff, follow the steps below:</p>
-<ol>
-<li>Switch on the <strong>Enable Agent Handoff</strong> option under <strong>Configurations</strong> in the <strong>Sunshine Conversations</strong> panel.</li>
-<li>From the <a href="https://support.zendesk.com/hc/en-us/articles/4581766374554#topic_hfg_dyz_1hb">Zendesk Admin Center,</a> navigate to <strong>Apps &amp; Integrations</strong> and click the <strong>Conversations API</strong> menu option to get your <strong>API Key</strong> and <strong>API Secret</strong>. Please get in touch with your Zendesk sales representative if you don’t see this menu.</li>
-<li>Paste these values in their respective fields on the Kore.ai platform under <strong>Sunshine Conversations</strong> &gt; <strong>Configurations</strong> &gt; <strong>OAuth</strong> &gt; <strong>Enable Agent Handoff</strong> section.</li>
-<li>Provide the <strong>Key</strong> and <strong>Value</strong> inputs in the text fields for <strong>SessionClosure Metadata</strong> to define your custom metadata. This key-value pair is captured in the switchboard integration API and sent to Zendesk when the conversation session closes.</li>
-<li>Click <strong>Save</strong> to enable the Channel and Agent Handoff.
-<a class="glightbox" href="../images/Sunshine-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Sunshine-2.png" alt="Save Sunshine Channel" title="Save Sunshine Channel" style="border: 1px solid gray; zoom:70%;"></a></li>
-</ol>
+<p>The <strong>Pass Control</strong> action is triggered as a part of the event where the conversation is switched to the Bot or the agent helpdesk, and also during conversation closure. </p>
+<p>Developers can define custom metadata to be sent with the existing metadata from the XO Platform to Zendesk. The additional metadata can also be used to create a Zendesk ticket.</p>
+<p><strong>Capturing the Session Closure Metadata</strong></p>
+<p>The Zendesk Sunshine Configuration flow lets you enable the <strong>Session Closure Metadata</strong> field to let Kore.ai capture the metadata and share it with Zendesk as part of the pass control event triggered when the conversation is transferred to the agent’s helpdesk, or when closing a conversation session. The metadata is captured using the <strong>key-value</strong> pair you provide during the configuration. </p>
+<p>However, providing the key and value inputs when you enable <strong>Session Closure Metadata</strong> is <strong>optional</strong>. </p>
+<p>For example: When you provide <code>SessionKey</code> as <strong>key</strong> and <code>apikeyvalue</code> as <strong>value</strong>, Kore.ai generates the field variable <code>SessionKey.apikeyvalue</code> to fetch the <em>session API key</em> and pass it to Zendesk as metadata.</p>
 <p><strong>Important Information on Session Closure Metadata</strong></p>
 <ul>
-<li>The Platform captures and stores the metadata sent as part of the pass control action when the conversation is routed to the virtual assistant.</li>
-<li>The Platform introduces the <a href="https://developer.kore.ai/docs/bots/advanced-topics/koreutil-libraries/#koreUtilgetSunshineConversationsMetadata">KoreUtil.getSunshineConversationsMetadata() </a>function to let a Bot developer fetch the stored metadata (Get API operation), and use it for the following:<ul>
+<li>The Platform does not trigger the session closure message when the Agent transfer is initiated, and the conversation is not handed over back to the platform again.</li>
+<li>When the Conversation is handed over to the Platform after the agent transfer, the session closure functionality works as usual.</li>
+<li>For all the new bots or existing bots that do not have at least one <strong>SessionClosure</strong> metadata tag, the <strong>SessionClosure</strong> switch is turned off by default.</li>
+<li>For all the existing bots that have at least one <strong>SessionClosure</strong> metadata tag, the switch is turned on by default.</li>
+<li>The Platform introduces the<a href="https://developer.kore.ai/docs/bots/advanced-topics/koreutil-libraries/#koreUtilgetSunshineConversationsMetadata"> KoreUtil.getSunshineConversationsMetadata()</a><span style="text-decoration:underline;"> </span>function to let a Bot developer fetch the stored metadata (Get API operation), and use it for the following:<ul>
 <li>Entities where JavaScript is supported like advanced messages for a prompt, script nodes, etc.</li>
 <li>Simple messages like plain text prompts.</li>
 </ul>
 </li>
-<li>The Platform hands over the stored metadata to Zendesk when the conversation is transferred to the agent’s helpdesk and when the conversation session is closed as part of the pass control action.</li>
-<li>The Platform does not trigger the session closure message when the Agent transfer is initiated, and the conversation is not handed over back to the platform again.</li>
-<li>When the Conversation is handed over to the Platform post the agent transfer, the session closure functionality works as usual.</li>
-<li>Any additional changes or updates to the channel configurations should go through the <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/">Bot Publish</a> cycle.</li>
+<li>Any additional changes or updates to the channel configurations should go through the<a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/"> Bot Publish</a> cycle.</li>
 </ul>
+<p><strong>Selecting the Default and Next Integrations for Transferring Control</strong></p>
+<p>When you have a pre-existing switchboard integration, the XO Platform allows you to configure it as the default for the initial pass control during conversation initiation. Alternatively, you can select the Kore switchboard integration to designate the pass control.</p>
+<p>You can review and edit these Switchboard integrations for newly created or pre-existing channel configurations in the <strong>Switchboard Configuration</strong> window. The Switchboard Configuration includes the <strong>Default Switchboard Integration</strong> for initiating conversations and the <strong>Next Switchboard Integration</strong> to transfer control after conversation session closure and the completion of agent conversations.</p>
+<h3 id="steps-to-set-up-agent-handoff">Steps to Set up Agent Handoff<a class="headerlink" href="#steps-to-set-up-agent-handoff" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Enable the <strong>Enable Agent Handoff</strong> option under <strong>Configurations</strong> in the <strong>Sunshine Conversations</strong> panel.</li>
+<li>From the<a href="https://support.zendesk.com/hc/en-us/articles/4581766374554#topic_hfg_dyz_1hb"> Zendesk Admin Center,</a> navigate to <strong>Apps &amp; Integrations</strong> and click the <strong>Conversations API</strong> menu option to get your <strong>API Key</strong> and <strong>API Secret</strong>. Please get in touch with your Zendesk sales representative if you don’t see this menu.</li>
+<li>
+<p>Paste these values in their respective fields on the Kore.ai platform under <strong>Sunshine Conversations</strong> &gt; <strong>Configurations</strong> &gt; <strong>OAuth</strong> &gt; <strong>Enable Agent Handoff</strong> section. 
+    <a class="glightbox" href="../images/sunshine-%281%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/sunshine-%281%29.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Click <strong>Configure</strong> for Switchboard Integration to set up the integrations available in your Sunshine Conversations account app. 
+    <a class="glightbox" href="../images/sunshine-%285%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/sunshine-%285%29.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Select the required option for the following integrations in the <strong>Switchboard Configuration</strong> window:</p>
+<ol>
+<li><strong>Default Switchboard Integration</strong>: Select the primary contact point for users in your Sunshine Conversations application.</li>
+<li><strong>Next Switchboard Integration to Kore.ai</strong>: Select the next switchboard integration to which the control of a VA conversation is passed from Kore.ai.</li>
+<li>
+<p>**Next Switchboard Integration to Agen**t: Select the next switchboard integration to which control is transferred after an agent conversation with a user. </p>
+<p><a class="glightbox" href="../images/sunshine-%283%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/sunshine-%283%29.png" title="image_tooltip" /></a>
+The options listed include the default mapped integrations and others available in your Sunshine Developer account.
+6. After selecting the above fields, click <strong>Done</strong>.
+7. On the <strong>Zendesk Sunshine Configurations</strong> window, follow either step below to set <strong>Session Closure Metadata</strong>:
+    * Disable the toggle switch if you don’t want the Platform to pass the session metadata to Zendesk. </p>
+<p><a class="glightbox" href="../images/sunshine-%284%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/sunshine-%284%29.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Enable <strong>SessionClosure Metadata</strong>, and do one of the following:</p>
+<ul>
+<li>
+<p>Provide at least one <strong>Key</strong> and <strong>Value</strong> input (optional) to allow Kore.ai to capture the session metadata using the switchboard integration API and share it with Zendesk. Adding these parameters and saving the configuration will create a Zendesk ticket with the conversation details and close it.
+<a class="glightbox" href="../images/sunshine-%282%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/sunshine-%282%29.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Skip the <strong>Key-Value</strong> input and move to the next step. Not adding these parameters will create a Zendesk ticket with the conversation details but not close it.</p>
+</li>
+<li>Select <strong><em>Yes</em></strong> for <strong>Enable Channel</strong>.</li>
+<li>Click <strong>Save</strong>.
+    <a class="glightbox" href="../images/sunshine-%286%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/sunshine-%286%29.png" title="image_tooltip" /></a></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
 
 
   
