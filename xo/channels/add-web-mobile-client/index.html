@@ -9134,7 +9134,7 @@ This topic describes how to register your application and generate credentials f
 <p>To create your own app, follow these steps:</p>
 <ol>
 <li>Open the bot on which you want to add the Web/Mobile Client channel.</li>
-<li>On the bots menu, click <strong>Channel &gt; Web/Mobile</strong> <strong>Client</strong>.</li>
+<li>On the bots menu, click <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Web/Mobile</strong> <strong>Client</strong>.</li>
 <li>In the <strong>Select App</strong> drop-down list, select your existing app registration or click <strong>Add App</strong> to create a new app.
 <a class="glightbox" href="../images/Web_Mobile.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile.png" alt="Web Mobile Client channel" title="Web Mobile client channel" style="border: 1px solid gray; zoom:70%;"></a></li>
 <li>In the <strong>Name</strong> field, enter the name for the app registration used in Bot Builder. For example, <strong>weather app</strong>.</li>
@@ -9143,9 +9143,9 @@ This topic describes how to register your application and generate credentials f
 <li><strong>Auto register new users on Kore.ai Bots Platform</strong>: Select to control the auto-user registration in Kore.ai if the user assertion is unknown.</li>
 </ul>
 </li>
-<li>In the <strong>JWT Signing</strong> <strong>Algorithms Used For Client App Authentication</strong> drop-down list, select one of the following security algorithms:<ul>
-<li><strong>RS256/RS512: **Select to enable the **Public Key.</strong> <em>The Private key, used for encryption, is provided by the user, and the Public key, used for decryption, is provided by the Platform</em>. Both the keys have to be used for generating the token. The Public Key is used by the XO Platform to authenticate the client application.</li>
-<li><strong>HS256/HS512:</strong> Select to generate a <strong>Secret Key **and a **Client ID</strong>. The <strong>Client ID</strong> is required for app initialization, and the <strong>Secret Key</strong> is used by the XO Platform to authenticate the client application.</li>
+<li>In the <strong>JWT Signing Algorithms Used For Client App Authentication</strong> drop-down list, select one of the following security algorithms:<ul>
+<li><strong>RS256/RS512</strong>: Select to enable the <strong>Public Key.</strong> <em>The Private key, used for encryption, is provided by the user, and the Public key, used for decryption, is provided by the Platform</em>. Both the keys have to be used for generating the token. The Public Key is used by the XO Platform to authenticate the client application.</li>
+<li><strong>HS256/HS512</strong>: Select to generate a <strong>Secret Key</strong> and a <strong>Client ID</strong>. The <strong>Client ID</strong> is required for app initialization, and the <strong>Secret Key</strong> is used by the XO Platform to authenticate the client application.</li>
 </ul>
 </li>
 <li>(Optional) In the <strong>Push Notifications</strong> section, click <strong>Enable</strong> and then specify a URL to send the notifications.
@@ -9154,20 +9154,22 @@ This topic describes how to register your application and generate credentials f
 <p>When you Enable the Push Notifications, you can select one of the following options to manage the notifications:</p>
 <ul>
 <li><strong>All Messages</strong> – Sends push notifications for all conversation messages to the client app.</li>
-<li><strong>Message Delivery Failures</strong> – Sends push notifications for failure scenarios such as WebSocket Disconnected, App is Killed, and Message Delivery Failure.</li>
+<li><strong>Message Delivery Failures</strong> – Sends push notifications for failure scenarios such as WebSocket Disconnected, App is Killed, and Message Delivery Failure.
+<a class="glightbox" href="../images/Web_Mobile2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile2.png" alt="Web Message Delivery configuration" title="Web Message Delivery configuration" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ul>
-<p><a class="glightbox" href="../images/Web_Mobile2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile2.png" alt="Web Message Delivery configuration" title="Web Message Delivery configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
 <p>To customize the display messages for the push notifications messages sent to the client app, select one of the following options:</p>
 <ul>
 <li><strong>Send Original Messages</strong> – Sends the actual conversation message as part of the push notification.</li>
-<li><strong>Show a standard message from standard responses</strong> – Sends a generic message instead of the original message.</li>
-</ul>
-<p><a class="glightbox" href="../images/Web_Mobile2_New.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile2_New.png" alt="Web Push Notifications   configuration" title="Web Push Notifications configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ul>
-<li>Click <strong>Manage Responses</strong> to add custom messages in the push notification. To learn more about adding responses, see <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-standard-responses/">Default Standard Responses</a> and <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-dialog/">Default Conversations</a>.
-<a class="glightbox" href="../images/Web_Mobile3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile3.png" alt="manage responses" title="manage responses" style="border: 1px solid gray; zoom:70%;"></a></li>
+<li>
+<p><strong>Show a standard message from standard responses</strong> – Sends a generic message instead of the original message.
+<a class="glightbox" href="../images/Web_Mobile2_New.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile2_New.png" alt="Web Push Notifications   configuration" title="Web Push Notifications configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click <strong>Manage Responses</strong> to add custom messages in the push notification. To learn more about adding responses, see <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-standard-responses/">Default Standard Responses</a> and <a href="https://developer.kore.ai/docs/bots/bot-intelligence/default-dialog/">Default Conversations</a>.
+<a class="glightbox" href="../images/Web_Mobile3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile3.png" alt="manage responses" title="manage responses" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
 <li>Click <strong>Save</strong> and then <strong>Create</strong>. The app registration details appear.
  <a class="glightbox" href="../images/Web_Mobile4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile4.png" alt="create web app" title="create web app" style="border: 1px solid gray; zoom:70%;"></a></li>
 <li>To copy the app registration details to the clipboard for your application, you can click <strong>Copy</strong> for <strong>Bot Name</strong>, <strong>Bot ID</strong>, and <strong>Client ID</strong>. For <strong>Client Secret</strong>, click <strong>View</strong>, and then click <strong>Copy</strong>.</li>
@@ -9194,11 +9196,11 @@ This topic describes how to register your application and generate credentials f
 </ul>
 <p>To choose deployment options, follow these steps:</p>
 <ol>
-<li>In the **Web Client Details **section, copy the URL to share this URL with users to interact with your virtual assistant.
+<li>In the <strong>Web Client Details</strong> section, copy the URL to share this URL with users to interact with your virtual assistant.
 <a class="glightbox" href="../images/Web_Mobile5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile5.png" alt="Web Client details" title="Web Client details" style="border: 1px solid gray; zoom:70%;"></a></li>
 <li>In the <strong>Embed Code</strong> section, copy the code to embed this Channel in your application pages where you want to display this virtual assistant widget.
  <a class="glightbox" href="../images/Web_Mobile6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile6.png" alt="embed code" title="embed code" style="border: 1px solid gray; zoom:70%;"></a></li>
-<li>In the <strong>Whitelist Domains</strong> section, click **+Add Domain **to add URLs which want to include in the whitelist for your assistant.</li>
+<li>In the <strong>Whitelist Domains</strong> section, click <strong>+Add Domain</strong> to add URLs which want to include in the whitelist for your assistant.</li>
 <li>Click the <strong>Download SDK</strong> link to download, setup and configure the Web/Mobile SDK using the prebuilt SDK libraries.</li>
 <li>Select an appropriate option to Allow Alert Task setup. You can choose either <strong>Yes</strong> or <strong>No</strong> to let users to set up Alerts using Web Client.</li>
 <li>Click <strong>Save</strong> to save the settings and close the Web/Mobile Client Channel page.
@@ -9208,9 +9210,7 @@ This topic describes how to register your application and generate credentials f
 <p>To edit the Web/Mobile Client channel, follow the below steps:</p>
 <ol>
 <li>
-<p>Hover over the channel to modify, and then click the <strong>Settings</strong>.
-<a class="glightbox" href="../images/Web_Mobile8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile8.png" alt="modify configuration" title="modify configuration" style="border: 1px solid gray;"></a>
-icon displayed to view the command menu, as shown in the screenshot below.
+<p>Hover over the channel to modify, and then click the <strong>Settings</strong> icon displayed to view the command menu, as shown in the screenshot below.
 <a class="glightbox" href="../images/Web_Mobile9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Web_Mobile9.png" alt="whitelist domains" title="whitelist domains" style="border: 1px solid gray;"></a></p>
 </li>
 <li>

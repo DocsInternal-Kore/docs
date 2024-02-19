@@ -9471,7 +9471,10 @@
 <p>The Webhook Channel will continue to be available under the ‘Available Channels’ list, and you can choose to create additional instances. Each Webhook channel instances is presented as an independent channel to define messages, prompts, filters, etc., across the application.</p>
 <h2 id="webhook-versions">Webhook Versions<a class="headerlink" href="#webhook-versions" title="Permanent link">&para;</a></h2>
 <p>The platform supports two versions of the Webhook channel i.e., V1.0 and V2.0.</p>
-<p><strong>Note</strong>: V2.0 is the recommended version as it provides a scalable request and response format.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>V2.0 is the recommended version as it provides a scalable request and response format.</p>
+</div>
 <p>Here are the key differences:</p>
 <table>
   <tr>
@@ -9511,15 +9514,22 @@
 <h2 id="integration-mode">Integration Mode<a class="headerlink" href="#integration-mode" title="Permanent link">&para;</a></h2>
 <p>The platform supports Synchronous and Asynchronous modes of integrations for the Webhook channel. Here are the key differences:</p>
 <ul>
-<li><strong>Synchronous Mode</strong>: The bot responses are directly delivered as a response to the incoming requests. The bot will execute the flow, identify the response or responses to be delivered, and provide them as the response to the incoming request. Some platform functionalities like Alert Tasks, Agent Transfer, and Proactive Session Closure messages are not supported in the Synchronous mode. You may consider using the onAlert event through BotKit, <a href="https://developer.kore.ai/docs/bots/sdks/sdk-events/#OnAlert">Learn more</a>. \
-<strong>Note</strong>: Synchronous Webhook channel requests timeout after 15 seconds. We recommend using the Asynchronous Webhook Channel if you expect the requests to take beyond 15 seconds.</li>
-<li><strong>Asynchronous Mode</strong>: Asynchronous mode is useful if you want to deliver the bot responses to a URL other than the incoming request’s URL. You have to configure the POST_URL of your external system to enable the Async mode. The bot responses are asynchronously delivered to this POST_URL. Do note the that Kore.ai XO Platform does not provide the service to host the POST URL. You need to host a custom service or use a third-party service for this.</li>
+<li>
+<p><strong>Synchronous Mode</strong>: The bot responses are directly delivered as a response to the incoming requests. The bot will execute the flow, identify the response or responses to be delivered, and provide them as the response to the incoming request. Some platform functionalities like Alert Tasks, Agent Transfer, and Proactive Session Closure messages are not supported in the Synchronous mode. You may consider using the onAlert event through BotKit, <a href="https://developer.kore.ai/docs/bots/sdks/sdk-events/#OnAlert">Learn more</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Synchronous Webhook channel requests timeout after 15 seconds. We recommend using the Asynchronous Webhook Channel if you expect the requests to take beyond 15 seconds.</p>
+</div>
+</li>
+<li>
+<p><strong>Asynchronous Mode</strong>: Asynchronous mode is useful if you want to deliver the bot responses to a URL other than the incoming request’s URL. You have to configure the POST_URL of your external system to enable the Async mode. The bot responses are asynchronously delivered to this POST_URL. Do note the that Kore.ai XO Platform does not provide the service to host the POST URL. You need to host a custom service or use a third-party service for this.</p>
+</li>
 </ul>
 <h2 id="step-1-associate-an-app">Step 1: Associate an App<a class="headerlink" href="#step-1-associate-an-app" title="Permanent link">&para;</a></h2>
 <p>To associate an App, follow the below steps:</p>
 <ol>
 <li>In the XO Platform, select the assistant to which you want to add the channel.</li>
-<li>Go to <strong>Deploy &gt; Channels &gt; Webhook</strong>.</li>
+<li>Go to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Webhook</strong>.</li>
 <li>Go to the <strong>Configurations</strong> tab of this page and associate this channel with an app.</li>
 <li>Enter a <strong>Name</strong> for the channel.<ol>
 <li>Select one of these scopes for the app:<ol>
@@ -9528,30 +9538,34 @@
 </ol>
 </li>
 <li>In the JWT Signing Algorithms Used For Client App Authentication drop-down list, select one of the following security algorithms:<ol>
-<li><strong>RS256/RS512: **Select to enable the **Public Key.</strong> <em>The Private key, used for encryption, is provided by the user, and the Public key, used for decryption, is provided by the Platform</em>. Both the keys have to be used for generating the token. The Public Key is used by the XO Platform to authenticate the client application.</li>
-<li><strong>HS256/HS512:</strong> Select to generate a <strong>Secret Key **and a **Client ID</strong>. The <strong>Client ID</strong> is required for app initialization, and the <strong>Secret Key</strong> is used by the XO Platform to authenticate the client application</li>
+<li><strong>RS256/RS512</strong>: Select to enable the <strong>Public Key.</strong> <em>The Private key, used for encryption, is provided by the user, and the Public key, used for decryption, is provided by the Platform</em>. Both the keys have to be used for generating the token. The Public Key is used by the XO Platform to authenticate the client application.</li>
+<li><strong>HS256/HS512</strong>: Select to generate a <strong>Secret Key</strong> and a <strong>Client ID</strong>. The <strong>Client ID</strong> is required for app initialization, and the <strong>Secret Key</strong> is used by the XO Platform to authenticate the client application</li>
 </ol>
 </li>
-<li>Click Create. The app is created, and Client ID and Client Secret are generated. Copy the Client ID and Client Secret details</li>
+<li>Click <strong>Create</strong>. The app is created, and Client ID and Client Secret are generated. Copy the Client ID and Client Secret details</li>
 </ol>
 </li>
 <li>If you want to use the JSON Web Encryption (JWE) standard, you can view the <em>Public Key</em> by clicking the link provided below the <em>Client Secret</em> field.</li>
 <li>The Webhook channel supports both <strong>synchronous</strong> and <strong>asynchronous</strong> modes. Depending on your business needs, you can enable one of these modes in the <strong>Configurations</strong> tab.</li>
 <li>
-<p>(Only for Webhook v2.0) In the **Synchronous **mode, by default, the **Enable the Polling for Webhook v2 **option is selected.
+<p>(Only for Webhook v2.0) In the <strong>Synchronous</strong> mode, by default, the <strong>Enable the Polling for Webhook v2</strong> option is selected.
 <a class="glightbox" href="../images/webhook.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/webhook.jpg" alt="webhook channel" title="webhook channel" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Deselect the <strong>Enable the Polling in Webhook V2</strong> option to retrieve the complete response, all at once, without the need for polling. \
-<strong>Note</strong>: This option is available only in Webhook v2.0. <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-webhook-channel/#Webhook_V20">Learn more</a>.</p>
-</li>
+<p>Deselect the <strong>Enable the Polling in Webhook V2</strong> option to retrieve the complete response, all at once, without the need for polling.
+    !!! note</p>
+<div class="language-text highlight"><pre><span></span><code>This option is available only in Webhook v2.0. [Learn more](https://developer.kore.ai/docs/bots/channel-enablement/adding-webhook-channel/#Webhook_V20).
+</code></pre></div>
+<ol>
 <li>Select <strong>Yes **to</strong> Enable Channel**.</li>
-<li><strong>Save</strong> the configuration. The Webhook URL in this channel instance is created dynamically.</li>
+<li><strong>Save</strong> the configuration. The Webhook URL in this channel instance is created dynamically.
+<a class="glightbox" href="../images/webhook1.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/webhook1.jpg" alt="enable webhook channel" title="enable webhook channel" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
-<p><a class="glightbox" href="../images/webhook1.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/webhook1.jpg" alt="enable webhook channel" title="enable webhook channel" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+</ol>
 <h2 id="step-2-select-the-integration-mode">Step 2: Select the Integration Mode<a class="headerlink" href="#step-2-select-the-integration-mode" title="Permanent link">&para;</a></h2>
-<p>Use the <strong>Webhook URL</strong> to establish integration with external communication systems. This URL is available only after enabling the channel.</p>
-<p><a class="glightbox" href="../images/webhook2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/webhook2.png" alt="add webhook URL" title="add webhook URL" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>Use the <strong>Webhook URL</strong> to establish integration with external communication systems. This URL is available only after enabling the channel.
+<a class="glightbox" href="../images/webhook2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/webhook2.png" alt="add webhook URL" title="add webhook URL" style="border: 1px solid gray; zoom:70%;"></a></p>
 <h2 id="step-3-deploy-the-client-sdk-optional">Step 3: Deploy the Client SDK (Optional)<a class="headerlink" href="#step-3-deploy-the-client-sdk-optional" title="Permanent link">&para;</a></h2>
 <p>You may skip this step if you already have a messaging application to integrate with the Webhook channel. Optionally, you can use the Kore.ai Platform’s Web/Mobile <a href="https://github.com/Koredotcom/web-kore-sdk">SDK libraries</a> to integrate with the Webhook channel.  Use V2 of the Webhook APIs with synchronous mode for integrating with the client libraries. You can select the API version by going to the Instructions tab of the Webhook channel and scrolling down to Step 4.</p>
 <p>After completing these steps, a success message appears on the screen, and a channel request is sent to your Administrator for approval.</p>
@@ -9930,7 +9944,10 @@
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  &quot;completedTaskName&quot;: &quot;show balance&quot;
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>}
 </span></code></pre></div>
-<p><strong>Note</strong>: The ‘text’ field can contain a string, object or an array of strings or objects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The ‘text’ field can contain a string, object or an array of strings or objects.</p>
+</div>
 <h3 id="sample-response-for-asynchronous-mode">Sample Response for Asynchronous Mode<a class="headerlink" href="#sample-response-for-asynchronous-mode" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>{
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&quot;to&quot;: &quot;john.doe@kore.com&quot;,
@@ -10005,9 +10022,9 @@
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  }
 </span></code></pre></div>
 <ul>
-<li>If the _userIdentity _is not present in JWT, you can validate the _userIdentity _authentication using the appId and the _from _value will be used to generate the userId in the Kore platform..</li>
-<li>If the _userIdentity _is present in JWT as well as _from _but both are NOT same, then authentication will be failed and throws an error saying that Invalid access token.</li>
-<li>The <em>userIdentity _is present in JWT, and _from</em> is present in the webhook payload, and both <em>userIdentity _and _from</em> are the same, then it will check against the authentication against the appId and proceed further.</li>
+<li>If the <em>userIdentity</em> is not present in JWT, you can validate the <em>userIdentity</em> authentication using the appId and the <em>from</em> value will be used to generate the userId in the Kore platform..</li>
+<li>If the <em>userIdentity</em> is present in JWT as well as <em>from</em> but both are NOT same, then authentication will be failed and throws an error saying that Invalid access token.</li>
+<li>The <em>userIdentity</em> is present in JWT, and <em>from</em> is present in the webhook payload, and both <em>userIdentity</em> and <em>from</em> are the same, then it will check against the authentication against the appId and proceed further.</li>
 </ul>
 <h3 id="request-parameters_1">Request Parameters<a class="headerlink" href="#request-parameters_1" title="Permanent link">&para;</a></h3>
 <p>The following are the parameters required/supported in the v2.0 of the Webhook channel.</p>
@@ -10390,13 +10407,13 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 <h3 id="response_1">Response<a class="headerlink" href="#response_1" title="Permanent link">&para;</a></h3>
 <p>The response contains the following fields:</p>
 <ul>
-<li><em>to</em>– refers to the user to whom the message is delivered to.</li>
-<li>_from _– identity (Stream Id) of the bot from which the response is generated.</li>
-<li>_text _– contains the response(s) from the bot. Can be a string, object or an array of strings or objects.</li>
-<li><em>endOfTask _– indicating whether the task was completed or not, values _true</em> or <em>false</em>.</li>
-<li><em>endReason</em>– the reason for the task completion – <em>fulfilled</em>, <em>interrupted</em>, or <em>canceled</em></li>
-<li><em>completedTaskId</em>– the _id _of the dialog task triggered.</li>
-<li>_completedTaskName _– the name of the dialog task triggered.</li>
+<li><em>to</em> – refers to the user to whom the message is delivered to.</li>
+<li><em>from</em> – identity (Stream Id) of the bot from which the response is generated.</li>
+<li><em>text</em> – contains the response(s) from the bot. Can be a string, object or an array of strings or objects.</li>
+<li><em>endOfTask</em> – indicating whether the task was completed or not, values <em>true</em> or <em>false</em>.</li>
+<li><em>endReason</em> – the reason for the task completion – <em>fulfilled</em>, <em>interrupted</em>, or <em>canceled</em></li>
+<li><em>completedTaskId</em> – the _id _of the dialog task triggered.</li>
+<li><em>completedTaskName</em> – the name of the dialog task triggered.</li>
 </ul>
 <h3 id="change-conversation-language-request">Change Conversation Language Request<a class="headerlink" href="#change-conversation-language-request" title="Permanent link">&para;</a></h3>
 <p>To change the language of an ongoing conversation, you can pass the <code>interactiveLanguage</code> as a parameter with a value (language code) of one of the configured VA languages.</p>
@@ -10534,7 +10551,7 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>}
 </span></code></pre></div>
 <p><strong>Response when polling is disabled</strong></p>
-<p>When you deselect the **Enable the Polling in Webhook V2 **option in the **Configurations **tab, the platform retrieves the complete response, all at once, without the need for polling. <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-webhook-channel/#Step_1_Associate_an_App">Learn more</a>.</p>
+<p>When you deselect the <strong>Enable the Polling in Webhook V2</strong> option in the <strong>Configurations</strong> tab, the platform retrieves the complete response, all at once, without the need for polling. <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-webhook-channel/#Step_1_Associate_an_App">Learn more</a>.</p>
 <p>Sample Response:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>{
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>&quot;data&quot;: [
@@ -10559,7 +10576,7 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>}
 </span></code></pre></div>
 <p><strong>Response as a Request to Post URL</strong></p>
-<p>Then use the _pollId _from the <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/Response/issues/1" title="GitHub Issue: squidfunk/Response #1">Response#1</a> to get the response of the second Message node.</p>
+<p>Then use the <em>pollId</em> from the <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/Response/issues/1" title="GitHub Issue: squidfunk/Response #1">Response#1</a> to get the response of the second Message node.</p>
 <p>Here is the sample curl to use pollId to fetch the response:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>   &quot;data&quot;: [
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>        {
@@ -10636,7 +10653,7 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>}
 </span></code></pre></div>
 <h3 id="sample-response-for-asynchronous-mode_1">Sample Response for Asynchronous Mode<a class="headerlink" href="#sample-response-for-asynchronous-mode_1" title="Permanent link">&para;</a></h3>
-<p>The POST_URL is the customer’s own asynchronous URL to send and receive requests. Kore.ai does not provide any POST _URL for Asynchronous setup because this URL is different from customer to customer.</p>
+<p>The POST_URL is the customer’s own asynchronous URL to send and receive requests. Kore.ai does not provide any POST_URL for Asynchronous setup because this URL is different from customer to customer.</p>
 <p>The following response is an example for a successful asynchronous call:</p>
 <h4 id="request-acknowledgement">Request Acknowledgement<a class="headerlink" href="#request-acknowledgement" title="Permanent link">&para;</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>{
@@ -10696,7 +10713,7 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span></code></pre></div>
 <p>For parameter descriptions, refer to the <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-webhook-channel/#Request_Parameters">request parameters</a> table.</p>
 <h4 id="type-2-using-fileid-obtained-from-file-upload-api"><strong>Type 2:  Using fileId obtained from <a href="https://developer.kore.ai/docs/bots/api-guide/upload-file-api/">file upload API</a></strong><a class="headerlink" href="#type-2-using-fileid-obtained-from-file-upload-api" title="Permanent link">&para;</a></h4>
-<p>You can upload a file using the **fileId **obtained from file upload API. The following example uses a webhook instance when multiple webhook channels are configured:</p>
+<p>You can upload a file using the <strong>fileId</strong> obtained from file upload API. The following example uses a webhook instance when multiple webhook channels are configured:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>curl -X POST
 </span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>&#39;https://bots.kore.ai/chatbot/v2/webhook/st-4b8ee63f-0bad-xxxx-xxx-a8c4xxxxx086/xxxInstance/ivrInst-c86xxxx54-xxxx-xxxx-9471-dfxxxx37305c&#39; \
 </span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>--header &#39;Authorization: Bearer {{YOUR_JWT_ACCESS_TOKEN}}&#39; \
@@ -10779,7 +10796,10 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>             fileExtension:&quot;&quot;
 </span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>       }
 </span></code></pre></div>
-<p><strong>Note</strong>: You can also use the filename or fileID to upload a file. For example, use this syntax to upload a file with name and ID: <code>{ "fileName": "Kore_ai_Logo%405x.png", "fileType":"image", "fileId": "6163e17bf60e0a7e4799f423" }</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also use the filename or fileID to upload a file. For example, use this syntax to upload a file with name and ID: <code>{ "fileName": "Kore_ai_Logo%405x.png", "fileType":"image", "fileId": "6163e17bf60e0a7e4799f423" }</code>.</p>
+</div>
 <h2 id="handle-digital-forms">Handle Digital Forms<a class="headerlink" href="#handle-digital-forms" title="Permanent link">&para;</a></h2>
 <p>If your bot has a form that needs user input, the synchronous WebHook channel gets the complete form definition in the response, and you need to send the <em>formData</em> in the request when interacting with the bot.</p>
 <h4 id="sample-response">Sample Response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h4>
@@ -10792,8 +10812,8 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>    ..other params if any
 </span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>}
 </span></code></pre></div>
-<p>**FormDef \
-**(This is the complete Form definition which is used to render the Form)</p>
+<p><strong>FormDef</strong> </p>
+<p>(This is the complete Form definition which is used to render the Form)</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>{
 </span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>  &quot;_id&quot;: &quot;&quot;,
 </span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>  &quot;refId&quot;: &quot;&quot;,
@@ -10866,8 +10886,8 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span><span id="__span-30-70"><a id="__codelineno-30-70" name="__codelineno-30-70" href="#__codelineno-30-70"></a>   (... few other fields)
 </span><span id="__span-30-71"><a id="__codelineno-30-71" name="__codelineno-30-71" href="#__codelineno-30-71"></a>}
 </span></code></pre></div>
-<p>**FormInitialization \
-**(This must be used for pre-filling Forms)</p>
+<p><strong>FormInitialization</strong></p>
+<p>(This must be used for pre-filling Forms)</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>{
 </span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>       &quot;valueMap&quot;: {
 </span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>       &quot;TextField0&quot;: &quot;input1&quot;,

@@ -9124,8 +9124,8 @@
 <p>To add the Twilio SMS channel, follow the below steps:</p>
 <ol>
 <li><strong>Setup Account</strong> – Login to Twilio developer portal and set up an account.</li>
-<li><strong>Setup Messaging Service</strong>– In the Programmable Messages section, create a messaging service</li>
-<li><strong>Add Phone Number</strong>– Associate a Twilio Phone Number to your bot.</li>
+<li><strong>Setup Messaging Service</strong> – In the Programmable Messages section, create a messaging service</li>
+<li><strong>Add Phone Number</strong> – Associate a Twilio Phone Number to your bot.</li>
 </ol>
 <h2 id="setup-twilio-developer-account"><strong>Setup Twilio Developer Account</strong><a class="headerlink" href="#setup-twilio-developer-account" title="Permanent link">&para;</a></h2>
 <p>To add the Twilio Channel, follow the below steps:</p>
@@ -9136,33 +9136,39 @@
 <li><a href="https://www.twilio.com/">Login </a>to Twilio developer portal.</li>
 <li>Under the <strong>Settings</strong> section, click the <strong>General</strong> tab.</li>
 <li>Create your API credentials, if you have not already set up your account.</li>
-<li>Copy your <strong>Account SID</strong> and <strong>Auth Token</strong> and enter them in the <strong>Configurations</strong> tab of the Twilio channel page.
-<a class="glightbox" href="../images/twilio.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio.png" alt="Twilio channel" title="Twilio channel" style="border: 1px solid gray; zoom:70%;"></a></li>
-</ol>
-<p><a class="glightbox" href="../images/twilio1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio1.png" alt="Twilio channel configuration" title="Twilio channel configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ol>
-<li>Go to the <strong>Programmable SMS</strong> section from the **All Products &amp; Services **menu.</li>
-<li>Click <strong>Create New Messaging Service</strong> option. Provide a name for your messaging service and select Use Case as <strong>Chat Bot/Interactive 2-way</strong>.</li>
-</ol>
-<p><a class="glightbox" href="../images/twilio2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio2.png" alt="Twilio messaging service" title="Twilio messaging service" style="border: 1px solid gray; zoom:70%;"></a></p>
-<p><a class="glightbox" href="../images/twilio3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio3.png" alt="Twilio programmable sms" title="Twilio programmable sms" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ol>
-<li>After creating the service, make note of the <strong>Service SID</strong> of this service and enter it in the <strong>Configurations</strong> tab of the Twilio SMS channel page.</li>
+<li>
+<p>Copy your <strong>Account SID</strong> and <strong>Auth Token</strong> and enter them in the <strong>Configurations</strong> tab of the Twilio channel page.
+<a class="glightbox" href="../images/twilio.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio.png" alt="Twilio channel" title="Twilio channel" style="border: 1px solid gray; zoom:70%;"></a>
+<a class="glightbox" href="../images/twilio1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio1.png" alt="Twilio channel configuration" title="Twilio channel configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Go to the <strong>Programmable SMS</strong> section from the <strong>All Products &amp; Services</strong> menu.</p>
+</li>
+<li>
+<p>Click <strong>Create New Messaging Service</strong> option. Provide a name for your messaging service and select Use Case as <strong>Chat Bot/Interactive 2-way</strong>.
+<a class="glightbox" href="../images/twilio2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio2.png" alt="Twilio messaging service" title="Twilio messaging service" style="border: 1px solid gray; zoom:70%;"></a>
+<a class="glightbox" href="../images/twilio3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio3.png" alt="Twilio programmable sms" title="Twilio programmable sms" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>After creating the service, make note of the <strong>Service SID</strong> of this service and enter it in the <strong>Configurations</strong> tab of the Twilio SMS channel page.</p>
+</li>
 <li>Under <strong>Inbound Settings</strong> section, select the <strong>Process Inbound Messages</strong> option and update the <strong>Request URL</strong> and <strong>Fallback URL</strong> fields with the information provided in <strong>Configurations</strong> tab of the Twilio SMS channel page.</li>
-<li>Under <strong>Outbound Settings</strong>, update the <strong>Status Callback Request URL</strong> field with the information provided in the <strong>Configurations</strong> tab.</li>
+<li>Under <strong>Outbound Settings</strong>, update the <strong>Status Callback Request URL</strong> field with the information provided in the <strong>Configurations</strong> tab.
+<a class="glightbox" href="../images/twilio4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio4.png" alt="Twilio Inbound Settings" title="Twilio Inbound Settings" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
-<p><a class="glightbox" href="../images/twilio4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio4.png" alt="Twilio Inbound Settings" title="Twilio Inbound Settings" style="border: 1px solid gray; zoom:70%;"></a></p>
-<p>!!! important</p>
+<p>!!! Note</p>
 <div class="language-text highlight"><pre><span></span><code>  The Callback URL now includes the **_streamid_** in the API request to identify the virtual assistant being accessed. When an incoming request is qualified with this identifier, it helps with traceability, troubleshooting, and remediation at the network level during anomalies like malicious calls or unusual bot activity.
 </code></pre></div>
 <ol>
-<li>Under <strong>Copilot Features</strong> section, make sure that <strong>Sticky Sender</strong>, <strong>MMS Converter</strong>, <strong>Scaler</strong>, <strong>Short Code Reroute, **and **Country Code Geomatch</strong> options are enabled.</li>
+<li>Under <strong>Copilot Features</strong> section, make sure that <strong>Sticky Sender</strong>, <strong>MMS Converter</strong>, <strong>Scaler</strong>, <strong>Short Code Reroute, **and</strong> Country Code Geomatch** options are enabled.</li>
 <li><strong>Save</strong> your changes and proceed.</li>
-<li>To add a number, go to the <strong>Numbers</strong> section and associate a Twilio Phone Number to this bot. If you do not have a Twilio Number, you must buy one.</li>
-</ol>
-<p><a class="glightbox" href="../images/twilio5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio5.png" alt="Twilio Phone Number" title="Twilio Phone Number" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ol>
-<li>Go to the <strong>Configurations</strong> tab in the Twilio SMS channel page to review and complete the channel setup.</li>
+<li>
+<p>To add a number, go to the <strong>Numbers</strong> section and associate a Twilio Phone Number to this bot. If you do not have a Twilio Number, you must buy one.
+<a class="glightbox" href="../images/twilio5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio5.png" alt="Twilio Phone Number" title="Twilio Phone Number" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Go to the <strong>Configurations</strong> tab in the Twilio SMS channel page to review and complete the channel setup.</p>
+</li>
 </ol>
 <h2 id="edit-the-twilio-channel"><strong>Edit the Twilio Channel</strong><a class="headerlink" href="#edit-the-twilio-channel" title="Permanent link">&para;</a></h2>
 <p>To edit the Twilio channel, follow the below steps:</p>
@@ -9176,7 +9182,7 @@
 <p>Select one of the following commands to modify the channel:</p>
 </li>
 <li><strong>Disable/Enable</strong><ul>
-<li>Click <strong>Disable</strong> to temporarily disable the use of the Twilio SMS channel for your bot. To enable the use of the Twilio SMS channel, click <strong>Enable.</strong></li>
+<li>Click <strong>Disable</strong> to temporarily disable the use of the Twilio SMS channel for your bot. To enable the use of the Twilio SMS channel, click <strong>Enable</strong>.</li>
 </ul>
 </li>
 <li><strong>Delete</strong><ul>
@@ -9201,11 +9207,13 @@
 <p>Copy the <strong>Account SID</strong> and <strong>Auth Token</strong> and save for configuring the Twilio channel settings in Kore.ai Bot Builder. You also need a telephone number for your end users to send text message interactions to for your bot.</p>
 </li>
 <li>On the <strong>Dashboard</strong> page, you can scroll down and click Numbers. The <strong>Phone Numbers Dashboard</strong> is displayed.</li>
-<li>Click <strong>Numbers</strong> on the left menu to display the** Numbers <strong>page. Click **Buy a number</strong>.</li>
-</ol>
-<p><a class="glightbox" href="../images/twilio8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio8.png" alt="Twilio Phone Number Dashboard" title="Twilio Phone Number Dashboard" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ol>
-<li>On the <strong>Get Started with Phone Numbers</strong> page, click <strong>Get your first Twilio phone number.</strong></li>
+<li>
+<p>Click <strong>Numbers</strong> on the left menu to display the <strong>Numbers</strong> page. Click <strong>Buy a number</strong>.
+<a class="glightbox" href="../images/twilio8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio8.png" alt="Twilio Phone Number Dashboard" title="Twilio Phone Number Dashboard" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>On the <strong>Get Started with Phone Numbers</strong> page, click <strong>Get your first Twilio phone number.</strong></p>
+</li>
 <li>On the corresponding dialog box, you can find the phone number that you must configure the Kore.ai Twilio channel.</li>
 <li>
 <p>Click <strong>Buy This Number</strong> to save the number to your account.
