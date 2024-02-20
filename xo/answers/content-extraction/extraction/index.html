@@ -4805,13 +4805,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-multiple-extraction-strategies" class="md-nav__link">
-    Using Multiple Extraction Strategies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#adding-a-new-strategy" class="md-nav__link">
     Adding a new Strategy
   </a>
@@ -4828,6 +4821,13 @@
         <li class="md-nav__item">
   <a href="#enabling-disabling-a-strategy" class="md-nav__link">
     Enabling/ Disabling a Strategy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-multiple-extraction-strategies" class="md-nav__link">
+    Using Multiple Extraction Strategies
   </a>
   
 </li>
@@ -9154,13 +9154,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-multiple-extraction-strategies" class="md-nav__link">
-    Using Multiple Extraction Strategies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#adding-a-new-strategy" class="md-nav__link">
     Adding a new Strategy
   </a>
@@ -9177,6 +9170,13 @@
         <li class="md-nav__item">
   <a href="#enabling-disabling-a-strategy" class="md-nav__link">
     Enabling/ Disabling a Strategy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-multiple-extraction-strategies" class="md-nav__link">
+    Using Multiple Extraction Strategies
   </a>
   
 </li>
@@ -9201,28 +9201,47 @@
 
 
 <h1 id="content-extraction">Content Extraction<a class="headerlink" href="#content-extraction" title="Permanent link">&para;</a></h1>
-<p>To generate answers using the source data, the ingested data is segmented into smaller segments or chunks to understand better, organize, and efficiently retrieve the most relevant piece of information when required. </p>
-<p>The application supports various chunk-generation strategies. You have the flexibility to select and customize the strategies based on the format and structure of the ingested data or as per the answers required. You can configure multiple strategies to apply to different types of content. </p>
-<p>To add a new strategy or to customize an existing one, go to the <strong>Extraction</strong> page.</p>
-<p><a class="glightbox" href="../images/extraction-home.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Extraction Home" src="../images/extraction-home.png" title="Extraction Home" /></a></p>
-<p>By default, every application has a <strong>Default Strategy</strong> that is configured to perform Text-based Extraction on all types of data from all the sources.</p>
-<h2 id="using-multiple-extraction-strategies">Using Multiple Extraction Strategies<a class="headerlink" href="#using-multiple-extraction-strategies" title="Permanent link">&para;</a></h2>
-<p>When there is more than one strategy, the strategies are applied to the data based on their priority or sequence in the list. For example, if there are two strategies defined - one for the web pages and the other one is the default one that applies to all types of content, the sequence decides the strategy to be used for a given content type. If the default strategy is on the top, it will extract chunks from all the sources and the other strategy will not be used at all. If, on the other hand, the strategy for web pages is on top, it will be applied first and will extract the chunks from the web pages followed by the extraction of chunks from all other sources using the default extraction strategy.  </p>
-<p><add screenshot></p>
+<p>To generate answers using the source data, the ingested data is segmented into smaller segments or chunks to understand better, organize, and efficiently retrieve the most relevant set of data when required. Selecting the most appropriate strategy requires considering several factors, like the type of content, the embedding model to store chunks, the expected length and complexity of user queries and answers, etc.</p>
+<p>The application supports various chunk-generation strategies. You have the flexibility to select and customize the strategies based on the format and structure of the ingested data or as per the answers required. You can configure multiple strategies to apply to different types of content. This improves the precision of answers by aligning the strategy to the document characteristics and gives you flexibility and granular control over the answers generated.  </p>
+<p>To view the strategies defined in an application or to make any changes, go to the <strong>Extraction</strong> page.</p>
+<p><a class="glightbox" href="../../images/extraction-home.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Extraction Strategy" src="../../images/extraction-home.png" title="Extraction Strategy" /></a></p>
+<p>By default, every application has a <strong>Default Strategy</strong> configured to perform Text-based Extraction on all types of data ingested from different sources.</p>
 <h2 id="adding-a-new-strategy">Adding a new Strategy<a class="headerlink" href="#adding-a-new-strategy" title="Permanent link">&para;</a></h2>
-<p>To add a new extraction strategy, click on the <strong>+Add Strategy</strong> button.</p>
-<p><a class="glightbox" href="../images/add-strategy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add a new Strategy" src="../images/add-strategy.png" title="Add a new strategy" /></a>
+<p>To add a new extraction strategy, click on the **+Add Strategy**button.</p>
+<p><a class="glightbox" href="../../images/add-strategy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add a new Strategy" src="../../images/add-strategy.png" title="Add a new Strategy" /></a>
 Enter the following details of the strategy.</p>
-<p><a class="glightbox" href="../images/add-strategy-widget.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add Widget" src="../images/add-strategy-widget.png" title="Add Widget" /></a></p>
-<p><strong>Strategy Name</strong>: Enter a unique name for the strategy for identification. </p>
+<p><a class="glightbox" href="../../images/add-strategy-widget.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Strategy Details" src="../../images/add-strategy-widget.png" title="Strategy Details" /></a></p>
+<p><strong>Strategy Name</strong>: Enter a unique name for the strategy for identification.</p>
 <p><strong>Define Source</strong>: Use the fields here to define the source data on which this strategy is applicable. </p>
 <ul>
 <li><strong>Source Name</strong>: This field allows you to select the data on which the strategy is to be applied. It lists all the data sources configured in the application and the content corresponding to each of them. </li>
-<li><strong>Content Type</strong>: This field allows you to specify the content type within each source of data. </li>
+<li><strong>Content Type</strong>: This field allows you to specify the content type within each data source.</li>
 </ul>
-<p><strong>Define Chunk Strategy:</strong> Use this field to specify the chunk strategy and its configuration for the selected source.  </p>
+<p><strong>Define Chunk Strategy:</strong> Use this field to specify the chunk strategy and its configuration for the selected source.</p>
+<p><strong>Extraction Model:</strong> Select the extraction model from the drop-down menu. The extraction model defines the technique applied to break down large pieces of textual information into manageable chunks. At present, we support the Text Extraction Model, with plans to extend support for multiple models soon.</p>
+<p><strong>Text Extraction Model</strong></p>
+<p>The Text Extraction Model incorporates a fusion of techniques from natural language processing (NLP) and machine learning. It is based on the concept of tokenization, where the text is segmented into smaller units. The model undergoes training to identify and extract most suitable chunks relevant to the search queries.</p>
+<p>Configuration: Use the <strong>chunk size</strong> field to define the size of a single chunk. This field can help optimize the relevance of the content retrieved for answer generation. Choose the value of this field depending on various factors like the structure and type of content, type of expected user queries, type of embedding models used, etc. </p>
+<ul>
+<li>When <strong>Chunk Size</strong> is set to <strong>pages</strong>, every page is treated as a single chunk. </li>
+<li>When <strong>Chunk Size</strong> is set to <strong>Chunk Tokens</strong>, chunks are prepared using the following two parameters:<ul>
+<li><strong>Tokens</strong>: Maximum number of tokens that can be present in a chunk. This field can take a maximum value of 1000. A smaller chunk will result in a larger number of chunks and similarly, a larger chunk will result in a lesser number of chunks. An optimal  </li>
+<li><strong>Chunk Overlap</strong>: Number of tokens that should overlap between two consecutive chunks.</li>
+</ul>
+</li>
+</ul>
+<p>Configure the strategy as per your needs and click the <strong>Save</strong> button. By default, as soon as a strategy is created, it is automatically enabled.</p>
 <h2 id="deleting-a-strategy">Deleting a Strategy<a class="headerlink" href="#deleting-a-strategy" title="Permanent link">&para;</a></h2>
+<p>To delete an existing strategy, go to the corresponding strategy page and click on the **Delete **button. This will not affect the existing chunks.</p>
+<p><a class="glightbox" href="../../images/delete-strategy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Deleting a strategy" src="../../images/delete-strategy.png" title="Deleting a strategy" /></a></p>
 <h2 id="enabling-disabling-a-strategy">Enabling/ Disabling a Strategy<a class="headerlink" href="#enabling-disabling-a-strategy" title="Permanent link">&para;</a></h2>
+<p>You can also temporarily enable or disable a strategy for testing purposes to evaluate alternative extraction strategies or when it is no longer needed. You can do so from the strategy page. </p>
+<p><a class="glightbox" href="../../images/disable-strategy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Disable a strategy" src="../../images/disable-strategy.png" title="Disable a strategy" /></a></p>
+<h2 id="using-multiple-extraction-strategies">Using Multiple Extraction Strategies<a class="headerlink" href="#using-multiple-extraction-strategies" title="Permanent link">&para;</a></h2>
+<p>When there is more than one strategy defined in a given application, the <strong>strategies are applied to the data based on their priority or sequence</strong> in the list. For example, if there are two strategies defined - one for the web pages and the other one is the default one that applies to all types of content, the sequence decides the strategy to be used for a given content type. If the default strategy is on the top, it will extract chunks from all the sources and the other strategy will not be used at all. If, on the other hand, the strategy for web pages is on top, it will be applied first and will extract the chunks from the web pages followed by the extraction of chunks from all other sources using the default extraction strategy.  </p>
+<p><a class="glightbox" href="../../images/multiple-strategies.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Multiple Strategies" src="../../images/multiple-strategies.png" title="Multiple Strategies" /></a></p>
+<p>To <strong>change the sequence</strong> of the strategies, drag and drop the strategy up or down as required.</p>
+<p><a class="glightbox" href="../../images/moving-strategies.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Moving Strategies" src="../../images/moving-strategies.png" title="Moving Strategies" /></a></p>
 
 
   
