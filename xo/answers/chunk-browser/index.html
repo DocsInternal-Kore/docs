@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chunk-browser" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -4833,8 +4833,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#view-chunks" class="md-nav__link">
-    View Chunks
+  <a href="#key-capabilities" class="md-nav__link">
+    Key capabilities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-chunk-details" class="md-nav__link">
+    View Chunk Details
   </a>
   
 </li>
@@ -4842,6 +4849,13 @@
         <li class="md-nav__item">
   <a href="#edit-chunks" class="md-nav__link">
     Edit Chunks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-and-filter-chunks" class="md-nav__link">
+    Search and Filter Chunks
   </a>
   
 </li>
@@ -9140,8 +9154,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#view-chunks" class="md-nav__link">
-    View Chunks
+  <a href="#key-capabilities" class="md-nav__link">
+    Key capabilities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-chunk-details" class="md-nav__link">
+    View Chunk Details
   </a>
   
 </li>
@@ -9149,6 +9170,13 @@
         <li class="md-nav__item">
   <a href="#edit-chunks" class="md-nav__link">
     Edit Chunks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-and-filter-chunks" class="md-nav__link">
+    Search and Filter Chunks
   </a>
   
 </li>
@@ -9172,11 +9200,43 @@
 
 
 
-<h1 id="chunk-browser">Chunk Browser<a class="headerlink" href="#chunk-browser" title="Permanent link">&para;</a></h1>
-<p>The Chunk Browser provides a means for you to observe the extracted chunks from the source data, giving you an insight into the output from the extraction process and enabling you to undertake subsequent actions like editing and rectifying the chunks. This not only allows you to view and verify the extracted chunks but also allows you to edit the chunks enabling you to work with answers in a way that best serves your specific goals and requirements.
-The chunks browser displays chunks from all the content sources using which the data is ingested  into the application.</p>
-<h2 id="view-chunks">View Chunks<a class="headerlink" href="#view-chunks" title="Permanent link">&para;</a></h2>
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>The Chunk Browser provides a means for you to observe the extracted chunks from the source data, giving you an insight into the output from the extraction process and enabling you to undertake subsequent actions like editing and rectifying the chunks. This not only allows you to view and verify the extracted chunks but also allows you to edit the chunks enabling you to work with answers in a way that best serves your specific goals and requirements.</p>
+<h2 id="key-capabilities">Key capabilities<a class="headerlink" href="#key-capabilities" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Observation and Verification: You can use the Chunk Browser to inspect and verify the extracted chunks. This step is crucial for ensuring the correctness of the extraction process, the accuracy of the chunks generated and to ensure that no data is lost during extraction. </li>
+<li>Editing of Chunks: You can edit the chunk information directly within the browser interface. This capability can help you add any missed information, edit inaccurate information, or simply enrich the extracted information.</li>
+</ul>
+<p>To view the chunks, go to the Chunk Browser under the Content tab. The chunks browser displays chunks from all the data ingested into the application. </p>
+<p><a class="glightbox" href="../images/chunk-browser.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View Chunks" src="../images/chunk-browser.png" title="View Chunks" /></a></p>
+<h2 id="view-chunk-details">View Chunk Details<a class="headerlink" href="#view-chunk-details" title="Permanent link">&para;</a></h2>
+<p>To view the details of any chunk, click on the chunk record. The Chunk Viewer displays the summary of the selected chunk. </p>
+<p><a class="glightbox" href="../images/summary-view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Chunk Viewer" src="../images/summary-view.png" title="Chunk Viewer" /></a></p>
+<ul>
+<li><strong>Document Title</strong>: Title of the document/page in the source from where the chunk is extracted.</li>
+<li><strong>Chunk Title</strong>: Title given to the chunk </li>
+<li><strong>Chunk Text</strong>: Content of the chunk</li>
+<li><strong>Chunk ID</strong>: Unique identifier of the chunk.</li>
+<li><strong>Page Number</strong>: Page number in the source file from where the chunk is extracted, if applicable. </li>
+<li><strong>Source Title</strong>: Name of the source of the chunk in the application. </li>
+<li><strong>Source</strong>: The source type of the content like web pages, files or connectors.  </li>
+<li><strong>Extraction Strategy</strong>: Strategy used for extracting the chunk. .</li>
+<li><strong>Edited on:</strong> Date of the last update to the chunk, if applicable.</li>
+<li><strong>Source URL</strong>: URL of the source from where the chunk is extracted, if applicable. </li>
+<li><strong>Page Number</strong>: Page number in the source file from where the chunk is extracted, if applicable. </li>
+</ul>
+<p>The Chunk Viewer also provides the following options:</p>
+<p><strong>View All from Document</strong>: This can be used to see all the chunks from the same source document as the chunk displayed. </p>
+<p><strong>View JSON</strong>: This can be used to view the contents of the chunk in JSON format. It lists all the properties that store information about the chunk.  </p>
+<p><a class="glightbox" href="../images/json-view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Chunk Viewer" src="../images/json-view.png" title="Chunk Viewer" /></a></p>
 <h2 id="edit-chunks">Edit Chunks<a class="headerlink" href="#edit-chunks" title="Permanent link">&para;</a></h2>
+<p>The Chunk Viewer also allows you to edit and update the title and text of the chunk. This gives you the ability to enhance the chunk for effective answers.</p>
+<p><a class="glightbox" href="../images/update-chunk.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Update Chunks" src="../images/update-chunk.png" title="Update Chunks" /></a></p>
+<h2 id="search-and-filter-chunks">Search and Filter Chunks<a class="headerlink" href="#search-and-filter-chunks" title="Permanent link">&para;</a></h2>
+<p>You can also use the chunk browser to search for specific chunks using any of the properties of the chunks like chunkTitle, chunkText, source, etc. Use the <strong>search bar</strong> at the top to search for chunks.</p>
+<p><a class="glightbox" href="../images/search-bar.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Search Chunks" src="../images/search-bar.png" title="Search Chunks" /></a></p>
+<p>The <strong>Filter option</strong> offers you an advanced search capability that you to use to find chunks matching more than one criterion like all the chunks from a given source containing a specific word or phrase.</p>
+<p><a class="glightbox" href="../images/filter-chunks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Filter Chunks" src="../images/filter-chunks.png" title="Filter Chunks" /></a></p>
 
 
   
