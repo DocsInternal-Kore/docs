@@ -12947,14 +12947,30 @@
 <p>If you have your <strong>own account</strong>, you can enable conversations for brands you manage by creating Business Messages agents using Business Communications APIs.</p>
 </li>
 </ul>
-<p>Important Information on Agents and GBM’s Messaging Infrastructure
-* An Agent is a conversational entity that users interact with.
-* You must create one agent for each brand you manage.
-* You can create and manage agents with the Business Communications API.
-* You can control messaging for your agents with the Business Messages API.
-An agent encompasses a brand’s business functions, such as online support, and physical locations (if any).
-* Each message contains the context from which the user initiated the conversation.
-* Your message routing infrastructure can detect if the user viewed a specific business location or looked for general support, and it can route messages to the correct destination.</p>
+<p>Important Information on Agents and GBM’s Messaging Infrastructure</p>
+<ul>
+<li>
+<p>An Agent is a conversational entity that users interact with.</p>
+</li>
+<li>
+<p>You must create one agent for each brand you manage.</p>
+</li>
+<li>
+<p>You can create and manage agents with the Business Communications API.</p>
+</li>
+<li>
+<p>You can control messaging for your agents with the Business Messages API.</p>
+</li>
+</ul>
+<p>An agent encompasses a brand’s business functions, such as online support, and physical locations (if any).</p>
+<ul>
+<li>
+<p>Each message contains the context from which the user initiated the conversation.</p>
+</li>
+<li>
+<p>Your message routing infrastructure can detect if the user viewed a specific business location or looked for general support, and it can route messages to the correct destination.</p>
+</li>
+</ul>
 <p>Customers can send messages to your brand or its locations through these agents.</p>
 <p>With Business Messages, you can place messaging buttons for brands managed by Kore AI within organic Google search results.</p>
 <p><strong>The Messaging Flow</strong></p>
@@ -12980,8 +12996,7 @@ An agent encompasses a brand’s business functions, such as online support, and
 <p>You must create and register a <strong>Google Cloud Platform (GCP)</strong> project to enable the Google Cloud API service for your partner account. <a href="https://cloud.google.com/resource-manager/docs/creating-managing-projects">Learn more</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<div class="language-text highlight"><pre><span></span><code> Please note the project number to register as a partner.
-</code></pre></div>
+<p>Please note the project number to register as a partner.</p>
 </div>
 <h2 id="gbm-channel-enablement-on-the-platform">GBM Channel Enablement on the Platform<a class="headerlink" href="#gbm-channel-enablement-on-the-platform" title="Permanent link">&para;</a></h2>
 <p>To set up the GBM channel on the Kore.ai XO Platform and launch the agent, follow the steps below:</p>
@@ -13008,26 +13023,28 @@ An agent encompasses a brand’s business functions, such as online support, and
 <li><strong>Partner Website</strong>: Your organization’s website.</li>
 <li><strong>Region</strong>: The region you want to host the Business Messages service.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>To launch a production agent with Business Messages, please register with a corporate email, not a personal email.</p>
 </li>
-</ol>
-<p>!!! note "Important"</p>
-<div class="language-text highlight"><pre><span></span><code>  Important: To launch a production agent with Business Messages, please register with a corporate email, not a personal email.
-</code></pre></div>
-<ol>
 <li>
 <p>Review and Accept the <strong>Business Messages Terms of Service</strong>.</p>
 </li>
 <li>
-<p>Click <strong>Create</strong>.</p>
+<p>Click <strong>Create</strong>.
+<a class="glightbox" href="../images/GBM-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-2.png" alt="create business partner" title="create business partner" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 </ol>
-<p><a class="glightbox" href="../images/GBM-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-2.png" alt="create business partner" title="create business partner" style="border: 1px solid gray; zoom:70%;"></a></p>
 <p>You are now registered as a Business Messages partner and have access to the Business Messages and Business Communications APIs. The Business Messages API sends messages to users, while the Business Communications API manages agents.</p>
 <h2 id="step-2-create-an-agent-for-your-account">Step 2: Create an Agent for your Account<a class="headerlink" href="#step-2-create-an-agent-for-your-account" title="Permanent link">&para;</a></h2>
 <p>After you register as a partner, you can enable conversations for brands you manage by creating Business Messages agents for them.</p>
 <p>When creating an agent, you can enable the <strong>Business Messages Helper Bot</strong> that lets you quickly start a conversation with your agent by leveraging the available features and resources. This is especially useful when creating your first agent.</p>
 <p>Also, to create an agent for your GBM Partner account, you must submit information on the brand and the agent on the <strong>Business Communications Developer Console</strong>. </p>
-<p><strong>Important</strong>: To manage multiple brands, you must create an agent for each brand.  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>To manage multiple brands, you must create an agent for each brand.   </p>
 <p><strong>Expectations Before Creating Agents</strong></p>
 <ul>
 <li>Agents should follow the design guidance outlined in<a href="https://developers.google.com/business-communications/business-messages/guides/how-to/design"> Conversation design for Business Messages</a>.</li>
@@ -13044,9 +13061,14 @@ An agent encompasses a brand’s business functions, such as online support, and
 </ol>
 <p><strong>Steps to Create an Agent</strong></p>
 <p>Once you’ve gathered the above information, to create an agent follow the steps below:</p>
-<p><strong>Note</strong>: If you manage multiple brands, repeat the steps to create an agent for each brand.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you manage multiple brands, repeat the steps to create an agent for each brand.</p>
+</div>
 <ol>
-<li>Sign in to your account on the<a href="https://business-communications.cloud.google.com/?utm_source=/business-communications/rcs-business-messaging/guides/get-started/first-agent&amp;utm_medium=devsite&amp;utm_campaign=rcs-business-messaging"> Business Communications Developer Console</a>.</li>
+<li>
+<p>Sign in to your account on the<a href="https://business-communications.cloud.google.com/?utm_source=/business-communications/rcs-business-messaging/guides/get-started/first-agent&amp;utm_medium=devsite&amp;utm_campaign=rcs-business-messaging"> Business Communications Developer Console</a>.</p>
+</li>
 <li>
 <p>Click <strong>Create Agent</strong>.
 <a class="glightbox" href="../images/GBM-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-3.png" alt="create agent" title="create agent" style="border: 1px solid gray; zoom:70%;"></a></p>
@@ -13083,8 +13105,7 @@ An agent encompasses a brand’s business functions, such as online support, and
 <a class="glightbox" href="../images/GBM-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-5.png" alt="configure webhook" title="configure webhook" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Copy the <strong>Webhook URL</strong> from the Kore.ai XO Platform under <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Google Business Messaging</strong> &gt; <strong>Configurations</strong>.
-<a class="glightbox" href="../images/GBM-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-6.png" alt="webhook url" title="webhook url" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>Copy the <strong>Webhook URL</strong> from the Kore.ai XO Platform under <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Google Business Messaging</strong> &gt; <strong>Configurations</strong>.</p>
 </li>
 <li>
 <p>Paste the copied link for the <strong>Webhook endpoint URL</strong> field in the <strong>Configure your webhook</strong> window on the <strong>Business Communications Developer</strong> Console.
@@ -13109,33 +13130,37 @@ An agent encompasses a brand’s business functions, such as online support, and
 <a class="glightbox" href="../images/GBM-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-10.png" alt="create key" title="create key" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Click <strong>Create</strong> on the confirmation window to download the JSON file with the <strong>service account key</strong>.</p>
+<p>Click <strong>Create</strong> on the confirmation window to download the JSON file with the <strong>service account key</strong>.
+<a class="glightbox" href="../images/GBM-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-11.png" alt="service account key" title="service account key" style="border: 1px solid gray; zoom:70%;"></a>
+<a class="glightbox" href="../images/GBM-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-12.png" alt="service key" title="service key" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
-</ol>
-<p><a class="glightbox" href="../images/GBM-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-11.png" alt="service account key" title="service account key" style="border: 1px solid gray; zoom:70%;"></a></p>
-<p><a class="glightbox" href="../images/GBM-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-12.png" alt="service key" title="service key" style="border: 1px solid gray; zoom:70%;"></a></p>
-<ol>
-<li>Rename the downloaded file to <strong><em>rbm-agent-service-account-credentials.json</em></strong>.</li>
-<li>Store the key securely to recover it if required.</li>
+<li>
+<p>Rename the downloaded file to <strong><em>rbm-agent-service-account-credentials.json</em></strong>.</p>
+</li>
+<li>
+<p>Store the key securely to recover it if required.</p>
+</li>
 </ol>
 <h2 id="step-5-configure-the-virtual-assistant-for-the-service-account">Step 5: Configure the Virtual Assistant for the Service Account<a class="headerlink" href="#step-5-configure-the-virtual-assistant-for-the-service-account" title="Permanent link">&para;</a></h2>
 <p>To configure the virtual assistant for the service account on the Kore.ai XO Platform, follow the steps below:</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<div class="language-text highlight"><pre><span></span><code> For the private key, please copy only the key value within the **_BEGIN PRIVATE KEY_** and **_END PRIVATE KEY_** header tags. The XO Platform adds these tags by default.
-</code></pre></div>
+<p>For the private key, please copy only the key value within the <strong><em>BEGIN PRIVATE KEY</em></strong> and <strong><em>END PRIVATE KEY</em></strong> header tags. The XO Platform adds these tags by default.</p>
 </div>
 <ol>
-<li>Copy the <strong><em>client_email</em></strong>, <strong><em>client_id</em></strong>, <strong>client_token (alphanumeric value)</strong>, and <strong><em>private_key</em></strong> values from the downloaded JSON file.</li>
 <li>
-<p>Paste the values in the respective fields under <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Google Business Messaging</strong> &gt; <strong>Configurations</strong>.</p>
-<p><a class="glightbox" href="../images/GBM-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-13.png" alt="private key" title="private key" style="border: 1px solid gray; zoom:70%;"></a></p>
-<p><a class="glightbox" href="../images/GBM-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-14.png" alt="client details" title="client details" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>Copy the <strong><em>client_email</em></strong>, <strong><em>client_id</em></strong>, <strong>client_token (alphanumeric value)</strong>, and <strong><em>private_key</em></strong> values from the downloaded JSON file.</p>
+</li>
+<li>
+<p>Paste the values in the respective fields under <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Google Business Messaging</strong> &gt; <strong>Configurations</strong>.
+<a class="glightbox" href="../images/GBM-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/GBM-14.png" alt="client details" title="client details" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
 <p>Select <strong>Yes</strong> for the <strong>Enable Channel</strong> option.</p>
 </li>
-<li>Click <strong>Save</strong></li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
 </ol>
 <p>After enabling the channel and verifying all the configurations, you can test the new channel integration by publishing your virtual assistant. <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/">Learn more</a>.</p>
 <p>To learn more about working with messaging channels within the Kore.ai XO Platform, please see<a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/"> Channel Enablement.</a></p>

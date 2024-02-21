@@ -12970,7 +12970,7 @@
 </li>
 <li><strong>On the Kore.ai XO Platform</strong><ol>
 <li>On the Kore.ai XO Platform, navigate to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Genesys Cloud CX Messaging</strong>.
-<a class="glightbox" href="../images/genesys_m2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_m2.png" /></a></li>
+<a class="glightbox" href="../images/digital-channels.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/digital-channels.png" /></a></li>
 <li>Copy the <strong>Webhook URL</strong> from the <strong>Configurations</strong> section of the Kore.ai XO Platform for the Genesys Cloud CX Messaging Channel screen.
 <a class="glightbox" href="../images/genesys_m3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_m3.png" /></a></li>
 </ol>
@@ -13024,23 +13024,34 @@
 <p>Select HS256 for JWT Signing Algorithms Used For Client App Authentication.</p>
 </div>
 <h2 id="step-3-create-the-oauth-client-app-on-genesys-developer-console">Step 3: Create the OAuth Client App on Genesys Developer Console<a class="headerlink" href="#step-3-create-the-oauth-client-app-on-genesys-developer-console" title="Permanent link">&para;</a></h2>
-<p>Steps to create an app on the Genesys Developer Console:
-1. Log in to the<a href="https://login.mypurecloud.com/#/authenticate"> Genesys Developer Portal</a>. 
-2. Navigate to <strong>Admin &gt; Integrations &gt; OAuth</strong>.
-3. Click <strong>Add Client</strong> on the OAuth Screen.
-4. Enter the <strong>App Name</strong> and <strong>Description</strong>.
-5. Select the <strong>Grant Types</strong> as <em>Code Authorization</em>.</p>
-<div class="language-text highlight"><pre><span></span><code>![alt_text](images/genesys_chat_create_app.png &quot;image_tooltip&quot;)
-</code></pre></div>
+<p>Steps to create an app on the Genesys Developer Console:</p>
 <ol>
-<li>Copy the <strong>Callback URL</strong> from the <strong>Configurations</strong> tab of the Kore.ai XO Platform for Genesys Cloud CX Messaging channel.
-    <a class="glightbox" href="../images/genesys_chat_create_app2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_chat_create_app2.png" title="image_tooltip" /></a></li>
+<li>
+<p>Log in to the<a href="https://login.mypurecloud.com/#/authenticate"> Genesys Developer Portal</a>.</p>
+</li>
+<li>
+<p>Navigate to <strong>Admin &gt; Integrations &gt; OAuth</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Add Client</strong> on the OAuth Screen.</p>
+</li>
+<li>
+<p>Enter the <strong>App Name</strong> and <strong>Description</strong>.</p>
+</li>
+<li>
+<p>Select the <strong>Grant Types</strong> as <em>Code Authorization</em>.
+    <a class="glightbox" href="../images/genesys_chat_create_app.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_chat_create_app.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>Copy the <strong>Callback URL</strong> from the <strong>Configurations</strong> tab of the Kore.ai XO Platform for Genesys Cloud CX Messaging channel.
+    <a class="glightbox" href="../images/genesys_chat_create_app2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_chat_create_app2.png" title="image_tooltip" /></a></p>
+</li>
 <li>
 <p>In the Genesys Console, go back to the <strong>Integrations &gt; OAuth</strong> page and paste the <strong>Callback URL</strong> that you have copied in the <strong>Authorized redirect URI</strong> field.</p>
 </li>
 <li>
-<p>Add the <em>architect</em>, <em>integrations</em>, and <em>textbot</em> scopes in the <strong>Scopes</strong> field.</p>
-<p><a class="glightbox" href="../images/genesys_chat_bearer1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_chat_bearer1.png" title="image_tooltip" /></a></p>
+<p>Add the <em>architect</em>, <em>integrations</em>, and <em>textbot</em> scopes in the <strong>Scopes</strong> field.
+    <a class="glightbox" href="../images/genesys_chat_bearer1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_chat_bearer1.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>Click <strong>Save</strong> to update the OAuth Client configuration.</p>
@@ -13052,8 +13063,8 @@
 <p>In the Kore.ai XO Platform, return to the <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Genesys Cloud CX Messaging</strong> &gt; <strong>Configurations</strong> tab and paste the <strong>Client ID</strong> and <strong>Client Secret</strong> values.</p>
 </li>
 <li>
-<p>Once you paste all the required credentials, click <strong>Authorize</strong> to validate the authorization.</p>
-<p><a class="glightbox" href="../images/genesys_cloud_cx6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_cloud_cx6.png" title="image_tooltip" /></a></p>
+<p>Once you paste all the required credentials, click <strong>Authorize</strong> to validate the authorization.
+    <a class="glightbox" href="../images/genesys_cloud_cx6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genesys_cloud_cx6.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>If you are still logged into your Genesys Cloud instance, your current credentials are used. Otherwise, a login screen will open. Use valid credentials for the Genesys cloud instance you are configuring.</p>
@@ -13067,8 +13078,9 @@
 <li>Click the <strong>Flows: Inbound Message</strong> tab.</li>
 <li>Click the Add button.</li>
 <li>In the <strong>Create ‘Inbound Message Flow’</strong> window, enter the values for the required fields.</li>
-<li>Click <strong>Create Flow</strong>.
-<a class="glightbox" href="../images/genesys-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-1.png" alt="create flow" title="create flow" style="border: 1px solid gray; zoom:70%;"></a></li>
+<li>
+<p>Click <strong>Create Flow</strong>.</p>
+</li>
 <li>
 <p>After creating the Inbound Message Flow, follow the steps below:</p>
 <ul>
