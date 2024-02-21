@@ -13115,9 +13115,9 @@
 <p><strong>Leveraging Encrypted Environment Variable Values for Additional Modules</strong></p>
 <p>You can use the encrypted environment variable values in the following modules in addition to the other supported modules:</p>
 <ul>
-<li><strong>Channel Configuration</strong>: While configuring channels under <strong>Deploy</strong> &gt; <strong>Channels</strong>, you can use encrypted/regular environment variable values for all the fields including access token, access key, app ID, URLs, etc.</li>
+<li><strong>Channel Configuration</strong>: While configuring channels under <strong>Channels &amp; Flows &gt; Channels</strong>, you can use encrypted/regular environment variable values for all the fields including access token, access key, app ID, URLs, etc.</li>
 <li>
-<p><strong>Languages</strong>: Under <strong>Build</strong> &gt; <strong>Configurations</strong> &gt; <strong>Languages</strong> &gt; <strong>Translation Configurations</strong>, while configuring the translation engine, you can use the regular/encrypted environment variable value (type <code>{{env.environment variable name}}</code>) to set up the encrypted variable name as the access key as follows:</p>
+<p><strong>Languages</strong>: Under <strong>App Settings &gt; Language Management &gt; Translation Configurations</strong>, while configuring the translation engine, you can use the regular/encrypted environment variable value (type <code>{{env.environment variable name}}</code>) to set up the encrypted variable name as the access key as follows:</p>
 <ul>
 <li>
 <p>The <strong>Access Key</strong> field for Google Translator or Microsoft Translator.<br />
@@ -13149,7 +13149,7 @@
 <p>Enabling the <strong>secure variable</strong> setting after defining an Environment (Bot) Variable, encrypts and securely stores credentials set as environment variables. To add a Bot variable, follow the steps below:</p>
 <ol>
 <li>Open the VA for which you want to add the variables.</li>
-<li>Navigate to <strong>Build</strong> &gt; <strong>Configurations</strong> &gt; <strong>Environment Variables</strong> on the left menu for Environment Variables or <strong>Content Variables</strong> to add Content Variables.</li>
+<li>Navigate to <strong>App Settings &gt; Variables</strong> on the left menu, and select <strong>Environment Variables</strong> tab to add Environment variables, or <strong>Content Variables</strong> tab to add Content Variables.</li>
 <li>
 <p>In the <strong>Add Variable</strong> panel, provide the following details:</p>
 <ul>
@@ -13169,12 +13169,12 @@
 <a class="glightbox" href="../images/env-and-content-variables-img5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img5.png" alt="Save the variable" title="Save the variable" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ol>
-<p>The environment variable and its encrypted value appear in the list.<br />
+<p>The variable and its encrypted value appear in the list.<br />
 <a class="glightbox" href="../images/env-and-content-variables-img6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img6.png" alt="Environment variable and its encrypted value appear" title="Environment variable and its encrypted value appear" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <h3 id="entering-language-specific-values">Entering Language-Specific Values<a class="headerlink" href="#entering-language-specific-values" title="Permanent link">&para;</a></h3>
 <p>To add language-specific values for content variables, you first need to switch the bot language. You can switch the language by clicking the name of the currently-enabled language from the top-right corner of the bot’s page and then selecting another language as follows:</p>
 <p><a class="glightbox" href="../images/env-and-content-variables-img7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img7.png" alt="Select language" title="Select language" style="border: 1px solid gray;zoom:50%;"/></a></p>
-<p>After switching the language, go to <strong>Build &gt; Configurations &gt; Content Variables</strong> page and click the <strong>edit</strong> icon next to the relevant variable. Replace the text in the <strong>Value</strong> field in the enabled language.</p>
+<p>After switching the language, go to <strong>App Settings &gt; Variables &gt; Content Variables</strong> page and click the <strong>edit</strong> icon next to the relevant variable. Replace the text in the <strong>Value</strong> field in the enabled language.</p>
 <h3 id="using-environment-variables">Using Environment Variables<a class="headerlink" href="#using-environment-variables" title="Permanent link">&para;</a></h3>
 <p>You can invoke an environment variable in plain text mode (Standard editor) using the following syntax: <code>{{env.variableName}}</code> If you are using it in JavaScript mode, it is <em>env.variableName</em> Here’s an example from a bot that uses two environment variables called <em>botType</em> and <em>parameters</em> to determine different bot environments such as development, testing, and production. The following script node in one of the bot’s tasks captures the <em>base URL</em> of the bot, depending on the current bot environment.</p>
 <p><a class="glightbox" href="../images/env-and-content-variables-img8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img8.png" alt="Script to capture Base URL of bot" title="Script to capture Base URL of bot" style="border: 1px solid gray;zoom:50%;"/></a></p>
@@ -13205,7 +13205,7 @@
 <h3 id="importing-and-exporting">Importing and Exporting<a class="headerlink" href="#importing-and-exporting" title="Permanent link">&para;</a></h3>
 <p>You can import and export bot variables between bots.</p>
 <ol>
-<li>On any of the Bot Variables page accessible from <strong>Build &gt; Configurations -&gt; (Environment/Content) Variables</strong>,</li>
+<li>On any of the Bot Variables page accessible from <strong>App Settings &gt; Variables &gt; (Environment/Content) Variables</strong>,</li>
 <li>Click the <strong>ellipses next to Add Variables</strong></li>
 <li>
 <p><em>To Import</em>: Select <strong>Import</strong> to import variables from a JSON or CSV file</p>
@@ -13216,9 +13216,9 @@
 </ol>
 </li>
 <li>
-<p><em>To Export</em>: From <strong>Export</strong> select the preferred format for the export file:</p>
+<p><em>To Export</em>: Select either <strong>Export CSV</strong> or <strong>Export JSON</strong> as the preferred format for the export file:</p>
 <ol>
-<li>Bot variables are exported in the form of a JSON, CSV file based upon your selection.</li>
+<li>Bot variables are exported in the form of a JSON or CSV file based upon your selection.</li>
 <li>This file includes both environment and content variables.</li>
 </ol>
 </li>
