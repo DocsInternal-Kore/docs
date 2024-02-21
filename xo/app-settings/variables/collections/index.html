@@ -13005,16 +13005,15 @@
 <p>Collections enable you to store multiple value sets for Environment Variables so that you can select the appropriate variable set while promoting the bot definition to a different environment without manual intervention.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>This feature was enabled in v8.1 of the platform and is available only for the &lt;span style=&quot;text-decoration:underline;&quot;&gt;on-prem installation.&lt;/span&gt;
-</code></pre></div>
+<p>This feature was enabled in v8.1 of the platform and is available only for the <span style="text-decoration:underline;">on-prem installation.</span></p>
 </div>
 <p>Environment variables are a primary type of bot variable where you define a key-value pair and use the variable across the bot. As the variables are declared globally, they can be used at any point in the bot configuration. These can be used to manage the bot variables with environment-specific values. For example, you might have <em>authCode</em> for authenticating a service that your bot uses. This authCode may have different values in the <em>test, uat,</em> and <em>prod</em> environments. The bot can be exported and imported based on the environment, and the values need to be modified at one place in the variable configuration file. <a href="../using-bot-variables/#environment-variables" target="_blank">Refer here for more on Bot Variables</a>.</p>
 <p>Using collections, you can define multiple value sets for these variables and designate an active collection for the values to be used while bot execution. Instead of changing the values manually while moving the bot from one environment to another, you can define the values during bot development and set the active collection in different environments to use the appropriate values.</p>
 <h2 id="creation">Creation<a class="headerlink" href="#creation" title="Permanent link">&para;</a></h2>
 <p>Following are the steps in creating Collections</p>
 <ol>
-<li>From the left navigation menu, select <strong>Settings -&gt; Config Settings</strong>.</li>
-<li>Click the <strong>Environment Variables</strong> option.</li>
+<li>From the left navigation menu, select <strong>App Settings &gt; Variables</strong>.</li>
+<li>Click the <strong>Environment Variables</strong> tab.</li>
 <li>
 <p>On the top left click the more/ellipses to access the <strong>Manage Collections</strong>.<br />
 <a class="glightbox" href="../images/collections-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/collections-img1.png" alt="Environment Variables - Manage Collections" title="Environment Variables - Manage Collections" style="border: 1px solid gray;"/></a> </p>
