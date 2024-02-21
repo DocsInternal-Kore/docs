@@ -10113,13 +10113,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#talk-to-bot" class="md-nav__link">
+  <a href="#test" class="md-nav__link">
     <span class="md-ellipsis">
-      Talk to Bot
+      Test
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Talk to Bot">
+    <nav class="md-nav" aria-label="Test">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -12997,13 +12997,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#talk-to-bot" class="md-nav__link">
+  <a href="#test" class="md-nav__link">
     <span class="md-ellipsis">
-      Talk to Bot
+      Test
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Talk to Bot">
+    <nav class="md-nav" aria-label="Test">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -13103,10 +13103,10 @@
 
 <h1 id="test-and-debug">Test and Debug<a class="headerlink" href="#test-and-debug" title="Permanent link">&para;</a></h1>
 <p>The following sections describe how you can test and debug your Virtual Assistant to validate the working of External NLU.</p>
-<h2 id="talk-to-bot">Talk to Bot<a class="headerlink" href="#talk-to-bot" title="Permanent link">&para;</a></h2>
+<h2 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h2>
 <p>After completing the steps in <a href="../external-nlu-adapters/#adapter-configuration" target="_blank">Adapter Configuration</a> and <a href="../dialogflow-engine/#enable-the-dialogflow-api" target="_blank">enabling the API</a>, to check if the intent identification is done by External NLU adapter or not, you can follow these steps:</p>
 <ol>
-<li>Go to your VA and click <strong>Talk to Bot</strong>.</li>
+<li>Go to your VA and click <strong>Test</strong>.</li>
 <li>Enter a user utterance which matches the intent entered in the Dialogflow Essentials page.</li>
 <li>In the <strong>Debug Log</strong> panel of the user conversation, you can see a message that, <strong>intent identified using External NLU is initiated</strong>.<br />
 <a class="glightbox" href="../images/external-nlu-test-and-debug-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img1.png" alt="Debug Log - intent identified using External NLU is initiated" title="Debug Log - intent identified using External NLU is initiated" style="border: 1px solid gray;zoom:50%;"/></a></li>
@@ -13155,8 +13155,7 @@
 <p>For example, irrespective of whether the expected intent is detected by the External NLU or Kore.ai engine, the test result is TP. If the net result is a wrong intent identified, the test result should be FP. In case of no intent detected by any of the engines, it is classified as TN, when no intent was expected but some intent was detected, then it is FN.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>There is no common base to compare the scores of all the engines, hence scores sent by the external NLU are not considered.
-</code></pre></div>
+<p>There is no common base to compare the scores of all the engines, hence scores sent by the external NLU are not considered.</p>
 </div>
 <p>For any intent detected by the external NLU, it should be considered that the thresholds have been met and in the ‘<strong>Matched Intent Score</strong>’ column, this is indicated as <em>ExtNLU (without any score against it)</em> in place of ML, FM, or KG scores. This can be viewed in the downloaded CSV under NLU of Batch Testing. To know more, see <a href="../../../../automation/testing/regression-testing/batch-testing" target="_blank">Batch Testing</a>.</p>
 <p><a class="glightbox" href="../images/external-nlu-test-and-debug-img9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img9.png" alt="ExtNLU Matched intent score" title="ExtNLU Matched intent score" style="border: 1px solid gray;zoom:50%;"/></a></p>
@@ -13165,8 +13164,7 @@
 <p>In Health and Monitoring go to <strong>Test Cases —&gt; Detailed Analysis</strong> to see the Intents and Entities identified by External NLU, without any scores. The Traits engine is not dependent on the external NLU.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>If the external NLU is enabled, some of the recommendations may not be relevant because they are for the Kore.ai NLU engines. The recommendations are displayed based on the training done on the Kore.ai Platform.
-</code></pre></div>
+<p>If the external NLU is enabled, some of the recommendations may not be relevant because they are for the Kore.ai NLU engines. The recommendations are displayed based on the training done on the Kore.ai Platform.</p>
 </div>
 <p><a class="glightbox" href="../images/external-nlu-test-and-debug-img10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/external-nlu-test-and-debug-img10.png" alt="Intents and Entities identified by External NLU" title="Intents and Entities identified by External NLU" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p>For more information, see <a href="../../../../automation/testing/regression-testing/health-and-monitoring/virtual-assistants-health-and-monitoring" target="_blank">Virtual Assistant Health and Monitoring</a>.</p>
@@ -13197,8 +13195,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>Information like the response messages and fulfillment from the external engine is ignored.
-</code></pre></div>
+<p>Information like the response messages and fulfillment from the external engine is ignored.</p>
 </div>
 </li>
 <li>
@@ -13208,8 +13205,7 @@
 <p>If the external NLU API returns an error or the API cannot be reached, a fallback intent gets activated with the standard response as, <em>Error in continuing the conversation due to incorrect bot definition.</em> To know more information, see <a href="../../../../automation/intelligence/conversation-management/default-conversations/#standard-responses" target="_blank">Standard Responses</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>The Intent and entity mapping work based on a case insensitive comparison of the names defined on the two platforms.
-</code></pre></div>
+<p>The Intent and entity mapping work based on a case insensitive comparison of the names defined on the two platforms.</p>
 </div>
 </li>
 <li>
