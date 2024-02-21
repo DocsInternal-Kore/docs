@@ -12976,7 +12976,7 @@
 <li>However, you should configure channel overrides from the XO Platform in the <strong>Voice Call Properties</strong> section for the new channel.</li>
 <li>The channel supports the channel-level Voice Call Properties supported by the <strong>IVR-AudioCodes</strong> channel. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/">Learn more</a>.</li>
 <li>The <em>Telephony Welcome</em> event applies to the channel.</li>
-<li>The system behavior for the End_ of task_ event is the same as that of AudioCodes.</li>
+<li>The system behavior for the <em>End of task</em> event is the same as that of AudioCodes.</li>
 <li>Channel overrides are supported for prompts.</li>
 <li>Node-level (Dialog, FAQ, Standard Responses, Events, etc.) <strong>Voice Call Properties</strong> are supported for the channel.</li>
 </ol>
@@ -12995,13 +12995,15 @@
 </ol>
 <h2 id="configuration-steps">Configuration Steps<a class="headerlink" href="#configuration-steps" title="Permanent link">&para;</a></h2>
 <p>Once you’ve created a SmartAssist app on SmartAssist, follow the steps below to complete the channel configuration:</p>
-<p><strong>Note</strong>: This channel is auto-enabled when you create a new SmartAssist application.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This channel is auto-enabled when you create a new SmartAssist application.</p>
+</div>
 <h3 id="define-the-voice-call-properties">Define the Voice Call Properties<a class="headerlink" href="#define-the-voice-call-properties" title="Permanent link">&para;</a></h3>
 <p>To define the voice call properties specific to the SmartAssist Gateway, follow the steps below:</p>
 <ol>
 <li>
-<p>Navigate to <strong>DEPLOY</strong> &gt; <strong>CHANNELS</strong>, and click <strong>SmartAssist Gateway</strong> under <strong>Voice Channels</strong>.
-<a class="glightbox" href="../images/sa-gateway.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="SmartAssist Gateway" src="../images/sa-gateway.png" title="SmartAssist Gateway" /></a></p>
+<p>Go to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Third Party Voice</strong> &gt; <strong>All</strong> &gt;, and click <strong>SmartAssist Gateway</strong> under <strong>Voice Channels</strong>.</p>
 </li>
 <li>
 <p>Click the <strong>Voice Call Properties</strong> tab in the <strong>SmartAssist Gateway</strong> window. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/">Learn more</a> on <strong>Voice Call Properties</strong>.</p>
@@ -13020,16 +13022,28 @@
 <p>You can also manage this event from the <strong>Natural Language</strong> &gt; <strong>Event Handlers</strong> page.</p>
 </div>
 <ol>
-<li>Select one of the following options:</li>
+<li>
+<p>Select one of the following options:</p>
+<ul>
 <li><strong>Initiate Task</strong>: Initiates the task you select from the list.</li>
 <li><strong>Run Script</strong>: Run the script code you define.</li>
 <li><strong>Show Message</strong>: Displays the response message you define.</li>
-<li>After selecting <strong>Show Message</strong>, click the <strong>+ Add Response</strong> button.
-  <a class="glightbox" href="../images/sa-gateway1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="add response" src="../images/sa-gateway1.png" title="add response" /></a></li>
-<li>Select <strong>SmartAssist Gateway</strong> from the list for <strong>Channel</strong> in the <strong>Add Response</strong> window.</li>
-<li>Add the response text in the input field for <strong>Response</strong>.</li>
-<li>Click <strong>Done</strong>.
- <a class="glightbox" href="../images/sa-gateway2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="add response" src="../images/sa-gateway2.png" title="add response" /></a></li>
+</ul>
+</li>
+<li>
+<p>After selecting <strong>Show Message</strong>, click the <strong>+ Add Response</strong> button.
+  <a class="glightbox" href="../images/sa-gateway1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="add response" src="../images/sa-gateway1.png" title="add response" /></a></p>
+</li>
+<li>
+<p>Select <strong>SmartAssist Gateway</strong> from the list for <strong>Channel</strong> in the <strong>Add Response</strong> window.</p>
+</li>
+<li>
+<p>Add the response text in the input field for <strong>Response</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Done</strong>.
+    <a class="glightbox" href="../images/sa-gateway2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="add response" src="../images/sa-gateway2.png" title="add response" /></a></p>
+</li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -13044,7 +13058,7 @@
 <li>In the <strong>Add Call Control Parameter</strong> window, input the <strong>Parameter name</strong> and <strong>Parameter value</strong>.</li>
 <li>Click <strong>Save</strong>.</li>
 </ol>
-<p>The new <strong>call control parameter</strong> is listed on the <strong>SmartAssist Gateway</strong> window, as shown below. \
+<p>The new <strong>call control parameter</strong> is listed on the <strong>SmartAssist Gateway</strong> window, as shown below. 
  <a class="glightbox" href="../images/sa-gateway3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="call control" src="../images/sa-gateway3.png" title="image_tooltip" /></a></p>
 <h3 id="step-5-define-the-timeout-prompt">Step 5: Define the Timeout Prompt<a class="headerlink" href="#step-5-define-the-timeout-prompt" title="Permanent link">&para;</a></h3>
 <p>To define the prompt played when the user input is not received within the timeout period, follow the steps below:</p>

@@ -13111,11 +13111,8 @@
 <ol>
 <li>Open the VA for which you want to integrate the IVR.</li>
 <li>Go to the <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Third Party Voice</strong> &gt; <strong>All</strong>.</li>
-<li>Locate and click the <strong>IVR</strong> under Voice Channels. 
-  <a class="glightbox" href="../images/IVR-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR deploy" src="../images/IVR-1.png" title="IVR deploy" /></a>
-  <a class="glightbox" href="../images/IVR-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="voice channels" src="../images/IVR-2.png" title="voice channels" /></a>
-  The IVR Panel with <strong>Instructions</strong> is displayed.
-  <a class="glightbox" href="../images/IVR-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR panel" src="../images/IVR-3.png" title="IVR pangel" /></a></li>
+<li>Locate and click the <strong>IVR</strong> under Voice Channels. The IVR Panel with <strong>Instructions</strong> is displayed.
+  <a class="glightbox" href="../images/third-party-voice.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR panel" src="../images/third-party-voice.png" title="IVR panel" /></a></li>
 <li>On the <strong>Configurations</strong> tab, perform the following steps:</li>
 <li>Use <strong>Kore.ai IVR Sandbox</strong> for testing your VA. See <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#ivr-sandbox">Sandbox Configuration </a>for more details.</li>
 <li>Associate an App with the IVR channel, either by creating a new one or selecting an existing one. If you do not have any apps, a message is displayed as shown in the following screenshot.
@@ -13164,7 +13161,7 @@ See <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/vo
 <p>This option was introduced in ver 7.1 of the platform. It is not available for on-prem installation.</p>
 </div>
 <p>Kore.ai XO Platform offers an <strong>IVR Sandbox environment</strong> to instantly launch your VA for interactions over voice calls. This is useful when a working IVR system is not available for testing your VA over a voice channel. IVR Sandbox is an optional integration and it can coexist with your custom IVR integration.</p>
-<p>Enabling this option generates a** Phone Number, Pin, <strong>and **Secret</strong>. To develop and test it with your teams, you can call your VA by using the phone number and PIN allocated for your VA. On receiving the valid Pin and Secret you will be connected with the VA for interactions. See the following steps to understand the Sandbox configuration.</p>
+<p>Enabling this option generates a <strong>Phone Number, Pin</strong>, and <strong>Secret</strong>. To develop and test it with your teams, you can call your VA by using the phone number and PIN allocated for your VA. On receiving the valid Pin and Secret you will be connected with the VA for interactions. See the following steps to understand the Sandbox configuration.</p>
 <ol>
 <li>To enable the Sandbox, select <strong>Enable</strong> for <strong>Kore.ai IVR Sandbox</strong> under the <strong>Configurations</strong> tab.
  <a class="glightbox" href="../images/IVR-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR configuration" src="../images/IVR-9.png" title="IVR configuration" /></a></li>
@@ -13197,109 +13194,112 @@ button, which becomes visible upon hovering over the IVR icon under the <strong>
 <p><strong>Enable IVR Channel and Associate with an APP</strong></p>
 <p>Kore.ai Virtual Assistants require a JWT token to authenticate the incoming requests from IVR. For generating a JWT token, you should associate an app with the VA. You can select any existing Apps available in your Kore.ai account or create a new app.</p>
 <ol>
-<li>Go to <strong>Deploy</strong> &gt; <strong>Channels</strong> in the left navigation panel of the virtual assistant.</li>
+<li>Go to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Third Party Voice</strong> &gt; <strong>All</strong> and click <strong>IVR</strong>.</li>
 <li>
-<p>On the <strong>Channels</strong> page, click <strong>IVR</strong>. The IVR Channel Instructions panel is displayed.
+<p>The IVR Channel Instructions panel is displayed.
  <a class="glightbox" href="../images/IVR-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="deploy channels" src="../images/IVR-17.png" title="deploy channels" /></a></p>
 </li>
 <li>
-<p>The **IVR Voice Sample CURL **request is as follows:
- <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> `curl --location --request POST
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> &#39;{{host}}/ivr/hooks/{{streamId}}?token={{token}}&#39;  
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   --header &#39;Content-Type: application/json&#39;
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   --data-raw &#39;{
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>       &quot;callId&quot;:&quot;98ab21298XXXXX46&quot;,
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>       &quot;message&quot;:&quot;check balance&quot;,
+<p>The <strong>IVR Voice Sample CURL</strong> request is as follows:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  `curl --location --request POST
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  &#39;{{host}}/ivr/hooks/{{streamId}}?token={{token}}&#39;  
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    --header &#39;Content-Type: application/json&#39;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    --data-raw &#39;{
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        &quot;callId&quot;:&quot;98ab21298XXXXX46&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        &quot;message&quot;:&quot;check balance&quot;,
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        &quot;from&quot;:&quot;1402XXX455&quot;,
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        &quot;app_root&quot;:&quot;app.vxml&quot;
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>}&#39;
 </span></code></pre></div>
- The following table provides the descriptions of all the mandatory and optional request parameters:</p>
+    The following table provides the descriptions of all the mandatory and optional request parameters:</p>
+<p><table>
+  <tr>
+  <td>
+    <strong>PARAMETER</strong>
+  </td>
+  <td>
+    <strong>REQUIRED</strong>
+  </td>
+  <td>
+    <strong>DESCRIPTION</strong>
+  </td>
+  </tr>
+  <tr>
+  <td>
+    callId
+  </td>
+  <td>
+    Y
+  </td>
+  <td>
+    Unique Id to identify or create a new user
+  </td>
+  </tr>
+  <tr>
+  <td>
+    message
+  </td>
+  <td>
+    Y
+  </td>
+  <td>
+    Message from User. If the value is empty, then the Welcome message will be triggered.
+  </td>
+  </tr>
+  <tr>
+  <td>
+    from
+  </td>
+  <td>
+    N
+  </td>
+  <td>
+    Created as a secondary user identity
+  </td>
+  </tr>
+  <tr>
+  <td>
+    app_root
+  </td>
+  <td>
+    N
+  </td>
+  <td>
+    Select any document to be the application root document. <strong>Note</strong>: The application root contains the file path, which is an entry point for the application.</p>
+<p></td>
+  </tr>
+<tr>
+ <br />
+<td>
+    token
+   </td></p>
 </li>
 </ol>
-<table>
-  <tr>
-   <td>
-    <strong>PARAMETER</strong>
-   </td>
-   <td>
-    <strong>REQUIRED</strong>
-   </td>
-   <td>
-    <strong>DESCRIPTION</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    callId
-   </td>
-   <td>
-    Y
-   </td>
-   <td>
-    Unique Id to identify or create a new user
-   </td>
-  </tr>
-  <tr>
-   <td>
-    message
-   </td>
-   <td>
-    Y
-   </td>
-   <td>
-    Message from User. If the value is empty, then the Welcome message will be triggered.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    from
-   </td>
-   <td>
+<td>
     N
    </td>
-   <td>
-    Created as a secondary user identity
-   </td>
-  </tr>
-  <tr>
-   <td>
-    app_root
-   </td>
-   <td>
-    N
-   </td>
-   <td>
-    Select any document to be the application root document
-
-**Note**: The application root contains the file path, which is an entry point for the application.
-
-
-   </td>
-  </tr>
-  <tr>
-   <td>
-    token
-   </td>
-   <td>
-    N
-   </td>
-   <td>
+<td>
     The JWT token can be passed in the body if it is not provided as a query parameter.
    </td>
-  </tr>
-</table>
-
+<div class="language-text highlight"><pre><span></span><code>  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre></div>
 <ol>
-<li>Click the <strong>Configurations</strong> tab.</li>
-</ol>
-<p><a class="glightbox" href="../images/IVR-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="configurations" src="../images/IVR-18.png" title="configurations" /></a>
-5. From the <strong>Select App</strong> drop-down list, select an existing App or create a new app. See <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#Configure_IVR_Settings">Configure IVR Settings</a> to know more.</p>
-<ol>
-<li>Copy the following values:</li>
+<li>
+<p>Click the <strong>Configurations</strong> tab.
+  <a class="glightbox" href="../images/IVR-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="configurations" src="../images/IVR-18.png" title="configurations" /></a></p>
+</li>
+<li>
+<p>From the <strong>Select App</strong> drop-down list, select an existing App or create a new app. See <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#Configure_IVR_Settings">Configure IVR Settings</a> to know more.</p>
+</li>
+<li>
+<p>Copy the following values:</p>
+<ul>
 <li><strong>WebHook URL</strong>: For calling the VA from IVR.</li>
 <li><strong>Client Secret</strong>: To generate a JWT token that must be appended to the WebHook URL.
-   <a class="glightbox" href="../images/IVR-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="webhook url" src="../images/IVR-19.png" title="webhook url" /></a></li>
+<a class="glightbox" href="../images/IVR-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="webhook url" src="../images/IVR-19.png" title="webhook url" /></a></li>
+</ul>
+</li>
 <li>Select <strong>Yes</strong> for Enable Channel.</li>
 </ol>
 <div class="admonition note">
@@ -13351,13 +13351,20 @@ The ASR metadata is extracted in the response using the following syntax:</li>
 </ol>
 <p><code>print(JSON.stringify(context.session.BotUserSession.lastMessage.asrMetaData))</code>
   <a class="glightbox" href="../images/IVR-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="messages " src="../images/IVR-23.png" title="messages" /></a></p>
-<p>In this example, based on the <strong>ASR Confidence</strong> value extracted from the user input, we define the connection rules for the dialog as shown below:</p>
-<p><a class="glightbox" href="../images/IVR-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ASR confidence" src="../images/IVR-24.png" title="ASR confidence" /></a>
-4. Go to <strong>Analyze → NLP Insights</strong> of your Virtual Assistant on the Kore.ai XO Platform.
-  <a class="glightbox" href="../images/IVR-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="NLP insights" src="../images/IVR-25.png" title="NLP insights" /></a>
-5. Click on the relevant utterance to see the <strong>Chat History **details.
-6. Click the **ellipsis</strong> icon on top of the <strong>Javascript Message</strong> to view the details of the **ASR metadata **extracted from the response.
+<p>In this example, based on the <strong>ASR Confidence</strong> value extracted from the user input, we define the connection rules for the dialog as shown below:
+   <a class="glightbox" href="../images/IVR-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ASR confidence" src="../images/IVR-24.png" title="ASR confidence" /></a></p>
+<ol>
+<li>
+<p>Go to <strong>Analytics</strong> &gt; <strong>Automation</strong> &gt; <strong>NLP Insights</strong> of your Virtual Assistant on the Kore.ai XO Platform.</p>
+</li>
+<li>
+<p>Click on the relevant utterance to see the <strong>Chat History</strong> details.</p>
+</li>
+<li>
+<p>Click the <strong>ellipsis</strong> icon on top of the <strong>Javascript Message</strong> to view the details of the <strong>ASR metadata</strong> extracted from the response.
   <a class="glightbox" href="../images/IVR-26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="chat history" src="../images/IVR-26.png" title="chat history" /></a></p>
+</li>
+</ol>
 <p>In this example, the parameters like <strong>ASR Confidence</strong>, <strong>score</strong>,<strong>input mode</strong>, <strong>utterance</strong>, etc. are extracted in the syntax shown below:</p>
 <div class="language-text highlight"><pre><span></span><code> ```
 
