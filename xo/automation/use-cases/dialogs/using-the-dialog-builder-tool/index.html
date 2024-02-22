@@ -1924,22 +1924,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nodes" class="md-nav__link">
+  <a href="#sequences" class="md-nav__link">
     <span class="md-ellipsis">
-      Nodes
+      Sequences
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-assets-to-dialog" class="md-nav__link">
+  <a href="#add-node-to-dialog" class="md-nav__link">
     <span class="md-ellipsis">
-      Add Assets to dialog
+      Add node to dialog
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Add Assets to dialog">
+    <nav class="md-nav" aria-label="Add node to dialog">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1975,9 +1975,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#asset-properties" class="md-nav__link">
+  <a href="#node-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Asset Properties
+      Node Properties
     </span>
   </a>
   
@@ -2035,9 +2035,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bot-action-assets-needed" class="md-nav__link">
+  <a href="#bot-action-nodes-needed" class="md-nav__link">
     <span class="md-ellipsis">
-      Bot Action Assets (Needed?)
+      Bot Action Nodes (Needed?)
     </span>
   </a>
   
@@ -13243,22 +13243,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nodes" class="md-nav__link">
+  <a href="#sequences" class="md-nav__link">
     <span class="md-ellipsis">
-      Nodes
+      Sequences
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-assets-to-dialog" class="md-nav__link">
+  <a href="#add-node-to-dialog" class="md-nav__link">
     <span class="md-ellipsis">
-      Add Assets to dialog
+      Add node to dialog
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Add Assets to dialog">
+    <nav class="md-nav" aria-label="Add node to dialog">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -13294,9 +13294,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#asset-properties" class="md-nav__link">
+  <a href="#node-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Asset Properties
+      Node Properties
     </span>
   </a>
   
@@ -13354,9 +13354,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bot-action-assets-needed" class="md-nav__link">
+  <a href="#bot-action-nodes-needed" class="md-nav__link">
     <span class="md-ellipsis">
-      Bot Action Assets (Needed?)
+      Bot Action Nodes (Needed?)
     </span>
   </a>
   
@@ -13556,54 +13556,54 @@
 <h2 id="dialog-task-builder-overview">Dialog Task Builder Overview<a class="headerlink" href="#dialog-task-builder-overview" title="Permanent link">&para;</a></h2>
 <p>Before moving on, here is an overview of the Dialog Task Builder. For details, please see <a href="../navigating-dialog-tasks/" target="_blank">Navigating the Dialog Task Builder</a>.</p>
 <p><a class="glightbox" href="../images/navigate-dialog-builder-canvas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/navigate-dialog-builder-canvas.png" alt="Dialog task builder" title="Dialog task builder" style="border:1px solid gray; zoon:60%;"></a></p>
-<h2 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permanent link">&para;</a></h2>
-<p>In UXO, a <strong>Node</strong> is a building block of a dialog that contains one or more assets in the required sequence of execution.. You can divide the dialog into nodes based on sub tasks within the dialog.</p>
+<h2 id="sequences">Sequences<a class="headerlink" href="#sequences" title="Permanent link">&para;</a></h2>
+<p>In UXO, a <strong>Sequence</strong> is a building block of a dialog that contains one or more nodes in the required sequence of execution.. You can divide the dialog into sequences based on sub tasks within the dialog.</p>
 <p><strong><em>[video of node creation]</em></strong></p>
-<p>You can set connections between two nodes; Below are the steps. Drag the connector <a class="glightbox" href="../images/using-dialog-builder-img17-nodes-connector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/using-dialog-builder-img17-nodes-connector.png"></a>
- from the source node to the required destination node. Please note that by default, the connection will be from the <strong>bottommost asset of the source node</strong> to the <strong>topmost asset on the destination node</strong>.</p>
+<p>You can set connections between two sequences; Drag the connector <a class="glightbox" href="../images/using-dialog-builder-img17-nodes-connector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/using-dialog-builder-img17-nodes-connector.png"></a>
+ from the source sequence to the required destination sequence. Please note that by default, the connection will be from the <strong>bottommost node of the source sequence</strong> to the <strong>topmost node on the destination sequence</strong>.</p>
 <p>Connections can be set or changed either on the canvas by <strong>dragging the transition arrow</strong>, or through <strong>Connections</strong> settings on the <strong>Component Properties panel</strong>. </p>
-<p>You can also add  a node <strong>in-between two existing nodes</strong>. Below are the steps to do that:</p>
+<p>You can also add  a sequence <strong>in-between two existing sequences</strong>. Below are the steps to do that:</p>
 <ul>
-<li>Add the new node to the canvas.</li>
-<li>Set the connection between the source node to the new node</li>
-<li>Set the connection between the new node to the Destination node.</li>
+<li>Add the new node directly to the canvas, a new sequence will get created containing the newly added node.</li>
+<li>Set the connection between the source sequence to the new sequence.</li>
+<li>Set the connection between the new sequence to the Destination sequence.</li>
 </ul>
 <p><strong><em>[Video of connection]</em></strong></p>
-<p>All the nodes created can be seen on the <strong>Nodes</strong> tab in the left hand side menu.</p>
+<p>All the sequences created can be seen on the <strong>Nodes</strong> tab in the left hand side menu.</p>
 <p><a class="glightbox" href="../images/using-dialog-builder-img18-nodes-tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/using-dialog-builder-img18-nodes-tab.png" alt="Nodes tab" title="Nodes tab" style="border:1px solid gray; zoon:60%;"></a></p>
-<p>For example, in the flight booking dialog, you can have separate nodes for gathering passenger details, gathering trip details, generating pnr, etc. Each node contains one or more components grouped into coherent sequences. Align the components logically and provide clear, descriptive names for the nodes to facilitate future reference and comprehension. </p>
+<p>For example, in the flight booking dialog, you can have separate sequences for gathering passenger details, gathering trip details, generating pnr, etc. Each sequence contains one or more nodes grouped into coherent sequences. Align the nodes logically and provide clear, descriptive names for the sequences to facilitate future reference and comprehension. </p>
 <p><a class="glightbox" href="../images/using-dialog-builder-img19-assets-and-nodes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/using-dialog-builder-img19-assets-and-nodes.png" alt="Assets and Nodes" title="Assets and Nodes" style="border:1px solid gray; zoon:60%;"></a></p>
-<p>You can delete a node by right clicking on it and selecting <strong>Delete</strong> from the menu.</p>
+<p>You can delete a sequence by right clicking on it and selecting <strong>Delete</strong> from the menu.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This action cannot be undone.</p>
 </div>
 <p><a class="glightbox" href="../images/using-dialog-builder-img15-node-delete.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/using-dialog-builder-img15-node-delete.png" alt="Delete node" title="Delete node" style="border:1px solid gray; zoon:60%;"></a></p>
-<h2 id="add-assets-to-dialog">Add Assets to dialog<a class="headerlink" href="#add-assets-to-dialog" title="Permanent link">&para;</a></h2>
+<h2 id="add-node-to-dialog">Add node to dialog<a class="headerlink" href="#add-node-to-dialog" title="Permanent link">&para;</a></h2>
 <p>There are two ways to add an asset:</p>
 <ol>
-<li>Drag and drop assets from the panel onto the dialog builder, <a href="#use-drag-and-drop">see below</a>.</li>
+<li>Drag and drop nodes from the panel onto the dialog builder, <a href="#use-drag-and-drop">see below</a>.</li>
 <li>Using the options from the Dialog Builder Canvas, <a href="#use-the-dialog-canvas">see below</a>.</li>
 </ol>
 <h3 id="use-drag-and-drop">Use Drag and Drop<a class="headerlink" href="#use-drag-and-drop" title="Permanent link">&para;</a></h3>
-<p>You can add assets within the dialog task, by dragging the asset from the panel on the left to the designated place in the dialog task, on the canvas. You can drop the asset within an existing node, or outside the nodes; in this case a node will get created automatically, containing the newly added asset.</p>
-<p>Additionally, a streamlined node panel with user-friendly categorization is provided at the bottom of the canvas. The categories, namely <strong>Ask, Inform, Action, AI, and Integration</strong> provide a clear organization for you to easily locate the required assets. Assets can be dragged and dropped from here too.</p>
+<p>You can add nodes within the dialog task, by dragging the node from the panel on the left to the designated place in the dialog task, on the canvas. You can drop the node within an existing node, or outside the nodes; in this case a sequence will get created automatically, containing the newly added node.</p>
+<p>Additionally, a streamlined node panel with user-friendly categorization is provided at the bottom of the canvas. The categories, namely <strong>Ask, Inform, Action, AI, and Integration</strong> provide a clear organization for you to easily locate the required nodes. Nodes can be dragged and dropped from here too.</p>
 <p><strong><em>[VIDEO Drag Drop]</em></strong></p>
 <h3 id="use-the-dialog-canvas">Use the Dialog Canvas<a class="headerlink" href="#use-the-dialog-canvas" title="Permanent link">&para;</a></h3>
-<p>Click the <a class="glightbox" href="../images/using-dialog-builder-img17-nodes-connector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/using-dialog-builder-img17-nodes-connector.png"></a> button next to the node after which you want to add another asset. You can either add an asset directly on the canvas, in which case a new node gets created. You can then drag and drop the asset to an existing node, if that is how you wish to place it.</p>
+<p>Click the <a class="glightbox" href="../images/using-dialog-builder-img17-nodes-connector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/using-dialog-builder-img17-nodes-connector.png"></a> button next to the sequence after which you want to add another node. You can either add a node directly on the canvas, in which case a new sequence gets created. You can then drag and drop the node to an existing sequence, if that is how you wish to place it.</p>
 <p><strong><em>[video of adding asset on canvas]</em></strong></p>
 <h3 id="add-if-else-node-connections">Add If-Else Node Connections<a class="headerlink" href="#add-if-else-node-connections" title="Permanent link">&para;</a></h3>
-<p>You can add conditions to the node by adding <strong>If-Else connection</strong> in the <strong>Transition</strong> section of the node. This is where you can set the execution path based on the condition.</p>
+<p>You can add conditions to the sequence by adding <strong>If-Else connection</strong> in the <strong>Transition</strong> section of the sequence. This is where you can set the execution path based on the condition.</p>
 <p>To do this, hover over the <strong>Transitions</strong> section and click <strong>Add New.</strong> <a href="../node-connections/nodes-conditions/" target="_blank">Learn more</a>.</p>
 <p><a class="glightbox" href="../images/using-dialog-builder-img16-nodes-transition.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/using-dialog-builder-img16-nodes-transition.png" alt="Transitions - Add New" title="Transitions - Add New" style="border:1px solid gray; zoon:60%;"></a></p>
-<p>Asset can be deleted by right clicking on it, and then clicking <strong>Delete.</strong></p>
+<p>Sequence can be deleted by right clicking on it, and then clicking <strong>Delete.</strong></p>
 <p><a class="glightbox" href="../images/using-dialog-builder-delete-asset.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/using-dialog-builder-delete-asset.png" alt="Delete asset" title="Delete asset" style="border:1px solid gray; zoon:60%;"></a></p>
-<h2 id="asset-properties">Asset Properties<a class="headerlink" href="#asset-properties" title="Permanent link">&para;</a></h2>
-<p>Clicking on an asset will open its Properties panel, which includes specific features, depending on the type of asset you are working with. Please consult the documentation on <a href="../node-types/nodes-transitions/" target="_blank">Node Types</a> to learn more about what is included with each. So, noting that some assets may not come with some features, here is a general overview of what is available within this panel:</p>
+<h2 id="node-properties">Node Properties<a class="headerlink" href="#node-properties" title="Permanent link">&para;</a></h2>
+<p>Clicking on a node will open its Properties panel, which includes specific features, depending on the type of node you are working with. Please consult the documentation on <a href="../node-types/nodes-transitions/" target="_blank">Node Types</a> to learn more about what is included with each. So, noting that some nodes may not come with some features, here is a general overview of what is available within this panel:</p>
 <ul>
 <li><strong>Component Properties</strong> such as name, type, and component-specific properties.</li>
-<li><strong>Instance Properties</strong> can be customized for the selected asset for the current dialog.</li>
-<li><strong>Connection Properties</strong> can be used for configuring transition conditions. (Only available for the bottommost asset in a node)</li>
+<li><strong>Instance Properties</strong> can be customized for the selected node for the current dialog.</li>
+<li><strong>Connection Properties</strong> can be used for configuring transition conditions. (Only available for the bottommost node in a node)</li>
 <li><strong>NLP Properties</strong> for intent and entity recognition.</li>
 <li><strong>Voice Call Properties</strong> for IVR channels (available for certain assets only after <a href="../node-types/voice-call-properties/" target="_blank">IVR integration</a>).</li>
 </ul>
@@ -13618,7 +13618,7 @@
 <p>You can add, edit, move or delete text, comments or bookmarks as per need. However, please note that deletion cannot be undone.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can add comments, texts or bookmarks on the canvas as well as within the nodes. (Available in Phase 2)</p>
+<p>You can add comments, texts or bookmarks on the canvas as well as within the sequences. (Available in Phase 2)</p>
 </div>
 <p><a class="glightbox" href="../images/using-dialog-builder-img21-text-bookmark-comment.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/using-dialog-builder-img21-text-bookmark-comment.png" alt="Text, comment, bookmark" title="Text, comment, bookmark" style="border:1px solid gray; zoon:60%;"></a></p>
 <h3 id="text">Text<a class="headerlink" href="#text" title="Permanent link">&para;</a></h3>
@@ -13703,8 +13703,8 @@
 <p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image29.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <p><a class="glightbox" href="images/image29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image29.png" title="image_tooltip" /></a></p>
-<h2 id="bot-action-assets-needed">Bot Action Assets (Needed?)<a class="headerlink" href="#bot-action-assets-needed" title="Permanent link">&para;</a></h2>
-<p>Bot Action assets include the following assets, that need processing by the app without user interaction:</p>
+<h2 id="bot-action-nodes-needed">Bot Action Nodes (Needed?)<a class="headerlink" href="#bot-action-nodes-needed" title="Permanent link">&para;</a></h2>
+<p>Bot Action nodes include the following assets, that need processing by the app without user interaction:</p>
 <ul>
 <li><a href="../node-types/working-with-the-service-node/" target="_blank">Service </a>Asset</li>
 <li><a href="../node-types/working-with-the-script-node/" target="_blank">Script </a>Asset</li>
