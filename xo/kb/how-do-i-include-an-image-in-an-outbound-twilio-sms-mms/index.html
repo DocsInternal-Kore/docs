@@ -18,7 +18,7 @@
     
     
       
-        <title>How do i include an image in an outbound twilio sms mms - Kore ai Docs</title>
+        <title>How do I include an Image in an Outbound Twilio SMS (MMS)? - Kore ai Docs</title>
       
     
     
@@ -253,7 +253,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How do i include an image in an outbound twilio sms mms
+              How do I include an Image in an Outbound Twilio SMS (MMS)?
             
           </span>
         </div>
@@ -12834,41 +12834,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-do-i-include-an-image-in-an-outbound-twilio-sms-mms" class="md-nav__link">
-    <span class="md-ellipsis">
-      How do I include an Image in an Outbound Twilio SMS (MMS)?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#your-twilio-account-sid-and-auth-token" class="md-nav__link">
-    <span class="md-ellipsis">
-      Your Twilio Account SID and Auth Token
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sending-an-mms" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sending an MMS
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -12886,29 +12853,37 @@
   
 
 
-<h3 id="how-do-i-include-an-image-in-an-outbound-twilio-sms-mms"><strong>How do I include an Image in an Outbound Twilio SMS (MMS)?</strong><a class="headerlink" href="#how-do-i-include-an-image-in-an-outbound-twilio-sms-mms" title="Permanent link">&para;</a></h3>
+<h1 id="how-do-i-include-an-image-in-an-outbound-twilio-sms-mms">How do I include an Image in an Outbound Twilio SMS (MMS)?<a class="headerlink" href="#how-do-i-include-an-image-in-an-outbound-twilio-sms-mms" title="Permanent link">&para;</a></h1>
 <p>For the Twilio SMS channel, you can use the **<code>MediaUrl</code></strong> parameter in the response to deliver an image. Let’s see an example of how to send an outbound message that includes an image and a text message.</p>
 <p><strong>Sample API cURL Script:</strong></p>
-<p>curl -XPOST <a href="https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages.json">https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages.json</a> \
---data-urlencode "To=+13105555555" \
---data-urlencode "From=+12125551234" \
---data-urlencode "MediaUrl=<a href="https://demo.twilio.com/owl.png">https://demo.twilio.com/owl.png</a>" \
---data-urlencode "Body=Hello, here is how it looks!" \
--u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages.json \
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>--data-urlencode &quot;To=+13105555555&quot; \
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>--data-urlencode &quot;From=+12125551234&quot; \
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>--data-urlencode &quot;MediaUrl=https://demo.twilio.com/owl.png&quot; \
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>--data-urlencode &quot;Body=Hello, here is how it looks!&quot; \
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>-u &#39;ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token&#39;
+</span></code></pre></div>
 <p><strong>Sample Python Code:</strong></p>
-<p>from twilio.rest import Client</p>
-<h1 id="your-twilio-account-sid-and-auth-token">Your Twilio Account SID and Auth Token<a class="headerlink" href="#your-twilio-account-sid-and-auth-token" title="Permanent link">&para;</a></h1>
-<p>account_sid = 'your_account_sid'
-auth_token = 'your_auth_token'
-client = Client(account_sid, auth_token)</p>
-<h1 id="sending-an-mms">Sending an MMS<a class="headerlink" href="#sending-an-mms" title="Permanent link">&para;</a></h1>
-<p>message = client.messages.create(
-    to="destination_phone_number", # Replace with the recipient's phone number
-    from_="your_twilio_phone_number",  # Replace with your Twilio phone number
-    body="Hello, here is how it looks!",  # Optional message text
-    media_url=["<a href="https://example.com/path/to/image.jpg">https://example.com/path/to/image.jpg</a>"]  # URL of the media to # send as MMS
-)
-print(message.sid)</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>from twilio.rest import Client
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># Your Twilio Account SID and Auth Token
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>account_sid = &#39;your_account_sid&#39;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>auth_token = &#39;your_auth_token&#39;
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>client = Client(account_sid, auth_token)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a># Sending an MMS
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>message = client.messages.create(
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    to=&quot;destination_phone_number&quot;, # Replace with the recipient&#39;s phone number
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    from_=&quot;your_twilio_phone_number&quot;,  # Replace with your Twilio phone number
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    body=&quot;Hello, here is how it looks!&quot;,  # Optional message text
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    media_url=[&quot;https://example.com/path/to/image.jpg&quot;]  # URL of the media to # send as MMS
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>)
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>print(message.sid)
+</span></code></pre></div>
+<p><strong>Related Links</strong></p>
+<ul>
+<li><a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-sms-channel/">Adding the Twilio SMS Channel</a></li>
+<li><a href="https://support.twilio.com/hc/en-us/articles/223133907-Simple-Example-for-Sending-Programmable-SMS-Text-or-Picture-Messages">Send SMS and MMS Messages (Twilio Doc)</a></li>
+<li><a href="https://support.twilio.com/hc/en-us/articles/223133907-Simple-Example-for-Sending-Programmable-SMS-Text-or-Picture-Messages">Simple Example for Sending Programmable SMS Text or Picture Messages (Twilio Doc)</a></li>
+</ul>
 
 
 
