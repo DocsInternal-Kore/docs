@@ -13222,18 +13222,14 @@
 <h2 id="add-the-node">Add the Node<a class="headerlink" href="#add-the-node" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Open the dialog task to which you want to add the dynamic intent node.</li>
-<li>Use the <strong>“+”</strong> button next to the node under which you want to add the dynamic intent node, choose <strong>Dynamic Intent</strong>, and then click <strong>New Dynamic Intent</strong>.  </li>
+<li>Use the <strong>“+”</strong> button next to the node after which you want to add the dynamic intent node, choose <strong>+ New Node &gt; Dynamic Intent</strong>.</li>
 </ol>
 <p>The Dynamic Intent window is displayed with the <strong>Component Properties</strong> tab selected by default.  </p>
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/dynamic-intent-node-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dynamic-intent-node-img1.png" alt="Dynamic intent node" title="Dynamic intent node" style="border:1px solid gray;zoom:70%;"></a></p>
 <h2 id="configure-the-node">Configure the Node<a class="headerlink" href="#configure-the-node" title="Permanent link">&para;</a></h2>
 <h3 id="component-properties">Component Properties<a class="headerlink" href="#component-properties" title="Permanent link">&para;</a></h3>
 <p>The settings made within this section affect this node across all instances in all dialog tasks.  </p>
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/dynamic-intent-node-img2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dynamic-intent-node-img2.png" alt="Dynamic intent node - Component properties" title="Dynamic intent node - Component properties" style="border:1px solid gray;zoom:70%;"></a></p>
 <h4 id="general-settings">General Settings<a class="headerlink" href="#general-settings" title="Permanent link">&para;</a></h4>
 <p>In this section, you can provide <strong>Name</strong>, <strong>Display Name</strong>, and <strong>Description</strong> for the node. The node name cannot contain spaces.</p>
 <h4 id="target-intent-name">Target Intent Name<a class="headerlink" href="#target-intent-name" title="Permanent link">&para;</a></h4>
@@ -13255,9 +13251,7 @@
 </ul>
 <h3 id="instance-properties">Instance Properties<a class="headerlink" href="#instance-properties" title="Permanent link">&para;</a></h3>
 <p>Under the Instance Properties tab, you can configure the instance-specific fields for this Dynamic Intent intent node. These settings are applicable only for this instance and will not affect any other instances of this node.  </p>
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/dynamic-intent-node-img3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dynamic-intent-node-img3.png" alt="Dynamic intent node - Instance properties" title="Dynamic intent node - Instance properties" style="border:1px solid gray;zoom:70%;"></a></p>
 <h4 id="entity-pre-assignments">Entity Pre-Assignments<a class="headerlink" href="#entity-pre-assignments" title="Permanent link">&para;</a></h4>
 <p>In this section, you can assign values for the entities or context variables of the target dialog task. Provide the name of the entity or context variable of the target intent and define the value to be assigned from the current task’s context.</p>
 <p>Key/Value should prefix with context for getting values from the context object.<br />
@@ -13265,8 +13259,7 @@ Key: <code>Entity name</code><br />
 Value: <code>context.path of the value which needs to be assigned to the entity</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>This setting is ignored if the target intent is FAQ.
-</code></pre></div>
+<p>This setting is ignored if the target intent is FAQ.</p>
 </div>
 <h4 id="entity-post-assignments">Entity Post-Assignments<a class="headerlink" href="#entity-post-assignments" title="Permanent link">&para;</a></h4>
 <p>In this section, you can assign values for the entities and context variables of the current task after returning from the target task. Provide the name of the entity or context variable of the current task and define the value to be assigned from the target task’s context.</p>
@@ -13289,13 +13282,10 @@ Value: <code>context.path of the value which needs to be assigned to the entity<
 <p>For more information on custom tags, see <a href="../../../../../analytics/automation/custom-dashboard/custom-meta-tags" target="_blank">Custom Meta Tags</a>.</p>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
 <p>Click the Connections tab and set the transition properties to determine the node in the dialog task to execute next. You can write conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use intents for transitions. See <a href="../../node-connections/nodes-conditions/" target="_blank">Adding IF-Else Conditions to Node Connections</a> for a detailed setup guide.  </p>
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/dynamic-intent-node-img4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dynamic-intent-node-img4.png" alt="Dynamic intent node - Connection properties" title="Dynamic intent node - Connection properties" style="border:1px solid gray;zoom:70%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>These conditions apply only for this instance and will not affect this node when used in any other dialog.
-</code></pre></div>
+<p>These conditions apply only for this instance and will not affect this node when used in any other dialog.</p>
 </div>
 
 
