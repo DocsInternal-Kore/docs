@@ -12864,25 +12864,9 @@
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>--data-urlencode &quot;Body=Hello, here is how it looks!&quot; \
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>-u &#39;ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token&#39;
 </span></code></pre></div>
-<p><strong>Sample Python Code:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>from twilio.rest import Client
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># Your Twilio Account SID and Auth Token
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>account_sid = &#39;your_account_sid&#39;
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>auth_token = &#39;your_auth_token&#39;
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>client = Client(account_sid, auth_token)
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a># Sending an MMS
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>message = client.messages.create(
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    to=&quot;destination_phone_number&quot;, # Replace with the recipient&#39;s phone number
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    from_=&quot;your_twilio_phone_number&quot;,  # Replace with your Twilio phone number
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    body=&quot;Hello, here is how it looks!&quot;,  # Optional message text
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    media_url=[&quot;https://example.com/path/to/image.jpg&quot;]  # URL of the media to # send as MMS
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>)
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>print(message.sid)
-</span></code></pre></div>
 <p><strong>Related Links</strong></p>
 <ul>
 <li><a href="../../channels/add-twilio-sms-channel/">Adding the Twilio SMS Channel</a></li>
-<li><a href="https://www.twilio.com/docs/messaging/tutorials/how-to-send-sms-messages" target="_blank">Send SMS/MMS Messages (Twilio Docs)</a></li>
 <li><a href="https://support.twilio.com/hc/en-us/articles/223133907-Simple-Example-for-Sending-Programmable-SMS-Text-or-Picture-Messages" target="_blank">Simple Example for Sending Programmable SMS Text or Picture Messages (Twilio Doc)</a></li>
 </ul>
 
