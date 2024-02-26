@@ -1,5 +1,5 @@
 
-# **Conversation Testing Overview**
+# Conversation Testing Overview
 
 Conversation Testing enables you to simulate end-to-end conversational flows to evaluate the dialog task execution or perform regression. You can create Test Suites to capture various business scenarios and run them at a later time to validate the assistant’s performance.
 
@@ -8,7 +8,7 @@ The Conversation testing framework tracks the transition coverage and determines
 
 ## Conversation Testing Landing Page
 
-Go to **Build → Testing → Conversation Testing** to access the Conversation Testing page. It lists all the Test Suites with details in a grid. All the Test Suite details like the Test Suite name, the execution status in the Result column, Duration of execution, Number of passed and failed test cases, Number of test cases not executed, the percentage of passed test cases, and tags added to the test suite during its creation are all displayed in the grid. Using tags, you can easily organize the test suites and filter them.
+Go to **Automation > Testing > Regression Testing** from the left navigation menu, and then the **Conversation Testing** tab. to access the Conversation Testing page. It lists all the Test Suites with details in a grid. All the Test Suite details like the Test Suite name, the execution status in the Result column, Duration of execution, Number of passed and failed test cases, Number of test cases not executed, the percentage of passed test cases, and tags added to the test suite during its creation are all displayed in the grid. Using tags, you can easily organize the test suites and filter them.
 
 <img src="../images/ct-main.png" alt="Conversation Testing Landing" title="Conversation Testing Landing" style="border: 1px solid gray; zoom:50%;"/> 
 
@@ -41,9 +41,3 @@ The Conversation Testing allows you to capture the flow, track the executed node
 * [Test Case Assertion](../test-case-assertion/){:target="_blank"}
 * [Test Case Execution Summary](../test-case-execution-summary/){:target="_blank"}
 
-
-<p>
-
-[Previous](../../batch-testing){:target="_blank"} <pre> <pre> [Next](../create-a-test-suite"){:target="_blank"}
-
-</p>

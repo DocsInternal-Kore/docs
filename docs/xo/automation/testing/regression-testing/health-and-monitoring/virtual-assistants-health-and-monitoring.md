@@ -1,10 +1,8 @@
-# **Health and Monitoring**
+# Virtual Assistant Health and Monitoring
 
 The **Health and Monitoring** dashboard offers a goal-driven approach to improving the accuracy of the virtual assistant’s Natural Language Processing (NLP) model. The training data is analyzed along with the test coverage and test results of the test suites to provide insights into the NLP Model’s performance.
 
 This dashboard lets you achieve the following:
-
-
 
 * Run the test suites against the in-development version of the bot to see the Virtual Assistant’s health.
 * Review the test execution summary for every intent type.
@@ -58,7 +56,7 @@ The following metrics extracted from Batch Testing results are displayed in two 
 * **Recall Score**: Defines the fraction of the relevant utterances that are successfully identified and is calculated as the ratio of true positives over actual positives (sum of true positives and false negatives).
 * **Total Test Coverage %**: The average of the Total Test Coverage scores for **Dialog Intents**, **FAQs**, **Small Talk**, **Traits**, and **Entities**.
 
-These metrics help gain actionable insights into your test cases to perform [ML Model Validation](https://developer.kore.ai/docs/bots/nlp/ml-model/){:target="_blank"}.
+These metrics help gain actionable insights into your test cases to perform [ML Model Validation](../../../../natural-language/training/model-validation/){:target="_blank"}.
 
 
 ### Flow Health Metrics
@@ -156,14 +154,14 @@ Click the **expansion arrow** icon under **Entity** to view the entity order exp
 
 The **NLP Analysis** section displays the detailed view of the historic analysis generated at the time of the test case execution for failed and successful test cases. For the selected intent type, this section gives an overview of the intents that are qualified (the definitive and probable matches) and disqualified to serve as crucial information for users trying to decode the reason for failed test cases. The following details are displayed as a graphical representation in this section:
 
-* [Traits](https://developer.kore.ai/docs/bots/nlp/traits/#Trait_Definition){:target="_blank"} (if applicable)
-* [Machine Learning (ML) engine](../../../utterance-testing/#ml-model){:target="_blank"}
-* [Fundamental Meaning (FM) engine](../../../utterance-testing/#fm-model){:target="_blank"}
-* [Knowledge Graph (KG) engine](../../../utterance-testing/#knowledge-graph){:target="_blank"}
-* [Trait Rule](https://developer.kore.ai/docs/bots/nlp/traits/#Trait_Association_Rules){:target="_blank"} (if applicable)
-* [Ranking and Resolver](../../../utterance-testing/#ranking-and-resolver)
+* [Traits](../../../../natural-language/training/traits){:target="_blank"} (if applicable)
+* [Machine Learning (ML) engine](../../../testing-your-bot-with-nlp/#ml-model){:target="_blank"}
+* [Fundamental Meaning (FM) engine](../../../testing-your-bot-with-nlp/#fm-model){:target="_blank"}
+* [Knowledge Graph (KG) engine](../../../testing-your-bot-with-nlp/#knowledge-graph){:target="_blank"}
+* [Trait Rule](../../../../natural-language/training/traits/#trait-association-rules){:target="_blank"} (if applicable)
+* [Ranking and Resolver](../../../testing-your-bot-with-nlp/#ranking-and-resolver)
 
-This is different from analyzing the test results under **Utterance Testing** where the current analysis information is displayed based on the changes to the trained data. [Learn more](../../../utterance-testing/#analyzing-the-test-results){:target="_blank"}.
+This is different from analyzing the test results under **Utterance Testing** where the current analysis information is displayed based on the changes to the trained data. [Learn more](../../../testing-your-bot-with-nlp/#analyzing-the-test-results){:target="_blank"}.
 
 To view the **NLP Analysis** section, follow these steps:
 
@@ -192,7 +190,7 @@ Please click [here](../flow-health-dashboard/#flow-metrics){:target="_blank"} to
 
 #### Utterance Testing
 
-Based on the test case failures, you can retrain your virtual assistant using the **Utterance testing** option for all possible user utterances and inputs. Training is how you enhance the performance of the NLP engine to prioritize one task or user intent over another based on the user input. To learn more, please refer to this [link](../../../utterance-testing/){:target="_blank"}.
+Based on the test case failures, you can retrain your virtual assistant using the **Utterance testing** option for all possible user utterances and inputs. Training is how you enhance the performance of the NLP engine to prioritize one task or user intent over another based on the user input. To learn more, please refer to this [link](../../../testing-your-bot-with-nlp/){:target="_blank"}.
 
 To navigate to the **Utterance Testing** window, click the **go to utterance testing** (magic wand) icon on the **Test Cases – Detailed Analysis** page.  
 <img src="../images/hm-13.png" alt="go to utterance testing" title="go to utterance testing" style="border: 1px solid  gray; zoom:50%;"/>
@@ -200,7 +198,7 @@ To navigate to the **Utterance Testing** window, click the **go to utterance tes
 
 In the **Utterance Testing** window shown below, you can do the following:
 
-* Test & [Train](../../../utterance-testing/#training-the-assistant){:target="_blank"} your virtual assistant based on these [recommendations ](https://developer.kore.ai/docs/bots/nlp/user-utterances/#Recommendations){:target="_blank"} to understand different user utterances and match them with intents and entities.
+* Test & [Train](../../../testing-your-bot-with-nlp/#training-the-assistant){:target="_blank"} your virtual assistant based on these [recommendations ](../../../../natural-language/training/machine-learning-engine/#training-recommendations){:target="_blank"} to understand different user utterances and match them with intents and entities.
 * View the **NLP analysis** flow and **Fields/Entities** analysis data including the confidence score based on the NER training.
 * Use the **Mark as an incorrect match** link to match the user input with the right intent when it is mapped to an incorrect task.  
   <img src="../images/hm-14.png" alt="Utterance Testing window" title="Utterance Testing window" style="border: 1px solid  gray; zoom:50%;"/>
@@ -277,7 +275,7 @@ table, th, td {
   <tr>
    <td><strong>Parent Intent</strong>
    </td>
-   <td><a href="https://developer.kore.ai/docs/bots/bot-intelligence/sub-intents-and-follow-up-intents/" target="_blank">Learn more</a>.
+   <td><a href="../../../../intelligence/sub-intents-and-follow-up-intents" target="_blank">Learn more</a>.
    </td>
    <td>Yes
    </td>
@@ -290,7 +288,7 @@ table, th, td {
    <td><strong>Task State</strong>
    </td>
    <td>The status of the intent or task against which the intent is identified. Possible values include <strong>Configured</strong> or <strong>Published</strong>.
-<p>
+<br>
 .
    </td>
    <td>Yes
@@ -318,11 +316,11 @@ table, th, td {
    <td>Displays the individual scores for the following
 <ul>
 
-<li><a href="../../../utterance-testing/#ml-model" target="_blank">Machine Learning (ML) score</a>
+<li><a href="../../../testing-your-bot-with-nlp/#ml-model" target="_blank">Machine Learning (ML) score</a>
 
-<li><a href="../../../utterance-testing/#fm-model" target="_blank">Fundamental Meaning (FM) score</a>
+<li><a href="../../../testing-your-bot-with-nlp/#fm-model" target="_blank">Fundamental Meaning (FM) score</a>
 
-<li><a href="../../../utterance-testing/#ranking-and-resolver" target="_blank">Ranking and Resolver (RR) score</a>
+<li><a href="../../../testing-your-bot-with-nlp/#ranking-and-resolver" target="_blank">Ranking and Resolver (RR) score</a>
 </li>
 </ul>
    </td>
@@ -439,15 +437,12 @@ The **FAQ Summary** section displays the [recommendation scores](#health-and-mon
 
 
 
-**Viewing Additional FAQ Recommendations**: For **FAQ Details**, clicking **View Recommendations** will display the report that was already run during the previous run time. To know how to view and manage additional recommendations, please refer to this [link](https://developer.kore.ai/docs/bots/nlp/training-validations/#How_to_Use_the_NLU_Validate_Model){:target="_blank"}.  
+**Viewing Additional FAQ Recommendations**: For **FAQ Details**, clicking **View Recommendations** will display the report that was already run during the previous run time. To know how to view and manage additional recommendations, please refer to this [link](../../../../natural-language/training/training-validations/#how-to-use-the-nlu-validate-model){:target="_blank"}.  
 <img src="../images/hm-18.png" alt="Viewing Additional FAQ Recommendations" title="Viewing Additional FAQ Recommendations" style="border: 1px solid  gray; zoom:50%;"/>
-
 
 <img src="../images/hm-19.png" alt="Report" title="Report" style="border: 1px solid  gray; zoom:50%;"/>  
 
-
-
-**Knowledge Graph**: Clicking this button will take you to the **Knowledge Graph** section where you can perform [KG Analysis](https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/knowledge-ontology-analysis/){:target="_blank"}.  
+**Knowledge Graph**: Clicking this button will take you to the **Knowledge Graph** section where you can perform [KG Analysis](../../../../../answers/knowledge-ai/knowledge-graph-analysis){:target="_blank"}.  
 <img src="../images/hm-20.png" alt="Knowledge Graph button" title="Knowledge Graph button" style="border: 1px solid  gray; zoom:50%;"/>
 
 
@@ -747,7 +742,7 @@ The summary of all the metrics displayed is given below:
   </tr>
 </table>
 
-<p>
+<br>
 
 </p>
 
@@ -755,7 +750,7 @@ The summary of all the metrics displayed is given below:
 
 **View Intents Not Covered**
 
-This feature helps identify the intents not covered so as to include them in the test data for better and holistic [testing of the virtual assistant](https://developer.kore.ai/docs/bots/test-your-bot/testing-your-bot-with-nlp/#Testing_the_Bot){:target="_blank"}. Click the **three-dot menu** on the right side of the panel to view the list of **intents not covered** in batch testing.  
+This feature helps identify the intents not covered so as to include them in the test data for better and holistic [testing of the virtual assistant](../../../testing-your-bot-with-nlp/#testing-the-assistant){:target="_blank"}. Click the **three-dot menu** on the right side of the panel to view the list of **intents not covered** in batch testing.  
 <img src="../images/hm-38.png" alt="Training data-intents not covered" title="Training data-intents not covered" style="border: 1px solid  gray; zoom:50%;"/> 
 
 

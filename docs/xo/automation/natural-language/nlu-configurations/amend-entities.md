@@ -1,4 +1,4 @@
-# **Amend Entities**
+# Amend Entities
 
 Time and again, we come across situations wherein the users change their preferences during task execution.
 
@@ -25,7 +25,7 @@ The entity amendment process is divided into three stages:
 
 ## Implementation Hierarchy
 
-On the Kore.ai XO Platform, Amend Entity behavior is defined at two levels:
+On the XO Platform, Amend Entity behavior is defined at two levels:
 
 * VA level
 * Task level
@@ -43,7 +43,8 @@ To Set VA Level Amend Entity Behavior, follow the below steps:
         * _Skip display of previously displayed messages_ – messages from Message nodes alone.
     * **Resume dialog from amend identification node** – use this option to resume the dialog from the node where the amend was identified.
 5. The amend process can be extended to entities marked as _Hidden_ using the **Amend Hidden Entities** option.
-<img src="../images/amend-hidden-entities.png" alt="amend hidden entities" title="amend hidden entities" style="border: 1px solid gray; zoom:75%;">
+    
+    <img src="../images/amend-hidden-entities.png" alt="amend hidden entities" title="amend hidden entities" style="border: 1px solid gray; zoom:75%;">
 
 ### Task Level
 

@@ -1,4 +1,4 @@
-# **Getting Started with Multilingual Virtual Assistants**
+# Getting Started with Multilingual Virtual Assistants
 
 Consumers are more likely to engage with virtual assistants that communicate in their preferred language. The Kore.ai XO Platform supports enabling multiple languages within an assistant without having to rebuild the definitions. The platform supports over 100 languages and you can choose to enable any of these languages for your assistant. You can start building with one language and enable additional languages as and when you need them.  
 
@@ -29,310 +29,196 @@ You can also use the automatic response translation feature when you or your tea
 The following are the Conversation Languages supported by the Platform:
 
 <table border="1">
-  <tr>
-   <td>Afrikaans – af
-   </td>
-   <td>Haitian_creole – ht
-   </td>
-   <td>Romanian – ro
-   </td>
-  </tr>
-  <tr>
-   <td>Amharic  – am
-   </td>
-   <td>Hungarian – hu
-   </td>
-   <td>Russian – ru
-   </td>
-  </tr>
-  <tr>
-   <td>Assamese – as
-   </td>
-   <td>Irish – ga
-   </td>
-   <td>Sinhalese – si
-   </td>
-  </tr>
-  <tr>
-   <td>Arabic – ar
-   </td>
-   <td>Indonesian – id
-   </td>
-   <td>Slovak – sk
-   </td>
-  </tr>
-  <tr>
-   <td>Azerbaijani – az
-   </td>
-   <td>Igbo –  ig
-   </td>
-   <td>Slovenian – sl
-   </td>
-  </tr>
-  <tr>
-   <td>Armenian – hy
-   </td>
-   <td>Icelandic – is
-   </td>
-   <td>Spanish – es
-   </td>
-  </tr>
-  <tr>
-   <td>Albanian  – sq
-   </td>
-   <td>Italian – if
-   </td>
-   <td>Samoan – sm
-   </td>
-  </tr>
-  <tr>
-   <td>Bulgarian – bg
-   </td>
-   <td>Japanese – ja
-   </td>
-   <td>Shona – sn
-   </td>
-  </tr>
-  <tr>
-   <td>Belarusian – be
-   </td>
-   <td>Javanese – jv
-   </td>
-   <td>Somali – so
-   </td>
-  </tr>
-  <tr>
-   <td>Bengali/Bangla – bn
-   </td>
-   <td>Kazakh – kk
-   </td>
-   <td>Serbian – sr
-   </td>
-  </tr>
-  <tr>
-   <td>Basque – eu
-   </td>
-   <td>Khmer – km
-   </td>
-   <td>Sesotho – st
-   </td>
-  </tr>
-  <tr>
-   <td>Bosnian – bs
-   </td>
-   <td>Kannada – kn
-   </td>
-   <td>Sundanese – su
-   </td>
-  </tr>
-  <tr>
-   <td>Burmese – my
-   </td>
-   <td>Korean – ko
-   </td>
-   <td>Swedish – sv
-   </td>
-  </tr>
-  <tr>
-   <td>Cebuano – ceb
-   </td>
-   <td>Kurdish – km
-   </td>
-   <td>Swahili – sw
-   </td>
-  </tr>
-  <tr>
-   <td>Catalan – ca
-   </td>
-   <td>Kyrgyz – ky
-   </td>
-   <td>Tamil – ta
-   </td>
-  </tr>
-  <tr>
-   <td>Chinese – izh
-   </td>
-   <td>Kinyarwanda -rw
-   </td>
-   <td>Tagalog – tl
-   </td>
-  </tr>
-  <tr>
-   <td>Corsican – co
-   </td>
-   <td>Latin – la
-   </td>
-   <td>Tibetan – bo
-   </td>
-  </tr>
-  <tr>
-   <td>Croatian – hr
-   </td>
-   <td>Luxembourgish – lb 
-   </td>
-   <td>Telugu – te
-   </td>
-  </tr>
-  <tr>
-   <td>Czech – cs
-   </td>
-   <td>Laothian/Laos/lao – lo
-   </td>
-   <td>Tajik – tg
-   </td>
-  </tr>
-  <tr>
-   <td>Danish – da
-   </td>
-   <td>Lithuanian – lt
-   </td>
-   <td>Thai – th
-   </td>
-  </tr>
-  <tr>
-   <td>Dutch – nl
-   </td>
-   <td>Latvian – lv
-   </td>
-   <td>Turkmen – tk
-   </td>
-  </tr>
-  <tr>
-   <td>English – en
-   </td>
-   <td>Marathi – mr
-   </td>
-   <td>Tagalog/Filipino – fil
-   </td>
-  </tr>
-  <tr>
-   <td>Esperanto – eo
-   </td>
-   <td>Malay – ms
-   </td>
-   <td>Turkish – tr
-   </td>
-  </tr>
-  <tr>
-   <td>Estonian – et
-   </td>
-   <td>Malagasy – mg
-   </td>
-   <td>Tatar – tt
-   </td>
-  </tr>
-  <tr>
-   <td>Finnish – fi
-   </td>
-   <td>Maori – mi
-   </td>
-   <td>Uighur/Uyghur – ug
-   </td>
-  </tr>
-  <tr>
-   <td>French – fr
-   </td>
-   <td>Macedonian – mk
-   </td>
-   <td>Urdu – ur
-   </td>
-  </tr>
-  <tr>
-   <td>Frisian – fy
-   </td>
-   <td>Maltese – mt
-   </td>
-   <td>Ukrainian – uk
-   </td>
-  </tr>
-  <tr>
-   <td>German – de
-   </td>
-   <td>Malayalam – ml
-   </td>
-   <td>Uzbek – uz
-   </td>
-  </tr>
-  <tr>
-   <td>Greek – el
-   </td>
-   <td>Mongolian – mn
-   </td>
-   <td>Vietnamese – vi
-   </td>
-  </tr>
-  <tr>
-   <td>Galician – gl
-   </td>
-   <td>Nepali – ne
-   </td>
-   <td>Wolof – wo
-   </td>
-  </tr>
-  <tr>
-   <td>Georgian – ka
-   </td>
-   <td>Norwegian – nb
-   </td>
-   <td>Welsh – cy
-   </td>
-  </tr>
-  <tr>
-   <td>Gujarati – gu
-   </td>
-   <td>Nyanja – ny
-   </td>
-   <td>Xhosa – xh
-   </td>
-  </tr>
-  <tr>
-   <td>Hausa – ha
-   </td>
-   <td>Oriya/Odia – or 
-   </td>
-   <td>Yiddish – yi
-   </td>
-  </tr>
-  <tr>
-   <td>Hawaiian – haw
-   </td>
-   <td>Punjabi – pa
-   </td>
-   <td>Yoruba – yo
-   </td>
-  </tr>
-  <tr>
-   <td>Hebrew – he
-   </td>
-   <td>Polish – pl
-   </td>
-   <td>Zulu – zo
-   </td>
-  </tr>
-  <tr>
-   <td>Hindi – hi
-   </td>
-   <td>Portuguese – pt
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Hmong – hmn
-   </td>
-   <td>Persian – fa
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Hmong – hmn
-   </td>
-   <td>Persian – fa
-   </td>
-   <td>
-   </td>
-  </tr>
+<tr>
+<td>Afrikaans – af</td>
+<td>Haitian_creole – ht</td>
+<td>Romanian – ro</td>
+</tr>
+<tr>
+<td>Amharic  – am</td>
+<td>Hungarian – hu</td>
+<td>Russian – ru</td>
+</tr>
+<tr>
+<td>Assamese – as</td>
+<td>Irish – ga</td>
+<td>Sinhalese – si</td>
+</tr>
+<tr>
+<td>Arabic – ar</td>
+<td>Indonesian – id</td>
+<td>Slovak – sk</td>
+</tr>
+<tr>
+<td>Azerbaijani – az</td>
+<td>Igbo –  ig</td>
+<td>Slovenian – sl</td>
+</tr>
+<tr>
+<td>Armenian – hy</td>
+<td>Icelandic – is</td>
+<td>Spanish – es</td>
+</tr>
+<tr>
+<td>Albanian  – sq</td>
+<td>Italian – if</td>
+<td>Samoan – sm</td>
+</tr>
+<tr>
+<td>Bulgarian – bg</td>
+<td>Japanese – ja</td>
+<td>Shona – sn</td>
+</tr>
+<tr>
+<td>Belarusian – be</td>
+<td>Javanese – jv</td>
+<td>Somali – so</td>
+</tr>
+<tr>
+<td>Bengali/Bangla – bn</td>
+<td>Kazakh – kk</td>
+<td>Serbian – sr</td>
+</tr>
+<tr>
+<td>Basque – eu</td>
+<td>Khmer – km</td>
+<td>Sesotho – st</td>
+</tr>
+<tr>
+<td>Bosnian – bs</td>
+<td>Kannada – kn</td>
+<td>Sundanese – su</td>
+</tr>
+<tr>
+<td>Burmese – my</td>
+<td>Korean – ko</td>
+<td>Swedish – sv</td>
+</tr>
+<tr>
+<td>Cebuano – ceb</td>
+<td>Kurdish – km</td>
+<td>Swahili – sw</td>
+</tr>
+<tr>
+<td>Catalan – ca</td>
+<td>Kyrgyz – ky</td>
+<td>Tamil – ta</td>
+</tr>
+<tr>
+<td>Chinese – izh</td>
+<td>Kinyarwanda -rw</td>
+<td>Tagalog - tl</td>
+</tr>
+<tr>
+<td>Corsican – co</td>
+<td>Latin – la</td>
+<td>Tibetan – bo</td>
+</tr>
+<tr>
+<td>Croatian – hr</td>
+<td>Luxembourgish – lb </td>
+<td>Telugu – te</td>
+</tr>
+<tr>
+<td>Czech – cs</td>
+<td>Laothian/Laos/lao – lo</td>
+<td>Tajik – tg</td>
+</tr>
+<tr>
+<td>Danish – da</td>
+<td>Lithuanian – lt</td>
+<td>Thai – th</td>
+</tr>
+<tr>
+<td>Dutch – nl</td>
+<td>Latvian – lv</td>
+<td>Turkmen – tk</td>
+</tr>
+<tr>
+<td>English – en</td>
+<td>Marathi – mr</td>
+<td>Tagalog/Filipino - fil</td>
+</tr>
+<tr>
+<td>Esperanto – eo</td>
+<td>Malay – ms</td>
+<td>Turkish – tr</td>
+</tr>
+<tr>
+<td>Estonian – et</td>
+<td>Malagasy – mg</td>
+<td>Tatar – tt</td>
+</tr>
+<tr>
+<td>Finnish – fi</td>
+<td>Maori – mi</td>
+<td>Uighur/Uyghur – ug</td>
+</tr>
+<tr>
+<td>French – fr</td>
+<td>Macedonian – mk</td>
+<td>Urdu – ur</td>
+</tr>
+<tr>
+<td>Frisian – fy</td>
+<td>Maltese – mt</td>
+<td>Ukrainian – uk</td>
+</tr>
+<tr>
+<td>German – de</td>
+<td>Malayalam – ml</td>
+<td>Uzbek – uz</td>
+</tr>
+<tr>
+<td>Greek – el</td>
+<td>Mongolian – mn</td>
+<td>Vietnamese – vi</td>
+</tr>
+<tr>
+<td>Galician – gl</td>
+<td>Nepali – ne</td>
+<td>Wolof – wo</td>
+</tr>
+<tr>
+<td>Georgian – ka</td>
+<td>Norwegian – nb</td>
+<td>Welsh – cy</td>
+</tr>
+<tr>
+<td>Gujarati – gu</td>
+<td>Nyanja – ny</td>
+<td>Xhosa – xh</td>
+</tr>
+<tr>
+<td>Hausa – ha</td>
+<td>Oriya/Odia – or </td>
+<td>Yiddish – yi</td>
+</tr>
+<tr>
+<td>Hawaiian – haw</td>
+<td>Punjabi – pa</td>
+<td>Yoruba – yo</td>
+</tr>
+<tr>
+<td>Hebrew – he</td>
+<td>Polish – pl</td>
+<td>Zulu – zo</td>
+</tr>
+<tr>
+<td>Hindi – hi</td>
+<td>Portuguese (Brazilian) – pt</td>
+<td></td>
+</tr>
+<tr>
+<td>Hmong – hmn</td>
+<td>Portuguese (European) - pt_pt</td>
+<td></td>
+</tr>
+<tr>
+<td>Hmong – hmn</td>
+<td>Persian – fa</td>
+<td></td>
+</tr>
 </table>
 
 
@@ -347,90 +233,62 @@ The NLU Language is the one that you train the assistant with, to identify the u
 The following are the NLU Languages supported by the platform. While most of the NLU features are supported in all languages, there are some exceptions, [see here for more details](../multi-lingual-bot-behavior){:target="_blank"}.
 
 <table border="1">
-  <tr>
-   <td>Arabic – ar
-   </td>
-   <td>Kazakh (post v7.2 release) – kk
-   </td>
-  </tr>
-  <tr>
-   <td>Chinese Simplified – zh_cn
-   </td>
-   <td>Marathi (post v9.0 release) – mr
-   </td>
-  </tr>
-  <tr>
-   <td>Chinese Traditional -zh_tw
-   </td>
-   <td>Norwegian (post v8.1 release) – nb
-   </td>
-  </tr>
-  <tr>
-   <td>Catalan (post v9.0 release) – ca
-   </td>
-   <td>Polish (post v7.0 release) – pl
-   </td>
-  </tr>
-  <tr>
-   <td>Dutch – nl
-   </td>
-   <td>Portuguese (Brazilian) – pt
-   </td>
-  </tr>
-  <tr>
-   <td>English – en
-   </td>
-   <td>Russian (post v7.0 release) – ru
-   </td>
-  </tr>
-  <tr>
-   <td>French – fr
-   </td>
-   <td>Swedish (post v7.1 release) – sv
-   </td>
-  </tr>
-  <tr>
-   <td>Finnish (post v6.4 release) – fi
-   </td>
-   <td>Slovenian – sl 
-   </td>
-  </tr>
-  <tr>
-   <td>Hindi (post v8.1 release) – hi
-   </td>
-   <td>Spanish – es
-   </td>
-  </tr>
-  <tr>
-   <td>German – de
-   </td>
-   <td>Tagalog – tl
-   </td>
-  </tr>
-  <tr>
-   <td>Indonesian – id
-   </td>
-   <td>Telugu (post v9.0 release) – te
-   </td>
-  </tr>
-  <tr>
-   <td>Italian – it
-   </td>
-   <td>Tamil (post v9.0 release) – ta
-   </td>
-  </tr>
-  <tr>
-   <td>Japanese – ja
-   </td>
-   <td>Ukrainian (post v7.0 release) – uk
-   </td>
-  </tr>
-  <tr>
-   <td>Korean – ko
-   </td>
-   <td>
-   </td>
-  </tr>
+<tr>
+<td>Arabic – ar</td>
+<td>Kazakh (post v7.2 release) – kk</td>
+</tr>
+<tr>
+<td>Chinese Simplified – zh_cn</td>
+<td>Marathi (post v9.0 release) – mr</td>
+</tr>
+<tr>
+<td>Chinese Traditional -zh_tw</td>
+<td>Norwegian (post v8.1 release) – nb</td>
+</tr>
+<tr>
+<td>Catalan (post v9.0 release) – ca</td>
+<td>Polish (post v7.0 release) – pl</td>
+</tr>
+<tr>
+<td>Dutch – nl</td>
+<td>Portuguese (Brazilian) – pt</td>
+</tr>
+<tr>
+<td>English – en</td>
+<td>Portuguese (European) - pt_pt</td>
+</tr>
+<tr>
+<td>French – fr</td>
+<td>Russian (post v7.0 release) – ru</td>
+</tr>
+<tr>
+<td>Finnish (post v6.4 release) – fi</td>
+<td>Swedish (post v7.1 release) – sv</td>
+</tr>
+<tr>
+<td>Hindi (post v8.1 release) – hi</td>
+<td>Slovenian – sl </td>
+</tr>
+<tr>
+<td>German – de</td>
+<td>Spanish – es</td>
+</tr>
+<tr>
+<td>Indonesian – id</td>
+<td>Tagalog - tl</td>
+</tr>
+<tr>
+<td>Italian – it</td>
+<td>Telugu (post v9.0 release) – te</td>
+</tr>
+<tr>
+<td>Japanese – ja</td>
+<td>Tamil (post v9.0 release) – ta</td>
+</tr>
+<tr>
+<td>Korean – ko</td>
+<td>Ukrainian (post v7.0 release) – uk</td>
+</tr>
 </table>
 
 
@@ -597,11 +455,11 @@ If the assistant fails to detect a user’s language with high confidence, it re
 
 ### Language Selection 
 
-1. The virtual assistant identifies user language from every utterance. In case a change is detected, it will get a confirmation from the user regarding the switch and will proceed as per the user response.  These standard responses can be customized using the getCurrentOptions utility, [see here for more](https://developer.kore.ai/docs/bots/advanced-topics/koreutil-libraries/#koreUtilgetCurrentOptions){target="_blank"}.  
+1. The virtual assistant identifies user language from every utterance. In case a change is detected, it will get a confirmation from the user regarding the switch and will proceed as per the user response.  These standard responses can be customized using the getCurrentOptions utility, [see here for more](../../../apis/koreutil-libraries/#koreutilgetcurrentoptions){target="_blank"}.  
   
     **Note:** The current conversation will be discarded in case the user wants to switch languages.
 
-2. Language selection settings – In addition, you may want to configure the language selection options. From the menu under the **Build** tab, click **Configurations -> Languages** Under **Language Selection Logic** (scroll down for the option), for **language selection time frame**, set to one of the following:
+2. Language selection settings – In addition, you may want to configure the language selection options. From the **App Settings** , click **Configurations -> Language Management** Under **Language Selection Logic** (scroll down for the option), for **language selection time frame**, set to one of the following:
     1. **Lifetime**: The auto-detected language will be set as the user’s preferred language and used for all subsequent communications until the user interacts in another enabled language anytime later. If the user starts to talk in another enabled language, the virtual assistant changes to that language.
     2. **Per Session**: Detects the user’s language at the beginning of every session and responds accordingly.
     3. **Every User Message**: Identifies the user’s language from every utterance. In case a change is detected, the VA will get a confirmation from the user regarding the switch and proceed as per the user response.  
