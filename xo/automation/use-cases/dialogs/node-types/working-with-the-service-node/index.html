@@ -2205,6 +2205,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Component Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-processor-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-processor Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-processor-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-processor Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -13172,6 +13196,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Component Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-processor-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-processor Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-processor-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-processor Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -13302,21 +13350,19 @@
 <h1 id="service-node">Service Node<a class="headerlink" href="#service-node" title="Permanent link">&para;</a></h1>
 <p>The Service Node is a component type in a dialog task that you can use to add an API service to make REST or SOAP requests to third-party web services. You can use this node when you have the parameters needed for the API request using an entity or other nodes to capture the user input.</p>
 <h2 id="add-the-node">Add the Node<a class="headerlink" href="#add-the-node" title="Permanent link">&para;</a></h2>
-<p>Service Nodes can only be added as part of a Bot Action node. Therefore, before you can add a Service Node, you need to add a Bot Action node. <a href="../bot-action-node/" target="_blank">Read more about Bot Action Nodes</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Post v9.0 of the XO )Platform, the Service node is categorized under the Bot Action node. For details on the Bot Action node, <a href="../bot-action-node/" target="_blank">click here</a>.</p>
-</div>
-<p>Keeping this in mind, the setup of a Service node in a dialog task involves the following steps:</p>
+<p>The setup of a Service node in a dialog task involves the following steps:</p>
 <ol>
 <li>Open the dialog task to add the Service node.</li>
-<li>Create and/or expand a Bot Action node.</li>
-<li>Add a Service node in the designated place. For steps related to adding nodes, <a href="../../using-the-dialog-builder-tool/#add-nodes" target="_blank">refer here</a>.</li>
-<li>The Service window is displayed with the <strong>Component Properties</strong> tab selected by default.</li>
 <li>
-<p>To connect a Service node to a node outside of its containing Bot Action node, please read our article about the <a href="../bot-action-node" target="_blank">Bot Action Node</a>.</p>
-<p><p id="gdcalert1" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
+<p>Add a Service node in the designated place. For steps related to adding nodes, <a href="../../using-the-dialog-builder-tool/#add-nodes" target="_blank">refer here</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can add a service node within an existing sequence or outside any existing sequence. If you add it outside, a new, untitled sequence will automatically get created containing the new Service node.</p>
+</div>
+</li>
+<li>
+<p>The Service window is displayed with the <strong>Component Properties</strong> tab selected by default.</p>
+<p><a class="glightbox" href="../images/service-node-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-img1.png" alt="Service node - Add node" title="Service node - Add node" style="border:1px solid gray;zoom:70%;"></a></p>
 </li>
 </ol>
 <h2 id="configure-the-node">Configure the Node<a class="headerlink" href="#configure-the-node" title="Permanent link">&para;</a></h2>
@@ -13340,22 +13386,35 @@
 </ol>
 </li>
 <li>
-<p>Based on the service type selected, select the <strong>Type/Sub Type</strong> from the respective drop-down lists or <strong>Auth URL</strong>.</p>
+<p>Based on the service type selected, select the <strong>Type/Sub Type</strong> from the respective drop-down lists or Auth URL.</p>
 </li>
-<li>Under the <strong>Request Definition</strong> section, click <strong>Define Request</strong>.</li>
 <li>
-<p>The <strong>Define Request for &lt; <em>ServiceXXXX</em> &gt;</strong> dialog is displayed, as shown in the following illustration.</p>
-<p><p id="gdcalert2" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<p>Define the <strong>Pre-processor Script</strong> to pass the input parameters dynamically for executing an Service Node’s API call. <a href="#pre-processor-script">Learn more</a>.</p>
+</li>
+<li>
+<p>Under the <strong>Request Definition</strong> section, click <strong>Define Request</strong>.</p>
+<p><a class="glightbox" href="../images/service-node-img2-define-request.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-img2-define-request.png" alt="Service node - Define request" title="Service node - Define request" style="border:1px solid gray;zoom:70%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In the case of a Custom Authentication Service, the Request Definition section does not apply and you can see a Response.</p>
+<p>In the case of a <strong>Custom Authentication Service</strong> service type, the Request Definition section does not apply and you can see a Response.</p>
 </div>
-<p><p id="gdcalert3" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+</li>
+<li>
+<p>The <strong>Define Request for &lt; <em>ServiceXXXX</em> &gt;</strong> dialog is displayed, as shown in the following illustration.</p>
+<p><a class="glightbox" href="../images/service-node-img3-define-request-dialog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-img3-define-request-dialog.png" alt="Service node - Define request dialog" title="Service node - Define request dialog" style="border:1px solid gray;zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click the <strong>Auth</strong> tab to create a new Authorization Profile or select an existing profile. For more information, see the <a href="../../../../../app-settings/dev-tools/bot-authorization/bot-authentication/">Bot Authorization Overview</a> article.</p>
+</li>
+<li>
+<p>Define the Post-processor Script to fetch the API response parameters using the Service Node and define the dialog flow. <a href="#post-processor-script">Learn more</a>.</p>
+</li>
+<li>
+<p>Add the sample response(s) you want the Service Node to return.</p>
+<p><a class="glightbox" href="../images/service-node-img4-sample-response.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-img4-sample-response.png" alt="Service node - Sample response" title="Service node - Sample response" style="border:1px solid gray;zoom:70%;"></a></p>
 <p>Depending on the Service Type selected, refer to one of the following sections in this topic:</p>
 <ol>
-<li><a href="../working-with-the-service-node/#custom" target="_blank">Defining a Custom Service</a></li>
+<li><a href="#custom">Defining a Custom Service</a></li>
 <li><a href="#define-a-url-to-convert-to-image">Defining a URL to Convert to Image</a></li>
 <li><a href="#define-html-to-convert-to-image">Defining HTML to Convert to Image</a></li>
 <li><a href="#define-an-alert-subscription-service">Defining Alert Subscription Service</a></li>
@@ -13372,8 +13431,7 @@
 <li><strong>Close the Task and trigger Task Execution Failure Event</strong>, or</li>
 <li><strong>Continue with the task and transition to this node</strong>; select the node to which the service call can transition in the flow.</li>
 </ul>
-<p><p id="gdcalert4" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/service-node-img5-timeout-error-handling.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-img5-timeout-error-handling.png" alt="Service node - Timeout Error handling" title="Service node - Timeout Error handling" style="border:1px solid gray;zoom:70%;"></a></p>
 </li>
 </ol>
 </li>
@@ -13381,6 +13439,34 @@
 <p>In the <strong>Variable Namespaces</strong> section, associate the variable namespaces to execute this node and its transitions. This option is visible only when the Variable Namespace is enabled for the VA. You can go with the task level settings or customize it for this node. For more information, refer to <a href="../../../../../app-settings/managing-namespace" target="_blank">Managing Namespace</a>.</p>
 </li>
 </ol>
+<h4 id="pre-processor-script">Pre-processor Script<a class="headerlink" href="#pre-processor-script" title="Permanent link">&para;</a></h4>
+<p>The Pre-processor Script helps execute a custom JavaScript code within the Service Node to manipulate existing values or set new ones within the context and pass the input parameters dynamically for executing an API call using the Service Node. It works similarly to the Script Node. <a href="#configure-the-node">Learn more</a>.</p>
+<p>With the Pre-processor Script, the Platform does not have to process additional Script nodes to execute a single service node.</p>
+<p>Steps to Configure a Pre-processor Script</p>
+<ol>
+<li>Open the dialog task.</li>
+<li>In the dialog builder, click the required Service Node.</li>
+<li>
+<p>In the <strong>Component Properties</strong> window, click <strong>Define Script</strong> in the Pre-processor/Post-processor Script section.</p>
+<p><a class="glightbox" href="../images/service-node-img6-define-script-pre-and-post-processor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-img6-define-script-pre-and-post-processor.png" alt="Service node - Pre-processor script" title="Service node - Pre-processor script" style="border:1px solid gray;zoom:70%;"></a></p>
+</li>
+<li>
+<p>In the Add Script window, add the script you want to execute, and click <strong>Save</strong>.</p>
+<p><a class="glightbox" href="../images/service-node-img7-add-script-to-service-node.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-img7-add-script-to-service-node.png" alt="Service node - Add Pre-processor script" title="Service node - Add Pre-processor script" style="border:1px solid gray;zoom:70%;"></a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pre-processor Script is available for all the existing service nodes (treated as an empty script node) and does not have any JavaScript defined.</p>
+</div>
+<h4 id="post-processor-script">Post-processor Script<a class="headerlink" href="#post-processor-script" title="Permanent link">&para;</a></h4>
+<p>The <strong>Post-processor Script</strong> executes the defined JavaScript code following the execution of the service node.</p>
+<p>Using this property, developers can fetch and store only the required Service Node API response parameters in the context object and define the dialog execution flow. The Post-processor Script has the same properties as the Script Node. <a href="#configure-the-node">Learn more</a>.</p>
+<p>The steps to configure a Post-processor Script are the same as the Pre-processor Script. Click <a href="#pre-processor-script">here</a> to learn more.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Post-processor is available for all the existing service nodes (treated as an empty script node) and does not have any JavaScript defined.</p>
+</div>
 <h3 id="instance-properties">Instance Properties<a class="headerlink" href="#instance-properties" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -13391,26 +13477,16 @@
 <li>On the Service node properties panel, click the <strong>Instance Properties</strong> tab.</li>
 <li>
 <p>Under the <strong>Custom Tags</strong> section, add tags to build custom profiles of your VA’s conversations. <a href="../../../../../analytics/automation/custom-dashboard/custom-meta-tags" target="_blank">Click here for more</a>.</p>
-<p><p id="gdcalert5" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/service-node-img8-instance-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-img8-instance-properties.png" alt="Service node - Instance properties" title="Service node - Instance properties" style="border:1px solid gray;zoom:70%;"></a></p>
 </li>
 </ol>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
-<p>Since they are contained within Bot Action nodes, Service nodes cannot be connected on their own to any other nodes outside the Bot Action node to which they belong. Connections can only be made with nodes contained within the same Bot Action node. </p>
-<p>From the node’s <strong>Connection Properties</strong> tab, you can configure the following:</p>
-<ul>
-<li><strong>Service Node Connections</strong>: The node within the Bot Action to execute next, after the Service node runs. </li>
-<li><strong>Bot Action Connections</strong>, where you can update the node to trigger after the Bot Action group is executed. Updates made here will apply to all nodes within the same Bot Action. </li>
-</ul>
-<p>For both connection types you can write conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use Intents for transitions. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The conditions configured here are applicable only for this instance and will not affect this node when being used in any other dialog.</p>
 </div>
 <p>To set up node connection conditions, please follow the steps outlined in <a href="../../node-connections/nodes-conditions" target="_blank">Adding IF-Else Conditions to Node Connections. </a></p>
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/service-node-img9-connection-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-img9-connection-properties.png" alt="Service node - Connection properties" title="Service node - Connection properties" style="border:1px solid gray;zoom:70%;"></a></p>
 <h2 id="service-types">Service Types<a class="headerlink" href="#service-types" title="Permanent link">&para;</a></h2>
 <p>You can define the Service Type as:</p>
 <ul>
@@ -13631,9 +13707,7 @@
 </span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>&lt;/html&gt;
 </span></code></pre></div>
 <p>The preceding HTML example, when table rows are added into the example, can render the following image to an end-user.</p>
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/service-node-img10-html-to-image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/service-node-img10-html-to-image.png" alt="Service node - HTML to Image" title="Service node - HTML to Image" style="border:1px solid gray;zoom:70%;"></a></p>
 <h3 id="define-an-alert-subscription-service">Define an Alert Subscription Service<a class="headerlink" href="#define-an-alert-subscription-service" title="Permanent link">&para;</a></h3>
 <p>You can now automatically subscribe your users to send contextually relevant alerts as part of the dialog journey. For example, a person booking a flight ticket for a specific date is auto-subscribed to get regular updates on the weather forecast for the destination city.</p>
 <p>To set up an alert subscription service, follow the below steps:</p>
