@@ -10351,45 +10351,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="API Rate Limit Matrix">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#an-example-of-rate-limit-enforcement" class="md-nav__link">
-    <span class="md-ellipsis">
-      An Example of Rate Limit Enforcement
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="An Example of Rate Limit Enforcement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scenario" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-timeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Timeline
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -13064,45 +13025,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="API Rate Limit Matrix">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#an-example-of-rate-limit-enforcement" class="md-nav__link">
-    <span class="md-ellipsis">
-      An Example of Rate Limit Enforcement
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="An Example of Rate Limit Enforcement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scenario" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-timeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Timeline
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -13203,18 +13125,6 @@ NLP Training Status APIs<br><a href="../ml-utterances-import-status/" target="_b
   </tr>
 </table>
 
-<h3 id="an-example-of-rate-limit-enforcement">An Example of Rate Limit Enforcement<a class="headerlink" href="#an-example-of-rate-limit-enforcement" title="Permanent link">&para;</a></h3>
-<h4 id="scenario"><strong>Scenario</strong><a class="headerlink" href="#scenario" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>Runtime API Rate Limits</strong>: 600 requests/60 seconds and 18,000 requests/3600 seconds.</li>
-<li><strong>Starting Point</strong>: An application begins requesting the API at 12:00 PM.</li>
-</ul>
-<h3 id="example-timeline"><strong>Example Timeline</strong><a class="headerlink" href="#example-timeline" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>12:00 PM - 12:01 PM</strong>: The application sends 600 requests in the first minute<br>. It has now hit the 60-second limit but is well within the 1-hour limit. The 61<sup>st</sup>-second request is evaluated against both windows. It's allowed if the total requests in the last 60 seconds are under 600 and the total requests in the last 3600 seconds are under 18,000.</li>
-<li><strong>12:01 PM - 12:30 PM</strong>: Each new request is checked against both limits. The requests are allowed if they don't push the total over 600 in any 60-second window or over 18,000 in the ongoing 1-hour window.</li>
-<li><strong>At 12:30 PM</strong>: If the application continues to send requests at the same rate, hitting the 60-second limit each minute<br>. By 12:30 PM, the application had sent a total of 18,000 requests (600 requests/minute<br> multiplied by 30 minute<br>s), thus exceeding the 1-hour limit before the hour was up. Additional requests are now denied, even if they fall within the 600 requests/minute<br> limit because the 1-hour limit has been breached.</li>
-</ol>
 <h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Spread out calls evenly to avoid traffic spikes.</li>
