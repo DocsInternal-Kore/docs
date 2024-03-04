@@ -13116,8 +13116,7 @@
 <h1 id="process-nodes">Process Nodes<a class="headerlink" href="#process-nodes" title="Permanent link">&para;</a></h1>
 <p>Process nodes are used to connect a Dialog Task to a Process App that has been created within the XO Platform. </p>
 <p>In this article you will learn about working with the Process Node within a Dialog Task. Please see the <a href="https://developer.kore.ai/process-assistants/" target="_blank">Process Assistant documentation</a> to learn more about working with this component of the XO Platform.</p>
-<p>Process nodes can only be added as part of a Bot Action node. Therefore, before you can add a Process node, you need to add a Bot Action node. <a href="../bot-action-node/" target="_blank">Read more about Bot Action Nodes.</a></p>
-<p>Keeping this in mind, the setup of a Process node in a Dialog Task involves the following steps:</p>
+<p>The setup of a Process node in a Dialog Task involves the following steps:</p>
 <h2 id="add-the-node">Add the Node<a class="headerlink" href="#add-the-node" title="Permanent link">&para;</a></h2>
 <p>To add a Process node, please follow the steps below:</p>
 <ol>
@@ -13148,13 +13147,7 @@
 </ol>
 <p><a class="glightbox" href="../images/process-node-component-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/process-node-component-properties.png" alt="Process node - Component properties" title="Process node - Component Properties" style="border:1px solid gray;zoom:70%;"></a></p>
 <h3 id="connection-properties">Connection Properties<a class="headerlink" href="#connection-properties" title="Permanent link">&para;</a></h3>
-<p>Since they are contained within Bot Action nodes, Process nodes cannot be connected on their own to any other nodes outside the Bot Action node to which they belong. Connections can only be made with nodes contained within the same Bot Action node.  </p>
-<p>From the node’s <strong>Connection Properties</strong> tab, you can configure the following:</p>
-<ol>
-<li><strong>Process Node Connections</strong>: The node within the Bot Action to execute next, after the Process node runs. </li>
-<li><strong>Bot Action Connections</strong>, where you can update the node to trigger after the Bot Action group is executed. Updates made here will apply to all nodes within the same Bot Action. </li>
-</ol>
-<p>For both connection types you can write conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use Intents for transitions. </p>
+<p>You can write conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use Intents for transitions. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The conditions configured here are applicable only for this instance and will not affect this node when being used in any other dialog.</p>
