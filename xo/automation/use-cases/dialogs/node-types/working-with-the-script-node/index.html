@@ -13255,8 +13255,7 @@
 </ul>
 <p>When you test a dialog in the Bot Builder, script node errors are displayed in the <strong>Error in Script Node</strong> dialog with the line number and column number, along with the associated Context object. You can update and test the script directly in the <strong>Error in Script Node</strong> dialog as shown in the following illustration.</p>
 <h2 id="add-the-node">Add the Node<a class="headerlink" href="#add-the-node" title="Permanent link">&para;</a></h2>
-<p>Script nodes can only be added as part of a Bot Action node. Therefore, before you can add a Script node, you need to add a Bot Action node. <a href="../bot-action-node/" target="_blank">Read more about Bot Action Nodes</a>.</p>
-<p>Keeping this in mind, the setup a Script node in a dialog task involves the following steps:</p>
+<p>The setup a Script node in a dialog task involves the following steps:</p>
 <ol>
 <li><strong>Select the Virtual Assistant</strong> you want to work with.</li>
 <li><strong>Open the dialog task</strong> to add the Script node to.</li>
@@ -13264,10 +13263,14 @@
 <li>The Script window is displayed with the <strong>Component Properties</strong> tab selected by default.</li>
 <li>
 <p>You can configure the <strong>Connection Properties,</strong> <a href="#connections-properties">refer here for details</a>.</p>
-<p><p id="gdcalert1" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/script-node.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/script-node.png" alt="Script node" title="Script node" style="border:1px solid gray;zoom:70%;"></a></p>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="language-text highlight"><pre><span></span><code>You can add a script node within an existing sequence or outside any existing sequence. If you add it outside, a new, untitled sequence will automatically get created containing the new script node.
+</code></pre></div>
+</div>
 <h2 id="configure-the-node">Configure the Node<a class="headerlink" href="#configure-the-node" title="Permanent link">&para;</a></h2>
 <h3 id="component-properties">Component Properties<a class="headerlink" href="#component-properties" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
@@ -13281,8 +13284,7 @@
 <li>On the <strong>Add Script</strong> dialog box, enter your JavaScript; then click <strong>Save</strong>. <a href="#javascript-examples">See below for JavaScript code examples</a>.</li>
 <li>
 <p>In the <strong>Variable Namespaces</strong> section, associate the variable namespaces to execute this node and its transitions. This option is visible only when the variable namespace is enabled for the bot. You can go with the task level settings or customize it for this node. For more information, refer to <a href="../../../../../app-settings/managing-namespace" target="_blank">Managing Namespace</a>.</p>
-<p><p id="gdcalert2" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/script-node-component-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/script-node-component-properties.png" alt="Script node - Component properties" title="Script node - Component properties" style="border:1px solid gray;zoom:70%;"></a></p>
 </li>
 </ol>
 <h3 id="instance-properties">Instance Properties<a class="headerlink" href="#instance-properties" title="Permanent link">&para;</a></h3>
@@ -13295,8 +13297,7 @@
 <li>On the Script node properties panel, click the <strong>Instance Properties</strong> tab.</li>
 <li>
 <p>Under the <strong>Custom Tags</strong> section, add tags to build custom profiles of your VA’s conversations. <a href="../../../../../analytics/automation/custom-dashboard/custom-meta-tags" target="_blank">Click here for more</a>.</p>
-<p><p id="gdcalert3" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/script-node-instance-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/script-node-instance-properties.png" alt="Script node - Instance properties" title="Script node - Instance properties" style="border:1px solid gray;zoom:70%;"></a></p>
 </li>
 </ol>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
@@ -13312,14 +13313,10 @@
 <p>The conditions configured here are applicable only for this instance and will not affect this node when being used in any other dialog.</p>
 </div>
 <p>To set up node connection conditions, please follow the steps outlined in <a href="../../node-connections/nodes-conditions" target="_blank">Adding IF-Else Conditions to Node Connections. </a></p>
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/script-node-connection-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/script-node-connection-properties.png" alt="Script node - Connection properties" title="Script node - Connection properties" style="border:1px solid gray;zoom:70%;"></a></p>
 <h2 id="javascript-examples">JavaScript Examples<a class="headerlink" href="#javascript-examples" title="Permanent link">&para;</a></h2>
 <p>Using JavaScript, you can customize your dialog task by processing data before or after an API call. For example, directing the dialog task flow. You can use the <code>Context</code> object type-ahead feature to identify and select dynamic variables as shown in the following illustration. For more information, refer to <a href="../../../context-object/" target="_blank">Context Object</a>.</p>
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/script-node-js-example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/script-node-js-example.png" alt="Script node - Javascript Example" title="Script node - Javascript Example" style="border:1px solid gray;zoom:70%;"></a></p>
 <h3 id="manipulating-data">Manipulating Data<a class="headerlink" href="#manipulating-data" title="Permanent link">&para;</a></h3>
 <p>In JavaScript, you can fetch data from the session data using session variables. For example, you can GET the user ID using <code>context.session.UserContext.identities</code>, and then PUT the data into <code>context</code> as shown in the following example.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>var x = context.session.UserContext.identities;

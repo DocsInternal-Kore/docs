@@ -13165,7 +13165,7 @@
 <li>On the <strong>Component Properties</strong> tab, under the <strong>General Settings</strong> section, you can modify the <strong>Name</strong> and <strong>Display Name</strong>.</li>
 <li>In the <strong>Variable Namespaces</strong> section (v8.0), associate the variable namespaces to execute this node and its transitions. This option is visible only when the variable namespace is enabled for the assistant. You can go with the task level settings or customize it for this node. For more information, refer to <a href="../../../../../app-settings/managing-namespace" target="_blank">Managing Namespace</a>.</li>
 <li>
-<p>Use the <strong>Manage Context Variables</strong> section to set the context variables by entering a key-value pair. Use the full path of the variable in the <em>key</em> field i.e. <code><em>context.BotUserSession.&lt;variable_name&gt;.</em></code></p>
+<p>Use the <strong>Manage Context Variables</strong> section to set the context variables by entering a key-value pair. Use the full path of the variable in the <em>key</em> field i.e. <code>context.BotUserSession.&lt;variable_name&gt;.</code></p>
 <p><a class="glightbox" href="../images/logic-node-img2-component-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/logic-node-img2-component-properties.png" alt="Logic node - Component Properties" title="Logic node - Component Properties" style="border:1px solid gray;zoom:70%;"></a></p>
 </li>
 </ol>
@@ -13183,13 +13183,6 @@
 </li>
 </ol>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
-<p>Since they are contained within Bot Action nodes, Logic nodes cannot be connected on their own to any other nodes outside the Bot Action node to which they belong. Connections can only be made with nodes contained within the same Bot Action node. </p>
-<p>From the node’s Connection Properties tab, you can configure the following:</p>
-<ul>
-<li><strong>Logic Node Connections</strong>: The node within the Bot Action to execute next, after the Logic node runs. </li>
-<li><strong>Bot Action Connections</strong>, where you can update the node to trigger after the Bot Action group is executed. Updates made here will apply to all nodes within the same Bot Action. Please read our article about the Bot Action Node to learn more.</li>
-</ul>
-<p>For both connection types you can write conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use Intents for transitions. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The conditions configured here are applicable only for this instance and will not affect this node when being used in any other dialog.</p>
