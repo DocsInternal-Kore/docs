@@ -13492,7 +13492,7 @@
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
 </span></code></pre></div>
 <p><a class="glightbox" href="../images/web-mobile-message-templates/error-template.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Error template" src="../images/web-mobile-message-templates/error-template.png" title="Error template" /></a></p>
-<h3 id="attachment-template"><strong>Attachment Template</strong><a class="headerlink" href="#attachment-template" title="Permanent link">&para;</a></h3>
+<h3 id="attachment-template">Attachment Template<a class="headerlink" href="#attachment-template" title="Permanent link">&para;</a></h3>
 <p>Provides support to display images, render videos, links and play audio files to a user based on specified URL links.</p>
 <p>The following formats are supported for attachment template:</p>
 <ul>
@@ -13500,10 +13500,13 @@
 <li>video = [‘mp4’, ‘mov’, ‘3gp’, ‘flv’]</li>
 <li>image = [‘png’, ‘jpg’, ‘jpeg’, ‘.GIF’]</li>
 </ul>
-<p><strong>Note</strong>: To display images in the attachment template use the “url” of the image.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>To display images in the attachment template use the “url” of the image.</p>
 <p><strong>Examples</strong></p>
 <p><strong>Audio Template:</strong></p>
-<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="p">{</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="p">{</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;message&quot;</span><span class="p">,</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">         </span><span class="s2">&quot;payload&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">          </span><span class="s2">&quot;text&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -13512,7 +13515,7 @@
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
 </span></code></pre></div>
-<a class="glightbox" href="../images/web-mobile-message-templates/attachment-template.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Attachment template" src="../images/web-mobile-message-templates/attachment-template.png" title="attachment template" /></a></p>
+<p><a class="glightbox" href="../images/web-mobile-message-templates/attachment-template.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Attachment template" src="../images/web-mobile-message-templates/attachment-template.jpg" title="attachment template" /></a></p>
 <p><strong>Image Template</strong></p>
 <p>To view image, use the following JS script:</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -13523,7 +13526,7 @@
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
 </span></code></pre></div>
-<p><a class="glightbox" href="../images/web-mobile-message-templates/attachment-template-image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Attachment template" src="../images/web-mobile-message-templates/attachment-template-image.png" title="attachment template" /></a></p>
+<p><a class="glightbox" href="../images/web-mobile-message-templates/attachment-template-image.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Attachment template" src="../images/web-mobile-message-templates/attachment-template-image.jpg" title="attachment template" /></a></p>
 <p><strong>Video Template</strong></p>
 <p>You can either download or watch the video directly in the assistant window.</p>
 <p>To download and watch the video, use this JS script:</p>
@@ -13536,7 +13539,7 @@
 </span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
 </span></code></pre></div>
-<a class="glightbox" href="../images/web-mobile-message-templates/attachment-template-video.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Attachment template" src="../images/web-mobile-message-templates/attachment-template-video.png" title="attachment template" /></a></p>
+<a class="glightbox" href="../images/web-mobile-message-templates/attachment-template-video.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Attachment template" src="../images/web-mobile-message-templates/attachment-template-video.jpg" title="attachment template" /></a></p>
 <p>To play the video within the assistant window, use this JS script:</p>
 <p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">   </span><span class="p">{</span>
@@ -13548,7 +13551,7 @@
 </span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="p">}</span>
 </span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nx">print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
 </span></code></pre></div>
-<a class="glightbox" href="../images/web-mobile-message-templates/attachment-template-playback.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Attachment template" src="../images/web-mobile-message-templates/attachment-template-playback.png" title="attachment template" /></a></p>
+<a class="glightbox" href="../images/web-mobile-message-templates/attachment-template-playback.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Attachment template" src="../images/web-mobile-message-templates/attachment-template-playback.jpg" title="attachment template" /></a></p>
 <h3 id="text-template">Text Template<a class="headerlink" href="#text-template" title="Permanent link">&para;</a></h3>
 <p>Shows messages to the user using XO Platform defined default formatting. \
 <strong>Example</strong></p>
