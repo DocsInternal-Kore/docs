@@ -14550,9 +14550,7 @@ TKT-1234
 <div class="admonition note">
 <p>You can also choose to present the list of values as part of the entity prompt to the user. For this, you need to set the <strong>Display List of Values</strong> to <em>‘Yes, use channel specific standard formatting for default messages and show available list of values to end user’</em>. This option works only with the <strong>Plain Text</strong> prompts. This list will not be presented if <strong>JavaScript</strong> based templates are used as prompts.</p>
 </div>
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/entity-types-list-of-item-enum-display-values.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/entity-types-list-of-item-enum-display-values.png" alt="Display list of values" title="Display list of values" style="border:1px solid gray;zoom:70%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The ‘<strong>Display List of Values</strong>’ option is available only for the <a href="#list-of-items-enumerated">List of Items (enumerated)</a>. It is <strong>NOT</strong> available for the <a href="#list-of-items-lookup">List of Items (lookup)</a>.</p>
@@ -14590,8 +14588,7 @@ TKT-1234
 </li>
 <li>
 <p><strong>Upload File</strong> – Click <strong>Upload File</strong> to locate a JSON formatted file list or a .csv file formatted list of key/value pairs. For example,  </p>
-<p><p id="gdcalert2" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/entity-types-list-of-item-lookup-upload-file.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/entity-types-list-of-item-lookup-upload-file.png" alt="Upload file containing key/value pairs" title="Upload file containing key/value pairs" style="border:1px solid gray;zoom:70%;"></a></p>
 </li>
 </ul>
 <p>Post v7.1, the following keys are added to the context object for the below-mentioned usage:</p>
@@ -14642,8 +14639,7 @@ The external service invoked must have a provision to accept and handle the user
 <li><em>Synonyms Key</em> – The field containing the synonyms for this field, if any. This is the value that the user refers to. For example, in response to the disambiguation question. This can be accessed using <code>{{context.entities.&amp;lt;entity-name&gt;.synonym}}</code>.</li>
 <li>
 <p><em>Matched Word Index</em> – To indicate the words in the <em>inputData</em> that were used for entity extraction (in the same format as the <em>usedUp</em> value in the context.inputData object). This is used by the platform to mark the word as used in the user utterance.</p>
-<p><p id="gdcalert3" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/entity-types-list-of-items-lookup-setup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/entity-types-list-of-items-lookup-setup.png" alt="List of item(Lookup) Setup" title="List of item(Lookup) Setup"style="border:1px solid gray;zoom:70%;"></a></p>
 </li>
 </ol>
 </li>
@@ -14972,7 +14968,7 @@ The external service invoked must have a provision to accept and handle the user
 <p>Works identical to the <a href="#description">Description entity type</a> but limited to one sentence.</p>
 <p>There won’t be any validations done on the user utterance for string entities unless trained. Hence this entity type is used as a last resort when your requirement is not met with any of the platform supported entity types.</p>
 <h3 id="time">Time<a class="headerlink" href="#time" title="Permanent link">&para;</a></h3>
-<p>Capture time in a user utterance. For example, <em>Set my alarm for 6 am</em>, return the value of Time in ISO 8601 time format as hh<img alt="🇲🇲" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f1f2-1f1f2.svg" title=":mm:" />ss.sZD.  </p>
+<p>Capture time in a user utterance. For example, <em>Set my alarm for 6 am</em>, return the value of Time in ISO 8601 time format as HH:MM:SS.sZD.  </p>
 <p>It recognizes the following denotations:</p>
 <ul>
 <li>am, a.m., AM, pm, p.m., PM, P.M.</li>
@@ -15000,11 +14996,11 @@ The external service invoked must have a provision to accept and handle the user
 </span></code></pre></div>
 <h3 id="zip-code">Zip Code<a class="headerlink" href="#zip-code" title="Permanent link">&para;</a></h3>
 <p>Captures a US zip code from the user utterance. For example, <em>What is the weather for 32746?</em> The value for <strong>Zip Code</strong> is 32746 and is returned as a string.</p>
-<p>```
-"entities":
-{
-"ZipcodeEntity": "32746"
-}</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>&quot;entities&quot;:
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>{
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>&quot;ZipcodeEntity&quot;: &quot;32746&quot;
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>}
+</span></code></pre></div>
 
 
 
