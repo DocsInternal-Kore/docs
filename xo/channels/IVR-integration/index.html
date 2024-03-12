@@ -13205,38 +13205,47 @@
 <li>Locate and click the <strong>IVR</strong> under Voice Channels. The IVR Panel with <strong>Instructions</strong> is displayed.
   <a class="glightbox" href="../images/third-party-voice.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR panel" src="../images/third-party-voice.png" title="IVR panel" /></a></li>
 <li>On the <strong>Configurations</strong> tab, perform the following steps:</li>
-<li>Use <strong>Kore.ai IVR Sandbox</strong> for testing your VA. See <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#ivr-sandbox">Sandbox Configuration </a>for more details.</li>
+<li>
+<p>Use <strong>Kore.ai IVR Sandbox</strong> for testing your VA. See <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#ivr-sandbox">Sandbox Configuration </a>for more details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you save the configuration after associating  an app without enabling IVR Settings, the  platform pre-populates the required settings for Sandbox.      </p>
+</div>
+<ol>
 <li>Associate an App with the IVR channel, either by creating a new one or selecting an existing one. If you do not have any apps, a message is displayed as shown in the following screenshot.
  <a class="glightbox" href="../images/IVR-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="associate app" src="../images/IVR-4.png" title="associate app" /></a></li>
-<li>Use the <strong>WebHook URL</strong> provided in your external application.</li>
-<li>Enter the details to complete the setup, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Channel_Settings">Voice Call Properties: Channel Settings</a> for more information.
- <a class="glightbox" href="../images/IVR-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Webhook URL" src="../images/IVR-5.png" title="Webhook URL" /></a></li>
-<li>From the <strong>Voice Call Properties</strong> tab, set the configurations.</li>
-<li>The Platform supports all UniMRCP-encoded voice-to-text services. If you select the <strong>Enable Transcription</strong> option for the VA, then the platform allows you to skip defining grammar during configuring IVR settings for any node (described in <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#Configure_Dialog_Node_IVR_Properties">Configure Dialog Node IVR Properties</a>).
-See <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Configuring_Grammar">Voice Call Properties: Configuring Grammar</a> for a detailed configuration for Grammar syntax.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you already have created apps, then select an app from the Select App drop-down or create a new app. See Sandbox Configuration steps to know more.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you have enabled IVR Sandbox, the following settings are required to be configured on the platform. These are pre-populated if you do not enable the IVR settings. In case you have enabled the settings, ensure the values are the same as follows:
+</li>
+<li>
+<p>Use the <strong>WebHook URL</strong> provided in your external application.</p>
+</li>
+<li>
+<p>Enter the details to complete the setup, see <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Channel_Settings">Voice Call Properties: Channel Settings</a> for more information.
+ <a class="glightbox" href="../images/IVR-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Webhook URL" src="../images/IVR-5.png" title="Webhook URL" /></a></p>
+</li>
+<li>From the <strong>Voice Call Properties</strong> tab, set the configurations.
+ <a class="glightbox" href="../images/IVR-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR Sandbox" src="../images/IVR-6.png" title="IVR" /></a>
+ <a class="glightbox" href="../images/IVR-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR data" src="../images/IVR-7.png" title="image_tooltip" /></a></li>
+</ol>
+<p>!!! note</p>
+<div class="language-text highlight"><pre><span></span><code>  If you have enabled IVR Sandbox, the following settings are required to be configured on the platform. These are pre-populated if you do not enable the IVR settings. In case you have enabled the settings, ensure the values are the same as follows:
  – Enable Transcription set to Yes.
  – Transcription engine source set to builtin:speech/transcribe.
  – IVR Data Extraction Key set to user input.
  – ASR Confidence Threshold Key set to userinput confidence.
- – ASR Threshold Confidence set to 50.</p>
-</div>
-<p><a class="glightbox" href="../images/IVR-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR Sandbox" src="../images/IVR-6.png" title="IVR Sandbox" /></a>
-   <a class="glightbox" href="../images/IVR-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR data" src="../images/IVR-7.png" title="image_tooltip" /></a></p>
+ – ASR Threshold Confidence set to 50.
+</code></pre></div>
+<ol>
+<li>The Platform supports all UniMRCP-encoded voice-to-text services. If you select the <strong>Enable Transcription</strong> option for the VA, then the platform allows you to skip defining grammar during configuring IVR settings for any node (described in <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/#Configure_Dialog_Node_IVR_Properties">Configure Dialog Node IVR Properties</a>).
+See <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Configuring_Grammar">Voice Call Properties: Configuring Grammar</a> for a detailed configuration for Grammar syntax.</li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Sandbox may not respond as expected if you use different values.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you save the configuration after associating  an app without enabling IVR Settings, the  platform pre-populates the required settings for Sandbox.</p>
 </div>
 <p>Once you have enabled the IVR channel, configure the <strong>Telephony Welcome Event</strong> in IVR Settings. This plays a welcome message for users when they connect to the VA through the IVR channel.</p>
 <p>Steps to configure Telephony Welcome Event:</p>
