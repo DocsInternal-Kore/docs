@@ -13013,15 +13013,17 @@
 <p>After creating the service, make note of the <strong>Service SID</strong> of this service and enter it in the <strong>Configurations</strong> tab of the Twilio SMS channel page.</p>
 </li>
 <li>Under <strong>Inbound Settings</strong> section, select the <strong>Process Inbound Messages</strong> option and update the <strong>Request URL</strong> and <strong>Fallback URL</strong> fields with the information provided in <strong>Configurations</strong> tab of the Twilio SMS channel page.</li>
-<li>Under <strong>Outbound Settings</strong>, update the <strong>Status Callback Request URL</strong> field with the information provided in the <strong>Configurations</strong> tab.
-<a class="glightbox" href="../images/twilio4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio4.png" alt="Twilio Inbound Settings" title="Twilio Inbound Settings" style="border: 1px solid gray; zoom:70%;"></a></li>
-</ol>
+<li>
+<p>Under <strong>Outbound Settings</strong>, update the <strong>Status Callback Request URL</strong> field with the information provided in the <strong>Configurations</strong> tab.
+<a class="glightbox" href="../images/twilio4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/twilio4.png" alt="Twilio Inbound Settings" title="Twilio Inbound Settings" style="border: 1px solid gray; zoom:70%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The Callback URL now includes the <strong><em>streamid</em></strong> in the API request to identify the virtual assistant being accessed. When an incoming request is qualified with this identifier, it helps with traceability, troubleshooting, and remediation at the network level during anomalies like malicious calls or unusual bot activity.    </p>
 </div>
-<ol>
-<li>Under <strong>Copilot Features</strong> section, make sure that <strong>Sticky Sender</strong>, <strong>MMS Converter</strong>, <strong>Scaler</strong>, <strong>Short Code Reroute, **and</strong> Country Code Geomatch** options are enabled.</li>
+<p>The Callback URL now includes the <strong><em>streamid</em></strong> in the API request to identify the virtual assistant being accessed. When an incoming request is qualified with this identifier, it helps with traceability, troubleshooting, and remediation at the network level during anomalies like malicious calls or unusual bot activity.    </p>
+</li>
+<li>
+<p>Under <strong>Copilot Features</strong> section, make sure that <strong>Sticky Sender</strong>, <strong>MMS Converter</strong>, <strong>Scaler</strong>, <strong>Short Code Reroute,</strong> and <strong>Country Code Geomatch</strong> options are enabled.</p>
+</li>
 <li><strong>Save</strong> your changes and proceed.</li>
 <li>
 <p>To add a number, go to the <strong>Numbers</strong> section and associate a Twilio Phone Number to this bot. If you do not have a Twilio Number, you must buy one.
