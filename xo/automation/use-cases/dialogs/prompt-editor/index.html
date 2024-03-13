@@ -13197,15 +13197,10 @@
 <li><strong>Channel-Specific</strong>: Optionally, define user prompts for specific channels such as email, SMS, Twitter, and more. Different widgets can be used based on channels such as a slider for numbers, date and time picker, and range selectors.</li>
 </ul>
 <h2 id="prompt-editor">Prompt Editor<a class="headerlink" href="#prompt-editor" title="Permanent link">&para;</a></h2>
-<p>The prompt editor has three tabs to offer the following features:</p>
-<ul>
-<li><strong>Simple</strong>: Basic editor controls and HTML to define and format the user prompt. Enter text, and then format it using buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting lines.</li>
-<li><strong>Advanced</strong>: Advanced JavaScript editor to define, format, and render the user prompt.</li>
-<li><strong>Preview</strong>: View a sample of the rendered output message with markup as displayed to the end-user.</li>
-</ul>
-<p>Below is the JavaScript message from the <em>Book Flights</em> VA that presents the response from a weather API to the users in a custom format:</p>
-<p><a class="glightbox" href="../images/prompt-editor-user-prompt-javascript.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/prompt-editor-user-prompt-javascript.png" alt="Response from Weather API" title="Response from Weather API" style="border:1px solid gray;zoom:70%;"></a></p>
-<p>In the case of <strong>Error Prompts</strong>, if you have enabled the <em>Present Prompts</em> in the <strong>Order of Retries</strong> toggle, the handlebar icon will be visible before each error prompt message. You can use this to re-order the messages so that it is displayed in that sequence.</p>
+<p>You can create a user prompt or error prompt using any of the available templates (explained below).</p>
+<p><a class="glightbox" href="../images/prompt-editor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/prompt-editor.png" alt="Prompt editor" title="Prompt Editor" style="border:1px solid gray; zoom:70%;"></a></p>
+<p>In the case of <strong>Error Prompts</strong>, if you have enabled the <em>Present Prompts in the <strong>Order of Retries</strong></em> toggle, the handlebar icon will be visible before each error prompt message. You can use this to re-order the messages so that it is displayed in that sequence.</p>
+<p><a class="glightbox" href="../images/prompt-editor-present-prompts-in-order-of-retries.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/prompt-editor-present-prompts-in-order-of-retries.png" alt="Prompt editor - Present prompts in Order of Retries" title="Prompt Editor - Present prompts in Order of Retries" style="border:1px solid gray; zoom:70%;"></a></p>
 <h2 id="configure-the-user-prompt">Configure the User Prompt<a class="headerlink" href="#configure-the-user-prompt" title="Permanent link">&para;</a></h2>
 <p>You can add or edit the prompts or VA messages from the <strong>Component Properties</strong> tab of an Entity, Confirmation, or Message node.
 In the case of Entity and Confirmation nodes, you refer to Prompts whereas, for the Message node, they are referred to as Responses.</p>
@@ -13253,6 +13248,10 @@ In the case of Entity and Confirmation nodes, you refer to Prompts whereas, for 
 </li>
 </ol>
 <p>To add any more VA responses, repeat from step 4b.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In case of <strong>Error prompts</strong>, Only <strong>Text</strong> and <strong>Custom JavaScript</strong> templates are available.</p>
+</div>
 <h2 id="plain-text-prompts">Plain Text Prompts<a class="headerlink" href="#plain-text-prompts" title="Permanent link">&para;</a></h2>
 <p>Use the <strong>Plain Text</strong> tab in the editor to compose the user prompts using basic editor controls and HTML. You can enter text, and then format the text using the formatting buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting a line.</p>
 <p>The plain text tab supports the following markups:</p>
@@ -13302,13 +13301,7 @@ In the case of Entity and Confirmation nodes, you refer to Prompts whereas, for 
   <tr>
    <td>“`Hello“`
    </td>
-   <td> 
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<a class="glightbox" href="images/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/image4.png" width="" alt="alt_text" title="image_tooltip"></a>
-
+   <td><a class="glightbox" href="../images/prompt-editor-img-hello.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/prompt-editor-img-hello.png" width="" alt="alt_text" title="image_tooltip"></a>
    </td>
   </tr>
   <tr>
@@ -13332,13 +13325,7 @@ In the case of Entity and Confirmation nodes, you refer to Prompts whereas, for 
   <tr>
    <td>![Image](https://kbob.github.io/images/sample-4.jpg)
    </td>
-   <td> 
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<a class="glightbox" href="images/image5.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/image5.jpg" width="" alt="alt_text" title="image_tooltip"></a>
-
+   <td><a class="glightbox" href="i../images/prompt-editor-sample-4.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="i../images/prompt-editor-sample-4.jpg" width="" alt="alt_text" title="image_tooltip"></a>
    </td>
   </tr>
   <tr>
@@ -13385,7 +13372,7 @@ In the case of Entity and Confirmation nodes, you refer to Prompts whereas, for 
 <p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-<a class="glightbox" href="images/image6.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/image6.jpg" width="" alt="alt_text" title="image_tooltip"></a>
+<a class="glightbox" href="../images/prompt-editor-indent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/prompt-editor-indent.png" width="" alt="alt_text" title="image_tooltip"></a>
 
    </td>
   </tr>
@@ -13467,7 +13454,7 @@ new line
 <p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <p><a class="glightbox" href="images/image8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.png" title="image_tooltip" /></a></p>
-<p>For more information on templates, see <a href="https://developer.kore.ai/docs/bots/sdks/widget-sdk-message-formatting-and-templates/" target="_blank">Widget SDK – Message Formatting and Templates</a>.</p>
+<p>For more information on templates, see <a href="../../../../sdk/widget-sdk-message-formatting-and-templates/" target="_blank">Widget SDK – Message Formatting and Templates</a>.</p>
 <p>The same message configuration rules and principles apply while configuring any entity prompt or KG responses too.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
