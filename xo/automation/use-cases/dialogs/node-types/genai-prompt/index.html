@@ -13325,11 +13325,8 @@
 <h2 id="enable-the-node">Enable the Node<a class="headerlink" href="#enable-the-node" title="Permanent link">&para;</a></h2>
 <p>This node is not available by default. You can enable it for all Dialog Tasks as follows:</p>
 <ul>
-<li>Configure the Open AI integration and enable the GenAI Prompt feature under <strong>Build</strong> &gt; <strong>Natural Language</strong> &gt; <strong>Advanced NLU Settings</strong>. You can also select an LLM model and its settings for the features. By default, these selections are applicable across the platform for the feature. <a href="../../../../../app-settings/generative-ai-tools/dynamic-conversations-features/#genai-prompt" target="_blank">Learn more</a>.</li>
+<li>Configure the Open AI integration and enable the GenAI Prompt feature under <strong>App Settings</strong> &gt; <strong>Generative AI Tools</strong> &gt; <strong>Dynamics Conversations</strong>. You can also select an LLM model and its settings for the features. By default, these selections are applicable across the platform for the feature. <a href="../../../../../app-settings/generative-ai-tools/dynamic-conversations-features/#genai-prompt">Learn more</a></li>
 </ul>
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <div class="language-text highlight"><pre><span></span><code>If you do not configure an LLM model and do not enable the GenAI Prompt feature, then the node will not be available within the Dialog Builder.
@@ -13338,19 +13335,15 @@
 <p>Setting up a GenAI Prompt in a dialog task involves adding the node at the appropriate location in the dialog flow and configuring various properties of the node, as explained below.</p>
 <h2 id="add-the-node">Add the Node<a class="headerlink" href="#add-the-node" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Go to <strong>Build</strong> &gt; <strong>Conversational Skills</strong> &gt; <strong>Dialog Tasks</strong> and select the task to which you want to add the GenAI Prompt.</li>
-<li>Use the “<strong>+</strong>” button next to the node under which you want to add the <strong>GenAI Prompt</strong>. Then, choose <strong>GenAI Prompt</strong>, and then click <strong>New GenAI Prompt</strong>. (For more information on adding nodes, see <a href="../../using-the-dialog-builder-tool/#add-nodes" target="_blank">different ways to add a node</a>.) Alternatively, you can drag and drop the <strong>GenAI Prompt</strong> node to the required location on the canvas.</li>
+<li>Go to <strong>Automation</strong> &gt; <strong>Dialogs</strong> and select the task to which you want to add the GenAI Prompt.</li>
+<li>Click <strong>Gen AI</strong> and then click <strong>GenAI Prompt</strong>. Alternatively, you can drag and drop the <strong>GenAI Prompt</strong> node to the required location on the canvas. For more information on adding nodes, see <a href="../../using-the-dialog-builder-tool/#add-nodes">different ways to add a node</a>.</li>
 <li>The GenAI Prompt window is displayed with the <strong>Component Properties</strong> tab selected by default.</li>
 </ol>
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 <p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
 <h2 id="configure-the-node">Configure the Node<a class="headerlink" href="#configure-the-node" title="Permanent link">&para;</a></h2>
 <h3 id="component-properties">Component Properties<a class="headerlink" href="#component-properties" title="Permanent link">&para;</a></h3>
 <p>The settings made within this section affect this node across all instances in all dialog tasks.</p>
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/genai-propmpt%285%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genai-propmpt%285%29.png" title="image_tooltip" /></a></p>
 <h4 id="general-settings">General Settings<a class="headerlink" href="#general-settings" title="Permanent link">&para;</a></h4>
 <p>In this section, you can provide <strong>Name</strong> and <strong>Display Name</strong> for the node and write your own OpenAI <strong>Prompt</strong>.</p>
 <ul>
@@ -13360,9 +13353,7 @@
 <h4 id="advanced-settings">Advanced Settings<a class="headerlink" href="#advanced-settings" title="Permanent link">&para;</a></h4>
 <p>In this section, you can change the model and tweak its settings.</p>
 <p>Adjusting the settings allows you to fine-tune the model’s behavior to meet your needs. <strong>The default settings work fine for most cases</strong>. However, if required, you can tweak the settings and find the right balance for your use case.</p>
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/genai-propmpt%281%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genai-propmpt%281%29.png" title="image_tooltip" /></a></p>
 <ul>
 <li><strong>Model</strong>: The default model for which the settings are displayed. You can choose another supported mode if it’s configured. If you select a non-default model, it’s used for this node only. If you want to change the default model, you can select the model in the drop-down list and use the <strong>Mark Default</strong> option shown next to its name.</li>
 <li><strong>System Context</strong>: Add a brief description of the use case context to guide the model.</li>
@@ -13371,9 +13362,7 @@
 </ul>
 <h4 id="advanced-controls">Advanced Controls<a class="headerlink" href="#advanced-controls" title="Permanent link">&para;</a></h4>
 <p>In this section, you can select the maximum wait time to receive a response from the LLM and decide how the bot should respond when the timeout occurs.</p>
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/genai-propmpt%287%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genai-propmpt%287%29.png" title="image_tooltip" /></a></p>
 <ul>
 <li><strong>Timeout</strong>: Select the maximum wait time from the drop-down list. The timeout range can be any value between 10 to 60, the default being 10.</li>
 <li><strong>Timeout Error Handling</strong>: Choose how the bot should respond when the timeout occurs:<ul>
@@ -13384,9 +13373,7 @@
 </ul>
 <h3 id="instance-properties">Instance Properties<a class="headerlink" href="#instance-properties" title="Permanent link">&para;</a></h3>
 <p>On the <strong>Instance Properties</strong> tab, you can configure the instance-specific fields for this GenAI Prompt. These settings are applicable only for this instance and will not affect any other instances of this node.</p>
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/genai-propmpt%283%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genai-propmpt%283%29.png" title="image_tooltip" /></a></p>
 <h4 id="custom-tags">Custom Tags<a class="headerlink" href="#custom-tags" title="Permanent link">&para;</a></h4>
 <p>In this section, you can add Custom Meta Tags to the conversation flow to profile VA-user conversations and derive business-critical insights from usage and execution metrics. You can add tags for the following:</p>
 <ul>
@@ -13394,12 +13381,10 @@
 <li><strong>User</strong>: Define custom tags to be added to the user’s profile information.</li>
 <li><strong>Session</strong>: Define custom tags to be added to the current conversation session.</li>
 </ul>
-<p>For more information on custom tags, see <a href="../../../../../analytics/automation/custom-dashboard/custom-meta-tags" target="_blank">Custom Meta Tags</a>.</p>
+<p>For more information on custom tags, see <a href="../../../../../analytics/automation/custom-dashboard/custom-meta-tags">Custom Meta Tags</a>.</p>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
-<p>On the <strong>Connections</strong> tab, you can set the transition properties to determine the node in the dialog task to execute next. You can write conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use intents for transitions. See <a href="../../node-connections/nodes-conditions" target="_blank">Adding IF-Else Conditions to Node Connections</a> for a detailed setup guide.</p>
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
+<p>On the <strong>Connections</strong> tab, you can set the transition properties to determine the node in the dialog task to execute next. You can write conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use intents for transitions. See <a href="../../node-connections/nodes-conditions">Adding IF-Else Conditions to Node Connections</a> for a detailed setup guide.</p>
+<p><a class="glightbox" href="../images/genai-propmpt%282%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genai-propmpt%282%29.png" title="image_tooltip" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <div class="language-text highlight"><pre><span></span><code>These conditions apply only for this instance and will not affect this node when used in any other dialog.
