@@ -13354,54 +13354,59 @@
 <li>Click the <strong>Choose File</strong> buttons next to the <strong>Bot Definition File</strong> field and <strong>Bot Config File</strong> field, and upload the <em>botDefinition.json</em> and <em>config.json</em> files respectively.</li>
 <li>
 <p>Optionally, upload the custom script file from the imported assistant if any. The file size is limited to 500kb.
-<a class="glightbox" href="../images/bot-import-custom-script-file.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-import-custom-script-file.png" alt="App import - Custom script file" title="App import - Custom script file" style="border:1px solid gray; zoom:70%;"></a></p>
+    <a class="glightbox" href="../images/bot-import-custom-script-file.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-import-custom-script-file.png" alt="App import - Custom script file" title="App import - Custom script file" style="border:1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
 <p>Select one of these import options: <strong>Full Import</strong> or <strong>Incremental Import</strong>.</p>
 </li>
+<li>If you select <strong>Full import</strong>, the bot definition in the in-development copy will be overwritten with the definition present in the import file.</li>
+<li>If there are one or more additional tasks or languages in the assistant, and if these are not present in the import definition, then these tasks will be marked as deleted and will be removed when the bot is published.</li>
 <li>
-<p>If you select <strong>Full import</strong>, the bot definition in the in-development copy will be overwritten with the definition present in the import file.</p>
+<p>You can choose to auto-publish the assistant post-import.</p>
+<p><a class="glightbox" href="../images/bm%2811%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%2811%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
-<p>If there are one or more additional tasks or languages in the assistant, and if these are not present in the import definition, then these tasks will be marked as deleted and will be removed when the bot is published.</p>
-</li>
-<li>
-<p>You can choose to auto-publish the assistant post-import.
-<a class="glightbox" href="../images/bm(11).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bm(11).png" alt="image_tooltip" title="image_tooltip" style="border:1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>If you select <strong>Incremental import</strong>, you can also choose which components to import.
-<a class="glightbox" href="../images/bm(4).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bm(4).png" alt="image_tooltip" title="image_tooltip" style="border:1px solid gray; zoom:70%;"></a></p>
+<p>If you select <strong>Incremental import</strong>, you can also choose which components to import.</p>
+<p><a class="glightbox" href="../images/bm%284%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%284%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p><strong>Bot Tasks</strong>: Here is where you can select to import Tasks only (with or without comments), Knowledge Graph, Small Talk or Digital Forms.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you want to import one or more Bot Tasks, also select the <strong>NLP Data</strong> settings, as they are linked. For example, the utterances assigned to dialog tasks are not imported if you don’t select the NLP Data settings, causing problems in identifying the dialog properly.</p>
-</div>
+<div class="language-text highlight"><pre><span></span><code>!!! note
+
+    If you want to import one or more Bot Tasks, also select the **NLP Data** settings, as they are linked. For example, the utterances assigned to dialog tasks are not imported if you don’t select the NLP Data settings, causing problems in identifying the dialog properly.
+</code></pre></div>
 </li>
 <li>
 <p><strong>NLP Data</strong>: This is where you can import NLP Settings, Utterances, Patterns and Standard Responses. ML Utterances and Patterns can either be Appended or Replaced.</p>
 <ol>
 <li><strong>Append</strong> can be used when the utterances present in the file should be imported into the assistant and any additional utterances in the bot should be retained (this is the default behavior).</li>
-<li><strong>Replace</strong> can be used when the utterances present in the file should be imported into the assistant. Any additional utterances will be removed.</li>
-</ol>
-<p>In case you are importing Tasks too, the additional utterances related to tasks being imported will be removed.
- <a class="glightbox" href="../images/bm(1).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bm(1).png" alt="image_tooltip" title="image_tooltip" style="border:1px solid gray; zoom:70%;"></a></p>
-<ul>
-<li><strong>Settings</strong>: Bot Settings, Bot Variables and Voice Call Properties.</li>
-<li><strong>Custom Dashboards</strong> – This is useful in case you have created custom dashboards under the Analyze section and you want to import these to the new VA as well. </li>
-<li>On the confirmation dialog that opens, click <strong>Backup</strong> to download the existing assistant configuration.</li>
-</ul>
-<p><a class="glightbox" href="../images/bm(8).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bm(8).png" alt="image_tooltip" title="image_tooltip" style="border:1px solid gray; zoom:70%;"></a></p>
-<div class="language-text highlight"><pre><span></span><code>!!! note
-
-    While backing up is an optional choice, we strongly recommend you do so, especially when choosing Full Import, as you cannot recover the configurations after the imported assistant replaces them.
+<li>
+<p><strong>Replace</strong> can be used when the utterances present in the file should be imported into the assistant. Any additional utterances will be removed.</p>
+<p>In case you are importing Tasks too, the additional utterances related to tasks being imported will be removed. </p>
+<p><a class="glightbox" href="../images/bm%281%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%281%29.png" title="image_tooltip" /></a></p>
+<div class="language-text highlight"><pre><span></span><code>The imported Traits, Synonyms and Concepts will replace those in the target bot. Rules nac be imported along with their tagged dialog tasks.
 </code></pre></div>
-<ol>
-<li>Click <strong>Proceed</strong> to start the import.</li>
-<li>After the import is completed, the following success message appears. Click <strong>Done</strong>.</li>
+</li>
+<li>
+<p><strong>Settings</strong>: Bot Settings, Bot Variables and Voice Call Properties.</p>
+</li>
+<li><strong>Custom Dashboards</strong> – This is useful in case you have created custom dashboards under the Analyze section and you want to import these to the new VA as well. </li>
+<li>
+<p>On the confirmation dialog that opens, click <strong>Backup</strong> to download the existing assistant configuration.</p>
+<p><a class="glightbox" href="../images/bm%288%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%288%29.png" title="image_tooltip" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="language-text highlight"><pre><span></span><code>While backing up is an optional choice, we strongly recommend you do so, especially when choosing Full Import, as you cannot recover the configurations after the imported assistant replaces them.
+</code></pre></div>
+</div>
+</li>
 </ol>
+</li>
+<li>
+<p>Click <strong>Proceed</strong> to start the import.</p>
+</li>
+<li>
+<p>After the import is completed, the following success message appears. Click <strong>Done</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Bot import would fail if the assistant has been restored but not published after the restore. </p>
@@ -13412,8 +13417,8 @@
 <p>To import a VA while creating it, follow these steps: </p>
 <ol>
 <li>
-<p>On the landing page, click <strong>New Bot</strong>.
-<a class="glightbox" href="../images/bm(7).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bm(7).png" alt="image_tooltip" title="image_tooltip" style="border:1px solid gray; zoom:70%;"></a></p>
+<p>On the landing page, click <strong>New Bot</strong>.</p>
+<p><a class="glightbox" href="../images/bm%287%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%287%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>In the <strong>Create New Bot</strong> window, select <strong>Import a Bot</strong>.</p>
@@ -13423,8 +13428,10 @@
 <li>Upload the <strong>Bot Definition File</strong>.</li>
 <li>Upload the <strong>Bot Config File</strong>.</li>
 <li>Upload the <strong>Custom Script File</strong>. The file size is limited to 500kb.</li>
-<li>Click <strong>Import</strong> when ready.
-<a class="glightbox" href="../images/bm(5).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bm(5).png" alt="image_tooltip" title="image_tooltip" style="border:1px solid gray; zoom:70%;"></a></li>
+<li>
+<p>Click <strong>Import</strong> when ready. </p>
+<p><a class="glightbox" href="../images/bm%285%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%285%29.png" title="image_tooltip" /></a></p>
+</li>
 </ol>
 <h3 id="components-in-the-incremental-import">Components in the Incremental Import<a class="headerlink" href="#components-in-the-incremental-import" title="Permanent link">&para;</a></h3>
 <table>
@@ -13462,6 +13469,19 @@
    <td>Knowledge Graph, Bot Synonyms and Standard Responses
    </td>
    <td>Existing knowledge graph, bot synonyms, and standard responses in the target assistant are replaced with the imported ones.
+   </td>
+  </tr>
+  <tr>
+   <td>Synonyms, Concepts, and Traits
+   </td>
+   <td>They are imported from the source bot along with all their underlying terms, and replace the ones in the target bot.
+   </td>
+  </tr>
+  <tr>
+   <td>Rules
+   </td>
+   <td>Rules will be imported only if their tagged dialog tasks are imported.<br><br>
+    <strong>Note</strong>: On-Prem customers can import the NLP components (Synonyms, Concepts, Rules, Traits) from a source bot of a higher version to a target bot of a lower version by checking the <strong>NLP Settings</strong> checkbox. However, Rules won’t import unless the tagged dialog tasks are also imported.
    </td>
   </tr>
 </table>
@@ -13588,8 +13608,8 @@
 <li>On the Import &amp; Export page, select the <strong>Export</strong> tab.</li>
 <li>In the Export tab, select either <strong>Published</strong> or <strong>Latest Version</strong> exporting mode.</li>
 <li>
-<p>By default, all the components are selected for export. Deselect the items that you do not want to export.
-<a class="glightbox" href="../images/bm(10).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bm(10).png" alt="image_tooltip" title="image_tooltip" style="border:1px solid gray; zoom:70%;"></a></p>
+<p>By default, all the components are selected for export. Deselect the items that you do not want to export.</p>
+<p><a class="glightbox" href="../images/bm%2810%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%2810%29.png" title="image_tooltip" /></a></p>
 </li>
 <li>
 <p>For Tasks, you can further choose to export only select tasks. By default All Tasks are selected. Click the All Tasks link to open <strong>Select Tasks</strong> dialog to choose the tasks you want to export.</p>
@@ -13604,8 +13624,10 @@
 <li>Linked Dialogs i.e. dialog nodes present in the definition of another dialog;</li>
 <li>Dialogs linked in defining ‘Behavior on Exceeding Retries’ for IVR Properties of any node of the dialog;</li>
 <li>Dialog linked as part of sub-intent / interruption settings;</li>
-<li>Any other scenario where a dialog execution could fail if a dependent task is not included;
-<a class="glightbox" href="../images/bm(1).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bm(1).png" alt="image_tooltip" title="image_tooltip" style="border:1px solid gray; zoom:70%;"></a></li>
+<li>
+<p>Any other scenario where a dialog execution could fail if a dependent task is not included;</p>
+<p><a class="glightbox" href="../images/bm%281%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%281%29.png" title="image_tooltip" /></a></p>
+</li>
 </ul>
 </li>
 <li>
@@ -13616,7 +13638,7 @@
 <p>When you export a VA, the following components get exported, depending on your Latest or Published Mode selection:</p>
 <table>
   <tr>
-   <td colspan="2" >Tasks
+   <td colspan="2" ><strong>Tasks</strong>
    </td>
   </tr>
   <tr>
@@ -13641,7 +13663,7 @@
    </td>
   </tr>
   <tr>
-   <td colspan="2" >NLP Data
+   <td colspan="2" ><strong>NLP Data</strong>
    </td>
   </tr>
   <tr>
@@ -13656,11 +13678,17 @@
 
 <li>Threshold and Configurations settings for
 
+<ul style="padding-left: 30px;">
 <li>Fundamental meaning
 
 <li>Knowledge Graph
 
 <li>Machine Learning
+</ul>
+
+<li>Concepts, Synonyms, and traits, even if no tasks are specifically selected
+
+<li>Rules, only if you are exporting the corresponding dialog tasks too.
 </li>
 </ul>
    </td>
@@ -13678,7 +13706,7 @@
    </td>
   </tr>
   <tr>
-   <td colspan="2" >Settings
+   <td colspan="2" ><strong>Settings</strong>
    </td>
   </tr>
   <tr>
