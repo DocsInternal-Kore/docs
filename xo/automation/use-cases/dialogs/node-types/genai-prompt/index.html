@@ -13325,21 +13325,23 @@
 <h2 id="enable-the-node">Enable the Node<a class="headerlink" href="#enable-the-node" title="Permanent link">&para;</a></h2>
 <p>This node is not available by default. You can enable it for all Dialog Tasks as follows:</p>
 <ul>
-<li>Configure the Open AI integration and enable the GenAI Prompt feature under <strong>App Settings</strong> &gt; <strong>Generative AI Tools</strong> &gt; <strong>Dynamics Conversations</strong>. You can also select an LLM model and its settings for the features. By default, these selections are applicable across the platform for the feature. <a href="../../../../../app-settings/generative-ai-tools/dynamic-conversations-features/#genai-prompt">Learn more</a></li>
+<li>Configure the LLM integration and enable the GenAI Prompt feature under <strong>App Settings</strong> &gt; <strong>Generative AI Tools</strong> &gt; <strong>Dynamics Conversations</strong>. You can also select an LLM model and its settings for the features. By default, these selections are applicable across the platform for the feature. <a href="../../../../../app-settings/generative-ai-tools/dynamic-conversations-features/#genai-prompt">Learn more</a></li>
 </ul>
+<p><a class="glightbox" href="../images/genai-promptf.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genai-promptf.png" title="image_tooltip" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>If you do not configure an LLM model and do not enable the GenAI Prompt feature, then the node will not be available within the Dialog Builder.
-</code></pre></div>
+<p>If you do not configure an LLM model and do not enable the GenAI Prompt feature, then the node will not be available within the Dialog Builder.</p>
 </div>
 <p>Setting up a GenAI Prompt in a dialog task involves adding the node at the appropriate location in the dialog flow and configuring various properties of the node, as explained below.</p>
 <h2 id="add-the-node">Add the Node<a class="headerlink" href="#add-the-node" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Go to <strong>Automation</strong> &gt; <strong>Dialogs</strong> and select the task to which you want to add the GenAI Prompt.</li>
 <li>Click <strong>Gen AI</strong> and then click <strong>GenAI Prompt</strong>. Alternatively, you can drag and drop the <strong>GenAI Prompt</strong> node to the required location on the canvas. For more information on adding nodes, see <a href="../../using-the-dialog-builder-tool/#add-nodes">different ways to add a node</a>.</li>
-<li>The GenAI Prompt window is displayed with the <strong>Component Properties</strong> tab selected by default.</li>
+<li>
+<p>The GenAI Prompt window is displayed with the <strong>Component Properties</strong> tab selected by default.</p>
+<p><a class="glightbox" href="../images/canvas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/canvas.png" title="image_tooltip" /></a></p>
+</li>
 </ol>
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
 <h2 id="configure-the-node">Configure the Node<a class="headerlink" href="#configure-the-node" title="Permanent link">&para;</a></h2>
 <h3 id="component-properties">Component Properties<a class="headerlink" href="#component-properties" title="Permanent link">&para;</a></h3>
 <p>The settings made within this section affect this node across all instances in all dialog tasks.</p>
@@ -13387,8 +13389,7 @@
 <p><a class="glightbox" href="../images/genai-propmpt%282%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/genai-propmpt%282%29.png" title="image_tooltip" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>These conditions apply only for this instance and will not affect this node when used in any other dialog.
-</code></pre></div>
+<p>These conditions apply only for this instance and will not affect this node when used in any other dialog.</p>
 </div>
 <h2 id="about-responses">About Responses<a class="headerlink" href="#about-responses" title="Permanent link">&para;</a></h2>
 <p>All the responses collected are stored in context variables. For example, <code>{{context.GenAIPrompt.NodeName.properties}}</code>. You can define transitions using the context variables.</p>
