@@ -13359,22 +13359,26 @@
 <li>
 <p>Select one of these import options: <strong>Full Import</strong> or <strong>Incremental Import</strong>.</p>
 </li>
-<li>If you select <strong>Full import</strong>, the bot definition in the in-development copy will be overwritten with the definition present in the import file.</li>
+<li>
+<p>If you select <strong>Full import</strong>, the bot definition in the in-development copy will be overwritten with the definition present in the import file.</p>
+<ul>
 <li>If there are one or more additional tasks or languages in the assistant, and if these are not present in the import definition, then these tasks will be marked as deleted and will be removed when the bot is published.</li>
 <li>
 <p>You can choose to auto-publish the assistant post-import.</p>
 <p><a class="glightbox" href="../images/bm%2811%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%2811%29.png" title="image_tooltip" /></a></p>
 </li>
+</ul>
+</li>
 <li>
 <p>If you select <strong>Incremental import</strong>, you can also choose which components to import.</p>
 <p><a class="glightbox" href="../images/bm%284%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%284%29.png" title="image_tooltip" /></a></p>
-</li>
+<ul>
 <li>
 <p><strong>Bot Tasks</strong>: Here is where you can select to import Tasks only (with or without comments), Knowledge Graph, Small Talk or Digital Forms.</p>
-<div class="language-text highlight"><pre><span></span><code>!!! note
-
-    If you want to import one or more Bot Tasks, also select the **NLP Data** settings, as they are linked. For example, the utterances assigned to dialog tasks are not imported if you don’t select the NLP Data settings, causing problems in identifying the dialog properly.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to import one or more Bot Tasks, also select the <strong>NLP Data</strong> settings, as they are linked. For example, the utterances assigned to dialog tasks are not imported if you don’t select the NLP Data settings, causing problems in identifying the dialog properly.</p>
+</div>
 </li>
 <li>
 <p><strong>NLP Data</strong>: This is where you can import NLP Settings, Utterances, Patterns and Standard Responses. ML Utterances and Patterns can either be Appended or Replaced.</p>
@@ -13384,23 +13388,24 @@
 <p><strong>Replace</strong> can be used when the utterances present in the file should be imported into the assistant. Any additional utterances will be removed.</p>
 <p>In case you are importing Tasks too, the additional utterances related to tasks being imported will be removed. </p>
 <p><a class="glightbox" href="../images/bm%281%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%281%29.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>The imported Traits, Synonyms and Concepts will replace those in the target bot. Rules nac be imported along with their tagged dialog tasks.
-</code></pre></div>
+</li>
+<li>
+<p>The imported Traits, Synonyms and Concepts will replace those in the target bot. Rules nac be imported along with their tagged dialog tasks.</p>
+</li>
+</ol>
 </li>
 <li>
 <p><strong>Settings</strong>: Bot Settings, Bot Variables and Voice Call Properties.</p>
 </li>
 <li><strong>Custom Dashboards</strong> – This is useful in case you have created custom dashboards under the Analyze section and you want to import these to the new VA as well. </li>
-<li>
-<p>On the confirmation dialog that opens, click <strong>Backup</strong> to download the existing assistant configuration.</p>
-<p><a class="glightbox" href="../images/bm%288%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/bm%288%29.png" title="image_tooltip" /></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>While backing up is an optional choice, we strongly recommend you do so, especially when choosing Full Import, as you cannot recover the configurations after the imported assistant replaces them.
+<li>On the confirmation dialog that opens, click <strong>Backup</strong> to download the existing assistant configuration.<div class="language-text highlight"><pre><span></span><code>![alt_text](images/bm(8).png &quot;image_tooltip&quot;)
+
+!!! note
+
+    While backing up is an optional choice, we strongly recommend you do so, especially when choosing Full Import, as you cannot recover the configurations after the imported assistant replaces them.
 </code></pre></div>
-</div>
 </li>
-</ol>
+</ul>
 </li>
 <li>
 <p>Click <strong>Proceed</strong> to start the import.</p>
