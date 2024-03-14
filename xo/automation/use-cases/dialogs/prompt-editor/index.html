@@ -13264,13 +13264,16 @@ In the case of Entity and Confirmation nodes, you refer to Prompts whereas, for 
 <ul>
 <li><a href="#plain-text-prompts"><strong>Text</strong></a> - Plain textual message. This template is selected by default.</li>
 <li><a href="#button-prompts"><strong>Buttons</strong></a> (Not available for Message node) - You can use this template if you want to let the user choose from multiple options. For example, in a Banking app, your prompt can have buttons with captions <strong>Deposit</strong>, <strong>Withdrawl</strong>, <strong>Apply for Credit Card</strong>, <strong>Money Transfer</strong> etc that can be configured to trigger the corresponding task.</li>
-<li><strong>Quick Reply</strong> (Not available for Message node) - You can use this prompt for quick reply, i.e. a limited option of replies. For example, in a prompt that asks user whether they need any more help, you can have quick reply with options <strong>Yes</strong> and <strong>No</strong>.</li>
+<li><a href="#quick-reply-template"><strong>Quick Reply</strong></a> (Not available for Message node) - You can use this prompt for quick reply, i.e. a limited option of replies. For example, in a prompt that asks user whether they need any more help, you can have quick reply with options <strong>Yes</strong> and <strong>No</strong>.</li>
 <li><a href="#javascript-prompts-or-responses"><strong>Custom JavaScript</strong></a> - To compose a JavaScript code.</li>
 </ul>
 <p><a class="glightbox" href="../images/prompt-editor-select-template.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/prompt-editor-select-template.png" alt="Select template" title="Select template" style="border:1px solid gray;zoom:70%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can use stored context variables with {{variable brackets}}. For example, ‘Hello {{context.session.UserContext.firstName}}. How can I help you?’</p>
+<ul>
+<li>Button and Quick Reply templates are not available for every channel.</li>
+<li>You can use stored context variables with {{variable brackets}}. For example, ‘Hello {{context.session.UserContext.firstName}}. How can I help you?’</li>
+</ul>
 </div>
 </li>
 <li>
@@ -13432,7 +13435,7 @@ new line
 <h2 id="button-prompts">Button Prompts<a class="headerlink" href="#button-prompts" title="Permanent link">&para;</a></h2>
 <p>In cases where you wish to provide the user a limited number of distinct choices, you can use Button template.</p>
 <p>For example, a typical Banking app can perform tasks pertaining only to banking, like opening an account, issue credit card, money transfer etc. In such cases Button template is appropriate.</p>
-<p>You need to select the Button template, and then add button titles and a corresponding value that would be sent to the engine on click of the button.</p>
+<p>You need to select the Button template, add a <strong>Description</strong> (mandatory), i.e. the text you want to appear before the quick reply buttons, and then add button titles and a corresponding value that would be sent to the engine on click of the button.</p>
 <p>Here are the steps to create a prompt using Button template:</p>
 <p><a class="glightbox" href="../images/prompt-editor-button-prompt-creation.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/prompt-editor-button-prompt-creation.gif" alt="Button prompt creation" title="Button prompt creation" style="border:1px solid gray;zoom:70%;"></a></p>
 <p>This is how it looks at runtime:</p>
@@ -13442,6 +13445,12 @@ new line
 <p>You can add up to a maximum of 5 buttons to a prompt.</p>
 </div>
 <h2 id="quick-reply-template">Quick Reply template<a class="headerlink" href="#quick-reply-template" title="Permanent link">&para;</a></h2>
+<p>Often, you may wish to provide options for user to <strong>Quick Reply</strong>, like Yes/No, True/False, etc. In such cases you can create prompts using Quick Reply template.</p>
+<p>You need to choose the Quick Reply template, add a <strong>Description</strong> (mandatory), i.e. the text you want to appear before the quick reply buttons, and then add the quick reply item titles and values.</p>
+<p>This is how you can create a quick reply prompt:</p>
+<p><a class="glightbox" href="../images/prompt-editor-quick-response.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/prompt-editor-quick-response.gif" alt="Quick Reply prompt creation" title="Quick Reply prompt creation" style="border:1px solid gray;zoom:70%;"></a></p>
+<p>This is how it looks at runtime:</p>
+<p><a class="glightbox" href="../images/prompt-editor-quick-reply-prompt-runtime.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/prompt-editor-quick-reply-prompt-runtime.png" alt="Quick Reply prompt at Runtime" title="Quick Reply prompt at Runtime" style="border:1px solid gray;zoom:70%;"></a></p>
 <h2 id="javascript-prompts-or-responses">JavaScript Prompts or Responses<a class="headerlink" href="#javascript-prompts-or-responses" title="Permanent link">&para;</a></h2>
 <p>On the <strong>Advanced</strong> tab of the editor, you can add custom code to handle the user prompt message using system and session variables. The following is a sample code for displaying the weather forecast for a location:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>var loc=context.weatherapi.response.body.query.results.channel.item.condition.text.toLowerCase();
