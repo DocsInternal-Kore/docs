@@ -11149,6 +11149,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#define-alternate-text-for-javascript-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define Alternate Text for JavaScript Messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#message-tags" class="md-nav__link">
     <span class="md-ellipsis">
       Message Tags
@@ -13261,6 +13270,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#define-alternate-text-for-javascript-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define Alternate Text for JavaScript Messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#message-tags" class="md-nav__link">
     <span class="md-ellipsis">
       Message Tags
@@ -13535,14 +13553,9 @@
    <td>
     The available options include:
 <ol>
-
-<li>All
-
-<li>Active
-
-<li>Closed
-</li>
-</ol>
+<li>All</li>
+<li>Active</li>
+<li>Closed</li></ol>
    </td>
    <td>
     Select <strong><em>All</em></strong> to view all conversations, <strong><em>Active</em></strong> to view ongoing conversations, and <strong><em>Closed</em></strong> to view conversations that have ended.
@@ -13556,13 +13569,11 @@
     The available options include:
 <ol>
 
-<li>Self-service
+<li>Self-service</li>
 
-<li>User Drop-off
+<li>User Drop-off</li>
 
-<li>Agent Transfer
-</li>
-</ol>
+<li>Agent Transfer</li></ol>
    </td>
    <td>
     Select one of the following:
@@ -13585,14 +13596,13 @@
     The available selection options include:
 <ol>
 
-<li>All Channels
+<li>All Channels</li>
 
-<li>Web/Mobile Client
+<li>Web/Mobile Client</li>
 
-<li>Webhook
+<li>Webhook</li>
 
-<li>Other configured channels.
-</li>
+<li>Other configured channels.</li>
 </ol>
    </td>
    <td>
@@ -13627,12 +13637,11 @@
     The available selection options include:
 <ol>
 
-<li>All
+<li>All</li>
 
-<li>Interactive
+<li>Interactive</li>
 
-<li>Non-interactive
-</li>
+<li>Non-interactive</li>
 </ol>
    </td>
    <td>
@@ -13647,10 +13656,9 @@
     The available selection options include:
 <ol>
 
-<li>Include
+<li>Include</li>
 
-<li>Exclude
-</li>
+<li>Exclude</li>
 </ol>
    </td>
    <td>
@@ -13716,24 +13724,23 @@
     The <strong>Conditional Filter</strong> options include:
 <ol>
 
-<li>Less than
+<li>Less than</li>
 
-<li>Less than Equals to
+<li>Less than Equals to</li>
 
-<li>Greater than
+<li>Greater than</li>
 
-<li>Greater than equals to
+<li>Greater than equals to</li>
 
-<li>Equals to
+<li>Equals to</li></ol>
 <br>
 
     The <strong>Time units</strong> options include:
 <ol>
 
-<li>Seconds
+<li>Seconds</li>
 
-<li>Minutes
-</li>
+<li>Minutes</li>
 </ol>
 </li>
 </ol>
@@ -13829,18 +13836,18 @@
 <li>Thumbs-up/Down
 <br>
 
-    The <strong>Conditional Filter</strong> options include
+The <strong>Conditional Filter</strong> options include
 <ol>
 
-<li>Less than
+<li>Less than</li>
 
-<li>Less than Equals to
+<li>Less than Equals to</li>
 
-<li>Greater than
+<li>Greater than</li>
 
-<li>Greater than equals to
+<li>Greater than equals to</li>
 
-<li>Equals to
+<li>Equals to</li></ol>
 <br>
 
     The options for <strong>Score</strong> include:
@@ -13884,8 +13891,9 @@
     Filters conversations using custom tags added to the conversation for a <strong>key-value pair</strong> and the <strong><em>AND</em></strong> logical operator.
    </td>
   </tr>
-<p></table>
-3. Click <strong>Save</strong>.</p>
+</table>
+<ol start="3"><li>Click <b>Save</b>.</li></ol>
+
 <p><a class="glightbox" href="../images/create-conversation-filter-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/create-conversation-filter-2.png" alt="Create Conversation Filter-2" title="Create Conversation Filter-2" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p>The new custom filter is listed on the Filter Views page. The conversations are grouped and displayed Conversations History Dashboard based on the inputs provided on the Filter Views page.</p>
 <p><strong>Edit a Conversation Filter</strong></p>
@@ -14173,8 +14181,29 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <strong>Trace ID</strong> is retained in the logs for 30 days. Once the <strong>Trace ID</strong> is expired, you see a tooltip message as ‘<code>Trace Id: Trace records for this message are not available</code>‘.</p>
+<p>The <strong>Trace ID</strong> is retained in the logs for 30 days. Once the <strong>Trace ID</strong> is expired, you see a tooltip message as ‘<code>Trace Id: Trace records for this message are not available</code>.</p>
 </div>
+<h3 id="define-alternate-text-for-javascript-messages">Define Alternate Text for JavaScript Messages<a class="headerlink" href="#define-alternate-text-for-javascript-messages" title="Permanent link">&para;</a></h3>
+<p>The Platform uses the<code>{} JavaScript</code> tag in the Chat History for bot messages and templates written using JavaScript. However, bot designers can now add a context-specific <strong>Alternate Text</strong> to JavaScript messages/templates they define and explain the purpose more clearly. The added Alternate Text is displayed alongside the JavaScript message tag in the <strong>Chat History</strong> window for developers to get a better understanding of the message’s intent. </p>
+<p>The <a href="https://developer.kore.ai/docs/bots/api-guide/conversation-history-api/" target="_blank">Conversation History API</a> response includes a parameter <code>messages.tags.altText</code> which captures the <strong>Alternate Text</strong> value(s) configured in the JavaScript message or Web SDK template payload through the predefined function discussed below.</p>
+<p><strong>How It Works</strong></p>
+<ol>
+<li>Developer uses a predefined function in the syntax <code>tags.addAlternateText("value")</code> to add the Alternative Text to a JavaScript message or Web SDK template on any channel, including a Webhook.</li>
+<li>The Alternate text indicating the JavaScript message/template’s purpose should be provided for the <code>value</code> parameter. For example, <code>tags.addAlternateText("Accounts Selection Message")</code>.</li>
+</ol>
+<p><strong>Usage Example</strong></p>
+<p>For a bank account creation task, the Platform renders a template in the end channel to prompt the user for account type selection. This requires the developer to define a JavaScript message specific to the channel.</p>
+<p>The developer can generate an Alternate text like “<em>Accounts Selection Message</em>,” in the template code to indicate that the JavaScript message is for account type selection.</p>
+<p><a class="glightbox" href="../images/js-editor-alternate-text.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/js-editor-alternate-text.png" alt="JS template editor" title="JS template editor" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>After the end user selects an account type, the Alternate message appears in the Chat History above the <code>{} JavaScript</code> tag.</p>
+<p><a class="glightbox" href="../images/chat-history-alternate-message.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/chat-history-alternate-message.png" alt="chat history alternate message" title="chat history alternate message" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><strong>Important Considerations</strong></p>
+<ul>
+<li>You can define static and dynamic values for the alternate text.</li>
+<li>Alternate text can be defined for JavaScript messages in user prompts, error prompts, Small Talk, standard responses, FAQs, and events.</li>
+<li>The Platform assigns the latest to a message when you add multiple Alternate text values.</li>
+<li>In the <strong>Chat History</strong> window, the Platform substitutes the payload label with an alternative text tag for all channel templates, excluding the SDK Template.</li>
+</ul>
 <h3 id="message-tags">Message Tags<a class="headerlink" href="#message-tags" title="Permanent link">&para;</a></h3>
 <p><strong>Message Tags</strong> help identify and categorize messages in the chat transcript. They add clarity and context to the conversation and can be reused across related conversations. System-defined message tags are provided by default, but users can create custom tags by defining a <strong>key-value pair</strong>. The key is used as an identifier for the specific message, and the value is the expected customer response to that message.</p>
 <div class="admonition important">
