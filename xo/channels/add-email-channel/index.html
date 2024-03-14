@@ -12928,6 +12928,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configure-a-custom-display-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure a Custom Display Name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-add-the-email-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Add the Email Channel
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -12945,44 +12971,59 @@
 
 
 <h1 id="adding-the-email-channel">Adding the Email Channel<a class="headerlink" href="#adding-the-email-channel" title="Permanent link">&para;</a></h1>
-<p>When you add the email channel to your VA, Kore.ai automatically generates the email address that the end-users can send an email for communications with your assistant. By default, the email address syntax is <strong>&lt; bot name &gt;.kore@m.&lt; kore host &gt;</strong>. For example, <strong><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#121;&#101;&#109;&#97;&#105;&#108;&#46;&#107;&#111;&#114;&#101;&#64;&#109;&#46;&#97;&#112;&#112;&#45;&#98;&#111;&#116;&#115;&#46;&#107;&#111;&#114;&#101;&#46;&#99;&#111;&#109;">&#109;&#121;&#101;&#109;&#97;&#105;&#108;&#46;&#107;&#111;&#114;&#101;&#64;&#109;&#46;&#97;&#112;&#112;&#45;&#98;&#111;&#116;&#115;&#46;&#107;&#111;&#114;&#101;&#46;&#99;&#111;&#109;</a></strong>. Optionally, you can click <strong>Change</strong> to add a custom name, such as <strong><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#77;&#121;&#66;&#111;&#116;&#46;&#107;&#111;&#114;&#101;&#64;&#109;&#46;&#97;&#112;&#112;&#45;&#98;&#111;&#116;&#115;&#46;&#107;&#111;&#114;&#101;&#46;&#99;&#111;&#109;">&#77;&#121;&#66;&#111;&#116;&#46;&#107;&#111;&#114;&#101;&#64;&#109;&#46;&#97;&#112;&#112;&#45;&#98;&#111;&#116;&#115;&#46;&#107;&#111;&#114;&#101;&#46;&#99;&#111;&#109;</a>.</strong></p>
+<p>When you add the email channel to your VA, the XO Platform automatically generates the email address for end users to communicate with your assistant. By default, the email address syntax is <strong><em>&lt; bot name &gt;<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/bots" title="GitHub User: bots">@bots</a>.kore.com</em></strong>. </p>
+<p>For example, <strong><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#95;&#99;&#117;&#115;&#116;&#111;&#109;&#101;&#114;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#98;&#111;&#116;&#115;&#46;&#107;&#111;&#114;&#101;">&#95;&#99;&#117;&#115;&#116;&#111;&#109;&#101;&#114;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#98;&#111;&#116;&#115;&#46;&#107;&#111;&#114;&#101;</a>.com_</strong> Optionally, you can add a custom name, such as <strong><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#95;&#109;&#121;&#45;&#98;&#111;&#116;&#64;&#98;&#111;&#116;&#115;&#46;&#107;&#111;&#114;&#101;">&#95;&#109;&#121;&#45;&#98;&#111;&#116;&#64;&#98;&#111;&#116;&#115;&#46;&#107;&#111;&#114;&#101;</a>.com_.</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can add 5000 characters for the email channel. This character limit is configurable for the On-Prem installation.</p>
+<p>A maximum of 5000 characters are allowed for the email channel. This character limit is configurable for on-premise installation.</p>
 </div>
-<p>By adding the email channel to your VA, end-users can interact with it using any standard email client, such as <em>Microsoft Outlook</em> or <em>Yahoo</em>.</p>
-<p>Steps to add the email channel:</p>
+<p>By adding the email channel to your VA, end users can interact with it using any standard email client, such as <em>Microsoft Outlook</em> or <em>Yahoo</em>.</p>
+<h2 id="configure-a-custom-display-name">Configure a Custom Display Name<a class="headerlink" href="#configure-a-custom-display-name" title="Permanent link">&para;</a></h2>
+<p>Developers can now define custom display names for configured email addresses with the optional <strong>Display Name</strong> field. </p>
+<p>Providing the display name ensures that the name linked to the sender’s email address is visible to the end user in the sender’s email profile. </p>
+<p>An example of how a display name, when provided, appears to the end user is given below:</p>
+<p><a class="glightbox" href="../images/email-display-name-configure.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/email-display-name-configure.png" alt="email display name sample configuration" title="email display name sample configuration" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>For more details, please refer to <strong>Step 3</strong> in the next section.</p>
+<p>When <strong>Display Name</strong> is not provided, the email profiles appear with the sender’s name linked to the email address and the text “<em>Bot (via Kore)</em>” to the end user.</p>
+<p><a class="glightbox" href="../images/banking-support-display-name.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/banking-support-display-name.png" alt="banking support sample display name" title="banking support sample display name" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<h2 id="steps-to-add-the-email-channel">Steps to Add the Email Channel<a class="headerlink" href="#steps-to-add-the-email-channel" title="Permanent link">&para;</a></h2>
 <ol>
-<li>In the XO Platform, select the assistant that you want to work with.</li>
-<li>Go to <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>All</strong> &gt; <strong>Email</strong>.</li>
-<li>In the <strong>Email</strong> field, you can change the first portion of the address set to the VA name by default.</li>
-<li>Choose whether you want to send a contact card to all users, as part of the introduction message.</li>
 <li>
-<p>Under the <strong>Enable Channel</strong> section, select <strong>Yes</strong> to enable the channel.
-<a class="glightbox" href="../images/email.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/email.png" alt="email channel configuration" title="email channel configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>On the UXO Platform, go to <strong>Deploy</strong> &gt; <strong>Channels</strong> &gt; <strong>Email</strong> on the left navigation menu. </p>
 </li>
 <li>
-<p>(Optional) Turn on the <strong>Email Template Design</strong> toggle to configure the header and footer of the emails that are sent via the configured email address.
-<a class="glightbox" href="../images/email1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/email1.png" alt="email template designer" title="email template designer" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>In the <strong>Email</strong> window, change the first portion of the address set to the VA name (default value) for <strong>Email to this bot can be sent to the below email address</strong>.
+<a class="glightbox" href="../images/email-field-entry.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/email-field-entry.png" alt="email field" title="email field" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>Click <strong>Edit Header</strong> and <strong>Edit Footer</strong> to configure the header and footer details.
-<a class="glightbox" href="../images/email2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/email2.png" alt="email footer " title="email footer" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>In the Edit dialog window, change the header and footer details, and click <strong>Preview</strong> to see the changes.
-<a class="glightbox" href="../images/email3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/email3.png" alt="email preview " title="email preview " style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>Click <strong>Save</strong>.
-<a class="glightbox" href="../images/email4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/email4.png" alt="save email channel configuration" title="save email channel configuration" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-<li>
-<p>On the Email Channel Configurations page, click <strong>Save</strong>. The <em>Channel added successfully</em> message is displayed.</p>
+<p><strong>(Optional)</strong> Enter the value for <strong>Display Name</strong> to customize how the configured email address will appear to the end user.</p>
+<p>!!!note</p>
+<div class="language-text highlight"><pre><span></span><code>A maximum of 30 characters are allowed for the display name, including special characters, numbers, and spaces.
+</code></pre></div>
+<p><a class="glightbox" href="../images/add-display-name.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-display-name.png" alt="add display name" title="add display name" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ol>
-<p>Once the channel is enabled and all configurations are verified, you can optionally publish the assistant to make it available for end-users, with the new channel. Learn more about<a href="../deploy/publishing-bot"> Publishing your Virtual Assistant</a>.</p>
-<p>To learn more about working with Channels within the Kore.ai XO Platform, please see<a href="../changelog/folder/adding-channels-to-your-bot"> Channel Enablement.</a></p>
+<ol start="4"><li>Choose whether you want to send a contact card to all users as a part of the introduction message under <b>Send contact card (.VCF)</b>.
+<a class="glightbox" href="../images/send-contact-card.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/send-contact-card.png" alt="send contact card" title="send contact card" style="border: 1px solid gray;zoom:50%;"/></a></li>
+
+<li>Under the <b>Enable Channel</b> section, select <b>Yes</b> to enable the channel.
+<a class="glightbox" href="../images/enable-email-channel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/enable-email-channel.png" alt="enable email channel" title="enable email channel" style="border: 1px solid gray;zoom:50%;"/></a></li>
+
+<li><b>(Optional)</b> Turn on the <b>Email Template Design (Optional)</b> toggle to configure the header and footer of the emails that are sent via the configured email address, and do the following:</li></ol>
+<ul><li>Click <b>Edit Header</b> and <b>Edit Footer</b> to configure the header and footer details.
+<a class="glightbox" href="../images/optional-selection-email-template.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/optional-selection-email-template.png" alt="email template design enable" title="email template design enable" style="border: 1px solid gray;zoom:50%;"/></a></li>
+
+<li>In the <b>Edit</b> window, change the header and footer details, and click <b>Preview</b> to see the changes.
+<a class="glightbox" href="../images/edit-window-change-header-footer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/edit-window-change-header-footer.png" alt="change header and footer" title="change header and footer" style="border: 1px solid gray;zoom:50%;"/></a></li>
+
+<li>Click <b>Save</b>.
+<a class="glightbox" href="../images/edit-window-click save.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/edit-window-click save.png" alt="Click Save" title="Click Save" style="border: 1px solid gray;zoom:50%;"/></a></li></ul>
+
+<ol start="7"><li>In the <b>Email</b> window, click <b>Save</b>. The <i>Channel added successfully</i> message is displayed.
+<a class="glightbox" href="../images/email-template-design-header-footer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/email-template-design-header-footer.png" alt="email template design header and footer" title="email template design header and footer" style="border: 1px solid gray;zoom:50%;"/></a></li></ol>
+
+<p>Once the channel is enabled and all configurations are verified, you can optionally publish the assistant to make it available for end-users, with the new channel. Learn more about <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/">Publishing your Virtual Assistant</a>.</p>
+<p>To learn more about working with Channels within the UXO Platform, please see the <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/">Channel Enablement</a> page.</p>
 
 
 
