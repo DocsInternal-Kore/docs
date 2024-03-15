@@ -13770,28 +13770,28 @@ The Exit Scenario Key-Value fields help identify when to end the interaction wit
 <p><strong>Usage</strong></p>
 <p>The LLM rephrases the query using one of the following methods depending on the scenario:</p>
 <p><strong>Completeness</strong>: The user query should be complete based on the conversation context so that the NLP can identify the right intent. If the user query is incomplete, the system urges the user to rephrase with more information.</p>
-<p>For example: \
- User: What is the weather forecast for New York tomorrow? \
- Bot: It will be Sunny, with temperature ranging between 30 – 35 degrees Celsius. \
- User: How about Orlando? \
- Bot: Sorry, I cannot understand. Can you please rephrase?</p>
+<p>For example: 
+User: What is the weather forecast for New York tomorrow? 
+Bot: It will be Sunny, with temperature ranging between 30 – 35 degrees Celsius. 
+User: How about Orlando? 
+Bot: Sorry, I cannot understand. Can you please rephrase?</p>
 <p>The query should be completed as “How about the weather forecast in Orlando tomorrow?”.</p>
 <p><strong>Co-referencing</strong>: Coreference arises when multiple expressions or queries within text pertain to a common entity. In cases where a user’s query demonstrates incomplete coreference, the system prompts the user to rephrase the query with additional information. This enhances NLP’s ability to discern the correct intent and entities involved.</p>
-<p>For example: \
- User: I’ve been experiencing a persistent headache for the past week. \
- Bot: I’m sorry to hear that. Have you been taking any medication for it? \
- User: Yes, I’ve been taking ibuprofen, but it doesn’t seem to help much. \
- Bot: I see. How often do you take ibuprofen? \
- User: I take it every six hours \
- Bot: I don’t understand. Can you tell me how often you take ibuprofen?</p>
+<p>For example: 
+User: I’ve been experiencing a persistent headache for the past week. 
+Bot: I’m sorry to hear that. Have you been taking any medication for it? 
+User: Yes, I’ve been taking ibuprofen, but it doesn’t seem to help much. 
+Bot: I see. How often do you take ibuprofen? 
+User: I take it every six hours 
+Bot: I don’t understand. Can you tell me how often you take ibuprofen?</p>
 <p>The co-reference in the user query should be expanded for NLP to identify the right intent and entities. The co-reference should be expanded as “I take ibuprofen every six hours”.</p>
 <p><strong>Completeness and Co-referencing</strong>: The following example illustrates completeness and co-referencing issues with the user’s input which triggers rephrasing.</p>
-<p>For example: \
- User: I want to apply for a personal loan. \
- Bot: Sure, I can help you. You’re eligible to take a personal loan of up to 20,000<span class="arithmatex">\(. \
- User: How about a Home loan? \
- Bot: You’re eligible to apply for a home loan as well. You can avail up to 100,000\)</span>. \
- User: What about the interest rates of both loans?</p>
+<p>For example: 
+User: I want to apply for a personal loan. 
+Bot: Sure, I can help you. You’re eligible to take a personal loan of up to 20,000$. 
+User: How about a Home loan? 
+Bot: You’re eligible to apply for a home loan as well. You can avail up to 100,000$. 
+User: What about the interest rates of both loans?</p>
 <p>The co-reference and the query have to be completed as “What is the interest rate of personal loan and home loan?</p>
 <h3 id="few-shot-ml-model">Few-shot ML Model<a class="headerlink" href="#few-shot-ml-model" title="Permanent link">&para;</a></h3>
 <p>The Few-shot model uses Kore Ai’s hosted embeddings to train virtual assistants based on intent names and training utterances. The model identifies the intents based on semantic similarity between user and training utterances.</p>
