@@ -2483,30 +2483,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="JavaScript Prompts or Responses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#customize-javascript-responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customize JavaScript Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preview-the-prompt-or-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      Preview the Prompt or Response
-    </span>
-  </a>
-  
 </li>
       
         <li class="md-nav__item">
@@ -13166,30 +13142,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="JavaScript Prompts or Responses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#customize-javascript-responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customize JavaScript Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preview-the-prompt-or-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      Preview the Prompt or Response
-    </span>
-  </a>
-  
 </li>
       
         <li class="md-nav__item">
@@ -13496,33 +13448,15 @@ new line
 </span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>print(&quot;Humidity: &quot; + context.visibility+&quot;\n&quot;);
 </span></code></pre></div>
 <p>For more information, see <a href="../../using-session-and-context-variables" target="_blank">Using Session and Context Variables in Tasks</a>.</p>
-<h3 id="customize-javascript-responses">Customize JavaScript Responses<a class="headerlink" href="#customize-javascript-responses" title="Permanent link">&para;</a></h3>
-<p>JavaScript will not have any list of templates displayed (see the following screenshot), because one template/JSON may not work for ‘All’ channels.</p>
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
-<p><strong>Key Points</strong></p>
-<ul>
-<li>If JavaScript template is used for an ‘<em>All channel</em>’ response, the template will be shown as is in JSON format and may not render correctly on the channel. You need to choose a channel-specific template for rendering a specific template for your channel.</li>
-<li>If any channel-specific override is present, the platform will use that over the <em>‘All channel’</em> response while responding on that specific channel. For example, if you have a specific message or template for MS Teams, the bot prefers that specific template while responding to a user over the MS Teams channel instead of the ‘All channel’ response.</li>
-<li>You can have more than one response configured for a channel. The bot randomly chooses if more than one response is configured for any given channel. This holds true for all-channel responses too if no other channel-specific responses are configured.</li>
-</ul>
-<p>If your bot has multiple channels, most probably each channel has its own template.</p>
-<p>For a few channel options in the <strong>Channel</strong> drop-down, you can see a list of templates displayed for <strong>JavaScript</strong> response. For example, select the <strong>Web/Mobile Client</strong> channel and choose any template from the <strong>Channel Templates</strong> list for your response as illustrated below.</p>
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.png" title="image_tooltip" /></a></p>
-<p>For more information on templates, see <a href="../../../../sdk/widget-sdk-message-formatting-and-templates/" target="_blank">Widget SDK – Message Formatting and Templates</a>.</p>
-<p>The same message configuration rules and principles apply while configuring any entity prompt or KG responses too.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The channel template options are different for each channel. The template definitions provided in the platform are only for reference purposes. Please refer to the documentation of the channel provider to obtain the latest template definitions.</p>
-</div>
-<h2 id="preview-the-prompt-or-response">Preview the Prompt or Response<a class="headerlink" href="#preview-the-prompt-or-response" title="Permanent link">&para;</a></h2>
-<p>On the <strong>Preview</strong> tab, you can view a sample of the rendered output message that is displayed to the end-user with markup. To render the output for the code involving context variables, define them to use the <strong>Key</strong> and <strong>Value</strong> boxes in the tab to render a valid sample output for preview.</p>
 <h2 id="channel-specific-user-prompts">Channel-Specific User Prompts<a class="headerlink" href="#channel-specific-user-prompts" title="Permanent link">&para;</a></h2>
 <p>By default, the Dialog Tasks configures the standard user prompts for all channels. However, you can define a specific response for one or more channels to display to the end-user in that channel instead of the <strong>Default</strong> response.
-To define a channel-specific response, select a channel, for example, <strong>Kore.ai</strong>, and then define the user prompt on the <strong>Advanced</strong> tab as needed. Only one response can be defined for each channel.</p>
+To define a channel-specific response, select the <strong>Custom JavaScript</strong> template, select a channel, for example, <strong>Kore.ai</strong>, and then define the user prompt as needed. Only one response can be defined for each channel.</p>
+<p>While configuring prompts, please note that:</p>
+<ul>
+<li>You can have more than one response configured for a channel. The bot randomly chooses if more than one response is configured for any given channel. This holds true for all-channel responses too if no other channel-specific responses are configured.</li>
+<li>If any channel-specific override is present, the platform will use that over the <em>‘All channel’</em> response while responding on that specific channel. For example, if you have a specific message for MS Teams, the bot prefers that specific prompt while responding to a user over the MS Teams channel instead of the ‘All channel’ prompt.</li>
+<li>You can have more than one response configured for a channel. The bot randomly chooses if more than one response is configured for any given channel. This holds true for all-channel responses too if no other channel-specific responses are configured.</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Use the following keys to return default values for:</p>
