@@ -94,6 +94,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#indexing" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -6806,6 +6811,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Index Configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -6816,6 +6834,45 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switching-between-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Switching between Models
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -12950,6 +13007,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switching-between-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Switching between Models
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -12967,9 +13052,27 @@
   
 
 
-  <h1>Index Configuration</h1>
-
-<p>COMING SOON!</p>
+<h1 id="indexing">Indexing<a class="headerlink" href="#indexing" title="Permanent link">&para;</a></h1>
+<p>Indexing is the process of generating vectors or embeddings from the extracted chunks and creating a knowledge Index that can be used for generating answers. </p>
+<p>Vectors or Embeddings are multi-dimensional numerical representations of the chunks and carry their semantic information. Embedding Models are algorithms that can translate data into vectors. The Answers module supports various embedding models such as MPNet, LaBSE, and e5 and gives you the flexibility to choose a model as per your specific needs.</p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>You can select from a range of supported embedding models such as MPNet, LaBSE, e5, and more. This gives you flexibility and ensures compatibility with diverse requirements and preferences.</li>
+<li>You have the autonomy to choose the specific chunk fields on which embeddings are to be generated. This selection empowers you to focus on fields that hold higher relevance to your particular use case.</li>
+<li>You can also Answers ingest your embeddings into the answer index. This capability enhances adaptability, allowing you to leverage proprietary models tailored to your unique context.</li>
+</ul>
+<p>Index Configuration requires you to set up and configure Generative AI Tools. As a prerequisite, go to the App settings and configure the LLM and Vector Model. </p>
+<p><a class="glightbox" href="../images/configure-llm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LLM Configuration" src="../images/configure-llm.png" title="LLM Configuration" /></a></p>
+<ul>
+<li>
+<p>Vector Model: Select the embedding model of your choice. </p>
+</li>
+<li>
+<p>Source Fields: Select the chunk fields that you want to use to generate vector embeddings. Choosing the fields with higher relevance as source fields will result in embeddings with more useful data and thereby, result in efficient answers to search queries. You can select more than one field as source fields. In the case of multiple source fields, the sequence of the fields affects the generated vector. </p>
+</li>
+</ul>
+<h2 id="switching-between-models">Switching between Models<a class="headerlink" href="#switching-between-models" title="Permanent link">&para;</a></h2>
+<p>When you switch one model to another, retrain the application to generate embeddings again.</p>
 
 
 
