@@ -13256,7 +13256,7 @@
 <p>The platform supports Synchronous and Asynchronous modes of integrations for the Webhook channel. Here are the key differences:</p>
 <ul>
 <li>
-<p><strong>Synchronous Mode</strong>: The bot responses are directly delivered as a response to the incoming requests. The bot will execute the flow, identify the response or responses to be delivered, and provide them as the response to the incoming request. Some platform functionalities like Alert Tasks, Agent Transfer, and Proactive Session Closure messages are not supported in the Synchronous mode. You may consider using the onAlert event through BotKit, <a href="https://developer.kore.ai/docs/bots/sdks/sdk-events/#OnAlert">Learn more</a>.</p>
+<p><strong>Synchronous Mode</strong>: The bot responses are directly delivered as a response to the incoming requests. The bot will execute the flow, identify the response or responses to be delivered, and provide them as the response to the incoming request. Some platform functionalities like Alert Tasks, Agent Transfer, and Proactive Session Closure messages are not supported in the Synchronous mode. You may consider using the onAlert event through BotKit, <a href="../../sdk/sdk-events/#onvariableupdate">Learn more</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Synchronous Webhook channel requests timeout after 15 seconds. We recommend using the Asynchronous Webhook Channel if you expect the requests to take beyond 15 seconds.</p>
@@ -13294,9 +13294,10 @@
 </li>
 <li>
 <p>Deselect the <strong>Enable the Polling in Webhook V2</strong> option to retrieve the complete response, all at once, without the need for polling.</p>
-<p>!!! </p>
-<div class="language-text highlight"><pre><span></span><code>This option is available only in Webhook v2.0. [Learn more](#webhook-v20).
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option is available only in Webhook v2.0. <a href="#webhook-v20">Learn more</a>.</p>
+</div>
 </li>
 <li>
 <p>Select <strong>Yes</strong> to <strong>Enable Channel</strong>.</p>
@@ -13390,7 +13391,7 @@
 <p>Invoke the API with JWT in the header with the following syntax:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Authorization: bearer {{JWT}}
 </span></code></pre></div>
-<p>Generate JWT using the following header and payload <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_JWT_Token">from this page</a>.</p>
+<p>Generate JWT using the following header and payload <a href="../../apis/automation/api-introduction/#generating-the-jwt-token">from this page</a>.</p>
 <h3 id="response-content-type">Response content type<a class="headerlink" href="#response-content-type" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>application/json
 </span></code></pre></div>
@@ -13924,7 +13925,7 @@
    </td>
    <td>Any language that is configured for the VA.
 <p>
-For the list of Supported Bot Languages, read <a href="https://developer.kore.ai/docs/bots/advanced-topics/multi-lingual/building-multi-language-bots/#Supported_Bot_Languages">Getting Started with Multilingual Virtual Assistant</a> article.
+For the list of Supported Bot Languages, read [Getting Started with Multilingual Virtual Assistant](../app-settings/language-management/building-multi-language-bots.md#supported-bot-languages)</a> article.
    </td>
   </tr>
   <tr>
@@ -14182,7 +14183,7 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    &quot;interactiveLanguage&quot;: &quot;fr&quot;
 </span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>}&#39;
 </span></code></pre></div>
-<p>For the list of Supported Bot Languages codes, read <a href="https://developer.kore.ai/docs/bots/advanced-topics/multi-lingual/building-multi-language-bots/#Supported_Bot_Languages">Getting Started with Multilingual Virtual Assistant</a> article.</p>
+<p>For the list of Supported Bot Languages codes, read <a href="../../app-settings/language-management/building-multi-language-bots/#supported-bot-languages">Getting Started with Multilingual Virtual Assistant</a> article.</p>
 <h3 id="close-conversation-session-event-request">Close Conversation Session Event Request<a class="headerlink" href="#close-conversation-session-event-request" title="Permanent link">&para;</a></h3>
 <p>The Webhook V2.0 supports the closeConversationSession event as part of the user message. You can pass the <code>Session_Closure</code> as an event parameter.</p>
 <p>Here is a sample request to trigger the <code>Session_Closure</code> event:</p>
@@ -14294,7 +14295,7 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>}
 </span></code></pre></div>
 <p><strong>Response when polling is disabled</strong></p>
-<p>When you deselect the <strong>Enable the Polling in Webhook V2</strong> option in the <strong>Configurations</strong> tab, the platform retrieves the complete response, all at once, without the need for polling. <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-webhook-channel/#Step_1_Associate_an_App">Learn more</a>.</p>
+<p>When you deselect the <strong>Enable the Polling in Webhook V2</strong> option in the <strong>Configurations</strong> tab, the platform retrieves the complete response, all at once, without the need for polling. <a href="#step-1-associate-an-app">Learn more</a>.</p>
 <p>Sample Response:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>{
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>&quot;data&quot;: [
@@ -14454,8 +14455,8 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span><span id="__span-23-24"><a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a>    }
 </span><span id="__span-23-25"><a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a>}&#39;
 </span></code></pre></div>
-<p>For parameter descriptions, refer to the <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-webhook-channel/#Request_Parameters">request parameters</a> table.</p>
-<h4 id="type-2-using-fileid-obtained-from-file-upload-api"><strong>Type 2:  Using fileId obtained from <a href="https://developer.kore.ai/docs/bots/api-guide/upload-file-api/">file upload API</a></strong><a class="headerlink" href="#type-2-using-fileid-obtained-from-file-upload-api" title="Permanent link">&para;</a></h4>
+<p>For parameter descriptions, refer to the <a href="#request-parameters">request parameters</a> table.</p>
+<h4 id="type-2-using-fileid-obtained-from-file-upload-api"><strong>Type 2:  Using fileId obtained from <a href="../../apis/automation/upload-file/">file upload API</a></strong><a class="headerlink" href="#type-2-using-fileid-obtained-from-file-upload-api" title="Permanent link">&para;</a></h4>
 <p>You can upload a file using the <strong>fileId</strong> obtained from file upload API. The following example uses a webhook instance when multiple webhook channels are configured:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>curl -X POST
 </span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>&#39;https://bots.kore.ai/chatbot/v2/webhook/st-4b8ee63f-0bad-xxxx-xxx-a8c4xxxxx086/xxxInstance/ivrInst-c86xxxx54-xxxx-xxxx-9471-dfxxxx37305c&#39; \
@@ -14485,7 +14486,7 @@ For the list of Supported Bot Languages, read <a href="https://developer.kore.ai
 </span><span id="__span-24-26"><a id="__codelineno-24-26" name="__codelineno-24-26" href="#__codelineno-24-26"></a>    }
 </span><span id="__span-24-27"><a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a>}&#39;
 </span></code></pre></div>
-<p>For parameter descriptions, refer to the <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-webhook-channel/#Request_Parameters">request parameters</a> table.</p>
+<p>For parameter descriptions, refer to the <a href="#request-parameters">request parameters</a> table.</p>
 <h3 id="option-2-upload-files-to-koreai-xo-platform">Option 2: Upload Files to Kore.ai XO Platform<a class="headerlink" href="#option-2-upload-files-to-koreai-xo-platform" title="Permanent link">&para;</a></h3>
 <p>You can upload files directly to the Kore.ai XO Platform, capture the ‘file id’ provided by the platform, and share it with the bot during the conversation. This option is supported only when the Webhook v2.0 is used.</p>
 <p>Use the following API to upload your file to the platform. These APIs do not require any scopes and are accessible using any of the valid apps present in the bot/account.</p>
