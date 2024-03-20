@@ -12817,12 +12817,12 @@
 <li>When the Conversation is handed over to the Platform after the agent transfer, the session closure functionality works as usual.</li>
 <li>For all the new bots or existing bots that do not have at least one <strong>SessionClosure</strong> metadata tag, the <strong>SessionClosure</strong> switch is turned off by default.</li>
 <li>For all the existing bots that have at least one <strong>SessionClosure</strong> metadata tag, the switch is turned on by default.</li>
-<li>The Platform introduces the<a href="https://developer.kore.ai/docs/bots/advanced-topics/koreutil-libraries/#koreUtilgetSunshineConversationsMetadata"> KoreUtil.getSunshineConversationsMetadata()</a><span style="text-decoration:underline;"> </span>function to let a Bot developer fetch the stored metadata (Get API operation), and use it for the following:<ul>
+<li>The Platform introduces the<a href="../../apis/automation/koreutil-libraries/#koreutilgetsunshineconversationsmetadata"> KoreUtil.getSunshineConversationsMetadata</a> function to let a Bot developer fetch the stored metadata (Get API operation), and use it for the following:<ul>
 <li>Entities where JavaScript is supported like advanced messages for a prompt, script nodes, etc.</li>
 <li>Simple messages like plain text prompts.</li>
 </ul>
 </li>
-<li>Any additional changes or updates to the channel configurations should go through the<a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/"> Bot Publish</a> cycle.</li>
+<li>Any additional changes or updates to the channel configurations should go through the<a href="../../deploy/publishing-bot/"> Bot Publish</a> cycle.</li>
 </ul>
 <p><strong>Selecting the Default and Next Integrations for Transferring Control</strong></p>
 <p>When you have a pre-existing switchboard integration, the XO Platform allows you to configure it as the default for the initial pass control during conversation initiation. Alternatively, you can select the Kore switchboard integration to designate the pass control.</p>

@@ -12844,12 +12844,11 @@
 <li><strong>Enable</strong> the channel.
 <a class="glightbox" href="../images/unblu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/unblu.png" alt="unblu integration" title="unblu integration" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
-<p>After the channel is enabled and all configurations are verified, you can optionally publish</p>
-<p>the assistant to make it available for end-users, with the new channel. Learn more about <a href="https://developer.kore.ai/docs/bots/publish/publishing-bot/">Publishing your Virtual Assistant</a>.</p>
-<p>To learn more about working with Channels within the Kore.ai XO Platform, please see <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-channels-to-your-bot/">Channel Enablement.</a></p>
+<p>After enabling the channel and verifying all the configurations, you can optionally publish the assistant for the new channel. Learn more about<a href="../../deploy/publishing-bot/"> Publishing your Virtual Assistant</a>.</p>
+<p>To learn more about working with Channels within the Kore.ai XO Platform, please see <a href="../adding-channels-to-your-bot/">Channel Enablement.</a></p>
 <h2 id="additional-instructions">Additional Instructions<a class="headerlink" href="#additional-instructions" title="Permanent link">&para;</a></h2>
 <p>For the seamless exchange of information from Unblu to Kore.ai, a few additional steps need to be performed.
-For a detailed document on the implementation, <a href="https://developer.kore.ai/docs/bots/how-tos/kore-unblu-integration/">refer here</a>.</p>
+For a detailed document on the implementation, <a href="../../app-settings/integrations/agents/kore-unblu-integration/">refer here</a>.</p>
 <ul>
 <li>The <em>host URL</em> where the Unblu SDK would be hosted needs to be added to the <strong>Domain</strong> section of your Unblu Account.</li>
 <li>From your Unblu Account, <strong>API Keys</strong> section, make a note of the <em>API Key</em>.</li>
@@ -13028,7 +13027,7 @@ For a detailed document on the implementation, <a href="https://developer.kore.a
 <li>When mapping a named area to a bot, <em>multiple named areas</em> can be mapped. This way a single Kore.ai assistant has the ability to accept Unblu dialog offer requests from different origins like SDKs or namedAreas.</li>
 <li>Also, the named area mapping is optional if you are enabling the Unblu channel for a single Kore.ai assistant.</li>
 <li>You can redirect user conversations to agents by adding an <em>agent transfer</em> node in the dialog flow, note that you need not enable the Agent Transfer or BotKit specifically for this Channel. Having an agent transfer node is sufficient.</li>
-<li>The user information for each message from Unblu is available in the <code>usercontext.customData</code> and you can use it for further processing. This information includes <em>deviceInfo</em>, <em>authInfo</em>, <em>joinedTime</em> of the user. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/context-object/">See here for how to use context object</a>.</li>
+<li>The user information for each message from Unblu is available in the <code>usercontext.customData</code> and you can use it for further processing. This information includes <em>deviceInfo</em>, <em>authInfo</em>, <em>joinedTime</em> of the user. <a href="../../automation/intelligence/context-object/">See here for how to use context object</a>.</li>
 </ul>
 <h2 id="using-unblu-supported-message-templates">Using Unblu supported message templates<a class="headerlink" href="#using-unblu-supported-message-templates" title="Permanent link">&para;</a></h2>
 <p>By default, the following message templates are used – Button/multi-choice, List template. You can override templates like card message, List message, multi-choice/Button message.</p>
