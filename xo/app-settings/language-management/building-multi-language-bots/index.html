@@ -13536,10 +13536,13 @@
 <ol>
 <li>
 <p>The virtual assistant identifies user language from every utterance. In case a change is detected, it will get a confirmation from the user regarding the switch and will proceed as per the user response.  These standard responses can be customized using the getCurrentOptions utility, <a href="../../../apis/koreutil-libraries/#koreutilgetcurrentoptions" target="_blank">see here for more</a>.  </p>
-<p><strong>Note:</strong> The current conversation will be discarded in case the user wants to switch languages.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The current conversation will be discarded in case the user wants to switch languages.</p>
+</div>
 </li>
 <li>
-<p>Language selection settings – In addition, you may want to configure the language selection options. From the <strong>App Settings</strong> , click <strong>Configurations -&gt; Language Management</strong> Under <strong>Language Selection Logic</strong> (scroll down for the option), for <strong>language selection time frame</strong>, set to one of the following:</p>
+<p>Language selection settings – In addition, you may want to configure the language selection options. From the <strong>Settings</strong> , click <strong>Configurations -&gt; Language Management</strong> Under <strong>Language Selection Logic</strong> (scroll down for the option), for <strong>language selection time frame</strong>, set to one of the following:</p>
 <ol>
 <li><strong>Lifetime</strong>: The auto-detected language will be set as the user’s preferred language and used for all subsequent communications until the user interacts in another enabled language anytime later. If the user starts to talk in another enabled language, the virtual assistant changes to that language.</li>
 <li><strong>Per Session</strong>: Detects the user’s language at the beginning of every session and responds accordingly.</li>
