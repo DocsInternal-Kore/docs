@@ -7760,6 +7760,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mandatory-and-optional-request-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mandatory and optional Request Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#asr-metadata-extraction" class="md-nav__link">
     <span class="md-ellipsis">
       ASR Metadata Extraction
@@ -12934,6 +12943,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mandatory-and-optional-request-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mandatory and optional Request Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#asr-metadata-extraction" class="md-nav__link">
     <span class="md-ellipsis">
       ASR Metadata Extraction
@@ -13119,80 +13137,8 @@ button, which becomes visible upon hovering over the IVR icon under the <strong>
 </span></code></pre></div></p>
 </li>
 <li>
-<p>The following table provides the descriptions of all the mandatory and optional request parameters:</p>
-<p><table>
-  <tr>
-  <td>
-    <strong>PARAMETER</strong>
-  </td>
-  <td>
-    <strong>REQUIRED</strong>
-  </td>
-  <td>
-    <strong>DESCRIPTION</strong>
-  </td>
-  </tr>
-  <tr>
-  <td>
-    callId
-  </td>
-  <td>
-    Y
-  </td>
-  <td>
-    Unique Id to identify or create a new user
-  </td>
-  </tr>
-  <tr>
-  <td>
-    message
-  </td>
-  <td>
-    Y
-  </td>
-  <td>
-    Message from User. If the value is empty, then the Welcome message will be triggered.
-  </td>
-  </tr>
-  <tr>
-  <td>
-    from
-  </td>
-  <td>
-    N
-  </td>
-  <td>
-    Created as a secondary user identity
-  </td>
-  </tr>
-  <tr>
-  <td>
-    app_root
-  </td>
-  <td>
-    N
-  </td>
-  <td>
-    Select any document to be the application root document. <strong>Note</strong>: The application root contains the file path, which is an entry point for the application.</p>
-<p></td>
-  </tr>
-<tr>
- <br />
-<td>
-    token
-   </td></p>
+<p>To view mandatory and optional request parameters, <a href="#mandatory-and-optional-request-parameters">click here</a>.</p>
 </li>
-</ol>
-<td>
-    N
-   </td>
-<td>
-    The JWT token can be passed in the body if it is not provided as a query parameter.
-   </td>
-<div class="language-text highlight"><pre><span></span><code>  &lt;/tr&gt;
-&lt;/table&gt;
-</code></pre></div>
-<ol>
 <li>
 <p>Click the <strong>Configurations</strong> tab.
   <a class="glightbox" href="../images/IVR-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="configurations" src="../images/IVR-18.png" title="configurations" /></a></p>
@@ -13214,6 +13160,64 @@ button, which becomes visible upon hovering over the IVR icon under the <strong>
 <p class="admonition-title">Note</p>
 <p>The Webhook Payload is used to test the IVR channel configuration for your VA. It can be tested using Postman.</p>
 </div>
+<h3 id="mandatory-and-optional-request-parameters">Mandatory and optional Request Parameters<a class="headerlink" href="#mandatory-and-optional-request-parameters" title="Permanent link">&para;</a></h3>
+<table>
+  <tr>
+   <td><strong>Parameter</strong>
+   </td>
+   <td><strong>Required</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>callId
+   </td>
+   <td>Y
+   </td>
+   <td>Unique Id to identify or create a new user
+   </td>
+  </tr>
+  <tr>
+   <td>message
+   </td>
+   <td>Y
+   </td>
+   <td>Message from User. If the value is empty, then the Welcome message will be triggered.
+   </td>
+  </tr>
+  <tr>
+   <td>from
+   </td>
+   <td>N
+   </td>
+   <td>Created as a secondary user identity 
+   </td>
+  </tr>
+  <tr>
+   <td>app_root
+   </td>
+   <td>N
+   </td>
+   <td>Select any document to be the application root document
+
+
+
+<pre class="prettyprint">Note: The application root contains the file path, which is an entry point for the application.</pre>
+
+
+   </td>
+  </tr>
+  <tr>
+   <td>token
+   </td>
+   <td>N
+   </td>
+   <td>The JWT token can be passed in the body if it is not provided as a query parameter.
+   </td>
+  </tr>
+</table>
+
 <p><strong>Generating JWT Token</strong></p>
 <ol>
 <li>
