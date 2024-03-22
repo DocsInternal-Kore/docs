@@ -12962,7 +12962,7 @@ For example, User utterance <em>what are the extra charges?</em> should be respo
 <li><strong>Sharing Entity Values across Intents</strong>: Entity values or conversation flows can be driven using the previous intent’s context information. 
 For example, The <em>City Name</em> entity in <em>Check Weather</em> intent can be pre-populated if the user has executed <em>Check Flight Status</em> intent and has provided value for the <em>Destination City</em> entity.</li>
 </ul>
-<p>This document talks about the concepts behind the implementation of context management in the XO Platform. For a detailed step-by-step example, click <a href="https://docsinternal-kore.github.io/docs/xo/automation/intelligence/conversation-management/manage-interruptions/#interruptions-hierarchy" target="_blank">here</a>.</p>
+<p>This document talks about the concepts behind the implementation of context management in the XO Platform. For a detailed step-by-step example, click <a href="/docs/xo/automation/intelligence/conversation-management/manage-interruptions/#interruptions-hierarchy" target="_blank">here</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Example</p>
 <p><b>User</b>: When is my flight to Singapore?</p>
@@ -12988,7 +12988,7 @@ To achieve the above conversation, the context object can be used as follows:</p
 <li><strong>Conversation Flows</strong> to customize the flows.</li>
 </ul>
 <h3 id="output-context">Output Context<a class="headerlink" href="#output-context" title="Permanent link">&para;</a></h3>
-<p><strong>Context Tags</strong> are generated and stored in the <strong>context object</strong> to be used for managing the assistant’s behavior and user experience. The Platform creates a context object for every user intent, like dialog tasks and FAQs. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/context-object/" target="_blank">Learn more</a>.</p>
+<p><strong>Context Tags</strong> are generated and stored in the <strong>context object</strong> to be used for managing the assistant’s behavior and user experience. The Platform creates a context object for every user intent, like dialog tasks and FAQs. <a href="/docs/xo/automation/use-cases/context-object/" target="_blank">Learn more</a>.</p>
 <p><strong>Default Contexts Tags</strong></p>
 <p>Intent names, Entity names, and FAQ Term/Node names are emitted by default.</p>
 <p><strong>Custom Context Tags</strong></p>
@@ -13050,7 +13050,7 @@ To achieve the above conversation, the context object can be used as follows:</p
 <li>
 <p>Dialog intents with pre-conditions are detected only if the defined pre-conditions are met.</p>
 </li>
-<li>The intent with a precondition set is treated as a sub-intent and will be part of the <a href=" https://docsinternal-kore.github.io/docs/xo/automation/intelligence/sub-intents-and-follow-up-intents/#linked-task-exceptions" target="_blank">Linked Task Exception</a> behavior from the Dialog level Hold and Resume settings.</li>
+<li>The intent with a precondition set is treated as a sub-intent and will be part of the <a href="/docs/xo/automation/intelligence/sub-intents-and-follow-up-intents/#linked-task-exceptions" target="_blank">Linked Task Exception</a> behavior from the Dialog level Hold and Resume settings.</li>
 </ul>
 <h4 id="alert-tasks_1">Alert Tasks<a class="headerlink" href="#alert-tasks_1" title="Permanent link">&para;</a></h4>
 <p>Intent pre-conditions for <strong>alert</strong> tasks are set to define when a task is detected i.e. making a task available for detection only when specific tags are available in the context.</p>
@@ -13073,7 +13073,7 @@ To achieve the above conversation, the context object can be used as follows:</p
 <h3 id="contextual-intent-detection">Contextual Intent Detection<a class="headerlink" href="#contextual-intent-detection" title="Permanent link">&para;</a></h3>
 <p>Contextual intent detection helps in detecting relevant intents using the output context set by previously executed intents.</p>
 <h4 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h4>
-<p>You can define <em>Rules</em> for identifying contextually relevant intents by using output context tags the same as traits <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/traits/" target="_blank">Learn more</a>.</p>
+<p>You can define <em>Rules</em> for identifying contextually relevant intents by using output context tags the same as traits <a href="/docs/xo/automation/natural-language/training/traits/" target="_blank">Learn more</a>.</p>
 <h4 id="knowledge-graph_2">Knowledge Graph<a class="headerlink" href="#knowledge-graph_2" title="Permanent link">&para;</a></h4>
 <p>The Platform consumes the output context tags and uses them for improving intent detection in the Knowledge Graph engine based on the flag set by the developer. This flag ensures that the context tags are used to qualify paths in the Knowledge Graph. Context tags are used to extract terms and these terms are clubbed with any other terms present in user utterance. The consolidated list of terms is used for qualifying the path.</p>
 <p>You can configure this as follows:</p>
