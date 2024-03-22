@@ -12864,7 +12864,7 @@
 <p>Before changing your Knowledge Graph Type, we recommend backing up your existing knowledge graph by either creating a new bot version or by exporting a copy of your knowledge graph as a JSON or CSV.</p>
 </div>
 
-<p>Please continue reading to learn more about each type of knowledge graph. See <a href="https://docsinternal-kore.github.io/docs/xo/answers/knowledge-ai/knowledge-graph-terminology/" target="_blank">Knowledge Graph Terminology</a> for in-depth information about Knowledge Graph features and components.</p>
+<p>Please continue reading to learn more about each type of knowledge graph. See <a href="https://docsinternal-kore.github.io/docs/xo/automation/knowledge-ai/knowledge-graph-terminology/" target="_blank">Knowledge Graph Terminology</a> for in-depth information about Knowledge Graph features and components.</p>
 <h2 id="the-ontology-knowledge-graph">The Ontology Knowledge Graph<a class="headerlink" href="#the-ontology-knowledge-graph" title="Permanent link">&para;</a></h2>
 <p>This type lets you organize FAQs using Default, Mandatory, and Organizer Terms/Nodes, tags, synonyms, context, traits, and more.</p>
 <p>Whenever someone asks your VA a question, the terms (node names) in the Knowledge Graph are checked and matched with keywords from the utterance. We call this process path qualification. Tags and synonyms are also checked, and based on the score they receive, questions are shortlisted as likely matches or intents. These shortlisted questions are then compared with the actual utterance to identify the response, which can be either a simple response or the execution of a dialog task.</p>
@@ -12874,8 +12874,8 @@
 <p>Before enabling the Ontology Knowledge Graph model, please consider the following:</p>
 <ol>
 <li>You must build a Graph Ontology structure so the engine can qualify paths and compare them with query input. Each relevant term/node is considered while identifying the appropriate FAQ, so you must regularly maintain the node structure to facilitate optimum performance.</li>
-<li>The model supports three <a href="https://docsinternal-kore.github.io/docs/xo/answers/knowledge-ai/knowledge-graph-training/#term-type" target="_blank">Type of Term</a> : <em>Default, Mandatory,</em> and <em>Organizer</em>.</li>
-<li>The Ontology Model also supports other features such as Traits, Patterns, Path Synonyms, KG Synonyms, Bot Synonyms, Preconditions, and more. Please see the Comparison Table below for a detailed list of supported features. Also, see <a href="https://docsinternal-kore.github.io/docs/xo/answers/knowledge-ai/knowledge-graph-training/" target="_blank">Knowledge Graph Training</a> for configuration details.</li>
+<li>The model supports three <a href="https://docsinternal-kore.github.io/docs/xo/automation/knowledge-ai/knowledge-graph-training/#term-type" target="_blank">Type of Term</a> : <em>Default, Mandatory,</em> and <em>Organizer</em>.</li>
+<li>The Ontology Model also supports other features such as Traits, Patterns, Path Synonyms, KG Synonyms, Bot Synonyms, Preconditions, and more. Please see the Comparison Table below for a detailed list of supported features. Also, see <a href="https://docsinternal-kore.github.io/docs/xo/automation/knowledge-ai/knowledge-graph-training/" target="_blank">Knowledge Graph Training</a> for configuration details.</li>
 </ol>
 <h3 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
 <p>The Ontology Knowledge Graph engine uses a two-step approach while extracting a response. It combines a search-driven intent detection process with rule-based filtering. The settings for path coverage (percentage of terms needed) and term usage (mandatory or optional) in the user utterance help in the initial filtering of the FAQ intents. Tokenization and the n-gram-based cosine scoring model help fulfill the final search criteria.</p>
