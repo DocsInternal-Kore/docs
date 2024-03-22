@@ -3505,7 +3505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../answers/knowledge-ai/knowledge-graph-training.md" class="md-nav__link">
+      <a href="../../../knowledge-ai/build-a-knowledge-graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -13618,14 +13618,13 @@
 <p>To add utterances to the Machine Learning Engine, please follow the steps below:</p>
 <ol>
 <li>Open the VA for which you want to add sample user utterances.</li>
-<li>Select the <strong>Build</strong> tab from the top menu.</li>
 <li>From the left menu, select the <strong>Natural Language -&gt;</strong> <strong>Training</strong> option.</li>
 <li>By default, the tab with a list of all <strong>Intents</strong> would be displayed.</li>
 <li>You can use the filter option to restrict the display items to <strong>Dialog Intents, Sub Intent Dialogs</strong> or <strong>Sub-Intents</strong>. You can also choose to <strong>Include Hidden Tasks</strong>. </li>
 <li>Click <strong>Utterances &gt; + Utterance</strong> against the Intent for which you want to add the utterances. </li>
 </ol>
-<p><a class="glightbox" href="../images/add-utterances.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-utterances.png" alt="add utterance" title="add utterance" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol start="7"><li>The user utterance page opens.</li></ol>
+<p><a class="glightbox" href="../images/add-utterances-click.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-utterances-click.png" alt="add utterance" title="add utterance" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ol start="6"><li>The user utterance page opens.</li></ol>
 
 <p>Here is where you can enter the utterances. </p>
 <div class="admonition note">
@@ -13679,15 +13678,14 @@
 <p>To set up the <strong>Auto Train</strong> option, follow the steps below:</p>
 <ol>
 <li>Open the VA for which you want to modify the settings.</li>
-<li>Select the <strong>Build</strong> top menu option.</li>
 <li>On the left navigation menu, click <strong>Natural Language</strong> -&gt; <strong>Thresholds &amp; Configurations</strong> -&gt; <strong>Machine Learning</strong>.</li>
 <li>
 <p>Select “<em>Yes, add the successfully identified user utterances to the ML training model (Unsupervised Training)”</em> for the <strong>Auto Training For Machine Learning</strong> option.</p>
-<p><a class="glightbox" href="../images/auto-train-ML.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/auto-train-ML.png" alt="auto train machine learning" title="auto train machine learning" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/auto-train-ML-section.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/auto-train-ML-section.png" alt="auto train machine learning" title="auto train machine learning" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
 <h2 id="thresholds-configurations">Thresholds &amp; Configurations<a class="headerlink" href="#thresholds-configurations" title="Permanent link">&para;</a></h2>
-<p>To train and improve the performance of your Assistant, Threshold and Configurations can be specified for all three NLP engines – FM, KG, and ML. You can access these settings by navigating to <strong>Build</strong> &gt; <strong>Natural Language</strong> &gt; <strong>Thresholds &amp; Configurations</strong>.</p>
+<p>To train and improve the performance of your Assistant, Threshold and Configurations can be specified for all three NLP engines – FM, KG, and ML. You can access these settings by navigating to <strong>Natural Language</strong> &gt; <strong>Thresholds &amp; Configurations</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If your VA is multilingual, you can set the Thresholds differently for different languages. If not set, the Default Settings will be used for all languages.</p>
@@ -13717,14 +13715,14 @@
 <p>All the primary intents of the VA will be part of the <strong>Bot Level Intent Model</strong>. Each of the Dialog tasks will have its own ML Model consisting of all the sub-intents added to it. The Thresholds and Configurations can be individually configured for each of the models. For example, the Bot Level Intent Model can use ‘Standard’ Network Type and a specific Dialog’s intent model can use ‘LSTM’ Network Type.</p>
 <h3 id="configuring-machine-learning-parameters">Configuring Machine Learning Parameters<a class="headerlink" href="#configuring-machine-learning-parameters" title="Permanent link">&para;</a></h3>
 <p>The XO Platform provides language-wise defaults for the following parameters related to the ML performance of your VA. You can customize them to suit your particular needs.</p>
-<p><a class="glightbox" href="../images/ml-thresholds-default-parameters.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ml-thresholds-default-parameters.png" alt="ml thresholds default parameters" title="ml thresholds default parameters" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/ml-thresholds-default-parameters-access.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ml-thresholds-default-parameters-access.png" alt="ml thresholds default parameters" title="ml thresholds default parameters" style="border: 1px solid gray; zoom:75%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Key Pointers on ML configurations</p>
 <ul><li>The illustration below shows the list of all possible configurations and these are available for both single and multiple intent models.</li>
 <li>When the multiple intent model is enabled, you can configure the individual models by selecting the Configure link against the model.</li>
 <li>While there is only one VA level intent model, you can add multiple dialog intent models using the Add New button and configure each as per your requirements.</li>
 <li>Advanced ML Configurations can be applied from here or from the Advanced NLP Configurations section.</li>
-<a class="glightbox" href="../images/advanced-ml-configurations.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/advanced-ml-configurations.png" alt="advanced ml configurations" title="advanced ml configurations" style="border: 1px solid gray; zoom:75%;"></a></ul>
+<a class="glightbox" href="../images/advanced-ml-configurations-section.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/advanced-ml-configurations-section.png" alt="advanced ml configurations" title="advanced ml configurations" style="border: 1px solid gray; zoom:75%;"></a></ul>
 </div>
 
 <h4 id="network-type">Network Type<a class="headerlink" href="#network-type" title="Permanent link">&para;</a></h4>
@@ -13793,9 +13791,9 @@ The Universal Sentence Encoder encodes text into high-dimensional vectors that c
 <li>The intent names should be very descriptive.</li>
 <li>Provide descriptive names, as the model relies heavily on intent names.</li>
 </ul>
-<p>When an intent is named “<strong><em>Show the status of my order</em></strong>,” for example, under <strong>Build</strong> &gt; <strong>Conversational Skills</strong> &gt; <strong>Dialog Tasks</strong>.</p>
+<p>When an intent is named “<strong><em>Show the status of my order</em></strong>,” for example, under <strong>Conversational Skills</strong> &gt; <strong>Dialog Tasks</strong>.</p>
 <p><a class="glightbox" href="../images/intent-name-example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/intent-name-example.png" alt="intent name example" title="intent name example" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>For a new bot, under <strong>Build</strong> &gt; <strong>Natural Language</strong> &gt; <strong>Training</strong> &gt; <strong>Intents</strong>, ensure that no training utterances are added for the intent.</p>
+<p>For a new bot, under <strong>Natural Language</strong> &gt; <strong>Training</strong> &gt; <strong>Intents</strong>, ensure that no training utterances are added for the intent.</p>
 <p><a class="glightbox" href="../images/intent-training-utterances.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/intent-training-utterances.png" alt="intent training utterances" title="intent training utterances" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>When you enable <strong>ZSL network type</strong> for an existing bot, the system does not identify the intent for its training data/utterances.</p>
 <div class="admonition note">
@@ -13806,20 +13804,20 @@ The Universal Sentence Encoder encodes text into high-dimensional vectors that c
 <p><strong>Enable the Zero-Shot Learning Network Type</strong></p>
 <p>To enable the <strong>ZSL</strong> model, follow the steps below:</p>
 <ol>
-<li>Navigate to <strong>Build</strong> &gt; <strong>Natural Language</strong> &gt; <strong>Thresholds and Configurations</strong> &gt; <strong>Machine Learning</strong>.</li>
+<li>Navigate to <strong>Natural Language</strong> &gt; <strong>Thresholds and Configurations</strong> &gt; <strong>Machine Learning</strong>.</li>
 <li>Select <strong><em>Zero-Shot Model with OpenAI</em></strong> in the dropdown list for <strong>Network Type</strong>, and click <strong>Save</strong>.
-<a class="glightbox" href="../images/zero-shot-model-selection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/zero-shot-model-selection.png" alt="zero shot model" title="zero shot model" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/zero-shot-model-selection-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/zero-shot-model-selection-window.png" alt="zero shot model" title="zero shot model" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
 <p><strong>Testing the Utterance</strong></p>
 <p>To test the utterance for the <strong>Zero-Shot Learning Model with OpenAI</strong> Network Type, follow the steps below:</p>
 <ol>
-<li>Navigate to <strong>Build</strong> &gt; <strong>Testing</strong> &gt; <strong>Utterance Testing</strong>.</li>
+<li>Navigate to <strong>Testing</strong> &gt; <strong>Utterance Testing</strong>.</li>
 <li>Type the utterance.</li>
 </ol>
 <p><strong>Example 1</strong>: “<em>I don’t want the product</em>.”
 <a class="glightbox" href="../images/test-utterance-example-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/test-utterance-example-1.png" alt="test utterance example" title="test utterance example" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p><strong>Example 2</strong>: “<em>Where is my delivery?</em>”
-<a class="glightbox" href="../images/test-utterance-example-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/test-utterance-example-2.png" alt="test utterance example" title="test utterance example" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><strong>Example 2</strong>: “<em>Where is my delivery?</em>”</p>
+<p><a class="glightbox" href="../images/test-utterance-example-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/test-utterance-example-2.png" alt="test utterance example" title="test utterance example" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ol start="3"><li>Click <b>Save & Run</b>.</li>
 <li>The Machine Learning Model identifies and displays the following intents in the <b>NLP Analysis</b> window for each example.</li></ol>
 
@@ -13917,9 +13915,9 @@ The Universal Sentence Encoder encodes text into high-dimensional vectors that c
 <p><strong>Enable the Few-Shot Network Type</strong></p>
 <p>To enable the <strong>FSL</strong> model, follow the steps below:</p>
 <ol>
-<li>Navigate to <strong>Build</strong> &gt; <strong>Natural Language</strong> &gt; <strong>Thresholds and Configurations</strong> &gt; <strong>Machine Learning</strong>.</li>
+<li>Navigate to <strong>Natural Language</strong> &gt; <strong>Thresholds and Configurations</strong> &gt; <strong>Machine Learning</strong>.</li>
 <li>Select <strong><em>Few-Shot Model (Kore.ai Hosted Embeddings)</em></strong> in the dropdown list for <strong>Network Type</strong>, and click <strong>Save</strong>.
-<a class="glightbox" href="../images/enable-few-shot-model.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/enable-few-shot-model.png" alt="enable Few-shot model" title="enable Few-shot model" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/enable-few-shot-model-option.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/enable-few-shot-model-option.png" alt="enable Few-shot model" title="enable Few-shot model" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
 <h3 id="support-for-standard-bot-traits">Support for Standard Bot Traits<a class="headerlink" href="#support-for-standard-bot-traits" title="Permanent link">&para;</a></h3>
 <p>The Few-shot Model is now the default model for managing Traits. This feature is only available for the new bots created in NLP V3.</p>
@@ -13930,7 +13928,6 @@ The Universal Sentence Encoder encodes text into high-dimensional vectors that c
 
 <p>To manage the Few-shot Model as the default Network Type for traits, follow the steps below:</p>
 <ol>
-<li>Click <strong>Build</strong> on the top menu.</li>
 <li>Navigate to <strong>Natural Language</strong> &gt; <strong>Training</strong>, and click the <strong>Traits</strong> tab.</li>
 <li>Click the trait you want to configure from the list. Otherwise, add a new trait by clicking <strong>Add Traits</strong>.</li>
 <li>In the resulting window, click <strong>Manage</strong> to view the <strong>Manage Traits</strong> panel.</li>
@@ -13943,7 +13940,7 @@ The Universal Sentence Encoder encodes text into high-dimensional vectors that c
 <p>When the <strong>User utterance</strong> is “<em>Check my a/c balance</em>,” the <strong>Training data</strong> matched is “<em>Check my account balance</em>.”</p>
 <p>In this case, MPNET provides a high score (ML Threshold and ML Definitive scores) where the intent/entity/question is understood by the Virtual Assistant and matched to the training data. This support is helpful for migrating the solution-specific bots to the LLM approach.</p>
 <p><strong>Enabling Bot Synonyms</strong></p>
-<p>On the Platform, you can use Bot Synonyms as part of the Few-shot model by enabling the <strong>Bot Synonyms</strong> option in the <strong>Bot Level Intent Model Configurations</strong> window (after selecting the <strong>Few-Shot Model (Kore.ai Hosted Embeddings)</strong> Network Type under <strong>BUILD</strong> &gt; <strong>NATURAL LANGUAGE</strong> &gt; <strong>THRESHOLDS AND CONFIGURATIONS</strong>.</p>
+<p>On the Platform, you can use Bot Synonyms as part of the Few-shot model by enabling the <strong>Bot Synonyms</strong> option in the <strong>Bot Level Intent Model Configurations</strong> window (after selecting the <strong>Few-Shot Model (Kore.ai Hosted Embeddings)</strong> Network Type under <strong>NATURAL LANGUAGE</strong> &gt; <strong>THRESHOLDS AND CONFIGURATIONS</strong>.</p>
 <p><a class="glightbox" href="../images/bot-synonyms-few-shot-model.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-synonyms-few-shot-model.png" alt="Few-shot bot synonyms" title="Few-shot bot synonyms" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>When the <strong>Bot Synonyms</strong> option is enabled, the following happens:</p>
 <ul>
@@ -14237,10 +14234,10 @@ While using the <b>NER Threshold</b> setting, the following considerations shoul
 </ul>
 <h3 id="viewing-nlu-training-validations">Viewing NLU Training Validations<a class="headerlink" href="#viewing-nlu-training-validations" title="Permanent link">&para;</a></h3>
 <ol>
-<li>On the virtual assistant’s <strong>Build</strong> menu, click <strong>Natural Language -&gt;</strong> <strong>Training.</strong></li>
+<li>On the virtual assistant’s menu, click <strong>Natural Language -&gt;</strong> <strong>Training.</strong></li>
 <li>
 <p>In the <strong>Intents</strong> tab, you can see the set of recommendations for the Intents and ML utterances.
-    <a class="glightbox" href="../images/training-intents-tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-intents-tab.png" alt="select intents tab" title="select intents tab" style="border: 1px solid gray; zoom:75%;"></a></p>
+    <a class="glightbox" href="../images/training-intents-tab-select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/training-intents-tab-select.png" alt="select intents tab" title="select intents tab" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The errors and warnings in this screen are examples. The ML validations vary based on the error or warning recommendation as explained in the Goal-Based NLU Training Validations section above.</p>
@@ -14263,7 +14260,7 @@ While using the <b>NER Threshold</b> setting, the following considerations shoul
 <p>A warning is displayed when the issue impacts the VA's accuracy and it can be resolved. Warnings are less severe problems when compared to errors.
 </p>
 </div>
-<a class="glightbox" href="../images/handling-warning.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/handling-warning.png" alt="handle warning" title="handle warning" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/handling-warning-section.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/handling-warning-section.png" alt="handle warning" title="handle warning" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ul>
 </li>
@@ -14274,7 +14271,7 @@ While using the <b>NER Threshold</b> setting, the following considerations shoul
 <p>You can import and export ML utterances of a VA into another in CSV and JSON formats. You can choose between ‘In-Development’ or ‘Published’ tasks to export, whereas importing utterances always replace the latest copy of the task.</p>
 <h3 id="how-to-export-or-import-ml-utterances">How to Export or Import ML Utterances<a class="headerlink" href="#how-to-export-or-import-ml-utterances" title="Permanent link">&para;</a></h3>
 <ol>
-<li>On the VA’s <strong>Build</strong> menu, click <strong>Natural Language</strong> &gt; <strong>Training</strong>.</li>
+<li>On the VA’s menu, click <strong>Natural Language</strong> &gt; <strong>Training</strong>.</li>
 <li>
 <p>The ‘In-Development’ version of the VA’s ML utterances open by default. If you want to see the utterances in the ‘Published’ version, toggle on the top right side of the window to <strong>Published</strong>. </p>
 <p><div class="admonition note">
@@ -14287,7 +14284,7 @@ While using the <b>NER Threshold</b> setting, the following considerations shoul
 <ul>
 <li>Click <strong>Import Utterances</strong> and upload a CSV or JSON file with the utterances to import, or</li>
 <li>Click <strong>Export Utterances</strong> and select CSV or JSON formats to export the utterances.
-<a class="glightbox" href="../images/import-export-utterances.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/import-export-utterances.png" alt="import export utterances" title="import export utterances" style="border: 1px solid gray; zoom:75%;"></a></li>
+<a class="glightbox" href="../images/import-export-utterances-select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/import-export-utterances-select.png" alt="import export utterances" title="import export utterances" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 </ol>

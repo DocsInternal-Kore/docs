@@ -14,7 +14,7 @@
         <link rel="prev" href="../model-validation/">
       
       
-        <link rel="next" href="../traits/">
+        <link rel="next" href="../../../knowledge-ai/build-a-knowledge-graph/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -3416,7 +3416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../answers/knowledge-ai/knowledge-graph-training.md" class="md-nav__link">
+      <a href="../../../knowledge-ai/build-a-knowledge-graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -13468,7 +13468,7 @@
 <p>The following sections show you how to add these synonyms.</p>
 <h4 id="navigate-to-synonyms">Navigate to Synonyms<a class="headerlink" href="#navigate-to-synonyms" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Open the VA for which you want to add synonyms and select the <strong>Build</strong> tab from the top menu.</li>
+<li>Open the VA for which you want to add synonyms.</li>
 <li>From the left navigation menu and click <strong>Natural Language</strong> -&gt; <strong>Training.</strong></li>
 <li>On the <strong>Training</strong> page, click one of the following tabs:<ul>
 <li><strong>Bot Synonyms</strong> – Add and edit synonyms for the words in the bot or task names.</li>
@@ -13482,7 +13482,7 @@
 <ol>
 <li>
 <p>On the <strong>Training</strong> page, select the <strong>Bot Synonyms</strong> tab.
-<a class="glightbox" href="../images/add-bot-synonym.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-bot-synonym.png" alt="add synonyms" title="add synonyms" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/add-bot-synonym-select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-bot-synonym-select.png" alt="add synonyms" title="add synonyms" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Click <strong>New Synonym</strong> or use the edit icon against an existing synonym, to open the synonym page.</p>
@@ -13494,7 +13494,7 @@
 </ol>
 <h4 id="add-entity-synonyms">Add Entity Synonyms<a class="headerlink" href="#add-entity-synonyms" title="Permanent link">&para;</a></h4>
 <p>On the <strong>Training</strong> page, on the <strong>Entities</strong> tab, each dialog task entity is listed with any defined synonyms for that entity name.
-<a class="glightbox" href="../images/entity-tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/entity-tab.png" alt="entity tab" title="entity tab" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/entity-tab-select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/entity-tab-select.png" alt="entity tab" title="entity tab" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>To add synonyms for a dialog task entity, follow the below steps:</p>
 <ol>
 <li>On the <strong>Training</strong> page, select the <strong>Entities</strong> tab.</li>
@@ -13536,12 +13536,12 @@
 <p>You can define a new concept the same way as you would define a Bot Synonym, but you need to start the word with a <strong>~</strong>. For more details on the naming convention, click <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/nlp-guidelines/#concepts" target="_blank">here</a>.</p>
 <p>You can also define custom concepts using emojis.</p>
 <p>Concepts are used to define patterns. For example, the pattern <em>buy ~fruit</em> is used to capture <em>buy orange</em> or <em>buy banana</em>.
-<a class="glightbox" href="../images/define-custom-concepts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/define-custom-concepts.png" alt="define custom concepts" title="define custom concepts" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/define-custom-concepts-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/define-custom-concepts-window.png" alt="define custom concepts" title="define custom concepts" style="border: 1px solid gray; zoom:75%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 Add the <b>~disable_help</b> concept key and train the VA to disable the system help. You can train the virtual assistant (VA) to use the <b>custom_help</b> group in Smalltalk to trigger the customized help messages. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/small-talk/#add-groups" target="_blank">Learn more</a>.</p></div>
 
-<p><a class="glightbox" href="../images/custom_help.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/custom_help.png" alt="custom help" title="custom help" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/custom_help-setup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/custom_help-setup.png" alt="custom help" title="custom help" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h3 id="parallel-editing-for-concepts">Parallel Editing for Concepts<a class="headerlink" href="#parallel-editing-for-concepts" title="Permanent link">&para;</a></h3>
 <p>Parallel Editing works the same for Concepts and Synonyms. Please click <a href="https://docsinternal-kore.github.io/docs/xo/automation/natural-language/training/fundamental-meaning/#parallel-editing-for-synonyms" target="_blank">here</a> to learn more.</p>
 <h2 id="bot-substitutions">Bot Substitutions<a class="headerlink" href="#bot-substitutions" title="Permanent link">&para;</a></h2>
@@ -13606,8 +13606,8 @@ Synonym words with a <code>+</code> prefix are treated as aliases to train word 
 </ul>
 <p><strong>Alias Patterns</strong></p>
 <p>The <strong>Custom Concept Entity</strong> on the Platform allows the selective marking of aliases using patterns. 
-In the example below, the system marks <code>Aston</code> as an alias for <code>Aston Martin</code> only if it is not followed by the word <code>Martin</code> according to the <strong>Synonyms</strong> pattern.
-<a class="glightbox" href="../images/synonyms-example-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/synonyms-example-1.png" alt="synonyms example 1" title="synonyms example 1" style="border: 1px solid gray; zoom:75%;"></a></p>
+In the example below, the system marks <code>Aston</code> as an alias for <code>Aston Martin</code> only if it is not followed by the word <code>Martin</code> according to the <strong>Synonyms</strong> pattern.</p>
+<p><a class="glightbox" href="../images/synonyms-example-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/synonyms-example-1.png" alt="synonyms example 1" title="synonyms example 1" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Similarly, in the example below, the system marks <code>Kelly</code> as the alias for <code>TeleHealth</code> only if it is followed by the word <code>health</code> (the underscore limits the marking to one word) according to the <strong>Synonyms</strong> pattern.</p>
 <p><a class="glightbox" href="../images/synonyms-example-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/synonyms-example-2.png" alt="synonyms example 2" title="synonyms example 2" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h2 id="bot-homophones">Bot Homophones<a class="headerlink" href="#bot-homophones" title="Permanent link">&para;</a></h2>
@@ -13640,11 +13640,11 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <p>The NLP engine can recognize emojis present in the user utterance. You can include these in the concept definition and give a better user experience. For example, a thumbs-up emoticon (:thumbs up:) from the user can be considered as an affirmative, and a frown emoticon (<img alt="☹" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2639.svg" title=":frowning2:" />) can be considered as an anger sentiment and appropriate action can be taken.</p>
 <p>You can import emojis into your VA’s system concepts so that it can conduct the conversations when emojis are present in the user’s utterances. For this, follow the below steps:</p>
 <ol>
-<li>Under the <strong>Build</strong> top menu option, from the left menu, click <strong>Natural Language -&gt; Training</strong></li>
+<li>From the left menu, click <strong>Natural Language -&gt; Training</strong></li>
 <li>On the <strong>Intents</strong> tab, click the more/ellipses icon and select <strong>Import Emojis into Concepts</strong>.</li>
 <li>
 <p>This adds all the default emojis to the system concepts for the current language. As you can see emojis are updated for the system concepts like this: ~<em>emohappy</em>, ~<em>emohello</em>, etc.
-<a class="glightbox" href="../images/import-emoji.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/import-emoji.png" alt="import emoji" title="import emoji" style="border: 1px solid gray; zoom:75%;"></a></p>
+<a class="glightbox" href="../images/import-emoji-concepts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/import-emoji-concepts.png" alt="import emoji" title="import emoji" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>After importing, you may choose to review and remove any emojis that you may not want to support.</p>
@@ -13661,7 +13661,7 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <p>For a quick guide towards the usage of patterns, refer to <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/train-the-assistant/use-patterns-for-intents-and-entities/" target="_blank">How to use Patterns</a>.</p>
 <h3 id="navigate-to-the-patterns-tab">Navigate to the Patterns Tab<a class="headerlink" href="#navigate-to-the-patterns-tab" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Open the VA for which you want to add patterns and select the <strong>Build</strong> tab from the top menu.</li>
+<li>Open the VA for which you want to add patterns.</li>
 <li>From the left menu click <strong>Natural Language -&gt;</strong> <strong>Training</strong>.</li>
 <li>On the <strong>Training</strong> page, click one of the following tabs:<ul>
 <li><strong>Intents</strong>– Add or edit patterns or rules for dialog task User Intent nodes.</li>
@@ -13675,7 +13675,7 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <p>For example, you can build a pattern like <em>find <em>testable</em> value</em> to recognize in the user input a sequence of words in order, where the word <em>find</em> is followed by any number of words, followed by the word <em>testable</em>, and again followed by any number of words, which are finally followed by the word <em>value</em>. For this pattern, the user input can be <em>Find me any testable integers corresponding to the value</em>, which can match the pattern.</p>
 <p>You can also use concepts to build patterns. For example, the pattern is defined as <em>buy ~fruit</em> and the user input that matches this pattern can be <em>buy orange.</em></p>
 <p>In the <strong>Intents</strong> section, you can view, add, and delete patterns for dialog tasks.</p>
-<p><a class="glightbox" href="../images/manage-patterns-for-dialog-tasks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/manage-patterns-for-dialog-tasks.png" alt="manage patterns for dialog tasks" title="manage patterns for dialog tasks" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/manage-patterns-for-dialog-tasks-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/manage-patterns-for-dialog-tasks-window.png" alt="manage patterns for dialog tasks" title="manage patterns for dialog tasks" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>To add an intent pattern, follow the below steps:</p>
 <ol>
 <li>On the <strong>Training</strong> page, click the <strong>Patterns/+Pattern</strong> against the intent name you want to enter the patterns for.</li>
@@ -13685,7 +13685,7 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <p><a class="glightbox" href="../images/add-intent-pattern.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-intent-pattern.png" alt="add intent pattern" title="add intent pattern" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h3 id="add-rules-for-intents">Add Rules for Intents<a class="headerlink" href="#add-rules-for-intents" title="Permanent link">&para;</a></h3>
 <p>You can use traits or context tags to define intent identification rules for better intent detection. You can add Traits or Context Tags and conditional rules using AND, OR operators.</p>
-<p><a class="glightbox" href="../images/add-rules-for-an-intent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-rules-for-an-intent.png" alt="add rules for an intent" title="add rules for an intent" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/add-rules-for-an-intent-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-rules-for-an-intent-window.png" alt="add rules for an intent" title="add rules for an intent" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>To add an intent rule, follow the below steps:</p>
 <ol>
 <li>On the <strong>Training</strong> page, click the <strong>Rules/+Rule</strong> against the intent name you want to enter the patterns for.</li>
@@ -13711,11 +13711,10 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <p>The <strong>Negative Patterns</strong> feature helps filter matched intents that are a part of the user utterance without triggering the intent. In other words, <strong>Negative patterns</strong> are used to eliminate the intents detected by the Fundamental Meaning or Machine Learning models that don’t serve the required purpose before ranking and resolving the definitive intents.</p>
 <p>To activate Negative Patterns, follow the steps below:</p>
 <ol>
-<li>Click the <strong>Build</strong> top menu option.</li>
 <li>Navigate to <strong>Natural Language</strong> -&gt; <strong>Thresholds &amp; Configurations</strong> -&gt; <strong>Ranking and Resolver Engine</strong>.</li>
 <li>Enable <strong>Negative Patterns</strong>.</li>
 </ol>
-<p><a class="glightbox" href="../images/enable-negative-patterns-fm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/enable-negative-patterns-fm.png" alt="enable negative patterns" title="enable negative patterns" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/enable-negative-patterns-fm-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/enable-negative-patterns-fm-window.png" alt="enable negative patterns" title="enable negative patterns" style="border: 1px solid gray; zoom:75%;"></a></p>
 <ol>
 <li>For each of the intents in your VA, you can define negative patterns similar to how you define intent patterns. <ul>
 <li>Go to <strong>Natural Language</strong> &gt; <strong>Training</strong> &gt; <strong>Intents</strong> and select the Intent to which you want to add the Negative Pattern.</li>
@@ -13728,7 +13727,7 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <a class="glightbox" href="../images/negative-patterns-fm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/negative-patterns-fm.png" alt="negative patterns" title="negative patterns" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ol>
 <h2 id="thresholds-configurations">Thresholds &amp; Configurations<a class="headerlink" href="#thresholds-configurations" title="Permanent link">&para;</a></h2>
-<p>To train and improve the performance, Threshold and Configurations can be specified for all three NLP engines – FM, KG, and ML. You can access these settings under <strong>Build</strong> -&gt; <strong>Natural Language</strong> &gt; <strong>Thresholds &amp; Configurations</strong>.</p>
+<p>To train and improve the performance, Threshold and Configurations can be specified for all three NLP engines – FM, KG, and ML. You can access these settings under <strong>Natural Language</strong> &gt; <strong>Thresholds &amp; Configurations</strong>.</p>
 <p>The settings for the FM engine are discussed in detail in the following sections.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -13737,7 +13736,6 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <p>To set up Thresholds and Configurations for the FM Engine, please follow the steps below:</p>
 <ol>
 <li>Open the assistant for which you want to configure thresholds.</li>
-<li>Select the <strong>Build</strong> tab from the top menu.</li>
 <li>From the left menu, click <strong>Natural Language -&gt; Thresholds &amp; Configurations</strong>.</li>
 <li>
 <p>The <strong>Fundamental Meaning</strong> section allows you to set the threshold for the FM engine:</p>
@@ -13745,7 +13743,7 @@ Both homonyms do not change the original utterance like Substitutions or return 
 <li><strong>Intent Detection using Task Name Words</strong> can be disabled in case your use case requires it. This is particularly useful if you have too many tasks named – <em>place order</em>, <em>cancel order</em>, <em>request order</em>, <em>duplicate order</em>. All these tasks will be matched as intents if the user utterance has the word “<em>order</em>” in it. Instead of <em>trying</em>, <em>guessing</em>, and training for all possible utterances, disabling this option does the trick. Disabling it will not affect the intent detection using patterns. Also, an implicit pattern using the words in the Task Name will be automatically added. The implicit pattern identifies this intent only when the user input starts and ends with the exact task name. By default, it is enabled.</li>
 <li><strong>FM Threshold</strong> can be used to limit the number of results sent from the FM Engine to Ranking and Resolver, so as to reduce the possibility of presenting a low confidence match to the end-user. Enable this configuration and choose the <em>threshold percentage</em> as a value between 0% and 20%. Default is 2%. Only the intent matches within the set % of the top-scoring intent will be considered and all other intents will be eliminated. This configuration is available only for English, Spanish, French and German languages.</li>
 </ul>
-<p><a class="glightbox" href="../images/thresholds-and-configurations-enable.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/thresholds-and-configurations-enable.png" alt="thresholds and configurations" title="thresholds and configurations" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><a class="glightbox" href="../images/thresholds-and-configurations-enable-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/thresholds-and-configurations-enable-window.png" alt="thresholds and configurations" title="thresholds and configurations" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
 
@@ -13844,13 +13842,13 @@ Both homonyms do not change the original utterance like Substitutions or return 
         
         
           
-          <a href="../traits/" class="md-footer__link md-footer__link--next" aria-label="Next: Traits Engine">
+          <a href="../../../knowledge-ai/build-a-knowledge-graph/" class="md-footer__link md-footer__link--next" aria-label="Next: KG Engine">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Traits Engine
+                KG Engine
               </div>
             </div>
             <div class="md-footer__button md-icon">
