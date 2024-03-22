@@ -13133,8 +13133,8 @@ The Exit Scenario Key-Value fields help identify when to end the interaction wit
 <p>When enabled, this feature lets you add an GenAI Node to Dialog Tasks. This node allows you to collect Entities from end-users in a free-flowing conversation (in the selected English/Non-English Bot Language) using LLM and Generative AI in the background. You can define the entities to be collected as well as rules &amp; scenarios in English and Non-English Bot languages. You can configure node properties just like any other node. You can also use the GenAI Node across Dialog Tasks.</p>
 <p><a class="glightbox" href="../images/dcf%281%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/dcf%281%29.png" title="image_tooltip" /></a></p>
 <p><strong>Usage</strong></p>
-<p>When creating or editing a Dialog Task that’s created manually or<a href="https://developer.kore.ai/docs/bots/chatbot-overview/using-the-dialog-builder-tool/#Auto-Generated_Dialog_Tasks"> auto-generated</a>, you can find a node called GenAI Node within your nodes list. </p>
-<p>When this feature is disabled, the node is unavailable within the Dialog Builder.<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/genai-node/"> Learn more</a>.</p>
+<p>When creating or editing a Dialog Task that’s created manually or<a href="../../../automation/use-cases/dialogs/using-the-dialog-builder-tool/#auto-generated-dialog-tasks"> auto-generated</a>, you can find a node called GenAI Node within your nodes list. </p>
+<p>When this feature is disabled, the node is unavailable within the Dialog Builder.<a href="../../../automation/use-cases/dialogs/node-types/genai-node/"> Learn more</a>.</p>
 <h3 id="answer-from-documents">Answer From Documents<a class="headerlink" href="#answer-from-documents" title="Permanent link">&para;</a></h3>
 <p>This feature leverages a Large Language Model (LLM) and Generative AI models from OpenAI to generate answers for FAQs by processing uploaded documents in an unstructured PDF format and user queries.</p>
 <p><a class="glightbox" href="../images/dcf%284%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/dcf%284%29.png" title="image_tooltip" /></a></p>
@@ -13181,12 +13181,12 @@ The Exit Scenario Key-Value fields help identify when to end the interaction wit
 <li>When you add custom tags to the <strong>current message</strong>, <strong>user profile</strong>, and <strong>session</strong> under <strong>Instance Properties</strong>, you can build custom profiles for the bot conversation. .</li>
 <li>Configuring node connections on an instance lets you define the connection rules for the conversation using transition conditions. This lets the conversation follow specific paths based on the user’s input.</li>
 </ol>
-<p>If this feature is disabled, you cannot configure the ML model to build custom prompts using OpenAI for different use cases.<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/genai-prompt/"> Learn more</a>.</p>
+<p>If this feature is disabled, you cannot configure the ML model to build custom prompts using OpenAI for different use cases.<a href="../../../automation/use-cases/dialogs/node-types/genai-prompt/"> Learn more</a>.</p>
 <h3 id="rephrase-dialog-responses">Rephrase Dialog Responses<a class="headerlink" href="#rephrase-dialog-responses" title="Permanent link">&para;</a></h3>
 <p>This feature sends all User Prompts, Error Prompts, and Bot Responses to the Generative AI along with the conversation context, which depends on the configured number of user inputs. Responses are rephrased in English or the selected Non-English Bot Language based on the context and user emotion, providing a more empathetic, natural, and contextual conversation experience to the end-user. You can give instructions (additional instructions) in English or any other bot language you select.</p>
 <p><a class="glightbox" href="../images/dcf%281%29.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/dcf%281%29.gif" title="image_tooltip" /></a></p>
 <p><strong>Usage</strong></p>
-<p>When configuring a<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-message-nodes/#Component_Properties"> Message</a>,<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-entity-node/#Component_Properties"> Entity</a>, or<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-confirmation-nodes/#Component_Properties"> Confirmation</a><span style="text-decoration:underline;"> </span>node, you can enable the <strong>Rephrase Response</strong> feature (disabled by default). This lets you set the number of user inputs sent to OpenAI/Anthropic Claude-1 based on the selected model as context for rephrasing the response sent through the node. You can choose between 0 and 5, where 0 means that no previous input is considered, while 5 means that the previous. 5 responses are sent as context.</p>
+<p>When configuring a Message, Entity, or Confirmation node, you can enable the <strong>Rephrase Response</strong> feature (disabled by default). This lets you set the number of user inputs sent to OpenAI/Anthropic Claude-1 based on the selected model as context for rephrasing the response sent through the node. You can choose between 0 and 5, where 0 means that no previous input is considered, while 5 means that the previous. 5 responses are sent as context.</p>
 <p>When this feature is disabled, the Rephrase Response section is not visible within your node’s Component Properties.</p>
 <p><a class="glightbox" href="../images/dcf%283%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/dcf%283%29.png" title="image_tooltip" /></a></p>
 <h3 id="zero-shot-ml-model">Zero-shot ML Model<a class="headerlink" href="#zero-shot-ml-model" title="Permanent link">&para;</a></h3>
@@ -13202,7 +13202,7 @@ The Exit Scenario Key-Value fields help identify when to end the interaction wit
 <li>Intent names</li>
 </ul>
 <p>The identified intent is then displayed as the matched intent.</p>
-<p>If this feature is disabled, the system won’t identify and display the logical and matched intent during utterance testing.<a href="https://developer.kore.ai/docs/bots/nlp/user-utterances/#Zero-Shot_Learning_Model_with_OpenAI"> Learn more</a>.</p>
+<p>If this feature is disabled, the system won’t identify and display the logical and matched intent during utterance testing.<a href="../../../automation/natural-language/training/machine-learning-engine/#zero-shot-learning-model-with-openai"> Learn more</a>.</p>
 <h3 id="repeat-responses">Repeat Responses<a class="headerlink" href="#repeat-responses" title="Permanent link">&para;</a></h3>
 <p>This feature uses LLM to reiterate the recent bot responses when the Repeat Response event is triggered. Bot developers can enable the event and customize the trigger conditions. This empowers end-users to ask the bot to repeat its recent responses at any point during the conversation. Currently, this event is supported for IVR, Audiocodes, and Twilio Voice channels.<a href="https://developer.kore.ai/docs/bots/bot-intelligence/event-based-bot-actions/#Repeat_Bot_Response_Event"> Learn more</a>.</p>
 <h3 id="rephrase-user-query">Rephrase User Query<a class="headerlink" href="#rephrase-user-query" title="Permanent link">&para;</a></h3>
@@ -13248,7 +13248,7 @@ User: What about the interest rates of both loans?</p>
 <li>User utterance input</li>
 <li>Intent names</li>
 </ul>
-<p>If this feature is disabled, the system won’t identify and display the logically matched intent during utterance testing.<a href="https://developer.kore.ai/docs/bots/nlp/user-utterances/#Few-Shot_Model_Koreai_Hosted_Embeddings"> Learn more</a>.</p>
+<p>If this feature is disabled, the system won’t identify and display the logically matched intent during utterance testing.<a href="../../../automation/natural-language/training/machine-learning-engine/#few-shot-model-koreai-hosted-embeddings"> Learn more</a>.</p>
 
 
 
