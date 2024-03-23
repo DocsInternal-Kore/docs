@@ -12998,7 +12998,7 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 <a class="glightbox" href="../images/sharing-context-faq.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/sharing-context-faq.png" alt="sharing context faq" title="sharing context faq" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>In the second question, the word <em>charges</em> is in the context of changing flights. To enable it, all you need is to set a flag. For each question answered the Context tags are set automatically, we just instruct the Platform to use them appropriately.</p>
 <ol>
-<li>Go to <strong>Natural Language &gt; Thresholds &amp; Configurations</strong>.</li>
+<li>Go to <strong>Natural Language &gt; NLU Config</strong>.</li>
 <li>Expand the <strong>Knowledge Graph</strong> tab.</li>
 <li>Scroll down and set the <strong>Qualify Contextual Paths</strong> tag. With this setting, the KG engine will qualify a question if any of the available context tags are part of that particular FAQ path.</li>
 <li>Run the assistant and see the effect.</li>
@@ -13012,7 +13012,7 @@ For example, “<em>Are there any charges for a flight change? ?</em>” followe
 <p>But this will not solve the use case described. It would answer the direct question – “<em>What are the flight change rates</em>” but not “<em>What are the rates</em>”. The reason being the FAQ not picking the context. To ensure that the context is picked by the FAQ:</p>
 <ol>
 <li>The <strong>Change Flight</strong> task is already emitting the <em>change</em> tag, the same will be used in this case.</li>
-<li>Go to <strong>Natural Language</strong> <strong>&gt;</strong> <strong>Thresholds &amp; Configurations</strong>.</li>
+<li>Go to <strong>Natural Language</strong> <strong>&gt;</strong> <strong>NLU Config</strong>.</li>
 <li>Expand the <strong>Knowledge Graph</strong> tab.</li>
 <li>Scroll down and set the <strong>Qualify Contextual Paths</strong> tag (if not already set as per the previous use case).</li>
 <li>Run the assistant and see the changes taking effect.</li>
