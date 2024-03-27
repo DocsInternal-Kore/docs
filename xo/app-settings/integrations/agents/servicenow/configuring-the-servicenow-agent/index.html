@@ -12929,7 +12929,7 @@
 <li>Log in to the Kore.ai XO Platform: <a href="https://bots.kore.ai/botbuilder" target="_blank">https://bots.kore.ai/botbuilder</a></li>
 <li>Select a Virtual Assistant for which you want to configure the ServiceNow agent. </li>
 <li>
-<p>Navigate to <strong>Build &gt; Integrations &gt; Agent Transfer</strong> and click the <strong>ServiceNow</strong> button.</p>
+<p>Navigate to <strong>App Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Agent Transfer</strong> and click the <strong>ServiceNow</strong>.</p>
 <p><a class="glightbox" href="../images/configuring-the-servicenow-agent-tokyo-img5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configuring-the-servicenow-agent-tokyo-img5.png" alt="Agent transfer - ServiceNow" title="Agent transfer - ServiceNow" style="border: 1px solid gray;zoom:80%;"></a></p>
 </li>
 <li>
@@ -13145,17 +13145,18 @@
 </li>
 <li>
 <p>Click the <strong>Advanced</strong> tab, add the code below and click <strong>Submit</strong>:</p>
-<p><code>var request;
-request = new sn_ws.RESTMessageV2('Platform - Agent Integrations', 'Platform - Agent Integrations');
-request.setRequestBody("{\"group\":\""+current.group+"\","formatted_message\":\""+GlideStringUtil.escapeForHomePage(current.formatted_message)+"\","sys_created_by\":\""+current.sys_created_by+"\",\"last_message\":\""+current.last_message+"\","sys_id\":\""+current.sys_id+"\"}");
-request.setRequestHeader("Content-Type", "application/json");
-var response = request.execute();</code></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The code is optional. It is recommended to use the code when you face any issues during execution. This rule executes the API configured in REST Message.</p>
-</div>
 </li>
 </ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    var request;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    request = new sn_ws.RESTMessageV2(&#39;Platform - Agent Integrations&#39;, &#39;Platform - Agent Integrations&#39;);
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    request.setRequestBody(&quot;{\&quot;group\&quot;:\&quot;&quot;+current.group+&quot;\&quot;,&quot;formatted_message\&quot;:\&quot;&quot;+GlideStringUtil.escapeForHomePage(current.formatted_message)+&quot;\&quot;,&quot;sys_created_by\&quot;:\&quot;&quot;+current.sys_created_by+&quot;\&quot;,\&quot;last_message\&quot;:\&quot;&quot;+current.last_message+&quot;\&quot;,&quot;sys_id\&quot;:\&quot;&quot;+current.sys_id+&quot;\&quot;}&quot;);
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    request.setRequestHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    var response = request.execute();
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>!!! Note
+
+    The code is optional. It is recommended to use the code when you face any issues during execution. This rule executes the API configured in REST Message.
+</code></pre></div>
 <h3 id="step-11-testing-configuration">Step 11: Testing Configuration<a class="headerlink" href="#step-11-testing-configuration" title="Permanent link">&para;</a></h3>
 <p>This section helps you verify how the conversations from the Kore.ai XO Platform are handed over to the ServiceNow agent after enabling it. </p>
 <p>To verify the data exchange between Kore.ai’s VA and ServiceNow agent, follow these steps:</p>
