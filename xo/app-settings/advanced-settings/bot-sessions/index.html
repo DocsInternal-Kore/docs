@@ -12768,9 +12768,22 @@
 <p><strong>When does a Conversation Session close?</strong></p>
 <ul>
 <li>The platform proactively closes inactive sessions after the specified time of inactivity set in the <a href="#manage-sessions">Manage Sessions </a>option.</li>
-<li>When the following utterances are detected – <em>“Discard”</em></li>
 <li>When the chat window is refreshed ie <em>“refresh: true”</em> is detected.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Discard and Discard all commands only stop the ongoing chat and do not end the Conversation Session.</p>
+<p>For discard all:</p>
+<ul>
+<li>The Dialog context, Current and Historic Tags are cleared;</li>
+<li>The Sentiment Tones are reset</li>
+</ul>
+<p>For discard:</p>
+<ul>
+<li>The current Dialog context will be cleared;</li>
+<li>The Current Tags will be replaced with the last updated ‘tags’ in the Historic Tags, and the Historic Tags would be cleared</li>
+</ul>
+</div>
 <p><strong>What happens when a Conversation Session closes?</strong></p>
 <ul>
 <li>
@@ -12787,21 +12800,6 @@
 <ul>
 <li>Complete session information is cleared;</li>
 <li>A new conversation session is created.</li>
-</ul>
-</li>
-<li>
-<p>For “<em>discard all</em>”</p>
-<ul>
-<li>The Dialog context, Current and Historic Tags are cleared;</li>
-<li>The Sentiment Tones are reset;</li>
-<li>The same Conversation Session will be continued</li>
-</ul>
-</li>
-<li>
-<p>For “<em>discard</em>”</p>
-<ul>
-<li>The current Dialog context will be cleared;</li>
-<li>The Current Tags will be replaced with the last updated ‘tags’ in the Historic Tags, and the Historic Tags would be cleared.</li>
 </ul>
 </li>
 </ul>
