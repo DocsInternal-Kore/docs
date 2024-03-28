@@ -12817,7 +12817,7 @@
 <p>The Form node lets you integrate <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/digital-skills/digital-forms" target="_blank">Digital Forms</a> with Dialog Tasks. This facilitates the presentation of forms to capture user inputs for specific use cases.</p>
 <p>The primary purpose of the Form node is to represent a UI Form in the dialog task and make the form available for end-users on their channel. For example, let us consider a travel assistant that has a form to capture the customer details to make a new booking. During this process, you may want to use the form instead of prompting for each and every entity value.</p>
 <h2 id="add-the-node">Add the Node<a class="headerlink" href="#add-the-node" title="Permanent link">&para;</a></h2>
-<p>Before you can begin setting up a Form node, you need to have previously created a Digital Form to use within the node. </p>
+<p>Before you can begin setting up a Form node, you need to have previously created a Digital Form to use within the node.</p>
 <p>To add a form node to the dialog task, follow the below steps:</p>
 <ol>
 <li><strong>Open the dialog task</strong> to which you want to add the Form node.</li>
@@ -12856,7 +12856,7 @@
 <p class="admonition-title">Note</p>
 <p>The configurations you set up or modify in this section are reflected in all other dialog tasks that use this node.</p>
 </div>
-<p>The Form Component Properties allow you to configure a variety of settings and prompts related to your Form Node, as follows: </p>
+<p>The Form Component Properties allow you to configure a variety of settings and prompts related to your Form Node, as follows:</p>
 <ol>
 <li>On the <strong>Component Properties</strong> tab, under the <strong>General Settings</strong> section, enter a <strong>Name</strong> and <strong>Display Name</strong> for the form node. Node names cannot contain spaces, but the Display Name can.</li>
 <li>In the <strong>User Prompts</strong> text box, enter the prompt message that you want the user to see for this form. It should instruct the user to click on the link to initiate the form. It is not recommended to change the context variable reference (of the form {{context.form_node.formLink}})coded therein. You can enter channel-specific messages for user prompts. For more information, refer to <a href="../../prompt-editor/" target="_blank">Using the Prompt Editor</a>.</li>
@@ -12927,6 +12927,10 @@ Steps to personalize form submission prompt for <strong>Mobile/Web SDK</strong>:
 </li>
 </ol>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the node is at the bottom in the sequence, then only the connection property is visible.</p>
+</div>
 <p>From the node’s <strong>Connections</strong> tab, you can determine the node in the dialog task to execute next. You can write the conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use intents for transitions.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
