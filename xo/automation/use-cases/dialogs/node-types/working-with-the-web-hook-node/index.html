@@ -1922,27 +1922,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../bot-action-node/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bot Action Node
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../working-with-the-service-node/" class="md-nav__link">
         
   
@@ -12834,7 +12813,7 @@
 <h1 id="webhook-node">WebHook Node<a class="headerlink" href="#webhook-node" title="Permanent link">&para;</a></h1>
 <p>You can use the WebHook node to subscribe to a message and to WebHook events that capture real-time data from real-time events and show them to the user. You can use the WebHook node for server-side validation, execute business logic, or make backend server API calls. Also, you can use the Kore.ai SDK Tool BotKit to add event handlers, control the messages and WebHook events as required by connecting the WebHook node to a script node to process the response.</p>
 <h2 id="create-and-register-an-app">Create and Register an App<a class="headerlink" href="#create-and-register-an-app" title="Permanent link">&para;</a></h2>
-<p>To get access to WebHook events and use WebHook nodes in your dialog task, you need to subscribe and configure an app in the <strong>Deploy &gt; Integrations</strong> tab of your Virtual Assistant. For more information, refer to <a href="https://developer.kore.ai/docs/bots/sdks/sdk-configuration/" target="_blank">SDK Configuration</a>. Let us use the example of an Agent Transfer app.</p>
+<p>To get access to WebHook events and use WebHook nodes in your dialog task, you need to subscribe and configure an app. Let us use the example of an Agent Transfer app.</p>
 <ol>
 <li>Select the <strong>Deploy</strong> tab from the top menu</li>
 <li>On the left menu, click <strong>Integrations &gt; Agent Transfer</strong>.</li>
@@ -12908,6 +12887,10 @@ If you have not yet configured the SDK, the Component Properties section will no
 </li>
 </ol>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Connection properties can be seen and accessed only if this is the bottommost node of a sequence.</p>
+</div>
 <p>Since they are contained within Bot Action nodes, Webhook nodes cannot be connected on their own to any other nodes outside the Bot Action node to which they belong. Connections can only be made with nodes contained within the same Bot Action node. </p>
 <p>From the node’s <strong>Connection Properties</strong> tab, you can configure the following:</p>
 <ul>
