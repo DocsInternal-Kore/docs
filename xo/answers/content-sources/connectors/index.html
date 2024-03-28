@@ -6220,17 +6220,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Connectors
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -6240,36 +6229,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this Page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-a-connector" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring a Connector
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -12610,23 +12569,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-a-connector" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring a Connector
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -12644,13 +12586,35 @@
 
 
 <h1 id="connectors">Connectors<a class="headerlink" href="#connectors" title="Permanent link">&para;</a></h1>
-<p>You can ingest content into the application from diverse sources including third-party repositories like ServiceNow, Microsoft SharePoint, Atlassian’s Confluence, IBM Domino, etc. using the <strong>connectors</strong> and provide your users with a seamless search experience.</p>
-<p>XO Answers provides custom connectors to enable crawling specific third-party content management applications, CRM systems, web database applications,  or cloud-based applications. The application can be configured to connect to multiple systems simultaneously using a connector for each third-party application.</p>
-<p>Connectors enable the application to establish a connection with the third-party application. After the connection is established and authentication is complete, the data from the third-party application is processed and indexed and is able as answers to search queries. The access privileges of the content are maintained as per the privileges assigned to the user in the third-party repository. This implies that only the files accessible to the user in the configuration of the connector can appear in search results.</p>
-<p>By default, the application provides connectors for most of the commonly used applications and the list will continue to grow. For any specific integration requirements, please <a href="https://kore.ai/contact-us/">contact us</a>.</p>
-<h2 id="configuring-a-connector">Configuring a Connector<a class="headerlink" href="#configuring-a-connector" title="Permanent link">&para;</a></h2>
-<p>To configure a new connector, go to the <strong>Connectors</strong> tab under the <strong>Sources</strong> page. This page lists the connectors which are already configured with the application. For a new connector, click on the <strong>+Connect</strong> button.</p>
-<p><a class="glightbox" href="../images/connectors/connector-home.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Connector Home" src="../images/connectors/connector-home.png" title="connector home" /></a></p>
+<p>Using the connectors, you can ingest content into the application from diverse sources, including third-party repositories like ServiceNow, Microsoft SharePoint, Atlassian’s Confluence, IBM Domino, etc., and provide your users with a seamless search experience.</p>
+<p>Search AI provides in-built connectors to enable crawling specific third-party content management applications, CRM systems, web database applications,  or cloud-based applications. The application can be configured to connect to multiple systems simultaneously using a connector for each third-party application.</p>
+<h1 id="understanding-connectors">Understanding Connectors<a class="headerlink" href="#understanding-connectors" title="Permanent link">&para;</a></h1>
+<p>Connectors enable the application to establish a connection with the third-party application. After the connection is established and authentication is complete, the data from the third-party application is ingested, indexed, and ready to answer in response to search queries. The access privileges of the content are maintained as per the privileges assigned to the user in the third-party repository. This implies that only the files accessible to the user can appear in the answers. During each synchronization cycle of the connector, Search AI only retrieves newly added or modified data from the application, determined by the timestamp of changes. If data has previously been indexed and remains unchanged, it is not retrieved again. </p>
+<p>Currently, Search AI provides a connector for ServiceNow. The list will continue to grow with future releases and will provide out-of-the-box support for most of the commonly used enterprise applications. For any specific integration requirements, please <a href="https://kore.ai/contact-us/">contact us</a>. </p>
+<h1 id="managing-connectors">Managing Connectors<a class="headerlink" href="#managing-connectors" title="Permanent link">&para;</a></h1>
+<h2 id="adding-a-content-source-using-connector">Adding a content source using Connector<a class="headerlink" href="#adding-a-content-source-using-connector" title="Permanent link">&para;</a></h2>
+<p>To configure a new connector, go to the <strong>Connectors**tab under the **Sources **page. For a new connector, click on the +**Connect</strong> button.
+<a class="glightbox" href="../images/connectors/connector-home.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Connector Home" src="../images/connectors/connector-home.png" title="connector home" /></a></p>
+<p>The following page shows the list of available connectors. Choose the connector corresponding to the third-party application that you want to connect to and configure it. For detailed instructions on configuring connectors, refer to the respective documentation.</p>
+<h2 id="enablingdisabling-connectors">Enabling/Disabling Connectors<a class="headerlink" href="#enablingdisabling-connectors" title="Permanent link">&para;</a></h2>
+<p>After the connector is configured and the source is connected, you can enable or disable the connection temporarily. When a connector is disabled, sync operation is temporarily disabled. This may be useful for testing, particularly when there is more than one connector configured with your Search AIst application. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Disabling a connector does not delete the ingested content. It disables any future data synchronization operation with the third-party application. The sync is resumed based on the configuration after the connector is enabled again.</p>
+</div>
+<p>To enable or disable a connector, use the corresponding Action buttons.
+<a class="glightbox" href="../images/connectors/disable-connector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Disable Connector" src="../images/connectors/disable-connector.png" title="Disable Connector" /></a></p>
+<h2 id="view-and-edit-connector-details">View and Edit Connector Details<a class="headerlink" href="#view-and-edit-connector-details" title="Permanent link">&para;</a></h2>
+<p>To view or edit the connector configuration, i.e., connection settings, sync schedule, etc.,  click the corresponding <em>connector from the list</em>. The details page shows the config details of the connector under different tabs.
+<a class="glightbox" href="../images/connectors/connector-details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Connector Details" src="../images/connectors/connector-details.png" title="Connector Details" /></a></p>
+<p><strong>Content</strong></p>
+<p>The **_Content _**tab lists all the pages crawled from the connector source along with their URL and timestamp of the last update. </p>
+<p><strong><em>Jobs</em></strong></p>
+<p>This**_ _**tab lists the synchronization-related tasks initiated by Search AI on the connector. 
+<a class="glightbox" href="../images/connectors/jobs-tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Connector Details" src="../images/connectors/jobs-tab.png" title="Connector Details" /></a></p>
+<h2 id="removing-the-content-source-integrated-using-connector">Removing the content source integrated using Connector<a class="headerlink" href="#removing-the-content-source-integrated-using-connector" title="Permanent link">&para;</a></h2>
+<p>To permanently remove a content source and corresponding connector from Search AI, go to the <strong>_Authorization tab _**and click the</strong>_ Remove Source_** button. This will also <strong>delete any data in Search AI indexed from the content source</strong>.
+<a class="glightbox" href="../images/connectors/delete-connector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Connector" src="../images/connectors/delete-connector.png" title="Delete Connector" /></a></p>
 
 
 
