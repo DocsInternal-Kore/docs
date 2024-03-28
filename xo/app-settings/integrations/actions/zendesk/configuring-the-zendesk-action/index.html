@@ -12839,17 +12839,16 @@
 </ul>
 <p>Steps to enable the Zendesk action:</p>
 <ol>
-<li>Go to <strong>Build &gt; Integrations</strong> and select the <strong>Actions</strong> menu item.</li>
-<li>Once you click the <strong>Actions</strong> menu, all integrations are shown in the <strong>Available</strong> region. Select the <strong>Zendesk</strong> action.<br />
-<a class="glightbox" href="../images/zendesk-action-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img1.png" alt="Actions - Zendesk" title="Actions - Zendesk" style="border: 1px solid gray;zoom:50%;"/></a></li>
+<li>Go to <strong>App Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Actions</strong>.</li>
+<li>Once you click the <strong>Actions</strong> menu, all integrations are shown in the <strong>Available</strong> region. Select the <strong>Zendesk</strong> action.  </li>
 </ol>
 <h3 id="pre-authorize-the-integration">Pre-authorize the Integration<a class="headerlink" href="#pre-authorize-the-integration" title="Permanent link">&para;</a></h3>
 <p><strong>Basic OAuth</strong></p>
 <p>You can authorize the integration using your credentials. The developer authorization lets you authorize the integration with the preconfigured Kore.ai app with the Basic OAuth option.</p>
 <p>Steps to authorize a Zendesk action using developer credentials:</p>
 <ol>
-<li>Go to <strong>Build &gt; Integrations</strong> and select the <strong>Actions</strong> menu item.</li>
-<li>Select the <strong>Zendesk</strong> action in the <strong>Available Actions</strong> region.</li>
+<li>Go to <strong>App Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Actions</strong>.</li>
+<li>Select the <strong>Zendesk</strong> action in the <strong>Available</strong> region.</li>
 <li>In the <strong>Configurations</strong> dialog, select the <strong>Authorization</strong> tab </li>
 <li>
 <p>Enter the following details:</p>
@@ -12862,8 +12861,10 @@
 <p><strong>User Sub Domain</strong> – The instance name of the Zendesk account.</p>
 </li>
 <li>
-<p><strong>Username or Email</strong> – The username or email of the Zendesk account.<br />
-<strong>Note</strong>: You must enter <strong>/token</strong> after the email address to authenticate the Zendesk account. For example, <code>john@example.com/token</code>.</p>
+<p><strong>Username or Email</strong> – The username or email of the Zendesk account.
+        !!! note</p>
+<div class="language-text highlight"><pre><span></span><code>    You must enter **/token** after the email address to authenticate the Zendesk account. For example, `john@example.com/token`.
+</code></pre></div>
 </li>
 <li>
 <p><strong>API Token</strong> – The password token of the Zendesk account.<br />
@@ -12871,8 +12872,11 @@
 </li>
 <li>
 <p>Click <strong>Save</strong>. When you configure the action for the first time, the <strong>Integration Successful</strong>  pop-up is displayed.<br />
-<a class="glightbox" href="../images/zendesk-action-img4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img4.png" alt="Integration successful" title="Integration successful" style="border: 1px solid gray;zoom:50%;"/></a><br />
-<strong>Note</strong>: The Zendesk action is moved from <em>Available</em> to <em>Configured</em> region.</p>
+<a class="glightbox" href="../images/zendesk-action-img4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/zendesk-action-img4.png" alt="Integration successful" title="Integration successful" style="border: 1px solid gray;zoom:50%;"/></a> </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Zendesk action is moved from <em>Available</em> to <em>Configured</em> region.</p>
+</div>
 </li>
 <li>
 <p>You can also click the <strong>Skip for Now</strong> button to install the Dialog Task templates later. To learn how to use action templates, read the <a href="../using-the-zendesk-action-templates/" target="_blank">Using the Zendesk action templates</a> article.<br />
@@ -12885,7 +12889,7 @@
 <p>You can authorize the integration at a user level with their login credentials. The user authorization process involves requesting permission for Kore.ai’s Zendesk app to access an access token at runtime. You can also use the basic auth profile to let a user configure the integration at runtime.</p>
 <p>Steps to authorize a Zendesk action at a user level:</p>
 <ol>
-<li>Go to <strong>Build &gt; Integrations</strong> and select the <strong>Actions</strong> menu item.</li>
+<li>Go to <strong>App Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Actions</strong>..</li>
 <li>Select the <strong>Zendesk</strong> action in the <strong>Available Actions</strong> region.</li>
 <li>In the Configurations dialog, select the <strong>Authorization</strong> tab.</li>
 <li>
@@ -12906,7 +12910,7 @@
 <p>Enter the following authentication credentials for the Basic Auth mechanism:</p>
 <ul>
 <li><strong>Name</strong> – Enter the name for the Basic Auth profile.</li>
-<li>Select the option – <strong>Yes, some tasks will have tenancy URLs and the user will need to provide that to successfully authenticate.</strong></li>
+<li>Select the option – <strong>Yes</strong>, some tasks will have tenancy URLs and the user will need to provide that to successfully authenticate.</li>
 <li><strong>Base URL</strong> – Enter the base tenant URL for Zendesk instance.</li>
 <li><strong>Authorization Check URL</strong> – Enter the authorization check URL for your Zendesk instance.</li>
 <li><strong>Description</strong> – Enter the description of the basic authentication profile.<br />
