@@ -6234,51 +6234,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#updating-an-existing-web-crawler" class="md-nav__link">
-    <span class="md-ellipsis">
-      Updating an existing web crawler
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#view-execution-status-and-crawled-pages" class="md-nav__link">
-    <span class="md-ellipsis">
-      View execution status and crawled pages
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recrawling-a-web-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recrawling a web source
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deleting-an-existing-web-crawler" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deleting an existing web crawler
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -12688,51 +12643,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#updating-an-existing-web-crawler" class="md-nav__link">
-    <span class="md-ellipsis">
-      Updating an existing web crawler
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#view-execution-status-and-crawled-pages" class="md-nav__link">
-    <span class="md-ellipsis">
-      View execution status and crawled pages
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recrawling-a-web-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recrawling a web source
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deleting-an-existing-web-crawler" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deleting an existing web crawler
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -12816,13 +12726,15 @@
 <p>Search AI web crawling supports the two types of authentication - <strong>Basic Authentication</strong> and <strong>Form-based Authentication</strong>. Both are simple authentication schemes built into the HTTP protocol that are used to protect web resources. Although both mechanisms use a username and password to authenticate the client, the difference is in the way both are implemented. Basic Authentication uses an HTTP header to provide the username and password when making a request to the server. Whereas Form-based authentication uses standard HTML form fields to pass the username and password values to the server via a POST request. Depending on the authentication mechanism supported by the web domain, choose the authentication method from the drop-down menu. </p>
 <p><strong>Basic HTTP authentication</strong>: Basic HTTP authentication requires auth credentials and other optional auth parameters to be validated to access the website. The authentication URL may or may not be the same as the source URL. So, to enable access to a website,  provide the values for the following fields.
 <a class="glightbox" href="../images/basic-auth.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Basic Auth" src="../images/basic-auth.png" title="Basic Auth" /></a></p>
-<td>**Field**
+<table>
+  <tr>
+  <td>**Field**
 
    </td>
-<td>**Description**
+   <td>**Description**
 
    </td>
-<tr>
+  <tr>
    <td>**Username or email**
 
    </td>
@@ -12830,7 +12742,7 @@
 
    </td>
   </tr>
-<tr>
+  <tr>
    <td>**Password**
 
    </td>
@@ -12838,7 +12750,7 @@
 
    </td>
   </tr>
-<tr>
+  <tr>
    <td>**Authorization Field**
 
    </td>
@@ -12846,7 +12758,7 @@
 
    </td>
   </tr>
-<tr>
+  <tr>
    <td>**Authentication URL**
 
    </td>
@@ -12854,7 +12766,7 @@
 
    </td>
   </tr>
-<tr>
+  <tr>
    <td>**Test Type**
 
    </td>
@@ -12867,7 +12779,7 @@
 * **Status Code**: When the response is expected to have a particular value of HTTP status code. 
    </td>
   </tr>
-<tr>
+  <tr>
    <td>
 **Test value**
 
@@ -12876,11 +12788,15 @@
 
    </td>
   </tr>
-<p>Note: </p>
-<ul>
-<li>For increased security, ensure that the websites use a secure communication protocol (HTTPS). </li>
-</ul>
-<p><strong>Form-based authentication</strong>: In this type of authentication,  auth information is required in the form of fields in a form. On the first successful authentication, the session is maintained, and used for subsequent requests.  Enter the values for the following fields to configure form-based authentication.</p>
+Note: 
+
+
+
+* For increased security, ensure that the websites use a secure communication protocol (HTTPS). 
+
+**Form-based authentication**: In this type of authentication,  auth information is required in the form of fields in a form. On the first successful authentication, the session is maintained, and used for subsequent requests.  Enter the values for the following fields to configure form-based authentication.
+
+
 <table>
   <tr>
    <td><strong>Field</strong>
@@ -12938,59 +12854,78 @@
   </tr>
 </table>
 
-<h2 id="updating-an-existing-web-crawler">Updating an existing web crawler<a class="headerlink" href="#updating-an-existing-web-crawler" title="Permanent link">&para;</a></h2>
-<p>You can edit the configuration for any crawl source at any time. This can be useful in case the authentication methods have changed, the crawl rules need to be updated, the crawling schedule is to be modified, etc. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We can all the properties of the web crawler except the crawl source. </p>
-</div>
-<p>Any changes made to the configuration come into effect either when you manually recrawl the domain after making the changes or at the next scheduled recrawl time.  </p>
-<p>To make any changes in the source configuration, click the source title from the list of configured sources and make appropriate changes under the _Configuration _tab. <a class="glightbox" href="../images/update-websource.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Update a web source" src="../images/update-websource.png" title="Updating a web source" /></a></p>
-<h2 id="view-execution-status-and-crawled-pages">View execution status and crawled pages<a class="headerlink" href="#view-execution-status-and-crawled-pages" title="Permanent link">&para;</a></h2>
-<p>Crawling a web domain takes time depending on the crawl options set for the source. For example, if all the URLs are to be crawled and the crawl depth and max URLs are set to maximum, it may take longer than a configuration where the crawl depth is set to 2 and the max URLs are set to 10. When a new web source is added, you can choose to execute the crawling process in the background. Also, the scheduled recrawls which run at specific times are automatically run in the background. To view the pages crawled in a web source, go to its **Pages**tab.
-<a class="glightbox" href="../images/crawled-pages.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Crawled pages" src="../images/crawled-pages.png" title="crawled pages" /></a></p>
-<p>It lists the pages crawled in the last update, the user who initiated the crawl, and the URL of the crawled page. You can also recrawl a given page or delete it using the actions for the page. 
-<a class="glightbox" href="../images/page-actions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Page actions" src="../images/page-actions.png" title="page actions" /></a></p>
-<p>You can also go to the detailed view of a given page and take these actions as shown below. 
-<a class="glightbox" href="../images/page-details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Page Details" src="../images/page-details.png" title="page details" /></a></p>
-<p>Additionally, to view how the page is stored in the application, click on the <strong>View JSON</strong> button. 
-<a class="glightbox" href="../../images/json-view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="JSON View" src="../../images/json-view.png" title="json view" /></a></p>
-<p>To view the execution status and logs, go to the <strong>Executions</strong> tab for the source.
-<a class="glightbox" href="../images/execution-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Execution status" src="../images/execution-status.png" title="execution status" /></a></p>
-<p>It shows the current status of the web crawl, the timestamp of the most recent crawl, and the corresponding logs.</p>
-<h2 id="recrawling-a-web-source">Recrawling a web source<a class="headerlink" href="#recrawling-a-web-source" title="Permanent link">&para;</a></h2>
-<p>Recrawling is required to keep up with the changes in the source. You can either schedule recrawling of the website at regular intervals using the scheduler or you can manually perform a recrawl operation as and when required. To manually recrawl a web source, click the **recrawl **action against the name of the source.
-<a class="glightbox" href="../images/recrawl-websource.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Recrawl Web Source" src="../images/recrawl-websource.png" title="recrawl web source" /></a></p>
-<p>You can also use the Re-Crawl on the configuration page of the web source. <a class="glightbox" href="..images/recrawl-websource-via-config-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Recrawl" src="..images/recrawl-websource-via-config-page.png" title="recrawl" /></a></p>
-<p>You can also recrawl selected pages of the source when you know the specific pages that have been updated. This can avoid the unnecessary crawling of the whole source. Go to the <strong>Pages**tab of the source and click the **Recrawl</strong> link under <strong>Actions</strong> for the page to be crawled.<a class="glightbox" href="../images/page-actions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Recrawl a page" src="../images/page-actions.png" title="recrawl a page" /></a></p>
-<h2 id="deleting-an-existing-web-crawler">Deleting an existing web crawler<a class="headerlink" href="#deleting-an-existing-web-crawler" title="Permanent link">&para;</a></h2>
-<p>When a resource is no longer required and you do not want the information to appear in the answers, delete the source from the application. To do so, go to the <strong>Web Crawl page</strong> that lists all the existing sources and click the delete link for the source you want to delete.
-<a class="glightbox" href="../images/delete-websource.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Web Source" src="../images/delete-websource.png" title="delete web source" /></a></p>
-<p>You can also delete one or more of the crawled pages individually from the source without deleting the source. To do so, go to the <strong>Pages</strong> tab for the selected source and click the <strong>Delete</strong> link under <strong>Actions</strong> for the page to be removed.
-<a class="glightbox" href="../images/delete-pages.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete a page" src="../images/delete-pages.png" title="delete page" /></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Note that if a specific page is deleted manually as explained above and the web source is recrawled, the page reappears in the crawled pages list unless the crawl options are modified to disable the crawling of this page( like adding it in the exclude list). </p>
-</div>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<p>There can be various scenarios when the application either fails to crawl a web page or successfully crawls the page but does not index the web page’s content and, hence, does not return the expected results. Listed below are some of the most common of these scenarios. For any specific queries or issues, please contact us. </p>
-<p>1.<strong>Web Crawl Failure:</strong></p>
-<ul>
-<li>Ensure you have permission to log in to the web pages you are trying to crawl and have provided the correct credentials in the web crawl configuration.</li>
-<li>Verify that the URL is accurate and complete, directing to the intended pages for crawling.</li>
-<li>Confirm that the domain is whitelisted for the XO platform. </li>
-</ul>
-<p>2.<strong>Successful Web Crawl but Unsuccessful Indexing:</strong></p>
-<ul>
-<li>Verify that your web pages are not rendered in Javascript. By default, the application does not crawl JS-rendered pages. Hence, if your pages are completely or partially JS rendered, the web crawl will not index all the content. To enable the crawling of such pages, enable the “Javascript Rendered” option in the crawl configuration. </li>
-<li>Verify that the inclusion and exclusion rules are set appropriately. </li>
-<li>Verify that the crawl depth and max URLs are set appropriately.  These configuration parameters impact the number and sequence of pages crawled. </li>
-<li>Ensure that the page is discoverable. Web crawler uses sitemaps and links between pages to find a page. If a page is not linked from other pages and not listed in the sitemap, the web crawler will not discover it.</li>
-</ul>
-<p>3.<strong>Web Crawl Takes Too Long:</strong></p>
-<ul>
-<li>Verify if the web pages are JavaScript-rendered and enable the option if necessary. This situation may arise when many pages on the website being crawled return no content because they are JavaScript-rendered. The crawler continues to crawl the next pages until it crawls the specified number of pages (defined by ‘max URLs’).</li>
-</ul>
+
+## Updating an existing web crawler
+
+You can edit the configuration for any crawl source at any time. This can be useful in case the authentication methods have changed, the crawl rules need to be updated, the crawling schedule is to be modified, etc. 
+
+!!!Note
+    We can all the properties of the web crawler except the crawl source. 
+
+Any changes made to the configuration come into effect either when you manually recrawl the domain after making the changes or at the next scheduled recrawl time.  
+
+To make any changes in the source configuration, click the source title from the list of configured sources and make appropriate changes under the _Configuration _tab. ![Update a web source](../images/update-websource.png "Updating a web source")
+
+## View execution status and crawled pages
+
+Crawling a web domain takes time depending on the crawl options set for the source. For example, if all the URLs are to be crawled and the crawl depth and max URLs are set to maximum, it may take longer than a configuration where the crawl depth is set to 2 and the max URLs are set to 10. When a new web source is added, you can choose to execute the crawling process in the background. Also, the scheduled recrawls which run at specific times are automatically run in the background. To view the pages crawled in a web source, go to its **Pages**tab.
+![Crawled pages](../images/crawled-pages.png "crawled pages")
+
+It lists the pages crawled in the last update, the user who initiated the crawl, and the URL of the crawled page. You can also recrawl a given page or delete it using the actions for the page. 
+![Page actions](../images/page-actions.png "page actions")
+
+You can also go to the detailed view of a given page and take these actions as shown below. 
+![Page Details](../images/page-details.png "page details")
+
+Additionally, to view how the page is stored in the application, click on the **View JSON** button. 
+![JSON View](../images/json-view.png "json view")
+
+To view the execution status and logs, go to the **Executions** tab for the source.
+![Execution status](../images/execution-status.png "execution status")
+
+It shows the current status of the web crawl, the timestamp of the most recent crawl, and the corresponding logs.
+
+## Recrawling a web source
+
+Recrawling is required to keep up with the changes in the source. You can either schedule recrawling of the website at regular intervals using the scheduler or you can manually perform a recrawl operation as and when required. To manually recrawl a web source, click the **recrawl **action against the name of the source.
+![Recrawl Web Source](../images/recrawl-websource.png "recrawl web source")
+
+You can also use the Re-Crawl on the configuration page of the web source. ![Recrawl](..images/recrawl-websource-via-config-page.png "recrawl")
+
+
+You can also recrawl selected pages of the source when you know the specific pages that have been updated. This can avoid the unnecessary crawling of the whole source. Go to the **Pages**tab of the source and click the **Recrawl** link under **Actions** for the page to be crawled.![Recrawl a page](../images/page-actions.png "recrawl a page")
+
+## Deleting an existing web crawler
+
+When a resource is no longer required and you do not want the information to appear in the answers, delete the source from the application. To do so, go to the **Web Crawl page** that lists all the existing sources and click the delete link for the source you want to delete.
+![Delete Web Source](../images/delete-websource.png "delete web source")
+
+You can also delete one or more of the crawled pages individually from the source without deleting the source. To do so, go to the **Pages** tab for the selected source and click the **Delete** link under **Actions** for the page to be removed.
+![Delete a page](../images/delete-pages.png "delete page")
+
+!!!note
+    Note that if a specific page is deleted manually as explained above and the web source is recrawled, the page reappears in the crawled pages list unless the crawl options are modified to disable the crawling of this page( like adding it in the exclude list). 
+
+## Troubleshooting
+
+There can be various scenarios when the application either fails to crawl a web page or successfully crawls the page but does not index the web page’s content and, hence, does not return the expected results. Listed below are some of the most common of these scenarios. For any specific queries or issues, please contact us. 
+
+1.**Web Crawl Failure:**
+
+* Ensure you have permission to log in to the web pages you are trying to crawl and have provided the correct credentials in the web crawl configuration.
+* Verify that the URL is accurate and complete, directing to the intended pages for crawling.
+* Confirm that the domain is whitelisted for the XO platform. 
+
+2.**Successful Web Crawl but Unsuccessful Indexing:**
+
+* Verify that your web pages are not rendered in Javascript. By default, the application does not crawl JS-rendered pages. Hence, if your pages are completely or partially JS rendered, the web crawl will not index all the content. To enable the crawling of such pages, enable the “Javascript Rendered” option in the crawl configuration. 
+* Verify that the inclusion and exclusion rules are set appropriately. 
+* Verify that the crawl depth and max URLs are set appropriately.  These configuration parameters impact the number and sequence of pages crawled. 
+* Ensure that the page is discoverable. Web crawler uses sitemaps and links between pages to find a page. If a page is not linked from other pages and not listed in the sitemap, the web crawler will not discover it.
+
+3.**Web Crawl Takes Too Long:**
+
+* Verify if the web pages are JavaScript-rendered and enable the option if necessary. This situation may arise when many pages on the website being crawled return no content because they are JavaScript-rendered. The crawler continues to crawl the next pages until it crawls the specified number of pages (defined by ‘max URLs’).
 
 
 
