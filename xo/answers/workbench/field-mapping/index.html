@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#field-mapping-stage" class="md-skip">
+        <a href="#field-mapping" class="md-skip">
           Skip to content
         </a>
       
@@ -6379,17 +6379,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Field Mapping Stage
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -6399,36 +6388,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this Page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exclude-document-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exclude Document Configuration
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -12679,23 +12638,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exclude-document-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exclude Document Configuration
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -12712,16 +12654,15 @@
   
 
 
-<h1 id="field-mapping-stage">Field Mapping Stage<a class="headerlink" href="#field-mapping-stage" title="Permanent link">&para;</a></h1>
+<h1 id="field-mapping">Field Mapping<a class="headerlink" href="#field-mapping" title="Permanent link">&para;</a></h1>
 <p>The Field Mapping stage can be used to perform operations on the fields in a chunk and map them to a target field. The mapping is performed on the fields if certain conditions defined for the mapping are satisfied. You can perform the following operations on the fields:</p>
 <ul>
-<li>Set the value of a field </li>
+<li>Set the value of a field</li>
 <li>Rename a field</li>
 <li>Copy the value of one field to another</li>
 <li>Remove a field</li>
 </ul>
 <p><a class="glightbox" href="../images/field-mapping.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Field Mapping Stage" src="../images/field-mapping.png" title="Field Mapping" /></a></p>
-<h2 id="exclude-document-configuration">Exclude Document Configuration<a class="headerlink" href="#exclude-document-configuration" title="Permanent link">&para;</a></h2>
 <p>The Field Mapping stage can be defined using the following three properties:</p>
 <ol>
 <li><strong>STAGE DEFINITION</strong><ol>
@@ -12729,22 +12670,21 @@
 <li>Stage Name: Provide a unique name for identification of the stage. </li>
 </ol>
 </li>
-<li><strong>CONDITION</strong> states the rules or criteria to select the data on which field mapping is to be performed. You can add one or more rules to select the dataset. There are two ways of defining the condition for the mapping: <strong><em>Basic _**and **_Script</em></strong>. When using the Script, you can provide a custom script to add your condition for field mapping. When using the Basic method, you can define a condition using the following two properties.<ol>
+<li><strong>CONDITION **states the rules or criteria to select the data on which field mapping is to be performed. You can add one or more rules to select the dataset. There are two ways of defining the condition for the mapping: **<em>Basic _**and **_Script</em></strong>. When using the Script, you can provide a custom script to add your condition for field mapping. When using the Basic method, you can define a condition using the following two properties. <ol>
 <li>Field Name: Fields of a chunk on which the rule is to be applied.</li>
-<li>Operator: Condition to be applied on the selected field.</li>
+<li>Operator: Condition to be applied on the selected field. </li>
 </ol>
 </li>
-<li><strong>OUTCOME</strong> states the operation to be performed when the above conditions are satisfied.<ol>
+<li>**OUTCOME **states the operation to be performed when the above conditions are satisfied. <ol>
 <li>Action: Action to be taken if above condition is true. This can take the following values:</li>
+</ol>
+</li>
 <li>Set - Sets the given value as the value of the target field. </li>
 <li>Delete - Deletes the target field for the chunk. </li>
 <li>Copy - Copies the value of one field into another. </li>
 <li>Rename - Renames the selected field. </li>
 </ol>
-</li>
-</ol>
 <p>Example: If you want to assign chunk source as its title in case the title is missing, you can define the stage as shown below. </p>
-<p><a class="glightbox" href="../images/field-mapping-example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="field mapping example" src="../images/field-mapping-example.png" title="field mapping example" /></a></p>
 
 
 
