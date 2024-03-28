@@ -12911,15 +12911,13 @@ If this is not enabled, the yes/no options will not be displayed to the end-user
 <p>You can use <strong>Rephrase Responses</strong> to rewrite VA replies using AI based on conversation context and user emotions. For Confirmation nodes, this feature helps rephrase the responses entered under <em>User Prompts</em>. To see this feature in your node’s Component Properties, enable the <a href="../../../../../app-settings/integrations/actions/open-ai/configuring-the-openai-action" target="_blank">OpenAI</a> or <a href="../../../../../app-settings/integrations/actions/azure-open-ai/configuring-the-azure-openai-action" target="_blank">Azure-OpenAI</a> integration and the <strong>Dynamic Prompt and Message Rephrasing</strong> feature under <a href="../../../../../app-settings/generative-ai-tools/dynamic-conversations-features/#rephrase-dialog-responses" target="_blank">LLM and Generative AI</a>.  By default, this feature is disabled for each node. Turn on the toggle to enable Rephrase Responses.
 Adjusting the settings allows you to fine-tune the model’s behavior to meet your needs. <strong>The default settings work fine for most cases</strong>. However, if required, you can tweak the settings and find the right balance for your use case.</p>
 <p><a class="glightbox" href="../images/confirmation-node-img2-rephrase-response.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/confirmation-node-img2-rephrase-response.png" alt="Confirmation node - Rephrase Responses" title="Confirmation node - Rephrase Responses" style="border:1px solid gray;zoom:70%;"></a></p>
-</li>
-<li>
-<p><strong>Model</strong>: The default model for which the settings are displayed. You can choose another supported mode if it’s configured. If you select a non-default model, it’s used for this node only. If you want to change the default model, you can select the model in the drop-down list and use the <strong>Mark Default</strong> option shown next to its name.</p>
-</li>
+<ul>
+<li><strong>Model</strong>: The default model for which the settings are displayed. You can choose another supported mode if it’s configured. If you select a non-default model, it’s used for this node only. If you want to change the default model, you can select the model in the drop-down list and use the <strong>Mark Default</strong> option shown next to its name.</li>
 <li><strong>No of previous user inputs</strong>:Configure the <strong>number of previous user inputs</strong> to define  how many previous user messages should be sent to OpenAI as context based on which to rephrase the response sent through the node. You can choose between 0 and 5, where 0 means that no previous input is considered, while 5 means that the previous 5 responses are sent as context.</li>
 <li><strong>Additional Instruction:</strong>: Add a brief description of the use case context to guide the model.</li>
 <li><strong>Temperature</strong>: The setting controls the randomness of the model’s output. A higher temperature, like 0.8 or above, can result in unexpected, creative, and less relevant responses. On the other hand, a lower temperature, like 0.5 or below, makes the output more focused and relevant.</li>
-<li>
-<p><strong>Max Tokens</strong>: It indicates the total number of tokens used in the API call to the model. It affects the cost and the time taken to receive a response. A token can be as short as one character or as long as one word, depending on the text.</p>
+<li><strong>Max Tokens</strong>: It indicates the total number of tokens used in the API call to the model. It affects the cost and the time taken to receive a response. A token can be as short as one character or as long as one word, depending on the text.</li>
+</ul>
 </li>
 <li>
 <p>Add context-specific <strong>Synonyms</strong> for <em>Yes</em> and <em>No</em> within the Confirmation node to suit the dialog’s context. The Platform can identify the emojis in user utterance and consider them for confirmation/rejection, for example, a thumbs-up emoji will be taken to mean confirmation from the user.</p>
@@ -12980,6 +12978,10 @@ Adjusting the settings allows you to fine-tune the model’s behavior to meet yo
 </div>
 <p><a class="glightbox" href="../images/confirmation-node-img8-1-voice-call-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/confirmation-node-img8-1-voice-call-properties.png" alt="Confirmation node - Voice call properties" title="Confirmation node - Voice call properties" style="border:1px solid gray;zoom:50%;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="glightbox" href="../images/confirmation-node-img8-2-grammar-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/confirmation-node-img8-2-grammar-properties.png" alt="Confirmation node - Grammar properties" title="Confirmation node - Grammar properties" style="border:1px solid gray;zoom:50%;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="glightbox" href="../images/confirmation-node-img8-3-advanced-controls.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/confirmation-node-img8-3-advanced-controls.png" alt="Confirmation node - Advanced controls" title="Confirmation node - Advanced controls" style="border:1px solid gray;zoom:50%;"></a></p>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the node is at the bottom in the sequence, then only the connection property is visible.</p>
+</div>
 <p>The Confirmation node’s conditional transitions go beyond the If-Else expressions used for the other nodes. You can define conditional expression based on a context object value, else a user assertion (yes), or else user negation (no). Beyond the three, you can define a fallback <em>Else</em> condition to trigger. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
