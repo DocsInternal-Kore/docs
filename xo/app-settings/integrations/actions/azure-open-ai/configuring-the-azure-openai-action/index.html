@@ -11632,15 +11632,14 @@
 <p>Once you have created an Azure OpenAI service and copied the required credentials, you can enable the integration.</p>
 <p>Steps to enable the Azure OpenAI action:</p>
 <ol>
-<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong>.</li>
-<li>Once you click the <strong>Actions</strong> menu, all integrations are shown in the Available region. Select the <strong>Azure OpenAI</strong> action.<br />
-<a class="glightbox" href="../images/configure-azure-img11-azure-action.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img11-azure-action.png" alt="Integrations" title="Integrations" style="border: 1px solid gray;zoom:50%;"/></a></li>
+<li>Go to <strong>App Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Actions</strong>.</li>
+<li>Select the <strong>Azure OpenAI</strong> action.  </li>
 </ol>
 <h3 id="pre-authorize-the-integration">Pre-authorize the Integration<a class="headerlink" href="#pre-authorize-the-integration" title="Permanent link">&para;</a></h3>
-<p><strong>Basic Auth:</strong> You can authorize the integration using your credentials. The developer authorization lets you authorize the integration with the preconfigured Kore.ai app with the Basic Auth option.</p>
+<p><strong>Basic Auth</strong>: You can authorize the integration using your credentials. The developer authorization lets you authorize the integration with the preconfigured Kore.ai app with the Basic Auth option.</p>
 <p>Steps to authorize the Azure OpenAI action using developer credentials:</p>
 <ol>
-<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong> and select the <strong>Azure OpenAI</strong> action.</li>
+<li>Go to <strong>App Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Actions</strong> and select the <strong>Azure OpenAI</strong> action.</li>
 <li>In the Configurations dialog, select the <strong>Authorization</strong> tab.</li>
 <li>
 <p>Enter the following details:</p>
@@ -11650,27 +11649,38 @@
 <a class="glightbox" href="../images/configure-azure-img12-azure-openai-config-change.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img12-azure-openai-config-change.png" alt="Authorization Type-Basic Auth" title="Authorization Type-Basic Auth" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p><strong>API Key</strong> – The secret API key of your Azure OpenAI service, which you copied in Step 1.<br />
-<strong>Note</strong>: The Platform uses the configured API Key to authorize and generate the suggestions from OpenAI.</p>
+<p><strong>API Key</strong> – The secret API key of your Azure OpenAI service, which you copied in Step 1.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Platform uses the configured API Key to authorize and generate the suggestions from OpenAI.</p>
+</div>
 </li>
 <li>
 <p><strong>User Sub Domain</strong> – The domain name of the Azure OpenAI service, which you copied in Step 1.</p>
 </li>
-<li><strong>Deployment ID</strong> – The deployment ID/model name of the Azure OpenAI service, which you copied in Step 1.<br />
-<strong>Note</strong>: You can enter the deployment ID for <em>ChatGPT-3</em> or <em>ChatGPT-3.5</em> model to configure the GPT model for the Azure Open AI integration</li>
+<li>
+<p><strong>Deployment ID</strong> – The deployment ID/model name of the Azure OpenAI service, which you copied in Step 1.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can enter the deployment ID for <em>ChatGPT-3</em> or <em>ChatGPT-3.5</em> model to configure the GPT model for the Azure Open AI integration</p>
+</div>
+</li>
 </ol>
 </li>
 <li>
 <p>Click <strong>Enable</strong>. When you configure the action for the first time, the Integration Successful pop-up is displayed.<br />
 <a class="glightbox" href="../images/configure-azure-img13-azure-action6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img13-azure-action6.png" alt="Enable Integration" title="Enable Integration" style="border: 1px solid gray;zoom:50%;"/></a>  </p>
-<p><strong>Note</strong>: The Azure OpenAI action is moved from Available to Configured region.</p>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Azure OpenAI action is moved from Available to Configured region.</p>
+</div>
 <h3 id="allow-the-end-user-to-authorize">Allow the End User to Authorize<a class="headerlink" href="#allow-the-end-user-to-authorize" title="Permanent link">&para;</a></h3>
 <p>You can authorize the integration at a user level with their login credentials. The user authorization process involves requesting permission for Kore.ai’s Azure OpenAI app to access an access token at runtime. You can also use the basic auth profile to let a user configure the integration at runtime.</p>
 <p>Steps to authorize an Azure OpenAI action at a user level:</p>
 <ol>
-<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong> and select the <strong>Azure OpenAI</strong> action in the <strong>Available Actions</strong> region.</li>
+<li>Go to <strong>App Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Actions</strong> and select the <strong>Azure OpenAI</strong> action in the <strong>Available Actions</strong> region.</li>
 <li>In the <strong>Configurations</strong> dialog, select the <strong>Authorization</strong> tab.</li>
 <li>
 <p>Enter the following details:</p>
@@ -11723,15 +11733,10 @@
 <a class="glightbox" href="../images/configure-azure-img19-azure-action7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img19-azure-action7.png" alt="Begin installation" title="Begin installation" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 <li>
-<p>Once the templates are installed, a dialog task is auto-created.</p>
+<p>Once the template is installed, the associated dialog task is auto-created and displayed on the Dialogs page. Click <strong>Go to Dialog</strong> or go to <strong>Automation AI</strong> &gt; <strong>Virtual Assistant</strong> &gt; <strong>Use Cases</strong> &gt; <strong>Dialogs</strong>.</p>
 </li>
 <li>
-<p>When you create a dialog task, you can also select the task from the Azure OpenAI action templates and click <strong>Proceed</strong>. For example, select the General Query task.<br />
-<a class="glightbox" href="../images/configure-azure-img20-azure-action9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img20-azure-action9.png" alt="Select task" title="Select task" style="border: 1px solid gray;zoom:50%;"/></a></p>
-</li>
-<li>
-<p>Once you click <strong>Proceed</strong>, the dialog task is auto-created, and the canvas opens with all required entity nodes, service nodes, and message scripts.<br />
-<a class="glightbox" href="../images/configure-azure-img21-azure-action10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-azure-img21-azure-action10.png" alt="Task auto created" title="Task auto created" style="border: 1px solid gray;zoom:50%;"/></a></p>
+<p>To start using the templates, see <a href="../using-the-azure-openai-action-templates/" target="_blank">Using Azure OpenAI Templates.</a></p>
 </li>
 </ol>
 
