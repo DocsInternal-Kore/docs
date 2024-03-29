@@ -18,7 +18,7 @@
     
     
       
-        <title>Simulation - Kore ai Docs</title>
+        <title>Workbench Simulator - Kore ai Docs</title>
       
     
     
@@ -89,6 +89,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#workbench-simulator" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -248,7 +253,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Simulation
+              Workbench Simulator
             
           </span>
         </div>
@@ -11230,6 +11235,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -11247,9 +11271,20 @@
   
 
 
-  <h1>Simulation</h1>
-
-
+<h1 id="workbench-simulator">Workbench Simulator<a class="headerlink" href="#workbench-simulator" title="Permanent link">&para;</a></h1>
+<p>The Workbench comes with a built-in simulator that provides an interactive preview of how a stage affects a document and data manipulations before it’s indexed. This simulator serves as a valuable tool to test Workbench stages' behavior and fine-tune outputs according to requirements before deploying the application.</p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The simulator allows you to test and verify the output of individual stages.</li>
+<li>If multiple stages are configured, the simulator enables testing the cumulative effect of all stages on the result.</li>
+<li>You can test changes on any type of data source, ensuring versatility in testing scenarios.</li>
+</ul>
+<p>Click the **_Simulate _**button at any point to test the changes made to the source data due to the workbench stages. </p>
+<p><a class="glightbox" href="../images/simulate-option.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Simulator" src="../images/simulate-option.png" title="Simulator" /></a></p>
+<p>The simulation is performed on a sample set of documents. The output of the simulator is in JSON format as shown below. </p>
+<p><a class="glightbox" href="../images/simulator-output.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Simulator Output" src="../images/simulator-output.png" title="Simulator Output" /></a></p>
+<p>The simulator shows the changes made to the source data through various stages of Workbench in the order in which they are listed, starting from the first stage. When you click the Simulate option on a particular stage, the simulator shows the changes made through the workbench pipeline till that stage. For example, if there are three stages in the Workbench pipeline and you click the **Simulate**button while on the second stage, the simulation will show the cumulative effect of changes made through Stage One and Stage Two. </p>
+<p>You can also <strong>test individual stages</strong> of the pipeline by disabling the other stages temporarily.</p>
 
 
 
