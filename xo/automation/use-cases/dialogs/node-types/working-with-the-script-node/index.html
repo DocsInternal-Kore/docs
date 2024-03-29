@@ -2345,21 +2345,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Handling Flow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#related-link" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Link
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -11626,21 +11611,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Handling Flow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#related-link" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Link
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -11674,7 +11644,6 @@
 <li>Display custom error messages to the user.</li>
 <li>Make decisions based on complex business rules.</li>
 </ul>
-<p>When you test a dialog in the Bot Builder, script node errors are displayed in the <strong>Error in Script Node</strong> dialog with the line number and column number, along with the associated Context object. You can update and test the script directly in the <strong>Error in Script Node</strong> dialog as shown in the following illustration.</p>
 <h2 id="add-the-node">Add the Node<a class="headerlink" href="#add-the-node" title="Permanent link">&para;</a></h2>
 <p>The setup a Script node in a dialog task involves the following steps:</p>
 <ol>
@@ -11689,8 +11658,7 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>You can add a script node within an existing sequence or outside any existing sequence. If you add it outside, a new, untitled sequence will automatically get created containing the new script node.
-</code></pre></div>
+<p>You can add a script node within an existing sequence or outside any existing sequence. If you add it outside, a new, untitled sequence will automatically get created containing the new script node.</p>
 </div>
 <h2 id="configure-the-node">Configure the Node<a class="headerlink" href="#configure-the-node" title="Permanent link">&para;</a></h2>
 <h3 id="component-properties">Component Properties<a class="headerlink" href="#component-properties" title="Permanent link">&para;</a></h3>
@@ -11725,7 +11693,10 @@
 <p>You can write conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use Intents for transitions. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The conditions configured here are applicable only for this instance and will not affect this node when being used in any other dialog.</p>
+<ul>
+<li>The conditions configured here are applicable only for this instance and will not affect this node when being used in any other dialog.</li>
+<li>The connection properties would be present only if this is the bottommost node of a sequence.</li>
+</ul>
 </div>
 <p>To set up node connection conditions, please follow the steps outlined in <a href="../../node-connections/nodes-conditions" target="_blank">Adding IF-Else Conditions to Node Connections. </a></p>
 <p><a class="glightbox" href="../images/script-node-connection-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/script-node-connection-properties.png" alt="Script node - Connection properties" title="Script node - Connection properties" style="border:1px solid gray;zoom:70%;"></a></p>
@@ -11776,7 +11747,7 @@
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>}
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>context.canProceed = valid;
 </span></code></pre></div>
-<h4 id="related-link">Related Link<a class="headerlink" href="#related-link" title="Permanent link">&para;</a></h4>
+<p><strong>Related Link</strong></p>
 <ul>
 <li><a href="../../../../../apis/koreutil-libraries" target="_blank"><strong>koreUtil libraries</strong></a> (Pre-written JavaScript functions to make common or complex tasks easy to implement)</li>
 </ul>
