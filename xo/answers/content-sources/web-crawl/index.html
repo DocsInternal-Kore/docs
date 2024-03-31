@@ -11571,7 +11571,7 @@
 <li>You can define crawl rules to enable or disable specific pages to be crawled. </li>
 <li>There is authentication support to allow a crawler to access restricted content. </li>
 </ul>
-<p>To manage the data ingested through web pages or to add new web sources, go to the**Web Crawl tab**under the **Sources**page.</p>
+<p>To manage the data ingested through web pages or to add new web sources, go to the <strong>Web Crawl tab</strong> under the <strong>Sources</strong> page.</p>
 <p><a class="glightbox" href="../../images/webcrawlhome.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Web Crawl" src="../../images/webcrawlhome.png" title="Web Crawl" /></a></p>
 <h2 id="adding-a-new-web-crawler-for-a-web-source">Adding a new web crawler for a web source<a class="headerlink" href="#adding-a-new-web-crawler-for-a-web-source" title="Permanent link">&para;</a></h2>
 <p>To add a new web source, click <strong>+Web Crawl</strong>.</p>
@@ -11581,12 +11581,12 @@
 <p>Enter the following details of the web domain to be crawled on the <strong>Configuration</strong> tab and click <strong>Save &amp; Crawl</strong>.</p>
 <p><a class="glightbox" href="../images/add-web-config-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Web Crawl Configuration" src="../images/add-web-config-page.png" title="Web Crawl Configuration" /></a></p>
 <p><strong>Source Title</strong> – Provide a unique name for the web source. </p>
-<p>**Description—**Enter a description of the source. This field can contain any information about the source, such as the data it offers and the reason for adding it as a source. </p>
+<p><strong>Description</strong> - Enter a description of the source. This field can contain any information about the source, such as the data it offers and the reason for adding it as a source. </p>
 <p><strong>Crawl Sources</strong> – There are three ways to initiate crawling for a web domain. </p>
 <ol>
-<li><strong>URL **– Provide the base URL of the web domain to be crawled. When a URL is provided, the crawler automatically goes through the web pages that are discoverable through this URL in the domain based on the **crawl configuration</strong> discussed below. </li>
+<li><strong>URL</strong> – Provide the base URL of the web domain to be crawled. When a URL is provided, the crawler automatically goes through the web pages that are discoverable through this URL in the domain based on the <strong>crawl configuration</strong> discussed below.</li>
 <li><strong>Upload Sitemap</strong> – Provide a list of sitemaps as a CSV file and a Base URL. The base URL is used to validate the URLs in the sitemaps.  It crawls through all the web pages listed in each sitemap in the CSV file, for which the URL matches the Base URL. If a URL in the sitemap does not match the base URL, the crawler skips that URL and does not crawl it. The crawl options are used to refine the URLs further for crawling. You can use the sample sitemap CSV to learn the format of the CSV file.  </li>
-<li><strong>Upload URL</strong>– Provide a list of URLs to crawl in the form of a CSV file and a base URL. The base URL is used to validate the URLs in the CSV file.  In this case, the crawler goes through all the pages listed in the CSV file that match the Base URL. The URLs that match the base URL are crawled, and those that do not match are skipped. The crawl options are used to refine the URLs further for crawling. In this case, crawl depth and max URL crawl options are not required.  Use the _Sample URL CSV _to learn about the format of the CSV file. </li>
+<li><strong>Upload URL</strong>– Provide a list of URLs to crawl in the form of a CSV file and a base URL. The base URL is used to validate the URLs in the CSV file.  In this case, the crawler goes through all the pages listed in the CSV file that match the Base URL. The URLs that match the base URL are crawled, and those that do not match are skipped. The crawl options are used to refine the URLs further for crawling. In this case, crawl depth and max URL crawl options are not required.  Use the <em>Sample URL CSV</em> to learn about the format of the CSV file. </li>
 </ol>
 <p><strong>Crawl Configuration</strong>—This is the Crawl configuration for the source. This is used to further refine the pages to be crawled.</p>
 <p><strong>Crawl Options</strong>– This field can be used to further refine the web pages to crawl from the list of URLs defined using the crawl source. You can choose to crawl and index all the URLs in the crawl source, or you can allow or block specific URLs from being crawled. This configuration can be used to avoid crawling unnecessary web pages from the source, thereby, optimizing indexing for efficient searches. The field can take one of the following values:</p>
@@ -11601,12 +11601,12 @@
 </ul>
 <p>You can use any of the following types of conditions to choose the URLs:</p>
 <ul>
-<li><strong>Equals to -</strong> when the URL exactly matches the given value. </li>
-<li>**Not equal to **- when the URL does not match the given value. </li>
+<li><strong>Equals to</strong> - when the URL exactly matches the given value. </li>
+<li><strong>Not equal to</strong> - when the URL does not match the given value. </li>
 <li><strong>Contains</strong> - when a given string is found in the URL. </li>
-<li>**Does not contain **- When a given string value is not found in the URL. </li>
+<li><strong>Does not contain</strong> - When a given string value is not found in the URL. </li>
 <li><strong>Begins with</strong> - when a given string is found at the beginning of the URL.</li>
-<li><strong>Ends with -</strong> when a given string is found at the end of the URL.</li>
+<li><strong>Ends with</strong> - when a given string is found at the end of the URL.</li>
 </ul>
 <p>You can <strong>add any number of rules</strong> to selectively choose the URLs from the web domain in the above two options. </p>
 <p><a class="glightbox" href="../images/multiple-include-conditions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Number of rules" src="../images/multiple-include-conditions.png" title="number of rules" /></a></p>
@@ -11615,7 +11615,7 @@
 <p><strong>Crawl Beyond Sitemap</strong> – Sitemap is a file that provides information about the important pages and files on the website. Check this field if you want to crawl URLs beyond those listed in the sitemap. If this is unchecked, only the URLs defined in the sitemap are crawled.  </p>
 <p><strong>Respect robots.txt directives</strong> – Robots.txt file contains information about the URLs that the crawler can access on the website. This field, when checked, forces the crawler to honor any directives in the robots.txt file for the web domain.  </p>
 <p><strong>Crawl depth</strong> – Each website contains multiple levels of the hierarchy of pages and subpages. The source URL is considered to be at the top of the hierarchy, and other pages linked to the source URL create nested layers. Crawl depth refers to the maximum number of nested levels that the crawler should go to. Set to 0 to indicate no limit. If no value is provided for the field, the default crawl depth is set to 5. </p>
-<p><strong>Max URL Limit_ –_</strong> This field refers to the maximum number of URLs to crawl. Set to 0 to indicate no limit. If no value is provided, this field uses the default value of 10. </p>
+<p><strong>Max URL Limit</strong> - This field refers to the maximum number of URLs to crawl. Set to 0 to indicate no limit. If no value is provided, this field uses the default value of 10. </p>
 <p><strong>Set Schedule Timer</strong> - Enable this field to schedule the crawling at a particular date and time. You can also set a frequency for recrawling the web domain at regular intervals. </p>
 <p>To set a schedule, enter the following:</p>
 <ul>
@@ -11750,9 +11750,9 @@
 <p>We can all the properties of the web crawler except the crawl source. </p>
 </div>
 <p>Any changes made to the configuration come into effect either when you manually recrawl the domain after making the changes or at the next scheduled recrawl time.  </p>
-<p>To make any changes in the source configuration, click the source title from the list of configured sources and make appropriate changes under the _Configuration _tab. <a class="glightbox" href="../images/update-websource.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Update a web source" src="../images/update-websource.png" title="Updating a web source" /></a></p>
+<p>To make any changes in the source configuration, click the source title from the list of configured sources and make appropriate changes under the <strong>Configuration</strong> tab. <a class="glightbox" href="../images/update-websource.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Update a web source" src="../images/update-websource.png" title="Updating a web source" /></a></p>
 <h2 id="view-execution-status-and-crawled-pages">View execution status and crawled pages<a class="headerlink" href="#view-execution-status-and-crawled-pages" title="Permanent link">&para;</a></h2>
-<p>Crawling a web domain takes time depending on the crawl options set for the source. For example, if all the URLs are to be crawled and the crawl depth and max URLs are set to maximum, it may take longer than a configuration where the crawl depth is set to 2 and the max URLs are set to 10. When a new web source is added, you can choose to execute the crawling process in the background. Also, the scheduled recrawls which run at specific times are automatically run in the background. To view the pages crawled in a web source, go to its **Pages**tab.
+<p>Crawling a web domain takes time depending on the crawl options set for the source. For example, if all the URLs are to be crawled and the crawl depth and max URLs are set to maximum, it may take longer than a configuration where the crawl depth is set to 2 and the max URLs are set to 10. When a new web source is added, you can choose to execute the crawling process in the background. Also, the scheduled recrawls which run at specific times are automatically run in the background. To view the pages crawled in a web source, go to its <strong>Pages</strong> tab.
 <a class="glightbox" href="../images/crawled-pages.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Crawled pages" src="../images/crawled-pages.png" title="crawled pages" /></a></p>
 <p>It lists the pages crawled in the last update, the user who initiated the crawl, and the URL of the crawled page. You can also recrawl a given page or delete it using the actions for the page. 
 <a class="glightbox" href="../images/page-actions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Page actions" src="../images/page-actions.png" title="page actions" /></a></p>
@@ -11764,10 +11764,10 @@
 <a class="glightbox" href="../images/execution-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Execution status" src="../images/execution-status.png" title="execution status" /></a></p>
 <p>It shows the current status of the web crawl, the timestamp of the most recent crawl, and the corresponding logs.</p>
 <h2 id="recrawling-a-web-source">Recrawling a web source<a class="headerlink" href="#recrawling-a-web-source" title="Permanent link">&para;</a></h2>
-<p>Recrawling is required to keep up with the changes in the source. You can either schedule recrawling of the website at regular intervals using the scheduler or you can manually perform a recrawl operation as and when required. To manually recrawl a web source, click the **recrawl **action against the name of the source.
+<p>Recrawling is required to keep up with the changes in the source. You can either schedule recrawling of the website at regular intervals using the scheduler or you can manually perform a recrawl operation as and when required. To manually recrawl a web source, click the <strong>recrawl</strong> action against the name of the source.
 <a class="glightbox" href="../images/recrawl-websource.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Recrawl Web Source" src="../images/recrawl-websource.png" title="recrawl web source" /></a></p>
-<p>You can also use the Re-Crawl on the configuration page of the web source. <a class="glightbox" href="..images/recrawl-websource-via-config-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Recrawl" src="..images/recrawl-websource-via-config-page.png" title="recrawl" /></a></p>
-<p>You can also recrawl selected pages of the source when you know the specific pages that have been updated. This can avoid the unnecessary crawling of the whole source. Go to the <strong>Pages**tab of the source and click the **Recrawl</strong> link under <strong>Actions</strong> for the page to be crawled.<a class="glightbox" href="../images/page-actions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Recrawl a page" src="../images/page-actions.png" title="recrawl a page" /></a></p>
+<p>You can also use the Re-Crawl on the configuration page of the web source. <a class="glightbox" href="../images/recrawl-websource-via-config-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Recrawl" src="../images/recrawl-websource-via-config-page.png" title="recrawl" /></a></p>
+<p>You can also recrawl selected pages of the source when you know the specific pages that have been updated. This can avoid the unnecessary crawling of the whole source. Go to the <strong>Pages</strong> tab of the source and click the <strong>Recrawl</strong> link under <strong>Actions</strong> for the page to be crawled.<a class="glightbox" href="../images/page-actions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Recrawl a page" src="../images/page-actions.png" title="recrawl a page" /></a></p>
 <h2 id="deleting-an-existing-web-crawler">Deleting an existing web crawler<a class="headerlink" href="#deleting-an-existing-web-crawler" title="Permanent link">&para;</a></h2>
 <p>When a resource is no longer required and you do not want the information to appear in the answers, delete the source from the application. To do so, go to the <strong>Web Crawl page</strong> that lists all the existing sources and click the delete link for the source you want to delete.
 <a class="glightbox" href="../images/delete-websource.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Web Source" src="../images/delete-websource.png" title="delete web source" /></a></p>
@@ -11794,7 +11794,7 @@
 </ul>
 <p>3.<strong>Web Crawl Takes Too Long:</strong></p>
 <ul>
-<li>Verify if the web pages are JavaScript-rendered and enable the option if necessary. This situation may arise when many pages on the website being crawled return no content because they are JavaScript-rendered. The crawler continues to crawl the next pages until it crawls the specified number of pages (defined by ‘max URLs’).</li>
+<li>Verify if the web pages are JavaScript-rendered and enable the option if necessary. This situation may arise when many pages on the website being crawled return no content because they are JavaScript-rendered. The crawler continues to crawl the next pages until it crawls the specified number of pages (defined by <em>‘max URLs’</em> ).</li>
 </ul>
 
 
