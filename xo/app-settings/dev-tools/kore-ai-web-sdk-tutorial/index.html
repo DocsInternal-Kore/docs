@@ -11606,8 +11606,7 @@ To get started, you will need to build a bot to run in the test application, and
   Now that the bot is created and defined for the Web/Mobile Client channel, you are ready to publish and deploy your bot.  </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>By default, the Travel Sample Planning bot is configured with **Target Audience** set to **Enterprise Users** on the **Build** tab in the **Configurations -&gt; General Settings.** Optionally, you can define this bot for **General Public** use. Once this bot is published, the **Target Audience** cannot be changed.
-</code></pre></div>
+<p>By default, the Travel Sample Planning bot is configured with <strong>Target Audience</strong> set to <strong>Enterprise Users</strong> on the <strong>Build</strong> tab in the <strong>Configurations -&gt; General Settings.</strong> Optionally, you can define this bot for <strong>General Public</strong> use. Once this bot is published, the <strong>Target Audience</strong> cannot be changed.</p>
 </div>
 </li>
 <li>
@@ -11810,14 +11809,15 @@ For example, a user may have started the conversation with the bot using an anon
 </ul>
 <h3 id="custom-meta-tags-via-websdk">Custom Meta Tags via webSDK<a class="headerlink" href="#custom-meta-tags-via-websdk" title="Permanent link">&para;</a></h3>
 <p>With the release of ver8.0 of the platform, you can directly add Custom Meta Tags from all supported internal channels (Web SDK/IVR / IVRVoice / Webhook channels). You can define Session, User, and Message level meta-tags. These tags will be added to the Conversation Session as soon as it is created.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>botOptions.botInfo = {name:&quot;&lt;bot_name&gt;&quot;, &quot;_id&quot;:&quot;&lt;bot_id&quot;,
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>                           customData :{&quot;name&quot;:&quot;John&quot;},
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>                           &quot;metaTags&quot;: { 
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>                                 &quot;messageLevelTags&quot;: [{ &quot;name&quot;: &quot;tag1&quot;, value: &quot;message&quot;}],
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>                                 &quot;sessionLevelTags&quot;: [{ &quot;name&quot;: &quot;tag2&quot;, value: &quot;session&quot;}],
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>                                 &quot;userLevelTags&quot;: [{ &quot;name&quot;: &quot;tag3&quot;, value: &quot;user&quot;}]
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>                                 }  
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>                          };
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>botOptions.botInfo = {
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    name:&quot;&lt;bot_name&gt;&quot;, &quot;_id&quot;:&quot;&lt;bot_id&quot;,
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    customData :{&quot;name&quot;:&quot;John&quot;},
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    &quot;metaTags&quot;: { 
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>            &quot;messageLevelTags&quot;: [{ &quot;name&quot;: &quot;tag1&quot;, value: &quot;message&quot;}],
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>            &quot;sessionLevelTags&quot;: [{ &quot;name&quot;: &quot;tag2&quot;, value: &quot;session&quot;}],
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>            &quot;userLevelTags&quot;: [{ &quot;name&quot;: &quot;tag3&quot;, value: &quot;user&quot;}]
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>            }  
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    };
 </span></code></pre></div>
 <h3 id="some-commonly-encountered-errors">Some commonly encountered errors<a class="headerlink" href="#some-commonly-encountered-errors" title="Permanent link">&para;</a></h3>
 <ul>
