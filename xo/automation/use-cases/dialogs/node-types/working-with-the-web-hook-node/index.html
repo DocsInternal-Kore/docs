@@ -11571,102 +11571,61 @@
 
 
 <h1 id="webhook-node">WebHook Node<a class="headerlink" href="#webhook-node" title="Permanent link">&para;</a></h1>
-<p>You can use the WebHook node to subscribe to a message and to WebHook events that capture real-time data from real-time events and show them to the user. You can use the WebHook node for server-side validation, execute business logic, or make backend server API calls. Also, you can use the Kore.ai SDK Tool BotKit to add event handlers, control the messages and WebHook events as required by connecting the WebHook node to a script node to process the response.</p>
+<p>You can use the WebHook node to subscribe to a message and to WebHook events that capture real-time data from real-time events and show them to the user. You can use the WebHook node for server-side validation, execute business logic, or make backend server API calls. Also, you can use the Kore.ai SDK Tool BotKit to add event handlers and control the messages and WebHook events as required by connecting the WebHook node to a script node to process the response.</p>
 <h2 id="create-and-register-an-app">Create and Register an App<a class="headerlink" href="#create-and-register-an-app" title="Permanent link">&para;</a></h2>
-<p>To get access to WebHook events and use WebHook nodes in your dialog task, you need to <a href="../../../../../sdk/sdk-configuration/" target="_blank">subscribe and configure an app</a>. </p>
-<p>Let us use the example of an Agent Transfer app.</p>
-<ol>
-<li>Select the <strong>Deploy</strong> tab from the top menu</li>
-<li>On the left menu, click <strong>Integrations &gt; Agent Transfer</strong>.</li>
-<li>On the Agent Transfer page, click <strong>Add</strong> next to the <strong>App Name</strong> drop-down list.</li>
-<li>On the <strong>Create Client App</strong> window, enter the app name in the <strong>Name</strong> field. For example, SDK App.</li>
-<li>Click <strong>Next</strong>.</li>
-<li>The <strong>Client ID</strong> and <strong>Client Secret</strong> are generated along with the <em>App Created Successfully</em> message.</li>
-<li>Click <strong>Done</strong>.</li>
-<li>
-<p>In the <strong>Callback URL</strong> field, enter the URL for your application that you want Kore.ai to push data to. For example, <a href="https://koremessenger.com/postURL">https://koremessenger.com/postURL</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The registration app you create is based on the <strong>Callback URL</strong> applicable to all tasks for the bot. While each task can have unique SDK configurations, the <strong>Callback URL</strong> is the same. Create separate bots for separate application <strong>Callback URLs</strong> for live agent transfers.</p>
-</div>
-</li>
-<li>
-<p>Under the <strong>PII Data</strong> section, define how <strong>sensitive information</strong> should be handled. If there is a need to share unmasked data when an agent session is in progress, even when <a href="../../../../../app-settings/advanced-settings/pii-data-masking" target="_blank">PII redaction is enabled</a>, select the <strong>Do not mask and send original data to Agent BotKit</strong>. Else, go with the default setting of <strong>Mask and send sensitive data to Agent BotKit</strong>.</p>
-</li>
-<li>Under the <strong>Access Using a Connector</strong> section, indicate if your URL is behind a firewall and a <strong>Connector</strong> has to be used.</li>
-<li>
-<p>Click <strong>Save</strong>. The <em>Successfully subscribed</em> message is displayed.</p>
-<p><p id="gdcalert1" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
-</li>
-</ol>
+<p>To get access to WebHook events using WebHook nodes in your dialog task, you need to <a href="https://docsinternal-kore.github.io/docs/xo/sdk/sdk-configuration/" target="_blank">subscribe and configure an app</a>.</p>
 <h2 id="add-the-node">Add the Node<a class="headerlink" href="#add-the-node" title="Permanent link">&para;</a></h2>
-<p>Webhook Nodes can only be added as part of a Bot Action node. Therefore, before you can add a Webhook Node, you need to add a Bot Action node.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Post v9.0 of the Platform, the Webhook node is categorized under the Bot Action node. For details on the <a href="../bot-action-node" target="_blank">Bot Action node</a>.</p>
-</div>
-<p>Keeping this in mind, the setup a Webhook node in a dialog task involves the following steps:</p>
+<p>The setup of a Webhook node in a dialog task involves the following steps:</p>
 <ol>
 <li>Open the dialog task to add the Webhook node.</li>
-<li>Create and/or expand a Bot Action node.</li>
 <li>Add a Webhook node in the designated place. For steps related to adding nodes, <a href="../../using-the-dialog-builder-tool/#add-nodes" target="_blank">refer here</a>.</li>
-<li>The Webhook window is displayed with the <strong>Component Properties</strong> tab selected by default.</li>
-<li>
-<p>To connect a Webhook node to a node outside of its containing Bot Action node, please read our article about the <a href="../bot-action-node/" target="_blank">Bot Action Node</a>.</p>
-<p><p id="gdcalert2" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
-</li>
 </ol>
+<p>The Webhook window is displayed with the <strong>Component Properties</strong> tab selected by default.</p>
+<p><a class="glightbox" href="../images/webhook-node-img2-add-node.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/webhook-node-img2-add-node.png" alt="Webhook node" title="Webhook node" style="border:1px solid gray;zoom:70%;"></a></p>
 <h2 id="configure-the-node">Configure the Node<a class="headerlink" href="#configure-the-node" title="Permanent link">&para;</a></h2>
 <h3 id="component-properties">Component Properties<a class="headerlink" href="#component-properties" title="Permanent link">&para;</a></h3>
-<div class="admonition notes">
-<p class="admonition-title">Notes</p>
-<p>All changes made to the Component Properties tab will affect all instances of the Webhook Node, across Dialog Tasks.<br />
-If you have not yet configured the SDK, the Component Properties section will notify you that the SDK is not currently configured/Subscribed. Please go to API Extensions to configure the SDK.</p>
-</div>
+<p>!!! Notes:</p>
+<div class="language-text highlight"><pre><span></span><code>* All changes made to the Component Properties tab will affect all instances of the Webhook Node across Dialog Tasks.
+* If you have not yet configured the SDK, the Component Properties section will notify you that the SDK is not currently configured/Subscribed. Please go through the [steps](#create-and-register-an-app) to configure the SDK.
+</code></pre></div>
 <p>To configure the Component Properties tab, please follow the steps below:</p>
 <ol>
 <li>On the <strong>Component Properties</strong> tab, under the <strong>General Settings</strong> section, enter the <strong>Name</strong> and <strong>Display Name</strong> of your Webhook node. </li>
-<li>In the <strong>Variable Namespaces</strong> section, associate the variable namespaces to execute this node and its transitions. This option is visible only when the Variable Namespace is enabled for the VA. You can go with the task level settings or customize it for this node. For more information, refer to <a href="../../../../../app-settings/managing-namespace" target="_blank">Managing Namespace</a>.</li>
+<li>In the <strong>Variable Namespaces</strong> section, associate the variable namespaces to execute this node and its transitions. This option is visible only when the Variable Namespace is enabled for the VA. You can use the task-level settings or customize them for this node. For more information, refer to <a href="../../../../../app-settings/managing-namespace" target="_blank">Managing Namespace</a>.</li>
 </ol>
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<p>&lt;&lt;webhook-node-img3-component-properties-sdk-not-configured.png&gt;&gt;
+<strong>SDK not configured</strong></p>
+<p>If the SDK is configured, you can see the configuration details i.e.** Events, Client ID, Callback URL** and** Timeout** in the Component Properties tab.</p>
 <p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<p>&lt;&lt;webhook-node-img3-component-properties-sdk-configured.png&gt;&gt;</p>
 <h3 id="instance-properties">Instance Properties<a class="headerlink" href="#instance-properties" title="Permanent link">&para;</a></h3>
 <p>Use the Instance Properties to define any user tags that you want to set for the Webhook node.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The settings in the Instance Properties tab are specific to the current dialog task and do not reflect in other dialog tasks that use this node.</p>
-</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Note: The settings in the Instance Properties tab are specific to the current dialog task and do not reflect in other dialog tasks that use this node.
+</span></code></pre></div>
 <ol>
 <li>On the Webhook node properties panel, click the <strong>Instance Properties</strong> tab.</li>
-<li>
-<p>Under the <strong>Custom Tags</strong> section, add tags to build custom profiles of your VA’s conversations. <a href="../../../../../analytics/automation/custom-dashboard/custom-meta-tags" target="_blank">Click here for more</a>.</p>
-<p><p id="gdcalert4" ><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt;  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">&gt;&gt;&gt;&gt;&gt; </span></p></p>
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
-</li>
+<li>Under the <strong>Custom</strong> **Tags **section, add tags to build custom profiles of your VA’s conversations. <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/custom-meta-tags/">Click here for more</a>.</li>
 </ol>
+<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<p>&lt;&lt;webhook-node-img4-instance-properties.png&gt;&gt;</p>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Connection properties can be seen and accessed only if this is the bottommost node of a sequence.</p>
-</div>
-<p>Since they are contained within Bot Action nodes, Webhook nodes cannot be connected on their own to any other nodes outside the Bot Action node to which they belong. Connections can only be made with nodes contained within the same Bot Action node. </p>
-<p>From the node’s <strong>Connection Properties</strong> tab, you can configure the following:</p>
-<ul>
-<li><strong>Webhook Node Connections</strong>: The node within the Bot Action to execute next, after the Webhook node runs. </li>
-<li><strong>Bot Action Connections</strong>, where you can update the node to trigger after the Bot Action group is executed. Updates made here will apply to all nodes within the same Bot Action. </li>
-</ul>
-<p>For both connection types you can write conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use Intents for transitions. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The conditions configured here are applicable only for this instance and will not affect this node when being used in any other dialog.</p>
-</div>
-<p>To set up node connection conditions, please follow the steps outlined in <a href="../../node-connections/nodes-conditions" target="_blank">Adding IF-Else Conditions to Node Connections</a></p>
+<p><strong>Note:</strong> Connection properties are available for the node only if it is the bottommost node of a sequence. </p>
+<p>From the node’s <strong>Connections</strong> tab, you can determine which node in the dialog task to execute next. You can write conditional statements based on the values of any Entity or Context Objects in the dialog task, or you can use intents for transitions.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Note: The conditions configured here are applicable only for this instance and will not affect this node when being used in any other dialog.
+</span></code></pre></div>
+<p>To set up node connection conditions, please follow the steps outlined in <a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/nodes-conditions/">Adding IF-Else Conditions to Node Connections</a>. </p>
 <p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <p><a class="glightbox" href="images/image5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
+<p>&lt;&lt;webhook-node-img5-connections-properties.png&gt;&gt;</p>
+<p>Please <a href="https://community.kore.ai/t/example-of-how-to-use-web-hook-node-for-response-which-takes-more-than-20-seconds/989">click here</a> for a working example of using the Webhook node.</p>
 
 
 
