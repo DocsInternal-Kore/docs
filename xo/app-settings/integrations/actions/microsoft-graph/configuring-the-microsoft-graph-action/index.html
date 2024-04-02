@@ -11548,8 +11548,13 @@
 The Kore.ai XO Platform supports the following authorization types for the Microsoft Graph integration:</p>
 <ul>
 <li><strong>Pre-Authorize the Integration</strong> – To make the integration process smoother for developers and customers, you can pre-authorize it by providing the necessary authorization credentials to obtain the access token..</li>
-<li><strong>Allow Users to Authorize the Integration</strong> – This method requires the end user to provide credentials during the conversation for authorization. This authorization process involves requesting permission for Kore.ai’s Microsoft Graph app to access an access token at runtime.<br />
-<strong>NOTE</strong>: The Microsoft Graph integration can be authorized only for the Developer and the Enterprise editions. You cannot authorize Microsoft Graph’s Trial edition. To learn more about Microsoft Graph account types, see <a href="https://developer.microsoft.com/en-us/graph/graph-explorer" target="_blank">Microsoft Graph documentation</a>.</li>
+<li>
+<p><strong>Allow Users to Authorize the Integration</strong> – This method requires the end user to provide credentials during the conversation for authorization. This authorization process involves requesting permission for Kore.ai’s Microsoft Graph app to access an access token at runtime.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>The Microsoft Graph integration can be authorized only for the Developer and the Enterprise editions. You cannot authorize Microsoft Graph’s Trial edition. To learn more about Microsoft Graph account types, see <a href="https://developer.microsoft.com/en-us/graph/graph-explorer" target="_blank">Microsoft Graph documentation</a>.</p>
+</li>
 </ul>
 <table border="1">
   <tr>
@@ -11582,16 +11587,15 @@ The Kore.ai XO Platform supports the following authorization types for the Micro
 </ul>
 <p>Steps to enable the Microsoft Graph action:</p>
 <ol>
-<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong>.</li>
-<li>In the <strong>Available</strong> region, select the <strong>Microsoft Graph</strong> action.<br />
-<a class="glightbox" href="../images/ms-graph-action-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-action-img1.png" alt="Available actions-Microsoft Graph" title="Available actions-Microsoft Graph" style="border: 1px solid gray;zoom:50%;"/></a></li>
+<li>Go to <strong>App Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Actions</strong>.</li>
+<li>In the <strong>Available</strong> region, select the <strong>Microsoft Graph</strong> action.  </li>
 </ol>
 <h3 id="pre-authorize-the-integration">Pre-authorize the Integration<a class="headerlink" href="#pre-authorize-the-integration" title="Permanent link">&para;</a></h3>
 <p><strong>OAuth</strong></p>
 <p>You can authorize the integration using developer credentials. The developer authorization lets you authorize the integration with the preconfigured Kore.ai’s app or use the custom authorization profile to allow a developer to configure the integration.</p>
 <p>Steps to authorize a Microsoft Graph action using developer credentials:</p>
 <ol>
-<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong> and select the <strong>Microsoft Graph</strong> action.</li>
+<li>Go to <strong>App Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Actions</strong> and select the <strong>Microsoft Graph</strong> action.</li>
 <li>In the <strong>Configurations</strong> dialog, select the <strong>Authorization</strong> tab.</li>
 <li>
 <p><strong>Authorization Type</strong> – Select the <strong>Pre-authorize the Integration</strong> option, and then select the <strong>OAuth</strong> option.<br />
@@ -11660,12 +11664,15 @@ The Kore.ai XO Platform supports the following authorization types for the Micro
 <li>Click <strong>Enable</strong>. When you configure the action for the first time, the <strong>Integration Successful</strong> pop-up is displayed.<br />
 <a class="glightbox" href="../images/ms-graph-action-img8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ms-graph-action-img8.png" alt="Integration enabled" title="Integration enabled" style="border: 1px solid gray;zoom:50%;"/></a></li>
 </ol>
-<p><strong>Note</strong>: The Microsoft Graph action is moved from <em>Available</em> to <em>Configured</em> region.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Microsoft Graph action is moved from <em>Available</em> to <em>Configured</em> region.</p>
+</div>
 <h3 id="allow-end-user-to-authorize">Allow End User to Authorize<a class="headerlink" href="#allow-end-user-to-authorize" title="Permanent link">&para;</a></h3>
 <p>You can authorize the integration at a user level with their login credentials. The user authorization process involves requesting permission for Kore.ai’s Microsoft Graph app to access an access token at runtime. You can also use the custom authorization profile to fetch the access token based on user credentials.</p>
 <p>Steps to authorize a Microsoft Graph action at a user level:</p>
 <ol>
-<li>Go to <strong>Build &gt; Integrations &gt; Actions</strong>, and select the <strong>Microsoft Graph</strong> action.</li>
+<li>Go to <strong>App Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Actions</strong>, and select the <strong>Microsoft Graph</strong> action.</li>
 <li>In the Configurations dialog, select the <strong>Authorization</strong> tab.</li>
 <li>
 <p><strong>Authorization Type</strong> – Select the <strong>Allow Users to Authorize the Integration</strong> option, and then select <strong>OAuth</strong> option.<br />
