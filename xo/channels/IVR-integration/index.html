@@ -11620,7 +11620,7 @@
 <ul>
 <li><strong>Native VXML Support</strong>: Built-in support to parse and generate World Wide Web Consortium (W3C) compliant Voice Extensible Markup Language(VXML) files.</li>
 <li><strong>Hybrid integration</strong>: Flexibility to build use cases or dialogs on the  Kore.ai Experience Optimization (XO) Platform, which can work in sync with the IVR dialogs.</li>
-<li><strong>Discourse Analyzer</strong>: Kore.ai’s discourse analyzer helps enterprises generate conversation flows using historical chat or call transcripts. Chat and call transcripts are analyzed using neural network-based machine learning models to identify intents and discourse patterns to fulfill a specific intent. This is an out-of-the-box feature that is in Beta state. Contact our <a href="http://support.kore.ai/">support team</a> if you want to try this feature.</li>
+<li><strong>Discourse Analyzer</strong>: Kore.ai’s discourse analyzer helps enterprises generate conversation flows using historical chat or call transcripts. Chat and call transcripts are analyzed using neural network-based machine learning models to identify intents and discourse patterns to fulfill a specific intent. This is an out-of-the-box feature that is in Beta state. Contact our <a href="http://support.kore.ai/" target="_blank">support team</a> if you want to try this feature.</li>
 <li><strong>Granular Call Flow Support</strong>: Ability to define all the call flow elements such as grammar, prompts, retry and time-out periods. Kore.ai supports call termination handlers, and allows you to end calls or invoke dialogs in case of exceptions.</li>
 </ul>
 <h2 id="ivr-set-up">IVR Set Up<a class="headerlink" href="#ivr-set-up" title="Permanent link">&para;</a></h2>
@@ -11638,7 +11638,9 @@
 <li>Go to the <strong>Channels &amp; Flows</strong> &gt; <strong>Channels</strong> &gt; <strong>Third Party Voice</strong> &gt; <strong>All</strong>.</li>
 <li>Locate and click the <strong>IVR</strong> under Voice Channels. The IVR Panel with <strong>Instructions</strong> is displayed.
   <a class="glightbox" href="../images/third-party-voice.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR panel" src="../images/third-party-voice.png" title="IVR panel" /></a></li>
-<li>On the <strong>Configurations</strong> tab, perform the following steps:</li>
+<li>
+<p>On the <strong>Configurations</strong> tab, perform the following steps:</p>
+<ol>
 <li>
 <p>Use <strong>Kore.ai IVR Sandbox</strong> for testing your VA. See <a href="#sandbox-configuration">Sandbox Configuration </a>for more details.</p>
 <div class="admonition note">
@@ -11648,42 +11650,41 @@
 </li>
 <li>
 <p>Associate an App with the IVR channel, either by creating a new one or selecting an existing one. If you do not have any apps, a message is displayed as shown in the following screenshot.
- <a class="glightbox" href="../images/IVR-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="associate app" src="../images/IVR-4.png" title="associate app" /></a></p>
+<a class="glightbox" href="../images/IVR-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="associate app" src="../images/IVR-4.png" title="associate app" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you already have created apps, then select an app from the Select App drop-down or create a new app. See Sandbox Configuration steps to know more.</p>
 </div>
 </li>
 <li>
-<p>Use the <strong>WebHook URL</strong> provided in your external application.</p>
+<p>Use the <strong>WebHook URL</strong> provided in your external application.  Enter the details to complete the setup, see <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#channel-settings">Voice Call Properties: Channel Settings</a> for more information.
+<a class="glightbox" href="../images/IVR-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Webhook URL" src="../images/IVR-5.png" title="Webhook URL" /></a></p>
 </li>
-<li>
-<p>Enter the details to complete the setup, see <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#channel-settings]">Voice Call Properties: Channel Settings</a> for more information.
- <a class="glightbox" href="../images/IVR-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Webhook URL" src="../images/IVR-5.png" title="Webhook URL" /></a></p>
+</ol>
 </li>
 <li>
 <p>From the <strong>Voice Call Properties</strong> tab, set the configurations.
- <a class="glightbox" href="../images/IVR-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR Sandbox" src="../images/IVR-6.png" title="IVR" /></a></p>
-</li>
-</ol>
-<p><a class="glightbox" href="../images/IVR-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR data" src="../images/IVR-7.png" title="image_tooltip" /></a></p>
+ <a class="glightbox" href="../images/IVR-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR Sandbox" src="../images/IVR-6.png" title="IVR" /></a>
+ <a class="glightbox" href="../images/IVR-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR data" src="../images/IVR-7.png" title="image_tooltip" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have enabled IVR Sandbox, the following settings are required to be configured on the platform. These are pre-populated if you do not enable the IVR settings. In case you have enabled the settings, ensure the values are the same as follows:
-* Enable Transcription set to Yes.
-* Transcription engine source set to builtin:speech/transcribe.
-* IVR Data Extraction Key set to user input.
-* ASR Confidence Threshold Key set to userinput confidence.
-* ASR Threshold Confidence set to 50.</p>
+  * Enable Transcription set to Yes.
+  * Transcription engine source set to builtin:speech/transcribe.
+  * IVR Data Extraction Key set to user input.
+  * ASR Confidence Threshold Key set to userinput confidence.
+  * ASR Threshold Confidence set to 50.</p>
 </div>
-<ol>
-<li>The Platform supports all UniMRCP-encoded voice-to-text services. If you select the <strong>Enable Transcription</strong> option for the VA, then the platform allows you to skip defining grammar during configuring IVR settings for any node (described in <a href="#configure-dialog-node-ivr-properties">Configure Dialog Node IVR Properties</a>.
-See <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#configuring-grammar]">Voice Call Properties: Configuring Grammar</a> for a detailed configuration for Grammar syntax.</li>
-</ol>
+</li>
+<li>
+<p>The Platform supports all UniMRCP-encoded voice-to-text services. If you select the <strong>Enable Transcription</strong> option for the VA, then the platform allows you to skip defining grammar during configuring IVR settings for any node (described in <a href="#configure-dialog-node-ivr-properties">Configure Dialog Node IVR Properties</a>.
+See <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#configuring-grammar]">Voice Call Properties: Configuring Grammar</a> for a detailed configuration for Grammar syntax.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Sandbox may not respond as expected if you use different values.</p>
 </div>
+</li>
+</ol>
 <p>Once you have enabled the IVR channel, configure the <strong>Telephony Welcome Event</strong> in IVR Settings. This plays a welcome message for users when they connect to the VA through the IVR channel.</p>
 <p>Steps to configure Telephony Welcome Event:</p>
 <ol>
