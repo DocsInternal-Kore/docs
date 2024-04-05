@@ -11896,7 +11896,10 @@
 <p>Virtual Assistants engage end-users primarily using a conversational interface that typically includes an exchange of a series of messages. But oftentimes, there is a need to gather information from the end-user to proceed further. Examples include providing delivery address while interacting with an eCommerce agent, details of an issue while reporting to ITSM agent, opportunity details while creating a CRM opportunity, capturing customer details to book a flight, etc.</p>
 <p>In a standard Dialog Task, this scenario is designed by placing a series of Entity Nodes connected back-to-back and the user is asked for values for each of these entities sequentially, which is quite tedious and frustrating. Digital Forms mitigate this issue by presenting users with an interactive interface that they can use to provide the information they are asked for in one go.</p>
 <p><strong>Digital Forms</strong> provide a range of input fields that allow your assistant to capture the required details from end-users. After the users complete the form, the input is submitted to the VA to proceed with the task at hand.</p>
-<p>In this article, we discuss the features and implementation of Digital Forms in the XO Platform. For a use case example and a step-by-step implementation of a Digital Form click <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/digital-skills/configure-digital-forms/" target="_blank">here</a>.</p>
+<ul>
+<li>Provision to define rules for input validations and visibility suiting your use case.
+In this article, we discuss the features and implementation of Digital Forms in the XO Platform. For a use case example and a step-by-step implementation of a Digital Form click <a href="../configure-digital-forms/" target="_blank">here</a>.</li>
+</ul>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Improved user experience with a single interface for input collection.</li>
@@ -11906,7 +11909,7 @@
 <li>Automatic dialog task generation from the <em>Form</em> enabling switching between Form or Conversation experience based on the channel of interaction.</li>
 </ul>
 <h2 id="general-setup">General Setup<a class="headerlink" href="#general-setup" title="Permanent link">&para;</a></h2>
-<p>You can access <strong>Digital Forms</strong> from the <strong>Build</strong> top menu under <strong>Digital Skills &gt; Digital Forms</strong>.</p>
+<p>You can access <strong>Digital Forms</strong> from <strong>Automation AI &gt; Virtual Assistant &gt; Digital Skills</strong>.</p>
 <p><a class="glightbox" href="../../images/access-digital-forms.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/access-digital-forms.png" alt="Access Digital Forms" title="Access Digital Forms" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Here is the overall usage process for Digital Forms within the XO Platform</p>
 <ul>
@@ -11927,10 +11930,10 @@
 <p>To create forms, follow the steps below:</p>
 <ol>
 <li>
-<p>Under the <strong>Build</strong> top menu, select <strong>Digital Skills</strong>.</p>
+<p>Under <strong>Automation AI &gt; Virtual Assistant</strong>, select <strong>Digital Skills</strong>.</p>
 </li>
 <li>
-<p>Click <strong>Digital Forms &gt; New Form</strong>.</p>
+<p>On the <strong>Digital Forms</strong> screen, click <strong>New Form</strong>.</p>
 </li>
 <li>
 <p>On the <strong>New Form</strong> page, enter the following:</p>
@@ -11945,22 +11948,25 @@
 <p><strong>Select form’s Header Style</strong>: You can choose a specific header style from the listed illustrations – the circle indicates the position of logo/icon with respect to the title of the form in the header. Click the card to select the style. If it has a logo, you can upload an image file (jpg or png) for the logo.</p>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>During the Export of the Bot, the logo is not exported along with Digital Forms. So, when importing this Bot, you need to separately copy the logo image file and then manually reupload the logo.</p>
-</div>
-
-<ol start="5"><li>Turn on the <b>Description</b> toggle if you want to show a description of the form in the header.
-<a class="glightbox" href="../../images/description-toggle-turn-on.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/description-toggle-turn-on.png" alt="Description Toggle" title="Description Toggle" style="border: 1px solid gray; zoom:75%;"></a></li>
-<li><b>Form Security</b> – Enable <b>Secure Form Data</b> to redact form data from the Bot Context, Debug Logs, Service Calls, Agent Transfer, and the Bot Kit.
-<a class="glightbox" href="../../images/secure-form-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/secure-form-data.png" alt="secure form data" title="secure form data" style="border: 1px solid gray; zoom:75%;"></a>
-   <p>While enabling, you can also choose whether to display the <b>Secure Form icon</b> to your end users.</p>
-   <a class="glightbox" href="../../images/enable-redact-form-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/enable-redact-form-data.png" alt="enable redact form data" title="enable redact form data" style="border: 1px solid gray; zoom:75%;"></a>
-   <p>Once enabled, the Platform will replace the user input with a unique random system-generated alphanumeric value in all the modules. Also, the <b>Secure Form</b> icon and a tip will be displayed, notifying the user that the form is secure.</p>
-   <a class="glightbox" href="../../images/secure-form-icon.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/secure-form-icon.png" alt="secure form icon" title="secure form icon" style="border: 1px solid gray; zoom:75%;"></a></li>
-<li>Click <b>Save & Proceed</b>.
-<a class="glightbox" href="../../images/save-digital-form.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/save-digital-form.png" alt="save digital form" title="save digital form" style="border: 1px solid gray; zoom:75%;"></a></li></ol>
-
+<p>!!! Note</p>
+<div class="language-text highlight"><pre><span></span><code>  During the Export of the Bot, the logo is not exported along with Digital Forms. So, when importing this Bot, you need to separately copy the logo image file and then manually reupload the logo.
+</code></pre></div>
+<ol>
+<li>Turn on the <strong>Description</strong> toggle if you want to show a description of the form in the header.</li>
+</ol>
+<p><a class="glightbox" href="../../images/description-toggle-turn-on.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/description-toggle-turn-on.png" alt="Description Toggle" title="Description Toggle" style="border: 1px solid gray; zoom:75%;"></a></p>
+<ol>
+<li><strong>Form Security</strong> – Enable <strong>Secure Form Data</strong> to redact form data from the Bot Context, Debug Logs, Service Calls, Agent Transfer, and the Bot Kit.</li>
+</ol>
+<p><a class="glightbox" href="../../images/secure-form-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/secure-form-data.png" alt="secure form data" title="secure form data" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>While enabling, you can also choose whether to display the <strong>Secure Form icon</strong> to your end users.</p>
+<p><a class="glightbox" href="../../images/enable-redact-form-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/enable-redact-form-data.png" alt="enable redact form data" title="enable redact form data" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Once enabled, the Platform will replace the user input with a unique random system-generated alphanumeric value in all the modules. Also, the <strong>Secure Form</strong> icon and a tip will be displayed, notifying the user that the form is secure.</p>
+<p><a class="glightbox" href="../../images/secure-form-icon.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/secure-form-icon.png" alt="secure form icon" title="secure form icon" style="border: 1px solid gray; zoom:75%;"></a></li></p>
+<ol>
+<li>Click <strong>Save &amp; Proceed</strong>.</li>
+</ol>
+<p><a class="glightbox" href="../../images/save-digital-form.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/save-digital-form.png" alt="save digital form" title="save digital form" style="border: 1px solid gray; zoom:75%;"></a></li></ol></p>
 <h3 id="add-components">Add Components<a class="headerlink" href="#add-components" title="Permanent link">&para;</a></h3>
 <p>Once you configure the basic details for your form, the Platform takes you to the form builder, where you can add the components you require.</p>
 <p>You can drag and drop the components available on the left pane to the canvas and configure their properties to build the form. For details of the available components &amp; their properties.</p>
@@ -12004,8 +12010,10 @@
 </li>
 </ul>
 <h3 id="branding">Branding<a class="headerlink" href="#branding" title="Permanent link">&para;</a></h3>
-<p>Use the <strong>Branding</strong> option to change the look and feel of the form to reflect your organization’s standards. An instant preview gives you an idea of how the form would look with the new colors and you have the option to <strong>Save</strong> or <strong>Restore Default</strong> scheme.</p>
-<p><a class="glightbox" href="../../images/branding-flight-search.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/branding-flight-search.png" alt="branding" title="branding" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Use the <strong>Branding</strong> option to change the look and feel of the form to reflect your organization’s standards. </p>
+<p><a class="glightbox" href="../../images/digital-form-branding.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/digital-form-branding.png" alt="branding" title="branding" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>An instant preview gives you an idea of how the form would look with the new colors and you have the option to <strong>Save</strong> or <strong>Restore Default</strong> scheme.</p>
+<p><a class="glightbox" href="../../images/branding-flight-search.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/branding-flight-search.gif" alt="branding" title="branding" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h3 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h3>
 <p><strong>Test</strong> the form to see a preview of what it would look like to the end user. You can do this at any point while you work on the form.</p>
 <p><a class="glightbox" href="../../images/test-preview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/test-preview.png" alt="test preview" title="test preview" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -12078,7 +12086,7 @@ Of special interest are the following Component Properties:</li>
 <p>Digital Forms are rendered in Digital Views by configuring Widgets &amp; Panels. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/digital-skills/digital-views/" target="_blank">Learn more</a>.</p>
 <p>To invoke a form using Widgets and Panels, follow the below steps:</p>
 <ol>
-<li>Create a widget to invoke the Digital Form from <strong>Build -&gt; Digital Skills -&gt; Digital Views</strong> option.</li>
+<li><strong>Create a widget</strong> to invoke the Digital Form within <strong>Digital Views</strong> from <strong>Automation AI &gt; Virtual Assistant &gt; Digital Skills</strong>.</li>
 <li>Enter the name.</li>
 <li>Select <em>Digital Forms</em> as the <strong>Source.</strong></li>
 <li><strong>Add a Form</strong> by selecting it from the drop-down list.</li>
