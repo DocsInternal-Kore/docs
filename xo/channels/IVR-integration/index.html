@@ -11717,8 +11717,7 @@ button, which becomes visible upon hovering over the IVR icon under the <strong>
  <a class="glightbox" href="../images/IVR-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="configure channels" src="../images/IVR-13.png" title="configure channels" /></a></p>
 </li>
 <li>
-<p>On clicking <strong>Test</strong>, the following pop-up is displayed.
-<a class="glightbox" href="../images/IVR-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="testing app" src="../images/IVR-14.png" title="testing app" /></a></p>
+<p>On clicking <strong>Test</strong>, the following pop-up is displayed.  <a class="glightbox" href="../images/IVR-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="testing app" src="../images/IVR-14.png" title="testing app" /></a></p>
 </li>
 </ol>
 <p>The <strong>Phone Number</strong>, <strong>PIN</strong>, and <strong>Secret</strong> are populated in the IVR Configurations panel as shown in the following screenshot.
@@ -11872,22 +11871,26 @@ button, which becomes visible upon hovering over the IVR icon under the <strong>
 </ul>
 <p>To extract the metadata from the ASR transcription, follow these steps:</p>
 <ol>
-<li>In <strong>IVR Channel</strong> settings under <strong>Voice Call Properties</strong> various details like <strong>Input Mode</strong>, <strong>ASR Confidence Threshold</strong> etc. are configured.
- <a class="glightbox" href="../images/IVR-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="input mode" src="../images/IVR-21.png" title="input mode" /></a></li>
-<li>See <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#channel-settings]">Voice Call Properties: Channel Settings</a>for more information.The additional information provided by the ASR engines can be extracted using the <strong>context object</strong>. This is configured at  <strong>Bot User Session &gt; lastMessage &gt;  asrMetaData</strong>.</li>
+<li>
+<p>In <strong>IVR Channel</strong> settings under <strong>Voice Call Properties</strong> various details like <strong>Input Mode</strong>, <strong>ASR Confidence Threshold</strong> etc. are configured.
+ <a class="glightbox" href="../images/IVR-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="input mode" src="../images/IVR-21.png" title="input mode" /></a></p>
+</li>
+<li>
+<p>See <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#channel-settings]">Voice Call Properties: Channel Settings</a>for more information. The additional information provided by the ASR engines can be extracted using the <strong>context object</strong>. This is configured at  <strong>Bot User Session &gt; lastMessage &gt;  asrMetaData</strong>.</p>
+</li>
 <li>Go to the <strong>Settings</strong> panel of the last message node for your dialog task and configure the <strong>JavaScript Message</strong> under <strong>Bot Responses</strong>, as shown below:
   <a class="glightbox" href="../images/IVR-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="JavaScript message" src="../images/IVR-22.png" title="JavaScript message" /></a></li>
-<li>The ASR metadata is extracted in the response using the following syntax:</li>
-</ol>
+<li>
+<p>The ASR metadata is extracted in the response using the following syntax:</p>
 <p><code>print(JSON.stringify(context.session.BotUserSession.lastMessage.asrMetaData))</code>
-  <a class="glightbox" href="../images/IVR-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="messages " src="../images/IVR-23.png" title="messages" /></a></p>
-<ol>
+<a class="glightbox" href="../images/IVR-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="messages " src="../images/IVR-23.png" title="messages" /></a></p>
+</li>
 <li>
 <p>In this example, based on the <strong>ASR Confidence</strong> value extracted from the user input, we define the connection rules for the dialog as shown below:
    <a class="glightbox" href="../images/IVR-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ASR confidence" src="../images/IVR-24.png" title="ASR confidence" /></a></p>
 </li>
 <li>
-<p>Go to <strong>Analytics</strong> &gt; <strong>Automation</strong> &gt; <strong>NLP Insights</strong> of your Virtual Assistant on the Kore.ai XO Platform.</p>
+<p>Go to <strong>Automation</strong> &gt; <strong>Analytics</strong> &gt; <strong>Virtual Assistant</strong> &gt; <strong>NLP Insights</strong> of your Virtual Assistant on the Kore.ai XO Platform.</p>
 </li>
 <li>
 <p>Click on the relevant utterance to see the <strong>Chat History</strong> details.</p>
