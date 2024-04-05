@@ -11669,19 +11669,25 @@
 <li>From the Kore.ai Bot Builder platform, open the Banking Bot.</li>
 <li>Select the <strong>Build</strong> tab from the top menu.</li>
 <li>From the left navigation menu, select <strong>Digital Skills -&gt; Digital Forms</strong> to access the Digital Forms page.</li>
-<li>Click <strong>New Form</strong> and enter the following:<ul>
+<li>
+<p>Click <strong>New Form</strong> and enter the following:</p>
+<ul>
 <li><strong>Name</strong> – name to the form, say <em>OpenAccount</em></li>
 <li><strong>Display Name</strong> for the form, say <em>Open an Account</em></li>
-<li><strong>Description</strong> of the form.
-    <strong>Select form’s Header Style</strong>: You can choose a specific header style from the listed illustrations – the circle indicates the position of logo/icon with respect to the title of the form in the header. 
-    Click the card to select the style. If it has a logo, you can upload an image file (png or jpg) for the logo.
-    <div class="admonition note">
-    <p class="admonition-title">Note</p>
-    <p>During the Export of the Bot, the logo is not exported along with Digital Forms. So, while importing this Bot, you need to separately copy the logo image file and then manually reupload the logo.</p>
-    </div></li>
+<li>
+<p><strong>Description</strong> of the form.
+    <strong>Select form’s Header Style</strong>: You can choose a specific header style from the listed illustrations – the circle indicates the position of logo/icon with respect to the title of the form in the header. </p>
+<p>Click the card to select the style. If it has a logo, you can upload an image file (png or jpg) for the logo.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>During the Export of the Bot, the logo is not exported along with Digital Forms. So, while importing this Bot, you need to separately copy the logo image file and then manually reupload the logo.</p>
+</div>
+</li>
 </ul>
 </li>
-<li><strong>Description</strong>: Turn on the toggle to show a description of the form in the header.</li>
+<li>
+<p><strong>Description</strong>: Turn on the toggle to show a description of the form in the header.</p>
+</li>
 <li>
 <p><strong>Save &amp; Proceed</strong> to the next step.</p>
 <p><a class="glightbox" href="../../images/form-creation-next-step.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/form-creation-next-step.png" alt="form creation next step" title="form creation next step" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -11726,7 +11732,9 @@
 <li><strong>Value</strong> as <em>Yes</em> when selected and <em>No</em> when deselected.</li>
 </ul>
 </li>
-<li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Checkings.</li>
+<li>
+<p>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Checkings.</p>
+</li>
 <li>
 <p>Add <strong>Visibility Rules – Rule 1</strong> for the field to be <strong>Visible</strong>, select <strong>accounttype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Checkings</em> value.</p>
 <p><a class="glightbox" href="../../images/visibility-rules.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/visibility-rules.png" alt="visibility rules" title="visibility rules" style="border: 1px solid gray; zoom:75%;"></a></p>
@@ -11740,7 +11748,9 @@
 <li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Set the withdrawal limit</em>.</li>
 </ul>
 </li>
-<li>Deselect <strong>Is Percentage</strong></li>
+<li>
+<p>Deselect <strong>Is Percentage</strong></p>
+</li>
 <li>Select <strong>Value</strong> as <em>100</em> for Min and <em>1000</em> for Max.</li>
 <li>Under <strong>Data Settings</strong> you can set the <strong>Default Value</strong> to be 150, this would be pre-selected.</li>
 <li><strong>Visibility Rules</strong> would be a compound rule – account type is checkings and cash card is selected.</li>
@@ -11759,27 +11769,31 @@
 <li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Choose the type of credit card</em>.</li>
 </ul>
 </li>
-<li>Under <strong>Data Settings</strong>, set the <strong>Radio values</strong> to be <em>Platinum, Gold, Silver, and _Basic</em>.</li>
+<li>
+<p>Under <strong>Data Settings</strong>, set the <strong>Radio values</strong> to be <em>Platinum, Gold, Silver, and _Basic</em>.</p>
+</li>
 <li>
 <p>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Credit Card.</p>
-</li>
-<li>
-<p>Set <strong>Is visible</strong> flag to <em>Yes</em>.</p>
-</li>
-<li>
-<p>Add <strong>Visibility Rules – Rule 1</strong> for the filed to be <strong>Visible</strong>, select <strong>accounttype</strong> <em>field, _=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Credit Card</em> value.</p>
+<ul>
+<li>Set <strong>Is visible</strong> flag to <em>Yes</em>.</li>
+<li>Add <strong>Visibility Rules – Rule 1</strong> for the filed to be <strong>Visible</strong>, select <strong>accounttype</strong> <em>field, _=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Credit Card</em> value.</li>
+</ul>
 <p><a class="glightbox" href="../../images/data-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/data-settings.png" alt="data settings" title="data settings" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Finally, the Pro-Tip, when user selects a Platinum card. Drag and drop a <strong>Pro Tip</strong> component onto the form and set the following values:</p>
-</li>
+<ul>
 <li>Set <strong>Display Name</strong> as <em>Platinum Tip.</em></li>
 <li><strong>Name</strong> used for internal reference, mention <em>platinumtip.</em></li>
 <li><strong>Description</strong> would be the tip you want to display, eg. <em>Additional charges will apply</em>.</li>
-<li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Credit Card.</li>
-<li>Set <strong>Is visible</strong> flag to <em>Yes</em></li>
+</ul>
+</li>
 <li>
-<p>Add <strong>Visibility Rules – Rule 1</strong> for the field to be <strong>Visible</strong> select <strong>accounttype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Credit Card</em> value AND selecting <strong>cardtype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Platinum</em> value.</p>
+<p>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Credit Card.</p>
+<ul>
+<li>Set <strong>Is visible</strong> flag to <em>Yes</em></li>
+<li>Add <strong>Visibility Rules – Rule 1</strong> for the field to be <strong>Visible</strong> select <strong>accounttype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Credit Card</em> value AND selecting <strong>cardtype</strong> field, <em>=(Equal To)</em> operator, <em>Value</em> comparison with, <em>Platinum</em> value.</li>
+</ul>
 <p><a class="glightbox" href="../../images/view-visibility-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/view-visibility-settings.png" alt="visibility settings" title="visibility settings" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
@@ -11794,11 +11808,11 @@
 <li>
 <p>Continue with this task and transition to this node: In the <strong>Select Node</strong> drop-down list, you can select any node present in the current dialog task.</p>
 <p><a class="glightbox" href="../../images/select-node-dropdown.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/select-node-dropdown.png" alt="select node dropdown" title="select node dropdown" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p><div class="admonition note">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The target node has to be in the same dialog, you cannot make a jump to a target node outside the current dialog. The list of target nodes only shows the local nodes.
-If the target node is not present during runtime, the platform presents the error Error in continuing the conversation, and the task should get discarded.</p>
-</div></p>
+<p>The target node has to be in the same dialog, you cannot make a jump to a target node outside the current dialog. The list of target nodes only shows the local nodes.</p>
+<p>If the target node is not present during runtime, the platform presents the error Error in continuing the conversation, and the task should get discarded.</p>
+</div>
 </li>
 <li>
 <p>Use the <strong>Test</strong> button to see a preview.</p>
@@ -11810,12 +11824,16 @@ If the target node is not present during runtime, the platform presents the erro
 <ol>
 <li>Select the <strong>Build</strong> tab from the top menu</li>
 <li>From the left navigation menu, select <strong>Conversational Skills -&gt; Dialog Tasks.</strong></li>
-<li>Click the <strong>+</strong> against the <strong>Dialog Tasks</strong> to create a new Task<ul>
+<li>
+<p>Click the <strong>+</strong> against the <strong>Dialog Tasks</strong> to create a new Task</p>
+<ul>
 <li>Enter <strong>IntentName</strong>, say, <em>OpenAccount</em></li>
 <li>Click <strong>Create &amp; Proceed</strong> to open the dialog builder page.</li>
 </ul>
 </li>
-<li>Retain the Intent Node default settings, and close the Intent Node.</li>
+<li>
+<p>Retain the Intent Node default settings, and close the Intent Node.</p>
+</li>
 <li>Click the <strong>+</strong> next to the intent node and select the <strong>Form</strong> option.</li>
 <li>
 <p>From the dropdown list select the form (<em>OpenAccount</em>) we created earlier.</p>
@@ -11853,7 +11871,7 @@ If the target node is not present during runtime, the platform presents the erro
 <p>Your dialog with form is ready! <strong>Talk to bot</strong> and trigger the above dialog. The form will be displayed, enter the values and click Submit, the message would be displayed. </p>
 <p><a class="glightbox" href="../../images/talk-to-bot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/talk-to-bot.png" alt="talk to bot" title="talk to bot" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>You can use the context object as shown above it a <strong>Script</strong> or <strong>Service</strong> nodes for further processing.</p>
-<p>Click <a href="https://docsinternal-kore.github.io/docs/xo/how-tos/build-a-banking-assistant/design-digital-skills/add-data-to-data-tables/" target="_blank">here</a> to learn how to add this data to a data table.</p>
+<p>Click <a href="../../../../how-tos/build-a-banking-assistant/design-digital-skills/add-data-to-data-tables/" target="_blank">here</a> to learn how to add this data to a data table.</p>
 
 
 
