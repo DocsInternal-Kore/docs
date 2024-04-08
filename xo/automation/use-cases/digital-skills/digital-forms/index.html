@@ -12331,11 +12331,14 @@
 You can add a form directly to a panel, it creates a widget by default.</p>
 </li>
 <li>You can <strong>Test</strong> the panel.</li>
-<li>Follow the steps provided <a href="../../../../app-settings/dev-tools/kore-ai-web-sdk-tutorial/" target="_blank">here</a> to publish and host the panels.</li>
+<li>
+<p>Follow the steps provided <a href="../../../../app-settings/dev-tools/kore-ai-web-sdk-tutorial/" target="_blank">here</a> to publish and host the panels.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While a Digital Form is used to define multiple Widgets and also add to multiple panels, it will be associated with a single Dialog Task across all Widgets and Panels.</p>
+</div>
+</li>
 </ol>
-<p>!!! Note</p>
-<div class="language-text highlight"><pre><span></span><code>     While a Digital Form is used to define multiple Widgets and also add to multiple panels, it will be associated with a single Dialog Task across all Widgets and Panels.
-</code></pre></div>
 <h2 id="the-user-experience">The User Experience<a class="headerlink" href="#the-user-experience" title="Permanent link">&para;</a></h2>
 <p>When the end-user initiates the dialog and reaches the node connecting to the Form node, the following events take place. Depending upon the experience selected at design time and the channel of invocation, the flow is the following:</p>
 <h3 id="form-experience">Form Experience<a class="headerlink" href="#form-experience" title="Permanent link">&para;</a></h3>
@@ -12412,9 +12415,11 @@ Otherwise, the ongoing task goes on, and based on the configuration, the user is
 <li><strong><em>In-development</em></strong> when a form is created.</li>
 <li><strong><em>Awaiting approval</em></strong> when a form is submitted to Publish and the request is waiting for the admin to take action.</li>
 <li><strong><em>Rejected</em></strong> when the Publish request is rejected by the admin.</li>
-<li><strong><em>Published</em></strong> In the XO Platform, the status of a Digital Form remains In Development even after publishing.</li>
-</ul>
+<li>
+<p><strong><em>Published</em></strong> In the XO Platform, the status of a Digital Form remains In Development even after publishing.</p>
 <p><a class="glightbox" href="../../images/publish-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/publish-status.png" alt="publish status" title="publish status" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+</ul>
 <p>On publishing the form, you can see the form listed under <strong>Publish Status → View Publishing Summary</strong>, but the status on the Digital Forms main page remains as <em>In Development</em>.</p>
 <p><a class="glightbox" href="../../images/form-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/form-status.png" alt="form status" title="form status" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The <em>In Development</em> and <em>Published</em> versions of the VA can be viewed by toggling between the respective statuses in the top search-bar.</p>
