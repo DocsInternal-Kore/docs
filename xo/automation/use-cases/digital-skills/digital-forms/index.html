@@ -12271,27 +12271,31 @@
 <li>
 <p>You can set the <strong>Properties</strong> for each of the nodes added.</p>
 <ul>
-<li>The <a href="../../dialogs/node-types/working-with-the-form-node/" target="_blank">Form Node</a>. 
-   Of special interest are the following Component Properties:</li>
+<li>
+<p>The <a href="../../dialogs/node-types/working-with-the-form-node/" target="_blank">Form Node</a>. Following Component Properties are of special interest:</p>
+<ul>
 <li><strong>Submit Message</strong> – Message displayed to the end-user on successful submission of the form</li>
 <li><strong>Web/Mobile SDK Form Behavior</strong> – Using this option you can either have the form displayed <em>inline</em> the chat window or <em>open on a full page</em>. Also, you can either go ahead with the default submit prompt or configure the setting to display a custom and more specific message to be shown in chat. <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/node-types/working-with-the-form-node/#component-properties" target="_blank">Learn more</a> about the configuration.</li>
+</ul>
+</li>
 <li>
 <p><strong>Bot Action Node,</strong> in case of the conversation experience flow, can also be configured in the <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/node-types/working-with-the-logic-node/" target="_blank">Logic Node</a> as follows:</p>
-</li>
+<ul>
 <li>
 <p><strong>Manage Context Variables</strong> is used to create and set values for the context variables. Remember to use the full path of the variable in the <em>key</em> field ie. <code>context.BotUserSession.&lt;variable_name&gt;</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We urge you not to make changes to the connection settings as this affects the VA's performance.</p>
+</div>
 </li>
 </ul>
-<p>!!! Note</p>
-<div class="language-text highlight"><pre><span></span><code>    We urge you not to make changes to the connection settings as this affects the VA&#39;s performance.
-</code></pre></div>
 </li>
 <li>
 <p><strong>Sub-dialog Node</strong> is configured as a normal <a href="../../dialogs/node-types/working-with-the-dialog-node/&quot;" target="_blank">Dialog Node</a> as follows:</p>
 <ul>
 <li>Use the <strong>Entity Post-assignment</strong> to capture the user input.</li>
-<li>
-<p>In case you modify the sub-dialog or the source form, you are presented with an option to <strong>Regenerate Dialog</strong>. This ensures that the changes are reflected in the task without having to rebuild the entire task. Be aware that the changes are reflected in all places this sub-dialog is used.</p>
+<li>In case you modify the sub-dialog or the source form, you are presented with an option to <strong>Regenerate Dialog</strong>. This ensures that the changes are reflected in the task without having to rebuild the entire task. Be aware that the changes are reflected in all places this sub-dialog is used.</li>
+</ul>
 <p><a class="glightbox" href="../../images/subdialog-node-configuration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/subdialog-node-configuration.png" alt="sub dialog node" title="sub dialog node" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ul>
