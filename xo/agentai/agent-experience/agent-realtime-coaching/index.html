@@ -14,7 +14,7 @@
         <link rel="prev" href="../../about-agent-ai/">
       
       
-        <link rel="next" href="../../../channels/IVR-integration/">
+        <link rel="next" href="../playbook/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -7029,6 +7029,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -12584,22 +12605,22 @@
 
 
 <h1 id="agent-real-time-coaching-beta">Agent Real-time Coaching (Beta)<a class="headerlink" href="#agent-real-time-coaching-beta" title="Permanent link">&para;</a></h1>
-<h2 id="introduction"><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Contact center agents are often under pressure to provide better customer experiences. Dealing with high call volumes and complex conversations can make it challenging for agents to meet or exceed customer expectations without sufficient support, guidance, and tools.</p>
 <p>The Real-time Agent Coaching feature enables real-time coaching based on the analysis of agent utterances and speech. You can set up specific utterances and speech patterns for AgentAssist to take relevant actions, such as providing hints and nudges or emailing the manager when those patterns occur.</p>
 <p>As a contact center supervisor, you can view triggered utterances, including the frequency of their occurrence, and evaluate how well agents follow the recommended actions within a specific time frame. You can also review speech patterns such as cross talks, dead air, and speech speed to help agents optimize their communication style.</p>
 <p>This document is meant for the contact center supervisors and explains everything about the Real-time Agent Coaching feature, including rules, associated triggers, and actions.</p>
-<h2 id="rules"><strong>Rules</strong><a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
+<h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <p>Rules are a combination of triggers and actions to solve an issue. Each rule is an independent entity that you can edit, delete, tag, untag, enable, or disable. For easy identification, you can label all relevant rules with the same tag. You can use multiple tags for one rule and one tag for multiple rules. Real-time Agent Coaching has two types of rules:</p>
 <ul>
 <li><strong>Pre-built</strong>: Pre-existing coaching options that come with Agent Coaching.</li>
 <li><strong>New rules</strong>: New rules you can create based on your requirements.</li>
 </ul>
 <p>Currently, the pre-built rules section has two rules – None Intent and Price Objection.</p>
-<h3 id="none-intent"><strong>None Intent</strong><a class="headerlink" href="#none-intent" title="Permanent link">&para;</a></h3>
+<h3 id="none-intent">None Intent<a class="headerlink" href="#none-intent" title="Permanent link">&para;</a></h3>
 <p>The None Intent rule contains utterances that are used to prevent false positives during intent identification. By using these utterances, you can train the system to differentiate between a positive (trained) and a false-positive (wrong, untrained, ambiguous) utterance. For example, an utterance “I need help with my account” is a positive intent and the system has to act accordingly, but the utterance “It is too expensive” is a false-positive intent wherein the system should not take any action.</p>
 <p>This rule is enabled by default, and you can’t disable or delete it. You can, however, add more utterances to make this rule more effective.</p>
-<h4 id="adding-none-intent-utterances"><strong>Adding None Intent Utterances</strong><a class="headerlink" href="#adding-none-intent-utterances" title="Permanent link">&para;</a></h4>
+<h4 id="adding-none-intent-utterances">Adding None Intent Utterances<a class="headerlink" href="#adding-none-intent-utterances" title="Permanent link">&para;</a></h4>
 <p>You can add utterances in two ways:</p>
 <ul>
 <li><strong>AI Assist</strong>: You can take assistance from AI to generate and add more none intent utterances based on the utterances of your selected rules.</li>
@@ -12646,7 +12667,7 @@ Following this step, you can add multiple utterances.</li>
 <p>The new utterance gets added to the list of utterances.</p>
 </li>
 </ol>
-<h3 id="price-objection"><strong>Price Objection</strong><a class="headerlink" href="#price-objection" title="Permanent link">&para;</a></h3>
+<h3 id="price-objection">Price Objection<a class="headerlink" href="#price-objection" title="Permanent link">&para;</a></h3>
 <p>This is a predefined rule with conditions and actions that come with Agent Coaching. You can customize the conditions and actions, but can’t edit or delete the rule name. However, you can disable this rule, if needed. It contains a customer’s price objection utterance and defines the actions agents should take in response. The predefined conditions and actions are:</p>
 <ul>
 <li><strong>Condition (When)</strong>: Price objection utterance by customer</li>
@@ -12663,11 +12684,11 @@ Following this step, you can add multiple utterances.</li>
 <p>The following screenshot displays the <strong>Price Objection</strong> rule:</p>
 <p><a class="glightbox" href="../agent-coaching-images/price-objection-identification-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../agent-coaching-images/price-objection-identification-4.png" alt="price-objection-identification" title="price-objection-identification" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p>For information on rule functionalities, refer to the section <a href="#create-publish-edit-delete-and-disable-rules">Create, Publish, Edit, Delete, and Disable Rules</a>.</p>
-<h2 id="create-publish-edit-delete-and-disable-rules"><strong>Create, Publish, Edit, Delete, and Disable Rules</strong><a class="headerlink" href="#create-publish-edit-delete-and-disable-rules" title="Permanent link">&para;</a></h2>
+<h2 id="create-publish-edit-delete-and-disable-rules">Create, Publish, Edit, Delete, and Disable Rules<a class="headerlink" href="#create-publish-edit-delete-and-disable-rules" title="Permanent link">&para;</a></h2>
 <p>This section explains how to create, tag, publish, edit, delete, and disable rules.</p>
-<h3 id="creating-a-new-rule"><strong>Creating a New Rule</strong><a class="headerlink" href="#creating-a-new-rule" title="Permanent link">&para;</a></h3>
+<h3 id="creating-a-new-rule">Creating a New Rule<a class="headerlink" href="#creating-a-new-rule" title="Permanent link">&para;</a></h3>
 <p>From time to time, depending on newer or different situations, you can create new rules to help agents with newer issues. This section explains the steps to create a new rule.</p>
-<h4 id="steps-to-create-a-new-rule"><strong>Steps to create a new rule:</strong><a class="headerlink" href="#steps-to-create-a-new-rule" title="Permanent link">&para;</a></h4>
+<h4 id="steps-to-create-a-new-rule">Steps to create a new rule:<a class="headerlink" href="#steps-to-create-a-new-rule" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Sign in to <strong>XO Platform</strong>.</li>
 <li>Click <strong>AgentAssist</strong> &gt; <strong>Experience</strong> &gt; <strong>Agent Coaching</strong>.</li>
@@ -12710,9 +12731,9 @@ Following this step, you can add multiple utterances.</li>
 <p>Click <strong>Save</strong>.</p>
 </li>
 </ol>
-<h3 id="editing-a-rule"><strong>Editing a Rule</strong><a class="headerlink" href="#editing-a-rule" title="Permanent link">&para;</a></h3>
+<h3 id="editing-a-rule">Editing a Rule<a class="headerlink" href="#editing-a-rule" title="Permanent link">&para;</a></h3>
 <p>You can add to or change an existing rule based on the requirements.</p>
-<h4 id="steps-to-edit-a-rule"><strong>Steps to edit a rule</strong><a class="headerlink" href="#steps-to-edit-a-rule" title="Permanent link">&para;</a></h4>
+<h4 id="steps-to-edit-a-rule">Steps to edit a rule<a class="headerlink" href="#steps-to-edit-a-rule" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Sign in to <strong>XO Platform</strong>.</li>
 <li>Click <strong>AgentAssist</strong> &gt; <strong>Experience</strong> &gt; <strong>Agent Coaching</strong>.</li>
@@ -12726,17 +12747,17 @@ Following this step, you can add multiple utterances.</li>
 <p class="admonition-title">Note</p>
 <p>Co-editing a rule is not allowed–if you edit a rule, it’s locked, and no one else can edit or delete it simultaneously. AgentAssist will notify you if you attempt to co-edit a rule. If a rule is locked for editing, but the user has not performed any editing for 15 minutes or left the Rules Configuration screen, AgentAssist unlocks the rule for editing by another user.</p>
 </div>
-<h3 id="deleting-a-rule"><strong>Deleting a Rule</strong><a class="headerlink" href="#deleting-a-rule" title="Permanent link">&para;</a></h3>
+<h3 id="deleting-a-rule">Deleting a Rule<a class="headerlink" href="#deleting-a-rule" title="Permanent link">&para;</a></h3>
 <p>You can delete a rule due to irrelevance or other reasons. AgentAssist lets you delete an existing rule with the click of a button.</p>
-<h4 id="steps-to-delete-a-rule"><strong>Steps to delete a rule</strong><a class="headerlink" href="#steps-to-delete-a-rule" title="Permanent link">&para;</a></h4>
+<h4 id="steps-to-delete-a-rule">Steps to delete a rule<a class="headerlink" href="#steps-to-delete-a-rule" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Go to the <strong>AgentAssist</strong> &gt; <strong>Experience</strong> &gt; <strong>Agent Coaching</strong> main page.</li>
 <li>Click the <strong>delete</strong> button beside a rule name that you want to delete.</li>
 <li>Click <strong>Yes</strong> in the confirmation popup window.</li>
 </ol>
-<h3 id="disabling-a-rule"><strong>Disabling a Rule</strong><a class="headerlink" href="#disabling-a-rule" title="Permanent link">&para;</a></h3>
+<h3 id="disabling-a-rule">Disabling a Rule<a class="headerlink" href="#disabling-a-rule" title="Permanent link">&para;</a></h3>
 <p>If you don’t want to use a rule temporarily, you can disable it.</p>
-<h4 id="steps-to-disable-a-rule"><strong>Steps to disable a rule</strong><a class="headerlink" href="#steps-to-disable-a-rule" title="Permanent link">&para;</a></h4>
+<h4 id="steps-to-disable-a-rule">Steps to disable a rule<a class="headerlink" href="#steps-to-disable-a-rule" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Go to the <strong>AgentAssist</strong> &gt; <strong>Experience</strong> &gt; <strong>Agent Coaching</strong> main page.</li>
 <li>In the <strong>Enabled</strong> column, use the toggle to disable or enable a rule.<ol>
@@ -12744,15 +12765,15 @@ Following this step, you can add multiple utterances.</li>
 </ol>
 </li>
 </ol>
-<h2 id="agent-coaching-rule-triggers-when"><strong>Agent Coaching Rule Triggers (When…)</strong><a class="headerlink" href="#agent-coaching-rule-triggers-when" title="Permanent link">&para;</a></h2>
+<h2 id="agent-coaching-rule-triggers-when">Agent Coaching Rule Triggers (When…)<a class="headerlink" href="#agent-coaching-rule-triggers-when" title="Permanent link">&para;</a></h2>
 <p>Trigger setting is essential to rule creation. You can’t have a rule without a trigger. Triggers define the conditions for a rule to come into effect. This section explains how to set up triggers for new rules. The available triggers are:</p>
 <ul>
 <li>Utterance Triggers</li>
 <li>Speech Analysis Triggers</li>
 </ul>
-<h3 id="utterance-triggers"><strong>Utterance Triggers</strong><a class="headerlink" href="#utterance-triggers" title="Permanent link">&para;</a></h3>
+<h3 id="utterance-triggers">Utterance Triggers<a class="headerlink" href="#utterance-triggers" title="Permanent link">&para;</a></h3>
 <p>Utterances are inputs from either the customers or the agents. In Utterance Triggers, you set up conditions like input from the customer or agent, the number of times the input came, and the time frame within which the input came to set off the trigger.</p>
-<h4 id="steps-to-set-up-utterance-triggers"><strong>Steps to set up Utterance Triggers:</strong><a class="headerlink" href="#steps-to-set-up-utterance-triggers" title="Permanent link">&para;</a></h4>
+<h4 id="steps-to-set-up-utterance-triggers">Steps to set up Utterance Triggers:<a class="headerlink" href="#steps-to-set-up-utterance-triggers" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Go to the rule trigger creation page. For help, refer to <a href="#steps-to-create-a-new-rule">Steps to create a new rule</a>. </li>
 <li>Under <strong>When</strong>, click the <strong>+ Add a trigger</strong> button.</li>
@@ -12812,9 +12833,9 @@ Following this step, you can add multiple utterances.</li>
 </ol>
 </li>
 </ul>
-<h3 id="speech-analysis-triggers"><strong>Speech Analysis Triggers</strong><a class="headerlink" href="#speech-analysis-triggers" title="Permanent link">&para;</a></h3>
+<h3 id="speech-analysis-triggers">Speech Analysis Triggers<a class="headerlink" href="#speech-analysis-triggers" title="Permanent link">&para;</a></h3>
 <p>This feature analyzes the speech pattern or event of both the customer and the agent and provides real-time feedback and coaching to improve customer-agent conversation quality. This section explains the steps to set up the Speech Analysis Triggers feature.</p>
-<h4 id="steps-to-set-up-speech-analysis-triggers"><strong>Steps to set up Speech Analysis Triggers</strong><a class="headerlink" href="#steps-to-set-up-speech-analysis-triggers" title="Permanent link">&para;</a></h4>
+<h4 id="steps-to-set-up-speech-analysis-triggers">Steps to set up Speech Analysis Triggers<a class="headerlink" href="#steps-to-set-up-speech-analysis-triggers" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Select <strong>Speech Analysis</strong> after clicking <strong>When</strong>&gt; <strong>+Add a trigger</strong>.
     <a class="glightbox" href="../agent-coaching-images/speech-analysis-trigger-selection-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../agent-coaching-images/speech-analysis-trigger-selection-14.png" alt="speech-analysis-trigger-selection" title="speech-analysis-trigger-selection" style="border: 1px solid gray; zoom:80%;"></a></li>
@@ -13039,9 +13060,9 @@ Valid values to choose from:
   </tr>
 </table>
 
-<h3 id="andor-condition"><strong>And/Or Condition</strong><a class="headerlink" href="#andor-condition" title="Permanent link">&para;</a></h3>
+<h3 id="andor-condition">And/Or Condition<a class="headerlink" href="#andor-condition" title="Permanent link">&para;</a></h3>
 <p>AgentAssist allows you to add multiple rule triggers. It lets you set different conditions like combining multiple rules or choosing one or a set of rules against another or a different set of rules. You can even choose or combine rules from different trigger types like Utterance and Speech Analysis triggers.</p>
-<h4 id="steps-to-select-andor-condition"><strong>Steps to select And/Or condition</strong><a class="headerlink" href="#steps-to-select-andor-condition" title="Permanent link">&para;</a></h4>
+<h4 id="steps-to-select-andor-condition">Steps to select And/Or condition<a class="headerlink" href="#steps-to-select-andor-condition" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Click <strong>+Add a trigger</strong> in the rule trigger creation page to create a new trigger.</li>
 <li>Click <strong>+Add a trigger</strong> again to create a new rule trigger.</li>
@@ -13054,15 +13075,15 @@ Valid values to choose from:
 </div>
 <p><a class="glightbox" href="../agent-coaching-images/and-or-condition-explanation-37.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../agent-coaching-images/and-or-condition-explanation-37.png" alt="and-or-condition-explanation" title="and-or-codition-explanation" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p>The <strong>And</strong> condition ensures that rule triggers <strong>1</strong> and <strong>2</strong> are combined, and the <strong>Or</strong> condition ensures that either the combination of the first two rule triggers (<strong>1+2</strong>) or the third rule trigger (<strong>3</strong>) becomes applicable.</p>
-<h2 id="agent-real-time-coaching-actions-then-do"><strong>Agent Real-time Coaching Actions (Then do…)</strong><a class="headerlink" href="#agent-real-time-coaching-actions-then-do" title="Permanent link">&para;</a></h2>
+<h2 id="agent-real-time-coaching-actions-then-do">Agent Real-time Coaching Actions (Then do…)<a class="headerlink" href="#agent-real-time-coaching-actions-then-do" title="Permanent link">&para;</a></h2>
 <p>After setting up rule triggers, you must set up actions for those triggers. Here, you configure what actions AgentAssist should take if the conditions you set up are met. You can set up three different actions:
 * Nudge Agent
 * Hint Agent
 * Email Manager</p>
 <p>You can also set up adherence, which is like an acknowledgment, to ensure the agent has followed the instructions.</p>
-<h3 id="add-adherence"><strong>Add Adherence</strong><a class="headerlink" href="#add-adherence" title="Permanent link">&para;</a></h3>
+<h3 id="add-adherence">Add Adherence<a class="headerlink" href="#add-adherence" title="Permanent link">&para;</a></h3>
 <p>The Add Adherence feature lets you know the agent’s adherence to the instructions in the form of nudges and hints. Later, you can use this acknowledgment to measure agent performance in the Dashboard. This feature is applicable only for the Nudge and Hint Agent actions. </p>
-<h4 id="add-adherence-types"><strong>Add Adherence Types</strong><a class="headerlink" href="#add-adherence-types" title="Permanent link">&para;</a></h4>
+<h4 id="add-adherence-types">Add Adherence Types<a class="headerlink" href="#add-adherence-types" title="Permanent link">&para;</a></h4>
 <p>You have two types of adherences to choose from:</p>
 <ul>
 <li>
@@ -13075,13 +13096,13 @@ Valid values to choose from:
 </li>
 </ul>
 <p>For practical examples of this feature, refer to steps 7-8 of <a href="#steps-to-set-up-the-nudge-agent-actions">Steps to set up the Nudge Agent actions</a>.</p>
-<h3 id="nudge-agent"><strong>Nudge Agent</strong><a class="headerlink" href="#nudge-agent" title="Permanent link">&para;</a></h3>
+<h3 id="nudge-agent">Nudge Agent<a class="headerlink" href="#nudge-agent" title="Permanent link">&para;</a></h3>
 <p>The Nudge Agent actions are the small messages that pop up on the agent’s screen while communicating with the customers. They are disappearing messages, which stay on the agent’s screen for 5 seconds. The agent can close these messages anytime after their appearance. Through these messages, you either compliment the agents for a good job or direct them to take other appropriate actions to serve the customers in the best way possible. Here are the following four nudges that you can choose from:
 * Positive
 * Neutral
 * Alert
 * Critical</p>
-<h4 id="steps-to-set-up-the-nudge-agent-actions"><strong>Steps to set up the Nudge Agent actions:</strong><a class="headerlink" href="#steps-to-set-up-the-nudge-agent-actions" title="Permanent link">&para;</a></h4>
+<h4 id="steps-to-set-up-the-nudge-agent-actions">Steps to set up the Nudge Agent actions:<a class="headerlink" href="#steps-to-set-up-the-nudge-agent-actions" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Go to the rule action setup page.</li>
 <li>Click <strong>+ Add an action</strong> under the <strong>Then do…</strong> section.
@@ -13144,13 +13165,13 @@ Valid values to choose from:
 </ol>
 </li>
 </ol>
-<h3 id="hint-agent"><strong>Hint Agent</strong><a class="headerlink" href="#hint-agent" title="Permanent link">&para;</a></h3>
+<h3 id="hint-agent">Hint Agent<a class="headerlink" href="#hint-agent" title="Permanent link">&para;</a></h3>
 <p>The Hint Agent actions are small pop-up messages that advise agents to take further action. They appear on the agent’s screen while communicating with the customers and may or may not auto-close based on how you set them. Through these messages, you also compliment the agents for a good job. Here are the four hint types that you can choose from:
 * Positive
 * Neutral
 * Alert
 * Critical</p>
-<h4 id="steps-to-set-up-the-hint-agent-actions"><strong>Steps to set up the Hint Agent actions:</strong><a class="headerlink" href="#steps-to-set-up-the-hint-agent-actions" title="Permanent link">&para;</a></h4>
+<h4 id="steps-to-set-up-the-hint-agent-actions">Steps to set up the Hint Agent actions:<a class="headerlink" href="#steps-to-set-up-the-hint-agent-actions" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Go to the rule action setup page.</li>
 <li>Click <strong>+ Add an action</strong> under the <strong>Then do…</strong> section.</li>
@@ -13206,9 +13227,9 @@ Valid values to choose from:
 <li>Critical Hints</li>
 </ul>
 <p><a class="glightbox" href="../agent-coaching-images/critical-hint-widget-69.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../agent-coaching-images/critical-hint-widget-69.png" alt="critical-hint-widget" title="critical-hint-widget" style="border: 1px solid gray; zoom:80%;"></a> </p>
-<h3 id="email-manager"><strong>Email Manager</strong><a class="headerlink" href="#email-manager" title="Permanent link">&para;</a></h3>
+<h3 id="email-manager">Email Manager<a class="headerlink" href="#email-manager" title="Permanent link">&para;</a></h3>
 <p>This feature lets you set a push notification alert to the manager’s desktop. You can set who should receive this notification and customize the title and the body of the message. It applies to the customer’s actions, such as using profanity or too many cross-talks. Instead of nudges and hints, the system can send an alert notification to the manager in these situations.</p>
-<h4 id="steps-to-set-up-the-email-manager-action"><strong>Steps to set up the Email Manager action:</strong><a class="headerlink" href="#steps-to-set-up-the-email-manager-action" title="Permanent link">&para;</a></h4>
+<h4 id="steps-to-set-up-the-email-manager-action">Steps to set up the Email Manager action:<a class="headerlink" href="#steps-to-set-up-the-email-manager-action" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Go to the rule action setup page.</li>
 <li>Click <strong>+ Add an action</strong> under the <strong>Then do…</strong> section.</li>
@@ -13231,9 +13252,9 @@ Valid values to choose from:
 <a class="glightbox" href="../agent-coaching-images/email-message-body-73.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../agent-coaching-images/email-message-body-73.png" alt="email-message-body" title="email-message-body" style="border: 1px solid gray; zoom:80%;"></a> </li>
 <li>Enter the notification content and then click the <strong>tick</strong> mark to save it.</li>
 </ol>
-<h2 id="assign-this-to"><strong>Assign This To</strong><a class="headerlink" href="#assign-this-to" title="Permanent link">&para;</a></h2>
+<h2 id="assign-this-to">Assign This To<a class="headerlink" href="#assign-this-to" title="Permanent link">&para;</a></h2>
 <p>This feature lets you assign the rule to the intended agents or groups. Currently, by default, this feature is assigned for all agents.</p>
-<h3 id="steps-to-assign-rules-to-agents-or-groups"><strong>Steps to assign rules to agents or groups</strong><a class="headerlink" href="#steps-to-assign-rules-to-agents-or-groups" title="Permanent link">&para;</a></h3>
+<h3 id="steps-to-assign-rules-to-agents-or-groups">Steps to assign rules to agents or groups<a class="headerlink" href="#steps-to-assign-rules-to-agents-or-groups" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Go to the rule action setup page. For help, refer to steps 1 and 2 of <a href="#steps-to-create-a-new-rule">Steps to create a new rule</a>.</li>
 <li>Click <strong>+Add agents, groups</strong> under the <strong>Assign this to…</strong> section.
@@ -13340,13 +13361,13 @@ The following screen shows the default selection of <strong>All Agents</strong>:
         
         
           
-          <a href="../../../channels/IVR-integration/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+          <a href="../playbook/" class="md-footer__link md-footer__link--next" aria-label="Next: Agent Playbook">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Overview
+                Agent Playbook
               </div>
             </div>
             <div class="md-footer__button md-icon">
