@@ -12418,17 +12418,18 @@ Otherwise, the ongoing task goes on, and based on the configuration, the user is
 <li>
 <p><strong><em>Published</em></strong> In the XO Platform, the status of a Digital Form remains In Development even after publishing.</p>
 <p><a class="glightbox" href="../../images/publish-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/publish-status.png" alt="publish status" title="publish status" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-</ul>
 <p>On publishing the form, you can see the form listed under <strong>Publish Status → View Publishing Summary</strong>, but the status on the Digital Forms main page remains as <em>In Development</em>.</p>
 <p><a class="glightbox" href="../../images/form-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/form-status.png" alt="form status" title="form status" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>The <em>In Development</em> and <em>Published</em> versions of the VA can be viewed by toggling between the respective statuses in the top search-bar.</p>
 <p><a class="glightbox" href="../../images/va-status-search.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/va-status-search.png" alt="va status search" title="va status search" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>!!! Note</p>
-<div class="language-text highlight"><pre><span></span><code>     If any edits are done to the Digital Form while it is In Development, the changes would be reflected in the Published version as soon as you publish the form.
-</code></pre></div>
-<ul>
-<li><strong><em>Suspended</em></strong> when a published form is suspended by the admin.</li>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If any edits are done to the Digital Form while it is In Development, the changes would be reflected in the Published version as soon as you publish the form.</p>
+</div>
+</li>
+<li>
+<p><strong><em>Suspended</em></strong> when a published form is suspended by the admin.</p>
+</li>
 </ul>
 <h3 id="pre-publishing-validations">Pre-publishing Validations<a class="headerlink" href="#pre-publishing-validations" title="Permanent link">&para;</a></h3>
 <p>The following validations are performed before a Publish request is processed:</p>
@@ -12449,9 +12450,9 @@ Otherwise, the ongoing task goes on, and based on the configuration, the user is
 <li>A relevant Standard Response is displayed and</li>
 <li>
 <p>Logged as Failed Task in Analytics.</p>
-</li>
-<li>
-<p>Digital Form is in a published state, but the Dialog Task is not available then on Form submission, the end-user is presented with the Form’s Error Message.</p>
+<ul>
+<li>Digital Form is in a published state, but the Dialog Task is not available then on Form submission, the end-user is presented with the Form’s Error Message.</li>
+</ul>
 </li>
 </ul>
 <h3 id="import">Import<a class="headerlink" href="#import" title="Permanent link">&para;</a></h3>
@@ -12476,94 +12477,98 @@ Otherwise, the ongoing task goes on, and based on the configuration, the user is
 <strong><em>Note that this does not include the Sub-dialog Tasks generated using Digital Forms.</em></strong></li>
 <li>
 <p>Complete information for each of the selected forms are available in the export file and this includes:</p>
-</li>
-<li>
-<p>Fields</p>
-</li>
+<ul>
+<li>Fields</li>
 <li>Field properties</li>
 <li>Form integrations</li>
+</ul>
+</li>
 </ul>
 <h2 id="form-component-details">Form Component Details<a class="headerlink" href="#form-component-details" title="Permanent link">&para;</a></h2>
 <h3 id="components-list">Components List<a class="headerlink" href="#components-list" title="Permanent link">&para;</a></h3>
 <p>Following is a list of the available components.</p>
 <p><strong>BASIC</strong></p>
 <ul>
-<li><strong>Text Field</strong> – used for single-line input.</li>
-</ul>
+<li>
+<p><strong>Text Field</strong> – used for single-line input.</p>
 <p><a class="glightbox" href="../../images/text-field-input.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/text-field-input.png" alt="text field" title="text field" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Text Area</strong> – used for multi-line entry.</li>
-</ul>
+</li>
+<li>
+<p><strong>Text Area</strong> – used for multi-line entry.</p>
 <p><a class="glightbox" href="../../images/text-area.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/text-area.png" alt="text area" title="text area" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Number</strong> – used for numerical entries.</li>
-</ul>
+</li>
+<li>
+<p><strong>Number</strong> – used for numerical entries.</p>
 <p><a class="glightbox" href="../../images/number-field.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/number-field.png" alt="number field" title="number field" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Radio Button</strong> – used as a selection option from a given list.</li>
-</ul>
+</li>
+<li>
+<p><strong>Radio Button</strong> – used as a selection option from a given list.</p>
 <p><a class="glightbox" href="../../images/radio-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/radio-button.png" alt="radio button" title="radio button" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Dropdown</strong> – Used as a selection option from a given list; can be multi-select.</li>
-</ul>
+</li>
+<li>
+<p><strong>Dropdown</strong> – Used as a selection option from a given list; can be multi-select.</p>
 <p><a class="glightbox" href="../../images/dropdown-list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/dropdown-list.png" alt="dropdown list" title="dropdown list" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Checkbox</strong> – Used for multi-select option from a given list.</li>
-</ul>
+</li>
+<li>
+<p><strong>Checkbox</strong> – Used for multi-select option from a given list.</p>
 <p><a class="glightbox" href="../../images/checkbox.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/checkbox.png" alt="checkbox" title="checkbox" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Date</strong> – Used for date entries, gives a date picker for the user to choose the date.</li>
-</ul>
+</li>
+<li>
+<p><strong>Date</strong> – Used for date entries, gives a date picker for the user to choose the date.</p>
 <p><a class="glightbox" href="../../images/date-calendar.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/date-calendar.png" alt="date" title="date" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Date &amp; Time</strong> – Used for date &amp; time entries. The system displays a date and time picker for the user to choose the date and time.
-Use the <strong>Date component</strong> and set the <em>Time option</em> to <em>yes</em>; choose from <em>12</em> or <em>24-hour</em> format.</li>
-</ul>
+</li>
+<li>
+<p><strong>Date &amp; Time</strong> – Used for date &amp; time entries. The system displays a date and time picker for the user to choose the date and time.
+Use the <strong>Date component</strong> and set the <em>Time option</em> to <em>yes</em>; choose from <em>12</em> or <em>24-hour</em> format.</p>
 <p><a class="glightbox" href="../../images/date-time.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/date-time.png" alt="date and time" title="date and time" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Phone Number</strong> – Used for phone number entries, allows the user to choose the country code.</li>
-</ul>
+</li>
+<li>
+<p><strong>Phone Number</strong> – Used for phone number entries, allows the user to choose the country code.</p>
 <p><a class="glightbox" href="../../images/phone-number.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/phone-number.png" alt="phone number" title="phone number" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Email</strong> – Used for email address entries, validates for <em>xxx@uuu.com</em> format.</li>
-</ul>
+</li>
+<li>
+<p><strong>Email</strong> – Used for email address entries, validates for <em>xxx@uuu.com</em> format.</p>
 <p><a class="glightbox" href="../../images/email-field.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/email-field.png" alt="email" title="email" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Toggle</strong> – Used for switching between two values, ideal for yes/no type of inputs.</li>
-</ul>
+</li>
+<li>
+<p><strong>Toggle</strong> – Used for switching between two values, ideal for yes/no type of inputs.</p>
 <p><a class="glightbox" href="../../images/toggle-field.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/toggle-field.png" alt="toggle" title="toggle" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Address</strong> – Used for address entries.</li>
-</ul>
+</li>
+<li>
+<p><strong>Address</strong> – Used for address entries.</p>
 <p><a class="glightbox" href="../../images/address-field.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/address-field.png" alt="address" title="address" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>URL</strong> – Used for web URL entries, validates for <em>xxx.com</em> format.</li>
-</ul>
+</li>
+<li>
+<p><strong>URL</strong> – Used for web URL entries, validates for <em>xxx.com</em> format.</p>
 <p><a class="glightbox" href="../../images/url-field.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/url-field.png" alt="url" title="url" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Range Slider</strong> – Value selection between specified min and max values; can be represented as a percentage.</li>
-</ul>
+</li>
+<li>
+<p><strong>Range Slider</strong> – Value selection between specified min and max values; can be represented as a percentage.</p>
 <p><a class="glightbox" href="../../images/range-slider.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/range-slider.png" alt="range slider" title="range slider" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Password</strong> - Used to display passwords in their masked form <code>*****</code></li>
+</li>
+<li>
+<p><strong>Password</strong> - Used to display passwords in their masked form <code>*****</code></p>
+</li>
 </ul>
 <p><strong>ADVANCED</strong></p>
 <ul>
-<li><strong>Button</strong> – Used as a clickable component to submit reset, or open an external URL the form. Choose from <em>Primary</em>, <em>Secondary</em>, <em>Tertiary</em>, <em>Ghost,</em> or <em>Danger</em>.</li>
-</ul>
+<li>
+<p><strong>Button</strong> – Used as a clickable component to submit reset, or open an external URL the form. Choose from <em>Primary</em>, <em>Secondary</em>, <em>Tertiary</em>, <em>Ghost,</em> or <em>Danger</em>.</p>
 <p><a class="glightbox" href="../../images/button-field.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/button-field.png" alt="button" title="button" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Label</strong> – Used to display a static text box, no action required from the user.</li>
-</ul>
+</li>
+<li>
+<p><strong>Label</strong> – Used to display a static text box, no action required from the user.</p>
 <p><a class="glightbox" href="../../images/label-field.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/label-field.png" alt="label" title="label" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Protip</strong> – Used to mark important information for the end-user, no user action required.</li>
-</ul>
+</li>
+<li>
+<p><strong>Protip</strong> – Used to mark important information for the end-user, no user action required.</p>
 <p><a class="glightbox" href="../../images/protip-field.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/protip-field.png" alt="protip" title="protip" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ul>
-<li><strong>Note</strong> - Used to mark information for the end-user, no user action required.</li>
-</ul>
+</li>
+<li>
+<p><strong>Note</strong> - Used to mark information for the end-user, no user action required.</p>
 <p><a class="glightbox" href="../../images/note-field.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/note-field.png" alt="note" title="note" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+</ul>
 <h3 id="component-properties">Component Properties<a class="headerlink" href="#component-properties" title="Permanent link">&para;</a></h3>
 <p>The following are the properties that can be set for each of the components.</p>
 <div class="admonition note">
