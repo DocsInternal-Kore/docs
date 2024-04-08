@@ -11981,16 +11981,18 @@
 
 <h1 id="configure-digital-forms">Configure Digital Forms<a class="headerlink" href="#configure-digital-forms" title="Permanent link">&para;</a></h1>
 <p>In this How-To, we will explore a scenario in a Banking Bot, where the user can create an additional account. We will see how Digital Forms can be used to gather all the required information from the user and create the account.</p>
-<p>For details on what Digital Forms are and how it is implemented in the XO Platform, click <a href="https://docsinternal-kore.github.io/docs/xo/automation/use-cases/digital-skills/digital-forms/" target="_blank">here</a>.</p>
-<h2 id="illustration-with-an-example"><strong>Illustration with an Example</strong><a class="headerlink" href="#illustration-with-an-example" title="Permanent link">&para;</a></h2>
+<p>For details on what Digital Forms are and how it is implemented in the XO Platform, click <a href="../../digital-skills/digital-forms/" target="_blank">here</a>.</p>
+<h2 id="illustration-with-an-example">Illustration with an Example<a class="headerlink" href="#illustration-with-an-example" title="Permanent link">&para;</a></h2>
 <p>Consider a Banking Bot trying to address the following scenarios:</p>
 <ol>
 <li>An already registered user wants to open an additional account.</li>
-<li>There are three types of accounts that are available, each with further options:</li>
+<li>
+<p>There are three types of accounts that are available, each with further options:</p>
+<ul>
 <li>Savings Account.</li>
 <li>Checking Account with an option to opt for a Cash Card and set the miniumum balance.</li>
-<li>
-<p>Credit Card with an option to choose the type of card to be Platinum, Gold, Silver or Basic.</p>
+<li>Credit Card with an option to choose the type of card to be Platinum, Gold, Silver or Basic.</li>
+</ul>
 <p><a class="glightbox" href="../../images/banking-form.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/banking-form.png" alt="banking form" title="banking form" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
@@ -11999,7 +12001,7 @@
 <li>Bot building knowledge.</li>
 <li>A configured Banking Bot.</li>
 </ul>
-<h2 id="configurations"><strong>Configurations</strong><a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
+<h2 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
 <p>Let us consider each of the following scenarios:</p>
 <ol>
 <li>Digital Form to gather input from the user;</li>
@@ -12024,19 +12026,19 @@
 <li>Basic</li>
 </ul>
 </li>
+<li><strong>Trading</strong> - Identity proof required.</li>
 </ul>
 </li>
 </ul>
 <h3 id="form-creation">Form Creation<a class="headerlink" href="#form-creation" title="Permanent link">&para;</a></h3>
 <ol>
 <li>From the Kore.ai Bot Builder platform, open the Banking Bot.</li>
-<li>Select the <strong>Build</strong> tab from the top menu.</li>
-<li>From the left navigation menu, select <strong>Digital Skills -&gt; Digital Forms</strong> to access the Digital Forms page.</li>
+<li>Navigate to <strong>Automation AI &gt; Virtual Assistant &gt; Digital Skills &gt; Digital Forms</strong> to access the Digital Forms page.</li>
 <li>
 <p>Click <strong>New Form</strong> and enter the following:</p>
 <ul>
-<li><strong>Name</strong> – name to the form, say <em>OpenAccount</em></li>
-<li><strong>Display Name</strong> for the form, say <em>Open an Account</em></li>
+<li><strong>Name</strong> – name of the form that will be used by the engine, let's set as <em>OpenAccount</em></li>
+<li><strong>Display Name</strong> for the form, let's set as <em>Open an Account</em></li>
 <li>
 <p><strong>Description</strong> of the form.
     <strong>Select form’s Header Style</strong>: You can choose a specific header style from the listed illustrations – the circle indicates the position of logo/icon with respect to the title of the form in the header. </p>
@@ -12065,32 +12067,32 @@
 <li>
 <p>In that panel set the following values:</p>
 <ul>
-<li><strong>Display Name</strong> say <em>Name.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>accountname.</em></li>
+<li><strong>Display Name</strong> set as <em>Name.</em></li>
+<li><strong>Name</strong> used for internal reference, set as <em>accountname.</em></li>
 <li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Enter the name of the account holder</em>.
+<li><strong>Placeholder</strong> value to be displayed in the field when blank, set as, <em>Enter the name of the account holder</em>.
   <a class="glightbox" href="../../images/form-editor-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/form-editor-panel.png" alt="form editor panel" title="form editor panel" style="border: 1px solid gray; zoom:75%;"></a></li>
 </ul>
 </li>
 <li>
 <p>Next, a selection box for the type of account to be opened. Drag and drop a <strong>Dropdown</strong> component onto the form and set the following values:</p>
 <ul>
-<li><strong>Display Name</strong> say <em>Type.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>accounttype.</em></li>
+<li><strong>Display Name</strong> set as <em>Account Type.</em></li>
+<li><strong>Name</strong> used for internal reference, set as <em>accounttype.</em></li>
 <li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Select the type of account you want to open</em>.</li>
+<li><strong>Placeholder</strong> value to be displayed in the field when blank, set as, <em>Select the type of account you want to open</em>.</li>
 </ul>
 </li>
 <li>Scroll and locate <strong>Data Settings</strong>, and deselect <strong>Multi Select</strong> option.</li>
 <li>
-<p>Against <strong>Dropdown values</strong> click <strong>Add Values</strong> to enter the values – <em>Checkings, Savings, Credit Card.</em> You can mark one value, <em>Savings</em>, as default. This would be selected by default at the time of execution.</p>
+<p>Against <strong>Dropdown values</strong> click <strong>Add Values</strong> to enter the values – <em>Checking, Savings, Credit Card, Trading.</em> You can mark one value, <em>Savings</em>, as default. This would be selected by default at the time of execution.</p>
 <p><a class="glightbox" href="../../images/data-settings-add-value.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/data-settings-add-value.png" alt="data settings add value" title="data settings add value" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
 <p>Next, for the Cash Card option when the account type is selected to be a Checkings account. Drag and drop a <strong>Toggle</strong> component onto the form and set the following values:</p>
 <ul>
-<li><strong>Display Name</strong> say <em>Cash Card.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>cashcard</em>.</li>
+<li><strong>Display Name</strong> set as <em>Cash Card.</em></li>
+<li><strong>Name</strong> used for internal reference, set as <em>cashcard</em>.</li>
 <li><strong>Description</strong> of the field. In this case, the question, <em>Want a cash card?</em></li>
 <li><strong>Value</strong> as <em>Yes</em> when selected and <em>No</em> when deselected.</li>
 </ul>
@@ -12105,16 +12107,16 @@
 <li>
 <p>If the user opts for cash card, then the withdrawal limit needs to be set on the same. Drag and drop a <strong>Range Slider</strong> component onto the form and set the following values:</p>
 <ul>
-<li><strong>Display Name</strong> say <em>Withdrawal Limit.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>withdrawallimit.</em></li>
+<li><strong>Display Name</strong> set as <em>Withdrawal Limit.</em></li>
+<li><strong>Name</strong> used for internal reference, set as <em>withdrawallimit.</em></li>
 <li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Set the withdrawal limit</em>.</li>
+<li><strong>Placeholder</strong> value to be displayed in the field when blank, set as, <em>Set the withdrawal limit</em>.</li>
 </ul>
 </li>
 <li>
 <p>Deselect <strong>Is Percentage</strong></p>
 </li>
-<li>Select <strong>Value</strong> as <em>100</em> for Min and <em>1000</em> for Max.</li>
+<li>Select <strong>Value</strong> as <em>100</em> for Min and <em>10000</em> for Max.</li>
 <li>Under <strong>Data Settings</strong> you can set the <strong>Default Value</strong> to be 150, this would be pre-selected.</li>
 <li><strong>Visibility Rules</strong> would be a compound rule – account type is checkings and cash card is selected.</li>
 <li>Scroll and locate <strong>Visibility Settings.</strong> This component should be visible only when the account type is set to Checkings and the Cash Card is opted.</li>
@@ -12126,10 +12128,10 @@
 <li>
 <p>For the Credit Card option,you need to further select the type of card. Drag and drop a <strong>Radio Button</strong> component onto the form and set the following values:</p>
 <ul>
-<li><strong>Display Name</strong> say <em>Card Type.</em></li>
-<li><strong>Name</strong> used for internal reference, say <em>cardtype</em>.</li>
+<li><strong>Display Name</strong> set as <em>Card Type.</em></li>
+<li><strong>Name</strong> used for internal reference, set as <em>cardtype</em>.</li>
 <li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, say, <em>Choose the type of credit card</em>.</li>
+<li><strong>Placeholder</strong> value to be displayed in the field when blank, set as, <em>Choose the type of credit card</em>.</li>
 </ul>
 </li>
 <li>
@@ -12190,7 +12192,7 @@
 <li>
 <p>Click the <strong>+</strong> against the <strong>Dialog Tasks</strong> to create a new Task</p>
 <ul>
-<li>Enter <strong>IntentName</strong>, say, <em>OpenAccount</em></li>
+<li>Enter <strong>IntentName</strong>, set as, <em>OpenAccount</em></li>
 <li>Click <strong>Create &amp; Proceed</strong> to open the dialog builder page.</li>
 </ul>
 </li>
@@ -12215,22 +12217,22 @@
 <li>Add a <strong>Message Node</strong> to the form node.</li>
 <li>Set the <strong>Name</strong> to <em>FormMessage</em> and <strong>Display Name</strong> to <em>Form Message</em>.</li>
 <li>
-<p>Click <strong>MANAGE RESPONSES</strong> to open the message editor.
-<a class="glightbox" href="../../images/click-manage-responses.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/click-manage-responses.png" alt="select js" title="select js" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>Click <strong>MANAGE RESPONSES</strong> to open the message editor.</p>
+<p><a class="glightbox" href="../../images/click-manage-responses.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/click-manage-responses.png" alt="select js" title="select js" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>Select the <strong>JavaScript</strong> tab and enter the following code. This code would capture from the context object, the data submitted by the user in the Form and display it accordingly. 
-<code>var message;</code></p>
+<p>Select the <strong>JavaScript</strong> tab and enter the following code. This code would capture from the context object, the data submitted by the user in the Form and display it accordingly. </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>var message;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>message = &#39;You have opened a &#39;+context.forms.OpenAccount.accounttype+&#39; account in the name of &#39;+context.forms.OpenAccount.accountname;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>if (context.forms.OpenAccount.accounttype == &#39;Checkings&#39; &amp;&amp; context.forms.OpenAccount.cashcard == &#39;Yes&#39;)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>message = message + &#39; and opted for cash card with withdrawal limit set to &#39;+ context.forms.OpenAccount.withdrawallimit;
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>if (context.forms.OpenAccount.accounttype == &#39;Credit Card&#39;)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>message = message + &#39; and opted for a &#39;+ context.forms.OpenAccount.cardtype+&#39; card&#39;;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>print(message);
+</span></code></pre></div>
+<p><a class="glightbox" href="../../images/select-javascript.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/select-javascript.png" alt="select js" title="select js" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
-<p><div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;You have opened a &#39;</span><span class="o">+</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="o">+</span><span class="s1">&#39; account in the name of &#39;</span><span class="o">+</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accountname</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Checkings&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">cashcard</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Yes&#39;</span><span class="p">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; and opted for cash card with withdrawal limit set to &#39;</span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">withdrawallimit</span><span class="p">;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">accounttype</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Credit Card&#39;</span><span class="p">)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; and opted for a &#39;</span><span class="o">+</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">OpenAccount</span><span class="p">.</span><span class="nx">cardtype</span><span class="o">+</span><span class="s1">&#39; card&#39;</span><span class="p">;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nx">print</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
-</span></code></pre></div>
-<a class="glightbox" href="../../images/select-javascript.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/select-javascript.png" alt="select js" title="select js" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>Your dialog with form is ready! <strong>Talk to bot</strong> and trigger the above dialog. The form will be displayed, enter the values and click Submit, the message would be displayed. </p>
 <p><a class="glightbox" href="../../images/talk-to-bot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/talk-to-bot.png" alt="talk to bot" title="talk to bot" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>You can use the context object as shown above it a <strong>Script</strong> or <strong>Service</strong> nodes for further processing.</p>
