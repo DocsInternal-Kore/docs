@@ -11495,7 +11495,7 @@
 
 
 <h1 id="voice-call-properties">Voice Call Properties<a class="headerlink" href="#voice-call-properties" title="Permanent link">&para;</a></h1>
-<p>You can enable voice interaction with your virtual assistant, i.e., users can talk to the virtual assistant. For this, you need to enable one of the voice channels like <a href="https://developer.kore.ai/docs/bots/advanced-topics/ivr-integration/ivr-integration/">IVR</a>, <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-twilio-voice-channel/">Twilio</a>, <a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-ivr-audiocodes-channel/">IVR-AudioCodes</a>,<a href="https://developer.kore.ai/docs/bots/channel-enablement/adding-the-smartassist-gateway-channel/">SmartAssist Gateway</a>, etc and publish the VA on those channels.</p>
+<p>You can enable voice interaction with your virtual assistant, i.e., users can talk to the virtual assistant. For this, you need to enable one of the voice channels like <a href="../../../../channels/ivr-integration.md">IVR</a>, <a href="../../../../../channels/add-twilio-voice-channel/">Twilio</a>, <a href="../../../../../channels/ivr-audio-codes/">IVR-AudioCodes</a>, etc and publish the VA on those channels.</p>
 <p>There are some Voice Properties you can configure to streamline the user experience across the above-mentioned channels. These configurations can be done at multiple levels:</p>
 <ul>
 <li>VA level – at the time of channel enablement;</li>
@@ -11508,8 +11508,8 @@
 </ul>
 </li>
 </ul>
-<p>IVR Properties are accessible by going to a Dialog Task, selecting an <em>Entity, Message</em> or _Confirmation _Node, then by accessing the IVR Properties section.</p>
-<p><a class="glightbox" href="../../../../images/access-ivr.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="access IVR properties" src="../../../../images/access-ivr.png" /></a></p>
+<p>IVR Properties are accessible by going to a Dialog Task, selecting an <em>Entity, Message</em> or <em>Confirmation</em> Node, then by accessing the IVR Properties section.</p>
+<p><a class="glightbox" href="../../../../../channels/images/access-ivr.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="access IVR properties" src="../../../../../channels/images/access-ivr.png" /></a></p>
 <p>This document details the voice call properties and how they vary across various channels.</p>
 <h2 id="channel-settings">Channel Settings<a class="headerlink" href="#channel-settings" title="Permanent link">&para;</a></h2>
 <table>
@@ -11546,6 +11546,7 @@ For Entity and Confirmation nodes, you can define the extraction rule overriding
 <li>Terminate the call.
 
 <p>
+
 !!! note
 
     Selecting the <strong>Terminate call</strong> option under <strong>IVR Channel – Voice Call Properties – End of Task Behavior</strong> no longer turns off the End of Task event at the bot level.
@@ -11641,7 +11642,7 @@ SmartAssist Gateway
 <li>For Link, enter the URL of the grammar. Ideally, the URL should be accessible to the IVR system so that the resource can be accessed while executing the calls at runtime
 
 <p>
-<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Configuring_Grammar">See below for a detailed configuration for Grammar syntax</a>. \
+<a> See below for a detailed configuration for [Grammar syntax](#configuring-grammar). </a>.
 !!! note
 
     If the <strong>Enable Transcription </strong>option is enabled for the VA along with specifying the source of the transcription engine, defining grammar isn’t mandatory.
@@ -11725,7 +11726,7 @@ IVR-AudioCodes
 <p class="admonition-title">Note</p>
 <p>Most settings are the same for all nodes, with a few exceptions.</p>
 </div>
-<p><a class="glightbox" href="../../../../images/timeout_prompts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="timeout prompts" src="../../../../images/timeout_prompts.png" /></a></p>
+<p><a class="glightbox" href="../../../../../channels/images/timeout_prompts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="timeout prompts" src="../../../../../channels/images/timeout_prompts.png" /></a></p>
 <p><strong>Voice Call Settings Field Reference</strong></p>
 <p>The following sections provide detailed descriptions of each IVR setting, including descriptions, applicability to nodes, default values, and other key information.</p>
 <div class="admonition notes on prompts">
@@ -11864,7 +11865,7 @@ SmartAssist Gateway
 <li>For Link, enter the URL of the grammar. Ideally, the URL should be accessible to the IVR system so that the resource can be accessed while executing the calls at runtime
 
 <p>
-<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/voice-call-properties/#Configuring_Grammar">See below for a detailed configuration for Grammar syntax</a>.
+<a>See below for a detailed configuration for [Grammar syntax](#configuring-grammar)</a>.
 
 !!! note
 
@@ -12084,9 +12085,9 @@ By default this option is disabled.
 </table>
 
 <p>Below is a demo of the IVR Properties section, within the Component Properties panel of a Dialog Task node.</p>
-<p><a class="glightbox" href="../../../../images/ivr-properties.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Component Properties" src="../../../../images/ivr-properties.gif" /></a></p>
+<p><a class="glightbox" href="../../../../../channels/images/ivr-properties.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Component Properties" src="../../../../../channels/images/ivr-properties.gif" /></a></p>
 <h2 id="configuring-grammar">Configuring Grammar<a class="headerlink" href="#configuring-grammar" title="Permanent link">&para;</a></h2>
-<p>You will need to define at least one Speech Grammar to the IVR system. \
+<p>You will need to define at least one Speech Grammar to the IVR system. 
 There is no default Grammar that will be considered by the system. In this section, we will walk you through the steps needed to configure a Grammar system for the VA to function on the IVR system.</p>
 <p>Typically for an IVR-enabled VA, the speech utterance of the user will be vetted and parsed by the Grammar syntax at the IVR system before being diverted to the VA.</p>
 <p>Kore.ai supports the following Grammar systems:</p>
@@ -12102,7 +12103,7 @@ There is no default Grammar that will be considered by the system. In this secti
 <ol>
 <li>Set <strong>Enable Transcription</strong> to <em>no</em></li>
 <li>In the <strong>Grammar</strong> section:<ol>
-<li>Select the <strong>Speech</strong> or **DTMF **option as per your requirement.</li>
+<li>Select the <strong>Speech</strong> or <strong>DTMF</strong> option as per your requirement.</li>
 <li>In the text box to define vxml enter the vxml path to dlm.zip file. The url will be of the format: <code>http://nuance.kore.ai/downloads/kore_dlm.zip?nlptype=krypton&amp;dlm_weight=0.2&amp;lang=en-US</code></li>
 <li>Replace the above path according to your setup</li>
 <li>The language code “<em>lang=en-US</em>” will be based on your setup</li>
