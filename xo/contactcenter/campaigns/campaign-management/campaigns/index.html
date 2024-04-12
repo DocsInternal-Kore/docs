@@ -12026,7 +12026,7 @@
 </li>
 </ul>
 </li>
-<li>Under the** Outreach Strategy **tab, enter the following details:<ul>
+<li>Under the <strong>Outreach Strategy</strong> tab, enter the following details:<ul>
 <li><strong>Contactable Timings</strong>: Add the contactable timings (day of the week/time) when the dialer will dial the calls.<br />
 <strong>NOTE</strong>: Calls will be dialed to contacts based on the calling hours and timezone configured here, irrespective of the campaign's start and stop time.</li>
 <li><strong>Dialing Order</strong>: Choose the order of dialing the phone numbers.</li>
@@ -12043,7 +12043,7 @@
 <p>Campaign managers can customize the dialing pace, allowing them to set the number of simultaneous calls dialed at any time.</p>
 <p>Steps to create a campaign when Agentless Dialing Mode is selected:</p>
 <ol>
-<li>Select the** Experience Flow** associated with the campaign.</li>
+<li>Select the <strong>Experience Flow</strong> associated with the campaign.</li>
 <li>Select the <strong>Dialing Rate</strong> and click <strong>Save</strong>. The campaign is created.<br />
 <strong>NOTE</strong>: You can toggle on Answering Machine Detection if you want the system to determine whether the outbound call was received by an answering machine.</li>
 </ol>
@@ -12073,7 +12073,7 @@
 <p>You can delete a voice campaign if the campaign has served its purpose or is no longer required.</p>
 <p>Steps to delete a campaign:</p>
 <ol>
-<li>Click the <strong>Ellipsis **(</strong>⋮<strong>) icon beside the campaign name and click **Delete</strong>.</li>
+<li>Click the <strong>Ellipsis</strong>(<strong>⋮</strong>) icon beside the campaign name and click <strong>Delete</strong>.</li>
 <li>A <strong>Delete Campaign</strong> confirmation pop-up window is displayed. Click <strong>Delete</strong>.</li>
 <li>The campaign is deleted.</li>
 </ol>
@@ -12107,30 +12107,24 @@ Assigning percentages to campaigns facilitates managing campaigns with varying p
 </ol>
 <p>A Campaign Manager can oversee multiple campaigns with similar or different priorities. The campaign management system is capable of selecting and transferring contacts to the dialer automatically.<br />
 <strong>Priority Percentage</strong> = (Sum of Priority Value of each Campaign / Number of Campaigns) *100</p>
-<div class="language-text highlight"><pre><span></span><code>**Scenario 1:** Two campaigns with priorities 5 and 3 respectively
-percentage allocation to campaign 1 = (5/ (5+3))*100 = 62.5%
+<p><strong>Scenario 1:</strong> Two campaigns with priorities 5 and 3 respectively</p>
+<div class="language-text highlight"><pre><span></span><code>percentage allocation to campaign 1 = (5/ (5+3))*100 = 62.5%
 percentage allocation to campaign 2 = (3/ (5+3))*100 = 37.5%
-
-
-**Execution in this case:
-**62.5% of calls will be picked from campaign 1 and given to campaign 1 hopper.
-37.5% of calls will be picked from campaign 2 and given to campaign  2 hopper.
 </code></pre></div>
-<p>From each campaign’s hopper, the calls will be given to the Master Hopper.
-Dialer will randomly dial from the 62.5% of calls of camp1 and the 37.5% of calls of campaign 2.</p>
-<div class="language-text highlight"><pre><span></span><code>**Scenario 2:** Two campaigns with the same priorities of 5.
-
-
-percentage allocation to campaign 1 = (5/ (5+5))*100 = 50% 
+<p><strong>Execution in this case:</strong>
+    62.5% of calls will be picked from campaign 1 and given to campaign 1 hopper.<br />
+    37.5% of calls will be picked from campaign 2 and given to campaign  2 hopper.<br />
+    From each campaign’s hopper, the calls will be given to the Master Hopper.<br />
+    Dialer will randomly dial from the 62.5% of calls of camp1 and the 37.5% of calls of campaign 2.</p>
+<p><strong>Scenario 2:</strong> Two campaigns with the same priorities of 5.</p>
+<div class="language-text highlight"><pre><span></span><code>percentage allocation to campaign 1 = (5/ (5+5))*100 = 50% 
 percentage allocation to campaign 2 = (5/ (5+5))*100 = 50%
-
-
-**Execution in this case:
-**50% of calls will be picked from camp1 and given to the hopper.
-50% of calls will be picked from camp2 and given to the hopper.
-From each campaign’s hopper, the calls will be given to the Master Hooper
-Dialer will randomly dial from the 50% of calls of campaign 1 and the 50% of calls of campaign 2
 </code></pre></div>
+<p><strong>Execution in this case:</strong>
+    50% of calls will be picked from camp1 and given to the hopper.<br />
+    50% of calls will be picked from camp2 and given to the hopper.<br />
+    From each campaign’s hopper, the calls will be given to the Master Hooper<br />
+    Dialer will randomly dial from the 50% of calls of campaign 1 and the 50% of calls of campaign 2.</p>
 
 
 
