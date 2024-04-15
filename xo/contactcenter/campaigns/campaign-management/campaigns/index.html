@@ -12184,8 +12184,10 @@
 
 <h1 id="campaign-management">Campaign Management<a class="headerlink" href="#campaign-management" title="Permanent link">&para;</a></h1>
 <p>Outbound campaigns are reshaping how businesses connect with their audience. These campaigns proactively reach out to a curated list of individuals, following predefined rules. At the core of this process, calls are orchestrated based on the information available in a contact list. Outbound campaigns infuse a personalized touch by crafting scripts that shape the agent's interaction.</p>
-<p>You can access Campaigns by going to <strong>Contact Center AI</strong> &gt; <strong>Campaigns</strong> &gt; <strong>Proactive Outreach</strong> &gt; <strong>Campaign Management</strong>.</p>
-<p>On this page, the following details of the voice campaigns are shown in a table:</p>
+<p>You can access Campaigns by going to <strong>Contact Center AI</strong> &gt; <strong>Campaigns</strong> &gt; <strong>Proactive Outreach</strong> &gt; <strong>Campaign Management</strong>.
+<a class="glightbox" href="../images/campaigns-page-main.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/campaigns-page-main.png" alt="Campaigns Main Page" title="Campaigns Main Page" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p>On this page, the following details of the voice campaigns are shown in a table:
+<a class="glightbox" href="../images/campaigns-top-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/campaigns-top-panel.png" alt="Campaigns Table Top Panel" title="Campaigns Table Top Panel" style="border: 1px solid gray; zoom:100%;"></a></p>
 <ul>
 <li><strong>Campaign</strong> - Campaign name and Type.</li>
 <li><strong>Actions</strong> - Play/Pause/Replay, Stop, Edit, Clone campaign.</li>
@@ -12200,84 +12202,142 @@
 </li>
 <li><strong>Progress</strong> - Progress of the campaign. The count refreshes every 5 seconds.</li>
 <li><strong>Contact List</strong> - The call list that will be dialed.</li>
-<li><strong>Connection</strong> - The following details are displayed based on the dialer type:<ul>
-<li><strong>Agentless dialer</strong>- The Experience Flow name selected while creating or editing a campaign is shown. For example: Default Conversational Input voice Flow.</li>
+<li>
+<p><strong>Connection</strong> - The following details are displayed based on the dialer type:</p>
+<ul>
+<li><strong>Agentless dialer</strong>- The Experience Flow name selected while creating or editing a campaign is shown. For example, Default Conversational Input voice Flow.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Campaigns module is only available on accounts configured with Kore Gateway. If an account is configured with AudioCodes or the mapped gateway is switched from AudioCodes to Kore Gateway, then the Campaigns module is unavailable. </p>
+</div>
 </li>
 </ul>
-<p><strong>Note</strong>: The Campaigns module is only available on accounts configured with Kore Gateway. If an account is configured with AudioCodes or the mapped gateway is switched from AudioCodes to Kore Gateway, then the Campaigns module is unavailable.</p>
+<p>The Campaigns module enables you to create <strong>Voice</strong> and <strong>Proactive Web</strong> campaigns.</p>
 <h2 id="create-voice-campaigns">Create Voice Campaigns<a class="headerlink" href="#create-voice-campaigns" title="Permanent link">&para;</a></h2>
 <p>Steps to create Voice campaigns:</p>
 <ol>
-<li>Click <strong>+ New Campaign</strong>.</li>
-<li>The <strong>New Voice Campaign</strong> dialog box is displayed. Under the <strong>General</strong> tab, enter the following details:<ul>
-<li><strong>Campaign Name</strong>: Enter a name for the campaign.</li>
-<li><strong>Description</strong>: A description of the campaign.</li>
-<li><strong>Contact Lists</strong>: Select the contact lists that must be dialed for the campaign from the drop-down list and then click <strong>Done</strong>.</li>
-<li>Select the DNC List from the drop-down.<br />
-<strong>NOTES</strong>: <ul>
+<li>
+<p>On the <strong>Voice</strong> tab, click <strong>+ New Campaign</strong>.
+<a class="glightbox" href="../images/new-campaign-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/new-campaign-button.png" alt="New Campaign Button" title="New Campaign Button" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>The <strong>New Voice Campaign</strong> dialog box is displayed. Under the <strong>General</strong> tab, enter the following details:</p>
+<ul>
+<li><strong>Campaign Name</strong>: Enter a name for the campaign.
+<a class="glightbox" href="../images/campaign-name.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/campaign-name.png" alt="Campaign Name" title="Campaign Name" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li><strong>Description</strong>: A description of the campaign.
+<a class="glightbox" href="../images/description.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/description.png" alt="Campaign Description" title="Campaign Description" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li><strong>Contact Lists</strong>: Select the <strong>Contact Lists</strong> that will be dialed, for the campaign from the drop-down list and then click <strong>Done</strong>.
+<a class="glightbox" href="../images/contact-list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/contact-list.png" alt="Select Contact Lists" title="Select Contact Lists" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li>Select the <strong>DNC List</strong> from the drop-down.
+<a class="glightbox" href="..images/dnc-list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="..images/dnc-list.png" alt="DNC List" title="DNC List" style="border: 1px solid gray; zoom:100%;"></a></li>
+</ul>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
 <li>Only 1 DNC list can be selected per campaign.</li>
 <li>The contact list is automatically scrubbed against the DNC list after the Campaign is saved.</li>
-<li>Select the Priority from the drop-down list.</li>
-<li>Select the Dialing mode from the drop-down list.</li>
 </ul>
-</li>
+</div>
+<ul>
+<li>Select the <strong>Priority</strong> from the drop-down list.
+<a class="glightbox" href="../images/priority-list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/priority-list.png" alt="Priority" title="Priority" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li>Select the <strong>Dialing Mode</strong> from the drop-down list.
+<a class="glightbox" href="../images/dialing-mode.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dialing-mode.png" alt="Dialing Mode" title="Dialing Mode" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li>Under the <strong>Outreach Strategy</strong> tab, enter the following details:</li>
+<li><strong>Caller ID</strong>: Select the caller ID to be displayed for the campaign.
+<a class="glightbox" href="../images/caller-id.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/caller-id.png" alt="Caller ID" title="Caller ID" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li><strong>Dialing Order</strong>: Choose the order of dialing the phone numbers.
+<a class="glightbox" href="../images/dialing-order.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dialing-order.png" alt="Dialing Order" title="Dialing Order" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li><strong>Max Attempts Per Contact</strong>: Enter the count for the maximum number of attempts by the dialer to call each phone number in the campaign.
+<a class="glightbox" href="../images/max-attempts-per-contact.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/max-attempts-per-contact.png" alt="Max Attempts Per Contact" title="Max Attempts Per Contact" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li><strong>Default Retry Period</strong>: Select the retry duration (in minutes) in case of an unsuccessful connection with a contact.
+<a class="glightbox" href="../images/default-retry-period.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/default-retry-period.png" alt="Default Retry Period" title="Defult Retry Period" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li><strong>Max Ring Time</strong>: Select the duration (in seconds) that a call will ring until it is disconnected.
+<a class="glightbox" href="../images/max-ring-time.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/max-ring-time.png" alt="Max Ring Time" title="Max Ring Time" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li><strong>Contactable Timings</strong>: Add the contactable timings (day of the week/time) when the dialer will dial the calls.
+<a class="glightbox" href="../images/contactable-timings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/contactable-timings.png" alt="Contactable Timings" title="Contactable Timings" style="border: 1px solid gray; zoom:100%;"></a></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calls will be dialed to contacts based on the calling hours and timezone configured here, irrespective of the campaign's start and stop time.</p>
+</div>
+<ol>
+<li>Click <strong>Save</strong>. The campaign is created.</li>
+</ol>
 </li>
-<li>Under the <strong>Outreach Strategy</strong> tab, enter the following details:<ul>
-<li><strong>Contactable Timings</strong>: Add the contactable timings (day of the week/time) when the dialer will dial the calls.<br />
-<strong>NOTE</strong>: Calls will be dialed to contacts based on the calling hours and timezone configured here, irrespective of the campaign's start and stop time.</li>
-<li><strong>Dialing Order</strong>: Choose the order of dialing the phone numbers.</li>
-<li><strong>Max Attempts Per Contact</strong>: Enter the count for the maximum number of attempts by the dialer to call each phone number in the campaign.</li>
-<li><strong>Default Retry Period</strong>: Select the retry duration (in minutes) in case of an unsuccessful connection with a contact.</li>
-<li><strong>Max Ring Time</strong>: Select the duration (in seconds) that a call will ring until it is disconnected.</li>
-</ul>
-</li>
-<li>Click <strong>Save</strong>.</li>
 </ol>
 <h3 id="agentless-dialer">Agentless Dialer<a class="headerlink" href="#agentless-dialer" title="Permanent link">&para;</a></h3>
 <p>Agentless Dialer maintains a queue of leads to be dialed and can automatically dial a new phone number. The dialer initiates an outbound call to the selected phone number and when a call is answered, the dialer connects the call to the configured voice experience flow. The dialer can detect answering machines or voicemail and reschedule the call by sending the call status to the campaign manager. If a call goes unanswered or reaches a voicemail with Answering Machine Detection (AMD) turned on, the dialer disconnects the call and automatically dials the following number on the list.</p>
 <p>Metrics and call statistics, such as the number of calls made, call duration, and call outcomes are generated for monitoring and reporting purposes.</p>
 <p>Campaign managers can customize the dialing pace, allowing them to set the number of simultaneous calls dialed at any time.</p>
-<p>Steps to create a campaign when Agentless Dialing Mode is selected:</p>
-<ol>
-<li>Select the <strong>Experience Flow</strong> associated with the campaign.</li>
-<li>Select the <strong>Dialing Rate</strong> and click <strong>Save</strong>. The campaign is created.<br />
-<strong>NOTE</strong>: You can toggle on Answering Machine Detection if you want the system to determine whether the outbound call was received by an answering machine.</li>
-</ol>
+<p>To create a campaign when Agentless Dialing Mode is selected:</p>
+<ul>
+<li>Select the <strong>Start Flow</strong> associated with the campaign. <a href="https://docs.kore.ai/smartassist/experience-flows/flow-designer-components/">Learn more</a>.
+<a class="glightbox" href="../images/start-flow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/start-flow.png" alt="Start Flow" title="Start Flow" style="border: 1px solid gray; zoom:100%;"></a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>You can toggle on Answering Machine Detection if you want the system to determine whether the outbound call was received by an answering machine.</p>
 <h2 id="edit-a-voice-campaign">Edit a Voice Campaign<a class="headerlink" href="#edit-a-voice-campaign" title="Permanent link">&para;</a></h2>
 <p>Editing a voice campaign allows you to make changes to the campaign as per your needs.</p>
 <p>Steps to edit a campaign:</p>
 <ol>
-<li>Click the <strong>Ellipsis</strong> (<strong>⋮</strong>) icon beside the campaign name and click <strong>Edit</strong>.</li>
-<li>A pop-up window is displayed. Do the required changes and click <strong>Save</strong>.<br />
-<strong>NOTE</strong>: You cannot edit a campaign that is in Active status. For campaigns in other statuses,  you can edit limited fields.</li>
+<li>
+<p>Click the <strong>Ellipsis</strong> (<strong>⋮</strong>) icon beside the campaign name and click <strong>Edit</strong>.
+<a class="glightbox" href="../images/edit-campaign-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/edit-campaign-button.png" alt="Edit Campaign Button" title="Edit Campaign Button" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>A pop-up window is displayed. Do the required changes and click <strong>Save</strong>.
+<a class="glightbox" href="../images/edit-campaign-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/edit-campaign-window.png" alt="Edit and Save Campaign" title="Edit and save Campaign" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You cannot edit a campaign that in Active status. For campaigns in other statuses, you can edit limited fields.</p>
+</div>
 <h2 id="clone-a-voice-campaign">Clone a Voice Campaign<a class="headerlink" href="#clone-a-voice-campaign" title="Permanent link">&para;</a></h2>
 <p>Cloning a voice campaign creates a replica of the original campaign. This is useful when two or more similar campaigns are run simultaneously.</p>
 <p>Steps to clone a campaign:</p>
 <ol>
-<li>Click the <strong>Ellipsis</strong> (<strong>⋮</strong>) icon beside the campaign name and click <strong>Clone</strong>.</li>
-<li>A cloned copy of the original campaign is created.</li>
+<li>Click the <strong>Ellipsis</strong> (<strong>⋮</strong>) icon beside the campaign name and click <strong>Clone</strong>.
+<a class="glightbox" href="../images/clone-campaign.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/clone-campaign.png" alt="Clone Campaign Button" title="Clone Campaign Button" style="border: 1px solid gray; zoom:100%;"></a></li>
+<li>A cloned copy of the original campaign is created.
+<a class="glightbox" href="../images/cloned-campaigns.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/cloned-campaigns.png" alt="Cloned Campaign" title="Cloned Campaign" style="border: 1px solid gray; zoom:100%;"></a></li>
 </ol>
 <h2 id="stop-a-voice-campaign">Stop a Voice Campaign<a class="headerlink" href="#stop-a-voice-campaign" title="Permanent link">&para;</a></h2>
 <p>Stopping a voice campaign resets the data, and a new instance of the campaign is created when you rerun the campaign.</p>
 <p>Steps to stop a campaign:</p>
 <ol>
-<li>Click the <strong>Stop</strong> button under ACTIONS for the campaign you want to stop.</li>
-<li>A <strong>Stop Campaign</strong> confirmation pop-up window is displayed. Click <strong>Stop</strong>.</li>
+<li>
+<p>Click the <strong>Stop</strong> button under <strong>ACTIONS</strong> for the campaign you want to stop.
+<a class="glightbox" href="../images/stop-campaign-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/stop-campaign-button.png" alt="Stop Campaign Button" title="Stop Campaign Button" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>A <strong>Stop Campaign</strong> confirmation pop-up window is displayed. Click <strong>Stop</strong>.
+<a class="glightbox" href="../images/stop-campaign-confirmation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/stop-campaign-confirmation.png" alt="Stop Campaign Confirmation" title="Stop Campaign Confirmation" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
 </ol>
 <h2 id="delete-a-voice-campaign">Delete a Voice Campaign<a class="headerlink" href="#delete-a-voice-campaign" title="Permanent link">&para;</a></h2>
 <p>You can delete a voice campaign if the campaign has served its purpose or is no longer required.</p>
 <p>Steps to delete a campaign:</p>
 <ol>
-<li>Click the <strong>Ellipsis</strong>(<strong>⋮</strong>) icon beside the campaign name and click <strong>Delete</strong>.</li>
-<li>A <strong>Delete Campaign</strong> confirmation pop-up window is displayed. Click <strong>Delete</strong>.</li>
+<li>
+<p>Click the <strong>Ellipsis</strong>(<strong>⋮</strong>) icon beside the campaign name and click <strong>Delete</strong>.
+<a class="glightbox" href="../images/delete-campaign-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/delete-campaign-button.png" alt="Delete Campaign Button" title="Delete Campaign Button" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>A <strong>Delete Campaign</strong> confirmation pop-up window is displayed. Click <strong>Delete</strong>.
+<a class="glightbox" href="../images/delete-campaign-confirmation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/delete-campaign-confirmation.png" alt="Delete Campaign Confirmation" title="Delete Campaign Confirmation" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
 <li>The campaign is deleted.</li>
 </ol>
 <h2 id="run-voice-campaigns">Run Voice Campaigns<a class="headerlink" href="#run-voice-campaigns" title="Permanent link">&para;</a></h2>
 <p>You can run a voice campaign by clicking the <strong>Play</strong> button.
-When the campaign runs, you can pause or stop it. You can also rerun a completed campaign.</p>
+<a class="glightbox" href="../images/run-campaign-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/run-campaign-button.png" alt="Run Campaign" title="Run Campaign" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p>When the campaign runs, you can pause or stop it. You can also rerun a completed campaign.</p>
 
 
 
