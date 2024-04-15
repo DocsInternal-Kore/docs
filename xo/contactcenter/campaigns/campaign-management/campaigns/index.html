@@ -6422,15 +6422,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#frequently-asked-questions-faqs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Frequently Asked Questions (FAQs)
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -12152,15 +12143,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#frequently-asked-questions-faqs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Frequently Asked Questions (FAQs)
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -12181,13 +12163,13 @@
 
 <h1 id="campaign-management">Campaign Management<a class="headerlink" href="#campaign-management" title="Permanent link">&para;</a></h1>
 <p>Outbound campaigns are reshaping how businesses connect with their audience. These campaigns proactively reach out to a curated list of individuals, following predefined rules. At the core of this process, calls are orchestrated based on the information available in a contact list. Outbound campaigns infuse a personalized touch by crafting scripts that shape the agent's interaction.</p>
-<p>You can find the <strong>Campaign Management</strong> tab on the left panel.</p>
+<p>You can access Campaigns by going to <strong>Contact Center AI</strong> &gt; <strong>Campaigns</strong> &gt; <strong>Proactive Outreach</strong> &gt; <strong>Campaign Management</strong>.</p>
 <p>On this page, the following details of the voice campaigns are shown in a table:</p>
 <ul>
 <li><strong>Campaign</strong> - Campaign name and Type.</li>
 <li><strong>Actions</strong> - Play/Pause/Replay, Stop, Edit, Clone campaign.</li>
 <li><strong>Priority</strong> - Priority of the campaign from 1 to 10 (1 being the lowest). The default priority is 1.</li>
-<li><strong>Status</strong> - Status of the campaign <ul>
+<li><strong>Status</strong> - Status of the campaign.<ul>
 <li><strong>Ready</strong>: When a manual campaign is saved and ready to run.</li>
 <li><strong>Active</strong>: The campaign is started and running.</li>
 <li><strong>Paused</strong>: The campaign is paused.</li>
@@ -12202,7 +12184,7 @@
 </ul>
 </li>
 </ul>
-<p><strong>Note</strong>: The Campaigns module is only available on accounts configured with Kore Gateway. If an account is configured with AudioCodes or the mapped gateway is switched from AudioCodes to Kore Gateway, then the Campaigns module is unavailable. </p>
+<p><strong>Note</strong>: The Campaigns module is only available on accounts configured with Kore Gateway. If an account is configured with AudioCodes or the mapped gateway is switched from AudioCodes to Kore Gateway, then the Campaigns module is unavailable.</p>
 <h2 id="create-voice-campaigns">Create Voice Campaigns<a class="headerlink" href="#create-voice-campaigns" title="Permanent link">&para;</a></h2>
 <p>Steps to create Voice campaigns:</p>
 <ol>
@@ -12275,51 +12257,6 @@
 <h2 id="run-voice-campaigns">Run Voice Campaigns<a class="headerlink" href="#run-voice-campaigns" title="Permanent link">&para;</a></h2>
 <p>You can run a voice campaign by clicking the <strong>Play</strong> button.
 When the campaign runs, you can pause or stop it. You can also rerun a completed campaign.</p>
-<h2 id="frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)<a class="headerlink" href="#frequently-asked-questions-faqs" title="Permanent link">&para;</a></h2>
-<ol>
-<li>What is the difference in the resumption behavior of a paused campaign and a completed campaign when using the 'Rerun' icon?<br />
-When you pause and resume a running campaign, it will restart from where it left off. However, if a campaign has dialed the last record and is then resumed by clicking the 'Rerun' icon, it will start dialing from the beginning of the dial list and will be a new instance of the same campaign. The new instance will not maintain data of the previous run.</li>
-<li>How does the system handle contact lists in campaigns, and what are the limitations when it comes to sharing contact lists or running campaigns concurrently with the same list?<br />
-Each campaign can have its contact list. Campaigns also can share contact lists. However, it is not possible for campaigns to simultaneously operate with the same contact list.</li>
-<li>Is there a limit to the number of call lists per campaign?<br />
-A campaign can have a maximum of 10 Call Lists.</li>
-<li>Is there a limit on the number of Do Not Contact (DNC)  lists per campaign?<br />
-The maximum number of DNC lists per campaign is one.</li>
-<li>How many contact lists are permitted to be created?<br />
-Each account can create a maximum of 1000 contact lists.</li>
-<li>What are the limitations on DNC lists in terms of the number of records allowed per DNC list and per account?<br />
-There is a limit of one million records for each DNC list and a total limit of two million DNC records for each account.</li>
-<li>How many DNC lists are permitted to be created?<br />
-Each account can create a maximum of 1000 DNC lists.</li>
-<li>How many voice campaigns can be run concurrently?<br />
-You can run a maximum of 50 voice campaigns concurrently.</li>
-<li>What is the maximum number of contacts per account?<br />
-Each account can have a maximum of five million contacts.</li>
-<li>What is the maximum number of contacts that can be added to a contact list?<br />
-Each contact list can contain a maximum of one million contacts, or up to a 5 MB file size limit.</li>
-<li>How does priority work in Voice Campaigns?<br />
-Assigning percentages to campaigns facilitates managing campaigns with varying priorities. A higher percentage implies more contacts will be dialed for that specific campaign. However, it's important to note that a higher priority doesn't guarantee that the campaign will be completed first.  </li>
-</ol>
-<p>A Campaign Manager can oversee multiple campaigns with similar or different priorities. The campaign management system is capable of selecting and transferring contacts to the dialer automatically.<br />
-<strong>Priority Percentage</strong> = (Sum of Priority Value of each Campaign / Number of Campaigns) *100</p>
-<p><strong>Scenario 1:</strong> Two campaigns with priorities 5 and 3 respectively</p>
-<div class="language-text highlight"><pre><span></span><code>percentage allocation to campaign 1 = (5/ (5+3))*100 = 62.5%
-percentage allocation to campaign 2 = (3/ (5+3))*100 = 37.5%
-</code></pre></div>
-<p><strong>Execution in this case:</strong>
-    62.5% of calls will be picked from campaign 1 and given to campaign 1 hopper.<br />
-    37.5% of calls will be picked from campaign 2 and given to campaign  2 hopper.<br />
-    From each campaign’s hopper, the calls will be given to the Master Hopper.<br />
-    Dialer will randomly dial from the 62.5% of calls of camp1 and the 37.5% of calls of campaign 2.</p>
-<p><strong>Scenario 2:</strong> Two campaigns with the same priorities of 5.</p>
-<div class="language-text highlight"><pre><span></span><code>percentage allocation to campaign 1 = (5/ (5+5))*100 = 50% 
-percentage allocation to campaign 2 = (5/ (5+5))*100 = 50%
-</code></pre></div>
-<p><strong>Execution in this case:</strong>
-    50% of calls will be picked from camp1 and given to the hopper.<br />
-    50% of calls will be picked from camp2 and given to the hopper.<br />
-    From each campaign’s hopper, the calls will be given to the Master Hooper<br />
-    Dialer will randomly dial from the 50% of calls of campaign 1 and the 50% of calls of campaign 2.</p>
 
 
 
