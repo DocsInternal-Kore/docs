@@ -12594,7 +12594,6 @@ The Exit Scenario Key-Value fields help identify when to end the interaction wit
 <p>When this feature is disabled, the node is unavailable within the Dialog Builder.<a href="../../../automation/use-cases/dialogs/node-types/genai-node/"> Learn more</a>.</p>
 <h3 id="answer-from-documents">Answer From Documents<a class="headerlink" href="#answer-from-documents" title="Permanent link">&para;</a></h3>
 <p>This feature leverages a Large Language Model (LLM) and Generative AI models from OpenAI to generate answers for FAQs by processing uploaded documents in an unstructured PDF format and user queries.</p>
-<p><a class="glightbox" href="../images/dcf%284%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/dcf%284%29.png" /></a></p>
 <p><strong>Usage</strong></p>
 <p>After redacting personally identifiable information, the uploaded documents and the end-user queries are shared with OpenAI to curate the answers.</p>
 <p>Once you meet the prerequisites and enable the feature:</p>
@@ -12641,7 +12640,9 @@ The Exit Scenario Key-Value fields help identify when to end the interaction wit
 <p>If this feature is disabled, you cannot configure the ML model to build custom prompts using OpenAI for different use cases.<a href="../../../automation/use-cases/dialogs/node-types/genai-prompt/"> Learn more</a>.</p>
 <h3 id="rephrase-dialog-responses">Rephrase Dialog Responses<a class="headerlink" href="#rephrase-dialog-responses" title="Permanent link">&para;</a></h3>
 <p>This feature sends all User Prompts, Error Prompts, and Bot Responses to the Generative AI along with the conversation context, which depends on the configured number of user inputs. Responses are rephrased in English or the selected Non-English Bot Language based on the context and user emotion, providing a more empathetic, natural, and contextual conversation experience to the end-user. You can give instructions (additional instructions) in English or any other bot language you select.</p>
-<p><a class="glightbox" href="../images/dcf%281%29.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/dcf%281%29.gif" /></a></p>
+<p><a class="glightbox" href="../images/dcf%281%29.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/dcf%281%29.gif" /></a>
+gif
+<a class="glightbox" href="../images/dcf(1).gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dcf(1).gif" alt="Rephrase Dialog Responses" title="Rephrase Dialog Responses" style="border: 1px solid gray; zoom:70%;"></a></p>
 <p><strong>Usage</strong></p>
 <p>When configuring a Message, Entity, or Confirmation node, you can enable the <strong>Rephrase Response</strong> feature (disabled by default). This lets you set the number of user inputs sent to OpenAI/Anthropic Claude-1 based on the selected model as context for rephrasing the response sent through the node. You can choose between 0 and 5, where 0 means that no previous input is considered, while 5 means that the previous. 5 responses are sent as context.</p>
 <p>When this feature is disabled, the Rephrase Response section is not visible within your node’s Component Properties.</p>
