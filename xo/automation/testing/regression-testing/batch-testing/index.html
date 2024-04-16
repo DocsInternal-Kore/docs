@@ -12460,29 +12460,32 @@
 <h1 id="batch-testing">Batch Testing<a class="headerlink" href="#batch-testing" title="Permanent link">&para;</a></h1>
 <p>Once you have built and trained your bot, the most important question that arises is how good is your bot’s learning model? So, evaluating your bot’s performance is important to delineate how good your bot understands the user utterances.</p>
 <p>The <strong>Batch Testing</strong> feature helps you discern the ability of your bot to correctly recognize the expected intents and entities from a given set of utterances. This involves the execution of a series of tests to get a detailed statistical analysis and gauge the performance of your bot’s ML model.</p>
-<p><strong>Note</strong>: The Batch Testing dashboard displays the summary of test coverage, performance, and training recommendations for multiple test suites based on validations of the intent identification capabilities of your NLU model. The <strong>Health and Monitoring</strong> dashboard is a one-stop place that displays this information for the individual test suite(s) the user selects. <a href="../health-and-monitoring/virtual-assistants-health-and-monitoring/" target="_blank">Learn More</a>.</p>
-<p>To conduct a batch test, you can use predefined test suites available in the builder or create your own custom test suites. Based on your requirement, the test suites can be run to view the desired results. This option can be accessed from the <strong>Automation &gt; Testing &gt; Regression Testing</strong> from the left navigation menu, and then the <strong>Batch Testing</strong> tab..</p>
-<h2 id="best-practices"><strong>Best Practices</strong><a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Batch Testing dashboard displays the summary of test coverage, performance, and training recommendations for multiple test suites based on validations of the intent identification capabilities of your NLU model. The <strong>Health and Monitoring</strong> dashboard is a one-stop place that displays this information for the individual test suite(s) the user selects. <a href="../health-and-monitoring/virtual-assistants-health-and-monitoring/" target="_blank">Learn More</a>.</p>
+</div>
+<p>To conduct a batch test, you can use predefined test suites available in the builder or create your own custom test suites. Based on your requirement, the test suites can be run to view the desired results. This option can be accessed from the <strong>Automation AI &gt; Virtual Assistant &gt; Testing &gt; Regression Testing</strong> from the left navigation menu, and then the <strong>Batch Testing</strong> tab..</p>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <ul>
 <li>An optimal approach to bot NLP training is to first create a test suite of most of the use cases(user utterances) that the bot needs to identify, run it against the model and start training for the ones that failed.</li>
 <li>Create/update batch testing modules for high usage utterances.</li>
 <li>Publish the trained model only after detailed testing.</li>
 <li>When naming the intent, ensure that the name is relatively short (3-5 words) and does not have special characters or words from the Stop Wordlist. Try to ensure the intent name is close to what the users request in their utterance.</li>
 <li>Batch Test executions do not consider the context of the user. Hence you might see some False Negatives in the test results which in fact are True Positives in the actual bot when the context is taken into consideration.</li>
-<li>The ‘count’ in Batch Test results refers to the ‘unique assertion’ statements and not necessarily the number of the rows in the CSV file. Batch tests use a rule to validate the unique assertions based on the ‘utterance’ in consecutive rows. If two consecutive rows have same utterances and different entity values, the XO platform considers it as one assertion statement which accepts both the entity values.</li>
+<li>The <strong>count</strong> in Batch Test results refers to the <strong>unique assertion</strong> statements and not necessarily the number of the rows in the CSV file. Batch tests use a rule to validate the unique assertions based on the <strong>utterance</strong> in consecutive rows. If two consecutive rows have same utterances and different entity values, the XO platform considers it as one assertion statement which accepts both the entity values.</li>
 </ul>
-<h2 id="managing-test-suites"><strong>Managing Test Suites</strong><a class="headerlink" href="#managing-test-suites" title="Permanent link">&para;</a></h2>
-<p>Kore.ai provides a few out-of-the-box <strong>Test Suites</strong> to perform batch testing. <strong>'Developer defined utterances’</strong> and <strong>'Successful user utterances’</strong> are the built-in test suites that can be run to perform Batch Testing. You can also create a <strong>New Test Suite</strong> for testing a custom set of utterances.</p>
+<h2 id="managing-test-suites">Managing Test Suites<a class="headerlink" href="#managing-test-suites" title="Permanent link">&para;</a></h2>
+<p>Kore.ai provides a few out-of-the-box <strong>Test Suites</strong> to perform batch testing. <strong>Developer defined utterances</strong> and <strong>Successful user utterances</strong> are the built-in test suites that can be run to perform Batch Testing. You can also create a <strong>New Test Suite</strong> for testing a custom set of utterances.</p>
 <h3 id="developer-defined-utterances">Developer defined utterances<a class="headerlink" href="#developer-defined-utterances" title="Permanent link">&para;</a></h3>
 <p>This test suite validates the utterances that have been previously added and trained by the developer from Machine Learning Utterances screen. Using this test suite would mean testing collectively the entire set of utterances that a developer has added for all tasks of the bot.</p>
 <p><a class="glightbox" href="../images/batch-testing-1-developer-du.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-1-developer-du.png" alt="BT - Developer Defined Utterances" title="BT - Developer Defined Utterances" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <h3 id="successful-user-utterances">Successful user utterances<a class="headerlink" href="#successful-user-utterances" title="Permanent link">&para;</a></h3>
-<p>This test suite includes all the end-user utterances that have successfully matched one or more intents and the corresponding task is fully executed. You can also find these utterances from the ‘Intent found’ section of the Analyze module.</p>
+<p>This test suite includes all the end-user utterances that have successfully matched one or more intents and the corresponding task is fully executed. You can also find these utterances from the <strong>Intent found</strong> section of the Analyze module.</p>
 <p><a class="glightbox" href="../images/batch-testing-2-successful-utterances.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-2-successful-utterances.png" alt="BT - Successful user utterances" title="BT - Successful user utterances" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <h3 id="adding-a-new-test-suite">Adding a New Test Suite<a class="headerlink" href="#adding-a-new-test-suite" title="Permanent link">&para;</a></h3>
 <p>To add a new test suite, follow the steps below:</p>
 <ol>
-<li>Go to <strong>Automation &gt; Testing &gt; Regression Testing</strong>, select <strong>Batch Testing</strong> tab, and click <strong>New Test Suite</strong>.<br />
+<li>Go to <strong>Automation AI &gt; Virtual Assistant &gt; Testing &gt; Regression Testing</strong>, select <strong>Batch Testing</strong> tab, and click <strong>New Test Suite</strong>.<br />
   <a class="glightbox" href="../images/batch-testing-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-3.png" alt="BT - New Test Suite" title="BT - New Test Suite" style="border: 1px solid gray;zoom:50%;"></a></li>
 <li>In the <strong>New test Suite</strong> window, add a <strong>name</strong> and provide a <strong>description</strong>.</li>
 <li>Next, choose how to add test cases: either manually or by uploading a test case file.<ul>
@@ -13190,7 +13193,7 @@ table, th, td {
 </li>
 </ol>
 <h3 id="running-test-suites">Running Test Suites<a class="headerlink" href="#running-test-suites" title="Permanent link">&para;</a></h3>
-<p>The following steps guide you on how to run a batch test on your bot and get a detailed analytical report on the utterances based on the test results. To get started, go to <strong>Automation &gt; Testing &gt; Regression Testing</strong>, select <strong>Batch Testing</strong> tab.</p>
+<p>The following steps guide you on how to run a batch test on your bot and get a detailed analytical report on the utterances based on the test results. To get started, go to <strong>Automation AI &gt; Virtual Assistant &gt; Testing &gt; Regression Testing</strong>, select <strong>Batch Testing</strong> tab.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Before testing, it is essential to add and train your bot with a considerable number of utterances using Machine Learning.</p>
@@ -13238,7 +13241,7 @@ Note that <strong>Developer Defined Utterances</strong> and <strong>Successful U
 <p>You can cancel an ongoing batch test execution in either <strong><em>Published</em></strong> or <strong><em>In-Development</em></strong> mode. This feature allows you to make changes, intervene, or start another batch test suite execution without waiting for the ongoing test run to complete.</p>
 <p><strong>Steps to Cancel an Ongoing Batch Test Execution:</strong></p>
 <ol>
-<li>Navigate to <strong>Automation &gt; Testing &gt; Regression Testing</strong>, select <strong>Batch Testing</strong> tab on the Bot Builder.</li>
+<li>Navigate to <strong>Automation AI &gt; Virtual Assistant &gt; Testing &gt; Regression Testing</strong>, select <strong>Batch Testing</strong> tab on the Bot Builder.</li>
 <li>
 <p>When the required test suite is running, click the <strong>Cancel</strong> icon.<br />
 <a class="glightbox" href="../images/batch-testing-cancel-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/batch-testing-cancel-img1.png" alt="Click Cancel" title="Click Cancel" style="border: 1px solid gray; zoom:50%;"/></a> </p>
@@ -13272,7 +13275,10 @@ Note that <strong>Developer Defined Utterances</strong> and <strong>Successful U
 </ol>
 <h4 id="view-test-case-details">View Test Case Details<a class="headerlink" href="#view-test-case-details" title="Permanent link">&para;</a></h4>
 <p>Running a test suite will display the results as described below.</p>
-<p><strong>Note:</strong> The test case with multiple intents is considered a test case for all the intents mentioned. For example, if a test case has Intent 1 and Intent 2 as expected intents, then Intent 1 and Intent 2 are shown as covered in the batch test summary.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The test case with multiple intents is considered a test case for all the intents mentioned. For example, if a test case has Intent 1 and Intent 2 as expected intents, then Intent 1 and Intent 2 are shown as covered in the batch test summary.</p>
+</div>
 <p>Each test run creates a test report record and displays a summary of the test result. The batch test result in the screenshot below includes the following information:</p>
 <ul>
 <li><strong>Last Run Date &amp; Time</strong> that displays the date and time of the latest test run.</li>
@@ -13302,7 +13308,9 @@ Note that <strong>Developer Defined Utterances</strong> and <strong>Successful U
 <li><strong>Report name</strong> of the test suite</li>
 <li><strong>Bot Language</strong> (post 7.3 release)</li>
 <li><strong>Run Type</strong> identifies the version of the bot against which the test suite was run – development or published.</li>
-<li><strong>Threshold Setting</strong> (post 7.3 release) detailing the NLP thresholds applied when running this test suite, this would be followed by the settings for each of the three NL engines with the following details:<ul>
+<li>
+<p><strong>Threshold Setting</strong> (post 7.3 release) detailing the NLP thresholds applied when running this test suite, this would be followed by the settings for each of the three NL engines with the following details:</p>
+<ul>
 <li><strong>Mode</strong> – ml, faq, or, cs</li>
 <li><strong>minThreshold</strong></li>
 <li><strong>maxThreshold</strong></li>
@@ -13314,7 +13322,9 @@ Note that <strong>Developer Defined Utterances</strong> and <strong>Successful U
 <li><strong>pathCoverage</strong></li>
 </ul>
 </li>
-<li><strong>Last Tested:</strong> Date of the latest test run for developer-defined utterances.</li>
+<li>
+<p><strong>Last Tested:</strong> Date of the latest test run for developer-defined utterances.</p>
+</li>
 <li><strong>Utterance Count:</strong> Total number of utterances included in the test run.</li>
 <li><strong>Success/Failure Ratio:</strong> Total number of successfully predicted utterances divided by the total count of utterances multiplied by 100.</li>
 <li><strong>True Positive (TP):</strong> Percentage of utterances that have correctly matched expected intent.In the case of Small Talk, TP is indicated when the list of expected and actual intents are the same.In the case of Traits, a TP state includes the traits matched over and above the expected matches.
@@ -13337,13 +13347,17 @@ Note that <strong>Developer Defined Utterances</strong> and <strong>Successful U
 <li><strong>Matched EntityValue</strong> – The entity value identified from an utterance.</li>
 <li><strong>Entity Result</strong> – Result categorized as True or False to indicate whether the expected entity value is the same as the actual entity value.</li>
 <li><strong>Expected Entity Order</strong> – entity values from the input file</li>
-<li><strong>Actual Entity Order</strong> –<ul>
+<li>
+<p><strong>Actual Entity Order</strong> –</p>
+<ul>
 <li>if the order for all expected entities is provided, then the same is included in this column</li>
 <li>if no order is provided, the system determined order will be included in the column</li>
 <li>If an order is provided for some entities, then a combination of user-defined order and system-defined order will be included</li>
 </ul>
 </li>
-<li><strong>Matched Intent’s Score</strong> – For False Positives and False Negatives, the confidence scores from FM, ML, and/or KG engines are displayed for the matched intent from the utterance. Note that the scores are given only if the engine detects the intent, which means that you may not see the scores from all three engines at all times.</li>
+<li>
+<p><strong>Matched Intent’s Score</strong> – For False Positives and False Negatives, the confidence scores from FM, ML, and/or KG engines are displayed for the matched intent from the utterance. Note that the scores are given only if the engine detects the intent, which means that you may not see the scores from all three engines at all times.</p>
+</li>
 <li><strong>Expected Intent’s Score</strong> – For False Positives, the confidence scores for the intent expected to match for the given utterance is given. Again the score will be given by the engines detecting the intent.</li>
 </ul>
 <div class="admonition tip">
