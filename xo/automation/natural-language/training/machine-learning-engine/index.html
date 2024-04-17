@@ -13088,20 +13088,24 @@
 <li>From the left menu, select the <strong>Natural Language &gt; Training</strong> option.</li>
 <li>By default, the tab with a list of all <strong>Intents</strong> would be displayed.</li>
 <li>You can use the filter option to restrict the display items to <strong>Dialog Intents, Sub Intent Dialogs</strong> or <strong>Sub-Intents</strong>. You can also choose to <strong>Include Hidden Tasks</strong>. </li>
-<li>Click <strong>Utterances &gt; + Utterance</strong> against the Intent for which you want to add the utterances. </li>
-</ol>
+<li>
+<p>Click <strong>Utterances &gt; + Utterance</strong> against the Intent for which you want to add the utterances. </p>
 <p><a class="glightbox" href="../images/add-utterances-click.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-utterances-click.png" alt="add utterance" title="add utterance" style="border: 1px solid gray; zoom:75%;"></a></p>
-<ol>
-<li>The user utterance page opens.</li>
-</ol>
+</li>
+<li>
+<p>The user utterance page opens.</p>
 <p>Here is where you can enter the utterances. </p>
-<p>!!! Note</p>
-<div class="language-text highlight"><pre><span></span><code>   Utterances greater than 3,000 characters in length are not allowed.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Utterances greater than 3,000 characters in length are not allowed.</p>
+</div>
 <p><a class="glightbox" href="../images/enter-utterance.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/enter-utterance.png" alt="enter utterance value" title="enter utterance value" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>!!! Note</p>
-<div class="language-text highlight"><pre><span></span><code>   Utterances should be unique, but in the case of multiple intent models, the same utterance can be used across different models. Read more about multiple intent models below.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Utterances should be unique, but in the case of multiple intent models, the same utterance can be used across different models. Read more about multiple intent models below.</p>
+</div>
+</li>
+</ol>
 <p>The negation of trained intents will be ignored by the Platform.</p>
 <p>For example, consider a Travel Assistant trained on the <em>Book a Flight</em> utterance. A user might say: <em>Your app takes me to the booking screen, but I don’t want to book a flight.</em> In this case, the <em>Book a Flight</em> intent will not trigger.</p>
 <h4 id="adding-entities-for-named-entity-recognition">Adding Entities for Named Entity Recognition<a class="headerlink" href="#adding-entities-for-named-entity-recognition" title="Permanent link">&para;</a></h4>
@@ -13210,12 +13214,16 @@
 <li><strong>MLP-WordEmbeddings</strong> – Word embedding is the collective name for a set of language modeling and feature learning techniques in natural language processing where words or phrases from the vocabulary are mapped to vectors of real numbers.</li>
 <li><strong>LSTM</strong> (Long Short-Term Memory) is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. LSTM has feedback connections and hence has the ability to capture long-term dependencies for texts of any length and is well suited for longer texts.</li>
 <li><strong>CNN</strong> (convolutional neural networks) is a class of deep neural networks in deep learning most commonly applied to analyzing visual imagery. It makes use of the word order for a specific region size and has achieved remarkable results on various text classification tasks.</li>
-<li><strong>Transformers</strong> use a Universal Sentence encoder in the vectorization stage of the Training pipeline. The output of the sentence encoder is fed to a Multi-Layer perceptron network for training. SentenceEncoder has an inbuilt capability of understanding the semantic similarity between sentences taking into account the synonyms and various usage patterns of the same sentence. </li>
+<li>
+<p><strong>Transformers</strong> use a Universal Sentence encoder in the vectorization stage of the Training pipeline. The output of the sentence encoder is fed to a Multi-Layer perceptron network for training. SentenceEncoder has an inbuilt capability of understanding the semantic similarity between sentences taking into account the synonyms and various usage patterns of the same sentence. </p>
+<p>The Universal Sentence Encoder encodes text into high-dimensional vectors that can be used for text classification, semantic similarity, clustering, and other natural language tasks. The model is trained and optimized for greater-than-word length text, such as sentences, phrases, or short paragraphs. It is trained on a variety of data sources and a variety of tasks with the aim of dynamically accommodating a wide variety of natural language understanding tasks. The input is the variable-length English text and the output is a 512-dimensional vector.</p>
+</li>
+<li>
+<p><strong>KAEN</strong> (Kore Advanced Embeddings Network) – Models trained with Sentence Embeddings alone can not understand the domain-specific terminology especially if the words from training are non-dictionary words. Kore.ai provides a model which can understand the meaning of the sentence and at the same time give importance to the domain-specific terminology. There are two parallel layers in work in this model – one to optimize the weights against the sentence embeddings and the other to optimize the word importance for a given sentence.  The activation function used for these two layers is RReLU (Randomized Leaky Rectified Linear Unit, <a href="https://arxiv.org/pdf/1505.00853.pdf" target="_blank">Learn more</a>).</p>
+</li>
+<li><strong>Zero-Shot Model with OpenAI</strong>: Helps define descriptive intents that the VA identifies in the user utterance based on semantic similarity without requiring training data.</li>
+<li><strong>Few-shot Model (Kore.ai Hosted Embeddings)</strong>: Helps define more number of granular intents that describe the user’s intention in the utterance more accurately with limited training requirement.</li>
 </ul>
-<p>The Universal Sentence Encoder encodes text into high-dimensional vectors that can be used for text classification, semantic similarity, clustering, and other natural language tasks. The model is trained and optimized for greater-than-word length text, such as sentences, phrases, or short paragraphs. It is trained on a variety of data sources and a variety of tasks with the aim of dynamically accommodating a wide variety of natural language understanding tasks. The input is the variable-length English text and the output is a 512-dimensional vector.
-* <strong>KAEN</strong> (Kore Advanced Embeddings Network) – Models trained with Sentence Embeddings alone can not understand the domain-specific terminology especially if the words from training are non-dictionary words. Kore.ai provides a model which can understand the meaning of the sentence and at the same time give importance to the domain-specific terminology. There are two parallel layers in work in this model – one to optimize the weights against the sentence embeddings and the other to optimize the word importance for a given sentence.  The activation function used for these two layers is RReLU (Randomized Leaky Rectified Linear Unit, <a href="https://arxiv.org/pdf/1505.00853.pdf" target="_blank">Learn more</a>.
-* <strong>Zero-Shot Model with OpenAI</strong>: Helps define descriptive intents that the VA identifies in the user utterance based on semantic similarity without requiring training data.
-* <strong>Few-shot Model (Kore.ai Hosted Embeddings)</strong>: Helps define more number of granular intents that describe the user’s intention in the utterance more accurately with limited training requirement.</p>
 <h3 id="zero-shot-learning-model-with-openai">Zero-Shot Learning Model with OpenAI<a class="headerlink" href="#zero-shot-learning-model-with-openai" title="Permanent link">&para;</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -13401,9 +13409,9 @@
 <p><strong>Enable the Few-Shot Network Type</strong></p>
 <p>To enable the <strong>FSL</strong> model, follow the steps below:</p>
 <ol>
-<li>Navigate to <strong>Natural Language</strong> &gt; <strong>NLU Config</strong> &gt; <strong>Machine Learning</strong>.</li>
+<li>Navigate to <strong>Natural Language &gt; NLU Config</strong>.</li>
 <li>
-<p>Select <strong><em>Few-Shot Model (Kore.ai Hosted Embeddings)</em></strong> in the dropdown list for <strong>Network Type</strong>, and click <strong>Save</strong>.</p>
+<p>Under <strong>Machine Learning</strong> in the <strong>Engine Tuning</strong> tab Select <strong><em>Few-Shot Model (Kore.ai Hosted Embeddings)</em></strong> in the dropdown list for <strong>Network Type</strong>, and Confirm.</p>
 <p><a class="glightbox" href="../images/enable-few-shot-model-option.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/enable-few-shot-model-option.png" alt="enable Few-shot model" title="enable Few-shot model" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
@@ -13419,7 +13427,9 @@
 <li>Click the trait you want to configure from the list. Otherwise, add a new trait by clicking <strong>Add Traits</strong>.</li>
 <li>In the resulting window, click <strong>Manage</strong> to view the <strong>Manage Traits</strong> panel.</li>
 <li>
-<p>The system selects <strong>Few-shot Model (Kore.ai Hosted Embeddings)</strong> by default as the Network Type, and the following settings appear:i. <strong>ML Threshold</strong> is set to the default value 0.5.ii. The <strong>Feature Extraction</strong> and <strong>Sequence Length</strong> options available for Standard Models don’t appear as they’re not applicable.</p>
+<p>The system selects <strong>Few-shot Model (Kore.ai Hosted Embeddings)</strong> by default as the Network Type, and the following settings appear:</p>
+<p>i. <strong>ML Threshold</strong> is set to the default value 0.5.
+ii. The <strong>Feature Extraction</strong> and <strong>Sequence Length</strong> options available for Standard Models don’t appear as they’re not applicable.</p>
 <p><a class="glightbox" href="../images/Few-shot-trait-selection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Few-shot-trait-selection.png" alt="Few-shot traits selection" title="Few-shot traits selection" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
@@ -13429,7 +13439,7 @@
 <p>When the <strong>User utterance</strong> is “<em>Check my a/c balance</em>,” the <strong>Training data</strong> matched is “<em>Check my account balance</em>.”</p>
 <p>In this case, MPNET provides a high score (ML Threshold and ML Definitive scores) where the intent/entity/question is understood by the Virtual Assistant and matched to the training data. This support is helpful for migrating the solution-specific bots to the LLM approach.</p>
 <p><strong>Enabling Bot Synonyms</strong></p>
-<p>On the Platform, you can use Bot Synonyms as part of the Few-shot model by enabling the <strong>Bot Synonyms</strong> option in the <strong>Bot Level Intent Model Configurations</strong> window (after selecting the <strong>Few-Shot Model (Kore.ai Hosted Embeddings)</strong> Network Type under <strong>Natural Language &gt; NLU Config</strong>).</p>
+<p>On the Platform, you can use Bot Synonyms as part of the Few-shot model by enabling the <strong>Bot Synonyms</strong> option within <strong>Engine Tuning &gt; Machine Learning</strong> window (after selecting the <strong>Few-Shot Model (Kore.ai Hosted Embeddings)</strong> Network Type under <strong>Natural Language &gt; NLU Config</strong>).</p>
 <p><a class="glightbox" href="../images/bot-synonyms-few-shot-model.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-synonyms-few-shot-model.png" alt="Few-shot bot synonyms" title="Few-shot bot synonyms" style="border: 1px solid gray; zoom:75%;"></a></p>
 <p>When the <strong>Bot Synonyms</strong> option is enabled, the following happens:</p>
 <ul>
@@ -13438,7 +13448,7 @@
 <li>The modified sentence is used for intent identification (generation of embedding as well as similarity checks).</li>
 </ul>
 <h3 id="nlu-language-selection">NLU Language Selection<a class="headerlink" href="#nlu-language-selection" title="Permanent link">&para;</a></h3>
-<p>When you select the <strong>Zero-shot Model with OpenAI</strong> or <strong>Few-shot Model</strong> Network Types to train the intent models (on the <strong><em>Bot Level Intent Model Configurations</em></strong> page), you must ensure that the NLU Language enabled is <strong><em>English</em></strong> (default) under <strong>Configurations</strong> &gt; <strong>Languages</strong>.</p>
+<p>When you select the <strong>Zero-shot Model with OpenAI</strong> or <strong>Few-shot Model</strong> Network Types to train the intent models (on the <strong><em>Engine Tuning &gt; Machine Learning</em></strong> page), you must ensure that the NLU Language enabled is <strong><em>English</em></strong> (default) under <strong>Configurations</strong> &gt; <strong>Languages</strong>.</p>
 <p>If you enable another language, the system does not allow selecting these two network types, and displays an error message as shown below:</p>
 <p><a class="glightbox" href="../images/nlu-non-english-language-selection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/nlu-non-english-language-selection.png" alt="nlu non-english language selection" title="nlu non-english language selection" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h3 id="ml-threshold">ML Threshold<a class="headerlink" href="#ml-threshold" title="Permanent link">&para;</a></h3>
