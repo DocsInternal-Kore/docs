@@ -12638,137 +12638,122 @@
 <ol>
 <li>
 <p>Click <strong>Configure SIP Transfer</strong>.
-<a class="glightbox" href="../images/add-start-flow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-start-flow.png" alt="Add Start Flow" title="Add Start Flow" style="border: 1px solid gray; zoom:100%;"></a></p>
+<a class="glightbox" href="../images/configure-sip-transfer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-sip-transfer.png" alt="Configure SIP Transfer" title="Configure SIP Transfer" style="border: 1px solid gray; zoom:100%;"></a></p>
 </li>
 <li>
 <p>On the <strong>Transfer from IVR</strong> page, configure the following:</p>
 <ol>
-<li><strong>SIP URI</strong>: This is a preconfigured field.</li>
-<li><strong>Network</strong>: To configure the Network, you can select one of the following:<ol>
-<li>Under <strong>List of IP Address</strong>, type the values for Incoming IP Address in the textbox. \</li>
+<li><strong>SIP URI</strong>: This is a pre-configured field.</li>
+<li>
+<p><strong>Network</strong>: To configure the Network, you can select one of the following:</p>
+<ol>
+<li>
+<p>Under <strong>List of IP Address</strong>, type the values for Incoming IP Address in the textbox.
+<a class="glightbox" href="../images/sip-transfer-setup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/sip-transfer-setup.png" alt="SIP Transfer Setup" title="SIP Transfer Setup" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>Under <strong>Domain Name</strong>, provide the following:</p>
+<ol>
+<li><strong>Fully Qualified Domain Name</strong>: The domain name specifies all domain levels, including the top-level domain and the root zone.</li>
+<li><strong>DNS Resolve Method</strong> (Optional): Select an option from the list to translate IP addresses to domain names for resolution when the hostname is associated with multiple IP addresses. You can choose A-record, SRV, NAPTR, or MS-SYNC.
+<a class="glightbox" href="../images/dns-resolve-method.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dns-resolve-method.png" alt="DNS Resolve Method" title="DNS Resolve Method" style="border: 1px solid gray; zoom:100%;"></a></li>
 </ol>
 </li>
 </ol>
 </li>
+<li>
+<p>Under <strong>Direct Inward Dialing (DID) number</strong>, you can enable virtual phone numbers (SIP trunk numbers) from which calls will be routed to the existing telephone lines.</p>
+</li>
+<li>Select an option from the list for <strong>SIP Transport Type</strong>. This field will set a protocol to route SIP traffic to servers and other endpoints. The available options are <em>TCP</em>, <em>UDF</em>, and <em>TLS</em>.</li>
+<li>(Optional) Set the <strong>SIP Credentials</strong> (username and password) to access your SIP transfer setup account.</li>
+<li>
+<p>Click <strong>Next</strong>.
+<a class="glightbox" href="../images/did-number.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/did-number.png" alt="DID Number" title="DID Number" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>On the <strong>Forward to Phone Number</strong> window, reserve the phone numbers for <strong>Inbound Calls</strong>, <strong>Outbound Calls</strong>, or both by selecting the appropriate options.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.
+<a class="glightbox" href="../images/reserve-number.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/reserve-number.png" alt="Reserve Number" title="Reserve Number" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>The selected information appears on the Channels page.
+<a class="glightbox" href="../images/sip-numbers-added.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/sip-numbers-added.png" alt="SIP Numbers Added" title="SIP Numbers Added" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
 </ol>
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image15.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>    2. Under **Domain Name**, provide the following:
-3. **Fully Qualified Domain Name**: The domain name specifies all domain levels, including the top-level domain and the root zone.
-4. **DNS Resolve Method** (Optional): Select an option from the list to translate IP addresses to domain names for resolution when the hostname is associated with multiple IP addresses. You can choose A-record, SRV, NAPTR, or MS-SYNC. \
-</code></pre></div>
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image16.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image16.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>5. Under **Direct Inward Dialing (DID) number**, you can enable virtual phone numbers (SIP trunk numbers) from which calls will be routed to the existing telephone lines.
-6. Select an option from the list for **SIP Transport Type**. This field will set a protocol to route SIP traffic to servers and other endpoints. The available options are _TCP, UDF_, and _TLS_.
-7. (Optional) Set the **SIP Credentials** (username and password) to access your SIP transfer setup account.
-8. Click **Next**. \
-</code></pre></div>
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image17.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image17.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>9. On the **Forward to Phone Number** window, reserve the phone numbers for **Inbound Calls**, **Outbound Calls**, or both by selecting the appropriate options.
-10. Click **Save**. \
-</code></pre></div>
-<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image18.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image18.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>11. The selected information appears on the Channels page. \
-</code></pre></div>
-<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image19.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image19.png" title="image_tooltip" /></a></p>
+</li>
+</ol>
 <h3 id="attach-flow_1">Attach Flow<a class="headerlink" href="#attach-flow_1" title="Permanent link">&para;</a></h3>
 <p>Steps to attach a flow to the SIP Number:</p>
 <ol>
-<li>Click <strong>+ Attach Flow</strong>. Hovering over the link icon displays “<strong>No Flow Attached”</strong>. \</li>
+<li>
+<p>Click <strong>+ Attach Flow</strong>. Hovering over the link icon displays "<strong>No Flow Attached</strong>".
+<a class="glightbox" href="../images/attach-flow-sip.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/attach-flow-sip.png" alt="Attach FLows SIP" title="Attach Flows SIP" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>Select a <strong>Start Flow</strong> to add to individual numbers and click <strong>Done</strong>. You can add a start flow by clicking <strong>+ New Start Flow</strong>. <a href="https://docs.kore.ai/smartassist/experience-flows/create-experience-flows/#Experience_Flow_Types">Learn more</a>.</p>
+</li>
+<li>
+<p>The attached flows appear. A pie icon appears below the attached flows. Hovering over the pie icon displays "<strong>Configured</strong>".
+<a class="glightbox" href="../images/flow-attached-sip.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/flow-attached-sip.png" alt="FLows Attached SIP" title="Flows Attached SIP" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
 </ol>
-<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image20.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image20.png" title="image_tooltip" /></a></p>
-<ol>
-<li>Select a <strong>Start Flow</strong> to add to individual numbers and click <strong>Done</strong>. You can add a start flow by clicking <strong>+ New Start Flow</strong>. Learn more. \</li>
-</ol>
-<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image21.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image21.png" title="image_tooltip" /></a></p>
-<ol>
-<li>The attached flows appear. A pie icon appears below the attached flows. Hovering over the pie icon displays “<strong>Configured</strong>”. \</li>
-</ol>
-<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image22.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image22.png" title="image_tooltip" /></a></p>
 <h3 id="edit-a-sip-number">Edit a SIP Number<a class="headerlink" href="#edit-a-sip-number" title="Permanent link">&para;</a></h3>
 <p>Steps to edit a previously added SIP number:</p>
 <ol>
-<li>Click the ellipsis (<strong>︙</strong>) and select <strong>Update</strong>. \</li>
-</ol>
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image23.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image23.png" title="image_tooltip" /></a></p>
-<ol>
-<li>Make the necessary changes on the Transfer from IVR page, and click <strong>Next</strong>. \</li>
-</ol>
-<p id="gdcalert24" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image24.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert25">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image24.png" title="image_tooltip" /></a></p>
-<ol>
-<li>Make the necessary changes on the Forward to Phone Number page, and click <strong>Save</strong>. \</li>
-</ol>
-<p id="gdcalert25" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image25.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert26">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image25.png" title="image_tooltip" /></a></p>
-<ol>
-<li>A success confirmation message is displayed when the phone number is updated.</li>
+<li>
+<p>Click the ellipsis (<strong>︙</strong>) and select <strong>Update</strong>.<br />
+<a class="glightbox" href="../images/update-sip-number.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-sip-number.png" alt="Update Button SIP Number" title="Update Button SIP Number" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>Make the necessary changes on the Transfer from IVR page, and click <strong>Next</strong>.
+<a class="glightbox" href="../images/edit-sip-transfer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/edit-sip-transfer.png" alt="Edit SIP Number" title="Edit Button SIP Number" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>Make the necessary changes on the Forward to Phone Number page, and click <strong>Save</strong>.
+<a class="glightbox" href="../images/edit-forward-to-phone-number-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/edit-forward-to-phone-number-page.png" alt="Edit Forward to Phone Number" title="Edit Forward to Phone Number" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>A success confirmation message is displayed when the phone number is updated.</p>
+</li>
 </ol>
 <h3 id="delete-a-sip-number">Delete a SIP Number<a class="headerlink" href="#delete-a-sip-number" title="Permanent link">&para;</a></h3>
 <p>Deleting a SIP number means stopping all services associated with it.</p>
 <p>Steps to delete a SIP number:</p>
 <ol>
-<li>Click the ellipsis (<strong>︙</strong>) and select <strong>Delete</strong>. \</li>
-</ol>
-<p id="gdcalert26" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image26.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert27">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image26.png" title="image_tooltip" /></a></p>
-<ol>
-<li>The following pop-up is displayed. Click <strong>Delete</strong> to confirm your choice. \</li>
-</ol>
-<p id="gdcalert27" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image27.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert28">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image27.png" title="image_tooltip" /></a></p>
-<ol>
-<li>The sip number is deleted.</li>
+<li>
+<p>Click the ellipsis (<strong>︙</strong>) and select <strong>Delete</strong>.<br />
+<a class="glightbox" href="../images/delete-sip-number.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/delete-sip-number.png" alt="Delete Button SIP" title="Delete Button SIP" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>The following pop-up is displayed. Click <strong>Delete</strong> to confirm your choice.
+<a class="glightbox" href="../images/delete-confirmation-sip.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/delete-confirmation-sip.png" alt="Delete SIP Number" title="Delete SIP Number" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>The sip number is deleted.</p>
+</li>
 </ol>
 <h2 id="voice-preferences">Voice Preferences<a class="headerlink" href="#voice-preferences" title="Permanent link">&para;</a></h2>
-<p>You can configure the voice preferences to personalize the ASR Engine and the voice that plays for your TTS conversions by going to the Voice Preferences tab and clicking <strong>Manage</strong>.</p>
-<p id="gdcalert28" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image28.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert29">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image28.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image28.png" title="image_tooltip" /></a></p>
+<p>You can configure the voice preferences to personalize the ASR Engine and the voice that plays for your TTS conversions by going to the Voice Preferences tab and clicking <strong>Manage</strong>.
+<a class="glightbox" href="../images/voice-preferences.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/voice-preferences.png" alt="Voice Preferences" title="Voice Preferences" style="border: 1px solid gray; zoom:100%;"></a></p>
 <h3 id="text-to-speech-engine">Text-to-Speech Engine<a class="headerlink" href="#text-to-speech-engine" title="Permanent link">&para;</a></h3>
 <p>Steps to configure the TTS engine:</p>
 <ol>
 <li>In the Voice Preferences window, select a text-to-speech engine: Google Cloud Text-to-Speech, Microsoft Azure Speech Services, or AWS Amazon Polly.</li>
-<li>Enter <strong>Sample Text</strong> to preview your voice selection. You can play, navigate through the audio (Back/Forward), and adjust the preview volume. Clicking the More Options (⋮) button reveals options to change the <strong>Playback Speed</strong> and <strong>Download</strong> the voice preview.</li>
+<li>Enter <strong>Sample Text</strong> to preview your voice selection. You can play, navigate through the audio (Back/Forward), and adjust the preview volume. Clicking the More Options (<strong>⋮</strong>) button reveals options to change the <strong>Playback Speed</strong> and <strong>Download</strong> the voice preview.</li>
 <li>Click the <strong>Play</strong> button next to any available voice to preview it. Voices are available for all TTS engines, but each has its voice options.</li>
-<li>Select a different Voice Language if required. \</li>
+<li>Select a different Voice Language if required.
+<a class="glightbox" href="../images/tts-engine.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/tts-engine.gif" alt="TTS Engine" title="TTS Engine" style="border: 1px solid gray; zoom:100%;"></a></li>
 </ol>
-<p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image29.gif). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image29.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image29.gif" title="image_tooltip" /></a>
- \</p>
 <h3 id="automated-speech-recognition-engine">Automated Speech Recognition Engine<a class="headerlink" href="#automated-speech-recognition-engine" title="Permanent link">&para;</a></h3>
 <p>Steps to configure the ASR Engine:</p>
 <ol>
-<li>Select an <strong>Automated Speech Recognition Engine</strong>: Google Cloud Speech-to-Text, Microsoft Azure Speech Services, AmiVoice, or NVIDIA Riva. </li>
-<li>Select the Dialect and click <strong>Done</strong> once you have completed configuring your voice preferences. \</li>
+<li>Select an <strong>Automated Speech Recognition Engine</strong>: Google Cloud Speech-to-Text, Microsoft Azure Speech Services, AmiVoice, or NVIDIA Riva.</li>
+<li>Select the Dialect and click <strong>Done</strong> once you have completed configuring your voice preferences.
+<a class="glightbox" href="../images/asr-engine.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/asr-engine.png" alt="ASR Engine" title="ASR Engine" style="border: 1px solid gray; zoom:100%;"></a></li>
 </ol>
-<p id="gdcalert30" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image30.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert31">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image30.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image30.png" title="image_tooltip" /></a>
- \
-The set voice, language, and dialect apply to automated customer responses that use text-to-speech.</p>
+<p>The set voice, language, and dialect apply to automated customer responses that use text-to-speech.</p>
 <h4 id="list-of-supported-dialects">List of Supported Dialects<a class="headerlink" href="#list-of-supported-dialects" title="Permanent link">&para;</a></h4>
 <p>The following dialects are supported:</p>
 <table>
@@ -12824,74 +12809,52 @@ The set voice, language, and dialect apply to automated customer responses that 
 
 <h2 id="voice-call-properties">Voice Call Properties<a class="headerlink" href="#voice-call-properties" title="Permanent link">&para;</a></h2>
 <p>Voice call properties are fundamental aspects that define the quality and reliability of communication over Kore.ai Voice Gateway. These properties include End of Task Behavior, Event Configuration, Call Termination Handler, Call Control Parameters, Timeout Prompt, Barge-in, Timeout, and No. of Retries, which collectively determine the user experience during a voice call. Configuring these properties is crucial for ensuring seamless and effective voice communication over network infrastructures.</p>
-<p>You can configure the voice call properties by going to the Voice Preferences tab and clicking <strong>Configure</strong> on the **Voice Call Properties **section. \</p>
-<p id="gdcalert31" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image31.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert32">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image31.png" title="image_tooltip" /></a></p>
-<p>The Voice Call Properties window is displayed. \</p>
-<p id="gdcalert32" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image32.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert33">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image32.png" title="image_tooltip" /></a></p>
+<p>You can configure the voice call properties by going to the Voice Preferences tab and clicking <strong>Configure</strong> on the <strong>Voice Call Properties</strong> section.
+<a class="glightbox" href="../images/configure-voice-call-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configure-voice-call-properties.png" alt="Configure Voice Call Properties" title="Configure Voice Call Properties" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p>The Voice Call Properties window is displayed.
+<a class="glightbox" href="../images/voice-call-properties-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/voice-call-properties-window.png" alt="Voice Call Properties Window" title="Voice Call Properties Window" style="border: 1px solid gray; zoom:100%;"></a></p>
 <h3 id="end-of-task-behavior">End of Task Behavior<a class="headerlink" href="#end-of-task-behavior" title="Permanent link">&para;</a></h3>
 <p>Define the bot's behavior when reaching the end of a task. You can choose the following actions:</p>
 <ul>
 <li>Trigger End of Task Event</li>
-<li>Terminate Call \</li>
+<li>Terminate Call
+<a class="glightbox" href="../images/end-of-task-behavior.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/end-of-task-behavior.png" alt="End of Task Behavior" title="End of Task Behavior" style="border: 1px solid gray; zoom:100%;"></a></li>
 </ul>
-<p id="gdcalert33" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image33.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert34">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image33.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image33.png" title="image_tooltip" /></a></p>
 <h3 id="event-configuration">Event Configuration<a class="headerlink" href="#event-configuration" title="Permanent link">&para;</a></h3>
 <p>Define how to proceed when this event is detected. You can choose the following actions:</p>
 <ul>
-<li><strong>Initiate Task</strong>: Select a task from the dropdown menu to be initiated when the event is detected. \</li>
+<li>
+<p><strong>Initiate Task</strong>: Select a task from the dropdown menu to be initiated when the event is detected.
+<a class="glightbox" href="../images/initiate-task.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/initiate-task.png" alt="Initiate Task" title="Initiate Task" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p><strong>Run Script</strong>: Enter the script to be run when the event is detected.
+<a class="glightbox" href="../images/run-script.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/run-script.png" alt="Run Script" title="Run Script" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p><strong>Show Message</strong>: Click <strong>+ Add Response</strong>, enter the message to be displayed when the event is detected, and click <strong>Done</strong>.
+<a class="glightbox" href="../images/add-response.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-response.png" alt="Add Response" title="Add Response" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
 </ul>
-<p id="gdcalert34" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image34.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert35">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image34.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image34.png" title="image_tooltip" /></a></p>
-<ul>
-<li><strong>Run Script</strong>: Enter the script to be run when the event is detected.</li>
-</ul>
-<p id="gdcalert35" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image35.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert36">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image35.png" title="image_tooltip" /></a></p>
-<ul>
-<li><strong>Show Message</strong>: Click <strong>+ Add Response</strong>, enter the message to be displayed when the event is detected, and click <strong>Done</strong>. \</li>
-</ul>
-<p id="gdcalert36" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image36.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert37">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image36.png" title="image_tooltip" /></a></p>
 <h3 id="call-termination-handler">Call Termination Handler<a class="headerlink" href="#call-termination-handler" title="Permanent link">&para;</a></h3>
-<p>Specify the intent (dialog) to handle the call termination event from the dropdown. \</p>
-<p id="gdcalert37" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image37.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert38">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image37.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image37.png" title="image_tooltip" /></a></p>
+<p>Specify the intent (dialog) to handle the call termination event from the dropdown.
+<a class="glightbox" href="../images/call-termination-handler.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/call-termination-handler.png" alt="Call Termination Handler" title="Call Termination Handler" style="border: 1px solid gray; zoom:100%;"></a></p>
 <h3 id="call-control-parameters">Call Control Parameters<a class="headerlink" href="#call-control-parameters" title="Permanent link">&para;</a></h3>
-<p>Define the parameters to control the call behavior. Click <strong>Add Parameter</strong>, enter the <strong>Parameter Name</strong> and <strong>Value</strong>, and click <strong>Save</strong>. \</p>
-<p id="gdcalert38" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image38.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert39">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image38.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image38.png" title="image_tooltip" /></a></p>
+<p>Define the parameters to control the call behavior. Click <strong>Add Parameter</strong>, enter the <strong>Parameter Name</strong> and <strong>Value</strong>, and click <strong>Save</strong>.
+<a class="glightbox" href="../images/add-parameter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-parameter.png" alt="Add Parameter" title="Add Parameter" style="border: 1px solid gray; zoom:100%;"></a></p>
 <h3 id="timeout-prompt">Timeout Prompt<a class="headerlink" href="#timeout-prompt" title="Permanent link">&para;</a></h3>
-<p>Define prompt to be played when user input is not received within the time-out period. \</p>
-<p id="gdcalert39" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image39.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert40">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image39.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image39.png" title="image_tooltip" /></a></p>
+<p>Define prompt to be played when user input is not received within the time-out period.
+<a class="glightbox" href="../images/timeout-prompt.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/timeout-prompt.png" alt="Timeout Prompt" title="Timeout Prompt" style="border: 1px solid gray; zoom:100%;"></a></p>
 <h3 id="barge-in">Barge-in<a class="headerlink" href="#barge-in" title="Permanent link">&para;</a></h3>
-<p>Define whether user input will be allowed while a prompt is in progress. By default, this option is disabled. \</p>
-<p id="gdcalert40" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image40.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert41">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image40.png" title="image_tooltip" /></a></p>
+<p>Define whether user input will be allowed while a prompt is in progress. By default, this option is disabled.
+<a class="glightbox" href="../images/barge-in.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/barge-in.png" alt="Barge In" title="Barge In" style="border: 1px solid gray; zoom:100%;"></a></p>
 <h3 id="timeout">Timeout<a class="headerlink" href="#timeout" title="Permanent link">&para;</a></h3>
-<p>Define the maximum wait time to receive user input. The maximum wait time is 60 seconds. \</p>
-<p id="gdcalert41" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image41.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert42">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image41.png" title="image_tooltip" /></a></p>
+<p>Define the maximum wait time to receive user input. The maximum wait time is 60 seconds.
+<a class="glightbox" href="../images/timeout.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/timeout.png" alt="Timeout" title="Timeout" style="border: 1px solid gray; zoom:100%;"></a></p>
 <h3 id="no-of-retries">No. of Retries<a class="headerlink" href="#no-of-retries" title="Permanent link">&para;</a></h3>
-<p>Define the maximum number of retries allowed.</p>
-<p id="gdcalert42" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image42.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert43">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image42.png" title="image_tooltip" /></a></p>
-<p>Click <strong>Save</strong>. A success message is displayed, and the voice call properties are saved. </p>
+<p>Define the maximum number of retries allowed.
+<a class="glightbox" href="../images/no-of-retries.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/no-of-retries.png" alt="No.of Retries" title="No.of Retries" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p>Click <strong>Save</strong>. A success message is displayed, and the voice call properties are saved.</p>
 
 
 
