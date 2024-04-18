@@ -12319,8 +12319,8 @@
 <p>Conditions allow you to set the parameters based on which the digit input is recorded. Click the <strong>Condition</strong> icon to define the input conditions by providing values for the following fields:</p>
 <ul>
 <li><strong>Maximum length of digit</strong>: Define the limit for the number of digits a caller can input, after which the conditional message is played.</li>
-<li><strong>Ending Keypress</strong>: Define the key to delimit or indicate the end of the caller’s input. For example, when “#” is pressed, it indicates that the caller has completed keying in their input.</li>
-<li>Define the <strong>On success</strong> flow by selecting a node from the <strong>Go to node</strong> dropdown list. If the condition is satisfied, the flow is directed to the selected node from the current node.
+<li><strong>Ending Keypress</strong>: Define the key to delimit or indicate the end of the caller’s input. For example, when “<strong>#</strong>” is pressed, it indicates that the caller has completed keying in their input.</li>
+<li>Define the <strong>On success</strong> flow by selecting a node from the <strong>Go to node</strong> dropdown list. If the condition is satisfied, the flow is directed to the selected node from the current node.<br />
 <a class="glightbox" href="./../images/condition.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/condition.png" alt="Condition" title="Condition" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ul>
 <h3 id="timeout">Timeout<a class="headerlink" href="#timeout" title="Permanent link">&para;</a></h3>
@@ -12358,14 +12358,14 @@
 <p>The Context Variable syntax is the following:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Context.steps.&lt;&lt;context_node_name&gt;&gt;
 </span></code></pre></div>
-<p>For example:</p>
+<p>For example,</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>context.steps.IVRDigitInput
 </span></code></pre></div>
 <p>To define the script task that will store the input from this IVR Digit Input node, follow these steps:</p>
 <ol>
 <li>Under the <em>IVR Digit Input</em> node, add a Script Task node.</li>
 <li>Under <strong>General Settings</strong> &gt; <strong>Define</strong> a script, add <code>steps.nodename</code>
-(For example: <code>steps.IVRDigitInput</code>).
+(For example, <code>steps.IVRDigitInput</code>).
 <a class="glightbox" href="./../images/script-task-ivr-digit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/script-task-ivr-digit.png" alt="Script Task" title="Script" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
 
