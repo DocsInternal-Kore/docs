@@ -1047,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flow-types/introduction-to-flow-nodes.md" class="md-nav__link">
+      <a href="../introduction-to-flow-nodes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12230,16 +12230,16 @@
 <ol>
 <li>A <strong>Custom Name</strong> to identify the node.</li>
 <li>Select the <strong>Integration Type</strong>: Static List or Script:<ol>
-<li>
-<p>If you select the <strong>Static List</strong>, you can configure the following: </p>
-<ol>
+<li>If you select the <strong>Static List</strong>, you can configure the following: <ol>
 <li><strong>Queue</strong>: Select the queue that you want to apply to this node.</li>
-<li><strong>Priority</strong>: Set the conversation priority within the assigned queue. Priorities range from 1 to 10, where 1 is the highest priority, and 10 is the lowest. The default value is 5 – Standard.</li>
-</ol>
+<li>
+<p><strong>Priority</strong>: Set the conversation priority within the assigned queue. Priorities range from 1 to 10, where 1 is the highest priority, and 10 is the lowest. The default value is 5 – Standard.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>With the ability to prioritize, conversations will shuffle in the queue. This means that the number in the queue and wait time calculations will change for the customer as the priority of their conversation changes. Consider this scenario if you decide to play queue positions and wait time calculations in the waiting experience.</p>
 </div>
+</li>
+</ol>
 </li>
 </ol>
 </li>
@@ -12254,13 +12254,13 @@
 </span></code></pre></div></p>
 <p>Priority should be a valid number between 0 and 10 (both are inclusive). If an Invalid priority is provided, it will be ignored, and the default Priority (5) will be set for that conversation.</p>
 <p><strong>Examples</strong>:</p>
-<p><em>agentUtils.setPriority(0); // priority of 0 (highest priority) will be set.
-agentUtils.setPriority(10); //  priority of 10 (Lowest Priority) will be set.
-agentUtils.setPriority(7); // priority of 7 will be set.</em></p>
+<p><em>agentUtils.setPriority(0); // priority of 0 (highest priority) will be set</em>.
+<em>agentUtils.setPriority(10); //  priority of 10 (Lowest Priority) will be set</em>.
+<em>agentUtils.setPriority(7); // priority of 7 will be set</em>.</p>
 <p>Under <strong>Inside working hours</strong>, select the <strong>Go to node</strong> that the node should take once it runs successfully during working hours. For this, set the node that should trigger after setting the queue.</p>
 <p>For example, if the Go to node is set to Check Agent Availability, it will check for available agents based on their working hours.</p>
 <p>Under <strong>Outside working hours</strong>, choose the <strong>Go to node</strong> that the node should take once it runs successfully outside working hours. For this, set the node that should trigger after setting the queue.</p>
-<p>For example, if the Go to node is set to CheckBusinessHours, you can set the action to a message prompt to let customers know they have called outside working hours. <a href="https://docs.kore.ai/smartassist/settings/hours-of-operation/hours-of-operation/">Learn more</a>.</p>
+<p>For example, if the Go to node is set to CheckBusinessHours, you can set the action to a message prompt to let customers know they have called outside working hours. <a href="../../../contactcenter/configurations/hours-of-operation/manage-hours-of-operation/">Learn more</a>.</p>
 <h3 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h3>
 <p>Use this section to handle system errors during customer interactions.
 <a class="glightbox" href="./../images/error-handling-set-queue.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/error-handling-set-queue.png" alt="Error Handling" title="Error Handling" style="border: 1px solid gray; zoom:70%;"></a></p>
@@ -12274,7 +12274,7 @@ agentUtils.setPriority(7); // priority of 7 will be set.</em></p>
 </li>
 <li><strong>Audio File</strong>: You can type a new message to be played to the customer in the text field or click <strong>+ Upload New</strong> to upload an audio file (.mp3 or .wav format) with the message to be played;
 <a class="glightbox" href="./../images/audio-file-set-queue.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/audio-file-set-queue.png" alt="Audio File" title="Audio File" style="border: 1px solid gray; zoom:70%;"></a></li>
-<li><strong>Link</strong>: Click <strong>+ Create New</strong> to add the text of the message you want to play to the customer and insert the URL of an audio file in .mp3 or .wav format. Click <strong>+ Add Another</strong> to add another message URL.
+<li><strong>Link</strong>: Click <strong>+ Create New</strong> to add the text of the message you want to play to the customer and insert the URL of an audio file in .mp3 or .wav format. Click <strong>+ Add Another</strong> to add another message URL.<br />
 <a class="glightbox" href="./../images/link-set-queue.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./../images/link-set-queue.png" alt="Link" title="General Settings" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ul>
 </li>
