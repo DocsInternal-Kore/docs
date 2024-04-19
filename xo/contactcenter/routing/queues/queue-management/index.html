@@ -6168,12 +6168,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#assignments" class="md-nav__link">
     <span class="md-ellipsis">
       Assignments
@@ -6216,6 +6211,11 @@
       Skills
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -12300,12 +12300,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#assignments" class="md-nav__link">
     <span class="md-ellipsis">
       Assignments
@@ -12348,6 +12343,11 @@
       Skills
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -12402,10 +12402,10 @@
 
 
 <h1 id="queues">Queues<a class="headerlink" href="#queues" title="Permanent link">&para;</a></h1>
-<p><strong>Queues</strong> are virtual, temporary waiting rooms that hold and process incoming requests for conversations between agents and customers. These are the holding areas for digital and audio conversations waiting for an agent to be assigned. </p>
+<p><strong>Queues</strong> are virtual, temporary waiting rooms that hold and process incoming requests for conversations between agents and customers. These are the holding areas for digital and audio conversations waiting for an agent to be assigned.</p>
 <p>All conversations get assigned to queues based on the agent selection logic and skill proficiency match. A conversation can only be in one queue at any given time. Once conversations get assigned to a queue, SmartAssist assigns them to agents. The agent assignment works based on pre-established rules and criteria, as shown in the illustration below:
 <a class="glightbox" href="../images/agent-assignment-criteria.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/agent-assignment-criteria.png" alt="Agent_Assignment_Criteria" title="Agent_Assignment_Criteria" style="border: 1px solid gray; zoom:80%;"></a></p>
-<p>Once a conversation comes in, it gets assigned to a queue. Afterward, the next step is to check the routing mode. </p>
+<p>Once a conversation comes in, it gets assigned to a queue. Afterward, the next step is to check the routing mode.</p>
 <p>The <strong>Simple Routing</strong> mode checks for agent skills and agent availability. After the skill and availability match, an agent gets assigned to the conversation.</p>
 <p>The <strong>Advanced Routing</strong> mode checks for preferred agents. If a queue has preferred agents configured, admins can specify a time, after which the routing extends to skill match. If a preferred agent becomes available before the configured time expires, they will have priority over agents selected via skill match.</p>
 <p>For the agent to answer the conversation, they must have a required skill attached to their profile. The conversation cannot be assigned to the agent if the skill does not match.</p>
@@ -12417,22 +12417,23 @@
 <li>Queue routing is primarily based on the highest average skill and proficiency match for a given conversation. This routing mode only considers proficiency after a skill match has occurred.</li>
 <li>If multiple agents match a skill, the routing is done based on currently utilized slots. Agents with fewer utilized slots get priority, as per proficiency thresholds. Also, agents get prioritized if more time has passed since their last conversation compared to other agents.</li>
 </ul>
-<p><strong>Advanced Routing</strong> </p>
+<p><strong>Advanced Routing</strong></p>
 <ul>
 <li>In this case, the conversation first routes to a preferred agent.</li>
 <li>For each new conversation, SmartAssist checks preferred agents (if any) for availability. During a preferred agent check, skills are ignored. If a preferred agent is not assigned and the preferred agent timeout expires, the check is expanded to the full agent list, and skills are matched to select the best available agent (according to the Simple Routing Mode).</li>
 </ul>
 <h2 id="the-queues-live-board">The Queues Live Board<a class="headerlink" href="#the-queues-live-board" title="Permanent link">&para;</a></h2>
-<p>To access <em>Queues <strong>,</strong></em> go to <strong>Contact Center &gt; ROUTING &gt; Queues</strong>.
+<p>To access <em>Queues</em>, go to <strong>Contact Center AI</strong> &gt; <strong>Queues</strong>.
 <a class="glightbox" href="../images/queues-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/queues-page.png" alt="Queues Page" title="Queues Page" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p>This section displays the following:</p>
 <ul>
-<li><strong>Search:</strong> Enter keywords to find queues by name;</li>
-<li><strong>Queue:</strong> The name and description of available queues;</li>
-<li><strong>Actions:</strong> Lists the <strong>Edit Queue</strong> option;</li>
-<li><strong>Agents:</strong> Shows the agents available for a particular queue;</li>
-<li><strong>Mode:</strong> Specifies whether the queue is set to the <strong>Simple</strong> or <strong>Advanced</strong> routing mode;</li>
-<li><strong>Status:</strong> Displays the status of the conversation, <strong>Active</strong> or <strong>Inactive</strong>.</li>
+<li><strong>Search</strong>: Enter keywords to find queues by name;</li>
+<li><strong>Queue</strong>: The name and description of available queues;</li>
+<li><strong>Actions</strong>: Lists the <strong>Edit Queue</strong> option;</li>
+<li><strong>Agents</strong>: Shows the agents available for a particular queue;</li>
+<li><strong>Mode</strong>: Specifies whether the queue is set to the <strong>Simple</strong> or <strong>Advanced</strong> routing mode;</li>
+<li><strong>ACW</strong>:  Displays the After Call Work (ACW) configuration;</li>
+<li><strong>Status</strong>: Displays the status of the conversation, <strong>Active</strong> or <strong>Inactive</strong>.</li>
 </ul>
 <h3 id="add-a-queue">Add a Queue<a class="headerlink" href="#add-a-queue" title="Permanent link">&para;</a></h3>
 <ol>
@@ -12450,50 +12451,78 @@
 <li>The <strong>Name</strong> by which to identify the queue;</li>
 <li>A short <strong>Description</strong> of the queue (optional);</li>
 <li>
-<p><strong>Hours of Operation</strong>: Select from the available <a href="https://docs.kore.ai/smartassist/settings/hours-of-operation-2/">hours of operation</a>.
+<p><strong>Hours of Operation</strong>: Select from the available <a href="../../configurations/hours-of-operation/">Hours of Operation</a>.
 <a class="glightbox" href="../images/queue-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/queue-settings.png" alt="Queue Settings" title="Queue Settings" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p><strong>Transfer Rules:</strong> This feature lets you limit the agents’ ability to transfer from one queue to another. If this feature is enabled, you can select the specific queues to which agents can transfer customers. If disabled, agents can transfer to any queue from the current one.
+<p><strong>Transfer Rules:</strong> This feature lets you limit the agents’ ability to transfer from one queue to another. If this feature is enabled, you can select the specific queues to which agents can transfer customers. If disabled, agents can transfer to any queue from the current one. Turn on the Transfer Rules toggle, select a Queue and click <strong>Done</strong>.
 <a class="glightbox" href="../images/transfer-rules.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/transfer-rules.png" alt="Transfer Rules" title="Transfer Rules" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the customer ends the chat before the completion of a transfer, then the transfer will be dropped, and the interaction will not be assigned to any queue or agent. This feature only applies to chat conversations and is available if you are using Kore WebSdk v1.0.</p>
 </div>
-<ol>
+</li>
 <li>
 <p><strong>Maximum Wait Time</strong>: Specify the maximum time a conversation should wait in the queue before the default <em>No available agent</em> flow handles it.
 <a class="glightbox" href="../images/maximum-wait-time.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/maximum-wait-time.png" alt="Maximum Wait Time" title="Maximum Wait Time" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>Enable <strong>Advanced Routing</strong>: Preferred agents and skill dropoffs will be available if you enable this option.
-<a class="glightbox" href="../images/advanced-routing.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/advanced-routing.png" alt="Advanced Routing" title="Advanced Routing" style="border: 1px solid gray; zoom:100%;"></a></p>
+<p><strong>After Call Work (ACW)</strong> You can enable or disable ACW.</p>
+<p><strong>ACW Enabled</strong></p>
+<ol>
+<li>
+<p><strong>Immediate Slot Release</strong>: The slot becomes available immediately when the conversation ends. Agents can finalize the disposition at their convenience.
+<a class="glightbox" href="../images/immediate-slot-release.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/immediate-slot-release.png" alt="Maximum Wait Time" title="Maximum Wait Time" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p><strong>Timed Slot Release</strong>: Agents are required to complete the disposition within a pre-set time duration, during which the slot will remain occupied. A default 30-second timer appears by default, which administrators can modify. The configurable time duration ranges between a minimum of 10 seconds and a maximum of 15 minutes. If the timer field is blank, an alert message is displayed to enter a timeout value ranging between 10 seconds and 15 minutes for the timed slot release.</p>
+<p>You can edit the ‘Is Required?’ and ‘Assignment’ fields for disposition sets, including the default <a href="../../../agent-and-supervisors/dispositions/manage-dispositions/#disposition-sets">disposition sets</a>. This allows existing users to switch any configured disposition set to an optional mode.
+<a class="glightbox" href="../images/timed-slot-release.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/timed-slot-release.png" alt="Maximum Wait Time" title="Maximum Wait Time" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p><strong>Indefinite Slot Release</strong>: If selected, the slot remains occupied until the agent submits the disposition.
+<a class="glightbox" href="../images/indefinite-slot-release.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/indefinite-slot-release.png" alt="Maximum Wait Time" title="Maximum Wait Time" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 </ol>
-<h2 id="assignments">Assignments<a class="headerlink" href="#assignments" title="Permanent link">&para;</a></h2>
-<p>This section is available in <em>Simple</em> and <em>Advanced Routing</em> modes and allows you to assign agents, agent groups, or both to the queue.<br />
-<a class="glightbox" href="../images/assignments.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/assignments.png" alt="Assignments" title="Assignments" style="border: 1px solid gray; zoom:70%;"></a></p>
-<h3 id="assign-agents">Assign Agents<a class="headerlink" href="#assign-agents" title="Permanent link">&para;</a></h3>
-<p>Follow these steps to assign agents to a queue: </p>
-<ol>
-<li>Click <strong>Add Agent</strong>;</li>
-<li><strong>Click the checkbox next to an agent’s name</strong> to select it. You can use the <em>Search</em> field at the top of the list to find a specific person.<br />
-<a class="glightbox" href="../images/assign-agents.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/assign-agents.gif" alt="Assign Agents" title="Assign Agents" style="border: 1px solid gray; zoom:70%;"></a></li>
+</li>
+<li>
+<p><strong>Advanced Routing</strong>: If enabled, preferred agents and skill dropoffs will be available if you enable this option.
+<a class="glightbox" href="../images/advanced-routing.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/advanced-routing.png" alt="Advanced Routing" title="Advanced Routing" style="border: 1px solid gray; zoom:100%;"></a></p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
 </ol>
-<h3 id="assign-agent-groups">Assign Agent Groups<a class="headerlink" href="#assign-agent-groups" title="Permanent link">&para;</a></h3>
+<h3 id="assignments">Assignments<a class="headerlink" href="#assignments" title="Permanent link">&para;</a></h3>
+<p>This section is available in <em>Simple</em> and <em>Advanced Routing</em> modes and allows you to assign agents, agent groups, or both to the queue.</p>
+<h4 id="assign-agents">Assign Agents<a class="headerlink" href="#assign-agents" title="Permanent link">&para;</a></h4>
+<p>Follow these steps to assign agents to a queue:</p>
 <ol>
-<li>Click <strong>Add Agent Group</strong>;</li>
-<li>Click the checkbox next to the name of a group to select it. You can use the <em>Search</em> field at the top of the list to find a specific group.
-<a class="glightbox" href="../images/assign-agent-groups.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/assign-agent-groups.png" alt="Assign Agent Groups" title="Assign Agent Groups" style="border: 1px solid gray; zoom:70%;"></a></li>
+<li>
+<p>Click <strong>Add Agent</strong>;
+<a class="glightbox" href="../images/add-agent-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-agent-button.png" alt="Add Agent Button" title="Add Agent Button" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click the checkbox next to an agent’s name to select it and click <strong>Done</strong>. You can use the <em>Search</em> field at the top of the list to find a specific person.<br />
+<a class="glightbox" href="../images/agent-name-select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/agent-name-select.png" alt="Assign Agents" title="Assign Agents" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
 </ol>
+<h4 id="assign-agent-groups">Assign Agent Groups<a class="headerlink" href="#assign-agent-groups" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Click <strong>Add Agent Group</strong>;
+<a class="glightbox" href="../images/add-agent-group-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-agent-group-button.png" alt="Add Agent Group Button" title="Assign Agent Group Button" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>Click the checkbox next to the name of a group to select it and click <strong>Done</strong>. You can use the <em>Search</em> field at the top of the list to find a specific group.
+<a class="glightbox" href="../images/assign-agent-groups.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/assign-agent-groups.png" alt="Assign Agent Group" title="Add Agent Group" style="border: 1px solid gray; zoom:70%;"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Agents from the agent group are not displayed in the agent’s list. The list of agents added to the queue is displayed, along with the agent groups that are part of the queue.</p>
 </div>
-<p>From the monitor screen, you can see the consolidated list of agents that are part of the queue.</p>
-<h3 id="preferred-agents">Preferred Agents<a class="headerlink" href="#preferred-agents" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<h4 id="preferred-agents">Preferred Agents<a class="headerlink" href="#preferred-agents" title="Permanent link">&para;</a></h4>
 <p>In the <strong>Preferred</strong> tab, you can assign preferred agents to the queue.</p>
 <ol>
 <li>
@@ -12505,19 +12534,19 @@
 <a class="glightbox" href="../images/advanced-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/advanced-settings.png" alt="Advanced Settings" title="Advanced Settings" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 </ol>
-<h3 id="skills">Skills<a class="headerlink" href="#skills" title="Permanent link">&para;</a></h3>
+<h4 id="skills">Skills<a class="headerlink" href="#skills" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p>In the <strong>Skills</strong> <strong>tab</strong>, search for a specific skill to assign to the Queue.
-<a class="glightbox" href="../images/skills.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/skills.png" alt="Skills Tab" title="Skills Tab" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>In the <strong>Skills</strong> tab, search for a specific skill to assign to the Queue.
+<a class="glightbox" href="../images/skill-requirement-expiration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/skill-requirement-expiration.png" alt="Assign Skill" title="Assign Skill" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
 <p>Choose whether you want the skill to expire and set the time for this. Once a skill assignment expires, the conversation routes to other assigned skills.
-<a class="glightbox" href="../images/skill-requirement-expiration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/skill-requirement-expiration.png" alt="Skill Requirement Expiration" title="Skill Requirement Expiration" style="border: 1px solid gray; zoom:70%;"></a></p>
-</li>
-</ol>
+<a class="glightbox" href="../images/skill-expire-duration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/skill-expire-duration.png" alt="Skill Requirement Expiration" title="Skill Requirement Expiration" style="border: 1px solid gray; zoom:70%;"></a></p>
 <p>When you are ready to save the Queue, click <strong>Create</strong>. The new Queue is then listed among your available queues. You must configure at least the <em>Settings</em> and <em>Assignment</em> tabs to save a queue.
 <a class="glightbox" href="../images/create-queue.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/create-queue.png" alt="Create Queue" title="Create Queue" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+</ol>
 <h2 id="edit-a-queue"><strong>Edit a Queue</strong><a class="headerlink" href="#edit-a-queue" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -12533,22 +12562,22 @@
 <ol>
 <li>Click the <strong>Edit</strong> icon corresponding to the queue you want to edit.</li>
 <li>
-<p>Click the <strong>Delete (bin)</strong> button on the right of the bottom toolbar.
+<p>Click the <strong>Delete (bin)</strong> button on the bottom left side.
 <a class="glightbox" href="../images/delete-queue-button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/delete-queue-button.png" alt="Delete Queue Button" title="Delete Queue Button" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p><strong>Confirm</strong> your choice.</p>
-</li>
-</ol>
+<p>Click <strong>Delete</strong> to confirm your choice.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Deleting a queue means that all corresponding routing rules are removed.</p>
 </div>
+</li>
+</ol>
 <h2 id="assign-a-conversation-to-a-queue">Assign a Conversation to a Queue<a class="headerlink" href="#assign-a-conversation-to-a-queue" title="Permanent link">&para;</a></h2>
 <p>There are two ways to assign a conversation to a queue:</p>
 <ol>
-<li>Using the <em><a href="https://docs.kore.ai/smartassist/experience-flows/set-queue/">Set Queue</a></em> node within an experience flow.</li>
-<li>Using the <a href="https://docs.kore.ai/smartassist/utils/script-nodes-call-flows-agent-utils/#Set_Queue">agentUtils.setQueue()</a> method.</li>
+<li>Using the <a href="../../../../flows/node-types/set-queue/">Set Queue</a> node within an experience flow.</li>
+<li>Using the <a href="../../../../flows/node-types/utils/#set-queue">agentUtils.setQueue()</a> method.</li>
 </ol>
 
 
