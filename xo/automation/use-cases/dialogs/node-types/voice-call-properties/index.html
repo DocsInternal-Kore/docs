@@ -12174,17 +12174,17 @@
 <tr>
 <td>End of Conversation Behavior</td>
 <td>This property can be used to define the VA behavior at the end of the conversation. The options are:<br><br>* Trigger End of Conversation Behavior and configure the Task, Script or Message to be initiated. <a href="../../../../intelligence/event-handling/#end-of-conversation">See here for details</a>.<br>* Terminate the call.<br>    <br>    <strong>Note</strong>: Selecting the <strong>Terminate call</strong> option under <strong>IVR Channel – Voice Call Properties – End of Task Behavior</strong> no longer turns off the End of Task event at the bot level.</td>
-<td>IVR,<br><br>Twilio,<br><br>IVR-AudioCodes,<br><br>Kore.ai Voice Gateway</td>
+<td>IVR,<br>Twilio,<br>IVR-AudioCodes,<br>Kore.ai Voice Gateway</td>
 </tr>
 <tr>
 <td>Call Termination Handler</td>
 <td>Select the name of the Dialog task that you want to use as the call termination handler when the call ends in error.</td>
-<td>IVR,<br><br>Twilio,<br><br>IVR-AudioCodes,<br><br>Kore.ai Voice Gateway</td>
+<td>IVR,<br>Twilio,<br>IVR-AudioCodes,<br>Kore.ai Voice Gateway</td>
 </tr>
 <tr>
 <td>Call Control Parameters</td>
 <td>Click <strong>Add Parameter</strong>. Enter property names and values to use in defining the call behavior.<br><br><strong>Note</strong>: You should use these properties and values in the VXML files for all call flows in the IVR system and Session Parameters in AudioCodes channel.</td>
-<td>IVR,<br><br>IVR-AudioCodes</td>
+<td>IVR,<br>IVR-AudioCodes</td>
 </tr>
 <tr>
 <td>ASR Confidence Threshold</td>
@@ -12204,7 +12204,7 @@
 <tr>
 <td>Timeout Prompt</td>
 <td>Enter the default prompt text to play when the user doesn’t provide the input within the timeout period. If you do not specify a Timeout Prompt for any node, this prompt takes its place.</td>
-<td>IVR,<br><br>Twilio,<br><br>IVR-AudioCodes,<br><br>Kore.ai Voice Gateway</td>
+<td>IVR,<br>Twilio,<br>IVR-AudioCodes,<br>Kore.ai Voice Gateway</td>
 </tr>
 <tr>
 <td>Grammar</td>
@@ -12219,17 +12219,17 @@
 <tr>
 <td>Barge-In</td>
 <td>Select whether you want to allow a user input while a prompt is in progress. If you select no, the user cannot provide input until IVR completes the prompt.</td>
-<td>IVR,<br><br>Twilio,<br><br>IVR-AudioCodes,<br><br>Kore.ai Voice Gateway</td>
+<td>IVR,<br>Twilio,<br>IVR-AudioCodes,<br>Kore.ai Voice Gateway</td>
 </tr>
 <tr>
 <td>Timeout</td>
 <td>Select the maximum wait time to receive user input from the drop-down list, from 1 second up to 60 seconds.</td>
-<td>IVR,<br><br>Twilio,<br><br>IVR-AudioCodes,<br><br>Kore.ai Voice Gateway</td>
+<td>IVR,<br>Twilio,<br>IVR-AudioCodes,<br>Kore.ai Voice Gateway</td>
 </tr>
 <tr>
 <td>No. of Retries</td>
 <td>Select the maximum number of retries to allow. You can select from just 1 retry up to 10 retries.</td>
-<td>IVR,<br><br>Twilio,<br><br>IVR-AudioCodes</td>
+<td>IVR,<br>Twilio,<br>IVR-AudioCodes</td>
 </tr>
 <tr>
 <td>Log</td>
@@ -12238,7 +12238,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="dialog-node-settings">Dialog Node Settings<a class="headerlink" href="#dialog-node-settings" title="Permanent link">&para;</a></h2>
 <p>On the Voice Call Properties panel for a node, you can enter node-specific prompts, grammar, as well as parameters for call-flow behavior such as time-out and retries.</p>
 <p>Voice Call Properties apply only for the following nodes and message types:</p>
@@ -12289,19 +12288,19 @@
 <tr>
 <td>No Match Prompts</td>
 <td>Prompts that are played on the IVR channel when the user’s input has not matched any value in the defined grammar. If you do not enter a prompt here or select <strong>No Grammar</strong> option for an Entity or Confirmation node, the default Error Prompt of the node is played. Standard Responses and Welcomes have a default No Match Prompt that plays if you do not enter it.<br><br>You can <strong>Customize Retries Behavior</strong> for the No Match Prompts and define the number of retries to configure the number of times the user would be prompted for this entity value by setting the number of <strong>Allowed Retries</strong> to any value between 1 and 10. The default is 3.<br><br>Further, you can define the VA’s <strong>Behavior on Exceeding Retries</strong>; this can be set to trigger <em>Invoke Call Termination Handler, Initiate Dialog Task,</em> or <em>Jump to specific node in current task</em>. When you select <em>Initiate Dialog</em> or <em>Jump to a specific node in the current task</em> option, you are prompted to select the dialog task or task within the node.<br><br><strong>Note</strong>: The <strong>Customize Retries Behavior</strong> function is supported only for the <strong>IVR</strong> channel at the Entity, Confirmation, and Message nodes.</td>
-<td>Entity,<br><br>Confirmation;<br><br>Standard Responses and<br><br>Welcome Message</td>
+<td>Entity,<br>Confirmation;<br>Standard Responses and Welcome Message</td>
 <td>IVR</td>
 </tr>
 <tr>
 <td>Error Prompts</td>
 <td>Prompts that are played on the IVR channel when user input is an invalid Entity type. If you do not enter a prompt here, the default Error Prompt of the node is played.<br><br>You can <strong>Customize Retries Behavior</strong> for the Error Prompts and define the number of retries to configure the number of times the user would be prompted for this entity value by setting the number of <strong>Allowed Retries</strong> to any value between 1 and 10. The default is 3.<br><br>Further, you can define the VA’s <strong>Behavior on Exceeding Retries</strong>, this can be set to trigger <em>Invoke Call Termination Handler, Initiate Dialog Task,</em> or <em>Jump to specific node in current task</em>. When you select <em>Initiate Dialog</em> or <em>Jump to a specific node in the current task</em> option, you are prompted to select the dialog task or task within the node.<br><br><strong>Note</strong>: The <strong>Customize Retries Behavior</strong> function is supported only for the <strong>IVR</strong> channel at the Entity, Confirmation, and Message nodes..</td>
-<td>Entity,<br><br>Confirmation;</td>
+<td>Entity,<br>Confirmation;</td>
 <td>IVR,<br>Twilio,<br>AudioCodes,<br>Kore.ai Voice Gateway</td>
 </tr>
 <tr>
 <td>Grammar</td>
 <td>Define the grammar that should be used to detect a user’s utterance<br><br>* The input type can be Speech or DTMF<br>* Source of grammar can be Custom or Link<br>    * For Custom, write VXML grammar in the textbox.<br>    * For Link, enter the URL of the grammar. Ideally, the URL should be accessible to the IVR system so that the resource can be accessed while executing the calls at runtime<br>        <br>        <a href="#configuring-grammar">See below for a detailed configuration for Grammar syntax</a>. <br> <strong>Note</strong>: If the <strong>Enable Transcription</strong> option is enabled for the VA along with specifying the source of the transcription engine, defining grammar isn’t mandatory.</td>
-<td>Confirmation;<br><br>Standard Responses and<br><br>Welcome Message</td>
+<td>Confirmation;<br>Standard Responses and Welcome Message</td>
 <td>IVR,<br>Twilio</td>
 </tr>
 <tr>
@@ -12344,7 +12343,7 @@
 <td>Call Control Parameters</td>
 <td>Click <strong>Add Property.</strong> Enter property names and values to use in defining the VXML definition in the IVR system and Session Parameters in AudioCodes channel. These values defined for a node or a standard response override the global Call Control Parameters defined in the VA IVR /AudioCodes settings page.</td>
 <td>N/A</td>
-<td>IVR,<br><br>AudioCodes,<br><br>Kore.ai Voice Gateway</td>
+<td>IVR,<br>AudioCodes,<br>Kore.ai Voice Gateway</td>
 </tr>
 <tr>
 <td>Log</td>
@@ -12384,10 +12383,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <p>Below is a demo of the IVR Properties section, within the Component Properties panel of a Dialog Task node.</p>
 <p><a class="glightbox" href="../images/ivr-properties.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/ivr-properties.gif" alt="IVR Properties" title="IVR Properties" style="border: 1px solid gray; zoom:70%;"></a></p>
-<p><a class="glightbox" href="../images/ivr-properties.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Component Properties" src="../images/ivr-properties.gif" /></a></p>
 <h2 id="configuring-grammar">Configuring Grammar<a class="headerlink" href="#configuring-grammar" title="Permanent link">&para;</a></h2>
 <p>You will need to define at least one Speech Grammar to the IVR system. 
 There is no default Grammar that will be considered by the system. In this section, we will walk you through the steps needed to configure a Grammar system for the VA to function on the IVR system.</p>
