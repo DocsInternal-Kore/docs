@@ -2729,7 +2729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automation/use-cases/dialogs/voice-call-properties.md" class="md-nav__link">
+      <a href="../../automation/use-cases/dialogs/voice-call-properties/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12382,7 +12382,7 @@
 </div>
 </li>
 <li>
-<p>Use the <strong>WebHook URL</strong> provided in your external application.  Enter the details to complete the setup, see <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#channel-settings">Voice Call Properties: Channel Settings</a> for more information.
+<p>Use the <strong>WebHook URL</strong> provided in your external application.  Enter the details to complete the setup, see <a href="../automation/use-cases/dialogs/node-types/voice-call-properties.md#channel-settings">Voice Call Properties: Channel Settings</a> for more information.
 <a class="glightbox" href="../images/IVR-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Webhook URL" src="../images/IVR-5.png" title="Webhook URL" /></a></p>
 </li>
 </ol>
@@ -12403,7 +12403,7 @@
 </li>
 <li>
 <p>The Platform supports all UniMRCP-encoded voice-to-text services. If you select the <strong>Enable Transcription</strong> option for the VA, then the platform allows you to skip defining grammar during configuring IVR settings for any node (described in <a href="#configure-dialog-node-ivr-properties">Configure Dialog Node IVR Properties</a>.
-See <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#configuring-grammar]">Voice Call Properties: Configuring Grammar</a> for a detailed configuration for Grammar syntax.</p>
+See <a href="../automation/use-cases/dialogs/node-types/voice-call-properties.md#configuring-grammar]">Voice Call Properties: Configuring Grammar</a> for a detailed configuration for Grammar syntax.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Sandbox may not respond as expected if you use different values.</p>
@@ -12415,7 +12415,7 @@ See <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties
 <ol>
 <li>Under the <strong>Build</strong> tab, select <strong>Intelligence &gt; Events</strong>.</li>
 <li>Select the <strong>Use Voice Call Properties</strong> option to open the voice settings section.</li>
-<li>Under the <strong>Initial Prompts</strong> text field, enter the message that needs to be played when the user connects to the VA. To know more about other configuration fields, see the <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#dialog-node-settings]">Voice Call Properties: Dialog Node Settings</a> section.
+<li>Under the <strong>Initial Prompts</strong> text field, enter the message that needs to be played when the user connects to the VA. To know more about other configuration fields, see the <a href="../automation/use-cases/dialogs/node-types/voice-call-properties.md#dialog-node-settings]">Voice Call Properties: Dialog Node Settings</a> section.
 <a class="glightbox" href="../images/IVR-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="initial prompts" src="../images/IVR-8.png" title="initial prompts" /></a></li>
 </ol>
 <h4 id="sandbox-configuration">Sandbox Configuration<a class="headerlink" href="#sandbox-configuration" title="Permanent link">&para;</a></h4>
@@ -12453,7 +12453,7 @@ button, which becomes visible upon hovering over the IVR icon under the <strong>
 <li>We strongly recommend you use IVR Sandbox only for internal testing purposes and not for the end-users of your Virtual Assistants, as there might be some functional limitations.</li>
 </ul>
 <h3 id="configure-dialog-node-ivr-properties">Configure Dialog Node IVR Properties<a class="headerlink" href="#configure-dialog-node-ivr-properties" title="Permanent link">&para;</a></h3>
-<p>You can configure IVR properties for a node in a dialog task. Click the <strong>IVR Properties</strong> icon and  enter initial prompts, define Grammar, enter timeout, number of retries and other available fields. To know more about dialog definition, see the <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#dialog-node-settings]">Voice Call Properties: Dialog Node Settings</a> section.</p>
+<p>You can configure IVR properties for a node in a dialog task. Click the <strong>IVR Properties</strong> icon and  enter initial prompts, define Grammar, enter timeout, number of retries and other available fields. To know more about dialog definition, see the <a href="../automation/use-cases/dialogs/node-types/voice-call-properties.md#dialog-node-settings]">Voice Call Properties: Dialog Node Settings</a> section.</p>
 <p><a class="glightbox" href="../images/IVR-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IVR properties" src="../images/IVR-16.png" title="IVR properties" /></a></p>
 <h3 id="ivr-channel-setup">IVR Channel Setup<a class="headerlink" href="#ivr-channel-setup" title="Permanent link">&para;</a></h3>
 <p>This section explains the IVR channel setup for your virtual assistant. After configuring IVR Settings at both the VA and the Dialog levels, you must configure IVR Channel for the VA. IVR channel provides a generic integration to connect VAs with IVR systems. Kore.ai XO platform generates required VXML files to be exchanged as part of the VA interaction with the end user through the IVR systems.</p>
@@ -12601,7 +12601,7 @@ button, which becomes visible upon hovering over the IVR icon under the <strong>
  <a class="glightbox" href="../images/IVR-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="input mode" src="../images/IVR-21.png" title="input mode" /></a></p>
 </li>
 <li>
-<p>See <a href="../../automation/use-cases/dialogs/node-types/voice-call-properties/#channel-settings]">Voice Call Properties: Channel Settings</a>for more information. The additional information provided by the ASR engines can be extracted using the <strong>context object</strong>. This is configured at  <strong>Bot User Session &gt; lastMessage &gt;  asrMetaData</strong>.</p>
+<p>See <a href="../automation/use-cases/dialogs/node-types/voice-call-properties.md#channel-settings]">Voice Call Properties: Channel Settings</a>for more information. The additional information provided by the ASR engines can be extracted using the <strong>context object</strong>. This is configured at  <strong>Bot User Session &gt; lastMessage &gt;  asrMetaData</strong>.</p>
 </li>
 <li>Go to the <strong>Settings</strong> panel of the last message node for your dialog task and configure the <strong>JavaScript Message</strong> under <strong>Bot Responses</strong>, as shown below:
   <a class="glightbox" href="../images/IVR-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="JavaScript message" src="../images/IVR-22.png" title="JavaScript message" /></a></li>
