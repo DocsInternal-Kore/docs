@@ -12506,9 +12506,26 @@
 <li><strong>Display Name</strong> set as <em>Name.</em></li>
 <li><strong>Name</strong> used for internal reference, set as <em>accountname.</em></li>
 <li><strong>Description</strong> of the field.</li>
-<li><strong>Placeholder</strong> value to be displayed in the field when blank, set as, <em>Enter the name of the account holder</em>.
-  <a class="glightbox" href="../../images/form-editor-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/form-editor-panel.png" alt="form editor panel" title="form editor panel" style="border: 1px solid gray; zoom:75%;"></a></li>
+<li>
+<p><strong>Placeholder</strong> value to be displayed in the field when blank, set as, <em>Enter the name of the account holder</em>.
+  <a class="glightbox" href="../../images/form-editor-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/form-editor-panel.png" alt="form editor panel" title="form editor panel" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p><strong>Mask User Input/Secure Field Data</strong> is a toggle that enables securing of the input data. The label of this toggle varies as below:</p>
+<ul>
+<li>If <strong>Secure Form Data</strong> is enabled, the caption of this toggle is <strong>Mask User Input</strong>. At runtime, the input data is masked.</li>
+<li>If <strong>Secure Form Data</strong> is disabled, the caption of this toggle is <strong>Secure Field Data</strong>. At runtime, the data of this field will be redacted. This would be a component level setting for data redaction.</li>
 </ul>
+</li>
+<li>
+<p><strong>Transient Input</strong> is a toggle which, if enabled, ensures that the data provided in this field is not stored anywhere after the session ends. This would mean that the data won't be available in the database or logs as well.</p>
+<p><a class="glightbox" href="../../images/mask-data-and-transient-input.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/mask-data-and-transient-input.png" alt="Field data securing and Transient data" title="Field data securing and Transient data" style="border:1px solid gray;"></a></p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Mask User Input/Secure Field Data</strong> and <strong>Transient Input</strong> toggles are available for all the components, and need to be set on component level. Settings of one component will have no impact on others.</p>
+</div>
 </li>
 <li>
 <p>Next, a selection box for the type of account to be opened. Drag and drop a <strong>Dropdown</strong> component onto the form and set the following values:</p>
