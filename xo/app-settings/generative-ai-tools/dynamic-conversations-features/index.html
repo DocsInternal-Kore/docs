@@ -11447,18 +11447,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#genai-node" class="md-nav__link">
+  <a href="#answer-generation" class="md-nav__link">
     <span class="md-ellipsis">
-      GenAI Node
+      Answer Generation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#answer-from-documents" class="md-nav__link">
+  <a href="#genai-node" class="md-nav__link">
     <span class="md-ellipsis">
-      Answer From Documents
+      GenAI Node
     </span>
   </a>
   
@@ -12563,18 +12563,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#genai-node" class="md-nav__link">
+  <a href="#answer-generation" class="md-nav__link">
     <span class="md-ellipsis">
-      GenAI Node
+      Answer Generation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#answer-from-documents" class="md-nav__link">
+  <a href="#genai-node" class="md-nav__link">
     <span class="md-ellipsis">
-      Answer From Documents
+      GenAI Node
     </span>
   </a>
   
@@ -12731,9 +12731,9 @@ The Exit Scenario Key-Value fields help identify when to end the interaction wit
   <tr>
    <td><strong>Model</strong>
    </td>
-   <td>GenAI Node
+   <td>Answer Generation
    </td>
-   <td>Answer From Documents
+   <td>GenAI Node
    </td>
    <td>GenAI Prompt
    </td>
@@ -12859,11 +12859,11 @@ The Exit Scenario Key-Value fields help identify when to end the interaction wit
    </td>
    <td>✅
    </td>
-   <td>❌
+   <td>✅
    </td>
    <td>✅
    </td>
-   <td>❌
+   <td>✅
    </td>
    <td>❌
    </td>
@@ -12898,32 +12898,14 @@ The Exit Scenario Key-Value fields help identify when to end the interaction wit
 <p>Azure OpenAI and OpenAI have officially ended support for their GPT-3 model on January 4, 2024. We recommend selecting a higher or alternate model for supported features as soon as possible.<a href="https://platform.openai.com/docs/deprecations"> Learn more</a>.</p>
 </div>
 <h2 id="feature-details">Feature Details<a class="headerlink" href="#feature-details" title="Permanent link">&para;</a></h2>
+<h3 id="answer-generation">Answer Generation<a class="headerlink" href="#answer-generation" title="Permanent link">&para;</a></h3>
+<p>This feature helps generate an answer to the user question based on the data ingested into the Search AI application. The relevant data with a user query is inserted into the prompt, and the configured LLM responds with the answer. This answer is then formatted appropriately and presented to the user. <a href="../../../searchai/answer-configuration/#answers-generation">Learn more</a>.</p>
 <h3 id="genai-node">GenAI Node<a class="headerlink" href="#genai-node" title="Permanent link">&para;</a></h3>
 <p>When enabled, this feature lets you add an GenAI Node to Dialog Tasks. This node allows you to collect Entities from end-users in a free-flowing conversation (in the selected English/Non-English Bot Language) using LLM and Generative AI in the background. You can define the entities to be collected as well as rules &amp; scenarios in English and Non-English Bot languages. You can configure node properties just like any other node. You can also use the GenAI Node across Dialog Tasks.</p>
 <p><a class="glightbox" href="../images/dcf%281%29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/dcf%281%29.png" /></a></p>
 <p><strong>Usage</strong></p>
 <p>When creating or editing a Dialog Task that’s created manually or<a href="../../../automation/use-cases/dialogs/using-the-dialog-builder-tool/#auto-generated-dialog-tasks"> auto-generated</a>, you can find a node called GenAI Node within your nodes list. </p>
 <p>When this feature is disabled, the node is unavailable within the Dialog Builder.<a href="../../../automation/use-cases/dialogs/node-types/genai-node/"> Learn more</a>.</p>
-<h3 id="answer-from-documents">Answer From Documents<a class="headerlink" href="#answer-from-documents" title="Permanent link">&para;</a></h3>
-<p>This feature leverages a Large Language Model (LLM) and Generative AI models from OpenAI to generate answers for FAQs by processing uploaded documents in an unstructured PDF format and user queries.</p>
-<p><strong>Usage</strong></p>
-<p>After redacting personally identifiable information, the uploaded documents and the end-user queries are shared with OpenAI to curate the answers.</p>
-<p>Once you meet the prerequisites and enable the feature:</p>
-<ol>
-<li>You should<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/answer-from-documents/#Upload_PDF_Documents"> upload the PDF document(s)</a> to be shared with the third-party system (OpenAI). You can upload a maximum of 10 documents with a size of not more than 5 MB.</li>
-<li>The uploaded documents are listed under the <strong>Answer from Documents</strong> section with the following details:<ul>
-<li>Upload Name</li>
-<li>Uploaded by</li>
-<li>Uploaded on</li>
-<li>Status (Active/Inactive)</li>
-<li>Actions (View and Delete File)</li>
-</ul>
-</li>
-<li>A good practice is to test the answer generation by asking the VA a question directly related to the contents of your uploaded documents.<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/answer-from-documents/#Test_Answer_Generation"> Learn more</a>.</li>
-<li>You can view, delete, and disable the uploaded documents.</li>
-<li>The VA provides answers only from uploaded documents that are active, whereas disabled documents are ignored.</li>
-</ol>
-<p>If the feature is disabled, you won’t be able to send queries to LLMs as a fallback.<a href="https://developer.kore.ai/docs/bots/bot-builder-tool/knowledge-task/answer-from-documents/#Disable_Answer_from_Documents"> Learn more</a>.</p>
 <h3 id="genai-prompt">GenAI Prompt<a class="headerlink" href="#genai-prompt" title="Permanent link">&para;</a></h3>
 <p>This feature lets you define custom user prompts based on the conversation context and the response from the LLMs. You can define the subsequent conversation flow by selecting a specific AI model, tweaking its settings, and previewing the response for the prompt.</p>
 <p><strong>Usage</strong></p>
