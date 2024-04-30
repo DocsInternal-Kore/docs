@@ -14088,6 +14088,291 @@ There is no default Grammar that will be considered by the system. In this secti
 <li>You can leave the <strong>Grammar</strong> section blank, the above transcription source URL will handle the syntax and grammar vetting of the speech.</li>
 <li><strong>Save</strong> the settings.</li>
 </ol>
+<table>
+  <tr>
+    <td><strong>Model</strong></td>
+    <td><strong>Answer Generation</strong></td>
+    <td><strong>GenAI Node</strong></td>
+    <td><strong>GenAI Prompt</strong></td>
+    <td><strong>Rephrase Dialog Responses</strong></td>
+    <td><strong>Rephrase User Query</strong></td>
+    <td><strong>Repeat Responses</strong></td>
+    <td><strong>Vector Generation</strong></td>
+    <td><strong>Zero-shot ML Model</strong></td>
+  </tr>
+  <tr>
+    <td>Azure OpenAI – GPT 3.5 Turbo</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>Azure OpenAI – GPT 4</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅*</td>
+  </tr>
+  <tr>
+    <td>OpenAI – GPT 3.5 Turbo</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>OpenAI – GPT 4</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅*</td>
+  </tr>
+  <tr>
+    <td>Anthropic – Claude Instant</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Anthropic – Claude</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Custom LLM</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Kore.ai XO GPT</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>❌</td>
+  </tr>
+</table>
+
+<h2 id="original-table">Original Table<a class="headerlink" href="#original-table" title="Permanent link">&para;</a></h2>
+<table>
+  <tr>
+   <td><strong>Model</strong>
+   </td>
+   <td>Answer Generation
+   </td>
+   <td>GenAI Node
+   </td>
+   <td>GenAI Prompt
+   </td>
+   <td>Rephrase Dialog Responses
+   </td>
+   <td>Zero-shot ML Model
+   </td>
+   <td>Repeat Responses
+   </td>
+   <td>Rephrase User Query
+   </td>
+   <td>Vector Generation
+   </td>
+  </tr>
+  <tr>
+   <td>Azure OpenAI – GPT 3.5 Turbo
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+  </tr>
+  <tr>
+   <td>Azure OpenAI – GPT 4
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅*
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+  </tr>
+  <tr>
+   <td>OpenAI – GPT 3.5 Turbo
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+  </tr>
+  <tr>
+   <td>OpenAI – GPT 4
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅*
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+  </tr>
+  <tr>
+   <td>Anthropic – Claude Instant
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+  </tr>
+  <tr>
+   <td>Anthropic – Claude
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+  </tr>
+  <tr>
+   <td>Custom LLM
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+  </tr>
+  <tr>
+   <td>Kore.ai XO GPT
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+   <td>✅
+   </td>
+   <td>❌
+   </td>
+   <td>❌
+   </td>
+   <td>✅
+   </td>
+   <td>✅
+   </td>
+  </tr>
+</table>
 
 
 
