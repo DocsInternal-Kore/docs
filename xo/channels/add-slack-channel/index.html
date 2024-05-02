@@ -1878,7 +1878,7 @@
             
   
   <span class="md-ellipsis">
-    XO11.1.x Updates
+    XO11.x Updates
   </span>
   
 
@@ -1888,7 +1888,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4_3">
             <span class="md-nav__icon md-icon"></span>
-            XO11.1.x Updates
+            XO11.x Updates
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -12674,9 +12674,9 @@
 
 <h1 id="adding-the-slack-channel">Adding the Slack Channel<a class="headerlink" href="#adding-the-slack-channel" title="Permanent link">&para;</a></h1>
 <p>To set up the Slack channel on the XO Platform and interact with a VA using a Slack account, you must associate the VA with a Slack app.</p>
-<p>The Slack channel integration supports Direct Messaging (DM) and Channel (group) conversations via the Platform. When a VA is added to a channel (group) within the Slack organization space, any member can start a group conversation using <code><em><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/mentions" title="GitHub User: mentions">@mentions</a></em></code> to talk to a specific VA.</p>
+<p>The Slack channel integration supports Direct Messaging (DM) and Channel (group) conversations via the Platform. When a VA is added to a channel (group) within the Slack organization space, any member can start a group conversation using @mentions to talk to a specific VA.</p>
 <p>The XO Platform offers native support for threaded conversations in the Slack channel. Users can initiate a new thread from any message within a Slack channel or direct message group and continue a conversation with the VA. The XO Platform leverages Slack’s <strong>Threads</strong> to enable one-on-one conversations without losing the conversation context.</p>
-<p>Additionally, the Platform allows developers to configure how the Slack channel integration should handle DM and group conversations. It can automatically create a new thread whenever a user <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/mentions" title="GitHub User: mentions">@mentions</a> the virtual assistant in a Slack channel. This configuration flexibility gives developers control over the Threads feature.</p>
+<p>Additionally, the Platform allows developers to configure how the Slack channel integration should handle DM and group conversations. It can automatically create a new thread whenever a user @mentions the virtual assistant in a Slack channel. This configuration flexibility gives developers control over the Threads feature.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To use Slack <b>Threads</b> for your Virtual Assistant deployed on the Slack Channel, add the Bot token Scope <code>chat:write.public</code> to the existing Slack app under <b>OAuth & Permissions</b> > <b>Scopes</b> > <b>Bot Token Scopes</b>. <a href="https://docsinternal-kore.github.io/docs/xo/channels/add-slack-channel/?h=slack#step-2-set-redirect-url-and-scopes" target="_blank">Learn more</a>.</p>
@@ -12812,9 +12812,9 @@
 
 <a class="glightbox" href="../images/authorize-client-id-client-secret.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/authorize-client-id-client-secret.png" alt="authorize client credentials" title="authorize client credentials" style="border: 1px solid gray; zoom:65%;"></a></ol>
 
-<ol start="5"><li>In the <b>Customize Slack Channel’s Conversations</b> section, select one of the following options to define the conversation behavior of the virtual assistant in a Slack channel when the user @mentions the VA:</li>
+<ol start="5"><li>In the <b>Customize Slack Channel’s Conversations</b> section, select one of the following options to define the conversation behavior of the virtual assistant in a Slack channel when the user \@mentions the VA:</li>
 <ul><li><b>Continue the conversation with the Virtual Assistant in the channel</b>: This is the default selection. It maintains the current behavior for DM and group messages. However, if a user intentionally starts a thread with the virtual assistant, the conversation will continue within that thread.</li>
-<li><b>Create a new thread for every user message(@mentioned to the Virtual assistant) in the channel</b>: For every user message that is <code>@mentioned</code> to the Virtual assistant in the channel (both DM and Channel conversations), the Platform does the following:</li>
+<li><b>Create a new thread for every user message(\@mentioned to the Virtual assistant) in the channel</b>: For every user message that is \@mentioned to the Virtual assistant in the channel (both DM and Channel conversations), the Platform does the following:</li>
     <ul><li>Creates a new thread and replies to the user message in the thread.</li>
     <li>Treats each conversation thread as a separate session whenever it is created in the channel, maintaining context isolation.</li>
     <li>Treats each conversation thread as a new user conversation whenever it is created for Slack DM.</li></ul>
