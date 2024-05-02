@@ -11933,7 +11933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../app-settings/advanced-settings/bot-sessions/" class="md-nav__link">
+      <a href="../../app-settings/advanced-settings/bot-sessions.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12728,108 +12728,117 @@
 <p>Kore.ai virtual assistant platform allows you to customize how these Conversation Sessions are to be created and closed.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Conversation Sessions are different from Billing Sessions,<a href="https://developer.kore.ai/docs/bots/bot-admin/billing/"> refer here</a> for more on Billing Sessions.</p>
+<p>Conversation Sessions are different from Billing Sessions, <a href="../../administration/billing" target="_blank">refer here</a> for more on Billing Sessions.</p>
 </div>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>A Conversation Session is defined as an uninterrupted volley between the end user and the bot.</p>
+<p>A Conversation Session is defined as an uninterrupted volley between the end-user and the bot.</p>
 <ul>
-<li>Before the release of v7.2 of the platform – a new session was created after the <em>inactivity duration (set as 15 minutes)</em> had elapsed since the end-user's last interaction.</li>
+<li>Before the release of v7.2 of the platform – a new session was created after the <em>inactivity duration (set as 15 mins)</em> has elapsed since the end-users’ last interaction.</li>
 <li>Post v7.2 release – after the <em>inactivity duration (set as 15 mins)</em> has elapsed<ul>
 <li>if the end-user comes back and continues with the same intent, then the current session continues;</li>
 <li>if the end-user comes back with a new intent or with an invalid input for the existing intent, a new session is created.</li>
 </ul>
 </li>
-<li>Post v8.0 release, the platform gives you an option to:<ul>
-<li>Proactively close the sessions after inactivity – see<a href="https://developer.kore.ai/docs/bots/bot-settings/bot-sessions/#Manage_Sessions"> Manage Sessions</a> to know more.</li>
+<li>Post v8.0 release, platform gives you an option to:<ul>
+<li>Proactively close the sessions after inactivity – see <a href="#manage-sessions">Manage Sessions</a> to know more.</li>
 <li>Not proactively close the sessions after inactivity – retain the v7.2 behavior described above;</li>
 </ul>
 </li>
 </ul>
 <p>Conversation Sessions are created for all interactions with the virtual assistant. These include:</p>
 <ul>
-<li>All conversations that include one or more messages from the user are marked as <strong>interactive sessions</strong>. These include all end-user interactions across all channels and events including providing authorization details.</li>
-<li>All Virtual assistant-initiated conversion sessions like onConnect event messages are recorded as <strong>non-interactive</strong>. These sessions will be updated as Interactive sessions as soon as a user message is received. Non-interactive sessions are not considered for calculating the billing sessions.</li>
+<li>All conversations that include one or more messages from the user marked as <strong>interactive sessions</strong>. These include all end-user interactions across all channels and events including providing authorization details.</li>
+<li>All Virtual assistant initiated conversion sessions like onConnect event messages are recorded as <strong>non-interactive sessions</strong>. These sessions will be updated as Interactive sessions as soon as a user message is received. Non-interactive sessions are not considered for calculating the billing sessions.</li>
 <li><strong>Developer interactions</strong> are also included as conversation sessions. A flag differentiates the user sessions from developer sessions and billing sessions are not created for these developer sessions.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The inclusion of non-interactive and developer interactions in conversation sessions was implemented starting from ver8.0.</p>
+<p>Inclusion of non-interactive and developer interactions in conversation sessions was implemented starting from ver8.0.</p>
 </div>
 <h2 id="manage-sessions">Manage Sessions<a class="headerlink" href="#manage-sessions" title="Permanent link">&para;</a></h2>
 <p>This feature is only available post v8.0 of the platform release.</p>
-<p>You can define the Conversation Session behavior using the <strong>Manage Sessions</strong> option under <strong>Configurations</strong> from the <strong>Build</strong> tab.</p>
-<p><a class="glightbox" href="../images/conversationsessions1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions1.png" title="image_tooltip" /></a></p>
+<p>You can define the Conversation Session behaviors in the <strong>Manage Sessions</strong> tab within <strong>App Settings &gt; Advanced Settings</strong> tab.</p>
+<p><a class="glightbox" href="../images/bot-sessions-img1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-sessions-img1.png" alt="App Settings - Advanced Settings - Manage Sessions" title="App Settings - Advanced Settings - Manage Sessions" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <p>The following details explain the options available on the page, to define the conversation sessions.</p>
 <ul>
 <li><strong>Do not proactively close the sessions after inactivity</strong> – Select this option to close the session only when the user returns after 15 minutes of inactivity and provides a new intent. This was the default behavior before the release of ver8.0 of the platform. <span style="text-decoration:underline;">This option will be deprecated in future releases</span>.</li>
 <li>
 <p><strong>Proactively close the sessions after inactivity</strong> – Select this option to close the session after a defined duration of inactivity. You can set the following parameters:</p>
 <ul>
-<li><strong>Inactivity Duration</strong> – this is set to 15 minutes by default. The session closes after the time duration set here.</li>
-</ul>
+<li>
+<p><strong>Inactivity Duration</strong> – this is set to 15 minutes by default. The session closes after the time duration set here.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The minimum value that can be set here is <strong>5 min ** and the maximum value is **20160</strong> <strong>min</strong> (14 days). These values can be configured at the application level through Koreconfig.</p>
+<p>The minimum value that can be set here is <strong>5 min</strong> and the maximum value is <strong>20160 min</strong> (14 days). These values can be configured at the application level through Koreconfig.</p>
 </div>
 </li>
-<li>
-<p><strong>Session Closure Behavior</strong> – You can choose to close the session without informing the user or inform the user about the session closure by sending out a message. This message can be customized using the <strong>Manage Response</strong> link. You can click <strong>Add Response</strong> if you want to add a new response. </p>
-<p><a class="glightbox" href="../images/conversationsessions2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions2.png" title="image_tooltip" /></a></p>
-</li>
-<li>
-<p><strong>Clear Auth Profile</strong> – You can enable the <strong>Clear Auth Profiles</strong> option to clear all authorization tokens and session variables associated with a particular session. Once you enable this setting, you are required to provide the authorization profile details again to re-authorize the session. </p>
-</li>
 </ul>
-<p><a class="glightbox" href="../images/conversationsessions3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions3.png" title="image_tooltip" /></a></p>
-<ul>
+</li>
 <li>
-<p><strong>Run Custom Script</strong> – You can use the custom script to invoke koreUtil.ClearAuthProfiles function to clear the authorization profile and associated session variables for that particular profile. For example, if you have enabled multiple authorization profiles for a session, you can use the <code>koreUtil.ClearAuthProfiles</code> to disable a particular authorization profile that is not needed for this session using this custom script: 
- <code>koreUtil.ClearAuthProfiles ( [Auth_Profile_Name] )</code> 
-You can also clear all authorization profiles using this script: 
-<code>koreUtil.ClearAllAuthProfiles ( )</code> For more information, see<a href="https://developer.kore.ai/docs/bots/advanced-topics/koreutil-libraries/"> kore.UtilLibraries</a><span style="text-decoration:underline;"> </span>article.</p>
-<p><a class="glightbox" href="../images/conversationsessions4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/conversationsessions4.png" title="image_tooltip" /></a></p>
+<p><strong>Session Closure Behavior</strong> – You can choose to close the session without informing the user or inform the user about the session closure by sending out a message. This message can be customized using the <strong>Manage response</strong> link. You can click <strong>Add Response</strong>, if you want to add a new response.<br />
+<a class="glightbox" href="../images/bot-sessions-img2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-sessions-img2.png" alt="Customize message using Manage Response" title="Customize message using Manage Response" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>Clear Auth Profile</strong> – You can enable the <strong>Clear Auth Profiles</strong> option to clear all authorization tokens and session variables associated with a particular session. Once you enable this setting, you are required to provide the authorization profile details again to re-authorize the session.<br />
+<a class="glightbox" href="../images/bot-sessions-img3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-sessions-img3.png" alt="Clear Auth Profiles - clear all authorization tokens and session variables" title="Clear Auth Profiles - clear all authorization tokens and session variables" style="border: 1px solid gray;zoom:50%;"/></a></p>
+</li>
+<li>
+<p><strong>Run Custom Script</strong> – You can use the custom script to invoke koreUtil.ClearAuthProfiles function to clear the authorization profile and associated session variables for that particular profile.For example, if you have enable multiple authorization profiles for a session, you can use the <code>koreUtil.ClearAuthProfiles</code> to disable a particular authorization profile that is not needed for this session using this custom script:<br />
+<code>koreUtil.ClearAuthProfiles ( [Auth_Profile_Name] )</code>You can also clear all authorization profile using this script:
+<code>koreUtil.ClearAllAuthProfiles ( )</code> For more information, see <a href="../../../apis/koreutil-libraries" target="_blank">kore.UtilLibraries </a>article.<br />
+<a class="glightbox" href="../images/bot-sessions-img4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bot-sessions-img4.png" alt="Run Custom Script" title="Run Custom Script" style="border: 1px solid gray;zoom:50%;"/></a></p>
 </li>
 </ul>
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
 <p><strong>When does a Conversation Session start?</strong></p>
 <p>Conversation Sessions are created for all interactions:</p>
 <ul>
-<li>All <strong>end-user interactions</strong> across all channels and events – Conversation sessions are created for On_connect – Run a script, Run a Message, Trigger a Dialog scenario. There are two categories of these conversation sessions:<ul>
+<li>
+<p>All <strong>end-user interactions</strong> across all channels and events – Conversation sessions are created for On_connect – Run a script, Run a Message, Trigger a Dialog scenario. There are two categories of these conversation sessions:</p>
+<ul>
 <li><strong>Interactive sessions</strong> are conversations that include one or more messages from the user.</li>
-<li><strong>Non-interactive sessions</strong> are conversations with no messages from the user. All bot-initiated conversion sessions start as ‘Non-interactive’. These sessions are updated as Interactive sessions as soon as a user message is received. The non-interactive sessions are not considered for calculating the billing sessions.</li>
+<li><strong>Non-interactive sessions</strong> are conversations with no messages from the user. All bot initiated conversion sessions start as ‘Non-interactive’. These sessions are updated as Interactive sessions as soon as a user message is received. The non-interactive sessions are not considered for calculating the billing sessions.</li>
 </ul>
 </li>
-<li><strong>Developer interactions</strong> will also be considered for creating conversation sessions but these are marked as different from the user sessions and are not considered for Billing Sessions.</li>
+<li>
+<p><strong>Developer interactions</strong> will also be considered for creating conversation sessions but these are marked as different from the user sessions and are not considered for Billing Sessions.</p>
+</li>
 </ul>
 <p><strong>When does a Conversation Session close?</strong></p>
 <ul>
-<li>The platform proactively closes inactive sessions after the specified time of inactivity set in the<a href="https://developer.kore.ai/docs/bots/bot-settings/bot-sessions/#Manage_Sessions"> Manage Sessions</a><span style="text-decoration:underline;"></span> option.</li>
-<li>When the following utterances are detected – <em>“Discard”</em></li>
-<li>When the chat window is refreshed, "_refresh: true” _is detected.</li>
+<li>The platform proactively closes inactive sessions after the specified time of inactivity set in the <a href="#manage-sessions">Manage Sessions </a>option.</li>
+<li>When the chat window is refreshed ie <em>“refresh: true”</em> is detected.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Discard</strong> and <strong>Discard all</strong> commands only stop the ongoing chat and do not end the Conversation Session.</p>
+<p>For <strong>discard all</strong>:</p>
+<ul>
+<li>The Dialog context, Current and Historic Tags are cleared;</li>
+<li>The Sentiment Tones are reset</li>
+</ul>
+<p>For <strong>discard</strong>:</p>
+<ul>
+<li>The current Dialog context will be cleared;</li>
+<li>The Current Tags will be replaced with the last updated ‘tags’ in the Historic Tags, and the Historic Tags would be cleared</li>
+</ul>
+</div>
 <p><strong>What happens when a Conversation Session closes?</strong></p>
 <ul>
-<li>Post-session closure, the following information or variables will be cleared:<ul>
+<li>
+<p>Post-session closure, the following information or variables will be cleared:</p>
+<ul>
 <li>Conversation session;</li>
 <li>Bot User Session (developer-defined variables without custom TTL)</li>
 <li>Dialog Context (Topic File and Conversation Details)</li>
 <li>If configured, before closing the conversation session, the platform will proactively send a session closure message to the users on supported channels.</li>
 </ul>
 </li>
-<li>For “<em>refresh: true</em>”:<ul>
+<li>
+<p>For “<em>refresh: true</em>”:</p>
+<ul>
 <li>Complete session information is cleared;</li>
 <li>A new conversation session is created.</li>
-</ul>
-</li>
-<li>For “<em>discard all</em>”<ul>
-<li>The Dialog context, Current and Historic Tags are cleared;</li>
-<li>The Sentiment Tones are reset;</li>
-<li>The same Conversation Session will be continued</li>
-</ul>
-</li>
-<li>For “<em>discard</em>”<ul>
-<li>The current Dialog context will be cleared;</li>
-<li>The Current Tags will be replaced with the last updated ‘tags’ in the Historic Tags, and the Historic Tags will be cleared;</li>
 </ul>
 </li>
 </ul>
