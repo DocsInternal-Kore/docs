@@ -12538,6 +12538,16 @@
 <a class="glightbox" href="../images/xo-platform-homepage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/xo-platform-homepage.png" alt="New unified XO Platform" title="New unified XO Platform" style="border: 1px solid gray; zoom:70%;"></a>   </p>
 </li>
 <li>
+<p>During the onboarding process, the OpenAI credentials provided by Kore.ai is used to enable access to AI features, such as app name suggestions, alternate question suggestions, generating agent use cases, etc.</p>
+</li>
+<li>
+<p>A new "Setup guide" feature has been introduced to facilitate faster app building for platform users. It offers a guided, step-by-step process that provides a comprehensive overview of all features in XO. Once the setup guide is completed, it will be moved to the help section under the header for future reference.<br />
+<a class="glightbox" href="../getting-started/images/xo-platform-setupguide.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../getting-started/images/xo-platform-setupguide.png" alt="Setup Guide" title="Setup Guide" style="border: 1px solid gray; zoom:70%;"></a>   </p>
+</li>
+<li>
+<p>Apps created using the Guided Onboarding journey will be automatically published with the WebSDK channel enabled. However, the apps created through the Custom Journey will not be published automatically.</p>
+</li>
+<li>
 <p>The Product Switcher at the top of the left navigation lets you effortlessly switch between different products on the XO Platform.<br />
 <a class="glightbox" href="../images/xo-platform-productswitcher.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/xo-platform-productswitcher.png" alt="Product Switcher" title="Product Switcher" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
@@ -12547,11 +12557,24 @@
 </li>
 </ul>
 <h2 id="welcome-events-replaced-with-welcome-flows">Welcome Events Replaced with Welcome Flows<a class="headerlink" href="#welcome-events-replaced-with-welcome-flows" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
 <p>Earlier, incoming conversations were handled by events such as OnConnect/Welcome events. These events are now replaced with Flows. Flows are designed to replace the Welcome or OnConnect Message, Trigger a Dialog Task, or Run a Script.<br />
  <a class="glightbox" href="../images/xo-platform-welcomeflow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/xo-platform-welcomeflow.png" alt="Welcome flow" title="Welcome flow" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>The dialog builder now has a new "Return to Flow" option. This option allows the conversation to return to the Flow after completing an Automation node and continue executing the next connected nodes in the Flow. This option is in addition to the existing "Not connected" and "End of dialog" options.<br />
+ <a class="glightbox" href="../getting-started/images/return-to-flow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../getting-started/images/return-to-flow.png" alt="Return to flow" title="Return to flow" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>The new flow builder supports JavaScript, Templates, and VXML (IVR channels).</p>
+</li>
+</ul>
 <h2 id="dialog-builder-upgrade">Dialog Builder Upgrade<a class="headerlink" href="#dialog-builder-upgrade" title="Permanent link">&para;</a></h2>
 <p>XO11 has an all-new super intuitive dialog builder.<br />
 <a class="glightbox" href="../images/xo-platform-Dialogbuilder.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/xo-platform-Dialogbuilder.png" alt="Dialog Builder" title="Dialog Builder" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>The "Train" button appears whenever changes are made to the Dialogs, FAQs, and Training page (including utterances, patterns, traits, etc.), and when adding sources in Search AI.<br />
+<a class="glightbox" href="../getting-started/images/xo-platform-train.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../getting-started/images/xo-platform-train.png" alt="Train" title="Train" style="border: 1px solid gray; zoom:70%;"></a></p>
 <h2 id="talk-to-bot-moved-to-header">Talk to Bot Moved to Header<a class="headerlink" href="#talk-to-bot-moved-to-header" title="Permanent link">&para;</a></h2>
 <p>Talk to Bot has been renamed to <strong>Test</strong>. Users can Test Voice or Digital Conversation using Talk to Bot. Also, users can now see the current state of your conversation in the Talk-to-Bot (Test/Resume/Stop).<br />
 <a class="glightbox" href="../images/Talk-to-bot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Talk-to-bot.png" alt="Talk to bot" title="Talk to bot" style="border: 1px solid gray; zoom:70%;"></a><br />
@@ -12566,7 +12589,7 @@
 <p>All the LLM integrations can be managed in one place in an app and used across the products on the Platform. For example, Agent Response Rephrasing applies to both Contact Center AI and Agent AI.<br />
 <a class="glightbox" href="../images/xo-platform-LLM&generativeAI.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/xo-platform-LLM&generativeAI.png" alt="LLM & GenerativeAI" title="LLM & GenerativeAI" style="border: 1px solid gray; zoom:70%;"></a></p>
 <h2 id="global-user-management">Global User Management<a class="headerlink" href="#global-user-management" title="Permanent link">&para;</a></h2>
-<p>User Management is now applicable across the modules. You can set permissions, manage agent-related Permissions, Create a new Role, and Assign a role to a new or existing user. You can also assign a role to User groups (but the creation of User Groups is still in the Admin Console Page).<br />
+<p>User Management is now applicable across the modules. You can set permissions, manage agent-related Permissions, Create a new Role, and Assign a role to a new or existing user. You can also assign a role to User groups (but the creation of User Groups is still on the Admin Console page).<br />
 <a class="glightbox" href="../images/xo-platform-manageuser.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/xo-platform-manageuser.png" alt="User Management" title="User Management" style="border: 1px solid gray; zoom:70%;"></a></p>
 <h2 id="app-level-publishing-and-version-management">App Level Publishing and Version Management<a class="headerlink" href="#app-level-publishing-and-version-management" title="Permanent link">&para;</a></h2>
 <p>Be it Publishing Dialogs or Flows, everything is now done in one place. The Platform supports all variants of publishing (partial, full), version control, and Import and export in one centralized place.<br />
@@ -12590,6 +12613,8 @@ The platform offers different plans, and you can choose the plan for each produc
 <ul>
 <li>Languages are now at the App level. Users can add a language globally and access it inside a specific module. For example, a New Agent language assignment is only done if it is added globally at the App level.</li>
 <li>Dev tools offer all the developer-related menus, such as BotKit, API scopes, Auth profiles, etc., across the products.</li>
+<li>Now you can customize the WebSDK to align with your brand identity, including options such as color schemes, fonts, logos, headers, homepage design, etc.</li>
+<li>Standard account users won't have access to the Knowledge Graph feature but can still define FAQs by adding questions and answers. Enterprise account users will have access to the Knowledge Graph, allowing them to add tags, graphs, and other elements, similar to the functionality in XO10.</li>
 </ul>
 <hr>
 
