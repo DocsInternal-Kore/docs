@@ -4232,15 +4232,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-dialog" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default Dialog
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#standard-responses" class="md-nav__link">
     <span class="md-ellipsis">
       Standard Responses
@@ -12298,15 +12289,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-dialog" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default Dialog
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#standard-responses" class="md-nav__link">
     <span class="md-ellipsis">
       Standard Responses
@@ -12375,16 +12357,11 @@
 <h1 id="default-conversations">Default Conversations<a class="headerlink" href="#default-conversations" title="Permanent link">&para;</a></h1>
 <p>There are multiple places where the platform responds to user utterances without the developer having to code the details. Examples include:</p>
 <ul>
-<li><strong>Default Dialog</strong> when the user intent is not found or understood by the bot.</li>
+<li><strong>Intent not Identified</strong> when the user intent is not found or understood by the bot. <a href="../../event-handling/#intent-not-available-event" target="_blank">Learn more</a>.</li>
 <li><strong>Standard Responses</strong> to certain questions, greetings, error and warning scenarios, etc.</li>
 <li><strong>Event Handlers</strong> for certain common bot events can be defined. <a href="/docs/xo/automation/intelligence/event-handling/" target="_blank">Learn more</a>.</li>
 </ul>
 <p>Though these are set by default by the platform, you can customize them as per your business requirements. In this document, we look into such customizations.</p>
-<h2 id="default-dialog">Default Dialog<a class="headerlink" href="#default-dialog" title="Permanent link">&para;</a></h2>
-<p>You can choose to run a dialog task or display a standard error message if the Natural Language Processor cannot determine the user intent. The default setting is to display a standard error message.</p>
-<p>Click <strong>Use Cases</strong> &gt; <strong>Dialogs</strong> to define a default dialog task.</p>
-<p>For example, you can switch the conversation from the bot to a live agent, or run a generic dialog such as the main menu if the user intent is not determined in the bot conversation.</p>
-<p>If a default dialog task is not defined, standard error messages and any customizations defined in the <strong>Standard Responses</strong> section are used.</p>
 <h2 id="standard-responses">Standard Responses<a class="headerlink" href="#standard-responses" title="Permanent link">&para;</a></h2>
 <p>On the UXO Platform tool, you can view the default Natural Language Processing, or NLP interpreter responses to user inputs or events.</p>
 <p>For example, a reply to a user input of <em>Hi!</em> The bot replies with one of the following responses, chosen randomly at runtime:</p>
