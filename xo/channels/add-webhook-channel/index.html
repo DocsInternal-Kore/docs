@@ -13581,10 +13581,13 @@ For the list of Supported Bot Languages, read [Getting Started with Multilingual
 <li><em>to</em> – refers to the user to whom the message is delivered to.</li>
 <li><em>from</em> – identity (Stream Id) of the bot from which the response is generated.</li>
 <li><em>text</em> – contains the response(s) from the bot. Can be a string, object or an array of strings or objects.</li>
-<li><em>endOfTask</em> – indicating whether the task was completed or not, values <em>true</em> or <em>false</em>.</li>
 <li><em>endReason</em> – the reason for the task completion – <em>fulfilled</em>, <em>interrupted</em>, or <em>canceled</em></li>
 <li><em>completedTaskId</em> – the _id _of the dialog task triggered.</li>
 <li><em>completedTaskName</em> – the name of the dialog task triggered.</li>
+<li><em>endOfTask</em> – indicates whether the task is completed or not in the asynchronous mode. It gets added to the response after executing a dialog or fallback task. Possible values are <em>true</em> or <em>false</em>.</li>
+<li><em>endOfMessage</em> – indicates the last message of a session and is added in the asynchronous mode. It is added whenever a Smalltalk, Standard Response, or SessionClosure Event message is triggered, or after the execution of the entity node in the flow.</li>
+<li><em>partialMessage</em> – indicates that the message node is executed within the flow in the asynchronous mode.</li>
+<li><em>createdOn</em> - indicates the response is from a regular dialog node in a synchronous mode.</li>
 </ul>
 <h3 id="change-conversation-language-request">Change Conversation Language Request<a class="headerlink" href="#change-conversation-language-request" title="Permanent link">&para;</a></h3>
 <p>To change the language of an ongoing conversation, you can pass the <code>interactiveLanguage</code> as a parameter with a value (language code) of one of the configured VA languages.</p>
