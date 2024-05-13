@@ -12393,20 +12393,22 @@
 <h2 id="authorization-support-for-connectors">Authorization Support for Connectors<a class="headerlink" href="#authorization-support-for-connectors" title="Permanent link">&para;</a></h2>
 <p>Search AI supports two types of authorization mechanisms. </p>
 <ol>
-<li><strong>Basic</strong>: Basic Authorization involves sending a username and password with each request. These credentials are encoded and sent as a Base64-encoded string in the request header.</li>
+<li>
+<p><strong>Basic</strong>: Basic Authorization involves sending a username and password with each request. These credentials are encoded and sent as a Base64-encoded string in the request header.
+To use this type of authorization, provide your <strong>username</strong> and <strong>password</strong>. </p>
+</li>
+<li>
+<p><strong>OAuth 2.0</strong>: The OAuth 2.0 framework allows third-party applications to access resources on behalf of a user without sharing the credentials. It involves the exchange of access tokens between the client application and the authorization server. 
+To use this type of authorization mechanism, <strong>register Search AI as an Inbound OAuth client in your backend application.</strong></p>
+</li>
 </ol>
-<p>To use this type of authorization, provide your <strong>username</strong> and <strong>password</strong>. </p>
-<ol>
-<li><strong>OAuth 2.0</strong>: The OAuth 2.0 framework allows third-party applications to access resources on behalf of a user without sharing the credentials. It involves the exchange of access tokens between the client application and the authorization server. </li>
-</ol>
-<p><strong>To use this type of authorization mechanism, register Search AI as an Inbound OAuth client in your backend application.</strong></p>
 <p>OAuth 2.0 protocol defines several grant types for different use cases. Each grant type is designed to address specific authorization scenarios. </p>
 <p>Currently, SearchAI supports the following two grant types:</p>
 <ol>
-<li><strong>Client credentials Grant Type</strong>: In this type, the client application(SearchAI, here) directly accesses the resources from the backend application. The client sends the client ID and client secret and gets an access token to access the resources directly. </li>
-</ol>
+<li>
+<p><strong>Client credentials Grant Type</strong>: In this type, the client application(SearchAI, here) directly accesses the resources from the backend application. The client sends the client ID and client secret and gets an access token to access the resources directly. </p>
 <p>For this type of authentication, provide the <strong>client ID</strong> and <strong>client secret</strong> generated after registering Search AI as an OAuth client application. </p>
-<ol>
+</li>
 <li>
 <p><strong>Authorization Code Grant Type</strong>: In the type, the client application(SearchAI) accesses the resources on behalf of a user. When the client communicates with the backend application, after verification of the client ID and client secret, it is redirected to the login process when the user needs to log in and provide consent to access the resources.</p>
 <p>For this type of authentication, both the <strong>client credentials</strong> as well as the <strong>user credentials</strong> are required to access the resources. </p>
