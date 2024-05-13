@@ -12154,6 +12154,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-configure-an-application-in-the-dropbox-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Configure an application in the Dropbox Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-configuring-the-dropbox-connector-in-the-searchassist-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Configuring the Dropbox connector in the SearchAssist application
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -12170,7 +12196,7 @@
   
 
 
-<h1 id="dropbox-connector"><strong>Dropbox Connector</strong><a class="headerlink" href="#dropbox-connector" title="Permanent link">&para;</a></h1>
+<h1 id="dropbox-connector">Dropbox Connector<a class="headerlink" href="#dropbox-connector" title="Permanent link">&para;</a></h1>
 <p>If you are using Dropbox to store and manage your content, you can easily search through that content using the Dropbox connector provided by Search AI. </p>
 <p><span style="text-decoration:underline;">Specifications</span></p>
 <table>
@@ -12200,7 +12226,7 @@ Note: Password-protected files in any format are not supported
 <li>Configure an application in your Dropbox account with appropriate permissions.</li>
 <li>Configure the Dropbox connector in the SearchAssist application.</li>
 </ul>
-<h1 id="step-1-configure-an-application-in-the-dropbox-account">Step 1: Configure an application in the Dropbox Account<a class="headerlink" href="#step-1-configure-an-application-in-the-dropbox-account" title="Permanent link">&para;</a></h1>
+<h2 id="step-1-configure-an-application-in-the-dropbox-account">Step 1: Configure an application in the Dropbox Account<a class="headerlink" href="#step-1-configure-an-application-in-the-dropbox-account" title="Permanent link">&para;</a></h2>
 <p>To create an application in the Dropbox account, log in to the <a href="https://www.dropbox.com/developers/apps">Dropbox Developer Portal</a>. Create a new app. On the Create app widget, under Choose an API, select Scoped access and select the type of access you need. </p>
 <p><a class="glightbox" href="../images/dropbox/create-app.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="../images/dropbox/create-app.png" title="Create App" /></a></p>
 <p>Provide a name for the application, review the terms and conditions, and click Create app. Next, configure the application and enable appropriate permissions. Go to the Permissions tab or click on  Scoped App. </p>
@@ -12210,13 +12236,13 @@ Note: Password-protected files in any format are not supported
 <li>files.content.read</li>
 <li>sharing.read</li>
 </ul>
-<p><a class="glightbox" href="../images/dropbox/permission-types.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Permissions" src="../images/dropbox/permission-types.png" title="Permissions" /></a></p>
+<p><a class="glightbox" href="../images/dropbox/permissions-types.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Permissions" src="../images/dropbox/permissions-types.png" title="Permissions" /></a></p>
 <p>Set the Redirect URIs under the Settings tab to the following URL.</p>
 <p>SearchAssist Prod Redirect URI : <a href="https://idp.kore.com/workflows/callback?__hstc=59894770.28210ac89bd49725c54c92ebeabe794b.1663135555706.1715330815958.1715335858461.699&amp;__hssc=59894770.2.1715335858461&amp;__hsfp=659442714">https://idp.kore.com/workflows/callback</a></p>
 <p><a class="glightbox" href="../images/dropbox/redirect-url.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Redirect URL" src="../images/dropbox/redirect-url.png" title="Redirect URI" /></a></p>
 <p>Save the <strong>App key</strong> and <strong>App secret</strong> displayed on this page. These credentials are required for the configuration of the Dropbox connector in the SearchAssist application. </p>
 <p><a class="glightbox" href="../images/dropbox/app-credentials.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="App credentials" src="../images/dropbox/app-credentials.png" title="App Credentials" /></a></p>
-<h1 id="step-2-configuring-the-dropbox-connector-in-the-searchassist-application">Step 2: Configuring the Dropbox connector in the SearchAssist application<a class="headerlink" href="#step-2-configuring-the-dropbox-connector-in-the-searchassist-application" title="Permanent link">&para;</a></h1>
+<h2 id="step-2-configuring-the-dropbox-connector-in-the-searchassist-application">Step 2: Configuring the Dropbox connector in the SearchAssist application<a class="headerlink" href="#step-2-configuring-the-dropbox-connector-in-the-searchassist-application" title="Permanent link">&para;</a></h2>
 <p>To complete the integration, log in to your Search AI application. Go to the Connectors under the Sources and select <strong>Dropbox</strong> connector.  Provide the following config parameters on the <strong>Authorization</strong> tab and click Connect. </p>
 <ul>
 <li>Name – Unique name for the connector </li>

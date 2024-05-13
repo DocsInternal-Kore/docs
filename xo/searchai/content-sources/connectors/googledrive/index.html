@@ -12231,10 +12231,10 @@ Note: Password-protected files in any format are not supported
 <ol>
 <li>Login to your<a href="https://console.cloud.google.com/"> Google developer console</a> and <a href="https://developers.google.com/workspace/guides/create-project">Create a Google Cloud project</a>. If you are using an existing project, skip this step.</li>
 <li><a href="https://developers.google.com/workspace/guides/enable-apis">Find Google Drive API and enable it</a> in your Google Cloud project.</li>
-<li>To enable OAuth 2.0 authentication, <a href="https://developers.google.com/workspace/guides/configure-oauth-consent">configure OAuth consent</a>. Provide the name of the application, email address, app logo, and developer contact information. </li>
-</ol>
-<p><a class="glightbox" href="../images/googledrive/oauth-consent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="OAuth Consent" src="../images/googledrive/oauth-consent.png" title="OAuth Consent" /></a></p>
-<ol>
+<li>
+<p>To enable OAuth 2.0 authentication, <a href="https://developers.google.com/workspace/guides/configure-oauth-consent">configure OAuth consent</a>. Provide the name of the application, email address, app logo, and developer contact information. 
+<a class="glightbox" href="../images/googledrive/oauth-consent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="OAuth Consent" src="../images/googledrive/oauth-consent.png" title="OAuth Consent" /></a></p>
+</li>
 <li>
 <p>Set up permissions for the application. Under Scopes, click on <em>ADD OR REMOVE SCOPES</em>. Select the following scopes for Google Drive API and click on _UPDATE _at the bottom of the page.</p>
 <ul>
@@ -12250,14 +12250,14 @@ Note: Password-protected files in any format are not supported
 <p><a class="glightbox" href="../images/googledrive/user-type.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="User Type" src="../images/googledrive/user-type.png" title="User Type" /></a></p>
 </li>
 <li>
-<p>While you are still in development or testing mode, you can set the publishing status of the application to Testing. In testing mode, only the users added can access the application while in production mode, the application is available publicly to everyone with a Google account. </p>
-</li>
-</ol>
-<p><a class="glightbox" href="../images/googledrive/publishing-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Publishing Status" src="../images/googledrive/publishing-status.png" title="Publishing Status" /></a></p>
-<p>If the publishing status is set to Testing, you can add your test users by clicking on <em>ADD USERS</em> on the same page. 
+<p>While you are still in development or testing mode, you can set the publishing status of the application to Testing. In testing mode, only the users added can access the application while in production mode, the application is available publicly to everyone with a Google account. 
+<a class="glightbox" href="../images/googledrive/publishing-status.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Publishing Status" src="../images/googledrive/publishing-status.png" title="Publishing Status" /></a>
+If the publishing status is set to Testing, you can add your test users by clicking on <em>ADD USERS</em> on the same page. 
 <a class="glightbox" href="../images/googledrive/add-users.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add Users" src="../images/googledrive/add-users.png" title="Add Users" /></a></p>
-<ol>
-<li><a href="https://developers.google.com/workspace/guides/create-credentials">Create OAuth access credentials</a> to authenticate the client (SearchAI). Enter the <em>Application type</em> as <em>Web Application</em> and give it a name. Add the URL of your  SearchAssist deployment as <em>Authorized redirect URIs</em> and click <em>CREATE</em>.</li>
+</li>
+<li>
+<p><a href="https://developers.google.com/workspace/guides/create-credentials">Create OAuth access credentials</a> to authenticate the client (SearchAI). Enter the <em>Application type</em> as <em>Web Application</em> and give it a name. Add the URL of your  SearchAssist deployment as <em>Authorized redirect URIs</em> and click <em>CREATE</em>.</p>
+</li>
 </ol>
 <p>You can use one of the following URLs as per your region.</p>
 <div class="language-text highlight"><pre><span></span><code>* JP Region Callback URL: https://jp-bots-idp.kore.ai/workflows/callback
@@ -12269,7 +12269,7 @@ Note: Password-protected files in any format are not supported
 <p><a class="glightbox" href="../images/googledrive/download-credentials.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Download Credentials" src="../images/googledrive/download-credentials.png" title="Download Credentials" /></a></p>
 <h2 id="step-2-configuring-the-google-drive-connector-in-searchai">Step 2: Configuring the Google Drive connector in SearchAI<a class="headerlink" href="#step-2-configuring-the-google-drive-connector-in-searchai" title="Permanent link">&para;</a></h2>
 <ol>
-<li>To configure the Google Drive connector, go to the <strong><em>Connectors _**under **_Sources _**and select **_Google Drive</em></strong>.</li>
+<li>To configure the Google Drive connector, go to the <strong>Connectors</strong> under <strong>Sources**and select **Google Drive</strong>.</li>
 <li>Configure the authorization parameters for the connector and click <strong>Connect</strong>.<ul>
 <li><strong>Name</strong>- Unique name for the connector.</li>
 <li><strong>Authorization Type</strong> - Search AI supports <strong>OAuth 2.0 for Google Drive.</strong> Set this field accordingly.</li>
