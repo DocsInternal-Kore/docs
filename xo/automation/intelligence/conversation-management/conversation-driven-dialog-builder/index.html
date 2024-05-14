@@ -12320,40 +12320,48 @@
 <p>Configure the fields based on the option you select:</p>
 </li>
 </ol>
-<p><strong>(Option A)</strong>: <strong>Start From Scratch</strong></p>
-<p>Enter the following and click <strong>Proceed</strong>.
- * <strong>Intent Name</strong>: For example, "<em>Create Savings Account</em>."
- * <strong>Description</strong>: Provide a description based on the intent for the dialog you're creating.
- * <strong>Intent Training</strong> – Enter utterances that would trigger this intent.
- * <strong>More Options</strong>: You can set the following options:
-   * <strong>Customer Use Case</strong>: Enable this option to make the use case available to the customer.
-   * <strong>Agent AI Use Case</strong>: Enable this option to make the use case available on Agent AI for an agent and select one the following scenarios based on your requirement:
-     * <strong>During Chats</strong>: To manually or automatically trigger a use case by the agent when engaged with a customer in a chat based channel.
-     * <strong>During Email</strong>: To manually or automatically trigger a use case by the agent when engaged with a customer in an email channel.
-     * <strong>During Calls</strong>: To manually or automatically trigger a use case by the agent when engaged with a customer on a phone call.
-     * <strong>Launch By Menu</strong>: To list the use case in the AgentAssist library allowing the agent to browse and find use case to trigger it.
-    * <strong>Intent Settings</strong>: You can set how the dialog task will be presented to the bot based on the intent by selecting one of these options:
-    * <strong>Sub intent dialog</strong>: Task can be invoked only as a sub-task when another task is in progress. Task will not be presented as a bot task when user requests for help.
-    * <strong>Hide from help</strong>: Task will not be presented as a bot task when the user requests for help. Users can invoke this task anytime while talking to the bot.
-    * <strong>Analytics - Containment Type</strong>: When you leave a conversation without providing an input, then the platform considers that conversation as a <strong>Drop Off</strong>. Drop off also results in scenarios where the virtual assistant asks input for feedback or when it asks if there is  ‘anything else’ with which it can help you. At times even if the tasks are helper tasks, they still lead to higher drop-off rates. To prevent this, while creating a dialog task you are provided with an option to configure the containment type as either drop-off or a self-service, when the user abandons the conversation. Based on the user abandonment type, select one of the following:
-    * <strong>Abandonment as Self-Service</strong>: Conversations abandoned by users while executing this Dialog are considered 'Self-service Conversations'. Other failures are considered 'Drop-off Conversations'.
-    * <strong>Abandonment as Drop Off</strong>: Conversations abandoned by users or any failures during execution of this Dialog will be considered as Drop off.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>By default  'Abandonment as Drop Off' is selected as an option for Analytics – Containment Type. In this case, any conversation abandoned by the user is considered a drop-off during dialog execution.
-If you select Abandonment as Self-Service, then any conversation abandoned by the user is considered a self-service conversation.  However, any script, service or any other failures are considered as drop-off conversations.</p>
-</div>
-<p><a class="glightbox" href="../images/create-custom-dialog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/create-custom-dialog.png" alt="create custom dialog" title="create custom dialog" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p><strong>(Option B)</strong>: <strong>Gen AI</strong> </p>
-<p>Uses Gen AI to generate a dialog task from a preexisting template based on the intent you provide. Enter the following to generate the dialog and click <strong>Generate</strong>.
-* <strong>Intent Name</strong>: For example, "<em>Create Savings Account</em>."
-* <strong>Description</strong>: Provide a description based on the intent for the dialog you're creating.</p>
-<p><a class="glightbox" href="../images/gen-ai-based-dialog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/gen-ai-based-dialog.png" alt="gen ai dialog" title="gen ai dialog" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p>A preview of the auto-generated dialog flow appears on the right pane. You can either click <strong>Proceed</strong> to create the dialog, or <strong>Regenerate</strong> to generate another dialog flow based on your intent.</p>
-<p><a class="glightbox" href="../images/preview-gen-a-dalog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/preview-gen-a-dalog.png" alt="gen ai dialog preview" title="gen ai dialog preview" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p><strong>(Option C): Marketplace</strong></p>
-<p>To find and install a third-party dialog template out of 150+ categories and 30+ integrations, select <strong>Marketplace</strong>.
-<a class="glightbox" href="../images/market-place-dialogs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/market-place-dialogs.png" alt="marketplace dialogs" title="marketplace dialogs" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p><strong>(Option A): Start From Scratch</strong></p>
+<p>Enter the following and click <strong>Proceed</strong>.</p>
+<ul><li><b>Intent Name</b>: For example, "<i>Create Savings Account</i>."</li>
+<li><b>Description</b>: Provide a description based on the intent for the dialog you're creating.</li>
+<li><b>Intent Training</b> – Enter utterances that would trigger this intent.</li>
+<li><b>More Options</b>: You can set the following options:</li>
+     <ul><li><b>Customer Use Case</b>: Enable this option to make the use case available to the customer.</li>
+     <li><b>Agent AI Use Case</b>: Enable this option to make the use case available on Agent AI for an agent and select one the following scenarios based on your requirement:</li>
+       <ul><li><b>During Chats</b>: To manually or automatically trigger a use case by the agent when engaged with a customer in a chat based channel.</li>
+       <li><b>During Email</b>: To manually or automatically trigger a use case by the agent when engaged with a customer in an email channel.</li>
+       <li><b>During Calls</b>: To manually or automatically trigger a use case by the agent when engaged with a customer on a phone call.</li>
+       <li><b>Launch By Menu</b>: To list the use case in the AgentAssist library allowing the agent to browse and find use case to trigger it.</li></ul>
+     <li><b>Intent Settings</b>: You can set how the dialog task will be presented to the bot based on the intent by selecting one of these options:</li>
+       <ul><li><b>Sub intent dialog</b>: Task can be invoked only as a sub-task when another task is in progress. Task will not be presented as a bot task when user requests for help.</li>
+      <li><b>Hide from help</b>: Task will not be presented as a bot task when the user requests for help. Users can invoke this task anytime while talking to the bot.</li>
+      <li><b>Analytics - Containment Type</b>: When you leave a conversation without providing an input, then the platform considers that conversation as a <b>Drop Off</b>. Drop off also results in scenarios where the virtual assistant asks input for feedback or when it asks if there is  ‘anything else’ with which it can help you. At times even if the tasks are helper tasks, they still lead to higher drop-off rates. To prevent this, while creating a dialog task you are provided with an option to configure the containment type as either drop-off or a self-service, when the user abandons the conversation. Based on the user abandonment type, select one of the following:</li>
+    <ul><li><b>Abandonment as Self-Service</b>: Conversations abandoned by users while executing this Dialog are considered 'Self-service Conversations'. Other failures are considered 'Drop-off Conversations'.</li>
+    <li><b>Abandonment as Drop Off</b>: Conversations abandoned by users or any failures during execution of this Dialog will be considered as Drop off.</li></ul></ul></ul>
+
+!!!note
+
+    By default  'Abandonment as Drop Off' is selected as an option for Analytics – Containment Type. In this case, any conversation abandoned by the user is considered a drop-off during dialog execution.
+    If you select Abandonment as Self-Service, then any conversation abandoned by the user is considered a self-service conversation.  However, any script, service or any other failures are considered as drop-off conversations.
+
+<a class="glightbox" href="../images/create-custom-dialog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/create-custom-dialog.png" alt="create custom dialog" title="create custom dialog" style="border: 1px solid gray; zoom:75%;"></a>
+
+**(Option B): Gen AI** 
+
+Uses Gen AI to generate a dialog task from a preexisting template based on the intent you provide. Enter the following to generate the dialog and click **Generate**.
+* **Intent Name**: For example, "*Create Savings Account*."
+* **Description**: Provide a description based on the intent for the dialog you're creating.
+
+<a class="glightbox" href="../images/gen-ai-based-dialog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/gen-ai-based-dialog.png" alt="gen ai dialog" title="gen ai dialog" style="border: 1px solid gray; zoom:75%;"></a>
+
+A preview of the auto-generated dialog flow appears on the right pane. You can either click **Proceed** to create the dialog, or **Regenerate** to generate another dialog flow based on your intent.
+
+<a class="glightbox" href="../images/preview-gen-a-dalog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/preview-gen-a-dalog.png" alt="gen ai dialog preview" title="gen ai dialog preview" style="border: 1px solid gray; zoom:75%;"></a>
+
+**(Option C): Marketplace**
+
+To find and install a third-party dialog template out of 150+ categories and 30+ integrations, select **Marketplace**.
+<a class="glightbox" href="../images/market-place-dialogs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/market-place-dialogs.png" alt="marketplace dialogs" title="marketplace dialogs" style="border: 1px solid gray; zoom:75%;"></a>
 
 
 
