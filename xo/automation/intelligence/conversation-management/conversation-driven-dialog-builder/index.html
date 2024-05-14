@@ -12234,26 +12234,27 @@
 </li>
 <li>
 <p>Configure the fields based on the option you select:</p>
-<p><strong>(Option A)</strong>: <strong>Start From Scratch</strong></p>
-<p>Enter the following and click <strong>Proceed</strong>.
-* <strong>Intent Name</strong>: For example, "<em>Create Savings Account</em>."
-* <strong>Description</strong>: Provide a description based on the intent for the dialog you're creating.
-* <strong>Intent Training</strong> – Enter utterances that would trigger this intent.
-* <strong>More Options</strong>: You can set the following options:
-  * <strong>Customer Use Case</strong>: Enable this option to make the use case available to the customer.
-  * <strong>Agent AI Use Case</strong>: Enable this option to make the use case available on Agent AI for an agent and select one the following scenarios based on your requirement:
-    * <strong>During Chats</strong>: To manually or automatically trigger a use case by the agent when engaged with a customer in a chat based channel.
-    * <strong>During Email</strong>: To manually or automatically trigger a use case by the agent when engaged with a customer in an email channel.
-    * <strong>During Calls</strong>: To manually or automatically trigger a use case by the agent when engaged with a customer on a phone call.
-    * <strong>Launch By Menu</strong>: To list the use case in the AgentAssist library allowing the agent to browse and find use case to trigger it.
-  * <strong>Intent Settings</strong>: You can set how the dialog task will be presented to the bot based on the intent by selecting one of these options:
-    * <strong>Sub intent dialog</strong>: Task can be invoked only as a sub-task when another task is in progress. Task will not be presented as a bot task when user requests for help.
-    * <strong>Hide from help</strong>: Task will not be presented as a bot task when the user requests for help. Users can invoke this task anytime while talking to the bot.
-  * <strong>Analytics - Containment Type</strong>: When you leave a conversation without providing an input, then the platform considers that conversation as a <strong>Drop Off</strong>. Drop off also results in scenarios where the virtual assistant asks input for feedback or when it asks if there is  ‘anything else’ with which it can help you. At times even if the tasks are helper tasks, they still lead to higher drop-off rates. To prevent this, while creating a dialog task you are provided with an option to configure the containment type as either drop-off or a self-service, when the user abandons the conversation. Based on the user abandonment type, select one of the following:
-    * <strong>Abandonment as Self-Service</strong>: Conversations abandoned by users while executing this Dialog are considered 'Self-service Conversations'. Other failures are considered 'Drop-off Conversations'.
-    * <strong>Abandonment as Drop Off</strong>: Conversations abandoned by users or any failures during execution of this Dialog will be considered as Drop off.</p>
 </li>
 </ol>
+<p><strong>(Option A)</strong>: <strong>Start From Scratch</strong></p>
+<div class="language-text highlight"><pre><span></span><code>Enter the following and click **Proceed**.
+* **Intent Name**: For example, &quot;*Create Savings Account*.&quot;
+* **Description**: Provide a description based on the intent for the dialog you&#39;re creating.
+* **Intent Training** – Enter utterances that would trigger this intent.
+* **More Options**: You can set the following options:
+  * **Customer Use Case**: Enable this option to make the use case available to the customer.
+  * **Agent AI Use Case**: Enable this option to make the use case available on Agent AI for an agent and select one the following scenarios based on your requirement:
+    * **During Chats**: To manually or automatically trigger a use case by the agent when engaged with a customer in a chat based channel.
+    * **During Email**: To manually or automatically trigger a use case by the agent when engaged with a customer in an email channel.
+    * **During Calls**: To manually or automatically trigger a use case by the agent when engaged with a customer on a phone call.
+    * **Launch By Menu**: To list the use case in the AgentAssist library allowing the agent to browse and find use case to trigger it.
+  * **Intent Settings**: You can set how the dialog task will be presented to the bot based on the intent by selecting one of these options:
+    * **Sub intent dialog**: Task can be invoked only as a sub-task when another task is in progress. Task will not be presented as a bot task when user requests for help.
+    * **Hide from help**: Task will not be presented as a bot task when the user requests for help. Users can invoke this task anytime while talking to the bot.
+  * **Analytics - Containment Type**: When you leave a conversation without providing an input, then the platform considers that conversation as a **Drop Off**. Drop off also results in scenarios where the virtual assistant asks input for feedback or when it asks if there is  ‘anything else’ with which it can help you. At times even if the tasks are helper tasks, they still lead to higher drop-off rates. To prevent this, while creating a dialog task you are provided with an option to configure the containment type as either drop-off or a self-service, when the user abandons the conversation. Based on the user abandonment type, select one of the following:
+    * **Abandonment as Self-Service**: Conversations abandoned by users while executing this Dialog are considered &#39;Self-service Conversations&#39;. Other failures are considered &#39;Drop-off Conversations&#39;.
+    * **Abandonment as Drop Off**: Conversations abandoned by users or any failures during execution of this Dialog will be considered as Drop off.
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>By default  'Abandonment as Drop Off' is selected as an option for Analytics – Containment Type. In this case, any conversation abandoned by the user is considered a drop-off during dialog execution.
