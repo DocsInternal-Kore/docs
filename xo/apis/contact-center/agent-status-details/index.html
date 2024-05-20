@@ -12332,7 +12332,7 @@
 </tbody>
 </table>
 <h2 id="sample-request">Sample Request<a class="headerlink" href="#sample-request" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl --location --request POST &#39;https://staging-smartassist.kore.ai/agentassist/api/public/analytics/account/63f07d26f04465685df43234/agentstatusdetails?limit=8&amp;offset=0&#39; \
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl --location --request POST &#39;https://{{host}}/agentassist/api/public/analytics/account/63f07d26f04465685df4xxxx/agentstatusdetails?limit=8&amp;offset=0&#39; \
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>--header &#39;auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiYXBwSWQiOiJjcy1iMDIzM2M2Ny0zMjJlLTVkMWEtOWZiNy0z
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>NjZlN2Y1OTE1YTcifQ.d_q_yz0CKAm5w0TLbB2Rfpf_aMDPMBytThCMNiHCX5A&#39; \
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>--header &#39;Content-Type: application/json&#39; \
@@ -12358,7 +12358,7 @@
 <tr>
 <td>filter</td>
 <td>Object with agents and date filter as the fields.</td>
-<td>String, Required</td>
+<td>string, required</td>
 </tr>
 <tr>
 <td>agents</td>
@@ -12368,17 +12368,17 @@
 <tr>
 <td>dateFilter</td>
 <td>Object with start date, end date, and time zone offset as the fields. It contains the following details to filter the result set.</td>
-<td>Number, Required</td>
+<td>number, required</td>
 </tr>
 <tr>
 <td>startDate</td>
 <td>The start date from which the records need to be considered. The date format is: <code>yyyy-mm-dd</code>. For example, <code>2022-08-25</code></td>
-<td>Date, Required</td>
+<td>date, required</td>
 </tr>
 <tr>
 <td>endDate</td>
 <td>The end date from which the records need to be considered. The date format is: <code>yyyy-mm-dd</code>. For example, <code>2022-08-25</code></td>
-<td>Date, Required</td>
+<td>date, required</td>
 </tr>
 <tr>
 <td>timeZoneOffSet</td>
