@@ -9649,6 +9649,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jwt-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      JWT Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stateless-web-sdk-and-session-persistence" class="md-nav__link">
     <span class="md-ellipsis">
       Stateless Web SDK and Session Persistence
@@ -12344,6 +12353,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jwt-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      JWT Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stateless-web-sdk-and-session-persistence" class="md-nav__link">
     <span class="md-ellipsis">
       Stateless Web SDK and Session Persistence
@@ -12398,11 +12416,11 @@
 <h2 id="session-management-between-web-sdk-and-bot-platform">Session Management between Web SDK and Bot Platform<a class="headerlink" href="#session-management-between-web-sdk-and-bot-platform" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The Web SDK uses JSON Web Tokens (JWTs) to establish a secure session with the Kore.ai platform on behalf of the end user.</li>
-<li>When the SDK is initialized, it calls a client-provided assertion function that generates a signed JWT containing the user identity and client app credentials.To make the signing secured this assertion function will internally call the the JWT generation service to get the JWT</li>
+<li>When the SDK is initialized, it calls a client-provided assertion function that generates a signed JWT containing the user identity and client app credentials. To make the signing secured this assertion function will internally call the the JWT generation service to get the JWT</li>
 <li>This JWT is sent to the Kore.ai platform to authenticate the user and establish the bot session.</li>
 <li>The session is maintained at client-side using web sockets. The messages between the SDK and the bot platform are exchanged using this secure web socket.</li>
 </ul>
-<p><strong>JWT Flow:</strong></p>
+<h2 id="jwt-flow">JWT Flow<a class="headerlink" href="#jwt-flow" title="Permanent link">&para;</a></h2>
 <p><a class="glightbox" href="../images/JWT-flow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="JWT Flow" src="../images/JWT-flow.png" title="JWT Flow" /></a></p>
 <h2 id="stateless-web-sdk-and-session-persistence">Stateless Web SDK and Session Persistence<a class="headerlink" href="#stateless-web-sdk-and-session-persistence" title="Permanent link">&para;</a></h2>
 <ul>
