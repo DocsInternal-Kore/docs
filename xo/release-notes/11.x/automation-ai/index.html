@@ -12933,10 +12933,18 @@
 <h3 id="digital-forms">Digital Forms<a class="headerlink" href="#digital-forms" title="Permanent link">&para;</a></h3>
 <h4 id="preprocessor-script-support-for-digital-forms">Preprocessor Script Support for Digital Forms<a class="headerlink" href="#preprocessor-script-support-for-digital-forms" title="Permanent link">&para;</a></h4>
 <p>The Digital Forms module now provides the ability to dynamically configure the form definition and behavior. The newly introduced Preprocessor configuration allows updating the form definition dynamically using JavaScript. The platform executes this preprocessor during the runtime and delivers the form definition to the channel. The preprocessor can use the environment, content, and context variables. </p>
-<p>The following are some of the key use cases:
-1. Dynamically changing the form field titles, descriptions, etc. 
-2. Dynamically populating the values of fields, for e.g., options in a  drop-down component
-3. Changing the language of the messages to support multilingual conversations </p>
+<p>The following are some of the key use cases:</p>
+<ol>
+<li>
+<p>Dynamically changing the form field titles, descriptions, etc. </p>
+</li>
+<li>
+<p>Dynamically populating the values of fields, for e.g., options in a  drop-down component</p>
+</li>
+<li>
+<p>Changing the language of the messages to support multilingual conversations </p>
+</li>
+</ol>
 <p>The koreUtil library has been extended with the "getFormDefinition" function to retrieve and modify the form definition.</p>
 <p>This feature also helps address the current limitation of system messages available only in English. The "formMsgMeta" section of the form data contains the full list of system messages and errors, which can be modified using the Preprocessor.</p>
 <h3 id="sdk-configuration">SDK Configuration<a class="headerlink" href="#sdk-configuration" title="Permanent link">&para;</a></h3>
