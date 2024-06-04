@@ -4288,6 +4288,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#rcs-opt-in-opt-out-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      RCS Opt-In / Opt-Out Events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#repeat-bot-response-event" class="md-nav__link">
     <span class="md-ellipsis">
       Repeat Bot Response Event
@@ -4326,59 +4335,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#channel-events" class="md-nav__link">
+  <a href="#sentiment-events" class="md-nav__link">
     <span class="md-ellipsis">
-      Channel Events
+      Sentiment Events
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Channel Events">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#facebook-telegram-welcome-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Facebook &amp; Telegram Welcome Events
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#telephony-welcome-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      Telephony Welcome Event
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Telephony Welcome Event">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ivr-impact" class="md-nav__link">
-    <span class="md-ellipsis">
-      IVR Impact
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rcs-opt-in-opt-out-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      RCS Opt-In / Opt-Out Events
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -13045,6 +13006,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#rcs-opt-in-opt-out-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      RCS Opt-In / Opt-Out Events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#repeat-bot-response-event" class="md-nav__link">
     <span class="md-ellipsis">
       Repeat Bot Response Event
@@ -13083,59 +13053,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#channel-events" class="md-nav__link">
+  <a href="#sentiment-events" class="md-nav__link">
     <span class="md-ellipsis">
-      Channel Events
+      Sentiment Events
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Channel Events">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#facebook-telegram-welcome-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Facebook &amp; Telegram Welcome Events
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#telephony-welcome-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      Telephony Welcome Event
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Telephony Welcome Event">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ivr-impact" class="md-nav__link">
-    <span class="md-ellipsis">
-      IVR Impact
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rcs-opt-in-opt-out-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      RCS Opt-In / Opt-Out Events
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -13416,14 +13338,17 @@
 <p><a class="glightbox" href="../images/task-execution-failure-event.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/task-execution-failure-event.png" alt="task execution failure event" title="task execution failure event" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ul>
+<h4 id="rcs-opt-in-opt-out-events">RCS Opt-In / Opt-Out Events<a class="headerlink" href="#rcs-opt-in-opt-out-events" title="Permanent link">&para;</a></h4>
+<p><strong>These events trigger on receiving <em>opt-in</em> or <em>opt-out</em> requests from users via the RCS channel. These events allow you to configure a response to be sent to the user as a follow-up for their action.</strong>
+<a class="glightbox" href="../images/rcs-opt-in.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/rcs-opt-in.png" alt="rcs opt-in" title="rcs opt-in" style="border: 1px solid gray; zoom:75%;"></a></p>
 <h4 id="repeat-bot-response-event">Repeat Bot Response Event<a class="headerlink" href="#repeat-bot-response-event" title="Permanent link">&para;</a></h4>
 <p>The <strong>Repeat Bot Response</strong> event is triggered to repeat the last bot response when certain predefined or custom-trained utterances are detected in voice channels such as IVR, Audiocodes, or Twilio Voice. </p>
-<p>To enable this event, a bot developer must define the context object as a precondition for triggering the event. This context object contains the specific set of utterances that should be recognized to repeat the bot’s most recent or last response.</p>
-<p>By configuring the context object with appropriate utterances, the bot can understand specific phrases or keywords from the user to trigger the <strong>Repeat Bot Response</strong> event. When one of these utterances is detected, the bot will repeat the last response</p>
-<p>A bot developer can activate the <strong>Repeat Bot Response</strong> event and custom-train when this event can be triggered with conditions at any point in the conversation and can ask the bot to repeat its recent responses.</p>
+<p>To enable this event, the developer must define the context object as a precondition for triggering the event. This context object contains the specific set of utterances that should be recognized to repeat the bot’s most recent or last response.</p>
+<p>By configuring the context object with appropriate utterances, the bot can understand specific phrases or keywords from the user to trigger the <strong>Repeat Bot Response</strong> event. When one of these utterances is detected, the bot will repeat the last response.</p>
+<p>A developer can activate the <strong>Repeat Bot Response</strong> event and custom-train when this event can be triggered with conditions at any point in the conversation and can ask the bot to repeat its recent responses.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The Repeat Bot Response event uses the NLU multilingual model for Non-English languages.</p>
+<p>The Repeat Bot Response event uses the NLU multilingual model for non-English languages.</p>
 </div>
 <p>The following are some of the scenarios and the repeat bot response event behavior in those scenarios:</p>
 <table border="1.5">
@@ -13476,15 +13401,15 @@
 <p>In the Flight Booking VA, the user couldn’t hear the last response on an IVR channel, and the user said, <code>"Sorry, I can't hear you. Can you please repeat it again?"</code></p>
 <p>In this conversation, the dialog has reached the end, and the last response says, <code>"Thank you. Your flight has been booked successfully. Your booking reference number is XYZ789 and you will receive a message shortly "</code>(Dialog reached to END).</p>
 <p><strong>Solution</strong></p>
-<p>If the conversation session is not closed or the call is not disconnected after the end of the dialog, the Repeat Bot Response event is triggered, and the last message of the dialog task is repeated when you configure a task in the End of Task event with a message that says <code>"Is there anything else I can help you with?"</code>. For more information, see the <a href="/docs/xo/automation/intelligence/event-handling/#end-of-conversation" target="_blank">End of Conversation</a> section.</p>
+<p>If the conversation session is not closed or the call is not disconnected after the end of the dialog, the Repeat Bot Response event is triggered, and the last message of the dialog task is repeated when you configure a task in the End of Task event with a message that says <code>"Is there anything else I can help you with?"</code>. For more information, see the <a href="./#end-of-task">End of Task</a> section.</p>
 <p>Now the ‘Repeat Bot Responses’ event considers the end of dialog after the ‘Last User Input’ configuration, the repeat response will say, <code>"Thank you. Your flight has been booked successfully. Your booking reference number is XYZ789 and you will receive a message shortly. Is there anything else I can help you with?".</code></p>
 <h5 id="enabling-the-repeat-bot-response-event">Enabling the Repeat Bot Response Event<a class="headerlink" href="#enabling-the-repeat-bot-response-event" title="Permanent link">&para;</a></h5>
-<p>A bot developer uses the <strong>Repeat Bot Response</strong> to allow you to repeat the responses that users might have missed or if it is not clear during the conversation on an IVR channel.</p>
+<p>The developer uses the <strong>Repeat Bot Response</strong> to allow you to repeat the responses that users might have missed or if it is not clear during the conversation on an IVR channel.</p>
 <p><strong>Steps to Enable the Repeat Bot Response Event</strong></p>
 <ol>
 <li>Navigate to <strong>Conversation Intelligence &gt; Events</strong>.</li>
 <li>
-<p>Click <strong>Configure</strong> to enable the <strong>Repeat Bot Response Event</strong>.
+<p>Turn on the toggle to enable the to enable the <strong>Repeat Bot Response Event</strong>.
 <a class="glightbox" href="../images/repeat-bot-responses-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/repeat-bot-responses-window.png" alt="repeat bot responses" title="repeat bot responses" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
@@ -13515,7 +13440,7 @@
 You can edit or add the filler message for the repeat bot response event before it is triggered.
 <a class="glightbox" href="../images/add-filler-message.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-filler-message.png" alt="add filler message" title="add filler message" style="border: 1px solid gray; zoom:75%;"></a></li></ul>
 
-<li>Click <b>+Add Filler Message</b> and select the <b>IVR</b> channel and enter the filler messages and then click <b>Done</b>.
+<li>Click <b>+Add Filler Message</b>, select the <b>IVR</b> channel, enter the filler messages and then click <b>Done</b>.
 <a class="glightbox" href="../images/add-filler-to-ivr.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-filler-to-ivr.png" alt="add filler to ivr" title="add filler to ivr" style="border: 1px solid gray; zoom:75%;"></a>
 
 When the Repeat Bot Response event is triggered, these filler messages are used in the IVR channel conversation before repeating the response.
@@ -13529,7 +13454,7 @@ When the Repeat Bot Response event is triggered, these filler messages are used 
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When the Auto-generate response option is enabled, the repeat bot response event will not use the filler messages that were defined in the previous step. The responses automatically sent from the LLM and Generative model when the event is triggered.</p>
+<p>When the Auto-generate response option is enabled, the repeat bot response event will not use the filler messages that were defined in the previous step. The responses are automatically sent from the LLM and Generative model when the event is triggered.</p>
 </div>
 <ol start="9"><li>Expand the Advanced Settings and define the following options to repeat the response:</li>
 <ul><li><b>Repeat Attempts Limit</b> – Set the number of retry attempts to repeat a response. The accepted value is between <b>1</b> and <b>10</b>. The default is <b>5</b>.</li>
@@ -13541,38 +13466,11 @@ When you select the <b>Initiate Dialog</b> option, you can choose the task to wh
 
 <ol start="10"><li>Click <b>Save & Enable</b> to trigger the Repeat Bot Response event with the configurations.</li></ol>
 
-<h3 id="channel-events">Channel Events<a class="headerlink" href="#channel-events" title="Permanent link">&para;</a></h3>
-<h4 id="facebook-telegram-welcome-events">Facebook &amp; Telegram Welcome Events<a class="headerlink" href="#facebook-telegram-welcome-events" title="Permanent link">&para;</a></h4>
-<p>This event triggers on receiving a Welcome Event from Facebook Messenger or Telegram. Once it is triggered, you can configure the Platform to perform the following actions:</p>
-<ul>
-<li><strong>Initiate a Task</strong>: Select from the available Dialog Tasks to run once the event is triggered.</li>
-<li><strong>Run a Script</strong>: You are shown a Javascript editor where you can add your script, which will run once the Facebook Welcome Event is triggered.</li>
-<li><strong>Show a Message</strong>: This option lets you add VA responses to be sent to users once this event triggers.
-<a class="glightbox" href="../images/facebook-welcome-event.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/facebook-welcome-event.png" alt="facebook welcome event" title="facebook welcome event" style="border: 1px solid gray; zoom:75%;"></a></li>
-</ul>
-<h4 id="telephony-welcome-event">Telephony Welcome Event<a class="headerlink" href="#telephony-welcome-event" title="Permanent link">&para;</a></h4>
-<p>This event is triggered upon receiving a voice call to the Platform from any voice channel. This event will be triggered every time a user’s call reaches the Platform, and not just for the first time.</p>
-<p>It provides the following two options:</p>
-<ul>
-<li><strong>Initiate Task</strong>  – Select a task to be triggered from the drop-down list provided</li>
-<li>
-<p><strong>Voice Call Properties</strong> can be set as follows:</p>
-<ul>
-<li>Define at least one ‘Initial Prompts’</li>
-<li>Prompts for <em>Timeout</em>, and <em>No Match</em> can be defined.</li>
-<li>Under <em>Advanced Controls</em>, settings for <em>Timeout, No. of Retries</em>, and <em>Barge-in</em> can be defined. <a href="../../use-cases/dialogs/node-types/voice-call-properties/" target="_blank">Learn more</a>.</li>
-</ul>
-<p><a class="glightbox" href="../images/voice-call-properties-event-handlers.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/voice-call-properties-event-handlers.gif" alt="voice call properties" title="voice call properties" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-</ul>
-<h5 id="ivr-impact">IVR Impact<a class="headerlink" href="#ivr-impact" title="Permanent link">&para;</a></h5>
-<p>You may also use this event to define how and when the calls should be terminated for voice-based channels. The IVR implementation allows session/call closure only when the ‘end of conversation’ is completed. <a href="/docs/xo/channels/IVR-integration/" target="_blank">Learn more</a>.</p>
-<h4 id="rcs-opt-in-opt-out-events">RCS Opt-In / Opt-Out Events<a class="headerlink" href="#rcs-opt-in-opt-out-events" title="Permanent link">&para;</a></h4>
-<p>These events trigger when receiving <em>opt-in</em> or <em>opt-out</em> requests from users via the RCS channel. These events allow you to configure a response to be sent to the user as a follow-up for their action.
-<a class="glightbox" href="../images/rcs-opt-in.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/rcs-opt-in.png" alt="rcs opt-in" title="rcs opt-in" style="border: 1px solid gray; zoom:75%;"></a></p>
+<h3 id="sentiment-events">Sentiment Events<a class="headerlink" href="#sentiment-events" title="Permanent link">&para;</a></h3>
+<p>Refer to <a href="../intelligence/sentiment-management">Sentiment Events</a> for Sentiment Management and Tone Analysis.</p>
 <h2 id="variable-namespaces">Variable Namespaces<a class="headerlink" href="#variable-namespaces" title="Permanent link">&para;</a></h2>
 <p>You can configure Variable Namespaces for Events by going to <strong>More Options</strong> &gt; <strong>Manage Variable Namespaces</strong> at the top of the <strong>Events</strong> screen.</p>
-<p>You can use the <em>Manage Variable Namespaces</em> to associate the Variable Namespaces to be used with the Event Handler. This option will be visible only when the Variable Namespace is enabled for the VA. For more information. <a href="../../../app-settings/managing-namespace/" target="_blank">Learn more</a>.</p>
+<p>You can use the <em>Manage Variable Namespaces</em> to associate the Variable Namespaces to be used with the Events. This option will be visible only when the Variable Namespace is enabled for the VA. For more information. <a href="../../../app-settings/managing-namespace/" target="_blank">Learn more</a>.</p>
 <p><a class="glightbox" href="../images/manage-namespaces-event-handling-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/manage-namespaces-event-handling-window.png" alt="manage namespaces" title="manage namespaces" style="border: 1px solid gray; zoom:75%;"></a></p>
 
 
