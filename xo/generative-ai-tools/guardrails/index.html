@@ -13074,7 +13074,7 @@
 <p>Large language models (LLMs) are powerful AI systems that can be leveraged to offer human-like conversational experiences. The Kore.ai XO Platform offers a wide range of features to leverage the power of LLMs. LLMs are usually pre-trained with a vast corpus of public data sources, and the content is not fully reviewed and curated for correctness and acceptability for enterprise needs. This results in generating harmful, biased, or inappropriate content at times. The XO Platform's Guardrail framework mitigates these risks by validating LLM requests and responses to enforce safety and appropriateness standards.</p>
 <p>Guardrails enable responsible and ethical AI practices by allowing platform users to easily enable/disable rules and configure settings for different features using LLMs. Additionally, the users can design and implement fallback behaviors for a feature, such as triggering specific events, if a guardrail detects content that violates set standards.</p>
 <p>The XO Platform leverages the open-source models tailored for conversational AI applications. Each guardrail is powered by a different model, that has been fine-tuned specifically to validate text for toxicity, bias, filter topics, etc. Kore.ai hosts these models and periodically updates them through training to detect emerging threats and prompt injection patterns effectively. These small models reside within the platform, ensuring swift performance during runtime.
-<a class="glightbox" href="../images/guardrails-home.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/guardrails-home.png" alt="Guardrails" title="Guardrails" style="border: 1px solid gray; zoom:70%;"></a></p>
+<a class="glightbox" href="../images/guardrails-home1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/guardrails-home1.png" alt="Guardrails" title="Guardrails" style="border: 1px solid gray; zoom:70%;"></a></p>
 <h2 id="types-of-guardrails">Types of Guardrails<a class="headerlink" href="#types-of-guardrails" title="Permanent link">&para;</a></h2>
 <h3 id="restrict-toxicity">Restrict Toxicity<a class="headerlink" href="#restrict-toxicity" title="Permanent link">&para;</a></h3>
 <p>This guardrail analyzes and prevents the dissemination of potentially harmful content in both prompts sent to the LLM and responses received from it. The LLM-generated content that contains toxic words will be automatically discarded, and an appropriate fallback action will be triggered. This ensures that only safe and non-toxic content reaches the end-user, thereby protecting both the user and the integrity of the platform.</p>
@@ -13163,7 +13163,8 @@
 <p>Steps to enable a Guardrail:</p>
 <ol>
 <li>
-<p>Navigate to <strong>App Settings</strong> &gt; <strong>Generative AI Tools</strong> &gt; <strong>Guardrails</strong>.  <a class="glightbox" href="../images/guardrails6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/guardrails6.png" alt="Guardrails" title="Guardrails" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>Navigate to <strong>Generative AI Tools</strong> &gt; <strong>Safeguards</strong>&gt; <strong>Guardrails</strong>.
+<a class="glightbox" href="./images/guardrails6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./images/guardrails6.png" alt="Guardrails" title="Guardrails" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
 <p>Turn on the <strong>Status</strong> toggle for the required guardrail. The advanced settings are displayed.  <a class="glightbox" href="../images/guardrails2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/guardrails2.png" alt="Guardrails" title="Guardrails" style="border: 1px solid gray; zoom:70%;"></a></p>
@@ -13182,14 +13183,14 @@
 <p>You can disable the guardrails if you don't want to use them. Disabling a guardrail will reset all the respective settings.</p>
 <p>Steps to disable a Guardrail:</p>
 <ol>
-<li>Navigate to <strong>App Settings</strong> &gt; <strong>Generative AI Tools</strong> &gt; <strong>Guardrails</strong>.</li>
+<li>Navigate to <strong>Generative AI Tools</strong> &gt; <strong>Safeguards</strong>&gt; <strong>Guardrails</strong>.</li>
 <li>Turn off the <strong>Status</strong> toggle for the respective guardrail. The disable guardrail popup is displayed.  <a class="glightbox" href="../images/guardrails1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/guardrails1.png" alt="Guardrails" title="Guardrails" style="border: 1px solid gray; zoom:45%;"></a></li>
 <li>Click <strong>Disable</strong>. The success message is displayed.</li>
 </ol>
 <h3 id="edit-the-guardrails">Edit the Guardrails<a class="headerlink" href="#edit-the-guardrails" title="Permanent link">&para;</a></h3>
 <p>Steps to edit a Guardrail:</p>
 <ol>
-<li>Navigate to <strong>App Settings</strong> &gt; <strong>Generative AI Tools</strong> &gt; <strong>Guardrails</strong>.</li>
+<li>Navigate to <strong>Generative AI Tools</strong> &gt; <strong>Safeguards</strong>&gt; <strong>Guardrails</strong>.</li>
 <li>
 <p>Click <strong>more</strong> (three dots) and click <strong>Edit</strong>. The advanced settings are displayed.  <a class="glightbox" href="../images/guardrails4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/guardrails4.png" alt="Guardrails" title="Guardrails" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
@@ -13236,7 +13237,7 @@
 <p>Steps to change the fallback behavior:</p>
 <ol>
 <li>
-<p>Go to <strong>App Settings</strong> &gt; <strong>Generative AI Tools</strong> &gt; <strong>Dynamic Conversation</strong> &gt; <strong>GenAI Node</strong> &gt; <strong>Advance Settings</strong>.<br />
+<p>Go to <strong>Generative AI Tools</strong> &gt; <strong>GenAI Features</strong> &gt; <strong>Dynamic Conversation</strong> &gt; <strong>GenAI Node</strong> &gt; <strong>Advance Settings</strong>.<br />
 <a class="glightbox" href="../images/guardrails3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/guardrails3.png" alt="Guardrails" title="Guardrails" style="border: 1px solid gray; zoom:40%;"></a></p>
 </li>
 <li>
