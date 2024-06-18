@@ -13072,7 +13072,7 @@
 <p><a class="glightbox" href="../../images/add-widget-to-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/add-widget-to-panel.png" alt="add widget to panel" title="add widget to panel" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>Use the <strong>Test</strong> button to see the widgets in action. </p>
+<p>Click the 3-dot menu icon on the panel, and select the <strong>Test</strong> option from the menu to see the widgets in action. </p>
 <p><a class="glightbox" href="../../images/test-widget.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/test-widget.png" alt="test widget" title="test widget" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
@@ -13081,17 +13081,13 @@
 <ol>
 <li>Click <strong>Create Panel</strong> to create a new panel and name it <strong>JSON Example</strong>.</li>
 <li>
-<p>Use the <strong>3-dot</strong> icon and select <strong>Panel Management</strong> from the menu, there you will find the option to <strong>Add Widget</strong>. Click on that.</p>
-<p><a class="glightbox" href="../../images/panel-3-dot-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/panel-3-dot-menu.png" alt="3-dot menu for the new panel" title="3-dot menu for the new panel" style="border: 1px solid gray; zoom:75%;"></a></p>
-<p><a class="glightbox" href="../../images/more-panel-management.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/more-panel-management.png" alt="more panel management" title="more panel management" style="border: 1px solid gray; zoom:75%;"></a></p>
+<p>In the New Widget dialog, name it Pie Chart, and set the source to JSON.</p>
+<p><a class="glightbox" href="../../images/new-widget-json.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/new-widget-json.png" alt="New widget - JSON" title="New widget - JSON" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 <li>
-<p>In the <strong>New Widget</strong> dialog, enter the Name, and set the source to JSON.</p>
+<p>Enter the following in the JavaScript Editor. This is a message template to display a pie chart with a break up for amounts spent under various heads like travel, food, and accommodation. For more on supported message templates, <a href="../../../../sdk/widget-sdk-message-formatting-and-templates/" target="_blank">refer here</a>.</p>
 <p><a class="glightbox" href="../../images/new-widget-data-entry.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/new-widget-data-entry.png" alt="new widget data" title="new widget data" style="border: 1px solid gray; zoom:75%;"></a></p>
-</li>
-<li>
-<p>Enter the following in the JavaScript Editor. This is a message template to display a pie chart with a break up for amounts spent under various heads like travel, food, and accommodation. For more on supported message templates, click <a href="../../../../channels/add-wigdet-sdk-channel/" target="_blank">here</a>. </p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{   &quot;templateType&quot;: &quot;piechart&quot;,
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{   &quot;templateType&quot;: &quot;piechart&quot;,
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    &quot;pie_type&quot;: &quot;regular&quot;,
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    &quot;title&quot;: &quot;Summary&quot;,
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    &quot;description&quot;: &quot;monthly report&quot;,
@@ -13115,10 +13111,13 @@
 </span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    };
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>print(JSON.stringify(message));
 </span></code></pre></div>
-<ul>
-<li>Test the panel and you will see both the <strong>Panel</strong> icons.</li>
-<li>Click on each to see them in action.</li>
-</ul>
+4. Save the new widget.
+5. Click on <strong>Create Panel</strong> to create a new panel and name it <em>JSON Example</em>.
+6. Click the <strong>3-dot menu</strong> icon on the panel. Select the <strong>Add Widget</strong> or <strong>Panel Management</strong> option and add the above created <em>Pie Chart</em> widget.</p>
+<p><a class="glightbox" href="../../images/panel-3-dot-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/panel-3-dot-menu.png" alt="Add widget to panel" title="Add widget to panel" style="border: 1px solid gray; zoom:75%;"></a></p>
+</li>
+<li>
+<p><strong>Test</strong> the panel and you will see the panel icons, click on each to see the widgets within them in action.</p>
 <p><a class="glightbox" href="../../images/test-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../images/test-panel.png" alt="test panel" title="test panel" style="border: 1px solid gray; zoom:75%;"></a></p>
 </li>
 </ol>
