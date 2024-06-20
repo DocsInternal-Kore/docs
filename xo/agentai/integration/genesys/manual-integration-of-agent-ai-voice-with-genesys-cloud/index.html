@@ -13076,12 +13076,14 @@ allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow
 </ol>
 <p><strong>Architect</strong> &gt; <strong>DataTable</strong> &gt; <strong>View</strong></p>
 <p><strong>Conversation</strong> &gt; <strong>Transcription</strong> &gt; <strong>View</strong></p>
-<p><strong>Note</strong>: The Conversation permission is available only in CX3 license.
-6. Once finished, the <strong>Assigned Permissions</strong> view should look like this:
-<a class="glightbox" href="../images/assigned-permissions-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/assigned-permissions-10.png" alt="assigned-permissions" title="assigned-permissions" style="border: 1px solid gray; zoom:80%;"></a>
-7. Once the role is created, click the three dots at the right end of the <strong>Permission role</strong> and select <strong>Change Membership</strong>.
-<a class="glightbox" href="../images/change-membership-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/change-membership-11.png" alt="change-membership" title="change-membership" style="border: 1px solid gray; zoom:80%;"></a>
-8. Add appropriate agents to the role.</p>
+<p><strong>Note</strong>: The Conversation permission is available only in CX3 license.</p>
+<ol>
+<li>Once finished, the <strong>Assigned Permissions</strong> view should look like this:
+<a class="glightbox" href="../images/assigned-permissions-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/assigned-permissions-10.png" alt="assigned-permissions" title="assigned-permissions" style="border: 1px solid gray; zoom:80%;"></a></li>
+<li>Once the role is created, click the three dots at the right end of the <strong>Permission role</strong> and select <strong>Change Membership</strong>.
+<a class="glightbox" href="../images/change-membership-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/change-membership-11.png" alt="change-membership" title="change-membership" style="border: 1px solid gray; zoom:80%;"></a></li>
+<li>Add appropriate agents to the role.</li>
+</ol>
 <h3 id="step-4-data-table-configuration"><strong>Step 4: Data Table Configuration</strong><a class="headerlink" href="#step-4-data-table-configuration" title="Permanent link">&para;</a></h3>
 <p>This step includes creation of a Data Table with Agent AI bot details.</p>
 <p><strong>Note</strong>: The configuration data is stored directly in the Custom Fields of the Data Table, not in a Data Table row. A single Data Table represents a configuration of Agent AI. In other words, the default values of the Custom Fields contain the necessary configuration data to load the Agent AI widget.</p>
@@ -13157,25 +13159,38 @@ Set the data type for all custom fields as <strong>String</strong> while adding.
 <li>Go to <strong>Admin</strong> &gt; <strong>Integrations</strong> &gt; <strong>Integrations</strong>.<br />
 <a class="glightbox" href="../images/genesys-admin-integrations-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-admin-integrations-18.png" alt="genesys-admin-integrations" title="genesys-admin-integrations" style="border: 1px solid gray; zoom:80%;"></a>
 The Audiohook integration requires specific configuration values to support Agent AI configuration.</li>
-<li>Install a new audiohook app by clicking the <strong>Integrations</strong> button on the top-right corner.<br />
-<a class="glightbox" href="../images/add-new-audiohook-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-new-audiohook-19.png" alt="add-new-audiohook" title="add-new-audiohook" style="border: 1px solid gray; zoom:80%;"></a>  </li>
-</ol>
+<li>
+<p>Install a new audiohook app by clicking the <strong>Integrations</strong> button on the top-right corner.<br />
+<a class="glightbox" href="../images/add-new-audiohook-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-new-audiohook-19.png" alt="add-new-audiohook" title="add-new-audiohook" style="border: 1px solid gray; zoom:80%;"></a>  </p>
 <p><a class="glightbox" href="../images/locate-audiohook-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/locate-audiohook-20.png" alt="locate-audiohook" title="locate-audiohook" style="border: 1px solid gray; zoom:80%;"></a></p>
+</li>
+</ol>
 <p>4.Open the audiohook, and go to the <strong>Configuration</strong> tab.<br />
 <a class="glightbox" href="../images/audiohook-configuration-tab-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/audiohook-configuration-tab-21.png" alt="audiohook-configuration-tab" title="audiohook-configuration-tab" style="border: 1px solid gray; zoom:80%;"></a>
-    1. Channel value should be both.
-    2. The <strong>Connection URI</strong> format should be similar to the following:
-wss://<a href="http://savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true">savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true</a>
-    3. Get <strong>sipuri=sip:&lt;sip-string&gt;</strong> from <strong>UXO</strong>, <strong>Flow &amp; Channels</strong> &gt; <strong>Channels</strong> &gt; <strong>Kore.ai Voice Gateway</strong> &gt; <strong>SIP Numbers</strong> &gt; <strong>Configure SIP Transfer</strong> &gt; <strong>Transfer from IVR</strong> page.<br />
-    <a class="glightbox" href="../images/Transfer-from-IVR-page-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Transfer-from-IVR-page-22.png" alt="Transfer-from-IVR-page" title="Transfer-from-IVR-page" style="border: 1px solid gray; zoom:80%;"></a>
-    4. Use the following reference from <strong>Flow &amp; Channels</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>Configured Channels</strong> &gt; <strong>JWT App Details</strong> section of the <strong><a href="https://platform.kore.ai/">XO</a></strong> application to fetch <strong>Bot ID</strong>, <strong>Account ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong> (for token generation).
-    <a class="glightbox" href="../images/web-mobile-client-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/web-mobile-client-23.png" alt="web-mobile-client" title="web-mobile-client" style="border: 1px solid gray; zoom:80%;"></a>
-    5. Follow the steps of <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_JWT_Token">Using XO Platform APIs – Kore.ai Documentation</a> to generate the token (token= &lt;token&gt;.)
-5. Add credentials in the <strong>Credentials</strong> tab.
-<a class="glightbox" href="../images/integration-configuration-credentials-tab-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/integration-configuration-credentials-tab-24.png" alt="integration-configuration-credentials-tab" title="integration-configuration-credentials-tab" style="border: 1px solid gray; zoom:80%;"></a>
-    1. Refer to <a href="https://docs.kore.ai/agentassist/integration/agentassist-integration-in-genesys-manual-steps/#Step_4_Data_Table_Configuration">Step-4</a> and use <strong>Bot Client ID</strong> and <strong>Client Secret</strong> as API Key and Client Secret respectively.
-    2. These credentials are used to validate the audiostream signature by Kore.
-6. Click <strong>Save</strong>.</p>
+    1. Channel value should be both.</p>
+<div class="language-text highlight"><pre><span></span><code>2. The **Connection URI** format should be similar to the following:
+</code></pre></div>
+<p>wss://<a href="http://savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true">savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true</a></p>
+<div class="language-text highlight"><pre><span></span><code>3. Get **sipuri=sip:&amp;lt;sip-string&gt;** from **UXO**, **Flow &amp; Channels** &gt; **Channels** &gt; **Kore.ai Voice Gateway** &gt; **SIP Numbers** &gt; **Configure SIP Transfer** &gt; **Transfer from IVR** page.  
+&lt;img src=&quot;../images/Transfer-from-IVR-page-22.png&quot; alt=&quot;Transfer-from-IVR-page&quot; title=&quot;Transfer-from-IVR-page&quot; style=&quot;border: 1px solid gray; zoom:80%;&quot;&gt;
+4. Use the following reference from **Flow &amp; Channels** &gt; **Channels** &gt; **Digital** &gt; **Configured Channels** &gt; **JWT App Details** section of the **[XO](https://platform.kore.ai/)** application to fetch **Bot ID**, **Account ID**, **Client ID**, and **Client Secret** (for token generation).
+&lt;img src=&quot;../images/web-mobile-client-23.png&quot; alt=&quot;web-mobile-client&quot; title=&quot;web-mobile-client&quot; style=&quot;border: 1px solid gray; zoom:80%;&quot;&gt;
+
+5. Follow the steps of [Using XO Platform APIs – Kore.ai Documentation](https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_JWT_Token) to generate the token (token= &amp;lt;token&gt;.)
+</code></pre></div>
+<ol>
+<li>
+<p>Add credentials in the <strong>Credentials</strong> tab.
+<a class="glightbox" href="../images/integration-configuration-credentials-tab-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/integration-configuration-credentials-tab-24.png" alt="integration-configuration-credentials-tab" title="integration-configuration-credentials-tab" style="border: 1px solid gray; zoom:80%;"></a></p>
+<ol>
+<li>Refer to <a href="https://docs.kore.ai/agentassist/integration/agentassist-integration-in-genesys-manual-steps/#Step_4_Data_Table_Configuration">Step-4</a> and use <strong>Bot Client ID</strong> and <strong>Client Secret</strong> as API Key and Client Secret respectively.</li>
+<li>These credentials are used to validate the audiostream signature by Kore.</li>
+</ol>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
 <h3 id="step-6-xo-11-configuration-notes"><strong>Step 6: XO 11 Configuration Notes</strong><a class="headerlink" href="#step-6-xo-11-configuration-notes" title="Permanent link">&para;</a></h3>
 <p>For the configured App, ensure at least one Dialog Task has been configured for Agent AI use.
 <a class="glightbox" href="../images/dialog-settings-page-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-settings-page-25.png" alt="dialog-settings-page" title="dialog-settings-page" style="border: 1px solid gray; zoom:80%;"></a></p>
