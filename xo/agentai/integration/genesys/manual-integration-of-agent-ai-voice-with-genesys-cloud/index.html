@@ -13002,14 +13002,14 @@
 <p>Steps to get Genesys OAuth ID:</p>
 <ol>
 <li>Sign in to <strong>Genesys Cloud</strong>.</li>
-<li>Go to <strong>Admin **&gt;</strong> Integrations <strong>&gt;</strong> OAuth**.
+<li>Go to <strong>Admin</strong> &gt; <strong>Integrations</strong> &gt; <strong>OAuth</strong>.<br />
 <a class="glightbox" href="../images/genesys-oauth-path-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-oauth-path-1.png" alt="genesys-oauth-path" title="genesys-oauth-path" style="border: 1px solid gray; zoom:80%;"></a></li>
-<li>Click <strong>Add Client</strong>.
+<li>Click <strong>Add Client</strong>.<br />
 <a class="glightbox" href="../images/integ-oauth-add-client-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/integ-oauth-add-client-2.png" alt="integ-oauth-add-client" title="integ-oauth-add-client" style="border: 1px solid gray; zoom:80%;"></a></li>
 <li>Enter the app name, description, and token duration in the <strong>App Name</strong>, <strong>Description</strong>, and <strong>Token Duration</strong> fields.</li>
 <li>Select <strong>Token Implicit Grant (Browser)</strong> in the <strong>Grant Types</strong> fields.</li>
 <li>Add <a href="https://platform.kore.ai/koreaiaa-genesys/">https://platform.kore.ai/koreaiaa-genesys/</a> in the <strong><em>Authorized redirect URIs (one per line)</em></strong> section.</li>
-<li>Add the following list of scopes in the <strong>Scope</strong> section:</li>
+<li>Add the following list of scopes in the <strong>Scope</strong> section:<ul>
 <li>architect</li>
 <li>conversations</li>
 <li>conversations:readonly</li>
@@ -13023,15 +13023,17 @@
 <li>user-basic-info</li>
 <li>web-chat</li>
 <li>web-chat:readonly</li>
+</ul>
+</li>
 </ol>
 <p><a class="glightbox" href="../images/oauth-client-details-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/oauth-client-details-3.png" alt="oauth-client-details" title="oauth-client-details" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p><a class="glightbox" href="../images/oauth-client-details-second-image-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/oauth-client-details-second-image-4.png" alt="oauth-client-details-second-image" title="oauth-client-details-second-image" style="border: 1px solid gray; zoom:80%;"></a></p>
-<p>After saving the configuration, you will get the Client Id of the created OAuth client. Copy the ID and have it available for <a href="https://docs.kore.ai/agentassist/uncategorized/agentassist-integration-in-genesys-manual-steps/#Step_2_Interaction_Widget">Step 2</a>.</p>
+<p>After saving the configuration, you will get the Client Id of the created OAuth client. Copy the ID and have it available for <a href="#step-2-interaction-widget">Step 2</a>.</p>
 <h3 id="step-2-interaction-widget"><strong>Step 2: Interaction Widget</strong><a class="headerlink" href="#step-2-interaction-widget" title="Permanent link">&para;</a></h3>
 <p>Create a new Interaction Widget. This widget is hosted in the Genesys agent desktop and provides the Agent AI solution features to agents.</p>
 <ol>
 <li>Sign in to <strong>Genesys Cloud</strong>.</li>
-<li>Click <strong>Admin **&gt;</strong> Integrations**.
+<li>Click <strong>Admin</strong> &gt; <strong>Integrations</strong>.<br />
 <a class="glightbox" href="../images/genesys-admin-integ-path-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-admin-integ-path-5.png" alt="genesys-admin-integ-path" title="genesys-admin-integ-path" style="border: 1px solid gray; zoom:80%;"></a></li>
 <li>If you have not created an Interaction Widget for Agent AI, install a new Interaction Widget by clicking the <strong>Integrations</strong> tab on the right side of the page.
 <a class="glightbox" href="../images/new-interaction-widget-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/new-interaction-widget-6.png" alt="new-interaction-widget" title="new-interaction-widget" style="border: 1px solid gray; zoom:80%;"></a> </li>
@@ -13040,17 +13042,16 @@
 <a class="glightbox" href="../images/open-interaction-widget-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/open-interaction-widget-7.png" alt="open-interaction-widget" title="open-interaction-widget" style="border: 1px solid gray; zoom:80%;"></a> </li>
 <li>Go to the <strong>Configuration</strong> tab of the Interaction Widget.
 <a class="glightbox" href="../images/interaction-widget-configuration-tab-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/interaction-widget-configuration-tab-8.png" alt="interaction-widget-configuration-tab" title="interaction-widget-configuration-tab" style="border: 1px solid gray; zoom:80%;"></a> </li>
-<li>In the <strong>Application URL</strong> field, enter the following structure; use the <strong>OAuth ID</strong> from <a href="https://docs.kore.ai/agentassist/uncategorized/agentassist-integration-in-genesys-manual-steps/#Step_1_OAuth_Credential">Step 1</a>. \
-<a href="https://agentassist.kore.ai/koreaiaa-genesys/?conversationid=%7B%7BgcConversationId%7D%7D&amp;lang=%7B%7BgcLangTag%7D%7D&amp;environment=%7B%7BgcHostOrigin%7D%7D&amp;genesysid=">https://agentassist.kore.ai/koreaiaa-genesys/?conversationid={{gcConversationId}}&amp;lang={{gcLangTag}}&amp;environment={{gcHostOrigin}}&amp;genesysid=</a>&lt;genesys-oauth-Id&gt; \
-Or \
-<a href="https://platform.kore.ai/koreaiaa-genesys/">https://platform.kore.ai/koreaiaa-genesys/</a></li>
-<li>Allow all permissions in <strong>iFrame Sandbox Options</strong> and <strong>iFrame Feature/Permission Policy</strong>. \
-<strong>iFrame Sandbox Options</strong>: allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow-scripts,allow-downloads. \
- \
-<strong>iFrame Feature/Permission Policy</strong>: camera,microphone,geolocation,clipboard-write,display-capture,fullscreen. \
- \
-<strong>Communication Type Filtering</strong>: chat, call, callback, email, sms, line, facebook, instagram, twitter, open, webmessaging, whatsapp.</li>
+<li>In the <strong>Application URL</strong> field, enter the following structure; use the <strong>OAuth ID</strong> from <a href="#step-1-oauth-credential">Step 1</a>.</li>
 </ol>
+<p><a href="https://agentassist.kore.ai/koreaiaa-genesys/?conversationid=%7B%7BgcConversationId%7D%7D&amp;lang=%7B%7BgcLangTag%7D%7D&amp;environment=%7B%7BgcHostOrigin%7D%7D&amp;genesysid=">https://agentassist.kore.ai/koreaiaa-genesys/?conversationid={{gcConversationId}}&amp;lang={{gcLangTag}}&amp;environment={{gcHostOrigin}}&amp;genesysid=</a>&lt;genesys-oauth-Id&gt;</p>
+<p>Or</p>
+<p><a href="https://platform.kore.ai/koreaiaa-genesys/">https://platform.kore.ai/koreaiaa-genesys/</a>
+8. Allow all permissions in <strong>iFrame Sandbox Options</strong> and <strong>iFrame Feature/Permission Policy</strong>.</p>
+<p><strong>iFrame Sandbox Options</strong>:
+allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow-scripts,allow-downloads.</p>
+<p><strong>iFrame Feature/Permission Policy</strong>: camera,microphone,geolocation,clipboard-write,display-capture,fullscreen.</p>
+<p><strong>Communication Type Filtering</strong>: chat, call, callback, email, sms, line, facebook, instagram, twitter, open, webmessaging, whatsapp.</p>
 <h3 id="step-3-agent-access"><strong>Step 3: Agent Access</strong><a class="headerlink" href="#step-3-agent-access" title="Permanent link">&para;</a></h3>
 <p>To view the Interaction Widget, agents must have the following accesses:</p>
 <p><strong>Group Membership</strong></p>
@@ -13060,10 +13061,10 @@ Or \
 <li>Name the Group as <strong>KoreAA-Agents</strong> or similar to distinguish it.</li>
 <li>Add any agent to allow them to use the Agent AI functionality. You can utilize more than one Group, if required.</li>
 <li>Go back to the <strong>Integrations</strong> section and open the <strong>Interaction Widget</strong> created in <a href="https://docs.kore.ai/agentassist/uncategorized/agentassist-integration-in-genesys-manual-steps/#Step_2_Interaction_Widget">Step 2</a>. </li>
-<li>On the <strong>Configuration</strong> tab, add access using the Group you identified or created for Agent AI in the <strong>Group Filtering</strong> option. \
-You may also utilize <strong>Queue Filtering</strong> (optional).
-<a class="glightbox" href="../images/configuration-group-filtering-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configuration-group-filtering-9.png" alt="configuration-group-filtering-9" title="configuration-group-filtering-9" style="border: 1px solid gray; zoom:80%;"></a></li>
+<li>On the <strong>Configuration</strong> tab, add access using the Group you identified or created for Agent AI in the <strong>Group Filtering</strong> option.</li>
 </ol>
+<p>You may also utilize <strong>Queue Filtering</strong> (optional).<br />
+<a class="glightbox" href="../images/configuration-group-filtering-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/configuration-group-filtering-9.png" alt="configuration-group-filtering-9" title="configuration-group-filtering-9" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p><strong>Custom Role/Permission</strong></p>
 <p>By default, most agents don’t have access to read from a Data Table. You must grant them explicit permission to read from the Data Table for loading the Interaction Widget.</p>
 <ol>
@@ -13071,22 +13072,22 @@ You may also utilize <strong>Queue Filtering</strong> (optional).
 <li>Go to <strong>Admin</strong> &gt; <strong>People &amp; Permissions</strong> &gt; <strong>Roles / Permissions</strong>.</li>
 <li>Click <strong>Add Role</strong> to create a new Role.</li>
 <li>Give a distinctive name to the Role; for example, <strong>KoreaiAA Agent</strong>.</li>
-<li>On the <strong>Permission</strong> tab, search for the following and add (select the box): \
-<strong>Architect **&gt;</strong> DataTable <strong>&gt;</strong> View \
-Conversation <strong>&gt;</strong> Transcription <strong>&gt;</strong> View** \
-<strong>Note</strong>: The Conversation permission is available only in CX3 license.</li>
-<li>Once finished, the <strong>Assigned Permissions</strong> view should look like this:
-<a class="glightbox" href="../images/assigned-permissions-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/assigned-permissions-10.png" alt="assigned-permissions" title="assigned-permissions" style="border: 1px solid gray; zoom:80%;"></a></li>
-<li>Once the role is created, click the three dots at the right end of the <strong>Permission role</strong> and select <strong>Change Membership</strong>.
-<a class="glightbox" href="../images/change-membership-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/change-membership-11.png" alt="change-membership" title="change-membership" style="border: 1px solid gray; zoom:80%;"></a></li>
-<li>Add appropriate agents to the role.</li>
+<li>On the <strong>Permission</strong> tab, search for the following and add (select the box):</li>
 </ol>
+<p><strong>Architect</strong> &gt; <strong>DataTable</strong> &gt; <strong>View</strong></p>
+<p><strong>Conversation</strong> &gt; <strong>Transcription</strong> &gt; <strong>View</strong></p>
+<p><strong>Note</strong>: The Conversation permission is available only in CX3 license.
+6. Once finished, the <strong>Assigned Permissions</strong> view should look like this:
+<a class="glightbox" href="../images/assigned-permissions-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/assigned-permissions-10.png" alt="assigned-permissions" title="assigned-permissions" style="border: 1px solid gray; zoom:80%;"></a>
+7. Once the role is created, click the three dots at the right end of the <strong>Permission role</strong> and select <strong>Change Membership</strong>.
+<a class="glightbox" href="../images/change-membership-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/change-membership-11.png" alt="change-membership" title="change-membership" style="border: 1px solid gray; zoom:80%;"></a>
+8. Add appropriate agents to the role.</p>
 <h3 id="step-4-data-table-configuration"><strong>Step 4: Data Table Configuration</strong><a class="headerlink" href="#step-4-data-table-configuration" title="Permanent link">&para;</a></h3>
 <p>This step includes creation of a Data Table with Agent AI bot details.</p>
 <p><strong>Note</strong>: The configuration data is stored directly in the Custom Fields of the Data Table, not in a Data Table row. A single Data Table represents a configuration of Agent AI. In other words, the default values of the Custom Fields contain the necessary configuration data to load the Agent AI widget.</p>
 <ol>
 <li>Sign in to <strong>Genesys Cloud</strong>.</li>
-<li>Go to <strong>Admin **&gt;</strong> Architect <strong>&gt;</strong> Data Tables**.
+<li>Go to <strong>Admin</strong> &gt; <strong>Architect</strong> &gt; <strong>Data Tables</strong>.<br />
 <a class="glightbox" href="../images/genesys-architect-data-tables-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-architect-data-tables-12.png" alt="genesys-architect-data-tables" title="genesys-architect-data-tables" style="border: 1px solid gray; zoom:80%;"></a></li>
 <li>Create a new Data Table by clicking the plus icon, and provide a relevant name such as <strong>KoreaiAA-configuration</strong>.
 <a class="glightbox" href="../images/new-data-table-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/new-data-table-13.png" alt="new-data-table" title="new-data-table" style="border: 1px solid gray; zoom:80%;"></a></li>
@@ -13095,15 +13096,14 @@ Conversation <strong>&gt;</strong> Transcription <strong>&gt;</strong> View** \
 <strong>Note</strong>: Reference Key label must be set to “agentAssist”. This is the value used by the Interaction Widget to load the configuration data.</li>
 <li>Click <strong>Add Field</strong> to create five custom fields to provide the Agent AI configuration.
 <a class="glightbox" href="../images/add-field-15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-field-15.png" alt="add-field-15" title="add-field-15" style="border: 1px solid gray; zoom:80%;"></a></li>
-<li>Click the <strong>Add Field</strong> button under <strong>Custom Fields</strong>. \
-Set the data type for all custom fields as <strong>String</strong> while adding.
-<a class="glightbox" href="../images/custom-field-string-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/custom-field-string-16.png" alt="custom-field-string" title="custom-field-string" style="border: 1px solid gray; zoom:80%;"></a></li>
-<li>Add the custom fields with Bot details.
-<a class="glightbox" href="../images/custom-field-bot-details-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/custom-field-bot-details-17.png" alt="custom-field-bot-details" title="custom-field-bot-details" style="border: 1px solid gray; zoom:80%;"></a></li>
-<li>Follow the below conventions for other custom fields. Use the exact names, including upper/lower case. \
- \
-These values are found in the <strong>Flow &amp; Channels</strong> &gt; <strong>Channels **&gt;</strong> Digital <strong>&gt;</strong> Configured Channels <strong>&gt;</strong> JWT App Details** section of the <strong><a href="https://platform.kore.ai/">XO</a></strong> application.</li>
+<li>Click the <strong>Add Field</strong> button under <strong>Custom Fields</strong>.</li>
 </ol>
+<p>Set the data type for all custom fields as <strong>String</strong> while adding.<br />
+<a class="glightbox" href="../images/custom-field-string-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/custom-field-string-16.png" alt="custom-field-string" title="custom-field-string" style="border: 1px solid gray; zoom:80%;"></a>
+7. Add the custom fields with Bot details.<br />
+<a class="glightbox" href="../images/custom-field-bot-details-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/custom-field-bot-details-17.png" alt="custom-field-bot-details" title="custom-field-bot-details" style="border: 1px solid gray; zoom:80%;"></a>
+8. Follow the below conventions for other custom fields. Use the exact names, including upper/lower case.</p>
+<p>These values are found in the <strong>Flow &amp; Channels</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>Configured Channels</strong> &gt; <strong>JWT App Details</strong> section of the <strong><a href="https://platform.kore.ai/">XO</a></strong> application.</p>
 <table>
   <tr>
    <td>
@@ -13154,33 +13154,33 @@ These values are found in the <strong>Flow &amp; Channels</strong> &gt; <strong>
 <p>The final step is to install Audiohook for voice streaming, if using Kore-managed Transcriptions.</p>
 <ol>
 <li>Sign in to <strong>Genesys Cloud</strong>.</li>
-<li>Go to <strong>Admin **&gt;</strong> Integrations <strong>&gt;</strong> Integrations**.
+<li>Go to <strong>Admin</strong> &gt; <strong>Integrations</strong> &gt; <strong>Integrations</strong>.<br />
 <a class="glightbox" href="../images/genesys-admin-integrations-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genesys-admin-integrations-18.png" alt="genesys-admin-integrations" title="genesys-admin-integrations" style="border: 1px solid gray; zoom:80%;"></a>
 The Audiohook integration requires specific configuration values to support Agent AI configuration.</li>
-<li>Install a new audiohook app by clicking the <strong>Integrations</strong> button on the top-right corner.
-<a class="glightbox" href="../images/add-new-audiohook-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-new-audiohook-19.png" alt="add-new-audiohook" title="add-new-audiohook" style="border: 1px solid gray; zoom:80%;"></a></li>
+<li>Install a new audiohook app by clicking the <strong>Integrations</strong> button on the top-right corner.<br />
+<a class="glightbox" href="../images/add-new-audiohook-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-new-audiohook-19.png" alt="add-new-audiohook" title="add-new-audiohook" style="border: 1px solid gray; zoom:80%;"></a>  </li>
 </ol>
 <p><a class="glightbox" href="../images/locate-audiohook-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/locate-audiohook-20.png" alt="locate-audiohook" title="locate-audiohook" style="border: 1px solid gray; zoom:80%;"></a></p>
 <ol>
-<li>
-<p>Open the audiohook, and go to the <strong>Configuration</strong> tab.
-<a class="glightbox" href="../images/audiohook-configuration-tab-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/audiohook-configuration-tab-21.png" alt="audiohook-configuration-tab" title="audiohook-configuration-tab" style="border: 1px solid gray; zoom:80%;"></a></p>
-<ol>
+<li>Open the audiohook, and go to the <strong>Configuration</strong> tab.<br />
+<a class="glightbox" href="../images/audiohook-configuration-tab-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/audiohook-configuration-tab-21.png" alt="audiohook-configuration-tab" title="audiohook-configuration-tab" style="border: 1px solid gray; zoom:80%;"></a><ol>
 <li>Channel value should be both.</li>
 <li>The <strong>Connection URI</strong> format should be similar to the following:
 wss://<a href="http://savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true">savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true</a></li>
-<li>Get <strong>sipuri=sip:&lt;sip-string&gt;</strong> from <strong>UXO</strong>, <strong>Flow &amp; Channels **&gt;</strong> Channels <strong>&gt;</strong> Kore.ai Voice Gateway <strong>&gt;</strong> SIP Numbers <strong>&gt;</strong> Configure SIP Transfer <strong>&gt;</strong> Transfer from IVR** page.
+<li>Get <strong>sipuri=sip:&lt;sip-string&gt;</strong> from <strong>UXO</strong>, <strong>Flow &amp; Channels</strong> &gt; <strong>Channels</strong> &gt; <strong>Kore.ai Voice Gateway</strong> &gt; <strong>SIP Numbers</strong> &gt; <strong>Configure SIP Transfer</strong> &gt; <strong>Transfer from IVR</strong> page.<br />
 <a class="glightbox" href="../images/Transfer-from-IVR-page-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Transfer-from-IVR-page-22.png" alt="Transfer-from-IVR-page" title="Transfer-from-IVR-page" style="border: 1px solid gray; zoom:80%;"></a></li>
-<li>Use the following reference from <strong>Flow &amp; Channels</strong> &gt; <strong>Channels **&gt;</strong> Digital <strong>&gt;</strong> Configured Channels <strong>&gt;</strong> JWT App Details** section of the <strong><a href="https://platform.kore.ai/">XO</a></strong> application to fetch <strong>Bot ID</strong>, <strong>Account ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong> (for token generation).
+<li>Use the following reference from <strong>Flow &amp; Channels</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>Configured Channels</strong> &gt; <strong>JWT App Details</strong> section of the <strong><a href="https://platform.kore.ai/">XO</a></strong> application to fetch <strong>Bot ID</strong>, <strong>Account ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong> (for token generation).
 <a class="glightbox" href="../images/web-mobile-client-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/web-mobile-client-23.png" alt="web-mobile-client" title="web-mobile-client" style="border: 1px solid gray; zoom:80%;"></a></li>
 <li>Follow the steps of <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_JWT_Token">Using XO Platform APIs – Kore.ai Documentation</a> to generate the token (token= &lt;token&gt;.)</li>
-<li>Add credentials in the <strong>Credentials</strong> tab.
-<a class="glightbox" href="../images/integration-configuration-credentials-tab-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/integration-configuration-credentials-tab-24.png" alt="integration-configuration-credentials-tab" title="integration-configuration-credentials-tab" style="border: 1px solid gray; zoom:80%;"></a></li>
-<li>Refer to <a href="https://docs.kore.ai/agentassist/integration/agentassist-integration-in-genesys-manual-steps/#Step_4_Data_Table_Configuration">Step-4</a> and use <strong>Bot Client ID</strong> and <strong>Client Secret</strong> as API Key and Client Secret respectively.</li>
-<li>These credentials are used to validate the audiostream signature by Kore.</li>
-<li>Click <strong>Save</strong>.</li>
 </ol>
 </li>
+<li>Add credentials in the <strong>Credentials</strong> tab.
+<a class="glightbox" href="../images/integration-configuration-credentials-tab-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/integration-configuration-credentials-tab-24.png" alt="integration-configuration-credentials-tab" title="integration-configuration-credentials-tab" style="border: 1px solid gray; zoom:80%;"></a><ol>
+<li>Refer to <a href="https://docs.kore.ai/agentassist/integration/agentassist-integration-in-genesys-manual-steps/#Step_4_Data_Table_Configuration">Step-4</a> and use <strong>Bot Client ID</strong> and <strong>Client Secret</strong> as API Key and Client Secret respectively.</li>
+<li>These credentials are used to validate the audiostream signature by Kore.</li>
+</ol>
+</li>
+<li>Click <strong>Save</strong>.</li>
 </ol>
 <h3 id="step-6-xo-11-configuration-notes"><strong>Step 6: XO 11 Configuration Notes</strong><a class="headerlink" href="#step-6-xo-11-configuration-notes" title="Permanent link">&para;</a></h3>
 <p>For the configured App, ensure at least one Dialog Task has been configured for Agent AI use.
