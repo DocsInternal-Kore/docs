@@ -13172,14 +13172,27 @@ The Audiohook integration requires specific configuration values to support Agen
 wss://<a href="http://savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true">savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true</a>
     3. Get <strong>sipuri=sip:&lt;sip-string&gt;</strong> from <strong>UXO</strong>, <strong>Flow &amp; Channels</strong> &gt; <strong>Channels</strong> &gt; <strong>Kore.ai Voice Gateway</strong> &gt; <strong>SIP Numbers</strong> &gt; <strong>Configure SIP Transfer</strong> &gt; <strong>Transfer from IVR</strong> page.<br />
     <a class="glightbox" href="../images/Transfer-from-IVR-page-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Transfer-from-IVR-page-22.png" alt="Transfer-from-IVR-page" title="Transfer-from-IVR-page" style="border: 1px solid gray; zoom:80%;"></a>
-    4. Use the following reference from <strong>Flow &amp; Channels</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>Configured Channels</strong> &gt; <strong>JWT App Details</strong> section of the <strong><a href="https://platform.kore.ai/">XO</a></strong> application to fetch <strong>Bot ID</strong>, <strong>Account ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong> (for token generation).
-    <a class="glightbox" href="../images/web-mobile-client-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/web-mobile-client-23.png" alt="web-mobile-client" title="web-mobile-client" style="border: 1px solid gray; zoom:80%;"></a>
-    5. Follow the steps of <a href="https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_JWT_Token">Using XO Platform APIs – Kore.ai Documentation</a> to generate the token (token= &lt;token&gt;.)
-5. Add credentials in the <strong>Credentials</strong> tab.<br />
-<a class="glightbox" href="../images/integration-configuration-credentials-tab-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/integration-configuration-credentials-tab-24.png" alt="integration-configuration-credentials-tab" title="integration-configuration-credentials-tab" style="border: 1px solid gray; zoom:80%;"></a>
-    1. Refer to <a href="https://docs.kore.ai/agentassist/integration/agentassist-integration-in-genesys-manual-steps/#Step_4_Data_Table_Configuration">Step-4</a> and use <strong>Bot Client ID</strong> and <strong>Client Secret</strong> as API Key and Client Secret respectively.
-    2. These credentials are used to validate the audiostream signature by Kore.
-6. Click <strong>Save</strong>.</p>
+    4. Use the following reference from <strong>Flow &amp; Channels</strong> &gt; <strong>Channels</strong> &gt; <strong>Digital</strong> &gt; <strong>Configured Channels</strong> &gt; <strong>JWT App Details</strong> section of the <strong><a href="https://platform.kore.ai/">XO</a></strong> application to fetch <strong>Bot ID</strong>, <strong>Account ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong> (for token generation).<br />
+    <a class="glightbox" href="../images/web-mobile-client-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/web-mobile-client-23.png" alt="web-mobile-client" title="web-mobile-client" style="border: 1px solid gray; zoom:80%;"></a></p>
+<div class="language-text highlight"><pre><span></span><code>5. Follow the steps of [Using XO Platform APIs – Kore.ai Documentation](https://developer.kore.ai/docs/bots/api-guide/apis/#Generating_the_JWT_Token) to generate the token (token= &amp;lt;token&gt;.)
+</code></pre></div>
+<ol>
+<li>
+<p>Add credentials in the <strong>Credentials</strong> tab.<br />
+<a class="glightbox" href="../images/integration-configuration-credentials-tab-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/integration-configuration-credentials-tab-24.png" alt="integration-configuration-credentials-tab" title="integration-configuration-credentials-tab" style="border: 1px solid gray; zoom:80%;"></a></p>
+<ol>
+<li>
+<p>Refer to <a href="https://docs.kore.ai/agentassist/integration/agentassist-integration-in-genesys-manual-steps/#Step_4_Data_Table_Configuration">Step-4</a> and use <strong>Bot Client ID</strong> and <strong>Client Secret</strong> as API Key and Client Secret respectively.</p>
+</li>
+<li>
+<p>These credentials are used to validate the audiostream signature by Kore.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
 <h3 id="step-6-xo-11-configuration-notes"><strong>Step 6: XO 11 Configuration Notes</strong><a class="headerlink" href="#step-6-xo-11-configuration-notes" title="Permanent link">&para;</a></h3>
 <p>For the configured App, ensure at least one Dialog Task has been configured for Agent AI use.
 <a class="glightbox" href="../images/dialog-settings-page-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/dialog-settings-page-25.png" alt="dialog-settings-page" title="dialog-settings-page" style="border: 1px solid gray; zoom:80%;"></a></p>
