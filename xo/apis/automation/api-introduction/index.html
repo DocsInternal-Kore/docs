@@ -13266,15 +13266,15 @@
 <ol>
 <li>Visit <a href="https://developer.kore.ai/tools/jwt/">https://developer.kore.ai/tools/jwt/</a>.</li>
 <li>In the <strong>Algorithm</strong> drop-down list, select <strong>HS256</strong>.</li>
+<li>Scroll down to the <strong>Decoded</strong> section, and update the <strong>Payload</strong> and the <strong>Secret</strong>.</li>
 <li>
-<p>Scroll down to the <strong>Decoded</strong> section, and update the <strong>Payload</strong> and the <strong>Secret</strong>.
-        1. Replace the content of the <strong>Payload</strong> field with the code block shown below, and add the Client ID of the app copied in the previous section.
-        <code>json
-        {
-            "sub": "1234567890",
-            "appId": "add-Client-ID-here"
-        }</code>
-        Note that the XO Platform validates the token only when it is entered exactly as “appId”. Don’t use “App ID”, “appid”, or “app ID”.</p>
+<p>Replace the content of the <strong>Payload</strong> field with the code block shown below, and add the Client ID of the app copied in the previous section</p>
+<p><code>json
+{
+    "sub": "1234567890",
+    "appId": "add-Client-ID-here"
+}</code></p>
+<p>Note that the XO Platform validates the token only when it is entered exactly as “appId”. Don’t use “App ID”, “appid”, or “app ID”.</p>
 </li>
 <li>
 <p>In the <strong>Verify Signature</strong> field, replace <strong>your-256-bit-secret</strong> with the Client Secret copied in the previous section.</p>
