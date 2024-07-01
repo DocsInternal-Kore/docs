@@ -14812,7 +14812,8 @@ The external service invoked must have a provision to accept and handle the user
 </span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>}
 </span></code></pre></div>
 <h3 id="zip-code">Zip Code<a class="headerlink" href="#zip-code" title="Permanent link">&para;</a></h3>
-<p>Captures a US zip code from the user utterance. For example, <em>What is the weather for 32746?</em> The value for <strong>Zip Code</strong> is 32746 and is returned as a string.</p>
+<p>Captures a zip code from the user utterance. For example, What is the weather for 32746? The value for Zip Code is 32746 and is returned as a string.</p>
+<p>Please note that the entity does not pick a zip code from regular expressions (eg: #$A1B2%), however it successfully picks the zip code if it contains hyphen, spaces or leading “0”s in the utterance.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>&quot;entities&quot;:
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>{
 </span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>&quot;ZipcodeEntity&quot;: &quot;32746&quot;
