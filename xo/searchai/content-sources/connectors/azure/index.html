@@ -13184,12 +13184,12 @@
 </ul>
 <p><a class="glightbox" href="../images/azure/account-overview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Account Overview " src="../images/azure/account-overview.png" title="Account Overview" /></a></p>
 <ul>
-<li>From the left navigation menu, go to <strong>Shared access signature</strong> and generate a SAS key. To do so, enable the following settings and click on <strong><em>Generate SAS and connection string</em></strong> button at the bottom.  </li>
+<li>From the left navigation menu, go to <strong>Shared access signature</strong> and generate a SAS key. To do so, enable the following settings and click on <strong>Generate SAS and connection string</strong> button at the bottom.  </li>
 </ul>
 <p><a class="glightbox" href="../images/azure/generate-sas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Generate Connection String " src="../images/azure/generate-sas.png" title="Connection String" /></a></p>
 <p>Use the following minimum permissions:
-  * <strong>Allowed resource types</strong>: Enable Service, Container &amp; Object.
-  * <strong>Allowed permissions</strong>: Read, List</p>
+* <strong>Allowed resource types</strong>: Enable Service, Container &amp; Object.
+* <strong>Allowed permissions</strong>: Read, List</p>
 <p>This will generate the connection string, SAS token, and blob service SAS URL. Save these fields to configure the Azure connector in Search AI. </p>
 <p><a class="glightbox" href="../images/azure/azure-credentials.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Azure Connection Details" src="../images/azure/azure-credentials.png" title="Azure Connection Details" /></a></p>
 <h2 id="step-2-configuring-the-azure-connector-in-search-ai">Step 2: Configuring the Azure connector in Search AI<a class="headerlink" href="#step-2-configuring-the-azure-connector-in-search-ai" title="Permanent link">&para;</a></h2>
@@ -13198,14 +13198,14 @@
 <p>Go to the <strong>Connectors</strong> tab, click on the <strong>Add New Connector</strong> option, and select <strong>Azure Storage</strong>.</p>
 <p><a class="glightbox" href="../images/azure/connector-home.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Connector Home" src="../images/azure/connector-home.png" title="Connector Home" /></a></p>
 <p>On the <strong>Authorization</strong> tab, enter the following fields and click <strong>Connect</strong>.
-    * Name: Name for the connector
-    * Host URL: The base URL from the <strong>blob service SAS URL</strong> generated in the above step.
-    * SAS Token: SAS token generated in the above step. </p>
+  * Name: Name for the connector
+  * Host URL: The base URL from the <strong>blob service SAS URL</strong> generated in the above step.
+  * SAS Token: SAS token generated in the above step. </p>
 <p>On successful authentication, this will set up a connection with Azure storage and display the connector as <strong>Connected</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
-<p>This does not trigger content syncing automatically.**</p>
+<p>This does not trigger content syncing automatically.</p>
 <h3 id="content-synchronization">Content Synchronization<a class="headerlink" href="#content-synchronization" title="Permanent link">&para;</a></h3>
 <p>To synchronize the content, go to the <strong>Configurations</strong> tab. The synchronization allows ingestion of the intended content from the Azure Storage account to the SearchAI application. You can either set up automatic synchronization or trigger a manual sync.  To initiate a sync manually, click on the <strong>Sync Now</strong> button at the end of the page.</p>
 <p><a class="glightbox" href="../images/azure/manual-sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Manual Sync" src="../images/azure/manual-sync.png" title="Manual Sync" /></a></p>
