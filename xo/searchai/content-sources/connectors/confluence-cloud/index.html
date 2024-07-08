@@ -13050,30 +13050,28 @@
 <p><a class="glightbox" href="../images/confluencecloud/app-details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create App" src="../images/confluencecloud/app-details.png" title="Create app" /></a></p>
 <p>Once the application is created, you can update its name and description from the <strong>_Settings _**tab. You can also add an avatar for the application. Update the settings and click **Save changes</strong>.</p>
 <p><a class="glightbox" href="../images/confluencecloud/app-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="App Settings" src="../images/confluencecloud/app-settings.png" title="App Settings" /></a></p>
-<p>Next, configure Authorization code grants to allow SearchAssist to access data. To do so, go to the <strong>_Authorization _**tab. Enter the SearchAI Callback URL provided to you and click **Save changes</strong>. You can use one of the following callback URLs as per your region. </p>
-<ul>
-<li>JP Region Callback URLs: <a href="https://jp-bots-idp.kore.ai/workflows/callback">https://jp-bots-idp.kore.ai/workflows/callback</a></li>
-<li>DE Region Callback URLs: <a href="https://de-bots-idp.kore.ai/workflows/callback">https://de-bots-idp.kore.ai/workflows/callback</a></li>
-<li>Prod Region Callback URLs: <a href="https://idp.kore.com/workflows/callback">https://idp.kore.com/workflows/callback</a></li>
-</ul>
+<p>Next, configure Authorization code grants to allow SearchAssist to access data. To do so, go to the <strong>Authorization</strong> tab. Enter the SearchAI Callback URL provided to you and click <strong>Save changes</strong>. You can use one of the following callback URLs as per your region. 
+  * JP Region Callback URLs: <a href="https://jp-bots-idp.kore.ai/workflows/callback">https://jp-bots-idp.kore.ai/workflows/callback</a>
+  * DE Region Callback URLs: <a href="https://de-bots-idp.kore.ai/workflows/callback">https://de-bots-idp.kore.ai/workflows/callback</a>
+  * Prod Region Callback URLs: <a href="https://idp.kore.com/workflows/callback">https://idp.kore.com/workflows/callback</a></p>
 <p><a class="glightbox" href="../images/confluencecloud/callback-url.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="App Settings" src="../images/confluencecloud/callback-url.png" title="App Settings" /></a></p>
 <p>The next step is to grant the necessary permissions. Go to the <strong>Permissions</strong> tab. Add the following scopes:
-    *User Identity API
-    *Confluence API</p>
+  * User Identity API
+  * Confluence API</p>
 <p><a class="glightbox" href="../images/confluencecloud/app-permissions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="App Permissions" src="../images/confluencecloud/app-permissions.png" title="App Permissions" /></a></p>
-<p>To add permissions to the User Identity API, click the config link.</p>
+<p>To add permissions to the User Identity API, click the <strong>config</strong> link.</p>
 <p><a class="glightbox" href="../images/confluencecloud/permission-config.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="App Permissions" src="../images/confluencecloud/permission-config.png" title="App Permissions" /></a></p>
 <p>On the following page, click the Edit Scopes button.</p>
 <p><a class="glightbox" href="../images/confluencecloud/api-scope.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="API Scope" src="../images/confluencecloud/api-scope.png" title="API Scope" /></a></p>
 <p>Grant the following permissions and click <strong>Save</strong>.
-    *Read:me
-    *Read:account</p>
+  * Read:me
+  * Read:account</p>
 <p><a class="glightbox" href="../images/confluencecloud/useridentityapi-scope.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="API Scope" src="../images/confluencecloud/useridentityapi-scope.png" title="API Scope" /></a></p>
 <p>Similarly, for <strong>Confluence API</strong>, go to the <strong>Granular Scopes</strong> and click <strong>Edit Scopes</strong>. Add a read operation filter, select all the filtered permissions, and click <strong>Save</strong>.  </p>
 <p><a class="glightbox" href="../images/confluencecloud/confluenceapi-scope.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="API Scope" src="../images/confluencecloud/confluenceapi-scope.png" title="API Scope" /></a></p>
-<p>After adding permissions, go to <strong>Settings**and find the **Client ID</strong> and <strong>Secret</strong> at the end of the page. Save these fields as these will be used for configuring the SearchAI connector in the next step.
+<p>After adding permissions, go to <strong>Settings</strong> and find the <strong>Client ID</strong> and <strong>Secret</strong> at the end of the page. Save these fields as these will be used for configuring the SearchAI connector in the next step.
 <a class="glightbox" href="../images/confluencecloud/settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Settings" src="../images/confluencecloud/settings.png" title="Settings" /></a></p>
-<p>You also need the Host URL in Confluence to configure the SearchAI Connector.  To fetch this field,** **go to the <a href="https://www.atlassian.com/software/confluence">Confluence home page</a> and click on Profile. </p>
+<p>You also need the Host URL in Confluence to configure the SearchAI Connector.  To fetch this field, go to the <a href="https://www.atlassian.com/software/confluence">Confluence home page</a> and click on Profile. </p>
 <p><a class="glightbox" href="../images/confluencecloud/profile-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profile" src="../images/confluencecloud/profile-page.png" title="Profile" /></a></p>
 <p>Go to the <strong>Products</strong> tab.</p>
 <p><a class="glightbox" href="../images/confluencecloud/products-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Products" src="../images/confluencecloud/products-page.png" title="Products" /></a></p>
@@ -13134,17 +13132,18 @@
 <p>The connector allows you to set up rules to selectively ingest content from the application. To define such rules, select <strong>Sync Specific Content</strong> and click on the <strong>Configure</strong> link. The following page allows you to define rules for selecting the content. Each rule can be defined using a parameter, operator, and its values.</p>
 <p><a class="glightbox" href="../images/confluencecloud/content-filters.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Content Filters " src="../images/confluencecloud/content-filters.png" title="Content Filters" /></a></p>
 <p>The Parameter field can take one of the following values. You can also add other CQL fields defined for your Confluence content. Refer to the complete list of supported fields <a href="https://developer.atlassian.com/cloud/confluence/cql-fields/">here</a>.</p>
-<div class="language-text highlight"><pre><span></span><code>* Ancestor: Affects the direct child pages/content and descendants of the given content IDs as value. 
-* Content: Affects the content defined using content ID only. 
-* Created: Affects the content with the given creation date. It takes Date as values in the following format “yyyy/mm/dd hh:mm”, “yyyy-mm-dd hh:mm”, “yyyy/mm/dd”, “yyyy-MM-dd”
-* Creator: Affects the content created by the User account IDs provided as values. 
-* Label: Affects the content by its label. 
-* Parent: Affects the content under a given parent. 
-* ID: Affects the content based on its content ID. 
-* Space: Affects the content based on the space that it is available in.
-* Title: Define the rule using the title of the pages
-* User: Define the rule using userId
-</code></pre></div>
+<ul>
+<li>Ancestor: Affects the direct child pages/content and descendants of the given content IDs as value. </li>
+<li>Content: Affects the content defined using content ID only. </li>
+<li>Created: Affects the content with the given creation date. It takes Date as values in the following format “yyyy/mm/dd hh:mm”, “yyyy-mm-dd hh:mm”, “yyyy/mm/dd”, “yyyy-MM-dd”</li>
+<li>Creator: Affects the content created by the User account IDs provided as values. </li>
+<li>Label: Affects the content by its label. </li>
+<li>Parent: Affects the content under a given parent. </li>
+<li>ID: Affects the content based on its content ID. </li>
+<li>Space: Affects the content based on the space that it is available in.</li>
+<li>Title: Define the rule using the title of the pages</li>
+<li>User: Define the rule using userId </li>
+</ul>
 <p>The Operator field can take different values depending upon the parameter selected like equals to, not equals to, contains, etc. </p>
 <p>The value field is used for providing the value as per the parameter.</p>
 <p>For instance, you can choose all the pages and sub-pages under a given ancestor using the following rule. </p>
@@ -13152,8 +13151,8 @@
 <p>Similarly, to selectively ingest only the pages created or modified after Jan 1, 2024, you can configure the rule as shown below. </p>
 <p><a class="glightbox" href="../images/confluencecloud/example2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example " src="../images/confluencecloud/example2.png" title="Example" /></a></p>
 <p>Note:
-    * You can define more than one condition to choose different types of content from the connector using the OR operator. 
-    * Every rule can have one or more conditions to select a subset of content using the AND operator. For example, to ingest the latest content created after Jan 1, 2024, and having the word ‘SearchAI’ in its title, define the rule as: \</p>
+  * You can define more than one condition to choose different types of content from the connector using the OR operator. 
+  * Every rule can have one or more conditions to select a subset of content using the AND operator. For example, to ingest the latest content created after Jan 1, 2024, and having the word ‘SearchAI’ in its title, define the rule as:</p>
 <p><a class="glightbox" href="../images/confluencecloud/example3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example " src="../images/confluencecloud/example3.png" title="Example" /></a></p>
 <h3 id="content-sync-schedule">Content Sync Schedule<a class="headerlink" href="#content-sync-schedule" title="Permanent link">&para;</a></h3>
 <p>You can trigger a <strong>manual sync</strong> or <strong>schedule an automatic sync</strong> operation for the connector to ingest content. </p>

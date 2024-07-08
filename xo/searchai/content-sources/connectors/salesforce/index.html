@@ -12997,17 +12997,17 @@
 <p>Provide the details for the app. Provide basic information about the application like the name, email address, logo, icon, etc. </p>
 <p><a class="glightbox" href="../images/salesforce/app-details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="App details" src="../images/salesforce/app-details.png" title="App details" /></a></p>
 <p><strong>Enable OAuth settings</strong> for API Integration under the **API**section and provide the callback URL. You can use one of the following callback URLs as per your region or deployment. 
-    * JP Region Callback URLs: <a href="https://jp-bots-idp.kore.ai/workflows/callback">https://jp-bots-idp.kore.ai/workflows/callback</a>
-    * DE Region Callback URLs: <a href="https://de-bots-idp.kore.ai/workflows/callback">https://de-bots-idp.kore.ai/workflows/callback</a>
-    * Prod Region Callback URLs: <a href="https://idp.kore.com/workflows/callback">https://idp.kore.com/workflows/callback</a></p>
+  * JP Region Callback URLs: <a href="https://jp-bots-idp.kore.ai/workflows/callback">https://jp-bots-idp.kore.ai/workflows/callback</a>
+  * DE Region Callback URLs: <a href="https://de-bots-idp.kore.ai/workflows/callback">https://de-bots-idp.kore.ai/workflows/callback</a>
+  * Prod Region Callback URLs: <a href="https://idp.kore.com/workflows/callback">https://idp.kore.com/workflows/callback</a></p>
 <p>Select and add the following to the <strong>Selected OAuth Scopes</strong>. 
-    * Full access (full)
-    * Perform requests at any time (refresh_token, offline_access)</p>
+  * Full access (full)
+  * Perform requests at any time (refresh_token, offline_access)</p>
 <p>Leave other settings as default and click <strong>Save</strong> and <strong>Continue</strong>. The summary page for the application will be displayed as shown below. </p>
 <p><a class="glightbox" href="../images/salesforce/save-app.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="App details" src="../images/salesforce/save-app.png" title="App details" /></a></p>
 <p>Click <strong>Manage Consumer Details</strong> to generate the consumer ID and secret from this page. Save this information to complete the connector integration in the next step.</p>
 <h2 id="configuring-the-salesforce-connector">Configuring the Salesforce connector<a class="headerlink" href="#configuring-the-salesforce-connector" title="Permanent link">&para;</a></h2>
-<p>The next step is to configure the Salesforce connector in SearchAI. Go to the <strong><em>Connectors _**tab under **_Sources</em></strong> and select <strong><em>Salesforce _**from the list of available connectors. On the Authorization tab, enter a name for the connector, provide the Consumer ID and Consumer Secret Key, generated in the previous section, select the type of source, and click **_Connect</em></strong>. The field <strong>Type</strong> can take the following values:</p>
+<p>The next step is to configure the Salesforce connector in SearchAI. Go to the <strong>Connectors</strong> tab under <strong>Sources</strong> and select <strong>Salesforce</strong> from the list of available connectors. On the Authorization tab, enter a name for the connector, provide the Consumer ID and Consumer Secret Key, generated in the previous section, select the type of source, and click <strong>Connect</strong>. The field <strong>Type</strong> can take the following values:</p>
 <p><strong>Cloud</strong>- Production environment/instance</p>
 <p><strong>Sandbox</strong>- Test environment/instance. </p>
 <p><a class="glightbox" href="../images/salesforce/authorization.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Authorization" src="../images/salesforce/authorization.png" title="Authorization" /></a></p>
@@ -13015,7 +13015,7 @@
 <p><a class="glightbox" href="../images/salesforce/content-filter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Content Filters" src="../images/salesforce/content-filter.png" title="Content Filters" /></a></p>
 <h3 id="content-filters">Content Filters<a class="headerlink" href="#content-filters" title="Permanent link">&para;</a></h3>
 <p>Salesforce Connector allows selective ingestion of content. To set content filters, select <strong>Sync Specific Content</strong> and click on the <strong>Configure</strong> link. The following page allows you to define rules for selecting the content. Each rule can be defined using a parameter, operator, and its value. </p>
-<p><a class="glightbox" href="../images/salesforce/content-rules.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Content Rules" src="../images/salesforce/content-rules.png" title="Content Rules" /></a></p>
+<p><a class="glightbox" href="../images/salesforce/content-rule.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Content Rules" src="../images/salesforce/content-rule.png" title="Content Rules" /></a></p>
 <p>The most commonly used <strong>Parameter</strong> fields are listed in the dropdown. You can also add new parameters if the content supports those fields using the <strong>+Add</strong> option. </p>
 <p>The <strong>Operator</strong> field can take different values depending upon the parameter selected like equals to, not equals to, contains, etc. </p>
 <p>The <strong>Value</strong> field is used for setting the expected value of the parameter.</p>
