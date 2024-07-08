@@ -5380,6 +5380,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Step 2: Configuring the Google Drive connector in SearchAI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#content-ingestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Ingestion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-filtering-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Filtering Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -12982,6 +13006,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Step 2: Configuring the Google Drive connector in SearchAI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#content-ingestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Ingestion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-filtering-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Filtering Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -13088,6 +13136,57 @@ If the publishing status is set to Testing, you can add your test users by click
 <p><a class="glightbox" href="../images/googledrive/auth-tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Authorization" src="../images/googledrive/auth-tab.png" title="Authorization" /></a></p>
 <p>Once the connection is successfully established, to synchronize the content at any time, go to the <strong>Configurations</strong> tab and click <strong>Sync Now.</strong> Go to the <strong>Content</strong> tab to view the content ingested into the application. </p>
 <p><a class="glightbox" href="../images/googledrive/content-tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Content" src="../images/googledrive/content-tab.png" title="Content" /></a></p>
+<h3 id="content-ingestion">Content Ingestion<a class="headerlink" href="#content-ingestion" title="Permanent link">&para;</a></h3>
+<p>After successfully connecting to Google Drive, the next step is to do the Synchronization configuration. This allows the connector to know what content is to be ingested from the drive. To do so, go to the <strong>Configurations</strong> tab and do the following configurations. </p>
+<ul>
+<li>
+<p><strong>Schedule Sync</strong>- Enable this option if you want to set up a scheduler to automatically sync content with Google Drive at regular intervals. When enabled, set the time and frequency of the sync operation. The sync job runs at scheduled intervals in the background and ingests any updated content from the application. </p>
+</li>
+<li>
+<p><strong>Synchronization</strong> - This field allows you to select the content to be ingested from the drive. You can choose to:</p>
+<ol>
+<li>Sync All Content - This option ingests all the data from Google Drive. </li>
+<li>Sync Specific Content - This option allows you to select the content to be ingested into the SearchAI application. Click on the <strong>Configure</strong> option. The following widget allows you to set up rules for filtering content. Set up rules and click <strong>Save and Test</strong>.</li>
+</ol>
+</li>
+</ul>
+<p><a class="glightbox" href="../images/googledrive/config-tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configuration" src="../images/googledrive/config-tab.png" title="Configuration" /></a></p>
+<h3 id="content-filtering-rules">Content Filtering Rules<a class="headerlink" href="#content-filtering-rules" title="Permanent link">&para;</a></h3>
+<p>Each rule gives you the option to choose the location on the drive from where the content is to be ingested. It can take the following values:
+    * <strong>User Drive</strong> includes only the locations owned by the account for which the Google Drive connector is configured. 
+    * <strong>Shared Drive</strong> includes only the locations shared with the account for which the Google Drive connector is configured. 
+    * <strong>All Drives</strong> include all the locations from the user drive as well as the shared drive. 
+    * <strong>User Domain</strong> </p>
+<p>Next, define conditions to choose the content from the selected location. To define a condition, specify a parameter, operator, and the value for the parameter.  For example, if you want to ingest all the files in a given folder set up a filter as shown below:</p>
+<p><a class="glightbox" href="../images/googledrive/example1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example" src="../images/googledrive/example1.png" title="Example" /></a></p>
+<p>You can define conditions based on the following parameters or add your parameters too. Refer to <a href="https://developers.google.com/drive/api/guides/ref-search-terms">this</a> for more information on the query parameters and the values that the parameters can take. </p>
+<ul>
+<li>
+<p><strong>Folder Id</strong> - Ingest data specifically from one or more folders.  Provide the folder IDs as value. To find the folder ID, navigate to your folder in Google Drive, the unique ID that comes after “folder/” in the URL is the folder ID. For example, if the URL is “<a href="https://drive.google.com/drive/folders/1dyUEebJaFnWa3Z4n0BFMVAXQ7mfUH11g">https://drive.google.com/drive/folders/1dyUEebJaFnWa3Z4n0BFMVAXQ7mfUH11g</a>”, then the Folder ID would be “1dyUEebJaFnWa3Z4n0BFMVAXQ7mfUH11g”.</p>
+</li>
+<li>
+<p><strong>Mime Type</strong> - Ingest a specific type of data. For example, use ‘application/pdf’ to ingest only pdf files from the drive.  Supported MIME types include:</p>
+<ul>
+<li>application/msword</li>
+<li>application/pdf</li>
+<li>text/plain</li>
+<li>application/vnd.google-apps.document</li>
+<li>application/vnd.google-apps.presentation</li>
+</ul>
+</li>
+<li>
+<p><strong>File Name</strong> - Ingest files with given file names. </p>
+</li>
+</ul>
+<p><strong>Points to note</strong></p>
+<ul>
+<li>You can have any number of rules in a filter. For example, to include all the files from a specific folder and all the files with a keyword in the filename, you can set up a filter as:</li>
+</ul>
+<p><a class="glightbox" href="../images/googledrive/example2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example" src="../images/googledrive/example2.png" title="Example" /></a></p>
+<ul>
+<li>You can define more than one condition to a rule to filter specific content. For example, to ingest only PDF files from a given folder, you can set up a filter as:</li>
+</ul>
+<p><a class="glightbox" href="../images/googledrive/example3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example" src="../images/googledrive/example3.png" title="Example" /></a></p>
 
 
 

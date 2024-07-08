@@ -5347,6 +5347,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Step 2: Configuring SearchAI Connector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#content-ingestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Ingestion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Filters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -13000,6 +13024,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Step 2: Configuring SearchAI Connector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#content-ingestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Ingestion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Filters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -13080,7 +13128,34 @@ Note: Password-protected files in any format are not supported
 </ul>
 </li>
 </ol>
-<p>Click <strong>Connect</strong> to initiate the connector authorization process. This completes the setup for communication between SearchAI and the Confluence Server. </p>
+<p>Click <strong>Connect</strong> to initiate the connector authorization process. This completes the setup for communication between SearchAI and the Confluence Server.</p>
+<h3 id="content-ingestion">Content Ingestion<a class="headerlink" href="#content-ingestion" title="Permanent link">&para;</a></h3>
+<p>Go to the <strong>Configuration</strong> tab and select the content to be ingested. You can choose to sync all the content from the Confluence Server or select specific content. </p>
+<p><a class="glightbox" href="../images/confluenceserver/content-sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Content Synchronization" src="../images/confluenceserver/content-sync.png" title="Content Synchronization" /></a></p>
+<h3 id="content-filters">Content Filters<a class="headerlink" href="#content-filters" title="Permanent link">&para;</a></h3>
+<p>The connector allows you to set up rules to selectively ingest content from the application. To define such rules, select <strong>Sync Specific Content and</strong> click on the <strong>Configure</strong> link. The following page allows you to define rules for selecting the content. Each rule can be defined using a parameter, operator, and its values. </p>
+<p><a class="glightbox" href="../images/confluenceserver/content-filters.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Content Filters" src="../images/confluenceserver/content-filters.png" title="Content Filters" /></a></p>
+<p>The Parameter field can take one of the following values. You can also add other CQL fields defined for your Confluence content. Refer to the complete list of supported fields <a href="https://developer.atlassian.com/cloud/confluence/cql-fields/">here</a>.
+  * Ancestor: Affects the direct child pages/content and descendants of the given content IDs as value. 
+  * Content: Affects the content defined using content ID only. 
+  * Created: Affects the content with the given creation date. It takes Date as values in the following format “yyyy/mm/dd hh:mm”, “yyyy-mm-dd hh:mm”, “yyyy/mm/dd”, “yyyy-MM-dd”
+  * Creator: Affects the content created by the User account IDs provided as values. 
+  * Label: Affects the content by its label. 
+  * Parent: Affects the content under a given parent. 
+  * ID: Affects the content based on its content ID. 
+  * Space: Affects the content based on the space that it is available in.
+  * Title: Define the rule using the title of the pages
+  * User: Define the rule using userId </p>
+<p>The Operator field can take different values depending upon the parameter selected like equals to, not equals to, contains, etc. </p>
+<p>The value field is used for providing the value as per the parameter.</p>
+<p>For instance, you can choose all the pages and sub-pages under a given ancestor using the following rule. </p>
+<p><a class="glightbox" href="../images/confluenceserver/example1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Content Filters" src="../images/confluenceserver/example1.png" title="Content Filters" /></a></p>
+<p>Similarly, to selectively ingest only the pages created or modified after Jan 1, 2024, you can configure the rule as shown below. </p>
+<p><a class="glightbox" href="../images/confluenceserver/example1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Content Filters" src="../images/confluenceserver/example1.png" title="Content Filters" /></a></p>
+<p>Note:
+  * You can define more than one condition to choose different types of content from the connector using the OR operator. 
+  * Every rule can have one or more conditions to select a subset of content using the AND operator. For example, to ingest the latest content created after Jan 1, 2024 and having the word ‘SearchAI’ in its title, define the rule as:</p>
+<p><a class="glightbox" href="../images/confluenceserver/example3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Content Filters" src="../images/confluenceserver/example3.png" title="Content Filters" /></a></p>
 
 
 
