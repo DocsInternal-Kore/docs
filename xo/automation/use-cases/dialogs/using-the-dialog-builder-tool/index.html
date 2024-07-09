@@ -14400,38 +14400,44 @@
 <li><strong>Name</strong> – The name of your dialog task, usually the main user intent. For example, <em>Book Ticket.</em></li>
 <li><strong>Description</strong> – An optional description of your dialog task displayed in the XO Platform.</li>
 <li>
-<p><strong>More Options</strong> – Specify the behavior of this dialog task to the end-user:</p>
-<ul>
-<li><strong>Availability of Use Case</strong> for the end users, the agents, or both.</li>
-<li>
-<p><strong>Intent Settings:</strong></p>
-<ul>
-<li><strong>Sub intent only dialog</strong> – The task is invoked only as a sub-task when another task is in progress. It is not presented as a task when the user requests help.</li>
-<li>
-<p><strong>Hide from help</strong> – The task is not presented as a task when the user requests help. Users can invoke this task anytime while talking to the assistant.</p>
-<p><strong>Note:</strong> This option is selected automatically when the <strong>Sub intent only dialog</strong> option is selected. You can manually deselect it.</p>
-</li>
-</ul>
+<p><strong>Intent Settings:</strong>
+        * <strong>Sub intent only dialog</strong> – The task is invoked only as a sub-task when another task is in progress. It is not presented as a task when the user requests help.
+        * <strong>Hide from help</strong> – The task is not presented as a task when the user requests help. Users can invoke this task anytime while talking to the assistant.</p>
+<div class="language-text highlight"><pre><span></span><code>    **Note:** This option is selected automatically when the **Sub intent only dialog** option is selected. You can manually deselect it.
+</code></pre></div>
 </li>
 <li>
-<p><strong>Analytics - Containment Type</strong>(Any one option can be selected):</p>
+<p><strong>Customer Use Cases</strong> – Select if this dialog task is available for end users (customers).</p>
+</li>
+<li>
+<p><strong>Agent AI Use Cases</strong> - Select if this dialog task is available for agents.</p>
 <ul>
-<li><strong>Abundance as Self Service:</strong> Users can abandon the conversation while executing the dialog.</li>
-<li><strong>Abundance as Drop Off:</strong> Conversations can be abandoned by users or due to any failure during dialog execution.</li>
-</ul>
-</li>
-<li><strong>Follow-up Task</strong> – The follow-up task array contains all the intents detected from user utterances from this dialog. You can either:<ul>
-<li>Handle the follow-up tasks as part of node connections (default setting) or</li>
-<li>Let the user select the follow-up task.</li>
-</ul>
-</li>
-<li><strong>Task Execution Failure</strong> – Define the assistant’s behavior when there is an error in task execution. It can be set as either:<ul>
-<li>Same as the Bot Level behavior.</li>
-<li>Specific to this task – initiate a task, run a script, or show a message.</li>
+<li>Enable or disable the following options in this section:<ul>
+<li><strong>During Chats</strong>: If enabled, agents can manually or automatically trigger this use case when they are engaged with a customer in a chat channel.</li>
+<li><strong>During Calls</strong>: If enabled, agents can manually or automatically trigger this use case when they are engaged with a customer in a phone call.</li>
+<li><strong>During E-Mails</strong>: If enabled, agents can manually or automatically trigger this use case when they are engaged with a customer in an email conversation.<ul>
+<li><strong>Launch through Library</strong>:<ul>
+<li><strong>Enabled</strong>: The dialog task is listed under all available dialog tasks in the Search tab of the widget.</li>
+<li><strong>Disabled</strong>: The dialog task doesn’t appear on the list, but remains searchable via the “Ask a question” search bar in the Search tab of the AgentAssist widget, allowing agents to browse and find this use case to trigger it.</li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Analytics - Containment Type</strong>(Any one option can be selected):
+        * <strong>Abundance as Self Service:</strong> Users can abandon the conversation while executing the dialog.
+        * <strong>Abundance as Drop Off:</strong> Conversations can be abandoned by users or due to any failure during dialog execution.</p>
+</li>
+<li><strong>Follow-up Task</strong> – The follow-up task array contains all the intents detected from user utterances from this dialog. You can either:
+        * Handle the follow-up tasks as part of node connections (default setting) or
+        * Let the user select the follow-up task.</li>
+<li><strong>Task Execution Failure</strong> – Define the assistant’s behavior when there is an error in task execution. It can be set as either:
+        * Same as the Bot Level behavior.
+        * Specific to this task – initiate a task, run a script, or show a message.</li>
 </ul>
 <h3 id="manage-interruptions">Manage Interruptions<a class="headerlink" href="#manage-interruptions" title="Permanent link">&para;</a></h3>
 <p>The <strong>Manage Interruptions</strong> options allow you to select if and how a user can switch to another task and exit strategies. It can be set up at the VA, task, and node levels to ensure the configurations are layered to suit your various business requirements. You can also add conditional exceptions between tasks with the ability to pass contextual data between them.</p>
