@@ -13152,50 +13152,46 @@
 <p>Step 3: Train and Test the Dialog Tasks</p>
 <h3 id="step-1-link-your-salesforce-crm-account">Step 1: Link your Salesforce CRM Account<a class="headerlink" href="#step-1-link-your-salesforce-crm-account" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Click <strong>Marketplace</strong> in the left navigation and select <strong>Salesforce CRM</strong> Integration. The Salesforce CRM Integration dialog box is displayed. </li>
-</ol>
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
-<ol>
+<li>
+<p>Click <strong>Marketplace</strong> in the left navigation and select <strong>Salesforce CRM</strong> Integration. The Salesforce CRM Integration dialog box is displayed. 
+<a class="glightbox" href="../image/marketplace_salesforce.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../image/marketplace_salesforce.png" alt="marketplace" title="marketplace" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
 <li>
 <p>Click <strong>Install</strong> at the top-right corner. The Instructions tab is highlighted. </p>
 </li>
 <li>
 <p>Switch to the <strong>Authenticate and Install</strong> tab - click the tab. The Authorization Details section is displayed.</p>
 </li>
-<li><strong>Authorization Type</strong> – Select the <strong>Pre-authorize the Integration</strong> option, and then select the <strong><em>OAuth</em></strong> option. </li>
+<li><strong>Authorization Type</strong> – Select the <strong>Pre-authorize the Integration</strong> option, and then select the <strong><em>OAuth</em></strong> option. 
+<a class="glightbox" href="../image/authorization.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../image/authorization.png" alt="authorization" title="authorization" style="border: 1px solid gray; zoom:70%;"></a></li>
 </ol>
 <p><strong>System Authorization</strong></p>
-<div class="language-text highlight"><pre><span></span><code>Pre-authorize Salesforce CRM integration with the necessary authorization credentials to obtain the token to access external services.
-
-    * Select **System** to enable the Kore.ai’s preconfigured Salesforce app and click **Authorize**.
-</code></pre></div>
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>    * Once you click **Authorize**, you are redirected to “login.salesfore.com”
-    * Enter your developer account credentials to successfully connect with your Salesforce Account
-    * Click the **Allow Access** button to use Kore.ai’s app to fetch the access token to complete the authorization.
-</code></pre></div>
+<p>Pre-authorize Salesforce CRM integration with the necessary authorization credentials to obtain the token to access external services.</p>
+<ul>
+<li>
+<p>Select <strong>System</strong> to enable the Kore.ai’s preconfigured Salesforce app and click <strong>Authorize</strong>.<br />
+ <a class="glightbox" href="../image/system_authorise.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../image/system_authorise.png" alt="authorization" title="authorization" style="border: 1px solid gray; zoom:70%;"></a>  </p>
+</li>
+<li>
+<p>Once you click <strong>Authorize</strong>, you are redirected to “login.salesfore.com”</p>
+</li>
+<li>Enter your developer account credentials to successfully connect with your Salesforce Account</li>
+<li>Click the <strong>Allow Access</strong> button to use Kore.ai’s app to fetch the access token to complete the authorization.</li>
+</ul>
 <p><strong>Custom Authorization</strong></p>
-<div class="language-text highlight"><pre><span></span><code>Create your own custom authorization profile to obtain an access token and use it to complete integration without using Kore.ai’s Salesforce app for authorization.
-</code></pre></div>
+<p>Create your own custom authorization profile to obtain an access token and use it to complete integration without using Kore.ai’s Salesforce app for authorization.</p>
 <ul>
 <li>Select the <strong>Custom</strong> to enable the custom authorization profile.</li>
 <li>Click the <strong>Select Authorization</strong> drop-down and select the <strong>Create New</strong> option. </li>
 </ul>
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../image/custom_authorize.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../image/custom_authorize.png" alt="authorization" title="authorization" style="border: 1px solid gray; zoom:70%;"></a></p>
 <ul>
-<li>Select the type of authorization mechanism. For example, select the <strong>OAuth v2</strong> option. To create custom OAuth profiles, see <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/dev-tools/bot-authorization/setting-up-authorization-using-oauth-v2">Setting Up Authorization Using OAuth v2</a>. </li>
-</ul>
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<li>
+<p>Select the type of authorization mechanism. For example, select the <strong>OAuth v2</strong> option. To create custom OAuth profiles, see <a href="https://docsinternal-kore.github.io/docs/xo/app-settings/dev-tools/bot-authorization/setting-up-authorization-using-oauth-v2">Setting Up Authorization Using OAuth v2</a>.  </p>
+</li>
+<li>
+<p>Enter the following authentication credentials for the OAuth v2 mechanism:</p>
 <ul>
-<li>Enter the following authentication credentials for the OAuth v2 mechanism:<ul>
 <li>Call back URL</li>
 <li>Identity Provider Name</li>
 <li>Client ID</li>
@@ -13215,9 +13211,7 @@
 <li>Select the new <strong>Authorization Profile,</strong> which you created to enable integration</li>
 <li>Click <strong>Authorize</strong>. You are navigated to “login.salesforce.com”. </li>
 </ul>
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<p><a class="glightbox" href="images/image6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../image/salesforce_authorise.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../image/salesforce_authorise.png" alt="authorization" title="authorization" style="border: 1px solid gray; zoom:70%;"></a></p>
 <ul>
 <li>Enter login credentials to successfully connect with your Salesforce Account.</li>
 <li>Once the authorization is successful, you will see a success message.</li>
