@@ -13988,7 +13988,7 @@
 <li>
 <p>Provide an <strong>Intent Name</strong> (mandatory) and <strong>Description</strong> (Optional but recommended).</p>
 </li>
-<li>You can choose whether the new dialog will be available to the end users <strong>(Customer Use Case)</strong>,  agents <strong>(AgentAssist Use Case)</strong>, or both.</li>
+<li>You can choose whether the new dialog will be available to the end users <strong>(Customer Use Case)</strong>,  agents <strong>(Agent AI Use Case)</strong>, or both.</li>
 <li>Under <strong>Intent Settings</strong>, set options for the task to be independent, such as a <strong>Sub-intent dialog</strong> or <strong>Hide it from Help</strong>.</li>
 <li>Under <strong>Analytics - Containment type</strong>, you can choose between <strong>Abandonment as Self-Service</strong> and <strong>Abandonment as Drop Off</strong>.</li>
 <li>Optionally, you can adjust <strong>Conversation Context</strong>, set <strong>Intent Preconditions</strong>, or define <strong>Context Output</strong>.</li>
@@ -14402,23 +14402,20 @@
 <li>
 <p><strong>Intent Settings:</strong>
         * <strong>Sub intent only dialog</strong> – The task is invoked only as a sub-task when another task is in progress. It is not presented as a task when the user requests help.
-        * <strong>Hide from help</strong> – The task is not presented as a task when the user requests help. Users can invoke this task anytime while talking to the assistant.</p>
-<div class="language-text highlight"><pre><span></span><code>    **Note:** This option is selected automatically when the **Sub intent only dialog** option is selected. You can manually deselect it.
+        * <strong>Hide from help</strong> – The task is not presented as a task when the user requests help. Users can invoke this task anytime while talking to the assistant.
+        !!! Note </p>
+<div class="language-text highlight"><pre><span></span><code>This option is selected automatically when the **Sub intent only dialog** option is selected. You can manually deselect it.
 </code></pre></div>
-</li>
-<li>
-<p><strong>Customer Use Cases</strong> – Select if this dialog task is available for end users (customers).</p>
-</li>
-<li>
-<p><strong>Agent AI Use Cases</strong> - Select if this dialog task is available for agents.</p>
 <ul>
+<li><strong>Customer Use Cases</strong> – Select if this dialog task is available for end users (customers).</li>
+<li><strong>Agent AI Use Cases</strong> - Select if this dialog task is available for agents.</li>
 <li>Enable or disable the following options in this section:<ul>
 <li><strong>During Chats</strong>: If enabled, agents can manually or automatically trigger this use case when they are engaged with a customer in a chat channel.</li>
 <li><strong>During Calls</strong>: If enabled, agents can manually or automatically trigger this use case when they are engaged with a customer in a phone call.</li>
 <li><strong>During E-Mails</strong>: If enabled, agents can manually or automatically trigger this use case when they are engaged with a customer in an email conversation.<ul>
 <li><strong>Launch through Library</strong>:<ul>
 <li><strong>Enabled</strong>: The dialog task is listed under all available dialog tasks in the Search tab of the widget.</li>
-<li><strong>Disabled</strong>: The dialog task doesn’t appear on the list, but remains searchable via the “Ask a question” search bar in the Search tab of the AgentAssist widget, allowing agents to browse and find this use case to trigger it.</li>
+<li><strong>Disabled</strong>: The dialog task doesn’t appear on the list, but remains searchable via the “Ask a question” search bar in the Search tab of the Agent AI widget, allowing agents to browse and find this use case to trigger it.</li>
 </ul>
 </li>
 </ul>
