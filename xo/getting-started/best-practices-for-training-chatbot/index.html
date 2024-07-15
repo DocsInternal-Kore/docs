@@ -990,17 +990,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Best Practices for Training Your AI Chatbot
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1010,60 +999,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this Page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#faqs-vs-generative-ai-answers-from-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      FAQs vs. Generative AI Answers from Documents
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="FAQs vs. Generative AI Answers from Documents">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-faqs-and-generative-ai-answers-from-documents-work-together" class="md-nav__link">
-    <span class="md-ellipsis">
-      How FAQs and Generative AI Answers from Documents Work Together?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-avoid-conflict-between-faqs-and-generative-ai-answers-from-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Avoid Conflict Between FAQs and Generative AI Answers from Documents?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -13815,47 +13750,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#faqs-vs-generative-ai-answers-from-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      FAQs vs. Generative AI Answers from Documents
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="FAQs vs. Generative AI Answers from Documents">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-faqs-and-generative-ai-answers-from-documents-work-together" class="md-nav__link">
-    <span class="md-ellipsis">
-      How FAQs and Generative AI Answers from Documents Work Together?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-avoid-conflict-between-faqs-and-generative-ai-answers-from-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Avoid Conflict Between FAQs and Generative AI Answers from Documents?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -13873,7 +13767,7 @@
 
 
 <h1 id="best-practices-for-training-your-ai-chatbot">Best Practices for Training Your AI Chatbot<a class="headerlink" href="#best-practices-for-training-your-ai-chatbot" title="Permanent link">&para;</a></h1>
-<p>You can train your AI Chatbot to provide exact answers to specific questions from customers. There are two ways to train your Chatbot to do so:</p>
+<p>You can train your AI Chatbot to provide exact answers to specific questions from customers. Consider the following best practices while doing so: </p>
 <ol>
 <li>
 <p><strong>FAQs</strong> (Frequently Asked Questions)</p>
@@ -13910,13 +13804,20 @@
 </li>
 </ul>
 </li>
+<li>
+<p><strong>FAQs vs. Generative AI Answers from Documents</strong></p>
+<ul>
+<li>
+<p>How FAQs and Generative AI Answers from Documents Work Together?<br />
+First, your  Chatbot will generate AI Answers from Documents—it will look for answers in the uploaded/added documents using Generative AI. If the documents don’t have an answer, it will use Automation AI (Dialog Tasks/FAQs) to answer customer questions. So, the default order is - Generative AI Answers from Documents first and Automation (FAQs) second. You can change the default order from the App Settings. <a href="../../searchai/setup-search-ai/#virtual-assistant-fallback-configuration">Learn more</a>.</p>
+</li>
+<li>
+<p>How to Avoid Conflict Between FAQs and Generative AI Answers from Documents?<br />
+To ensure your Chatbot generates answers from documents, avoid adding questions on the same topic to your FAQs. If a question exists in the FAQs, the  Chatbot will always prioritize the FAQ response over searching the documents. For example, if you have a detailed document about your return policies, don't add a question like "What is your return policy?" to the FAQs. This allows the  Chatbot to use the comprehensive document to answer customer questions instead of relying on a potentially incomplete FAQ answer.</p>
+</li>
+</ul>
+</li>
 </ol>
-<h2 id="faqs-vs-generative-ai-answers-from-documents">FAQs vs. Generative AI Answers from Documents<a class="headerlink" href="#faqs-vs-generative-ai-answers-from-documents" title="Permanent link">&para;</a></h2>
-<p>To ensure your Chatbot generates answers from documents, avoid adding questions on the same topic to your FAQs. If a question exists in the FAQs, the Chatbot will always prioritize the FAQ answer over searching the documents. (For example, if you have a detailed document about your return policies, don't add a question like "What is your return policy?" to the FAQs. This allows the Chatbot to use the comprehensive document to answer customer questions instead of relying on a potentially incomplete FAQ answer.)</p>
-<h3 id="how-faqs-and-generative-ai-answers-from-documents-work-together">How FAQs and Generative AI Answers from Documents Work Together?<a class="headerlink" href="#how-faqs-and-generative-ai-answers-from-documents-work-together" title="Permanent link">&para;</a></h3>
-<p>First, your  Chatbot will generate AI Answers from Documents—it will look for answers in the uploaded/added documents using Generative AI. If the documents don’t have an answer, it will use Automation AI (Dialog Tasks/FAQs) to answer customer questions. So, the default order is - Generative AI Answers from Documents first and Automation (FAQs) second. You can change the default order from the App Settings. <a href="../../searchai/setup-search-ai/#virtual-assistant-fallback-configuration">Learn more</a>.</p>
-<h3 id="how-to-avoid-conflict-between-faqs-and-generative-ai-answers-from-documents">How to Avoid Conflict Between FAQs and Generative AI Answers from Documents?<a class="headerlink" href="#how-to-avoid-conflict-between-faqs-and-generative-ai-answers-from-documents" title="Permanent link">&para;</a></h3>
-<p>To ensure your Chatbot generates answers from documents, avoid adding questions on the same topic to your FAQs. If a question exists in the FAQs, the  Chatbot will always prioritize the FAQ response over searching the documents. For example, if you have a detailed document about your return policies, don't add a question like "What is your return policy?" to the FAQs. This allows the  Chatbot to use the comprehensive document to answer customer questions instead of relying on a potentially incomplete FAQ answer.</p>
 
 
 
