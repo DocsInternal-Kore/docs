@@ -5338,9 +5338,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#virtual-assistant-fallback-configuration" class="md-nav__link">
+  <a href="#enabling-answers-in-automation-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      Virtual Assistant Fallback Configuration
+      Enabling Answers in Automation AI
     </span>
   </a>
   
@@ -13952,9 +13952,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#virtual-assistant-fallback-configuration" class="md-nav__link">
+  <a href="#enabling-answers-in-automation-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      Virtual Assistant Fallback Configuration
+      Enabling Answers in Automation AI
     </span>
   </a>
   
@@ -13996,24 +13996,27 @@
 <h3 id="step-7-test-and-debug">Step 7: Test and Debug<a class="headerlink" href="#step-7-test-and-debug" title="Permanent link">&para;</a></h3>
 <p>To Test Answers, go to the <strong>Answer Configuration</strong> page and use the <strong>Test Answers</strong> option. Enter a query and verify the application's answers. Use the debug option to understand the application's behavior and the generated answers.</p>
 <p>With these steps, your Search AI setup is complete and ready to provide answers to your users. For specific details and scenarios, refer to the detailed documentation on different topics. Note that the virtual assistant uses SearchAI to answer user queries based on a specific fallback setting discussed below. </p>
-<h2 id="virtual-assistant-fallback-configuration">Virtual Assistant Fallback Configuration<a class="headerlink" href="#virtual-assistant-fallback-configuration" title="Permanent link">&para;</a></h2>
-<p>The behavior of the virtual assistant is configurable, allowing users to define its primary and fallback response methods. This configuration is important in tailoring the assistant's actions to suit specific needs.</p>
-<p><strong>Fallback Method Configuration</strong>:
-Go to the <strong>App Profile</strong> under <strong>App Settings</strong> in the Automation AI module and select the Fallback Behaviour.
-<a class="glightbox" href="../images/fallback-setting.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fallback Setting" src="../images/fallback-setting.png" title="Fallback setting" /></a></p>
+<h2 id="enabling-answers-in-automation-ai">Enabling Answers in Automation AI<a class="headerlink" href="#enabling-answers-in-automation-ai" title="Permanent link">&para;</a></h2>
+<p>The following configuration enables the integration of Search AI with Automation AI. You can also configure the Virtual Assistant's behavior to define Search AI as its primary and fallback response method.</p>
+<p><strong>Answers Configuration</strong>:
+Go to the <strong>App Profile</strong> under <strong>App Settings</strong> in the Automation AI module and enable the Answers feature.
+<a class="glightbox" href="../images/enable-answers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Enabling Answers" src="../images/enable-answers.png" title="Enabling Answers" /></a></p>
+<p>Use the following options to configure the use of Search AI. </p>
+<p><strong>Intent Identification Priority</strong>: This priority is used when the bot needs to identify the intent from the initial user utterances. This can take the following values:</p>
 <ul>
 <li>
-<p>SearchAI as Fallback:
-    When SearchAI is designated as the fallback method, the assistant will prioritize the automation framework for answering. If a suitable response is not found within the automation framework, the assistant will then utilize the SearchAI application to generate a response.</p>
+<p>Automation first, Search AI as Fallback:
+    The assistant prioritizes the automation framework for identifying the intent and answering the user input. If intent identification or action fails, the assistant uses the Search AI to generate a response.</p>
 </li>
 <li>
-<p>Automation as Fallback: 
-    Conversely, when Automation is set as the fallback method, the assistant will use the SearchAI application for answering initially. If no satisfactory match is found within the SearchAI sources, the assistant will then use the automation framework to provide the response.</p>
+<p>Search AI first, Automation as Fallback:
+    The assistant uses the Search AI application to answer. If no satisfactory match is found within the Search AI sources, the assistant uses the automation framework to handle the user inputs.</p>
 </li>
 </ul>
+<p><strong>Use Search AI for Unrecognized Inputs During Dialogs</strong>: This option enhances the assistant's ability to handle diverse user inputs during Automation AI Dialog Tasks. If the NLP Engine fails to recognize an utterance, the system passes unidentified user inputs to Search AI, allowing access to the knowledge base mid-dialog. This improves conversation flow, reduces "I don't understand" responses, and allows for more diverse and comprehensive assistance throughout the dialog.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The choice of fallback method should be made carefully, considering the nature of the queries and the desired user experience.</p>
+<p>The fallback method should be chosen carefully, considering the nature of the queries and the desired user experience.</p>
 </div>
 
 
