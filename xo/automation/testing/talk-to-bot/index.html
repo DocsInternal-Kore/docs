@@ -14042,22 +14042,20 @@
 <li><strong>Session Context &amp; Variables</strong>: Shows both context object and session variables used in the dialog task processing.</li>
 </ul>
 <h3 id="debug-log">Debug Log<a class="headerlink" href="#debug-log" title="Permanent link">&para;</a></h3>
-<p><strong>Debug Log</strong> provides the sequential progression of a dialog task and context and session variables captured at every node. The Debug log supports the following statuses:</p>
+<p><strong>Debug Log</strong> provides the sequential progression of a dialog task and context and session variables captured at every node. It is a chat-like interface, grouped by user inputs and bot responses for easier conversation flow tracing. It offers improved navigation and contextual information at a glance. This significantly enhances log readability and streamlines the debugging process. The Debug log supports the following statuses:</p>
 <ul>
 <li><em>initiated</em>: The XO Platform initiates the various nodes in a dialog task. For example, script, service, and webhook execution is initiated.</li>
 <li><em>execution</em>: indicates execution of nodes has started. For example, script, service, and webhook execution has started.</li>
 <li><em>execution successful</em>: indicates execution of nodes is successful.For example, script, service, and webhook execution is successful.</li>
 <li>
-<p><em>process completed</em>: indicates execution process for the script, service and webhook node is completed.<br />
-<a class="glightbox" href="../images/process-completed.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/process-completed.png" alt="Debug log - Statuses" title="Debug log - Statuses" style="border: 1px solid gray; zoom:80%;"/></a></p>
+<p><em>process completed</em>: indicates execution process for the script, service and webhook node is completed.  </p>
 </li>
 <li>
 <p><em>expand</em>: You can expand the node and click the <strong>Show More</strong> to view node debug log details.<br />
 <a class="glightbox" href="../images/expand-option.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/expand-option.png" alt="Expand to see debug log details" title="Expand to see debug log details" style="border: 1px solid gray; zoom:80%;"/></a></p>
 </li>
 <li>
-<p><em>node details</em>: shows the node details in the script format. You can copy, open the script in a full screen view or close the script view.<br />
-<a class="glightbox" href="../images/talk-to-bot-img7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/talk-to-bot-img7.png" alt="Node details" title="Node details" style="border: 1px solid gray; zoom:80%;"/></a></p>
+<p><em>node details</em>: shows the node details in the script format. You can copy, open the script in a full screen view or close the script view.  </p>
 </li>
 <li>
 <p><em>parsing</em>: The XO Platform begins to parse the user prompt.</p>
@@ -14068,8 +14066,7 @@
 <li><em>resume</em>: The current dialog with paused status continues at the same point in the flow after completion of another task that was started.</li>
 <li><em>waitingForServerResponse</em>: The server request is pending an asynchronous response.</li>
 <li><em>error</em>: An error occurred, for example, the loop limit is reached, a server or script node execution fails.</li>
-<li><em>end</em>: The dialog reached the end of the dialog flow.<br />
-<a class="glightbox" href="../images/talk-to-bot-img8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/talk-to-bot-img8.png" alt="End of the dialog flow" title="End of the dialog flow" style="border: 1px solid gray; zoom:80%;"/></a></li>
+<li><em>end</em>: The dialog reached the end of the dialog flow.  </li>
 </ul>
 <h3 id="nl-analysis">NL Analysis<a class="headerlink" href="#nl-analysis" title="Permanent link">&para;</a></h3>
 <p>NL Analysis tab shows the task name analysis and recognition scores of each user utterance.  It presents a detailed tone analysis, intent detection, and entity detection performed by the Kore.ai NLP engine. As a part of intent detection, the NL Analysis tab shows the outcomes of Machine Learning, Fundamental Meaning, and Knowledge Graph engines. For a detailed discussion on the scores, see <a href="../testing-your-bot-with-nlp/" target="_blank">Training Your Assistant </a>topic.</p>
