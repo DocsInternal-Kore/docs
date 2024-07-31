@@ -14215,7 +14215,16 @@
 <li>
 <p>If you select <strong>Full import</strong>, the VA definition in the in-development copy will be overwritten with the definition in the import file.</p>
 <ul>
-<li>If the assistant contains or more additional tasks or languages that not present in the import definition, these tasks will be marked as deleted and removed when the VA is published.</li>
+<li>If the assistant contains one or more additional tasks or languages that are not present in the import definition, these tasks will be marked as deleted and removed when the VA is published.</li>
+<li>For Generative AI and LLM features, <strong>Full import</strong>:
+        * Deletes existing models and prompts in the target app.
+        * Overwrites with models, prompts, and GenAI features from the import file.
+        * Retains model configurations if a model exists in both source and target
+        * Replaces all feature mappings, custom instructions, and guardrails.
+        * Preserve existing integrations.
+        * Import XO-GPT integration as-is.
+        * Enable imported features with warnings.
+        * Handle <strong>Azure Open AI by Kore.ai</strong> integration based on token status.</li>
 </ul>
 </li>
 <li>
@@ -14224,9 +14233,10 @@
 <ul>
 <li>
 <p><strong>Bot Tasks</strong>: Here, you can select to import Tasks only (with or without comments), Knowledge Graph, Small Talk, or Digital Forms.</p>
-<p>!!! note:</p>
-<div class="language-text highlight"><pre><span></span><code>If you want to import one or more Bot Tasks, also select the **NLP Data** settings, as they are linked. For example, the utterances assigned to dialog tasks are not imported if you don’t select the NLP Data settings, causing problems in identifying the dialog properly.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to import one or more Bot Tasks, also select the <strong>NLP Data</strong> settings, as they are linked. For example, the utterances assigned to dialog tasks are not imported if you don’t select the NLP Data settings, causing problems in identifying the dialog properly.</p>
+</div>
 </li>
 <li>
 <p><strong>NLP Data</strong>: Here you can import Synonyms, Concepts, Traits, Rules, Utterances, Patterns, and Standard Responses. ML Utterances and Patterns can either be Appended or Replaced.</p>
@@ -14243,15 +14253,20 @@
 </ol>
 </li>
 <li>
-<p><strong>Settings</strong>: Bot Settings, Bot Variables and Voice Call Properties.</p>
+<p><strong>Settings</strong>: Bot Settings, Bot Variables, Voice Call Properties, Generative AI and LLM. The Generative AI and LLM setting includes:
+        * Integrations
+        * Prompts and Requests Library
+        * Feature Mappings
+        * Guardrails </p>
 </li>
 <li><strong>Custom Dashboards</strong>: This is useful in case you have created custom dashboards under the Analyze section and want to import them to the new VA as well. </li>
 <li>
 <p>On the confirmation dialog that opens, click <strong>Backup</strong> to download the existing assistant configuration.</p>
 <p><a class="glightbox" href="../images/bm(8).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/bm(8).png" alt="Backup notification" title="Backup notification" style="border:1px solid gray; zoom:60;"></a></p>
-<p>!!! note:</p>
-<div class="language-text highlight"><pre><span></span><code>While backing up is an optional choice, we strongly recommend you do so, especially when choosing Full Import, as you cannot recover the configurations after the imported assistant replaces them.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While backing up is an optional choice, we strongly recommend you do so, especially when choosing Full Import, as you cannot recover the configurations after the imported assistant replaces them.</p>
+</div>
 </li>
 </ul>
 </li>
@@ -14356,6 +14371,24 @@
     <strong>Note</strong>: On-Prem customers can import the NLP components (Synonyms, Concepts, Rules, Traits) from a source VA of a higher version to a target VA of a lower version by checking the <strong>NLP Settings</strong> checkbox. However, Rules won’t import unless the tagged dialog tasks are also imported.
    </td>
   </tr>
+  <tr>
+   <td>Generative AI and LLM    
+   </td>
+   <td>
+   <br>
+    – Keeps existing prompts, only adds new ones.
+    <br>
+    – Replaces all feature mappings, custom instructions, and guardrails.
+    <br>
+    – Preserve existing integrations.
+    <br>
+    – Import XO-GPT integration as-is.
+    <br>
+    – Enable imported features with warnings.
+    <br>
+    – Handle "Azure Open AI by Kore.ai" integration based on token status.
+   </td>
+  </tr>
 </table>
 
 <h2 id="exporting-an-assistant">Exporting an Assistant<a class="headerlink" href="#exporting-an-assistant" title="Permanent link">&para;</a></h2>
@@ -14371,9 +14404,10 @@
 <li><strong>Icon.png</strong>: Includes the assistant icon.</li>
 <li><strong>&lt;<em>Custom ScriptFile Name</em>.js&gt; (if available)</strong>: Includes a script file with JavaScript functions. When you upload this file, you can access the functions in the file from anywhere in the assistant.</li>
 </ul>
-<p>!!! note:</p>
-<div class="language-text highlight"><pre><span></span><code>The assistant and its components are given unique Reference IDs during export. These IDs help the platform to identify matching tasks in the target VA and update them.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The assistant and its components are given unique Reference IDs during export. These IDs help the platform to identify matching tasks in the target VA and update them.</p>
+</div>
 <h3 id="export-modes">Export Modes<a class="headerlink" href="#export-modes" title="Permanent link">&para;</a></h3>
 <p>You can export assistants in two modes: <strong>Published</strong> and <strong>Latest Version</strong>. Depending on the mode that is selected, the corresponding versions of the tasks are exported. You can select specific components to export from the tasks, NLP data, and VA settings in both the modes. Further individual Tasks can also be selected.</p>
 <h4 id="published-mode">Published Mode<a class="headerlink" href="#published-mode" title="Permanent link">&para;</a></h4>
@@ -14622,6 +14656,26 @@
    <td>All the IVR settings for the assistant (Bot Settings > IVR settings).
    </td>
   </tr>
+  <tr>
+   <td>Generative AI      
+ and LLM
+</td>
+   <td>
+<ul>
+
+<li>Integrations
+
+<li>Prompts and Requests Library
+
+<li>Feature Mappings
+
+<li>Guardrails
+
+</li>
+</ul>
+   </td>
+  </tr>
+
 </table>
 
 <h2 id="deleting-an-assistant">Deleting an Assistant<a class="headerlink" href="#deleting-an-assistant" title="Permanent link">&para;</a></h2>
