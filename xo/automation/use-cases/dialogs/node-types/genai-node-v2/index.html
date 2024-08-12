@@ -22,7 +22,7 @@
     
     
       
-        <title>GenAI Node V2 - Kore ai Docs</title>
+        <title>GenAI Node v2 - Kore ai Docs</title>
       
     
     
@@ -257,7 +257,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GenAI Node V2
+              GenAI Node v2
             
           </span>
         </div>
@@ -2607,7 +2607,7 @@
           
   
   <span class="md-ellipsis">
-    GenAI Node V2
+    GenAI Node v2
   </span>
   
 
@@ -2618,7 +2618,7 @@
         
   
   <span class="md-ellipsis">
-    GenAI Node V2
+    GenAI Node v2
   </span>
   
 
@@ -14597,14 +14597,21 @@ You can define transitions using the context variables.</p>
 <p><a class="glightbox" href="../images/preview2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/preview2.png" alt="Script Preview" title="Script Preview" style="border: 1px solid gray; zoom:70%;"></a></p>
 </li>
 <li>
-<p>On the Preview pop-up, enter the Variable <strong>Value</strong> and click <strong>Test</strong>. This will conver the JavaScript to JSON object and this will be send to the LLM. You cam view the JSON object in the JSON Preview section.The success message is displayed. Click <strong>Close</strong>. </p>
-<p><a class="glightbox" href="../images/preview1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/preview1.png" alt="Script Preview" title="Script Preview" style="border: 1px solid gray; zoom:70%;"></a>
-9. The JSON object in the JSON Preview section.Click <strong>Close</strong>.</p>
-<p><a class="glightbox" href="../images/jsonpreview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/jsonpreview.png" alt="Script Preview" title="Script Preview" style="border: 1px solid gray; zoom:70%;"></a>
-9. In the request section, click <strong>Test</strong>. This will make a call to the LLM.
-10. If the request values are correct, the response from the LLM is displayed. If not, an error message is displayed. 
-11. In the Actual Response section, double-click the <strong>Key</strong> that should be used to generate the response path. For example, double-click the <strong>Content</strong> key and click <strong>Save</strong>. </p>
-<p><a class="glightbox" href="../images/content-key.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/content-key.png" alt="Instance Properties" title="Instance Properties" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>On the Preview pop-up, enter the Variable <strong>Value</strong> and click <strong>Test</strong>. This will convert the JavaScript to a JSON object and this will be sent to the LLM. </p>
+<p><a class="glightbox" href="../images/preview1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/preview1.png" alt="Script Preview" title="Script Preview" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>You cam view the JSON object in the JSON Preview section. Click <strong>Close</strong>.</p>
+<p><a class="glightbox" href="../images/jsonpreview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/jsonpreview.png" alt="Script Preview" title="Script Preview" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>In the request section, click <strong>Test</strong>. This will make a call to the LLM.</p>
+</li>
+<li>
+<p>If the request values are correct, the response from the LLM is displayed. If not, an error message is displayed. </p>
+</li>
+<li>
+<p>In the Actual Response section, double-click the <strong>Key</strong> that should be used to generate the response path. For example, double-click the <strong>Content</strong> key and click <strong>Save</strong>. </p>
 </li>
 <li>
 <p>The <strong>Response Path</strong> is displayed. Click <strong>Lookup Path</strong>.</p>
@@ -14613,35 +14620,25 @@ You can define transitions using the context variables.</p>
 <p>The <strong>Actual Response</strong> and <strong>Expected Response</strong> are displayed. </p>
 <ol>
 <li>
-<p>If the response structure matches, the responses will be in green. Click <strong>Save</strong>. Skip to Step 14.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Both Actual Response and Expected Response are not editable.</p>
-</div>
-<p><a class="glightbox" href="../images/content-key.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/content-key.png" alt="Actual Response" title="Actual Response" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p>If the response structure matches, the responses will be in green. Click <strong>Save</strong>. Skip to Step 11.
+    !!! note
+        Both Actual Response and Expected Response are not editable.</p>
 </li>
 <li>
-<p>If the response structure does not match, the responses will be in red. Click <strong>Configure</strong> to modify the Actual Response. The Post Processor Script is displayed.<a href="https://docsinternal-kore.github.io/docs/xo/generative-ai-tools/images/prl%2812%29.png"> 
-</a></p>
+<p>If the response structure does not match, the responses will be in red. Click <strong>Configure</strong> to modify the Actual Response. The Post Processor Script is displayed. </p>
 <ol>
-<li>Enter the <strong>Post Processor Script</strong>. Click <strong>Save &amp; Test</strong>.<a href="https://docsinternal-kore.github.io/docs/xo/generative-ai-tools/images/prl%2811%29.png"> </a></li>
+<li>Enter the <strong>Post Processor Script</strong>. Click <strong>Save &amp; Test</strong>. </li>
+<li>The response is displayed. </li>
+<li>Click <strong>Save</strong>. The actual response and expected response turn green.</li>
 </ol>
 </li>
 </ol>
 </li>
-</ol>
-<p><a class="glightbox" href="images/image16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image16.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>    2. The response is displayed.[ ](https://docsinternal-kore.github.io/docs/xo/generative-ai-tools/images/prl%284%29.png)
-</code></pre></div>
-<p><a class="glightbox" href="images/image17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image17.png" title="image_tooltip" /></a></p>
-<div class="language-text highlight"><pre><span></span><code>    3. Click **Save**. The actual response and expected response turn green.
-</code></pre></div>
-<ol>
-<li>Enter the <strong>Exit Scenario Key-Value fields</strong>, <strong>Virtual Assistance Response Key</strong>, and <strong>Collected Entities</strong>. The Exit Scenario Key-Value fields help identify when to end the interaction with the GenAI model and return to the dialog flow. A Virtual Assistance Response Key is available in the response payload to display the VA’s response to the user. The Collected Entities is an object within the LLM response that contains the key-value of pairs of entities to be captured. </li>
-</ol>
-<p><a class="glightbox" href="images/image18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image18.png" title="image_tooltip" /></a></p>
-<ol>
-<li>Click <strong>Save</strong>. The request is added and displayed in the <strong>Prompts and Requests Library</strong> section.  </li>
+<li>
+<p>Enter the <strong>Exit Scenario Key-Value fields</strong>, <strong>Virtual Assistance Response Key</strong>, and <strong>Collected Entities</strong>. The Exit Scenario Key-Value fields help identify when to end the interaction with the GenAI model and return to the dialog flow. A Virtual Assistance Response Key is available in the response payload to display the VA’s response to the user. The Collected Entities is an object within the LLM response that contains the key-value of pairs of entities to be captured.
+    <a class="glightbox" href="../images/key-value.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/key-value.png" alt="Essential keys" title="Essential keys" style="border: 1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>Click <strong>Save</strong>. The request is added and displayed in the <strong>Prompts and Requests Library</strong> section.</li>
 </ol>
 <h2 id="dynamic-variables">Dynamic Variables<a class="headerlink" href="#dynamic-variables" title="Permanent link">&para;</a></h2>
 <table>
