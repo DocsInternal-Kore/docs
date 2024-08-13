@@ -14908,6 +14908,14 @@
 <li>Enhanced Data Privacy: Sensitive information does not persist after conversations end.</li>
 <li>Audit-Friendly: Improves audit trails with a clear indication of purged data. </li>
 </ul>
+<p>Known Issues</p>
+<p>We are working to fix these issues in tne next release:</p>
+<ul>
+<li>Task Execution Logs (script execution): Entity values in the Context Object are redacted and not purged.</li>
+<li>In Analytics &gt; Conversation History: When a Transient Entity is printed in the message/confirmation node, the data is redacted but not purged.</li>
+<li>Service Node: The usage of the transient entity in the service node request is in plain text in the response.</li>
+<li>Debug Logs (Analytics): When a transient entity is printed as part of debugger statements, the data is in redacted form in the Debug Logs (Analytics) and is not purged.</li>
+</ul>
 <p><a href="../../../automation/use-cases/dialogs/node-types/working-with-the-entity-node/#configure-the-node" target="_blank">Learn more <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></svg></span></a></p>
 <h3 id="dialog-builder">Dialog Builder<a class="headerlink" href="#dialog-builder" title="Permanent link">&para;</a></h3>
 <h4 id="real-time-collaboration-in-dialog-builder">Real-time Collaboration in Dialog Builder<a class="headerlink" href="#real-time-collaboration-in-dialog-builder" title="Permanent link">&para;</a></h4>
