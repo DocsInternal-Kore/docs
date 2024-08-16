@@ -14127,13 +14127,13 @@ Steps to personalize form submission prompt for <strong>Mobile/Web SDK</strong>:
 Select the prompt to show on successful form submission. The options are:<br />
         a. Use Submit Prompts –  The custom message added in the prompt is shown.<br />
         b. Use default system response –  The following confirmation is shown – {{FormName}} Form is successfully submitted.</p>
+<p><a class="glightbox" href="../images/form-node-img8-submit-prompt-selection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/form-node-img8-submit-prompt-selection.png" alt="Select Submit prompt for Web/Mobile SDK" title="Select Submit prompt for Web/Mobile SDK" style="border:1px solid gray;zoom:70%;"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The target node has to be in the same dialog, you cannot make a jump to a target node outside the current dialog. The list of target nodes only shows the local nodes. If the target node is not present during runtime, the platform presents the error Error in continuing the conversation, and the task should get discarded.</p>
+</div>
 </li>
 </ol>
-<p><a class="glightbox" href="../images/form-node-img8-submit-prompt-selection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/form-node-img8-submit-prompt-selection.png" alt="Select Submit prompt for Web/Mobile SDK" title="Select Submit prompt for Web/Mobile SDK" style="border:1px solid gray;zoom:70%;"></a></p>
-<div class="language-text highlight"><pre><span></span><code>!!! Note
-
-    The target node has to be in the same dialog, you cannot make a jump to a target node outside the current dialog. The list of target nodes only shows the local nodes. If the target node is not present during runtime, the platform presents the error Error in continuing the conversation, and the task should get discarded.
-</code></pre></div>
 <h3 id="instance-properties">Instance Properties<a class="headerlink" href="#instance-properties" title="Permanent link">&para;</a></h3>
 <p>Use the Instance Properties to define any user tags that you want to set.</p>
 <div class="admonition note">
@@ -14143,14 +14143,18 @@ Select the prompt to show on successful form submission. The options are:<br />
 <p>To configure this tab, please follow these steps:</p>
 <ol>
 <li>On the Form window, click the <strong>Instance Properties</strong> tab.</li>
-<li>In the <strong>Form Cancellation Behavior</strong> section, select how the VA handles the conversation when the user cancels the form:<br />
- a. Discard the task and trigger End of Task Event – This is the default option.  </li>
-</ol>
+<li>
+<p>In the <strong>Form Cancellation Behavior</strong> section, select how the VA handles the conversation when the user cancels the form:<br />
+    a. Discard the task and trigger End of Task Event – This is the default option.  </p>
 <p><a class="glightbox" href="../images/form-node-img9-form-cancellation-behavior.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/form-node-img9-form-cancellation-behavior.png" alt="Form cancellation behavior - End of task" title="Form cancellation behavior - End of task" style="border:1px solid gray;zoom:70%;"></a></p>
 <p>b. Continue with this task and transition to this node – In the <strong>Unit Type</strong> drop-down list, you can select any node present in the current dialog task.</p>
-<p><a class="glightbox" href="../images/form-node-img10-form-cancellation-behavior-continue-task.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/form-node-img10-form-cancellation-behavior-continue-task.png" alt="Form cancellation behavior - Continue task" title="Form cancellation behavior - Continue task" style="border:1px solid gray;zoom:70%;"></a>
- 3. Under the <strong>Custom Tags</strong> section, add tags to build custom profiles of your conversations. <a href="../../../../../analytics/automation/custom-dashboard/custom-meta-tags/" target="_blank">Click here for more</a>.</p>
+<p><a class="glightbox" href="../images/form-node-img10-form-cancellation-behavior-continue-task.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/form-node-img10-form-cancellation-behavior-continue-task.png" alt="Form cancellation behavior - Continue task" title="Form cancellation behavior - Continue task" style="border:1px solid gray;zoom:70%;"></a></p>
+</li>
+<li>
+<p>Under the <strong>Custom Tags</strong> section, add tags to build custom profiles of your conversations. <a href="../../../../../analytics/automation/custom-dashboard/custom-meta-tags/" target="_blank">Click here for more</a>.</p>
 <p><a class="glightbox" href="../images/form-node-img11-instance-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/form-node-img11-instance-properties.png" alt="Form node - Instance properties" title="Form node - Instance properties" style="border:1px solid gray;zoom:70%;"></a></p>
+</li>
+</ol>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
