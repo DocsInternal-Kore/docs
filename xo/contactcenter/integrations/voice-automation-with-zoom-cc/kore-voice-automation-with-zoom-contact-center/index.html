@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kore-voice-automation-iva-integration-with-zoom-contact-center-cc" class="md-skip">
+        <a href="#kore-voice-automation-integration-with-zoom-contact-center" class="md-skip">
           Skip to content
         </a>
       
@@ -14339,7 +14339,7 @@
   
 
 
-<h1 id="kore-voice-automation-iva-integration-with-zoom-contact-center-cc">Kore Voice Automation (IVA) Integration with Zoom Contact Center (CC)<a class="headerlink" href="#kore-voice-automation-iva-integration-with-zoom-contact-center-cc" title="Permanent link">&para;</a></h1>
+<h1 id="kore-voice-automation-integration-with-zoom-contact-center">Kore Voice Automation Integration with Zoom Contact Center<a class="headerlink" href="#kore-voice-automation-integration-with-zoom-contact-center" title="Permanent link">&para;</a></h1>
 <p><strong>Zoom Contact Center (ZCC)</strong> is an automation solution for enterprises to manage customer interactions across voice and chat channels. This Integration will  enable Voice automation through SIP Integration. <strong>Kore.ai</strong> now supports the Zoom Contact Center voice channel to integrate voice virtual assistants.</p>
 <p>This integration streamlines customer support, automates responses, and improves overall operational efficiency, leading to enhanced customer experiences and increased productivity.</p>
 <h2 id="how-it-works">How it Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
@@ -14359,7 +14359,7 @@
 <h2 id="setting-up-zoom-contact-center">Setting up Zoom Contact Center<a class="headerlink" href="#setting-up-zoom-contact-center" title="Permanent link">&para;</a></h2>
 <p>The important steps to set up the ZCC channel are summarized below:</p>
 <ol>
-<li>Associate an App within an experience flow. <a href="https://docs.kore.ai/smartassist/experience-flows/flow-designer/">Know more</a><span style="text-decoration:underline;">.</span></li>
+<li>Associate an App within an experience flow. <a href="https://docs.kore.ai/smartassist/experience-flows/flow-designer/">Know more</a>.</li>
 <li>Configure “Transfer from IVR.”</li>
 <li>Configure “Agent Transfer.”</li>
 <li>Create a Bot Connector instance on Zoom App Marketplace to associate a virtual assistant. </li>
@@ -14369,7 +14369,10 @@
 <p><a class="glightbox" href="../images/architecture-diagram-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/architecture-diagram-1.png" alt="architecture-diagram" title="architecture-diagram" style="border: 1px solid gray; zoom:80%;"></a></p>
 <h2 id="step-1-associate-an-app-within-an-experience-flow-know-more">Step 1: Associate an App within an experience flow. <a href="https://docs.kore.ai/xo/flows/create-flows/">Know more</a><a class="headerlink" href="#step-1-associate-an-app-within-an-experience-flow-know-more" title="Permanent link">&para;</a></h2>
 <p>If you have your App ready with you then you can use “Automation” Node in the flow and attach that App with the flow that you want to trigger upon transfering the call from ZCC to Kore IVA. Read more <a href="https://docs.kore.ai/xo/flows/node-types/automation/">here</a>.</p>
-<p><strong>Note</strong>: If you are using the older version “Smart Assist” then use this <a href="https://docs.kore.ai/smartassist/experience-flows/create-experience-flows/">link</a><span style="text-decoration:underline;">.</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using the older version “Smart Assist” then use this <a href="https://docs.kore.ai/smartassist/experience-flows/create-experience-flows/">link</a>.</p>
+</div>
 <h2 id="step-2-configure-transfer-from-ivr">Step 2: Configure “Transfer from IVR”<a class="headerlink" href="#step-2-configure-transfer-from-ivr" title="Permanent link">&para;</a></h2>
 <p>You must configure <strong>Transfer from IVR</strong> to transfer a call from ZCC to Kore. Follow the steps below to make this configuration:</p>
 <p>Go to Kore.ai <strong>Flows &amp; Channels</strong> &gt; <strong>Channels</strong> &gt; <strong>Kore.ai Voice Gateway,</strong> and select <strong>SIP Numbers</strong> &gt; <strong>Configure SIP Transfer</strong>.
@@ -14384,14 +14387,16 @@
 <a class="glightbox" href="../images/forward-to-phone-number-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/forward-to-phone-number-3.png" alt="forward-to-phone-number" title="forward-to-phone-number" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 <li>
-<p>Click <strong>Save</strong>.<br />
-!!! "<strong>Note</strong>"
-    Upon configuring the above SIP transfer configuration, you need to attach one flow created in Step 1 to this configuration.</p>
+<p>Click <strong>Save</strong>.  </p>
 </li>
-<li>
-<p>Click <strong>Attach Flow</strong> and attach the flow created on step-1. For help, refer to <a href="https://docsinternal-kore.github.io/docs/xo/channels/kore.ai-voice-gateway/kore-voice-gateway/#attach-flow">Attach Flow</a>.<br />
-<a class="glightbox" href="../images/koreai-voice-gateway-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/koreai-voice-gateway-4.png" alt="koreai-voice-gateway" title="koreai-voice-gateway" style="border: 1px solid gray; zoom:80%;"></a></p>
-</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Upon configuring the above SIP transfer configuration, you need to attach one flow created in Step 1 to this configuration.</p>
+</div>
+<ol>
+<li>Click <strong>Attach Flow</strong> and attach the flow created on step-1. For help, refer to <a href="https://docsinternal-kore.github.io/docs/xo/channels/kore.ai-voice-gateway/kore-voice-gateway/#attach-flow">Attach Flow</a>.<br />
+<a class="glightbox" href="../images/koreai-voice-gateway-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/koreai-voice-gateway-4.png" alt="koreai-voice-gateway" title="koreai-voice-gateway" style="border: 1px solid gray; zoom:80%;"></a></li>
 </ol>
 <h2 id="step-3-agent-transfer-configuration">Step 3: Agent Transfer Configuration<a class="headerlink" href="#step-3-agent-transfer-configuration" title="Permanent link">&para;</a></h2>
 <p>After the customer interacts with Kore’s IVA, you can perform agent transfer from Kore IVA to ZCC through one of the following two approaches:</p>
@@ -14402,37 +14407,71 @@
 <h3 id="3-1-agent-transfer-node-in-experience-flow">3. 1 Agent Transfer Node in Experience Flow<a class="headerlink" href="#3-1-agent-transfer-node-in-experience-flow" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Select <strong>Agent Transfer</strong> node from <strong>Action</strong>.<br />
-<a class="glightbox" href="../images/agent-transfer-node-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/agent-transfer-node-5.png" alt="agent-transfer-node" title="agent-transfer-node" style="border: 1px solid gray; zoom:80%;"></a></p>
+<ol>
+<li>
+<ol>
+<li>Select <strong>Agent Transfer</strong> node from <strong>Action</strong>.<br />
+<a class="glightbox" href="../images/agent-transfer-node-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/agent-transfer-node-5.png" alt="agent-transfer-node" title="agent-transfer-node" style="border: 1px solid gray; zoom:80%;"></a></li>
+</ol>
+</li>
+</ol>
 </li>
 <li>
-<p>Add configuration for <strong>Agent Transfer</strong> node.<br />
-<a class="glightbox" href="../images/adding-configuration-agent-transfer-node-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/adding-configuration-agent-transfer-node-6.png" alt="adding-configuration-agent-transfer-node" title="adding-configuration-agent-transfer-node" style="border: 1px solid gray; zoom:80%;"></a></p>
+<ol>
+<li>
+<ol>
+<li>Add configuration for <strong>Agent Transfer</strong> node.<br />
+<a class="glightbox" href="../images/adding-configuration-agent-transfer-node-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/adding-configuration-agent-transfer-node-6.png" alt="adding-configuration-agent-transfer-node" title="adding-configuration-agent-transfer-node" style="border: 1px solid gray; zoom:80%;"></a></li>
+</ol>
+</li>
+</ol>
 </li>
 <li>
-<p>After configuring the Agent Transfer node in Experience Flow, head to <strong>App Settings</strong> &gt; <strong>Integration</strong> &gt; <strong>Agent transfer</strong> &gt; <strong>Voice</strong> and create a new SIP transfer here. </p>
+<ol>
+<li>
+<ol>
+<li>After configuring the Agent Transfer node in Experience Flow, head to <strong>App Settings</strong> &gt; <strong>Integration</strong> &gt; <strong>Agent transfer</strong> &gt; <strong>Voice</strong> and create a new SIP transfer here. </li>
+</ol>
+</li>
+</ol>
 </li>
 <li>
-<p>For ZCC, we are using <strong>SIP BYE</strong> for Agent Transfer.<br />
-<a class="glightbox" href="../images/sip-transfer-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/sip-transfer-7.png" alt="sip-transfer" title="sip-transfer" style="border: 1px solid gray; zoom:80%;"></a></p>
+<ol>
+<li>
+<ol>
+<li>For ZCC, we are using <strong>SIP BYE</strong> for Agent Transfer.<br />
+<a class="glightbox" href="../images/sip-transfer-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/sip-transfer-7.png" alt="sip-transfer" title="sip-transfer" style="border: 1px solid gray; zoom:80%;"></a></li>
+</ol>
+</li>
+</ol>
 </li>
 <li>
-<p>Configure SIP headers to be transferred to ZCC on Agent Transfer via SIP BYE.</p>
+<ol>
+<li>
+<ol>
+<li>Configure SIP headers to be transferred to ZCC on Agent Transfer via SIP BYE.</li>
+</ol>
+</li>
+</ol>
 </li>
 </ol>
 <h3 id="3-2-agent-transfer-node-in-a-dialog-task">3. 2 Agent Transfer Node in a Dialog Task<a class="headerlink" href="#3-2-agent-transfer-node-in-a-dialog-task" title="Permanent link">&para;</a></h3>
 <p>Zoom users can also invoke agent transfer from the Dialog Task using a message node. Read more <a href="https://developer.kore.ai/virtual-assistants/">here</a> on Kore Automation / Dialog task.</p>
 <p>Add the following code on the message node for agent transfer:</p>
-<p>!!! "<strong>Note</strong>"
-    Agent transfer can be to a number or any SIP URI.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Agent transfer can be to a number or any SIP URI.</p>
+</div>
 <p>var message = "Transferring Call to xxxx number";</p>
 <p>var ReferTo = "+91xxxxxxxxxx";   // or sipUrl </p>
 <p>var headers = {</p>
 <p>"X-Reason" : "Call Received from Kore"</p>
 <p>}</p>
 <p>print(voiceUtils.refer(message,ExternalPhoneNumber,headers))</p>
-<p>!!! "<strong>Note</strong>"
-    The following scenarios can be considered upon Agent Transfer:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following scenarios can be considered upon Agent Transfer:</p>
+</div>
 <h3 id="scenario-1-question-resolved-customer-hangs-up"><strong>Scenario 1: Question Resolved, Customer Hangs Up</strong><a class="headerlink" href="#scenario-1-question-resolved-customer-hangs-up" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Given</strong> that a customer’s query has been resolved by the voice bot,</li>
@@ -14501,28 +14540,20 @@
 <li>
 <p>Sign in to <strong><a href="https://smartassist.kore.ai/botbuilder">SmartAssist botbuilder</a></strong> using the same credentials.</p>
 </li>
-<li>Click the <strong>Instance Bot</strong>.<br />
-!!! "<strong>Note</strong>"
-    You can identify the instance bot by its unique symbol and matching name with the organization. In the above screenshot, Koreai bot is the instance bot as it matches with the organization name and has a unique symbol.</li>
-<li>
-<p>Go to <strong>API Scopes</strong>. To do so,</p>
+<li>Click the <strong>Instance Bot</strong>.  </li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can identify the instance bot by its unique symbol and matching name with the organization. In the above screenshot, Koreai bot is the instance bot as it matches with the organization name and has a unique symbol.</p>
+</div>
 <ol>
 <li>
-<ol>
-<li>Click the <strong>search</strong> button and enter <strong>API Scopes</strong> in it:<br />
-<a class="glightbox" href="../images/api-scopes-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/api-scopes-16.png" alt="api-scopes" title="api-scopes" style="border: 1px solid gray; zoom:80%;"></a></li>
-</ol>
-</li>
-</ol>
+<p>Go to <strong>API Scopes</strong>. To do so:
+    5.1. Click the <strong>search</strong> button and enter <strong>API Scopes</strong> in it:<br />
+    <a class="glightbox" href="../images/api-scopes-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/api-scopes-16.png" alt="api-scopes" title="api-scopes" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p><strong>Or</strong></p>
-<ol>
-<li>
-<ol>
-<li>Click <strong>Deploy **&gt;</strong> APIs &amp; Extensions <strong>&gt;</strong> API Scopes**.<br />
-<a class="glightbox" href="../images/apis-and-extensions-api-scopes-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/apis-and-extensions-api-scopes-17.png" alt="apis-and-extensions-api-scopes" title="apis-and-extensions-api-scopes" style="border: 1px solid gray; zoom:80%;"></a></li>
-</ol>
-</li>
-</ol>
+<p>5.2. Click <strong>Deploy **&gt;</strong> APIs &amp; Extensions <strong>&gt;</strong> API Scopes**.<br />
+<a class="glightbox" href="../images/apis-and-extensions-api-scopes-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/apis-and-extensions-api-scopes-17.png" alt="apis-and-extensions-api-scopes" title="apis-and-extensions-api-scopes" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 <li>
 <p>Click <strong>Create API Scope</strong>.<br />
@@ -14540,25 +14571,11 @@
 <a class="glightbox" href="../images/generative-ai-and-llm-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/generative-ai-and-llm-20.png" alt="generative-ai-and-llm" title="generative-ai-and-llm" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 <li>
-<p>On the <strong>Kore.ai XO GPT</strong> page, select:</p>
-<ol>
-<li>
-<ol>
-<li>Models.</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>Fine-tuned model for Summarizing Conversation.</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>Please read through the LLM &amp; Generative Policy guidelines and provide your consent to enable the Integration.<br />
-<a class="glightbox" href="../images/koreai-xo-gpt-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/koreai-xo-gpt-21.png" alt="koreai-xo-gpt" title="koreai-xo-gpt" style="border: 1px solid gray; zoom:80%;"></a></li>
-</ol>
-</li>
-</ol>
+<p>On the <strong>Kore.ai XO GPT</strong> page, select:  </p>
+<p>10.1. Models.</p>
+<p>10.2. Fine-tuned model for Summarizing Conversation.</p>
+<p>10.3. Please read through the LLM &amp; Generative Policy guidelines and provide your consent to enable the Integration.<br />
+<a class="glightbox" href="../images/koreai-xo-gpt-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/koreai-xo-gpt-21.png" alt="koreai-xo-gpt" title="koreai-xo-gpt" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 <li>
 <p>Click <strong>Save</strong>.</p>
@@ -14579,36 +14596,27 @@
 <li>
 <p>Enter a comment in the <strong>Comment</strong> box, and click <strong>Confirm</strong>.<br />
 <a class="glightbox" href="../images/comment-and-confirm-26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/comment-and-confirm-26.png" alt="comment-and-confirm" title="comment-and-confirm" style="border: 1px solid gray; zoom:80%;"></a></p>
-<ol>
-<li>
-<ol>
-<li>Close the message that confirms publishing of your Virtual Assistant.<br />
-<a class="glightbox" href="../images/publish-confirmation-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/publish-confirmation-27.png" alt="publish-confirmation" title="publish-confirmation" style="border: 1px solid gray; zoom:80%;"></a></li>
-</ol>
-</li>
-</ol>
+<p>15.1. Close the message that confirms publishing of your Virtual Assistant.<br />
+<a class="glightbox" href="../images/publish-confirmation-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/publish-confirmation-27.png" alt="publish-confirmation" title="publish-confirmation" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 <li>
 <p>Copy the <strong>curl</strong> from the <a href="https://developer.kore.ai/docs/bots/api-guide/conversation-details-summary-api/">Conversation Details and Summary API</a>.</p>
 </li>
 <li>
 <p>Go to <strong>Postman</strong>, paste the <strong>curl</strong> copied from the API, and then:</p>
-<ol>
-<li>
-<ol>
-<li>Replace the <strong>botID</strong> with the <strong>Bot ID</strong> value copied from <strong>SmartAssist</strong>.  </li>
-</ol>
-</li>
-</ol>
-<p>Follow these steps to get the <strong>botID</strong>:
-    17. 1. 1. Sign in to <strong>SmartAssist</strong>.
-    17. 1. 2. Go to <strong>Configuration **&gt;</strong> System Setup <strong>&gt;</strong> Channels**.
-    17. 1. 3. Click <strong>Chat</strong> &gt; <strong>Web/Mobile Client</strong>.<br />
-    <a class="glightbox" href="../images/chat-web-mobile-client-28.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/chat-web-mobile-client-28.png" alt="chat-web-mobile-client" title="chat-web-mobile-client" style="border: 1px solid gray; zoom:80%;"></a></p>
-<div class="language-text highlight"><pre><span></span><code>17. 1. 4. On the **Web/Mobile Client** configuration page, click to expand the **App Details** section.  
+<p>17.1. Replace the <strong>botID</strong> with the <strong>Bot ID</strong> value copied from <strong>SmartAssist</strong>.  </p>
+<p>Follow these steps to get the <strong>botID</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code>17.1.1. Sign in to **SmartAssist**.
+
+17.1.2. Go to **Configuration** &gt; **System Setup **&gt; **Channels**.
+
+17.1.3. Click **Chat** &gt; **Web/Mobile Client**.  
+&lt;img src=&quot;../images/chat-web-mobile-client-28.png&quot; alt=&quot;chat-web-mobile-client&quot; title=&quot;chat-web-mobile-client&quot; style=&quot;border: 1px solid gray; zoom:80%;&quot;&gt;
+
+17.1.4. On the **Web/Mobile Client** configuration page, click to expand the **App Details** section.  
 &lt;img src=&quot;../images/api-details-29.png&quot; alt=&quot;api-details&quot; title=&quot;api-details&quot; style=&quot;border: 1px solid gray; zoom:80%;&quot;&gt;
 
-17. 1. 5. Scroll down to the **Bot ID** section, and click the **Copy** button to copy the botID value.  
+17.1.5. Scroll down to the **Bot ID** section, and click the **Copy** button to copy the botID value.  
 &lt;img src=&quot;../images/copy-botid-value-30.png&quot; alt=&quot;
 &quot; title=&quot;
 &quot; style=&quot;border: 1px solid gray; zoom:80%;&quot;&gt;
