@@ -11041,18 +11041,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#3-1-agent-transfer-node-in-experience-flow" class="md-nav__link">
+  <a href="#31-agent-transfer-node-in-experience-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 1 Agent Transfer Node in Experience Flow
+      3.1 Agent Transfer Node in Experience Flow
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-2-agent-transfer-node-in-a-dialog-task" class="md-nav__link">
+  <a href="#32-agent-transfer-node-in-a-dialog-task" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 2 Agent Transfer Node in a Dialog Task
+      3.2 Agent Transfer Node in a Dialog Task
     </span>
   </a>
   
@@ -14254,18 +14254,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#3-1-agent-transfer-node-in-experience-flow" class="md-nav__link">
+  <a href="#31-agent-transfer-node-in-experience-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 1 Agent Transfer Node in Experience Flow
+      3.1 Agent Transfer Node in Experience Flow
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-2-agent-transfer-node-in-a-dialog-task" class="md-nav__link">
+  <a href="#32-agent-transfer-node-in-a-dialog-task" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 2 Agent Transfer Node in a Dialog Task
+      3.2 Agent Transfer Node in a Dialog Task
     </span>
   </a>
   
@@ -14388,15 +14388,15 @@
 </li>
 <li>
 <p>Click <strong>Save</strong>.  </p>
-</li>
-</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Upon configuring the above SIP transfer configuration, you need to attach one flow created in Step 1 to this configuration.</p>
 </div>
-<ol>
-<li>Click <strong>Attach Flow</strong> and attach the flow created on step-1. For help, refer to <a href="https://docsinternal-kore.github.io/docs/xo/channels/kore.ai-voice-gateway/kore-voice-gateway/#attach-flow">Attach Flow</a>.<br />
-<a class="glightbox" href="../images/koreai-voice-gateway-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/koreai-voice-gateway-4.png" alt="koreai-voice-gateway" title="koreai-voice-gateway" style="border: 1px solid gray; zoom:80%;"></a></li>
+</li>
+<li>
+<p>Click <strong>Attach Flow</strong> and attach the flow created on step-1. For help, refer to <a href="https://docsinternal-kore.github.io/docs/xo/channels/kore.ai-voice-gateway/kore-voice-gateway/#attach-flow">Attach Flow</a>.<br />
+<a class="glightbox" href="../images/koreai-voice-gateway-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/koreai-voice-gateway-4.png" alt="koreai-voice-gateway" title="koreai-voice-gateway" style="border: 1px solid gray; zoom:80%;"></a></p>
+</li>
 </ol>
 <h2 id="step-3-agent-transfer-configuration">Step 3: Agent Transfer Configuration<a class="headerlink" href="#step-3-agent-transfer-configuration" title="Permanent link">&para;</a></h2>
 <p>After the customer interacts with Kore’s IVA, you can perform agent transfer from Kore IVA to ZCC through one of the following two approaches:</p>
@@ -14404,58 +14404,16 @@
 <li>Agent Transfer Node in Flow. <a href="https://docs.kore.ai/xo/flows/node-types/agent-transfer/">Read here </a></li>
 <li>Agent Transfer Node in a Dialog Task</li>
 </ul>
-<h3 id="3-1-agent-transfer-node-in-experience-flow">3. 1 Agent Transfer Node in Experience Flow<a class="headerlink" href="#3-1-agent-transfer-node-in-experience-flow" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<ol>
-<li>
-<ol>
-<li>Select <strong>Agent Transfer</strong> node from <strong>Action</strong>.<br />
-<a class="glightbox" href="../images/agent-transfer-node-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/agent-transfer-node-5.png" alt="agent-transfer-node" title="agent-transfer-node" style="border: 1px solid gray; zoom:80%;"></a></li>
-</ol>
-</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>
-<ol>
-<li>Add configuration for <strong>Agent Transfer</strong> node.<br />
-<a class="glightbox" href="../images/adding-configuration-agent-transfer-node-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/adding-configuration-agent-transfer-node-6.png" alt="adding-configuration-agent-transfer-node" title="adding-configuration-agent-transfer-node" style="border: 1px solid gray; zoom:80%;"></a></li>
-</ol>
-</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>
-<ol>
-<li>After configuring the Agent Transfer node in Experience Flow, head to <strong>App Settings</strong> &gt; <strong>Integration</strong> &gt; <strong>Agent transfer</strong> &gt; <strong>Voice</strong> and create a new SIP transfer here. </li>
-</ol>
-</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>
-<ol>
-<li>For ZCC, we are using <strong>SIP BYE</strong> for Agent Transfer.<br />
-<a class="glightbox" href="../images/sip-transfer-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/sip-transfer-7.png" alt="sip-transfer" title="sip-transfer" style="border: 1px solid gray; zoom:80%;"></a></li>
-</ol>
-</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>
-<ol>
-<li>Configure SIP headers to be transferred to ZCC on Agent Transfer via SIP BYE.</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="3-2-agent-transfer-node-in-a-dialog-task">3. 2 Agent Transfer Node in a Dialog Task<a class="headerlink" href="#3-2-agent-transfer-node-in-a-dialog-task" title="Permanent link">&para;</a></h3>
+<h3 id="31-agent-transfer-node-in-experience-flow">3.1 Agent Transfer Node in Experience Flow<a class="headerlink" href="#31-agent-transfer-node-in-experience-flow" title="Permanent link">&para;</a></h3>
+<p>3.1.1. Select <strong>Agent Transfer</strong> node from <strong>Action</strong>.<br />
+<a class="glightbox" href="../images/agent-transfer-node-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/agent-transfer-node-5.png" alt="agent-transfer-node" title="agent-transfer-node" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p>3.1.2. Add configuration for <strong>Agent Transfer</strong> node.<br />
+<a class="glightbox" href="../images/adding-configuration-agent-transfer-node-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/adding-configuration-agent-transfer-node-6.png" alt="adding-configuration-agent-transfer-node" title="adding-configuration-agent-transfer-node" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p>3.1.3. After configuring the Agent Transfer node in Experience Flow, head to <strong>App Settings</strong> &gt; <strong>Integration</strong> &gt; <strong>Agent transfer</strong> &gt; <strong>Voice</strong> and create a new SIP transfer here. </p>
+<p>3.1.4. For ZCC, we are using <strong>SIP BYE</strong> for Agent Transfer.<br />
+<a class="glightbox" href="../images/sip-transfer-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/sip-transfer-7.png" alt="sip-transfer" title="sip-transfer" style="border: 1px solid gray; zoom:80%;"></a></p>
+<p>3.1.5. Configure SIP headers to be transferred to ZCC on Agent Transfer via SIP BYE.</p>
+<h3 id="32-agent-transfer-node-in-a-dialog-task">3.2 Agent Transfer Node in a Dialog Task<a class="headerlink" href="#32-agent-transfer-node-in-a-dialog-task" title="Permanent link">&para;</a></h3>
 <p>Zoom users can also invoke agent transfer from the Dialog Task using a message node. Read more <a href="https://developer.kore.ai/virtual-assistants/">here</a> on Kore Automation / Dialog task.</p>
 <p>Add the following code on the message node for agent transfer:</p>
 <div class="admonition note">
@@ -14550,13 +14508,11 @@
 </li>
 <li>
 <p>Click the <strong>Instance Bot</strong>.  </p>
-</li>
-</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can identify the instance bot by its unique symbol and matching name with the organization. In the above screenshot, Koreai bot is the instance bot as it matches with the organization name and has a unique symbol.</p>
+<p>You can identify the instance bot by its unique symbol and matching name with the organization. In the above screenshot, Kore.ai bot is the instance bot as it matches with the organization name and has a unique symbol.</p>
 </div>
-<ol>
+</li>
 <li>
 <p>Go to <strong>API Scopes</strong>. To do so:</p>
 <ul>
@@ -14581,7 +14537,7 @@
 <p>Click <strong>Save</strong>.</p>
 </li>
 <li>
-<p>Go to <strong>Build</strong> &gt; <strong>Natural Language</strong> &gt; <strong>Generative AI &amp; LLM</strong>, locate <strong>Kore.ai XO GPT</strong>, and click <strong>Enable Now.</strong><br />
+<p>Go to <strong>Build</strong> &gt; <strong>Natural Language</strong> &gt; <strong>Generative AI &amp; LLM</strong>, locate <strong>Kore.ai XO GPT</strong>, and click <strong>Enable Now</strong>.<br />
 <a class="glightbox" href="../images/generative-ai-and-llm-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/generative-ai-and-llm-20.png" alt="generative-ai-and-llm" title="generative-ai-and-llm" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 <li>
