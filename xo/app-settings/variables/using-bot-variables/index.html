@@ -14253,9 +14253,10 @@
 <li>Channel-related tokens and URLs</li>
 </ul>
 <p>Post the release of v8.1 of the platform, for <span style="text-decoration:underline;">on-prem installations</span>, multiple value sets can be stored for these environment variables using Collections, <a href="../collections" target="_blank">refer here for more</a>.</p>
-<div class="language-text highlight"><pre><span></span><code>!!! Note
-    Ensure that the environment variable name does not contain any hyphen.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure that the environment variable name does not contain any hyphen.</p>
+</div>
 <h3 id="restricting-sensitive-data-with-environment-variables">Restricting Sensitive Data with Environment Variables<a class="headerlink" href="#restricting-sensitive-data-with-environment-variables" title="Permanent link">&para;</a></h3>
 <p>During the virtual assistant definition, developers may create <strong>environment variables</strong> for sensitive data like credentials/keys. These variables are useful for connecting to other systems using service nodes or as a part of authorization profiles. However, environment variables are visible to all the developers with shared access to the virtual assistant, especially when its definition is exported.</p>
 <p>The latest Kore.ai XO Platform release introduces the <strong>Secure Variable</strong> feature for environment variables, which encrypts the added variable when enabled. This makes only the encrypted variable value visible to others and not the original value.</p>
@@ -14298,9 +14299,10 @@
 <a class="glightbox" href="../images/env-and-content-variables-img3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/env-and-content-variables-img3.png" alt="Field Key and Field Value" title="Field Key and Field Value" style="border: 1px solid gray;zoom:50%;"/></a></p>
 <h3 id="content-variables">Content Variables<a class="headerlink" href="#content-variables" title="Permanent link">&para;</a></h3>
 <p>Bot building essentially requires extensive content management efforts. When it comes to multi-language VAs, it also involves tedious coordination efforts between the developers and globally-distributed content authors or copyright team. Content variables enable you to overcome that by abstracting VA flow development efforts from authoring or editing the content. Using Content Variables, programmers can avoid hard-coding the VA content, such as prompts, messages, or any data presented to the user, into VA components, and instead point to specific variables in centrally managed Content Variables files for each app language. You can export the language-specific content variable files to content editors, without exposing any app configurations. The writers can author the content in the exported file, which you can import back into the app.</p>
-<div class="language-text highlight"><pre><span></span><code>!!! Note
-    Ensure that the environment variable name does not contain any hyphen.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure that the environment variable name does not contain any hyphen.</p>
+</div>
 <h3 id="defining-bot-variables-and-securing-them">Defining Bot Variables and Securing Them<a class="headerlink" href="#defining-bot-variables-and-securing-them" title="Permanent link">&para;</a></h3>
 <p>Enabling the <strong>secure variable</strong> setting after defining an Environment (Bot) Variable, encrypts and securely stores credentials set as environment variables. To add a Bot variable, follow the steps below:</p>
 <ol>
