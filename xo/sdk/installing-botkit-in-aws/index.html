@@ -11824,8 +11824,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step 3: Configure DNS">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#step-4-set-up-elasticache-optional" class="md-nav__link">
@@ -11833,11 +11832,6 @@
       Step 4: Set Up Elasticache (Optional)
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -14281,8 +14275,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step 3: Configure DNS">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#step-4-set-up-elasticache-optional" class="md-nav__link">
@@ -14290,11 +14283,6 @@
       Step 4: Set Up Elasticache (Optional)
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -14404,22 +14392,35 @@
 <li>OS Disk (20 GB)</li>
 <li>Data Disk (50 GB)</li>
 </ol>
-<p>We suggest the instance type m5.xlarge on AWS, which would satisfy the above requirements.
-2. Update all the OS-level packages using the command “yum update”.
-3. Install NodeJS.
-* Refer to the below link to download &amp; install the NodeJS for the support versions: \
-<a href="https://nodejs.org/en/download"> https://nodejs.org/en/download</a>
-4. Install Nginx’s latest version.
-* Refer to the below link for the installation: \
-<a href="https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/"> https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/</a>
-5. Ensure both the package installations are successful with the following commands:
-* node -v
-* nginx –version
-6. Create a DeployScript to pull the build from your central repository &amp; extract it to the data disk.
-7. Create the required startup scripts to bring up the services for both Botkit &amp; Nginx.
-8. Configure Nginx to listen on port 80 and add the upstream configuration to route the traffic to the respective bootkit instance.
-9. Create the Golden Image.</p>
+<p>We suggest the instance type m5.xlarge on AWS, which would satisfy the above requirements.</p>
 </li>
+<li>
+<p>Update all the OS-level packages using the command “yum update”.</p>
+</li>
+<li>
+<p>Install NodeJS.</p>
+<ul>
+<li>Refer to the below link to download &amp; install the NodeJS for the support versions:<a href="https://nodejs.org/en/download"> https://nodejs.org/en/download</a></li>
+</ul>
+</li>
+<li>
+<p>Install Nginx’s latest version.</p>
+<ul>
+<li>Refer to the below link for the installation:
+<a href="https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/"> https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/</a></li>
+</ul>
+</li>
+<li>
+<p>Ensure both the package installations are successful with the following commands:</p>
+<ul>
+<li>node -v</li>
+<li>nginx –version</li>
+</ul>
+</li>
+<li>Create a DeployScript to pull the build from your central repository &amp; extract it to the data disk.</li>
+<li>Create the required startup scripts to bring up the services for both Botkit &amp; Nginx.</li>
+<li>Configure Nginx to listen on port 80 and add the upstream configuration to route the traffic to the respective bootkit instance.</li>
+<li>Create the Golden Image.</li>
 </ol>
 <h3 id="step-2-set-up-load-balancer">Step 2. Set Up Load Balancer<a class="headerlink" href="#step-2-set-up-load-balancer" title="Permanent link">&para;</a></h3>
 <ol>
@@ -14431,7 +14432,7 @@
 <ol>
 <li>Create an “A/CNAME Record” under your external facing domain &amp; map it to the Load Balancer.</li>
 </ol>
-<h4 id="step-4-set-up-elasticache-optional">Step 4: Set Up Elasticache (Optional)<a class="headerlink" href="#step-4-set-up-elasticache-optional" title="Permanent link">&para;</a></h4>
+<h3 id="step-4-set-up-elasticache-optional">Step 4: Set Up Elasticache (Optional)<a class="headerlink" href="#step-4-set-up-elasticache-optional" title="Permanent link">&para;</a></h3>
 <ol>
 <li>If Botkit requires Redis, launch an AWS ElasticCache service for Redis with the respective capacity requirements.</li>
 </ol>
