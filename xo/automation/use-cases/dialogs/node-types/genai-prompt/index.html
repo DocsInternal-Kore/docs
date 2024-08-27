@@ -14359,33 +14359,29 @@
 <ul>
 <li>
 <p>Provide <strong>Name</strong> and <strong>Display Name</strong> for the node and write your own OpenAI <strong>Prompt</strong>.</p>
-</li>
-<li>
-<p><strong>Prompt</strong>: A prompt allows you to define the request to be sent to the LLMs for generating a response. Some of the use cases for prompts include entity or topic extraction, rephrasing, or dynamic content generation. The prompt can have up to 2000 characters, and it can be defined using text, Context, Content, and Environment variables.</p>
-</li>
-<li>
-<p><strong>Preview Response</strong>: Check the preview of the OpenAI response for your prompt. When you click <strong>Preview Response</strong>, the Platform parses any variable used in the prompt and constructs OpenAI request using the Prompt and the Advanced Settings. If the response is not relevant, you can tweak the Prompt and the Advanced Settings to make the response better.</p>
+<ul>
+<li><strong>Prompt</strong>: A prompt allows you to define the request to be sent to the LLMs for generating a response. Some of the use cases for prompts include entity or topic extraction, rephrasing, or dynamic content generation. The prompt can have up to 2000 characters, and it can be defined using text, Context, Content, and Environment variables.</li>
+<li><strong>Preview Response</strong>: Check the preview of the OpenAI response for your prompt. When you click <strong>Preview Response</strong>, the Platform parses any variable used in the prompt and constructs OpenAI request using the Prompt and the Advanced Settings. If the response is not relevant, you can tweak the Prompt and the Advanced Settings to make the response better.</li>
+</ul>
 </li>
 <li>
 <p>Change the model and tweak its settings.</p>
-</li>
-</ul>
 <p>Adjusting the settings allows you to fine-tune the model’s behavior to meet your needs. <strong>The default settings work fine for most cases</strong>. However, if required, you can tweak the settings and find the right balance for your use case.</p>
 <p><a class="glightbox" href="../images/genai-propmpt(1).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genai-propmpt(1).png" alt="image_tooltip" title="image_tooltip" style="border: 1px solid gray; zoom:70%;"></a></p>
 <ul>
 <li><strong>Model</strong>: The default model for which the settings are displayed. You can choose another supported mode if it’s configured. If you select a non-default model, it’s used for this node only. If you want to change the default model, you can select the model in the drop-down list and use the <strong>Mark Default</strong> option shown next to its name.</li>
 <li><strong>System Context</strong>: Add a brief description of the use case context to guide the model.</li>
 <li><strong>Temperature</strong>: The setting controls the randomness of the model’s output. A higher temperature, like 0.8 or above, can result in unexpected, creative, and less relevant responses. On the other hand, a lower temperature, like 0.5 or below, makes the output more focused and relevant.</li>
-<li>
-<p><strong>Max Tokens</strong>: It indicates the total number of tokens used in the API call to the model. It affects the cost and the time taken to receive a response. A token can be as short as one character or as long as one word, depending on the text.</p>
+<li><strong>Max Tokens</strong>: It indicates the total number of tokens used in the API call to the model. It affects the cost and the time taken to receive a response. A token can be as short as one character or as long as one word, depending on the text.</li>
+</ul>
 </li>
 <li>
 <p>Select the maximum wait time to receive a response from the LLM. </p>
-</li>
-</ul>
 <p><a class="glightbox" href="../images/genai-propmpt(7).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/genai-propmpt(7).png" alt="image_tooltip" title="image_tooltip" style="border: 1px solid gray; zoom:70%;"></a></p>
 <ul>
 <li><strong>Timeout</strong>: Select the maximum wait time from the drop-down list. The timeout range can be any value between 10 to 60, the default being 10.</li>
+</ul>
+</li>
 </ul>
 <h3 id="instance-properties">Instance Properties<a class="headerlink" href="#instance-properties" title="Permanent link">&para;</a></h3>
 <p>On the <strong>Instance Properties</strong> tab, you can configure the instance-specific fields for this GenAI Prompt. These settings are applicable only for this instance and will not affect any other instances of this node.</p>
