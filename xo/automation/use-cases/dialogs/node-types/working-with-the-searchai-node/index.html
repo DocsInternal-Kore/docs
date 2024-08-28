@@ -14097,7 +14097,7 @@
 <li>Click <strong>Gen AI</strong> and then click <strong>Search AI Node</strong>. Alternatively, you can drag and drop the <strong>Search AI Node</strong> to the required location on the canvas. For more information on adding nodes, see <a href="../../using-the-dialog-builder-tool/#add-nodes">different ways to add a node</a>.</li>
 <li>The <strong>Search AI Node</strong> window is displayed with the <strong>Component Properties</strong> tab selected by default.</li>
 </ol>
-<p><a class="glightbox" href="images/image1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image1.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/search_ai_adding_node.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/search_ai_adding_node.png" alt="adding_node" title="adding_node" style="border:1px solid gray;zoom:70%;"></a></p>
 <h2 id="configure-the-node">Configure the Node<a class="headerlink" href="#configure-the-node" title="Permanent link">&para;</a></h2>
 <h3 id="component-properties">Component Properties<a class="headerlink" href="#component-properties" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
@@ -14107,39 +14107,47 @@
 <p>To configure the component properties, follow the below steps:</p>
 <ol>
 <li>On the <strong>Component Properties</strong> tab, enter a <strong>Name</strong> and a <strong>Display Name</strong> for Search AI  node. Node names cannot have spaces.</li>
-<li>Under **Search Configuration **section, users have the option to determine how their search query is formulated. They can choose one of the following:<ol>
+<li>
+<p>Under <strong>Search Configuration</strong> section, users have the option to determine how their search query is formulated. They can choose one of the following:</p>
+<ol>
 <li><strong>Last User Input</strong>: This option is set to the user's most recent response and is used as the search query by default.</li>
 <li><strong>Custom</strong>: Users can provide either static or dynamic values, allowing them to set custom data or variables as the search query.</li>
 </ol>
+<p><a class="glightbox" href="../images/search_ai_search_configuration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/search_ai_search_configuration.png" alt="search_configuration" title="search_configuration" style="border:1px solid gray;zoom:70%;"></a></p>
+</li>
+<li>
+<p>Under <strong>Filters</strong> section, users can define meta filters within the node to refine the search scope based on specific criteria such as topics, document categories, or custom-defined tags. Click <strong>+ Add Filter</strong> to add a new filter.</p>
+<p><a class="glightbox" href="../images/search_ai_add_filter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/search_ai_add_filter.png" alt="add filter" title="add_filter" style="border:1px solid gray;zoom:70%;"></a></p>
 </li>
 </ol>
-<p><a class="glightbox" href="images/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></a></p>
+<p>Filters consist of the following components:</p>
+<div class="language-text highlight"><pre><span></span><code>1. **Field Name**: A text box where users can specify the field name.
+
+2. **Condition**: A dropdown menu with supported operators, including &quot;contains,&quot; &quot;doesNotContain,&quot; &quot;equals,&quot; &quot;doesNotEqual,&quot; &quot;exists,&quot; and &quot;doesNotExist.&quot;
+
+3. **Field Value**: Supports both static and dynamic values for filtering.
+
+4. **“AND” or “OR”**: Users can add multiple filters with logical conditions, which will be sent as an array.
+</code></pre></div>
+<p><a class="glightbox" href="../images/search_ai_filters.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/search_ai_filters.png" alt="filters" title="filters" style="border:1px solid gray;zoom:70%;"></a></p>
 <ol>
-<li>Under <strong>Filters</strong> section, users can define meta filters within the node to refine the search scope based on specific criteria such as topics, document categories, or custom-defined tags. Click **+ Add Filter **to add a new filter.</li>
-</ol>
-<p><a class="glightbox" href="images/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image3.png" title="image_tooltip" /></a></p>
-<p>Filters consist of the following components:
-    3. <strong>Field Name</strong>: A text box where users can specify the field name.
-    4. <strong>Condition</strong>: A dropdown menu with supported operators, including "contains," "doesNotContain," "equals," "doesNotEqual," "exists," and "doesNotExist."
-    5. <strong>Field Value</strong>: Supports both static and dynamic values for filtering.
-    6. <strong>“AND” or “OR”</strong>: Users can add multiple filters with logical conditions, which will be sent as an array.</p>
-<p><a class="glightbox" href="images/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></a></p>
+<li>
+<p>Under <strong>Results Configuration</strong> section, user can configure how the results should be rendered:</p>
 <ol>
-<li>Under** Results Configuration **section, user can configure how the results should be rendered:<ol>
 <li><strong>Generate Answer</strong>:<ol>
-<li>** Present Response to User : <strong>This option is selected by default. It displays the response directly to the user. Users can manage the response by clicking **Manage Responses</strong> . When selected, the user is shown the standard response template used for search responses.</li>
+<li><strong>Present Response to User :</strong> This option is selected by default. It displays the response directly to the user. Users can manage the response by clicking <strong>Manage Responses</strong> . When selected, the user is shown the standard response template used for search responses.</li>
 <li><strong>Store Response in Context Object</strong>: If selected, the user can access the entire payload in the context object  “context.nodename” and modify it later in subsequent nodes.</li>
 </ol>
 </li>
 <li><strong>Return Qualified Chunks</strong>: This option allows user to receive only the segments of data that meet the specified criteria. </li>
 </ol>
+<p><a class="glightbox" href="../images/search_ai_result_configuration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/search_ai_result_configuration.png" alt="result_configuration" title="Result_configuration" style="border:1px solid gray;zoom:70%;"></a></p>
+</li>
+<li>
+<p>In the <strong>Variable Namespaces</strong> section, associate the variable namespaces to execute this node and its transitions. This option is visible only when the variable namespace is enabled for the app. You can go with the task level settings or customize it for this node. For more information, refer to <a href="../../../../../app-settings/managing-namespace/">Managing Namespaces</a></p>
 </li>
 </ol>
-<p><a class="glightbox" href="images/image5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></a></p>
-<ol>
-<li>In the <strong>Variable Namespaces</strong> section, associate the variable namespaces to execute this node and its transitions. This option is visible only when the variable namespace is enabled for the app. You can go with the task level settings or customize it for this node. For more information, refer to <a href="../../../../../app-settings/managing-namespace/">Managing Namespaces</a></li>
-</ol>
-<p><a class="glightbox" href="images/image6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/search_ai_component_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/search_ai_component_properties.png" alt="component_properties" title="component properties" style="border:1px solid gray;zoom:70%;"></a></p>
 <h3 id="instance-properties">Instance Properties<a class="headerlink" href="#instance-properties" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -14159,7 +14167,7 @@
 </li>
 <li>Under the <strong>Custom Tags</strong> section, add tags to build custom profiles of your VA’s conversations. <a href="../../../../../analytics/automation/custom-dashboard/custom-meta-tags">Click here for more</a>.</li>
 </ol>
-<p><a class="glightbox" href="images/image7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/search_ai_instance_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/search_ai_instance_properties.png" alt="instance_properties" title="instance_properties" style="border:1px solid gray;zoom:70%;"></a></p>
 <h3 id="connections-properties">Connections Properties<a class="headerlink" href="#connections-properties" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -14169,7 +14177,7 @@
 </ul>
 </div>
 <p>To set up node connection conditions, please follow the steps outlined in <a href="../../node-connections/nodes-conditions">Adding IF-Else Conditions to Node Connections.</a></p>
-<p><a class="glightbox" href="images/image8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt_text" src="images/image8.png" title="image_tooltip" /></a></p>
+<p><a class="glightbox" href="../images/search_ai_connections_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/search_ai_connections_properties.png" alt="connections_properties" title="connections_properties" style="border:1px solid gray;zoom:70%;"></a></p>
 
 
 
