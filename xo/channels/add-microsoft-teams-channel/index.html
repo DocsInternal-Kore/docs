@@ -14131,6 +14131,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#related-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Links
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -14373,25 +14382,25 @@
 <h2 id="ms-teams-chat-features">MS Teams Chat Features<a class="headerlink" href="#ms-teams-chat-features" title="Permanent link">&para;</a></h2>
 <h3 id="ability-to-update-or-delete-delivered-bot-messages">Ability to Update or Delete Delivered Bot Messages<a class="headerlink" href="#ability-to-update-or-delete-delivered-bot-messages" title="Permanent link">&para;</a></h3>
 <p>Developers now can update or delete bot messages in Microsoft Teams even after they have been delivered to users. This feature provides greater flexibility and control, allowing developers to disable or remove template messages after a user has taken action on them.</p>
-<p>New Channel Metadata Object: <strong><code>channelActionMetadata</code></strong></p>
+<p>New Channel Metadata Object: <code>channelActionMetadata</code></p>
 <p>The platform has introduced a new metadata object called <code>channelActionMetadata</code>, which captures the necessary metadata for bot messages on the MS Teams channel. This metadata is essential for performing update or deletion actions on the messages.</p>
 <p>Captured Meta Fields in <code>channelActionMetadata</code>:</p>
 <ul>
-<li><strong>MsTeams ActivityID</strong></li>
-<li><strong>MsTeams ConversationID</strong></li>
-<li><strong>KoreMessageID</strong></li>
+<li>MsTeams ActivityID</li>
+<li>MsTeams ConversationID</li>
+<li>KoreMessageID</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The above fields are captured exclusively for bot messages. These values are refreshed with each new bot message, and it is the developer’s responsibility to capture and manage the metadata for any bot messages that need to be updated or deleted.</p>
 </div>
-<p><strong>Why Only the Latest Bot Message Metadata is Tracked</strong></p>
+<p>Why Only the Latest Bot Message Metadata is Tracked</p>
 <p>To prevent an increase in the size of the context object, only the metadata for the most recent bot message is retained. This approach ensures efficiency, even in sessions with a large number of exchanged messages.</p>
 <h4 id="channel-utility-function">Channel Utility Function<a class="headerlink" href="#channel-utility-function" title="Permanent link">&para;</a></h4>
 <p>We have introduced two new channel utility functions: one for retrieving metadata from the channelActionMetadata object and another for updating or deleting delivered bot messages. Currently, these functions are supported for the MS Teams channel and will be extended to other third-party channels as needed.</p>
 <p><strong>channelUtil.getActionMetadata()</strong></p>
 <p>This function allows you to retrieve the metadata stored in the channelActionMetadata object.</p>
-<p><strong>Example Script: Fetching and Saving Metadata for Future Actions</strong>
+<p>Example Script: Fetching and Saving Metadata for Future Actions
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>let channelActionMetadata = channelUtil.getActionMetadata();
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>if(channelActionMetadata){
@@ -14410,7 +14419,7 @@
 </span></code></pre></div></p>
 <p><strong>channelUtil.executeAction()</strong></p>
 <p>This function enables you to execute actions on bot messages that have been delivered in the MS Teams channel. With this function, developers can update or delete messages that have already been sent to the MS Teams channel.</p>
-<p><strong>Example Script: Updating the bot message</strong>
+<p>Example Script: Updating the bot message
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>let channelActionMetadata = channelUtil.getActionMetadata();
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>if(channelActionMetadata){
@@ -14431,7 +14440,7 @@
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>}
 </span></code></pre></div></p>
-<p><strong>Example Script: Deleting the bot message</strong>
+<p>Example Script: Deleting the bot message
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>let channelActionMetadata = channelUtil.getActionMetadata();
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>if(channelActionMetadata){
@@ -14474,9 +14483,6 @@
 <p><a class="glightbox" href="../images/update-delete1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete1.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
 <p><a class="glightbox" href="../images/update-delete3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete3.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
 <p><a class="glightbox" href="../images/update-delete4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete4.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
-<h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
-<p>MS Teams: Ability to Update or Delete Delivered Bot Messages</p>
-<p>The XO Platform now empowers you to update or delete bot messages in Microsoft Teams even after they've been delivered. With the new Channel Utility function, you can take bot interaction management to the next level—making real-time corrections, updating content, and preventing repetitive user actions. It provides greater flexibility and control, ensuring that every bot conversation in Teams is as precise and effective as possible.</p>
 <h3 id="related-links">Related Links<a class="headerlink" href="#related-links" title="Permanent link">&para;</a></h3>
 <p>After enabling the channel and verifying all the configurations, you can optionally publish the assistant for the new channel. Learn more about<a href="../../deploy/publishing-bot/"> Publishing your Virtual Assistant</a>.</p>
 <p>To learn more about working with Channels within the Kore.ai XO Platform, please see <a href="../adding-channels-to-your-bot/">Channel Enablement.</a></p>
