@@ -18,7 +18,7 @@
     
     
       
-        <title>Transfer Conversation To a Specific Agent - Kore ai Docs</title>
+        <title>Transfer Conversation To a Specific Agent or Queue - Kore ai Docs</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#transfer-conversation-to-a-specific-agent" class="md-skip">
+        <a href="#transfer-conversation-to-a-specific-agent-or-queue" class="md-skip">
           Skip to content
         </a>
       
@@ -253,7 +253,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Transfer Conversation To a Specific Agent
+              Transfer Conversation To a Specific Agent or Queue
             
           </span>
         </div>
@@ -14062,9 +14062,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-response" class="md-nav__link">
+  <a href="#sample-responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample Response
+      Sample Responses
     </span>
   </a>
   
@@ -14088,8 +14088,8 @@
   
 
 
-<h1 id="transfer-conversation-to-a-specific-agent">Transfer Conversation To a Specific Agent<a class="headerlink" href="#transfer-conversation-to-a-specific-agent" title="Permanent link">&para;</a></h1>
-<p>To retrieve the recording of a specific call using either the <code>userId</code> or <code>sessionId</code>.To transfer a conversation to a specific agent with the given <code>botSessionId</code> and <code>aId</code> (agent Id). Specific messages based on success or failure to transfer conversation are posted to the given <code>callbackUrl</code>.</p>
+<h1 id="transfer-conversation-to-a-specific-agent-or-queue">Transfer Conversation To a Specific Agent or Queue<a class="headerlink" href="#transfer-conversation-to-a-specific-agent-or-queue" title="Permanent link">&para;</a></h1>
+<p>To retrieve the recording of a specific call using either the <code>userId</code> or <code>sessionId</code>.To transfer a conversation to a specific agent with the given <code>botSessionId</code> and <code>aId</code> (agent Id) or queue using the <code>queueId</code>. Specific messages based on success or failure to transfer conversation are posted to the given <code>callbackUrl</code>.</p>
 <table>
 <thead>
 <tr>
@@ -14128,7 +14128,7 @@
 <tbody>
 <tr>
 <td>host</td>
-<td>Environment URL, for example, <a href="https://platform.kore.ai">https://platform.kore.ai</a></td>
+<td>Environment URL, for example, <code>https://platform.kore.ai</code></td>
 <td>string, required</td>
 </tr>
 <tr>
@@ -14139,39 +14139,46 @@
 </tbody>
 </table>
 <h2 id="query-parameters">Query Parameters<a class="headerlink" href="#query-parameters" title="Permanent link">&para;</a></h2>
+<p>Here is the HTML table converted to Markdown format:</p>
 <table>
 <thead>
 <tr>
-<th><strong>PARAMETER</strong></th>
-<th><strong>DESCRIPTION</strong></th>
-<th><strong>TYPE</strong></th>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>callbackUrl</td>
-<td>The URL in which message is posted. For example: <a href="http://localhost:8009">http://localhost:8009</a></td>
+<td>The URL in which message is posted. For example: <code>http://localhost:8009</code></td>
 <td>string, required</td>
 </tr>
 <tr>
 <td>orgId</td>
-<td>The orgId of the organization. For example: o-fbfa482a-bf65-5386-963e-f00a8cc7xxxx</td>
+<td>The orgId of the organization. For example: <code>o-fbfa482a-bf65-5386-963e-f00a8cc7xxxx</code></td>
 <td>string, required</td>
 </tr>
 <tr>
 <td>aId</td>
-<td>The agent ID of the target agent. For example: a-220172c-856e-4db6-a2d1-d4c2dabexxxx</td>
+<td>The agent ID of the target agent. For example: <code>a-220172c-856e-4db6-a2d1-d4c2dabexxxx</code></td>
 <td>string, required</td>
 </tr>
 <tr>
 <td>botSessionId</td>
-<td>The session ID of the bot. For example: 653a06c9aae89c5fbb4exxxx</td>
+<td>The session ID of the bot. For example: <code>653a06c9aae89c5fbb4exxxx</code></td>
+<td>string, required</td>
+</tr>
+<tr>
+<td>queueId</td>
+<td>The queue ID of the target queue. For example: <code>qu-b5d3bb4-a1ac-4caa-9be6-55a5abc3xxxx</code></td>
 <td>string, required</td>
 </tr>
 </tbody>
 </table>
 <h2 id="sample-requests">Sample Requests<a class="headerlink" href="#sample-requests" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl --location &#39;http://localhost/agentassist/api/v1/public/st-a0ec5267-a58a-5fbb-ab0e-e27ebc35xxxx/assign-conversation&#39; \
+<p><strong>Transfer to Agent</strong>:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl --location &#39;http://localhost/agentassist/api/v1/public/st-a0ec5267-a58a-5fbb-ab0e-e27ebc35xxxx/assign-conversation&#39; \
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>--header &#39;auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNzLTUwZmViYWEzLTc0M2YtNTViMy04OTU2LTcxOGU5NmY2YmI5MCJ9.
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>W42GSwz5ibjk_vAx5Ukr_Q5Q4-O_zGn_jPmZuN8xxxx&#39; \
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>--header &#39;accountid: 650d9eb6da96d0bc0d23xxxx&#39; \
@@ -14183,13 +14190,36 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>&quot;botSessionId&quot;: &quot;6538f8a3c9cf425ee5cfxxxx&quot;
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>}&#39;
 </span></code></pre></div>
-<h2 id="sample-response">Sample Response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sessionId: &quot;6538f8a3c9cf425ee5cfxxxx&quot;,
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>agentId: &quot;a-8cd2673-0cb7-462d-9453-0ee60e52xxxx&quot;,
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>status: &quot;transferred&quot;,
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>requestCompletedAt: 1698825180041
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>}
+<strong>Transfer to Queue</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl --location &#39;http://localhost/agentassist/api/v1/public/st-a0ec5267-a58a-5fbb-ab0e-e27ebc35xxxx/assign-conversation&#39; \
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>--header &#39;auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNzLTUwZmViYWEzLTc0M2YtNTViMy04OTU2LTcxOGU5NmY2YmI5MCJ9.
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>W42GSwz5ibjk_vAx5Ukr_Q5Q4-O_zGn_jPmZuN8xxxx&#39; \
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>--header &#39;accountid: 650d9eb6da96d0bc0d23xxxx&#39; \
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>--header &#39;Content-Type: application/json&#39; \
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>--data &#39;{
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&quot;callbackUrl&quot;: &quot;http://localhost:8009&quot;,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&quot;orgId&quot;: &quot;o-ee9eb154-b7e9-5387-a4a9-bc027a60xxxx&quot;,
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&quot;transferredType&quot;: &quot;QUEUE&quot;,
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>&quot;queueId&quot;: &quot;qu-b5d3bb4-a1ac-4caa-9be6-55a5abc3xxxx&quot;,
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>&quot;botSessionId&quot;: &quot;66c2f6939489bfffc791xxxx&quot;
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>}&#39;
+</span></code></pre></div></p>
+<h2 id="sample-responses">Sample Responses<a class="headerlink" href="#sample-responses" title="Permanent link">&para;</a></h2>
+<p><strong>Transfer to Agent</strong>:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sessionId: &quot;6538f8a3c9cf425ee5cfxxxx&quot;,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>agentId: &quot;a-8cd2673-0cb7-462d-9453-0ee60e52xxxx&quot;,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>status: &quot;transferred&quot;,
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>requestCompletedAt: 1698825180041
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>}
+</span></code></pre></div>
+<strong>Transfer to Queue</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sessionId: &quot;6538f8a3c9cf425ee5cfxxxx&quot;,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>queueId: &quot;qu-b5d3bb4-a1ac-4caa-9be6-55a5abc3xxxx&quot;,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>status: “transferred”,
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>requestCompletedAt: 1698825180041
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>}
 </span></code></pre></div>
 
 
