@@ -14152,8 +14152,18 @@
 
 
 <h1 id="rate-limits">Rate Limits<a class="headerlink" href="#rate-limits" title="Permanent link">&para;</a></h1>
-<p>The Platform enforces rolling rate limits to restrict the number of API requests a user, application, or service can make within a dynamic timeframe. It helps to prevent any single user or service from consuming disproportionate resources that could degrade the service for others. </p>
-<p>The requests are checked against both the 60-second and 1-hour limits. An application can continue to send requests as long as it doesn't exceed either limit. Once the 1-hour limit is breached, further requests are denied, regardless of whether it complies with the 60-second limit. Once the rate limit is reached, subsequent requests fail with the following error message: “<em>Rate limit for this API has been reached. Please try again after some time.</em>”</p>
+<p>The Platform enforces rolling rate limits to restrict the number of API requests a user, application, or service can make within a dynamic timeframe. It helps prevent a single user or service from consuming disproportionate resources that could degrade the service for others.</p>
+<p>Requests are monitored against both 60-second and 1-hour limits. As long as neither limit is exceeded, the application can continue making requests. However, if the one-hour limit is breached, all further requests are blocked, even if the sixty-second limit is still within bounds.</p>
+<p>When a rate limit is exceeded, subsequent requests will fail, with an error message displayed for the specific limit that was violated as follows:</p>
+<ul>
+<li>
+<p><strong>Minute-based Limit</strong>: “<em>You've exceeded the per-minute rate limit. Please wait for sometime before retrying</em>.”</p>
+</li>
+<li>
+<p><strong>Hour-based Limit</strong>: “<em>You've exceeded the hourly rate limit. Please wait for sometime before retrying</em>.”</p>
+</li>
+</ul>
+<p>Limit-specific error messages provide Analytics API users with clear and precise information about which exact rate limit was exceeded. This clarity helps users better understand the restrictions and adjust their API request strategies accordingly.</p>
 <h2 id="api-rate-limit-matrix">API Rate Limit Matrix<a class="headerlink" href="#api-rate-limit-matrix" title="Permanent link">&para;</a></h2>
 <table>
   <tr>
