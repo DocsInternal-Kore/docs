@@ -14108,13 +14108,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ms-teams-ability-to-update-or-delete-delivered-bot-messages" class="md-nav__link">
+  <a href="#ability-to-update-or-delete-delivered-bot-messages" class="md-nav__link">
     <span class="md-ellipsis">
-      MS Teams: Ability to Update or Delete Delivered Bot Messages
+      Ability to Update or Delete Delivered Bot Messages
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="MS Teams: Ability to Update or Delete Delivered Bot Messages">
+    <nav class="md-nav" aria-label="Ability to Update or Delete Delivered Bot Messages">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -14371,7 +14371,7 @@
 <li>Navigate to the <strong>Configurations</strong> tab to review and enable the Microsoft Teams channel for your bot.</li>
 </ol>
 <h2 id="ms-teams-chat-features">MS Teams Chat Features<a class="headerlink" href="#ms-teams-chat-features" title="Permanent link">&para;</a></h2>
-<h3 id="ms-teams-ability-to-update-or-delete-delivered-bot-messages">MS Teams: Ability to Update or Delete Delivered Bot Messages<a class="headerlink" href="#ms-teams-ability-to-update-or-delete-delivered-bot-messages" title="Permanent link">&para;</a></h3>
+<h3 id="ability-to-update-or-delete-delivered-bot-messages">Ability to Update or Delete Delivered Bot Messages<a class="headerlink" href="#ability-to-update-or-delete-delivered-bot-messages" title="Permanent link">&para;</a></h3>
 <p>Developers now can update or delete bot messages in Microsoft Teams even after they have been delivered to users. This feature provides greater flexibility and control, allowing developers to disable or remove template messages after a user has taken action on them.</p>
 <p>New Channel Metadata Object: <strong><code>channelActionMetadata</code></strong></p>
 <p>The platform has introduced a new metadata object called <code>channelActionMetadata</code>, which captures the necessary metadata for bot messages on the MS Teams channel. This metadata is essential for performing update or deletion actions on the messages.</p>
@@ -14457,21 +14457,23 @@
 <li>By default, the platform will emit message tags for any messages that are updated or deleted using this function.</li>
 </ul>
 </div>
-<p><strong>Tag Values</strong>:</p>
+<p><strong>Tag Values</strong></p>
 <ul>
 <li>
-<p>For updated messages: \<Key>:\<Value></p>
-<p>channel_action: update_message
-* For deleted messages: \<Key>:\<Value></p>
+<p>For updated messages: <Key>:<Value></p>
+<p>channel_action: update_message</p>
+</li>
+<li>
+<p>For deleted messages: \<Key>:\<Value></p>
 <p>channel_action: delete_message</p>
 </li>
 </ul>
+<p><a class="glightbox" href="../images/update-delete5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete5.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p><a class="glightbox" href="../images/update-delete6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete6.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p><a class="glightbox" href="../images/update-delete2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete2.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
 <p><a class="glightbox" href="../images/update-delete1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete1.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
-<p><a class="glightbox" href="../images/update-delete1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete1.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
-<p><a class="glightbox" href="../images/update-delete1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete1.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
-<p><a class="glightbox" href="../images/update-delete1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete1.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
-<p><a class="glightbox" href="../images/update-delete1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete1.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
-<p><a class="glightbox" href="../images/update-delete1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete1.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p><a class="glightbox" href="../images/update-delete3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete3.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
+<p><a class="glightbox" href="../images/update-delete4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/update-delete4.png" alt="Update or Delete Message" title="Update or Delete Message" style="border: 1px solid gray; zoom:70%;"></a></p>
 <h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
 <p>MS Teams: Ability to Update or Delete Delivered Bot Messages</p>
 <p>The XO Platform now empowers you to update or delete bot messages in Microsoft Teams even after they've been delivered. With the new Channel Utility function, you can take bot interaction management to the next level—making real-time corrections, updating content, and preventing repetitive user actions. It provides greater flexibility and control, ensuring that every bot conversation in Teams is as precise and effective as possible.</p>
