@@ -14423,10 +14423,12 @@
 <li><strong>Host</strong>: Domain name (for example, korevg-np.kore.ai) of the server you are connecting to. savg-webserver.kore.ai</li>
 <li><strong>Path</strong>: Specifies the specific resource or endpoint on the server you are connecting to. Here, it’s an audiosocket service for talkdesk, “/audiosocket/talkdesk/”</li>
 <li><strong>Query Parameters</strong>:  Used to pass additional information to the server in the form of key-value pairs separated by “&amp;” and are part of the URL after the “?.”<ul>
-<li><strong>sipuri</strong> : The encoded phone number associated with the bot (for example, %2B1234456xxxx). (<a href="https://www.urlencoder.org/">https://www.urlencoder.org/</a>){:target="_blank"}. Paste phone number here and copy the encoded value.</li>
-<li><strong>token</strong>: <a href="https://jwt.io" target="_blank">JSON Web Token</a> encrypted with the client secret of the bot with the following payload:</li>
+<li><strong>sipuri</strong> : The encoded phone number associated with the bot (for example, %2B1234456xxxx). <a href="https://www.urlencoder.org/" target="_blank">https://www.urlencoder.org/</a>. Paste phone number here and copy the encoded value.</li>
+<li><strong>token</strong>: <a href="https://jwt.io" target="_blank">JSON Web Token</a> encrypted with the client secret of the bot with the following payload:<ul>
 <li>{“appId”:”&lt;Client ID&gt;”}</li>
 <li>Client ID: From the Bot details</li>
+</ul>
+</li>
 <li><strong>botId</strong>: Bot ID of the bot you want to use – for example, st-xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx.</li>
 <li><strong>accountId</strong>: Account ID of the bot owner. Unique identifier for an account.</li>
 </ul>
