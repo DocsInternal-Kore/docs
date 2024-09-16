@@ -14874,12 +14874,13 @@ Replace “agentassist.kore.ai” with the domain where your AgentAssist is host
 <li>Go to <strong>Admin</strong> &gt; <strong>People &amp; Permissions</strong> &gt; <strong>Roles / Permissions</strong>.</li>
 <li>Click <strong>Add Role</strong> to create a new role.</li>
 <li>Give a distinctive name to the role; for example, KoreaiAA Agent.</li>
-<li>On the <strong>Permission</strong> tab, search for <strong>Conversation</strong> &gt; <strong>Transcription</strong> &gt; <strong>View</strong>, and add (select the box): </li>
-</ol>
-<p>!!! note</p>
-<div class="language-text highlight"><pre><span></span><code>   The Conversation permission is available only in the CX3 license.
-</code></pre></div>
-<ol>
+<li>
+<p>On the <strong>Permission</strong> tab, search for <strong>Conversation</strong> &gt; <strong>Transcription</strong> &gt; <strong>View</strong>, and add (select the box):  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Conversation permission is available only in the CX3 license.</p>
+</div>
+</li>
 <li>
 <p>Once finished, the <strong>Assigned Permissions</strong> view should look like this:<br />
 <a class="glightbox" href="../images/assigned-permissions-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/assigned-permissions-22.png" alt="assigned-permissions" title="assigned-permissions" style="border: 1px solid gray; zoom:80%;"></a></p>
@@ -14907,13 +14908,12 @@ Audiohook integration requires specific configuration values to support AgentAss
 <p>Open the <strong>Audiohook,</strong> and go to the <strong>Configuration</strong> tab.<br />
 <a class="glightbox" href="../images/audiohook-configuration-26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/audiohook-configuration-26.png" alt="audiohook-configuration" title="audiohook-configuration" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p>5.1. <strong>Channel</strong> value should be both.</p>
-<p>5.2. The <strong>Connection URI</strong> format should be similar to  </p>
-<div class="language-text highlight"><pre><span></span><code>wss://[savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true](http://savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true), but add “multiBot=true” parameter to it.
-
-!!! note
-
-    This configuration can be done for a single bot present in Kore.ai Data Table.
-</code></pre></div>
+<p>5.2. The <strong>Connection URI</strong> format should be similar to<br />
+wss://<a href="http://savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true">savg-webserver.kore.ai/audiosocket/genesys/?sipuri=xxx&amp;token=xxx&amp;botId=xxx&amp;accountId=xxx&amp;agentassist=true</a>, but add “multiBot=true” parameter to it. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This configuration can be done for a single bot present in Kore.ai Data Table.</p>
+</div>
 </li>
 <li>
 <p>Get <strong>sipuri=sip:&lt;sip-string&gt;</strong> from <strong>AgentAssist</strong> &gt; <strong>Voice</strong> channel.<br />
