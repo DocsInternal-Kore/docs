@@ -14784,12 +14784,13 @@
 <li>A Kore voice bot (SmartAssist bot) trained with few use cases.</li>
 </ul>
 <h2 id="how-it-works">How it Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
-<p>Here’s a general overview of how voice virtual assistant interactions work on Talkdesk:</p>
-<ol>
-<li><strong>Setup and Configuration</strong>: Kore.ai sets up and configures the integration between their virtual assistant and Talkdesk. This involves modifying the <strong>AgentAssist_URL</strong> and <strong>bot details</strong>, and <strong>Voice stream URL*</strong> field modification in <strong>Connect to autopilot - voice</strong> flow in Talkdesk. The user audio is sent to the “Conversation Orchestrator” through the “Connect to Virtual Agent Voice” block within the studio flow.</li>
-<li><strong>Routing and Distribution</strong>: When a customer initiates contact through Talkdesk, Kore receives the audio streams and handles the automation process. Kore sends its bot’s responses to Talkdesk. It’s a bidirectional stream. Once automation is complete, and the customer asks for agent transfer, the control goes back to Talkdesk.</li>
-<li><strong>Agent Interaction</strong>: The agent receives the customer interaction and responds to the customer using Talkdesk communication features, such as answering voice calls.</li>
-</ol>
+<p>The Kore IVA integration with Talkdesk operates as follows:</p>
+<ul>
+<li><strong>Setup</strong>: Kore.ai configures the integration by modifying bot details and voice stream URLs in Talkdesk's "Connect to autopilot - voice" flow.</li>
+<li><strong>Interaction</strong>: When a customer contacts Talkdesk, audio streams are sent to Kore's "Conversation Orchestrator." Kore handles automation and sends bot responses back to Talkdesk.</li>
+<li><strong>Agent Handover</strong>: If the customer requests for agent transfer, control returns to Talkdesk for human agent interaction.</li>
+</ul>
+<p>This streamlined process enhances Talkdesk's contact center capabilities with Kore's voice automation technology.</p>
 <h2 id="voice-automation-process">Voice Automation Process<a class="headerlink" href="#voice-automation-process" title="Permanent link">&para;</a></h2>
 <p>The following steps are initiated after a call is established between a user and Talkdesk:</p>
 <ol>
