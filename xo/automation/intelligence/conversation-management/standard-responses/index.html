@@ -14712,7 +14712,6 @@
 <p>For each standard response category tab, the event or user input is listed, followed by one or more NLP interpreter standard responses.</p>
 <p>You can modify the default response, and if needed, add additional responses selected randomly by the NLP interpreter in response to user input or system event.</p>
 <p>In the <strong>Standard Response</strong> section, the standard bot responses are categorized in the following tabs:</p>
-<p>Kore.ai Bot Builder tool provides a few default text responses, Natural Language Processing, or NLP interpreter responses to user inputs or events. This section lists them and gives an explanation as to when these responses are triggered. </p>
 <h3 id="statements">Statements<a class="headerlink" href="#statements" title="Permanent link">&para;</a></h3>
 <p>Responses are displayed to the user as the result of an action by the bot or user. For example, a user cancels a task, or a user gives an invalid response to your bot request.</p>
 <table border="1.5">
@@ -16221,19 +16220,24 @@ This message will be displayed if the user’s input matches with intent and the
 <ol>
 <li>Select a tab category for the standard response. For example, <strong>Choices</strong>, and then hover over the situation for which you want to add the response.</li>
 <li>Click <strong>Add Response</strong>.</li>
-<li>When the <strong>Add Channel Overrides</strong> dialog is displayed, follow the steps below:<ul>
+<li>
+<p>When the <strong>Add Channel Overrides</strong> dialog is displayed, follow the steps below:</p>
+<ul>
 <li>In the <strong>Choose a channel</strong> drop-down list, select a channel to create a channel-specific response. You can go with the Any Channel option to enable the response for all channels.</li>
 <li>In the case of channel-specific response, from the <strong>Choose a Task</strong> drop-down list, select <strong>Any Task</strong> to apply this channel-specific response to all tasks or select a specific task.</li>
-<li>When a specific task is selected, the <strong>Choose a Field **drop-down is displayed. Select **Any Field</strong> or a specific field for this channel-specific response. </li>
+<li>When a specific task is selected, the <strong>Choose a Field</strong> drop-down is displayed. Select <strong>Any Field</strong> or a specific field for this channel-specific response. </li>
+</ul>
+<p><a class="glightbox" href="../images/add-channel-override.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-channel-override.png" alt="add-channel-override" title="add-channel-override" style="border:1px solid gray; zoom:70%;"></a></p>
+</li>
+<li>
+<p>In the bot <strong>Response</strong> editor, you can override the default Bot Response for this channel using basic editor controls on the <strong>Simple Mode</strong> tab, or write custom JavaScript for the response on the <strong>Advanced Mode</strong> tab as follows:</p>
+<ul>
+<li><strong>Simple Mode</strong> tab – Enter the text for the default standard response. For example, <em>There</em> you are, I was <em>hoping</em> you would return soon! and then optionally, format the text using the formatting buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting a line. For more information, refer to <a href="../../../use-cases/dialogs/prompt-editor/">Using the Prompt Editor</a>.</li>
+<li><strong>Advanced Mode tab</strong> – Enter JavaScript to override the channel message as described in the following code examples.</li>
 </ul>
 </li>
+<li>Click <strong>Save</strong> to save and close the <strong>Edit Response</strong> dialog and apply the new standard response.</li>
 </ol>
-<p><a class="glightbox" href="../conversation-management/images/add-channel-override.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../conversation-management/images/add-channel-override.png" alt="add-channel-override" title="add-channel-override" style="border:1px solid gray; zoom:70%;"></a></p>
-<div class="language-text highlight"><pre><span></span><code>* In the bot **Response** editor, you can override the default Bot Response for this channel using basic editor controls on the **Simple Mode** tab, or write custom JavaScript for the response on the **Advanced Mode** tab as follows:
-    * **Simple Mode** tab – Enter the text for the default standard response. For example, *There* you are, I was *hoping* you would return soon! and then optionally, format the text using the formatting buttons for bold, italics, header styles, hyperlinks, ordered and unordered lists, and inserting a line. For more information, refer to [Using the Prompt Editor](https://docsinternal-kore.github.io/docs/xo/automation/use-cases/dialogs/prompt-editor/#prompt-editor).
-    * **Advanced Mode tab** – Enter JavaScript to override the channel message as described in the following code examples.
-    * Click **Save** to save and close the **Edit Response** dialog and apply the new standard response.
-</code></pre></div>
 
 
 
