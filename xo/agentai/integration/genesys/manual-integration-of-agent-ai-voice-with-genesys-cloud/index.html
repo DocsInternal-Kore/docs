@@ -14781,7 +14781,10 @@ allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow
 </ol>
 <p><strong>Architect</strong> &gt; <strong>DataTable</strong> &gt; <strong>View</strong></p>
 <p><strong>Conversation</strong> &gt; <strong>Transcription</strong> &gt; <strong>View</strong></p>
-<p><strong>Note</strong>: The Conversation permission is available only in CX3 license.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Conversation permission is available only in CX3 license.</p>
+</div>
 <ol>
 <li>Once finished, the <strong>Assigned Permissions</strong> view should look like this:
 <a class="glightbox" href="../images/assigned-permissions-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/assigned-permissions-10.png" alt="assigned-permissions" title="assigned-permissions" style="border: 1px solid gray; zoom:80%;"></a></li>
@@ -14791,7 +14794,10 @@ allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow
 </ol>
 <h3 id="step-4-data-table-configuration"><strong>Step 4: Data Table Configuration</strong><a class="headerlink" href="#step-4-data-table-configuration" title="Permanent link">&para;</a></h3>
 <p>This step includes creation of a Data Table with Agent AI bot details.</p>
-<p><strong>Note</strong>: The configuration data is stored directly in the Custom Fields of the Data Table, not in a Data Table row. A single Data Table represents a configuration of Agent AI. In other words, the default values of the Custom Fields contain the necessary configuration data to load the Agent AI widget.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The configuration data is stored directly in the Custom Fields of the Data Table, not in a Data Table row. A single Data Table represents a configuration of Agent AI. In other words, the default values of the Custom Fields contain the necessary configuration data to load the Agent AI widget.</p>
+</div>
 <ol>
 <li>Sign in to <strong>Genesys Cloud</strong>.</li>
 <li>Go to <strong>Admin</strong> &gt; <strong>Architect</strong> &gt; <strong>Data Tables</strong>.<br />
@@ -14799,8 +14805,13 @@ allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow
 <li>Create a new Data Table by clicking the plus icon, and provide a relevant name such as <strong>KoreaiAA-configuration</strong>.
 <a class="glightbox" href="../images/new-data-table-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/new-data-table-13.png" alt="new-data-table" title="new-data-table" style="border: 1px solid gray; zoom:80%;"></a></li>
 <li>Click the “three dots,” and select <strong>Edit Table Fields</strong> from the list.
-<a class="glightbox" href="../images/edit-table-fields-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/edit-table-fields-14.png" alt="edit-table-fields" title="edit-table-fields" style="border: 1px solid gray; zoom:80%;"></a>
-<strong>Note</strong>: Reference Key label must be set to “agentAssist”. This is the value used by the Interaction Widget to load the configuration data.</li>
+<a class="glightbox" href="../images/edit-table-fields-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/edit-table-fields-14.png" alt="edit-table-fields" title="edit-table-fields" style="border: 1px solid gray; zoom:80%;"></a></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Reference Key label must be set to “agentAssist”. This is the value used by the Interaction Widget to load the configuration data.</p>
+</div>
+<ol>
 <li>Click <strong>Add Field</strong> to create five custom fields to provide the Agent AI configuration.
 <a class="glightbox" href="../images/add-field-15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/add-field-15.png" alt="add-field-15" title="add-field-15" style="border: 1px solid gray; zoom:80%;"></a></li>
 <li>Click the <strong>Add Field</strong> button under <strong>Custom Fields</strong>.
@@ -14851,11 +14862,13 @@ Set the data type for all custom fields as <strong>String</strong> while adding.
   </tr>
 </table>
 
-<p><strong>Note</strong>:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <ul>
 <li>All the custom fields should be of the string type.</li>
 <li>If the “is Audiohook Enabled” option is false, the application tries to utilize the Genesys native transcriptions using the Transcriptions API.</li>
 </ul>
+</div>
 <p>To change the values, you must click the gray box surrounding each Custom Field, not directly on the textbox.</p>
 <h3 id="step-5-optional-audiohook-integration"><strong>Step 5 (Optional): Audiohook Integration</strong><a class="headerlink" href="#step-5-optional-audiohook-integration" title="Permanent link">&para;</a></h3>
 <p>The final step is to install Audiohook for voice streaming, if using Kore-managed Transcriptions.</p>
