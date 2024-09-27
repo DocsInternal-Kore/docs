@@ -7834,6 +7834,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Auto QA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-auto-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Auto QA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -14645,6 +14660,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Auto QA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-auto-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Auto QA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -14680,7 +14710,7 @@
 
 
 <h1 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h1>
-<p>This phase lets you set up task utterances at the agent account level that identify the intent behind each utterance. These can be simple sentences, brand tags, greetings, questions, emotions, interactions, and so on.</p>
+<p>These settings allow you to make app-level changes to conversation intelligence.</p>
 <p>The Settings has the following two sections:</p>
 <ul>
 <li>Conversation Intelligence</li>
@@ -14688,7 +14718,7 @@
 </ul>
 <h2 id="conversation-intelligence">Conversation Intelligence<a class="headerlink" href="#conversation-intelligence" title="Permanent link">&para;</a></h2>
 <p>This extracts valuable insights from customer interactions across various communication channels. It captures information from spoken and written conversations, matches the information with structured metadata about the interaction, and analyzes emotions and feelings to understand customers' desires, needs, opinions, and expectations.</p>
-<p>You can access the Evaluation Forms by going to <strong>Contact Center AI</strong> &gt; <strong>Quality AI</strong> &gt; <strong>Configure</strong> &gt; <strong>Settings</strong> &gt; <strong>Conversation Intelligence</strong>.<br />
+<p>You can access the Evaluation Forms by navigating to <strong>Contact Center AI</strong> &gt; <strong>Quality AI</strong> &gt; <strong>Configure</strong> &gt; <strong>Settings</strong> &gt; <strong>Conversation Intelligence</strong>.<br />
 <a class="glightbox" href="../images/default-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/default-settings.png" alt="Settings" title="Settings" style="border: 1px solid gray; zoom:80%;"></a></p>
 <h3 id="conversation-intelligence-dashboard">Conversation Intelligence Dashboard<a class="headerlink" href="#conversation-intelligence-dashboard" title="Permanent link">&para;</a></h3>
 <p>The Conversation Intelligence Dashboard displays post-interaction analytics and is a powerful tool designed to provide insights and actionable information following customer interactions. </p>
@@ -14731,7 +14761,7 @@
 <p>Steps to enable the Script Adherence Configuration:</p>
 <ol>
 <li>
-<p>Expand the <strong>Conversation Intelligence</strong> collapse icon, and enable the toggle button of <strong>Conversation Intelligence Dashboard</strong> and <strong>Script adherence configuration</strong> to view the following attributes.<br />
+<p>Expand the <strong>Conversation Intelligence</strong> collapse icon, and enable the toggle button of <strong>Conversation Intelligence Dashboard</strong> and <strong>Script adherence configuration</strong>.<br />
 <a class="glightbox" href="../images/script-adherence.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/script-adherence.png" alt="Script Adherence Toggle" title="Script Adherence Toggle" style="border: 1px solid gray; zoom:60%;"></a></p>
 </li>
 <li>
@@ -14751,25 +14781,37 @@
 <p>Click <strong>Save</strong> to save the defined messages.</p>
 </li>
 </ol>
+<p>At the agent account level, the agent can only check the following options defined by the supervisor or app owner or administrator in the Settings.</p>
+<ul>
+<li>
+<p>In the Conversation Intelligence Dashboard, the agent can check the post-interaction analytics, such as brand tags, greetings, questions, emotions, interactions, and so on. </p>
+</li>
+<li>
+<p>In the Script adherence configuration, the agent can visualize the specific messages or scripts that are defined by the supervisor or app owner or administrator.<br />
+<a class="glightbox" href="../images/agent-level-admin-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/agent-level-admin-settings.png" alt="agent-level-admin-settings" title="Admin-settings" style="border: 1px solid gray; zoom:60%;"></a></p>
+</li>
+</ul>
 <h2 id="quality-ai-settings">Quality AI Settings<a class="headerlink" href="#quality-ai-settings" title="Permanent link">&para;</a></h2>
-<p>The Quality AI Settings allows you to create and configure evaluation forms to generate automated scores and enable interactions to get bookmarked under the different sections for reference later.</p>
-<p>Users can access Quality AI Settings by going to <strong>Contact Center AI</strong> &gt; <strong>Quality AI</strong> &gt; <strong>Settings</strong> &gt; <strong>Quality AI</strong>.<br />
+<p>The App owners can use the Settings option under QM to enable or disable auto QA scoring of interactions and at an app level. Users with relevant permissions can enable and create bookmarks to collect interactions in different bookmarks for easy future reference.</p>
+<p>Users can access Quality AI Settings by navigating to <strong>Contact Center AI</strong> &gt; <strong>Quality AI</strong> &gt; <strong>Settings</strong> &gt; <strong>Quality AI</strong>.<br />
 <a class="glightbox" href="../images/qm-setting.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/qm-setting.png" alt="QM Settings" title="QM Settings" style="border: 1px solid gray; zoom:60%;"></a></p>
 <p>The QA has the following two sections:</p>
 <ul>
 <li>Auto QA</li>
+<li>Agent Score Card</li>
 <li>Bookmarks</li>
 </ul>
 <h3 id="auto-qa">Auto QA<a class="headerlink" href="#auto-qa" title="Permanent link">&para;</a></h3>
-<p>This feature allows you to set up Evaluation Forms for automated scoring. If the Auto QA toggle is off, users cannot see automated QA scores across the entire application and its queues. This also restricts access to features like Conversation Mining, Dashboards, and Evaluation Forms.</p>
+<p>The Auto QA feature lets you set up Evaluation Forms for automated scoring. When the feature is turned off, automated QA scores are hidden across the entire application and its queues, regardless of whether the user has access to Agent Scorecard and QA functionalities. This also restricts access to features like Conversation Mining, Dashboards, and Evaluation Forms.</p>
+<h4 id="enable-auto-qa">Enable Auto QA<a class="headerlink" href="#enable-auto-qa" title="Permanent link">&para;</a></h4>
 <p>Steps to enable the Auto QA:</p>
 <ol>
 <li>
-<p>Expand the <strong>Quality AI</strong> collapse icon to view the following <strong>Auto QA</strong> option.<br />
+<p>Expand the <strong>Quality AI</strong> collapse icon to view the following <strong>Auto QA</strong>.<br />
 <a class="glightbox" href="../images/auto-qa.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/auto-qa.png" alt="Auto QA" title="Auto QA" style="border: 1px solid gray; zoom:60%;"></a></p>
 </li>
 <li>
-<p>Enable the <strong>Auto QA</strong> option.</p>
+<p>Enable the <strong>Auto QA</strong>.</p>
 </li>
 <li>
 <p>Click <strong>Save</strong> to save the settings.</p>
