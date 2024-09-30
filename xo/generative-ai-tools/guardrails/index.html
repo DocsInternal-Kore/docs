@@ -14952,27 +14952,28 @@
 </li>
 </ol>
 <h2 id="guardrails-runtime-behavior">Guardrails Runtime Behavior<a class="headerlink" href="#guardrails-runtime-behavior" title="Permanent link">&para;</a></h2>
-<p>This runtime guardrail validation ensures that only safe, appropriate, and conformant content flows through the LLM interactions, upholding responsible AI standards. When guardrails are enabled for a feature, they act as safety checks on both the requests sent to the LLM and the responses received from it. </p>
+<p>This runtime guardrail validation ensures that only safe, appropriate, and conformant content flows through the LLM interactions, upholding responsible AI standards. When guardrails are enabled for a feature, they act as safety checks on the requests sent to the LLM and the responses received. </p>
 <p>The typical flow is as follows:</p>
 <ol>
 <li>The XO Platform generates a prompt based on the user input.</li>
 <li>Enabled guardrails validate this prompt against defined safety and appropriateness rules.</li>
 <li>If the prompt passes all guardrails, it is sent to the LLM.</li>
 <li>The LLM's response is received by the XO Platform.</li>
-<li>Enabled guardrails validate the response content.</li>
+<li>Enabled guardrails to validate the response content.</li>
 <li>If the response passes all guardrails, it is displayed to the user.</li>
 </ol>
-<p>However, if any guardrail is violated at the prompt or response stage, the regular flow is interrupted, and a pre-configured fallback behavior is triggered for that feature, such as displaying a default message or skipping to the next step.</p>
+<p>However, if any guardrail is violated at the input or response stage, the regular flow is interrupted, and a pre-configured fallback behavior is triggered for that feature, such as displaying a default message or skipping to the next step. </p>
+<p>When the fallback mechanism is triggered, the system stores the details in the context object, including the reason for the breach (e.g., a breached guardrail), the cause ID, the stage of the breach (either LLM Input or LLM Output), and all breached guardrails.</p>
 <p>Also, the platform users can inspect the entire message flow in the debug logs.</p>
 <h3 id="guardrails-in-debug-logs">Guardrails in Debug Logs<a class="headerlink" href="#guardrails-in-debug-logs" title="Permanent link">&para;</a></h3>
-<p>The XO Platform provides detailed debug logs to help test, monitor, and debug the behavior of enabled guardrails. </p>
+<p>The XO Platform provides detailed debug logs to help test, monitor, and debug the behavior of enabled guardrails.</p>
 <p>These logs show:</p>
 <ul>
 <li>Whether guardrails successfully validated the prompts sent to the LLM.</li>
 <li>Whether guardrails successfully validated the responses received from the LLM.</li>
-<li>If any guardrail was violated, what’s the triggered fallback behavior for that feature?</li>
+<li>If a guardrail is breached, it shows the stage of the breach (either LLM Input or LLM Output), the Feature Name, the breached guardrails, and the guardrail request and response details.</li>
 </ul>
-<p>All LLM requests and responses, as well as guardrail validation results, are recorded in the debug logs and separate LLM and GenAI usage logs. These comprehensive logs allow platform users to verify that guardrails are working as intended, identify any issues, and audit LLM interactions across the platform's different runtime features.</p>
+<p>All LLM requests, responses, and guardrail validation results are recorded in the debug logs, <a href="../../analytics/automation/task-execution-logs/">failed task logs</a>, and <a href="../../analytics/genai-analytics/llm-usage-logs/">LLM and GenAI usage logs</a>. These comprehensive logs allow platform users to verify that guardrails are working as intended, identify issues, and audit LLM interactions across the platform's different runtime features.</p>
 <p>For example, the debug logs show five entries if a specific node has two input and three output guardrails enabled, as shown in the screenshot below.</p>
 <p><a class="glightbox" href="../images/guardrails7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/guardrails7.png" alt="Guardrails" title="Guardrails" style="border: 1px solid gray; zoom:70%;"></a></p>
 <h2 id="fallback-behavior">Fallback Behavior<a class="headerlink" href="#fallback-behavior" title="Permanent link">&para;</a></h2>
