@@ -13856,6 +13856,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#protecting-sensitive-data-in-llm-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protecting Sensitive Data in LLM Interactions
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -14558,6 +14567,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#protecting-sensitive-data-in-llm-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protecting Sensitive Data in LLM Interactions
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -14688,6 +14706,12 @@
 <p>The <strong>Sensitive Entity</strong> option provides flexibility in managing the handling of sensitive data within specific conversation flows, allowing you to tailor the behavior according to the requirements of your use case.</p>
 <p>Both the PII and Sensitive Entity complement each other in providing comprehensive protection for sensitive data. While the PII feature offers broad coverage for common PII patterns, sensitive nodes enable you to handle sensitive data in a more granular and contextually aware manner, addressing specific challenges and custom use cases.</p>
 <p>It’s recommended to leverage both features in combination to ensure comprehensive protection of sensitive data throughout your conversations. For more information, see the <a href="../../../automation/use-cases/dialogs/node-types/working-with-the-entity-node/#configure-the-node" target="_blank">Entity Node</a> article.</p>
+<h3 id="protecting-sensitive-data-in-llm-interactions">Protecting Sensitive Data in LLM Interactions<a class="headerlink" href="#protecting-sensitive-data-in-llm-interactions" title="Permanent link">&para;</a></h3>
+<p>In LLM interactions, the platform maintains the conversation context by anonymizing data instead of redacting it. Sensitive data is replaced with descriptive placeholders in LLM calls. For example, if the Phone Number is configured for redaction in the global PII Settings, it will be replaced with "[Phone Number]". This enhances privacy and security, reducing the risk of exposing personal information to external LLM services.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Data anonymization is automatically applied to all the Dynamic Conversation features except the GenAI node.</p>
+</div>
 
 
 

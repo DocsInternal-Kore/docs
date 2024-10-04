@@ -14424,6 +14424,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#protecting-sensitive-data-in-llm-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protecting Sensitive Data in LLM Interactions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -14443,6 +14460,12 @@
 <h1 id="pii-and-sensitive-data-anonymization">PII and Sensitive Data Anonymization<a class="headerlink" href="#pii-and-sensitive-data-anonymization" title="Permanent link">&para;</a></h1>
 <p>Personally identifiable information (PII), or sensitive personal information (SPI), refers to information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Some examples of PII include Social Security Number, email address, credit card numbers, passport number, home address, and so forth.</p>
 <p>Kore.ai allows you to redact any sensitive information that users share with your bots. When you enable redaction for an information type, you can transform its value into a pattern that doesn’t contain comprehensible data. Any end-user input that matches the PII pattern gets redacted by the platform in the context object, chat logs, and all other places. <a href="../../app-settings/advanced-settings/pii-data-masking/">Learn More</a>.</p>
+<h2 id="protecting-sensitive-data-in-llm-interactions">Protecting Sensitive Data in LLM Interactions<a class="headerlink" href="#protecting-sensitive-data-in-llm-interactions" title="Permanent link">&para;</a></h2>
+<p>In LLM interactions, the platform maintains the conversation context by anonymizing data instead of redacting it. Sensitive data is replaced with descriptive placeholders in LLM calls. For example, if the Phone Number is configured for redaction in the global PII Settings, it will be replaced with "[Phone Number]". This enhances privacy and security, reducing the risk of exposing personal information to external LLM services.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Data anonymization is automatically applied to all the Dynamic Conversation features except the GenAI node.</p>
+</div>
 
 
 
