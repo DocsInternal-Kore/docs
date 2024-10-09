@@ -14879,7 +14879,7 @@ Selecting multiple intents lets you delete them in bulk.
 <li>Once the FAQ is identified, the conditions are evaluated in the order they're defined.</li>
 <li>If a condition is met, its corresponding response is selected.</li>
 <li>If no conditions are met, the default response is used.</li>
-<li>The platform prioritizes channel-specific responses for both conditional and default responses.</li>
+<li>The platform prioritizes channel-specific responses for both conditional and default responses.<ul>
 <li>Channel-Specific Priority<ul>
 <li>If a condition is met and has a response for the user's channel, that response is used. For example, if the user interacts via MS Teams and the first condition is passed Which has two responses, one for “MS Teams” and one for "All Channels", the MS Teams response will be delivered.</li>
 </ul>
@@ -14894,6 +14894,8 @@ Selecting multiple intents lets you delete them in bulk.
 </li>
 <li>Default Response Selection<ul>
 <li>For default responses, the platform first attempts to select a channel-specific response. If none is available, the default "All Channels" response will be presented.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
