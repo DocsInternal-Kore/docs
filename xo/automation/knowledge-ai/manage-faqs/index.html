@@ -3654,6 +3654,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#how-do-conditional-responses-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Do Conditional Responses Work?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Do Conditional Responses Work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       Best Practices
@@ -14690,6 +14714,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#how-do-conditional-responses-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Do Conditional Responses Work?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Do Conditional Responses Work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       Best Practices
@@ -14824,6 +14872,77 @@ Selecting multiple intents lets you delete them in bulk.
 </ol>
 <h2 id="faq-conditional-responses">FAQ Conditional Responses<a class="headerlink" href="#faq-conditional-responses" title="Permanent link">&para;</a></h2>
 <p>The FAQ Conditional Responses feature allows you to provide dynamic responses to FAQs so that you can provide personalized, context-aware responses to your users.</p>
+<h3 id="how-do-conditional-responses-work">How Do Conditional Responses Work?<a class="headerlink" href="#how-do-conditional-responses-work" title="Permanent link">&para;</a></h3>
+<p>When the conditional responses are present, it works as follows:</p>
+<ol>
+<li>The platform identifies the appropriate FAQ using the regular process based on the selected model, training, and alternate questions.</li>
+<li>Once the FAQ is identified, the conditions are evaluated in the order they're defined.</li>
+<li>If a condition is met, its corresponding response is selected.</li>
+<li>If no conditions are met, the default response is used.</li>
+<li>The platform prioritizes channel-specific responses for both conditional and default responses.</li>
+<li>Channel-Specific Priority<ul>
+<li>If a condition is met and has a response for the user's channel, that response is used. For example, if the user interacts via MS Teams and the first condition is passed Which has two responses, one for “MS Teams” and one for "All Channels", the MS Teams response will be delivered.</li>
+</ul>
+</li>
+<li>"All Channels" Fallback<ul>
+<li>If conditional responses are available for Slack and All Channels, the "All Channels" response will be delivered on MS Teams.</li>
+</ul>
+</li>
+<li>Condition Skipping<ul>
+<li>If the conditional responses are for Slack and Twitter only, the platform skips the conditional response and checks the next condition. If no conditions match, the default response is delivered.</li>
+</ul>
+</li>
+<li>Default Response Selection<ul>
+<li>For default responses, the platform first attempts to select a channel-specific response. If none is available, the default "All Channels" response will be presented.</li>
+</ul>
+</li>
+</ol>
+<h4 id="example-scenarios"><strong>Example Scenarios</strong><a class="headerlink" href="#example-scenarios" title="Permanent link">&para;</a></h4>
+<p>Let's consider an FAQ about shipping options for an e-commerce platform. The condition will be based on the customer's location, a simple variable that can be easily compared using the "Equals To" operator.</p>
+<p><strong>Conditions and Responses</strong></p>
+<p>Condition: Customer Location Equals To "United States"</p>
+<ul>
+<li>Web: "We offer free standard shipping on orders over $50 within the United States. Express shipping is available for $15."</li>
+<li>Mobile: "Free shipping on $50+ orders in the US. Express: $15. Tap for details."</li>
+</ul>
+<p>Condition: Customer Location Equals To "Canada"</p>
+<ul>
+<li>Web: "We offer flat-rate shipping to Canada for $10. Free shipping is available on orders over $100."</li>
+<li>Mobile: "Canada shipping: $10 flat rate. Free on $100+ orders. Tap for info."</li>
+</ul>
+<p>Condition: Customer Location Equals To "United Kingdom"</p>
+<ul>
+<li>Web: "Shipping to the UK is £5 for standard delivery. Free shipping on orders over £75."</li>
+<li>Mobile: "UK shipping: £5 standard. Free on £75+ orders. Tap for options."</li>
+</ul>
+<p>Default (No condition met):</p>
+<ul>
+<li>Web: "International shipping rates vary. Please check our shipping page for detailed information on rates and delivery times."</li>
+<li>Mobile: "Int'l shipping rates vary. Tap here for your location's rates and times."</li>
+<li>All Channels: "Shipping options depend on your location. Please contact our customer service for specific shipping information."</li>
+</ul>
+<p><strong>Scenarios</strong></p>
+<p>Let's see how the answers/responses are selected in different scenarios:</p>
+<p>Scenario 1: Customer from the United States accessing via Web</p>
+<ul>
+<li>Condition "Customer Location Equals To United States" is satisfied for the Web.</li>
+<li>Selected Response: "We offer free standard shipping on orders over $50 within the United States. Express shipping is available for $15."</li>
+</ul>
+<p>Scenario 2: Customer from Canada accessing via Mobile</p>
+<ul>
+<li>Condition "Customer Location Equals To Canada" is satisfied for Mobile.</li>
+<li>Selected Response: "Canada shipping: $10 flat rate. Free on $100+ orders. Tap for info."</li>
+</ul>
+<p>Scenario 3: Customer from the United Kingdom accessing via Web</p>
+<ul>
+<li>Condition "Customer Location Equals To United Kingdom" is satisfied for the Web.</li>
+<li>Selected Response: "Shipping to the UK is £5 for standard delivery. Free shipping on orders over £75."</li>
+</ul>
+<p>Scenario 4: Customer from France accessing via Mobile</p>
+<ul>
+<li>Channel-specific as well as "All Channels" conditions are not satisfied.</li>
+<li>Selected Response (default): "Int'l shipping rates vary. Tap here for your location's rates and times."</li>
+</ul>
 <h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
 <p>When creating your conditional responses:</p>
 <ul>
