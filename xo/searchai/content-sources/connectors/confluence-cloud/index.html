@@ -5707,6 +5707,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-sets-in-confluence-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Sets in Confluence Cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-confluence-cloud-permissions-in-searchai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Confluence Cloud Permissions in SearchAI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -14826,6 +14877,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-sets-in-confluence-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Sets in Confluence Cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-confluence-cloud-permissions-in-searchai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Confluence Cloud Permissions in SearchAI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -14874,6 +14976,11 @@
    <td>Generative Model for Answers
    </td>
    <td>Knowledge Articles
+   </td>
+  </tr>
+    <tr>
+   <td>Access Control Support </td>
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -15026,6 +15133,32 @@
 <p><a class="glightbox" href="../images/confluencecloud/manual-sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Manual Sync " src="../images/confluencecloud/manual-sync.png" title="Manual Sync" /></a></p>
 <p>You can also set up automatic sync in the background at a specific time or at regular intervals. Regular sync ensures that the content in the Search AI application is always up to date and also saves time for an admin to perform manual sync. To enable automatic sync, enable the <strong>Schedule Sync</strong> option and select the date, time, and frequency of sync. </p>
 <p><a class="glightbox" href="../images/confluencecloud/manual-sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Scheduled Sync " src="../images/confluencecloud/manual-sync.png" title="Scheduled Sync" /></a></p>
+<h3 id="access-control">Access Control<a class="headerlink" href="#access-control" title="Permanent link">&para;</a></h3>
+<p>SearchAI supports access control for content ingested using Confluence Cloud Connector. To enable access control on the content, go to the Permissions and Security tab and select Permission Aware access.  </p>
+<ul>
+<li><strong>Permission Aware</strong> honors the permissions of a user in the Confluence Cloud. The user will view search results from a file only if the user has access to the file in the enterprise application. </li>
+<li><strong>Public Access</strong> overrides the permissions of the user in the Confluence Cloud. It allows every user to access the ingested content irrespective of the permissions in the enterprise system. </li>
+</ul>
+<h4 id="prerequisites_1">Prerequisites<a class="headerlink" href="#prerequisites_1" title="Permanent link">&para;</a></h4>
+<p>Access control in SearchAI relies on fetching user’s email address as their unique identity. To ensure proper user identity management in SearchAssist, it is mandatory that the account used for configuring SearchAI must be able to view user email addresses. This typically requires using an admin account or ensuring users have enabled the following necessary settings in their Confluence profiles. </p>
+<p><a class="glightbox" href="../images/confluencecloud/racl/prerequisite.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Prerequisite" src="../images/confluencecloud/racl/prerequisite.png" title="image_tooltip" /></a></p>
+<h4 id="permission-sets-in-confluence-cloud">Permission Sets in Confluence Cloud<a class="headerlink" href="#permission-sets-in-confluence-cloud" title="Permanent link">&para;</a></h4>
+<p>Two levels of permissions control the user’s access to a page in Confluence Cloud. </p>
+<p><strong>Space Permissions</strong></p>
+<p>Every space has an independent set of permissions managed by the space administrators, which determine the access settings for different users and groups. SearchAI application requires a minimum permission of **view permission **to allow a user to access the content. </p>
+<p><a class="glightbox" href="../images/confluencecloud/racl/space-permissions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Space Permissions" src="../images/confluencecloud/racl/space-permissions.png" title="Space Permissions" /></a></p>
+<p><strong>Page Restrictions</strong></p>
+<p>Pages inherit the space permissions. However, a page can define its own restrictions. It can allow access to all the members of the space or restrict access to selected members. If the page restrictions are marked as “Only specific people can view &amp; edit,” then the space permissions are not considered. </p>
+<p><a class="glightbox" href="../images/confluencecloud/racl/page-restrictions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Page Restrictions" src="../images/confluencecloud/racl/page-restrictions.png" title="Page Restrictions" /></a></p>
+<h4 id="handling-confluence-cloud-permissions-in-searchai">Handling Confluence Cloud Permissions in SearchAI<a class="headerlink" href="#handling-confluence-cloud-permissions-in-searchai" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Individual Access</strong>: Users who are added to a space or a specific page within that space are listed in the racl (user identity – email address) field of the indexed content in SearchAssist. Based on their permissions, these users can directly access the content.</li>
+<li><strong>Group Access</strong>: If access permissions are granted to user groups, SearchAI creates a corresponding permission entity for the group. In this case, the racl fields in the indexed content will have the permission entity IDs for the groups. To enable access for all users within a group, add the users to the respective permission entity using the Permission Entity APIs. </li>
+</ul>
+<h4 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Anonymous Access: SearchAssist does not support anonymous access to content. If a page is publicly accessible or allows anonymous access in Confluence Cloud, SearchAssist will not currently permit viewing of the file content.</li>
+</ul>
 
 
 
