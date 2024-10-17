@@ -5989,6 +5989,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../connectors/oracle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oracle Knowledge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../connectors/salesforce/" class="md-nav__link">
         
   
@@ -14872,7 +14893,7 @@
 <p>In the context of SearchAI, this feature allows users to access answers only from the content they can access. In other words, SearchAI displays content based on the end user’s identity. </p>
 <p>Each file or knowledge base article has associated user access permissions. During data ingestion, this information is fetched from the third-party application and stored in the indexed content, along with other details about the content. When a user submits a query to SearchAI, the application identifies all pertinent content that the user can access and then presents the best answer to the user from the identified content.  </p>
 <p>Access control in SearchAI can be summarized with the following flowchart. </p>
-<p><a class="glightbox" href="../images/connectors/racl/racl-overview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Overview" src="../images/connectors/racl/racl-overview.png" title="racl overview" /></a></p>
+<p><a class="glightbox" href="../images/connectors/racl/overview1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Overview" src="../images/connectors/racl/overview1.png" title="RACL overview" /></a></p>
 <p>The response to a query can vary depending on the end user’s identity.  Consider two users, where one can access the company’s policy documents and the other can only access the FAQs. If a policy description is requested, the first user will see the response generated from the policy document (assuming the best match to the query). On the other hand, since the second user cannot access the policy document, he will see the response generated from the FAQs (assuming the next best match). The response will differ in this case depending on the content of the two documents. </p>
 <p>Note: This feature is currently in beta. If you encounter any issues, please contact our support team. We will help you resolve the issue.  </p>
 <h2 id="racl-implementation-in-searchai">RACL Implementation in SearchAI<a class="headerlink" href="#racl-implementation-in-searchai" title="Permanent link">&para;</a></h2>
