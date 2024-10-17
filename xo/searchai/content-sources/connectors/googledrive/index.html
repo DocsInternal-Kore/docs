@@ -5572,6 +5572,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../racl-support.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RACL Support in SearchAI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../airtable/" class="md-nav__link">
         
   
@@ -15041,25 +15062,20 @@ If the publishing status is set to Testing, you can add your test users by click
 <h3 id="handling-google-drive-file-permissions"><strong>Handling Google Drive File Permissions</strong><a class="headerlink" href="#handling-google-drive-file-permissions" title="Permanent link">&para;</a></h3>
 <p>SearchAI application supports <strong>file-level</strong> permissions through Google Drive Connector. SearchAssist supports the following access types in GDrive. </p>
 <ul>
-<li><strong>People with access</strong>: SearchAI reads user information for the files and allows users to view them if they have permission to do so. Any user with view or read access to a file can access generated answers. \
- \
-For instance, if two users have read access to a file, corresponding indexed content will have the user information as shown below. \</li>
+<li><strong>People with access</strong>: SearchAI reads user information for the files and allows users to view them if they have permission to do so. Any user with view or read access to a file can access generated answers.</li>
 </ul>
-<p><a class="glightbox" href="./images/connectors/googledrive/example1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="People With Access" src="./images/connectors/googledrive/example1.png" title="Example" /></a>
- \
- \
-Similarly, if the files are accessible to a user and a user group in Google Drive, the corresponding content will have the information as shown below, where <a href="mailto:hr-team@example.com">hr-team@example.com</a> is the permission entity created corresponding to the group.  \
- \</p>
-<p><a class="glightbox" href="./images/connectors/googledrive/example2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="User Groups" src="./images/connectors/googledrive/example2.png" title="User Groups" /></a></p>
+<p>For instance, if two users have read access to a file, corresponding indexed content will have the user information as shown below. \</p>
+<p><a class="glightbox" href="../images/googledrive/racl/example1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="People With Access" src="../images/googledrive/racl/example1.png" title="Example" /></a></p>
+<p>Similarly, if the files are accessible to a user and a user group in Google Drive, the corresponding content will have the information as shown below, where <a href="mailto:hr-team@example.com">hr-team@example.com</a> is the permission entity created corresponding to the group.  </p>
+<p><a class="glightbox" href="../images/googledrive/racl/example2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="User Groups" src="../images/googledrive/racl/example2.png" title="User Groups" /></a></p>
 <ul>
 <li><strong>Anyone with Link</strong>: This is treated as public access. All the users can access a file with this type of access permission.  </li>
 </ul>
-<p><a class="glightbox" href="./images/connectors/googledrive/example3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Anyone with Link" src="./images/connectors/googledrive/example3.png" title="Anyone with Link" /></a></p>
+<p><a class="glightbox" href="../images/googledrive/racl/example3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Anyone with Link" src="../images/googledrive/racl/example3.png" title="Anyone with Link" /></a></p>
 <ul>
 <li><strong>Domain Specific Access</strong>: SearchAI supports this type of access and verifies the user identity against the specified domain name.</li>
 </ul>
-<p><a class="glightbox" href="./images/connectors/googledrive/example4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Domain level Access" src="./images/connectors/googledrive/example4.png" title="Domain Level Access" /></a>
- \</p>
+<p><a class="glightbox" href="../images/googledrive/racl/example4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Domain level Access" src="../images/googledrive/racl/example4.png" title="Domain Level Access" /></a></p>
 <h3 id="handling-user-groups-or-domain-level-access-in-google-drive"><strong>Handling User Groups or Domain level access in Google Drive</strong><a class="headerlink" href="#handling-user-groups-or-domain-level-access-in-google-drive" title="Permanent link">&para;</a></h3>
 <p>When a file access is given to a user group or a domain, the group name or domain name is stored as a Permission Entity in SearchAssist. In this case, SearchAssist requires additional information to identify and resolve user identities. You need to associate individual users within the group or the domain to the Permission Entity to enable those users access to the file. </p>
 <p>To correctly associate users with the relevant permission entity, use the Permission Entity APIs.</p>
@@ -15071,7 +15087,7 @@ Similarly, if the files are accessible to a user and a user group in Google Driv
 <li><strong>Public Access</strong>: This option overrides the permissions associated with the content in Google Drive and allows all users to access the content. </li>
 </ul>
 <p>You can configure this while connecting to Google Drive for the first time. To update the permissions at any time, go to the Permissions &amp; Security tab and modify them. The updated permissions apply to the content ingested during the next sync activity. </p>
-<p><a class="glightbox" href="./images/connectors/googledrive/permissions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Permissions Config" src="./images/connectors/googledrive/permissions.png" title="RACL Enable" /></a></p>
+<p><a class="glightbox" href="../images/googledrive/racl/permissions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Permissions Config" src="../images/googledrive/racl/permissions.png" title="RACL Enable" /></a></p>
 
 
 

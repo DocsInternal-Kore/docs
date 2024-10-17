@@ -5572,6 +5572,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../racl-support.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RACL Support in SearchAI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../airtable/" class="md-nav__link">
         
   
@@ -5812,6 +5833,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    JSON Connector
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5821,6 +5853,45 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -14670,6 +14741,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -14689,7 +14786,7 @@
 <h1 id="json-connector">JSON Connector<a class="headerlink" href="#json-connector" title="Permanent link">&para;</a></h1>
 <p>JSON Connector enables the ingestion of chunked content directly into the SearchAI application. This content is immediately added to the indexed content, ensuring seamless integration and efficient data retrieval within SearchAI. This gives the users the flexibility to ingest any type of data to the application by creating structured data from it in a given format. </p>
 <p>The content can be added to the application as one or more files containing chunked content in JSON format. Each file should have an array of JSON objects where each object corresponds to a chunk. Hence, it is mandatory that the keys of the object exactly match the chunk fields in the application. </p>
-<h1 id="file-format">File Format<a class="headerlink" href="#file-format" title="Permanent link">&para;</a></h1>
+<h2 id="file-format">File Format<a class="headerlink" href="#file-format" title="Permanent link">&para;</a></h2>
 <p>The structured content can be uploaded to the application using a JSON file.</p>
 <p>Currently, the structured content in the JSON file is expected to be in a specific format for the Search AI application to understand. Key things to remember:</p>
 <ul>
@@ -14838,7 +14935,7 @@ Field name
 </table>
 
 <p>Refer to the sample file for reference. </p>
-<h1 id="configuration-steps">Configuration Steps<a class="headerlink" href="#configuration-steps" title="Permanent link">&para;</a></h1>
+<h2 id="configuration-steps">Configuration Steps<a class="headerlink" href="#configuration-steps" title="Permanent link">&para;</a></h2>
 <p>Go to the <strong>Connectors page</strong> under <strong>Content</strong>. Add the <strong>JSON Connector</strong>. </p>
 <p><a class="glightbox" href="../images/json/home.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Home" src="../images/json/home.png" title="Home" /></a></p>
 <p>Select the source name to which the JSON content is to be uploaded. If there is no existing source, create a new source. Upload the file with the structured data in JSON format. Use the sample file as a reference for the JSON file format. </p>
