@@ -6,7 +6,7 @@ This document provides information on the feature updates and enhancements intro
 
 <u> Patch Release </u>
 
-### **Enhanced NICE MAX Desktop Integration**
+### Enhanced NICE MAX Desktop Integration
 
 The Agent AI integration with NICE CX MAX Desktop now supports passing custom data to the Agent AI Widget and is compatible with XO v11.
 
