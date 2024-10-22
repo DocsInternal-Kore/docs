@@ -4,7 +4,7 @@ The Dashboard provides a 360-degree view of Audit details, Fail Statistics, and 
 
 You can view the Dashboard by navigating to **Contact Center AI** > **Quality AI** > **Analyze** > **Dashboard**.  
 
-<img src="./dashboard/images/qm-dashboard.png" alt="Quality Management Dashboard" title="Quality Management Dashboard" style="border: 1px solid gray; zoom:70%;">
+<img src="../dashboard/images/qm-dashboard.png" alt="Quality Management Dashboard" title="Quality Management Dashboard" style="border: 1px solid gray; zoom:70%;">
 
 !!! Note
 
@@ -93,7 +93,7 @@ Supervisors can view and monitor agent performance based on the evaluation form 
 
 <img src="../dashboard/images/performance-monitor-evaluation-form-trends.png" alt="Performance Monitor Evaluation Form Trends" title="Performance Monitor Evaluation Form Trends" style="border: 1px solid gray; zoom:60%;">
 
-* **Distribution**: This shows the distribution of both kore evaluation scores and agents scorecard scores.
+* **Distribution**: This shows the distribution of both Kore evaluation scores and agents scorecard scores.
 
 <img src="../dashboard/images/performance-monitor-evaluation-form-distribution.png" alt="Performance Monitor Evaluation Form Distribution" title="Performance Monitor Evaluation Form Distribution" style="border: 1px solid gray; zoom:60%;">
 
@@ -131,7 +131,7 @@ The Agent Leaderboard includes the following items:
 
 #### View Leaderboard or Agent Leaderboard
 
-Upon clicking the View Leaderbaord button displayed in the Dashboard - Agent Leaderboard widget, this navigates the user to the [View Leaderboard](../analyze/agent-leaderboard.md) or [Agent Leaderboard](../analyze/agent-leaderboard.md).
+Upon clicking the View Leaderboard button displayed in the Dashboard - Agent Leaderboard widget, this navigates the user to the [View Leaderboard](../analyze/agent-leaderboard.md) or [Agent Leaderboard](../analyze/agent-leaderboard.md).
 
 #### Supervisor Dashboard
 
