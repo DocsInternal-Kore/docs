@@ -450,9 +450,13 @@ For practical examples of this feature, refer to steps 7-8 of [Steps to set up t
 
 ### Nudge Agent
 The Nudge Agent actions are the small messages that pop up on the agent’s screen while communicating with the customers. They are disappearing messages, which stay on the agent’s screen for 5 seconds. The agent can close these messages anytime after their appearance. Through these messages, you either compliment the agents for a good job or direct them to take other appropriate actions to serve the customers in the best way possible. Here are the following four nudges that you can choose from:
+
 * Positive
+
 * Neutral
+
 * Alert
+
 * Critical
 
 #### Steps to set up the Nudge Agent actions:
@@ -509,9 +513,13 @@ The Nudge Agent actions are the small messages that pop up on the agent’s scre
 
 ### Hint Agent
 The Hint Agent actions are small pop-up messages that advise agents to take further action. They appear on the agent’s screen while communicating with the customers and may or may not auto-close based on how you set them. Through these messages, you also compliment the agents for a good job. Here are the four hint types that you can choose from:
+
 * Positive
+
 * Neutral
+
 * Warning
+
 * Critical
 
 #### Steps to set up the Hint Agent actions:
