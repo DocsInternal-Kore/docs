@@ -125,7 +125,7 @@ The spike or dip indicators for playbook adherence are linked to this toggle and
 
 For example, if the selected date range is the last 7 days, all metrics, such as the Average Speed to Answer, will show a spike or dip indicating the percentage change for a selected period (June 5 - June 12) compared to the same duration in the previous period (May 29 - June 5).
   
-<img src="../conversation-intelligence/images/key-performance-indicators.png" alt="Compare Functionality" title="Compare Functionality" style="border: 1px solid gray; zoom:100%;">
+<img src="../conversation-intelligence/images/conv-intel-compare-functionality.png" alt="Compare Functionality" title="Compare Functionality" style="border: 1px solid gray; zoom:100%;">
 
 ## Channels
 
@@ -162,7 +162,7 @@ The average of the KPIs for a time interval is shown beside the line bar, along 
 
 Hovering over the color zones shows the percentage of calls and the actual number of calls for the represented percentage (volume).  
 
-<img src="../conversation-intelligence/images/cc-efficiency.png" alt="Contact Center Efficiency" title="Contact Center Efficiency" style="border: 1px solid gray; zoom:70%;">
+<img src="./conversation-intelligence/images/cc-efficiency.png" alt="Contact Center Efficiency" title="Contact Center Efficiency" style="border: 1px solid gray; zoom:70%;">
 
 ## Agent Efficacy
 
