@@ -4,7 +4,7 @@ The Dashboard provides a 360-degree view of Audit details, Fail Statistics, and 
 
 You can view the Dashboard by navigating to **Contact Center AI** > **Quality AI** > **Analyze** > **Dashboard**.  
 
-<img src="./dashboard/images/qm-dashboard.png" alt="Quality Management Dashboard" title="Quality Management Dashboard" style="border: 1px solid gray; zoom:70%;">
+<img src="../dashboard/images/qm-dashboard.png" alt="Quality Management Dashboard" title="Quality Management Dashboard" style="border: 1px solid gray; zoom:70%;">
 
 !!! Note
 
@@ -111,7 +111,7 @@ Supervisors can view and monitor agent performance based on the evaluation form 
 
 This widget allows users to view a condensed version of the agent leaderboard to have a snapshot version of agent performance and navigate to the full agent leaderboard using the view leaderboard button.  
 
-<img src="./dashboard/images/agent-leaderboard.png" alt="Agent Leaderboard" title="Agent Leaderboard" style="border: 1px solid gray; zoom:60%;">
+<img src="../dashboard/images/agent-leaderboard.png" alt="Agent Leaderboard" title="Agent Leaderboard" style="border: 1px solid gray; zoom:60%;">
 
 !!! Note
 
