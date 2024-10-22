@@ -511,7 +511,7 @@ The Nudge Agent actions are the small messages that pop up on the agent’s scre
 The Hint Agent actions are small pop-up messages that advise agents to take further action. They appear on the agent’s screen while communicating with the customers and may or may not auto-close based on how you set them. Through these messages, you also compliment the agents for a good job. Here are the four hint types that you can choose from:
 * Positive
 * Neutral
-* Alert
+* Warning
 * Critical
 
 #### Steps to set up the Hint Agent actions:
