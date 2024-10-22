@@ -499,9 +499,9 @@ The Nudge Agent actions are the small messages that pop up on the agent’s scre
 
          <img src="../agent-coaching-images/neutral-nudge-widget-53.png" alt="neutral-nudge-widget" title="neutral-nudge-widget" style="border: 1px solid gray; zoom:80%;">
 
-      3. Warning Nudges
+      3. Alert Nudges
 
-         <img src="../agent-coaching-images/warning-nudge-widget-54.png" alt="warning-nudge-widget" title="warning-nudge-widget" style="border: 1px solid gray; zoom:80%;">
+         <img src="../agent-coaching-images/alert-nudge-widget-54.png" alt="warning-nudge-widget" title="warning-nudge-widget" style="border: 1px solid gray; zoom:80%;">
 
       4. Critical Nudges
 
