@@ -113,7 +113,7 @@ Supervisors can view and monitor agent performance based on the evaluation form 
 
 This widget provides users with a summarized view of the agent leaderboard, offering a snapshot of agent performance. Users can access the full leaderboard by clicking the **View Leaderboard** button.
 
-<img src="./dashboard/images/agent-leaderboard.png" alt="Agent Leaderboard" title="Agent Leaderboard" style="border: 1px solid gray; zoom:60%;">
+<img src="../dashboard/images/agent-leaderboard.png" alt="Agent Leaderboard" title="Agent Leaderboard" style="border: 1px solid gray; zoom:60%;">
 
 !!! Note
 
