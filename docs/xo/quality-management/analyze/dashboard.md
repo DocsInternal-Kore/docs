@@ -50,14 +50,14 @@ Displays the number of agents with an active coaching assignment in the queues t
 ### Audit Progress
 Displays the total number of audits (progress score) pending and completed.
 
-* **Completed**: No. of assigned interactions that are audited.
-* **Pending**: No. of interactions assigned for audit and not yet audited.
+* **Completed**: Number of assigned interactions that are audited.
+* **Pending**: Number of interactions assigned for audit and not yet audited.
 * **Audit**: Navigate to the **Audit Allocation** of the Conversation Mining section, where you can easily start evaluating interactions. For more information, see [Conversation Mining](../analyze/conversation-mining.md).
 
 <img src="../dashboard/images/audit-progress.png" alt="Audit Progress" title="Audit Progress" style="border: 1px solid gray; zoom:70%;">
 
 ### Evaluation Score 
-It shows the trend of the average **Kore Evaluation Score** (Auto QA Score) and the average **Audit Score** (manual), allowing you to see if there is any consistency between system evaluations and manual audits. 
+This shows the trend of the average **Kore Evaluation Score** (Auto QA Score) and the average **Audit Score** (manual), allowing you to see if there is any consistency between system evaluations and manual audits. 
 
 You can view both automated scored interactions and manual audits of the following three date ranges:  
 
@@ -133,7 +133,7 @@ The Agent Leaderboard includes the following items:
 
 #### View Leaderboard or Agent Leaderboard
 
-Clicking the **View Leaderboard** button in the Agent Leaderboard (Dashboard) widget takes the user to the [View Leaderboard](../analyze/agent-leaderboard.md) or [Agent Leaderboard](../analyze/agent-leaderboard.md).
+Clicking the **View Leaderboard** button in the **Agent Leaderboard** (Dashboard) widget takes the user to the [View Leaderboard](../analyze/agent-leaderboard.md) or [Agent Leaderboard](../analyze/agent-leaderboard.md).
 
 #### Supervisor Dashboard
 
