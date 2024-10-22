@@ -6,8 +6,6 @@ This document provides information on the feature updates and enhancements intro
 
 <u> Patch Release </u>
 
-This update include enhancement and bug fixes. The key enhancement included in this release is summarized below.
-
 ### Enhanced NICE MAX Desktop Integration
 
 The Agent AI integration with NICE CX MAX Desktop now supports passing custom data to the Agent AI Widget and is compatible with XO v11.
@@ -43,7 +41,7 @@ You can configure error messages during [Use Case creation](https://docs.kore.ai
 When a single error message is triggered during dialog task execution, the **Assist** tab displays the error message and the number of occurrences. If the same error message is triggered again, the message does not repeat, but the number of occurrences increases.  
 <img src="../images/single-error-message.png" alt="single-error-message" title="single-error-message" style="border: 1px solid gray; zoom:80%;">
 
-**Multiple Error Message**
+**Multiple Error MessageS**
 
 When multiple (different) error messages are triggered, they are all displayed in the **Assist** tab, with a count indicating the total number of error messages.  
 <img src="../images/multiple-error-messages.png" alt="multiple-error-messages" title="multiple-error-messages" style="border: 1px solid gray; zoom:80%;">
