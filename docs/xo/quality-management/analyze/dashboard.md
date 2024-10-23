@@ -131,11 +131,11 @@ The Agent Leaderboard includes the following items:
 
 * **Fail Percentage**: This shows the failure percentage across all interactions.
 
-#### View Leaderboard or Agent Leaderboard
+### View Leaderboard or Agent Leaderboard
 
 Clicking the **View Leaderboard** button in the **Agent Leaderboard** (Dashboard) widget takes the user to the [View Leaderboard](../analyze/agent-leaderboard.md) or [Agent Leaderboard](../analyze/agent-leaderboard.md).
 
-#### Supervisor Dashboard
+### Supervisor Dashboard
 
 Clicking any one of the agents from the **Agent Leaderboard** (Dashboard) widget directs the user to the [Agent Dashboard - Supervisor View](./agent-dashboard-supervisor-view.md).  
 
