@@ -162,7 +162,7 @@ The average of the KPIs for a time interval is shown beside the line bar, along 
 
 Hovering over the color zones shows the percentage of calls and the actual number of calls for the represented percentage (volume).  
 
-<img src="./conversation-intelligence/images/cc-efficiency.png" alt="Contact Center Efficiency" title="Contact Center Efficiency" style="border: 1px solid gray; zoom:70%;">
+<img src="../conversation-intelligence/images/cc-efficiency.png" alt="Contact Center Efficiency" title="Contact Center Efficiency" style="border: 1px solid gray; zoom:70%;">
 
 ## Agent Efficacy
 
