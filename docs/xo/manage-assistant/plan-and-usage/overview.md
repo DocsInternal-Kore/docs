@@ -29,7 +29,6 @@ Every workspace gets classified as a Standard Workspace when created. All the ap
 
 * Standard Workspaces get free credits worth $500. The free credits are valid for 90 days from the date of workspace creation. They can be used to publish and test the app. You can continue to build your apps even after the free credits have expired or been exhausted. However, the apps will stop responding on the channels after the free credits are exhausted or expired.
 * Standard Workspaces provides a pay-as-you-go model for deploying the app for production purposes.
-* All the apps in the Standard Workspace are assigned to the Standard Usage Plan. You can add paid credits to your apps anytime for uninterrupted services. For more information, see [Usage Plans](../plan-and-usage/usage-plans.md).
 * Workspace or App Owners can request to upgrade to Enterprise Workspace. Kore.ai’s Customer Support team will contact the users to process the request.
 
 ### Enterprise Workspace
@@ -69,15 +68,11 @@ In the below example, only Automation AI and SearchAI enterprise licenses are of
 
 ## Plan Types
 
-The Kore.ai XO Platform offers Usage Plans and Support Plans for deploying and managing your App.
+The Kore.ai XO Platform offers Usage Plans for deploying and managing your App.
 
 ### Usage Plans
 
 The Usage Plan enables apps to interact with your end users from any available channels.  channels. For more information, see [Usage Plans](../plan-and-usage/usage-plans.md).
-
-### Support Plans
-
-The Support Plan is required to get premium support from Kore.ai’s team of experts. Access to help and support resources like [Kore.ai Documentation](../../home.md), [Community](https://community.kore.ai/), and [Academy](https://academy.kore.ai/)<span style="text-decoration:underline;"></span> is available for all users. For more information, see [Support Plans](./support-plans.md/).		
 
 ## Workspace Linked to Multiple Apps
 
@@ -94,26 +89,3 @@ A workspcae owner can explicitly manage the Plan and Usage for a workspace linke
 * Access the **Manage Tickets** and **Community** pages.
 
 
-## Shared Accounts
-
-The Platform allows owners to manage the Plan and Usage for multiple shared Apps in their workspace, one at a time. The owners can do the following for shared accounts:
-
-
-* Upgrade the current standard and support plans.
-* Add funds to the existing plan.
-* View **Current Credits**, **Allowed Requests**, and **Usage Trends** for the current plan.
-* View the Billing Request Trend across weeks, months, or a custom date range selection.
-* Access the Community page.
-* Export the usage trend data file, including the following:
-    * Bot ID
-    * Channel
-    * Kore User ID
-    * Channel User ID
-    * Billing Session Type
-    * Conversation Session Id
-    * Conversation Session Start Date Time
-    * Conversation Session End Date Time
-    * Billing Session Id
-    * Billing Session Start Date Time
-    * Billing Session End Date Time
-    * Message IdDocument
