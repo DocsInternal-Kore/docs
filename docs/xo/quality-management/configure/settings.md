@@ -56,7 +56,8 @@ Steps to enable the Script Adherence Configuration:
 1. Expand the **Conversation Intelligence** collapse icon, and enable the toggle button of **Conversation Intelligence Dashboard** and **Script adherence configuration**.  
 <img src="../images/script-adherence.png" alt="Script Adherence Toggle" title="Script Adherence Toggle" style="border: 1px solid gray; zoom:60%;">
 
-2. Define the scripts for the below attributes to check the agent adherence.
+2. Define the scripts for the below attributes to check the agent adherence. 
+
 * **Attribute**: Shows script steps like Greeting, Branding, and so on, where custom messages can be added.
 * **Message**: Shows the custom messages that are already configured.
 * **Action**: Enables you to enter messages for the agent by toggling the action button.
@@ -74,7 +75,6 @@ At the agent account level, the agent can only check the following options defin
 * In the Conversation Intelligence Dashboard, the agent can check the post-interaction analytics, such as brand tags, greetings, questions, emotions, interactions, and so on. 
 
 * In the Script adherence configuration, the agent can visualize the specific messages or scripts that are defined by the supervisor or app owner or administrator.  
-<img src="../images/agent-level-admin-settings.png" alt="agent-level-admin-settings" title="Admin-settings" style="border: 1px solid gray; zoom:60%;">
 
 ## Quality Management
 
@@ -148,8 +148,8 @@ Once the **Agent Score Card** is enabled from the **Settings**, you will get the
 <img src="../images/settings-enable-agent-scorecard.png" alt="Auto QA" title="Auto QA" style="border: 1px solid gray; zoom:60%;">
 
 #### Disable Agent Score Card
-
 Steps to disable the Agent Score Card:
+
 1. If you turn off the **Agent Score Card** toggle, the following dialog box is displayed.
 
 <img src="../images/settings-disable-agent-scorecard.png" alt="Auto QA" title="Auto QA" style="border: 1px solid gray; zoom:60%;">
@@ -164,7 +164,7 @@ This feature lets you bookmark interactions into various collections for future 
 #### Enable Bookmarks
 Steps to Add Bookmarks:
 
-1. Expand the **Quality AI** collapse icon to view the following **Bookmarks** option.  
+1. Expand the **Quality Management** collapse icon to view the following **Bookmarks** option.  
 <img src="../images/settings-bookmarks.png" alt="Bookmark" title="Bookmark" style="border: 1px solid gray; zoom:70%;">
 
 2. Enable the **Bookmarks** toggle option to add a new bookmark.
@@ -186,4 +186,4 @@ Steps to disable Bookmarks:
 
 !!! Note
     
-        Deleting any created bookmarks removes only the bookmark itself, not the associated relevant interactions.
+    Deleting any created bookmarks removes only the bookmark itself, not the associated relevant interactions.
