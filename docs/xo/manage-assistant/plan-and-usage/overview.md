@@ -25,10 +25,9 @@ Every workspace of the Kore.ai XO Platform is categorized as a Standard or Enter
 
 ### Standard Workspace
 
-Every workspace gets classified as a Standard Workspace when created. All the apps published in the Standard Workspace are auto-assigned with the Standard Usage Plan.
+Every workspace gets classified as a Standard Workspace when created. 
 
-* Standard Workspaces get free credits worth $500. The free credits are valid for 90 days from the date of workspace creation. They can be used to publish and test the app. You can continue to build your apps even after the free credits have expired or been exhausted. However, the apps will stop responding on the channels after the free credits are exhausted or expired.
-* Standard Workspaces provides a pay-as-you-go model for deploying the app for production purposes.
+* When a new app is created, it comes with a free trial period. After the trial expires, users can choose to subscribe to either the Essential Plan or the Advanced Plan.
 * Workspace or App Owners can request to upgrade to Enterprise Workspace. Kore.ai’s Customer Support team will contact the users to process the request.
 
 ### Enterprise Workspace
