@@ -67,15 +67,15 @@ You can view both automated scored interactions and manual audits of the followi
   
 <img src="../dashboard/images/evaluation-score.png" alt="Evaluation Score" title="Evaluation Score" style="border: 1px solid gray; zoom:60%;">
 
-### Fail Statistics
+## Fail Statistics
 The number of fails count is the count of failed interactions for the selected forms and the selected date range. The chart allows visualization of failure trends for the selected forms over the last seven days, last seven weeks, or last seven months using the daily, weekly, and monthly views. In general, it provides the failure statistics of evaluation forms and scorecards for a given period of time.
 
-#### Evaluation Form
+### Evaluation Form
 The users can view failure rates across evaluation forms they choose. This makes it easy to track increases in failure rates and enables them to take appropriate action to address issues without manually sifting through failed interactions.
 
 <img src="../dashboard/images/fail-stat-evaluation-form.png" alt="Fail Statistics Evaluation Form" title="Fail Statistics Evaluation Form" style="border: 1px solid gray; zoom:60%;">
 
-#### Agent Scorecard
+### Agent Scorecard
 This shows the Trend view of the percentage of interactions with agent scorecard failures based on the selected scorecard. 
 
 !!! Note
@@ -84,11 +84,11 @@ This shows the Trend view of the percentage of interactions with agent scorecard
 
 <img src="../dashboard/images/fail-stat-agent-scorecard.png" alt="Fail Statistics Agent Scorecard" title="Fail Statistics Agent Scorecard" style="border: 1px solid gray; zoom:60%;">
 
-### Performance Monitor
+## Performance Monitor
 
 This shows the total score of the Performance Monitor based on the Date Range and Evaluation Form selected. 
 
-#### Evaluation Form
+### Evaluation Form
 Supervisors can view and monitor agent performance based on the evaluation form chosen.
 
 * **Trends**: The Performance Monitor allows visualization of agent performance through the Trends view of the average Kore Evaluation of agent Scorecards scores on a Daily, Weekly, and Monthly basis.  
@@ -109,7 +109,7 @@ Supervisors can view and monitor agent performance based on the evaluation form 
 
 <img src="../dashboard/images/performance-monitor-agent-scorecard-distribution.png" alt="Performance Monitor Evaluation Form Distribution" title="Performance Monitor Agent Scorecard Distribution" style="border: 1px solid gray; zoom:60%;">
 
-### Agent Leaderboard
+## Agent Leaderboard
 
 This widget provides users with a summarized view of the agent leaderboard, offering a snapshot of agent performance. Users can access the full leaderboard by clicking the **View Leaderboard** button.
 
