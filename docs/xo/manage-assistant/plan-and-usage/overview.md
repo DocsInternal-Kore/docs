@@ -29,7 +29,7 @@ Every workspace gets classified as a Standard Workspace when created. All the ap
 
 * Standard Workspaces get free credits worth $500. The free credits are valid for 90 days from the date of workspace creation. They can be used to publish and test the app. You can continue to build your apps even after the free credits have expired or been exhausted. However, the apps will stop responding on the channels after the free credits are exhausted or expired.
 * Standard Workspaces provides a pay-as-you-go model for deploying the app for production purposes.
-* All the apps in the Standard Workspace are assigned to the Standard Usage Plan. You can add paid credits to your apps anytime for uninterrupted services. For more information, see [Usage Plans](../  plan-and-usage/usage-plans.md).
+* All the apps in the Standard Workspace are assigned to the Standard Usage Plan. You can add paid credits to your apps anytime for uninterrupted services. For more information, see [Usage Plans](../plan-and-usage/usage-plans.md).
 * Workspace or App Owners can request to upgrade to Enterprise Workspace. Kore.ai’s Customer Support team will contact the users to process the request.
 
 ### Enterprise Workspace
@@ -57,15 +57,15 @@ Once the upgrade is completed, users gain immediate access to the eligible produ
 
 Inside an app, users can access all the products for which the enterprise has licenses.
 
-<img src="../plan-and-usage/images/product switcher.png" alt="product" title="product" style="border:1px solid gray;zoom:60%;">
+<img src="../images/product switcher.png" alt="product" title="product" style="border:1px solid gray;zoom:60%;">
 
 **Enterprise Upgrade for Fewer Products**
 
 * The internal tool allows for assigning enterprise licenses to specific products only.
-* In the scenarios where only certain products are upgraded to enterprise, users can create apps using only those for which enterprise licenses are provided. \
+* In the scenarios where only certain products are upgraded to enterprise, users can create apps using only those for which enterprise licenses are provided.
 In the below example, only Automation AI and SearchAI enterprise licenses are offered. Contact Center and Agent licenses are not included.
 
-<img src="../plan-and-usage/images/get-started.png" alt="Get Started" title="Get Started" style="border:1px solid gray;zoom:60%;">
+<img src="../images/get-started.png" alt="Get Started" title="Get Started" style="border:1px solid gray;zoom:60%;">
 
 ## Plan Types
 
@@ -77,7 +77,7 @@ The Usage Plan enables apps to interact with your end users from any available c
 
 ### Support Plans
 
-The Support Plan is required to get premium support from Kore.ai’s team of experts. Access to help and support resources like [Kore.ai Documentation](https://docs.kore.ai/xo/home/), [Kore.ai Documentation](../../home.md) [Community](https://community.kore.ai/), and [Academy](https://academy.kore.ai/)<span style="text-decoration:underline;"></span> is available for all users. For more information, see [Support Plans](./support-plans.md/).		
+The Support Plan is required to get premium support from Kore.ai’s team of experts. Access to help and support resources like [Kore.ai Documentation](../../home.md), [Community](https://community.kore.ai/), and [Academy](https://academy.kore.ai/)<span style="text-decoration:underline;"></span> is available for all users. For more information, see [Support Plans](./support-plans.md/).		
 
 ## Workspace Linked to Multiple Apps
 
