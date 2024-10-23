@@ -45,21 +45,19 @@ Enterprise workspaces offer access to premium features, higher usage limits, and
 When upgrading to an enterprise workspace, the upgrade applies only to specific products. For example, if a customer purchases only Search AI, the workspace will be upgraded only for the Search AI license. Access to other products is not granted.
 Refer to the below image for an upgrade from the internal tool.
 
-![alt_text](images/image1.png "image_tooltip")
+<img src="../images/manage-workspace.png" alt="Manage Workspace" title="Manage Workspace" style="border:1px solid gray;zoom:60%;">
 
 
 **Post-Upgrade Access**
 
 Once the upgrade is completed, users gain immediate access to the eligible products without needing to go through the trial flow again. For example, Automation and Contact Center AI show the **Try Now** buttons before the upgrade. After the upgrade, they are shown as **Create New**. Similarly, the **Contact Us** buttons are replaced with **Create New** for Search AI and Agent AI.
 
-![alt_text](images/image2.png "image_tooltip")
+<img src="../images/post-upgrade-access.png" alt="Post-Upgrade Access" title="Post-Upgrade Access" style="border:1px solid gray;zoom:60%;">
 
 
 Inside an app, users can access all the products for which the enterprise has licenses.
 
-
-![alt_text](images/image3.png "image_tooltip")
-
+<img src="../plan-and-usage/images/product switcher.png" alt="product" title="product" style="border:1px solid gray;zoom:60%;">
 
 **Enterprise Upgrade for Fewer Products**
 
@@ -67,7 +65,7 @@ Inside an app, users can access all the products for which the enterprise has li
 * In the scenarios where only certain products are upgraded to enterprise, users can create apps using only those for which enterprise licenses are provided. \
 In the below example, only Automation AI and SearchAI enterprise licenses are offered. Contact Center and Agent licenses are not included.
 
-![alt_text](images/image4.png "image_tooltip")
+<img src="../plan-and-usage/images/get-started.png" alt="Get Started" title="Get Started" style="border:1px solid gray;zoom:60%;">
 
 ## Plan Types
 
