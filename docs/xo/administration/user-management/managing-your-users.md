@@ -111,6 +111,31 @@ You can use the Kill Session button to end a mobile or desktop session for the u
 
 <img src="../images/bac-users-sessions.png" alt="Sessions - User Activity" title="Sessions - User Activity" style="border: 1px solid gray;zoom:50%;"/>
 
+### Cross-Workspace Session Management
+
+The platform manages user sessions at the platform level rather than the workspace level. When users log in, a single session is created that works across all workspaces. This enables administrators to monitor active sessions for their users across all workspaces and terminate any user session, regardless of workspace.
+
+#### Security & Privacy Considerations
+
+**Privacy**: Users should be aware that their sessions in one workspace might be visible to administrators of other workspaces they are part of.
+
+Enhanced **Security**: Cross-workspace monitoring helps detect suspicious activities.
+
+**Session Management**: Users may be logged out if an administrator from any workspace terminates their session.
+
+#### Best Practices
+
+For Administrators:
+
+* Utilize the session management feature responsibly.
+* Notify users before terminating sessions, especially those in other workspaces.
+* Regularly review active sessions to ensure proper account usage.
+
+For Users:
+
+* Be aware that your sessions are visible across multiple workspaces.
+* Log out of inactive sessions to maintain good security practices.
+* Report suspicious session activity to the workspace administrator.
 
 ### Manage Bots
 
@@ -126,7 +151,6 @@ You can also select a Bot and assign a Bot role to the user. For more informatio
 ### Other Options
 
 <img src="../images/bac-users-more.png" alt="Other Options" title="Other Options" style="border: 1px solid gray;"/>
-
 
 
 #### Reset a User Password
