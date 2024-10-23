@@ -162,7 +162,7 @@ The average of the KPIs for a time interval is shown beside the line bar, along 
 
 Hovering over the color zones shows the percentage of calls and the actual number of calls for the represented percentage (volume).  
 
-<img src="./conversation-intelligence/images/cc-efficiency.png" alt="Contact Center Efficiency" title="Contact Center Efficiency" style="border: 1px solid gray; zoom:70%;">
+<img src="../conversation-intelligence/images/cc-efficiency.png" alt="Contact Center Efficiency" title="Contact Center Efficiency" style="border: 1px solid gray; zoom:70%;">
 
 ## Agent Efficacy
 
@@ -180,7 +180,7 @@ Customer Satisfaction (CSAT) is a widely used metric for measuring and evaluatin
 
 This measures how frequently an agent uses crutch words during their speech. Crutch words are words or phrases that agents use as a filler or to give them more time to think. Common crutch words are “um,” “uh,” “like,” “you know,” “so,” and “basically.” The crutch word score is calculated for agent utterances only.
 
-### Agent Performance Monitor
+## Agent Performance Monitor
 
 The admins and supervisors must completely understand customer interactions and their influence on customer satisfaction. Agent Performance Monitor provides a visual representation of the relationship among different metrics, including empathy score, crutch word score, CSAT score, and sentiment score. You can make informed, data-driven decisions by identifying the patterns to enhance the overall customer experience.
 
@@ -253,7 +253,7 @@ The following parameters can be monitored:
 
 <img src="../conversation-intelligence/images/custom-experience.png" alt="Custom Experience" title="Custom Experience" style="border: 1px solid gray; zoom:100%;">
 
-## Sentiment Monitor
+### Sentiment Monitor
 
 The Sentiment Monitor module provides a score range from 1 to 10 for each interaction and indicates polarity as Positive, Neutral, or Negative. It determines the likely emotion involved based on the average sentiment score, such as Happy, Satisfied, or Disappointed.
 
@@ -267,7 +267,7 @@ The sentiment monitor graph is a bar chart where each bar represents an intent o
 
 <img src="../conversation-intelligence/images/sentiment-monitor.png" alt="Sentiment Monitor" title="Sentiment Monitor" style="border: 1px solid gray; zoom:80%;">
 
-## Customer Churn Monitor
+### Customer Churn Monitor
 
 The Customer Churn Monitor is a pie chart representation of the customer churn risk. This chart indicates customer churn percentage compared with total calls and any observed escalations in the same period. It functions as an interactive graph, where hovering over the graph reveals the weightage of each section based on the hover placement, and clicking a specific section directs to the calls associated with either escalation or customer churn. The following details are displayed:
 
@@ -281,7 +281,7 @@ The Customer Churn Monitor is a pie chart representation of the customer churn r
 
 The insights mining dashboard comprises three widgets that facilitate data exploration.
 
-## Topic vs. Sentiment Bubble
+### Topics 
 
 The widget grades sentiment scores for interactions on a scale of 1 to 10. Each topic is represented by a bubble with indicators for different weights associated with positive, neutral, or negative sentiment.
 
@@ -291,7 +291,7 @@ For example: The “Network issues” bubble indicates sentiment distribution as
 
 40% positive (green), 30% neutral, and 30% negative. These percentages are represented by the bubble’s circumference. Hovering over “Network issues” shows the average emotion index, such as “satisfied” (associated with the average sentiment score).
 
-## Keyword Cloud & Emotions
+## Keyword Cloud & Emotions for All
 
 This widget shows relevant keywords for a selected topic from the previous widget. It excludes general stop words and common words. 
  

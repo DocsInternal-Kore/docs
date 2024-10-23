@@ -1,5 +1,6 @@
 # Dashboard
 
+## Overview
 The Dashboard provides a 360-degree view of Audit details, Fail Statistics, and Performance Monitoring of the Agent Evaluation Forms on a Daily, Weekly, and Monthly basis. It holds the last seven months of a year's data. By default, the Dashboard shows the Daily report for all three categories. This provides a quick glance through to monitor the quality standard at a given point of time.
 
 You can view the Dashboard by navigating to **Contact Center AI** > **Quality Management** > **Analyze** > **Dashboard**.  
@@ -10,7 +11,6 @@ You can view the Dashboard by navigating to **Contact Center AI** > **Quality Ma
 
     To view this **Dashboard** feature, you must first enable Auto QA setting and configure an evaluation form to generate Auto QA scores. Only users having the QA functionality permission can access this.
 
-## Overview
 The key sections of this Dashboard include:
 
 ### Date Range Filter
