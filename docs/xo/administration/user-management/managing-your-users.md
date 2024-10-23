@@ -1,6 +1,6 @@
 # Managing Your Users
 
-**User Management** involves managing users and user groups
+**User Management** involves managing users and user groups.
 
 * From the **[Users section](#users)**, you can view and manage your Kore.ai users' roles and status, and monitor user message activity.
 * From **[User Settings section](#user-settings)**, you can define the user profile fields displayed to the user in their profile, such as address information, and whether the user can edit those fields.
