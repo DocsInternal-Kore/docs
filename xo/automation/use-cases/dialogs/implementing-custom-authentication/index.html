@@ -15032,7 +15032,8 @@ Conversion notes:
 <h2 id="populate-the-context-and-present-the-custom-url-to-the-user">Populate the Context and Present the Custom URL to the User<a class="headerlink" href="#populate-the-context-and-present-the-custom-url-to-the-user" title="Permanent link">&para;</a></h2>
 <p>During task execution, when a dialog reaches the service node, the platform populates the customer authentication URL in the context and presents a message to the end-user requesting authentication credentials. Then, the platform waits for the external authentication service to send a response on the webhook.</p>
 <h2 id="receive-callback-after-authentication">Receive Callback after Authentication<a class="headerlink" href="#receive-callback-after-authentication" title="Permanent link">&para;</a></h2>
-<p>The external system, on its part, performs a callback to the platform using the webhook URL, which is populated in the Context Object. Once all this is complete, the dialog task progresses based on the transitions defined for the node.</p>
+<p>The external system, on its part, performs a callback to the platform using the webhook URL, which is populated in the Context Object. <strong>The platform expects a POST request during the callback</strong>.</p>
+<p>Once all this is complete, the dialog task progresses based on the transitions defined for the node.</p>
 <h2 id="configure-the-custom-authentication-service">Configure the Custom Authentication Service<a class="headerlink" href="#configure-the-custom-authentication-service" title="Permanent link">&para;</a></h2>
 <p>To configure the custom authentication service, please follow the steps below:</p>
 <ol>
