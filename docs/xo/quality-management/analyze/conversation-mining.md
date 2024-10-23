@@ -2,27 +2,45 @@
 
 The Conversation Mining feature allows you to drill down to interactions that are of interest to you or interactions that have the most potential to improve enabling you to eliminate the guesswork from manual evaluations and focus your manual efforts solely on critical interactions.
 
-You can access Conversation Mining by going to **Contact Center AI** > **Quality AI** > **Analyze** > **Conversation Mining**.  
-<img src="../images/conversation-mining-interaction-default.png" alt="Bookmarks" title="Bookmarks" style="border: 1px solid gray; zoom:80%;">
+You can access Conversation Mining by navigating to **Contact Center AI** > **Quality Management** > **Analyze** > **Conversation Mining**.  
+
+<img src="../conversation-mining/images/conversation-mining-interaction-default.png" alt="Default Page" title="Default Page" style="border: 1px solid gray; zoom:80%;">
 
 The Conversation Mining has the following two sections:
 
 * Interactions
 * Audit Allocations
 
+
+    !!! Note
+
+        Interactions are populated a few seconds after call termination. 
+
 ## Interactions
 
-You can see scored interactions or evaluation information at a glance from Conversation Mining. Even you can apply filters to focus on specific interactions or with high potential for improvement, and save the filters for auditing purposes. Interactions visible on the conversation mining screen are limited to the user's assigned queues.  
+Users can see scored interactions or evaluation information at a glance from Conversation Mining. Users can apply filters to focus on specific interactions or with high potential for improvement and save the filters for auditing purposes. Interactions visible on the conversation mining screen are limited to the user's assigned queues.
+
+The Conversation Mining interaction listing option enables users to quickly identify specific interactions of interest, eliminating the need to sift through numerous individual interaction records. This provides valuable insights for informed decision-making, enhances operational efficiency, and reduces the time spent on manual reviews through targeted analysis, ultimately improving oversight quality. Additionally, users can customize the interaction listing page by adding extra metadata and columns.
+  
 <img src="../images/conversation-mining-interaction.png" alt="Interactions" title="Interactions" style="border: 1px solid gray; zoom:80%;">
 
 The Conversation Mining Interactions has the following key Items:
 
-* **Agents**: Shows the agent who last participated in the interaction and has terminated this call.
+* **Agents**: Shows the agent who last participated in the interaction and has terminated this call. By hovering over the agents, the users can view the tagged topics and tagged intent.
+
+  * **Topic Tags**: Each interaction shows all classified topics as tags. When topic filters are applied, relevant tags are highlighted in a different color. If filters are changed or cleared, highlighted tags are updated accordingly based on the new selections made. 
+
+  <img src="../conversation-mining/images/conversation-interaction-topic-tags.png" alt="Topic Tags" title="Topic Tags" style="border: 1px solid gray; zoom:80%;">
+
+  * **Intent Tags**: Each interaction shows classified intents as tags.If filters are changed or cleared, the highlighted tags will update based on the new selections.
+
+  <img src="../conversation-mining/images/conversation-mining-interaction-intent-tags.png" alt="Interactions" title="Interactions" style="border: 1px solid gray; zoom:80%;">
+
 * **Actions**: Allows users to assign the interaction to the desired bookmark for later reference.
 
     !!! Note
 
-        Bookmarks have to be created first from settings. For more information, see [Settings](../configure/settings.md).
+        Bookmarks have to be created first from settings. For more information, see [Settings](./con) for more information. 
 
 * **Queues**: Shows the queue in which the interaction was terminated.
 
