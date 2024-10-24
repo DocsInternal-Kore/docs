@@ -261,9 +261,9 @@ The sentiment monitor graph shows the distribution of customer sentiment across 
 
 The sentiment monitor graph is a bar chart where each bar represents an intent or topic. Each bar represents the associated sentiment across all interactions with that intent, categorizing the sentiment weightage as follows:
 
-* Positive sentiment – Green color
-* Neutral sentiment – Yellow color
-* Negative sentiment – Red color  
+* **Positive Sentiment**: Green color
+* **Neutral Sentiment**: Yellow color
+* **Negative Sentiment**: Red color  
 
 <img src="../conversation-intelligence/images/sentiment-monitor.png" alt="Sentiment Monitor" title="Sentiment Monitor" style="border: 1px solid gray; zoom:80%;">
 

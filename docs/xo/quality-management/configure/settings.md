@@ -59,25 +59,25 @@ Steps to enable the Script Adherence Configuration:
 
 2. Define the scripts for the following attributes to check the agent adherence. 
 
-* **Attribute**: Shows script steps like Greeting, Branding, and so on, where custom messages can be added.
+    * **Attribute**: Shows script steps like Greeting, Branding, and so on, where custom messages can be added.
 
-* **Message**: Shows the custom messages that are already configured.
+    * **Message**: Shows the custom messages that are already configured.
 
-* **Action**: Enables you to enter messages for the agent by toggling the action button.
+    * **Action**: Enables you to enter messages for the agent by toggling the action button.
 
-    By default, the action button is disabled but the user can enter the custom message for any of the desired attributes.
+        By default, the action button is disabled but the user can enter the custom message for any of the desired attributes.
     
-    Upon enabling, the system checks for adherence to the configured messages of the script adherence section of conversation intelligence instead of the default messages.
+        Upon enabling, the system checks for adherence to the configured messages of the script adherence section of conversation intelligence instead of the default messages.
 
-* **Message**: Allows you to define specified attribute messages for the agent or user. You can add more than one message for the user for the same attribute and delete the defined messages.
+    * **Message**: Allows you to define specified attribute messages for the agent or user. You can add more than one message for the user for the same attribute and delete the defined messages.
 
-* **Save**: Allows you to save the defined messages.
+    * **Save**: Allows you to save the defined messages.
 
-At the agent account level, the agent can only check the following options defined by the supervisor or app owner or administrator in the Settings.
+        At the agent account level, the agent can only check the following options defined by the supervisor or app owner or administrator in the Settings.
 
-* In the Conversation Intelligence Dashboard, the agent can check the post-interaction analytics, such as brand tags, greetings, questions, emotions, interactions, and so on. 
+    * In the Conversation Intelligence Dashboard, the agent can check the post-interaction analytics, such as brand tags, greetings, questions, emotions, interactions, and so on. 
 
-* In the Script adherence configuration, the agent can visualize the specific messages or scripts that are defined by the supervisor or app owner or administrator.  
+    * In the Script adherence configuration, the agent can visualize the specific messages or scripts that are defined by the supervisor or app owner or administrator.  
 
 ## Quality Management
 
