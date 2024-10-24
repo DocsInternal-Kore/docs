@@ -12,9 +12,9 @@ The Conversation Mining has the following two sections:
 * Audit Allocations
 
 
-    !!! Note
+!!! Note
 
-        Interactions are populated a few seconds after call termination. 
+    Interactions are populated a few seconds after call termination. 
 
 ## Interactions
 
@@ -103,9 +103,9 @@ This provides an operational view of areas of interest where there is greater po
 
     !!! Note
 
-        The user can filter the** Agent,** based on the interactions that are part of the queues and the user is part of.
+        The user can filter the **Agents**, based on the interactions that are part of the queues and the user is part of.
 
-5. From the **Agents**list, add the agent name based on the queue selected.
+5. From the **Agents** list, add the agent name based on the queue selected.
 
     !!! Note
 
@@ -212,7 +212,7 @@ Once you Save Filter, you will get the following filters options to:
 
 This helps users to create and assign allocations to auditors for manual quality scoring.
 
-The users can access the Audit Allocation by going to **Contact Center AI** > **Quality AI** > **Analyze** > **Conversation Mining** > **Audit Allocation**.  
+The users can access the Audit Allocation by going to **Contact Center AI** > **Quality Management** > **Analyze** > **Conversation Mining** > **Audit Allocation**.  
 <img src="../images/conversation-mining-new-audit-allocations.png" alt="New Audit Allocations" title="New Audit Allocations" style="border: 1px solid gray; zoom:80%;">
 
 The Audit Allocations has the following options:
