@@ -46,9 +46,9 @@ This document provides detailed instructions on the integration process of the K
    <td>
 <ul>
 
-<li>If it is legacy Agent AI, URL is <a href="https://agentassist.kore.ai">https://agentassist.kore.ai{:target="_blank"}</a></li>
+<li>If it is legacy Agent AI, URL is <a href="https://agentassist.kore.ai">https://agentassist.kore.ai</a></li>
 
-<li>If it is UXO, URL is <a href="https://platform.kore.ai">https://platform.kore.ai{:target="_blank"}</a></li>
+<li>If it is UXO, URL is <a href="https://platform.kore.ai">https://platform.kore.ai</a></li>
 
 <li>If it is on-prem, the URL is the origin where your Agent AI is hosted.</li>
 </ul>
@@ -63,7 +63,7 @@ This document provides detailed instructions on the integration process of the K
 <p>
 For example, https://agentassist.kore.ai/koreagentassist-sdk-v3/UI/agentassist-iframe.html
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">{:target="_blank"}Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">Agent AI</a></strong> configuration portal.
    </td>
   </tr>
   <tr>
@@ -77,7 +77,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>A unique identifier assigned to a bot.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">{:target="_blank"}Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">Agent AI</a></strong> configuration portal.
    </td>
   </tr>
   <tr>
@@ -91,7 +91,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>An identifier provided to a client application.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">{:target="_blank"}Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong><a>[Agent AI](https://agentassist.kore.ai){:target="_blank"}</a></strong> configuration portal.
    </td>
   </tr>
   <tr>
@@ -171,14 +171,14 @@ For on-prem, refer to corresponding host<strong> </strong>
 
 This section explains the configuration steps needed to integrate Kore Agent AI with NICE MAX Desktop.
 
-* [NICE CX Integration Hubs, Add Agent Assist Hub](#step-1-nice-cx-integration-hubs--add-agent-assist-hub)
-* [NICE CX Studio, Import Chat and Voice Scripts and Configure Parameters](#step-2-nice-cx-studio--import-chat--voice-scripts-and-configure-parameters)
-* [NICE CX Setup, Attach Point of Contact with Chat/Voice Script](#step-3-nice-cx-setup--attach-point-of-contact-with-chatvoice-script)
+* [NICE CX Integration Hubs, Add Agent Assist Hub](#nice-cx-integration-hubs--add-agent-assist-hub)
+* [NICE CX Studio, Import Chat and Voice Scripts and Configure Parameters](#nice-cx-studio--import-chat--voice-scripts-and-configure-parameters)
+* [NICE CX Setup, Attach Point of Contact with Chat/Voice Script](#nice-cx-setup--attach-point-of-contact-with-chatvoice-script)
 * [Access Data in Agent AI Bot](#access-custom-data-in-agent-ai-bot)
 * [Chat Simulation](#chat-simulation)
 * [Voice Simulation](#voice-simulation)
 
-## **Step 1: Nice CX Integration Hubs > Add Agent Assist Hub**
+## **Nice CX Integration Hubs > Add Agent Assist Hub**
 
 1. Sign in to your **NICE** account with the user name and password provided by the NICE customer support.
 2. Click the **Applications Launcher** button.  
@@ -219,7 +219,7 @@ This section explains the configuration steps needed to integrate Kore Agent AI 
 
 2. Click **Create**.
 
-## **Step 2: NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters**
+## **NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters**
 
 1. Download the [script for chat](https://bitbucket.org/koreteam1/integration_sharedresources/src/main/nicecx/kore.ai%20-%20nice_agentassistchat.xml) / [script for voice](https://bitbucket.org/koreteam1/integration_sharedresources/src/main/nicecx/kore.ai%20-%20nice_agentassistvoice.xml) from the **Kore.ai Nice integration** repository.
 2. Open the **NICE CX Studio** app from your desktop.
@@ -247,8 +247,8 @@ Include your data in the customdata object (one key-value pair per line). For ex
         7. NICE CX API URL
         8. NICE CX Base Region URL
 
-    !!! note
-        Refer to [https://help.nice-incontact.com/content/admin/security/manageaccesskeys.htm](https://help.nice-incontact.com/content/admin/security/manageaccesskeys.htm){:target="_blank"} to create NICE CX API Access Key and NICE CX API Access Key Secret. 
+        !!! note
+            Refer to [https://help.nice-incontact.com/content/admin/security/manageaccesskeys.htm](https://help.nice-incontact.com/content/admin/security/manageaccesskeys.htm){:target="_blank"} to create NICE CX API Access Key and NICE CX API Access Key Secret. 
 
 7. Double-click the **Agent Assist** tile.  
 <img src="../nice-max-images/agent-assist-tile-11.png" alt="agent-assist-tile" title="agent-assist-tile" style="border: 1px solid gray; zoom:80%;">
@@ -263,7 +263,7 @@ Include your data in the customdata object (one key-value pair per line). For ex
 !!! note
     Do not click the “X” button to close the window as this will not save the changes. 
 
-## **Step 3: NICE CX Setup > Attach Point of Contact with Chat/Voice Script**
+## **NICE CX Setup > Attach Point of Contact with Chat/Voice Script**
 
 1. Go to the **NICE** home page.
 2. Click the **Application Launcher** button.
@@ -325,7 +325,7 @@ In the **Dialog Task**, open a **Message** node**,** and click **MANAGE RESPONSE
 2. Click **Application Launcher** > **MAX**.  
 <img src="../nice-max-images/voice-simulation-23.png" alt="voice-simulation" title="voice-simulation" style="border: 1px solid gray; zoom:80%;">
 
-3. Select **Integrated Softphone,** and click **Connect**.
+3. Select **Integrated Softphone**, and click **Connect**.
 4. Change the status to **Available**.  
 <img src="../nice-max-images/voice-available-24.png" alt="voice-available" title="voice-available" style="border: 1px solid gray; zoom:80%;">
 
