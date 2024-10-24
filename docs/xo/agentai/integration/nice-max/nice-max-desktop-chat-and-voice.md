@@ -91,7 +91,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>An identifier provided to a client application.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a>[Agent AI](https://agentassist.kore.ai){:target="_blank"}</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong>[Agent AI](https://agentassist.kore.ai){:target="_blank"}</strong> configuration portal.
    </td>
   </tr>
   <tr>
@@ -171,9 +171,9 @@ For on-prem, refer to corresponding host<strong> </strong>
 
 This section explains the configuration steps needed to integrate Kore Agent AI with NICE MAX Desktop.
 
-* [NICE CX Integration Hubs, Add Agent Assist Hub](#nice-cx-integration-hubs--add-agent-assist-hub)
-* [NICE CX Studio, Import Chat and Voice Scripts and Configure Parameters](#nice-cx-studio--import-chat--voice-scripts-and-configure-parameters)
-* [NICE CX Setup, Attach Point of Contact with Chat/Voice Script](#nice-cx-setup--attach-point-of-contact-with-chatvoice-script)
+* [NICE CX Integration Hubs, Add Agent Assist Hub](#nice-cx-integration-hubs-add-agent-assist-hub)
+* [NICE CX Studio, Import Chat and Voice Scripts and Configure Parameters](#nice-cx-studio-import-chat-voice-scripts-and-configure-parameters)
+* [NICE CX Setup, Attach Point of Contact with Chat/Voice Script](#nice-cx-setup-attach-point-of-contact-with-chatvoice-script)
 * [Access Data in Agent AI Bot](#access-custom-data-in-agent-ai-bot)
 * [Chat Simulation](#chat-simulation)
 * [Voice Simulation](#voice-simulation)
@@ -204,7 +204,7 @@ This section explains the configuration steps needed to integrate Kore Agent AI 
     <img src="../nice-max-images/configuration-5.png" alt="configuration" title="configuration" style="border: 1px solid gray; zoom:80%;">
 
     6. Audio Relay Endpoint: {[Kore Voice Gateway(KVG)](#bookmark=id.9f7bsfi49d8y)}/audiosocket/nice?sipuri=&lt;Bot SIP URI>&lt;DNS>&token=&lt;Token>&botId=&lt;Bot ID>&accountId=&lt;Account ID>&agentassist=true
-        * Bot SIP URI : **Channels > Voice** section of the **[Agent AI](https://agentassist.kore.ai)** configuration portal.  
+        * Bot SIP URI : **Channels > Voice** section of the **[Agent AI](https://agentassist.kore.ai){:target="_blank"}** configuration portal.  
         <img src="../nice-max-images/sip-id-6.png" alt="sip-id" title="sip-id" style="border: 1px solid gray; zoom:80%;">
 
         * Bot ID and Account ID: **Channels** > **Chat** section of the **[Agent AI](https://agentassist.kore.ai){:target="_blank"}** configuration portal.  
@@ -238,15 +238,16 @@ This section explains the configuration steps needed to integrate Kore Agent AI 
         4. Agent AI Widget URL
     2. Custom Data: The “customdata” object in the script can be used to pass information to the Agent AI Bot. During runtime, this customdata will be accessible in the UserContext of the bot. Refer to [Access Custom Data in Agent AI Bot](#access-custom-data-in-agent-ai-bot) for instructions on how to access customdata in the bot. 
  
-Include your data in the customdata object (one key-value pair per line). For example:
-1. `customdata.agentName="Agent"`
-2. `customdata.agentID="1234"`
-    3. NICE CX Credentials: Base region URL is the Host URL of the login page. If the URL for ACD is **https://home-abc.nice-incontact.com**, then the API URL would be **https://api-abc.nice-incontact.com**. Also, it is necessary to use the URLs without the trailing slash.
-        5. NICE CX API Access Key
-        6. NICE CX API Access Key Secret
-        7. NICE CX API URL
-        8. NICE CX Base Region URL
+    Include your data in the customdata object (one key-value pair per line). For example: 
+        1. `customdata.agentName="Agent"`
 
+        2. `customdata.agentID="1234"`
+
+    3. NICE CX Credentials: Base region URL is the Host URL of the login page. If the URL for ACD is **https://home-abc.nice-incontact.com**, then the API URL would be **https://api-abc.nice-incontact.com**. Also, it is necessary to use the URLs without the trailing slash.
+        1. NICE CX API Access Key
+        2. NICE CX API Access Key Secret
+        3. NICE CX API URL
+        4. NICE CX Base Region URL
         !!! note
             Refer to [https://help.nice-incontact.com/content/admin/security/manageaccesskeys.htm](https://help.nice-incontact.com/content/admin/security/manageaccesskeys.htm){:target="_blank"} to create NICE CX API Access Key and NICE CX API Access Key Secret. 
 
@@ -289,7 +290,7 @@ Custom Data can be accessed as
 
 **Dialog Tasks:**
 
-In the **Dialog Task**, open a **Message** node**,** and click **MANAGE RESPONSES**.  
+In the **Dialog Task**, open a **Message** node, and click **MANAGE RESPONSES**.  
 <img src="../nice-max-images/manage-responses-15.png" alt="manage-responses" title="manage-responses" style="border: 1px solid gray; zoom:80%;">  
 
 <img src="../nice-max-images/plain-responses-16.png" alt="plain-responses" title="plain-responses" style="border: 1px solid gray; zoom:80%;">
