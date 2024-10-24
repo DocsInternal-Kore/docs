@@ -179,25 +179,27 @@ Note that the customer churn is calculated once per interaction. Customer churn 
 
 #### Filter by Behavior
 
-**Empathy Score**
+**Empathy Score** 
+
 This measures the level of understanding and compassion shown by the agent towards the customer situation. Provides the extent of empathy like frustration or displeasure that a customer has shown (negative sentiment). A higher score indicates a more empathetic interaction.  
-<img src="./conversation-mining/images/filter-by-behaviour-empathy.png" alt="Empathy Score" title="Empathy Score" style="border: 1px solid gray; zoom:80%;">
+<img src="../conversation-mining/images/filter-by-behaviour-empathy.png" alt="Empathy Score" title="Empathy Score" style="border: 1px solid gray; zoom:80%;">
 
 **Crutch Word Score**
+
 This indicates the extent of filler words (for example, umm, uh, and so on) which is used by the agent. Higher score indicates the higher usage of crutch words.  
 <img src="../conversation-mining/images/filter-by-behaviour-crutch-word.png" alt="Crutch Word Score" title="Crutch Word Score" style="border: 1px solid gray; zoom:80%;">
 
 **Agent Playbook Adherence**
+
 This indicates the adherence percentage to the Agent AI playbook assigned to that interaction.  
 <img src="../conversation-mining/images/filter-by-behaviour-agent-playbook.png" alt="Agent Playbook Adherence" title="Agent Playbook Adherence" style="border: 1px solid gray; zoom:80%;">
 
 **Kore Evaluation Score**
+
 This indicates the automated QA score associated with an interaction based on the evaluation form assigned to an interactions’s queue.  
 <img src="../conversation-mining/images/filter-by-behaviour-agent-kore-evaluation.png" alt="Kore Evaluation Score" title="Kore Evaluation Score" style="border: 1px solid gray; zoom:80%;">
 
 Once you Save Filter, you will get the following filters options to:  
-<img src="../conversation-mining/images/conversation-interaction-saved-filters.png" alt="Saved Filters" title="Saved Filters" style="border: 1px solid gray; zoom:80%;">
-
 * **Copy**
 
     Allows the user to create another saved copy of the filter.
@@ -213,6 +215,8 @@ Once you Save Filter, you will get the following filters options to:
 * **Delete Filter**
 
     Allows the user to delete the saved filter.
+
+    <img src="../conversation-mining/images/conversation-interaction-saved-filters.png" alt="Saved Filters" title="Saved Filters" style="border: 1px solid gray; zoom:80%;">
 
 ## Audit Allocations
 
