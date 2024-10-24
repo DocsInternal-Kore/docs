@@ -14974,21 +14974,20 @@
 </tbody>
 </table>
 <h2 id="sample-requests">Sample Requests<a class="headerlink" href="#sample-requests" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl --location --request POST &#39;https://staging-smartassist.kore.ai/agentassist/api/public/analytics/account/65269fe0dd9c622245c1xxxx/v2/calldetails?offset=0&amp;limit=100&#39; \
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>--header &#39;authority: staging-smartassist.kore.ai&#39; \
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>--header &#39;accept: application/json, text/plain, /&#39; \
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>--header &#39;accept-language: en-US,en;q=0.9&#39; \
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>--header &#39;accountid: 65269fe0dd9c622245c1xxxx&#39; \
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>--header &#39;app-language: en&#39; \
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>--header &#39;content-type: application/json;charset=UTF-8&#39; \
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>--header &#39;referer:
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>SmartAssist &#39; \
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>--header &#39;auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNzLTUxZWE1ZGYyLTY3NDItNTlmNi1iNjg1LWUyNTJmNDE5ZjBlMyJ9.DAPhx_h32KPSoylUfGWpjQS2tITBcBxNYAEwPJWxxxx&#39; \
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>--data-raw &#39;{
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>&quot;startDate&quot;:&quot;2024-08-24&quot;,
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>&quot;endDate&quot;:&quot;2024-08-24&quot;,
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>&quot;timeZoneOffset&quot;:-330
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>}&#39;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl --location &#39;https://{{host}}/agentassist/api/public/analytics/account/66050d249f946671f64axxxx/v2/calldetails?offset=0&#39; \
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>--header &#39;accept: application/json&#39; \
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>--header &#39;accept-language: en-US,en;q=0.9&#39; \
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>--header &#39;accountId: 66050d249f946671f64axxxx&#39; \
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>--header &#39;app-language: en&#39; \
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>--header &#39;content-type: application/json;charset=UTF-8&#39; \
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>--header &#39;referer: smartassist&#39; \
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>--header &#39;auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiYXBwSWQiOiJjcy00MDE4OTQ3OS0yMWUwLTU0MjQtOTk4Yy0wN2RjZTYyMjVjY2UifQ.WlqMCWd5lUQ77b-aUO2R45C5cc1uLWOVoAC6_9oxxxx&#39; \
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>--header &#39;iId: st-e19dd469-90f5-5655-b0b2-858de901xxxx&#39; \
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>--data &#39;{
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>&quot;startDate&quot;: &quot;2024-09-24 07:20:15&quot;,
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>&quot;endDate&quot;: &quot;2024-09-27 18:20:15&quot;,
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>&quot;timeZoneOffset&quot;: 0
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>}&#39;
 </span></code></pre></div>
 <h2 id="body-parameters">Body Parameters<a class="headerlink" href="#body-parameters" title="Permanent link">&para;</a></h2>
 <table>
@@ -15060,125 +15059,158 @@
 <td>The list of queue ids in the instance bots.</td>
 <td>array[string], optional</td>
 </tr>
-<tr>
-<td>bots</td>
-<td>The list of instance bot ids in the account.</td>
-<td>array[string], optional</td>
-</tr>
 </tbody>
 </table>
 <h2 id="sample-response">Sample Response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    &quot;numResults&quot;: 13,
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    &quot;numResults&quot;: 3,
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    &quot;data&quot;: [
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        {
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>            &quot;sessionId&quot;: &quot;66c97ba342aad0ced15fxxxx&quot;,
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>            &quot;channel&quot;: &quot;AgentAssistV2&quot;,
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            &quot;sessionStartTime&quot;: &quot;2024-08-24T11:50:19&quot;,
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            &quot;sessionEndTime&quot;: &quot;2024-08-24T11:50:19&quot;,
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            &quot;botId&quot;: &quot;st-24ccdea9-de4e-5139-923f-883c53ffxxxx&quot;,
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>            &quot;userId&quot;: &quot;u-1a94ad5b-741f-5f58-bf94-74065b30xxxx&quot;,
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            &quot;channelSpecificUserId&quot;: &quot;65269fe0dd9c622245c1xxxx/agentassist/c-221bca2-cbe8-4996-8216-187e1a69xxxx&quot;,
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            &quot;orgId&quot;: &quot;o-2d494e9d-b8f6-55d2-844e-a5bc4ca3xxxx&quot;,
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            &quot;finalStatus&quot;: &quot;BotResolved&quot;
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        },
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        {
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            &quot;conversationId&quot;: &quot;c-4c93422-e5d3-4e99-9d3c-e1e30238xxxx&quot;,
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>            &quot;sessionId&quot;: &quot;66c9a55754638e543c37xxxx&quot;,
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            &quot;channel&quot;: &quot;voice&quot;,
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>            &quot;isVoicemail&quot;: &quot;NO&quot;,
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>            &quot;Direction&quot;: &quot;Inbound&quot;,
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>            &quot;finalStatus&quot;: &quot;CLOSED&quot;,
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>            &quot;botId&quot;: &quot;st-24ccdea9-de4e-5139-923f-883c53ffxxxx&quot;,
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>            &quot;dispositions&quot;: [
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>                &quot;Resolved&quot;
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>            ],
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>            &quot;dispositionRemarks&quot;: [
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>                &quot;The customer had an issue with their internet service. They were unable to connect to the internet and were experiencing slow speeds. The customer also mentioned that they had been experiencing this issue for a while. The customer was frustrated with the situation and expressed their dissatisfaction with the service. The bot acknowledged the issue and informed the customer that an agent would be required to assist them further. The conversation ended with the customer being asked to hold while an available agent was found.&quot;
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>            ],
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>            &quot;metaInfo&quot;: {
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>                &quot;caller&quot;: &quot;+18448735673&quot;,
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>                &quot;callee&quot;: &quot;+16095344861&quot;,
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>                &quot;callerHost&quot;: &quot;50.19.121.248&quot;,
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>                &quot;userId&quot;: &quot;u-df4d1529-ae2d-58e2-8759-f748e232xxxx&quot;,
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>                &quot;dialedNumber&quot;: &quot;+16095344861&quot;,
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>                &quot;agentTransferConfig&quot;: {
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>                    &quot;skillsIds&quot;: [],
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>                    &quot;overrideAgents&quot;: false,
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>                    &quot;overrideValues&quot;: [],
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>                    &quot;assistEvents&quot;: {
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>                        &quot;startEvent&quot;: {
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>                            &quot;isEnabled&quot;: false
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>                        }
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>                    },
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>                    &quot;lastIntentName&quot;: &quot;ConnectToAgent&quot;,
-</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>                    &quot;automationBotId&quot;: &quot;st-06e05f6e-5fd0-58fa-8e16-7e7c33acxxxx&quot;,
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>                    &quot;accountId&quot;: &quot;65269fe0dd9c622245c1xxxx&quot;
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>                },
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>                &quot;workinghours&quot;: {
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>                    &quot;workdays&quot;: &quot;mon,tue,wed,thu,fri&quot;,
-</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>                    &quot;workstart&quot;: &quot;8:00 AM&quot;,
-</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>                    &quot;workend&quot;: &quot;5:00 PM&quot;
-</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>                },
-</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>                &quot;profImage&quot;: &quot;no-avatar&quot;,
-</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>                &quot;profColour&quot;: &quot;#00ff7f&quot;,
-</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>                &quot;jTitle&quot;: &quot;&quot;,
-</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>                &quot;dept&quot;: &quot;&quot;,
-</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>                &quot;activationStatus&quot;: &quot;active&quot;,
-</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>                &quot;firstName&quot;: &quot;&quot;,
-</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>                &quot;lastName&quot;: &quot;&quot;,
-</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>                &quot;orgId&quot;: &quot;o-33749baa-f662-5ae8-b506-4b3bf787xxxx&quot;,
-</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>                &quot;_id&quot;: &quot;u-df4d1529-ae2d-58e2-8759-f748e232xxxx&quot;,
-</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>                &quot;identities&quot;: [
-</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>                    {
-</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>                        &quot;val&quot;: &quot;cs-ab30569a-ee38-5408-a0ea-43398a16xxxx/259034b7-0d08-487d-a451-aaf5de2dxxxx&quot;,
-</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>                        &quot;type&quot;: &quot;mapped&quot;
-</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>                    },
-</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>                    {
-</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>                        &quot;val&quot;: &quot;65269fe0dd9c622245c1xxxx/korevg/259034b7-0d08-487d-a451-aaf5de2dxxxx&quot;,
-</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>                        &quot;type&quot;: &quot;mapped&quot;
-</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>                    }
-</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>                ]
-</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>            },
-</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>            &quot;sessionStartTime&quot;: &quot;2024-08-24T14:48:15&quot;,
-</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>            &quot;sessionEndTime&quot;: &quot;2024-08-24T14:50:48&quot;,
-</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>            &quot;channelSpecificUserId&quot;: &quot;65269fe0dd9c622245c1xxxx/korevg/259034b7-0d08-487d-a451-aaf5de2dxxxx&quot;,
-</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>            &quot;userId&quot;: &quot;u-df4d1529-ae2d-58e2-8759-f748e232xxxx&quot;,
-</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>            &quot;destinations&quot;: [
-</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>                {
-</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>                    &quot;destinationType&quot;: &quot;QueueEntry&quot;,
-</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>                    &quot;queueId&quot;: &quot;qu-77506d0-c529-4a71-a007-cc718742xxxx&quot;,
-</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>                    &quot;queueName&quot;: &quot;Default Queue&quot;,
-</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>                    &quot;EnterTime&quot;: &quot;2024-08-24T14:48:16&quot;,
-</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>                    &quot;respondingAgent&quot;: {
-</span><span id="__span-1-84"><a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>                        &quot;agentId&quot;: &quot;u-f2f39007-4c2c-54dc-9233-86a63c82xxxx&quot;,
-</span><span id="__span-1-85"><a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>                        &quot;agentNotes&quot;: [],
-</span><span id="__span-1-86"><a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>                        &quot;destinationType&quot;: &quot;AgentSegment&quot;,
-</span><span id="__span-1-87"><a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>                        &quot;status&quot;: &quot;Answered&quot;,
-</span><span id="__span-1-88"><a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>                        &quot;firstResponseTime&quot;: &quot;2024-08-24T14:48:33&quot;,
-</span><span id="__span-1-89"><a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>                        &quot;firstResponseDuration&quot;: 0,
-</span><span id="__span-1-90"><a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>                        &quot;interactionEndTime&quot;: &quot;2024-08-24T14:48:53&quot;,
-</span><span id="__span-1-91"><a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>                        &quot;interactionDuration&quot;: 20,
-</span><span id="__span-1-92"><a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a>                        &quot;ConsultingAgents&quot;: [],
-</span><span id="__span-1-93"><a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>                        &quot;JoinedUsers&quot;: [
-</span><span id="__span-1-94"><a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a>                            {
-</span><span id="__span-1-95"><a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a>                                &quot;agentId&quot;: &quot;u-85041b83-16bd-55ca-a95d-24968945xxxx&quot;,
-</span><span id="__span-1-96"><a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a>                                &quot;email&quot;: &quot;agent.user1@getnada.com&quot;,
-</span><span id="__span-1-97"><a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>                                &quot;name&quot;: &quot;detective agent1&quot;,
-</span><span id="__span-1-98"><a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a>                                &quot;joinedAt&quot;: &quot;2024-08-24T14:48:47&quot;,
-</span><span id="__span-1-99"><a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a>                                &quot;end&quot;: &quot;2024-08-24T14:48:56&quot;
-</span><span id="__span-1-100"><a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a>                            }
-</span><span id="__span-1-101"><a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a>                        ],
-</span><span id="__span-1-102"><a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a>                        &quot;email&quot;: &quot;newaccount@mailinator.com&quot;,
-</span><span id="__span-1-103"><a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a>                        &quot;name&quot;: &quot;new account&quot;,
-</span><span id="__span-1-104"><a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a>                        &quot;acceptedTime&quot;: &quot;2024-08-24T14:48:33&quot;,
-</span><span id="__span-1-105"><a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a>                        &quot;assignedAt&quot;: &quot;2024-08-24T14:48:30&quot;
-</span><span id="__span-1-106"><a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a>                    }
-</span><span id="__span-1-107"><a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a>                }
-</span><span id="__span-1-108"><a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a>            ]
-</span><span id="__span-1-109"><a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a>        },
-</span><span id="__span-1-110"><a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a>    ] 
-</span><span id="__span-1-111"><a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a>}
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>            &quot;sessionId&quot;: &quot;66f6b83b9147ddd71d70xxxx&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>            &quot;channel&quot;: &quot;agentassist&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            &quot;sessionStartTime&quot;: &quot;2024-09-27T13:50:51&quot;,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            &quot;sessionEndTime&quot;: &quot;2024-09-27T13:50:51&quot;,
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            &quot;botId&quot;: &quot;st-e19dd469-90f5-5655-b0b2-858de901xxxx&quot;,
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>            &quot;userId&quot;: &quot;u-2ee7ff98-eef3-5cf7-8f5c-379970c9xxxx&quot;,
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            &quot;channelSpecificUserId&quot;: &quot;66050d249f946671f64axxxx/agentassist/c-c9d0a98-945b-4b3e-968a-48426134xxxx&quot;,
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            &quot;orgId&quot;: &quot;o-9569140a-d895-5951-99f4-33fb066bxxxx&quot;,
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            &quot;smartStatus&quot;: &quot;CLOSED AT BOT&quot;,
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>            &quot;reason&quot;: &quot;&quot;,
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>            &quot;finalStatus&quot;: &quot;BotResolved&quot;
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        },
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        {
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            &quot;conversationId&quot;: &quot;c-c9d0a98-945b-4b3e-968a-48426134xxxx&quot;,
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>            &quot;sessionId&quot;: &quot;66f6b828873ee3868e8dxxxx&quot;,
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>            &quot;channel&quot;: &quot;campaign&quot;,
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>            &quot;isVoicemail&quot;: &quot;NO&quot;,
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>            &quot;Direction&quot;: &quot;Outbound&quot;,
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>            &quot;finalStatus&quot;: &quot;USER ABANDONED&quot;,
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>            &quot;smartStatus&quot;: &quot;ABANDONED WITH AGENT&quot;,
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>            &quot;Reason&quot;: &quot;Default Queue:John Steve&quot;,
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>            &quot;botId&quot;: &quot;st-e19dd469-90f5-5655-b0b2-858de901xxxx&quot;,
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>            &quot;dispositions&quot;: [
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>                &quot;Requires Supervisor Attention&quot;
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>            ],
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>            &quot;dispositionRemarks&quot;: [
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>                &quot;The customer initiated a conversation with the agent, who responded with greetings. The conversation was brief and did not involve any specific issues or requests.&quot;
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>            ],
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>            &quot;metaInfo&quot;: {
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>                &quot;userId&quot;: &quot;u-79edf186-d163-5a5e-bd4f-391d0f4dxxxx&quot;,
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>                &quot;firstName&quot;: &quot;&quot;,
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>                &quot;lastName&quot;: &quot;&quot;,
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>                &quot;caller&quot;: &quot;+1234567890&quot;,
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>                &quot;callee&quot;: &quot;+919876543210&quot;,
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>                &quot;countryCode&quot;: &quot;91&quot;,
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>                &quot;dialedNumber&quot;: &quot;+1234567890&quot;,
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>                &quot;endUserNumber&quot;: &quot;+919876543210&quot;
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>            },
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>            &quot;sessionStartTime&quot;: &quot;2024-09-27T13:50:32&quot;,
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>            &quot;sessionEndTime&quot;: &quot;2024-09-27T13:51:06&quot;,
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>            &quot;userId&quot;: &quot;u-79edf186-d163-5a5e-bd4f-391d0f4dxxxx&quot;,
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>            &quot;destinations&quot;: [
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>                {
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>                    &quot;destinationType&quot;: &quot;QueueEntry&quot;,
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>                    &quot;queueId&quot;: &quot;qu-18e471e-a77e-4a93-826e-39ae946axxxx&quot;,
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>                    &quot;respondingAgent&quot;: {
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>                        &quot;agentId&quot;: &quot;u-fba6a2f9-26fb-5892-9216-bdea3704xxxx&quot;,
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>                        &quot;agentNotes&quot;: [
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>                            &quot;The customer initiated a conversation with the agent, who responded with greetings. The conversation was brief and did not involve any specific issues or requests.&quot;
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>                        ],
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>                        &quot;destinationType&quot;: &quot;AgentSegment&quot;,
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>                        &quot;status&quot;: &quot;Answered&quot;,
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>                        &quot;interactionEndTime&quot;: &quot;2024-09-27T13:51:06&quot;,
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>                        &quot;interactionDuration&quot;: 34,
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>                        &quot;holdDuration&quot;: 15,
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>                        &quot;afterCallWorkDuration&quot;: 4,
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>                        &quot;afterCallWorkEndTime&quot;: &quot;2024-09-27T13:51:10&quot;,
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>                        &quot;ConsultingAgents&quot;: [],
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>                        &quot;JoinedUsers&quot;: [],
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>                        &quot;email&quot;: &quot;mainaccount_staginguxo@mailinator.com&quot;,
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>                        &quot;name&quot;: &quot;John Steve&quot;,
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>                        &quot;acceptedTime&quot;: &quot;2024-09-27T13:50:32&quot;
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>                    }
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>                }
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>            ]
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>        },
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>        {
+</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>            &quot;conversationId&quot;: &quot;c-92a3ca7-8472-4e59-b927-8995e756xxxx&quot;,
+</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>            &quot;sessionId&quot;: &quot;66f6b3fe3fd2da9b05f7xxxx&quot;,
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>            &quot;channel&quot;: &quot;rtm&quot;,
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>            &quot;isVoicemail&quot;: &quot;NO&quot;,
+</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>            &quot;Direction&quot;: &quot;Inbound&quot;,
+</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>            &quot;finalStatus&quot;: &quot;CLOSED&quot;,
+</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>            &quot;smartStatus&quot;: &quot;TERMINATED&quot;,
+</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>            &quot;Reason&quot;: &quot;NO AGENTS AVAILABLE&quot;,
+</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>            &quot;botId&quot;: &quot;st-e19dd469-90f5-5655-b0b2-858de901xxxx&quot;,
+</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>            &quot;dispositions&quot;: [
+</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>                &quot;DROP-OFF&quot;
+</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>            ],
+</span><span id="__span-1-84"><a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>            &quot;dispositionRemarks&quot;: [
+</span><span id="__span-1-85"><a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>                &quot;-&quot;
+</span><span id="__span-1-86"><a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>            ],
+</span><span id="__span-1-87"><a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>            &quot;metaInfo&quot;: {
+</span><span id="__span-1-88"><a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>                &quot;firstName&quot;: &quot;Peter&quot;,
+</span><span id="__span-1-89"><a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>                &quot;lastName&quot;: &quot;MIller&quot;,
+</span><span id="__span-1-90"><a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>                &quot;phoneNumber&quot;: &quot;+919876543210&quot;,
+</span><span id="__span-1-91"><a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>                &quot;profImage&quot;: &quot;https://cdn-icons-png.flaticon.com/512/4017/4017991.png&quot;,
+</span><span id="__span-1-92"><a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a>                &quot;category&quot;: &quot;animations&quot;,
+</span><span id="__span-1-93"><a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>                &quot;identities&quot;: [
+</span><span id="__span-1-94"><a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a>                    {
+</span><span id="__span-1-95"><a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a>                        &quot;val&quot;: &quot;cs-40189479-21e0-5424-998c-07dce622xxxx/48c25c33-8275-4a66-96f8-0288f9d1701c8980bb96-5a8a-436e-be14-d2ae3f56xxxx&quot;,
+</span><span id="__span-1-96"><a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a>                        &quot;type&quot;: &quot;mapped&quot;
+</span><span id="__span-1-97"><a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>                    }
+</span><span id="__span-1-98"><a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a>                ],
+</span><span id="__span-1-99"><a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a>                &quot;agentTransferConfig&quot;: {
+</span><span id="__span-1-100"><a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a>                    &quot;skillsIds&quot;: [
+</span><span id="__span-1-101"><a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a>                        &quot;660515c38dbf527036d1xxxx&quot;
+</span><span id="__span-1-102"><a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a>                    ],
+</span><span id="__span-1-103"><a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a>                    &quot;overrideAgents&quot;: false,
+</span><span id="__span-1-104"><a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a>                    &quot;overrideValues&quot;: [],
+</span><span id="__span-1-105"><a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a>                    &quot;assistEvents&quot;: {
+</span><span id="__span-1-106"><a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a>                        &quot;startEvent&quot;: {
+</span><span id="__span-1-107"><a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a>                            &quot;isEnabled&quot;: false,
+</span><span id="__span-1-108"><a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a>                            &quot;botId&quot;: &quot;st-e19dd469-90f5-5655-b0b2-858de901xxxx&quot;
+</span><span id="__span-1-109"><a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a>                        }
+</span><span id="__span-1-110"><a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a>                    },
+</span><span id="__span-1-111"><a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a>                    &quot;automationBotId&quot;: &quot;st-e19dd469-90f5-5655-b0b2-858de901xxxx&quot;,
+</span><span id="__span-1-112"><a id="__codelineno-1-112" name="__codelineno-1-112" href="#__codelineno-1-112"></a>                    &quot;lastIntentName&quot;: &quot;agent transfer&quot;,
+</span><span id="__span-1-113"><a id="__codelineno-1-113" name="__codelineno-1-113" href="#__codelineno-1-113"></a>                    &quot;dialog_tone&quot;: []
+</span><span id="__span-1-114"><a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a>                },
+</span><span id="__span-1-115"><a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a>                &quot;hostDomain&quot;: &quot;https://staging-xo.korebots.com&quot;,
+</span><span id="__span-1-116"><a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a>                &quot;os&quot;: &quot;Mac OS X&quot;,
+</span><span id="__span-1-117"><a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a>                &quot;device&quot;: &quot;NA&quot;
+</span><span id="__span-1-118"><a id="__codelineno-1-118" name="__codelineno-1-118" href="#__codelineno-1-118"></a>            },
+</span><span id="__span-1-119"><a id="__codelineno-1-119" name="__codelineno-1-119" href="#__codelineno-1-119"></a>            &quot;sessionStartTime&quot;: &quot;2024-09-27T13:32:46&quot;,
+</span><span id="__span-1-120"><a id="__codelineno-1-120" name="__codelineno-1-120" href="#__codelineno-1-120"></a>            &quot;sessionEndTime&quot;: &quot;2024-09-27T13:42:13&quot;,
+</span><span id="__span-1-121"><a id="__codelineno-1-121" name="__codelineno-1-121" href="#__codelineno-1-121"></a>            &quot;channelSpecificUserId&quot;: &quot;cs-40189479-21e0-5424-998c-07dce622xxxx/48c25c33-8275-4a66-96f8-0288f9d1701c8980bb96-5a8a-436e-be14-d2ae3f56xxxx&quot;,
+</span><span id="__span-1-122"><a id="__codelineno-1-122" name="__codelineno-1-122" href="#__codelineno-1-122"></a>            &quot;userId&quot;: &quot;u-9bc0d7d6-2b3d-5af4-9446-ce9729b6xxxx&quot;,
+</span><span id="__span-1-123"><a id="__codelineno-1-123" name="__codelineno-1-123" href="#__codelineno-1-123"></a>            &quot;destinations&quot;: [
+</span><span id="__span-1-124"><a id="__codelineno-1-124" name="__codelineno-1-124" href="#__codelineno-1-124"></a>                {
+</span><span id="__span-1-125"><a id="__codelineno-1-125" name="__codelineno-1-125" href="#__codelineno-1-125"></a>                    &quot;destinationType&quot;: &quot;QueueEntry&quot;,
+</span><span id="__span-1-126"><a id="__codelineno-1-126" name="__codelineno-1-126" href="#__codelineno-1-126"></a>                    &quot;queueId&quot;: &quot;qu-18e471e-a77e-4a93-826e-39ae946axxxx&quot;,
+</span><span id="__span-1-127"><a id="__codelineno-1-127" name="__codelineno-1-127" href="#__codelineno-1-127"></a>                    &quot;queueName&quot;: &quot;Default Queue&quot;,
+</span><span id="__span-1-128"><a id="__codelineno-1-128" name="__codelineno-1-128" href="#__codelineno-1-128"></a>                    &quot;EnterTime&quot;: &quot;2024-09-27T13:33:01&quot;,
+</span><span id="__span-1-129"><a id="__codelineno-1-129" name="__codelineno-1-129" href="#__codelineno-1-129"></a>                    &quot;respondingAgent&quot;: {
+</span><span id="__span-1-130"><a id="__codelineno-1-130" name="__codelineno-1-130" href="#__codelineno-1-130"></a>                        &quot;agentId&quot;: &quot;u-fba6a2f9-26fb-5892-9216-bdea3704xxxx&quot;,
+</span><span id="__span-1-131"><a id="__codelineno-1-131" name="__codelineno-1-131" href="#__codelineno-1-131"></a>                        &quot;agentNotes&quot;: [],
+</span><span id="__span-1-132"><a id="__codelineno-1-132" name="__codelineno-1-132" href="#__codelineno-1-132"></a>                        &quot;destinationType&quot;: &quot;AgentSegment&quot;,
+</span><span id="__span-1-133"><a id="__codelineno-1-133" name="__codelineno-1-133" href="#__codelineno-1-133"></a>                        &quot;status&quot;: &quot;Answered&quot;,
+</span><span id="__span-1-134"><a id="__codelineno-1-134" name="__codelineno-1-134" href="#__codelineno-1-134"></a>                        &quot;firstResponseTime&quot;: &quot;2024-09-27T13:33:12&quot;,
+</span><span id="__span-1-135"><a id="__codelineno-1-135" name="__codelineno-1-135" href="#__codelineno-1-135"></a>                        &quot;firstResponseDuration&quot;: 7,
+</span><span id="__span-1-136"><a id="__codelineno-1-136" name="__codelineno-1-136" href="#__codelineno-1-136"></a>                        &quot;interactionEndTime&quot;: &quot;2024-09-27T13:42:10&quot;,
+</span><span id="__span-1-137"><a id="__codelineno-1-137" name="__codelineno-1-137" href="#__codelineno-1-137"></a>                        &quot;interactionDuration&quot;: 545,
+</span><span id="__span-1-138"><a id="__codelineno-1-138" name="__codelineno-1-138" href="#__codelineno-1-138"></a>                        &quot;ConsultingAgents&quot;: [],
+</span><span id="__span-1-139"><a id="__codelineno-1-139" name="__codelineno-1-139" href="#__codelineno-1-139"></a>                        &quot;JoinedUsers&quot;: [],
+</span><span id="__span-1-140"><a id="__codelineno-1-140" name="__codelineno-1-140" href="#__codelineno-1-140"></a>                        &quot;email&quot;: &quot;mainaccount_staginguxo@mailinator.com&quot;,
+</span><span id="__span-1-141"><a id="__codelineno-1-141" name="__codelineno-1-141" href="#__codelineno-1-141"></a>                        &quot;name&quot;: &quot;John Steve&quot;,
+</span><span id="__span-1-142"><a id="__codelineno-1-142" name="__codelineno-1-142" href="#__codelineno-1-142"></a>                        &quot;acceptedTime&quot;: &quot;2024-09-27T13:33:05&quot;,
+</span><span id="__span-1-143"><a id="__codelineno-1-143" name="__codelineno-1-143" href="#__codelineno-1-143"></a>                        &quot;assignedAt&quot;: &quot;2024-09-27T13:33:02&quot;
+</span><span id="__span-1-144"><a id="__codelineno-1-144" name="__codelineno-1-144" href="#__codelineno-1-144"></a>                    }
+</span><span id="__span-1-145"><a id="__codelineno-1-145" name="__codelineno-1-145" href="#__codelineno-1-145"></a>                }
+</span><span id="__span-1-146"><a id="__codelineno-1-146" name="__codelineno-1-146" href="#__codelineno-1-146"></a>            ]
+</span><span id="__span-1-147"><a id="__codelineno-1-147" name="__codelineno-1-147" href="#__codelineno-1-147"></a>        }
+</span><span id="__span-1-148"><a id="__codelineno-1-148" name="__codelineno-1-148" href="#__codelineno-1-148"></a>    ]
+</span><span id="__span-1-149"><a id="__codelineno-1-149" name="__codelineno-1-149" href="#__codelineno-1-149"></a>}
 </span></code></pre></div>
 <h2 id="response-parameters">Response Parameters<a class="headerlink" href="#response-parameters" title="Permanent link">&para;</a></h2>
 <table>
@@ -15192,7 +15224,7 @@
 <tbody>
 <tr>
 <td>conversationId</td>
-<td>An ID generated by Contact center AI for this conversation. For example, c-7b078889-539d-408d-a3e6-9e6ae05946ba</td>
+<td>An ID generated by Contact center AI for this conversation. For example, c-7b078889-539d-408d-a3e6-9e6ae05981abcd</td>
 <td>type-prefixed-guid</td>
 </tr>
 <tr>
@@ -15211,8 +15243,8 @@
 <td>character string</td>
 </tr>
 <tr>
-<td>botId</td>
-<td>An ID of the bot. It is also called Stream ID. For example, st-ae8470ab-8ecb-51fb-8e13-c87dc66f4ae4</td>
+<td>appId</td>
+<td>An ID of the bot. It is also called iId. For example, st-ae8470ab-8ecb-51fb-8e13-c87dc66f1klmn</td>
 <td>type-prefixed-guid</td>
 </tr>
 <tr>
@@ -15247,7 +15279,7 @@
 </tr>
 <tr>
 <td>userId</td>
-<td>Contact Center AI's own generated user ID. For example, u-8413fd99-4ded-5f6d-8c1a-176dc66e526</td>
+<td>Contact Center AI's own generated user ID. For example, u-8413fd99-4ded-5f6d-8c1a-176dc66x987</td>
 <td>type-prefixed-guid</td>
 </tr>
 <tr>
@@ -15272,7 +15304,7 @@
 </tr>
 <tr>
 <td>QueueEntry.queueId</td>
-<td>Contact Center AI's internal ID for the Queue. For example, qu-123dbe9-c752-464d-a9be-1d0e43b670a5</td>
+<td>Contact Center AI's internal ID for the Queue. For example, qu-123dbe9-c752-464d-a9be-1d0e43b669a4</td>
 <td>type-prefixed-guid</td>
 </tr>
 <tr>
@@ -15292,7 +15324,7 @@
 </tr>
 <tr>
 <td>QueueEntry.respondingAgent.agentId</td>
-<td>Contact Center AI's internal ID for the agent. For example, u-f3a11f62-57d7-5a9f-a071-787650b17b34</td>
+<td>Contact Center AI's internal ID for the agent. For example, u-f3a11f62-57d7-5a9f-a071-787650b14b11</td>
 <td>type-prefixed-guid</td>
 </tr>
 <tr>
