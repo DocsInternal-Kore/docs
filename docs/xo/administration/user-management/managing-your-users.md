@@ -117,11 +117,11 @@ The platform manages user sessions at the platform level rather than the workspa
 
 #### Security and Privacy Considerations
 
-* **Privacy**: Users should be aware that their sessions in one workspace might be visible to administrators of other workspaces they are part of.
+* Privacy: Users should be aware that their sessions in one workspace might be visible to administrators of other workspaces they are part of.
 
-* Enhanced **Security**: Cross-workspace monitoring helps detect suspicious activities.
+* Enhanced Security: Cross-workspace monitoring helps detect suspicious activities.
 
-* **Session Management**: Users may be logged out if an administrator from any workspace terminates their session.
+* Session Management: Users may be logged out if an administrator from any workspace terminates their session.
 
 #### Best Practices
 
