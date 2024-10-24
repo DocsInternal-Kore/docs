@@ -197,7 +197,7 @@ This section explains the configuration steps needed to integrate Kore Agent AI 
 
 4. Add the following settings with config parameters:
     1. Agent UI Option: Available by default 
-    2. App URL: <p>Take me to <a href ="#adn">Agent AI URL</a></p>/integrations/nice/iframe/?params={scriptparams}
+    2. App URL: <p><a href="#adn">Agent AI URL</a></p>/integrations/nice/iframe/?params={scriptparams}
     3. App Title: Kore Agent AI (change as needed)
     4. Participants: Both
     5. Text Relay Endpoint:{[Agent AI URL](#bookmark=id.dcytkvp7isjs)}/integrations/nice/relay/toKore  
