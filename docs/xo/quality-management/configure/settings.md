@@ -53,7 +53,8 @@ This allows you to add and define a set of dynamic messages or scripts for the u
 
 Steps to enable the Script Adherence Configuration:
 
-1. Expand the **Conversation Intelligence** collapse icon, and enable the toggle button of **Conversation Intelligence Dashboard** and **Script adherence configuration**.  
+1. Expand the **Conversation Intelligence** collapse icon, and enable the toggle button of **Conversation Intelligence Dashboard** and **Script adherence configuration**. 
+
 <img src="../images/script-adherence.png" alt="Script Adherence Toggle" title="Script Adherence Toggle" style="border: 1px solid gray; zoom:60%;">
 
 2. Define the scripts for the below attributes to check the agent adherence. 
@@ -80,7 +81,7 @@ At the agent account level, the agent can only check the following options defin
 
 The App owners can use the Settings option under QM to enable or disable auto QA scoring of interactions and at an app level. Users with relevant permissions can enable and create bookmarks to collect interactions in different bookmarks for easy future reference.
 
-You can access the **Settings** - **Quality Management** by navigating to **Contact Center AI** > **Quality AI** > **Configure** > **Settings** > **Quality Management**.  
+You can access the **Settings** - **Quality Management** by navigating to **Contact Center AI** > **Quality Management** > **Configure** > **Settings** > **Quality Management**.  
 <img src="../images/qm-setting.png" alt="QM Settings" title="QM Settings" style="border: 1px solid gray; zoom:60%;">
 
 The QA has the following two sections:
@@ -98,7 +99,7 @@ The Auto QA feature lets you set up Evaluation Forms for automated scoring. When
 Steps to enable Auto QA:
 
 1. Expand the **Quality AI** collapse icon to view the following **Auto QA**.  
-<img src="../images/auto-qa.png" alt="Auto QA" title="Auto QA" style="border: 1px solid gray; zoom:60%;">
+<img src="../images/auto-qa.png" alt="Auto QA" title="Auto QA" style="border: 1px solid gray; zoom:90%;">
 
 2. Enable the **Auto QA**.
 
@@ -121,7 +122,7 @@ Once the **Auto QA** feature is enabled, you get the following screen to create 
 Steps to disable Auto QA:
 
 1. If you turn off the **Auto QA** toggle, the following dialog box is displayed.  
-<img src="../images/disable-auto-qa.png" alt="Auto QA" title="Auto QA" style="border: 1px solid gray; zoom:60%;">
+<img src="../images/disable-auto-qa.png" alt="Auto QA" title="Auto QA" style="border: 1px solid gray; zoom:100%;">
 
 2. Click **Confirm** to disable the Auto QA.
 3. Click **Save** to save the settings.
@@ -152,7 +153,7 @@ Steps to disable the Agent Score Card:
 
 1. If you turn off the **Agent Score Card** toggle, the following dialog box is displayed.
 
-<img src="../images/settings-disable-agent-scorecard.png" alt="Auto QA" title="Auto QA" style="border: 1px solid gray; zoom:60%;">
+<img src="../images/settings-disable-agent-scorecard.png" alt="Auto QA" title="Auto QA" style="border: 1px solid gray; zoom:100%;">
 
 2. Click **Confirm** to disable the Agent Scorecard.
 3. Click **Save** to save the settings.
@@ -169,7 +170,7 @@ Steps to Add Bookmarks:
 
 2. Enable the **Bookmarks** toggle option to add a new bookmark.
 3. Click the **Add Bookmark**. The following new **Bookmarks** row appears.  
-<img src="../images/settings-new-bookmarks.png" alt="Bookmarks" title="Bookmarks" style="border: 1px solid gray; zoom:60%;">
+<img src="../images/settings-new-bookmarks.png" alt="Bookmarks" title="Bookmarks" style="border: 1px solid gray; zoom:100%;">
 
 4. Enter the **Bookmarks** name for the assigned interactions.
 5. Add **Color** for the newly added bookmarks.
@@ -179,7 +180,7 @@ Steps to Add Bookmarks:
 Steps to disable Bookmarks:
 
 1. If you turn off the **Bookmarks** toggle, the following dialog box is displayed.   
-<img src="../images/settings-delete-bookmarks.png" alt="Bookmark" title="Bookmark" style="border: 1px solid gray; zoom:70%;">
+<img src="../images/settings-delete-bookmarks.png" alt="Bookmark" title="Bookmark" style="border: 1px solid gray; zoom:100%;">
 
 2. Click **Confirm** to disable the bookmark.
 3. Click **Save** to save the settings.   
