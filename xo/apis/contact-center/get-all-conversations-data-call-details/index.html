@@ -14878,9 +14878,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#body-parameters" class="md-nav__link">
+  <a href="#request-header-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Body Parameters
+      Request Header Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-body-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Body Parameters
     </span>
   </a>
   
@@ -15010,7 +15019,59 @@
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>&quot;timeZoneOffset&quot;: 0
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>}&#39;
 </span></code></pre></div>
-<h2 id="body-parameters">Body Parameters<a class="headerlink" href="#body-parameters" title="Permanent link">&para;</a></h2>
+<h2 id="request-header-parameters">Request Header Parameters<a class="headerlink" href="#request-header-parameters" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Header</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Optional/Required</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accept</td>
+<td>Desired response format (for example, application/json)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>accept-language</td>
+<td>Preferred response language (for example, en-US)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>accountId</td>
+<td>Unique account identifier</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>app-language</td>
+<td>Application display language (for example, en)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>content-type</td>
+<td>Request body format (application/json;charset=UTF-8)</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>referer</td>
+<td>Source application name (for example, smartassist)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>auth</td>
+<td>JWT authentication token</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>iId</td>
+<td>Stream or application id</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<h2 id="request-body-parameters">Request Body Parameters<a class="headerlink" href="#request-body-parameters" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
