@@ -15249,7 +15249,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>An identifier provided to a client application.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a>[Agent AI](https://agentassist.kore.ai){:target="_blank"}</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong>[Agent AI](https://agentassist.kore.ai){:target="_blank"}</strong> configuration portal.
    </td>
   </tr>
   <tr>
@@ -15327,9 +15327,9 @@ For on-prem, refer to corresponding host<strong> </strong>
 <h2 id="configuration-steps">Configuration Steps<a class="headerlink" href="#configuration-steps" title="Permanent link">&para;</a></h2>
 <p>This section explains the configuration steps needed to integrate Kore Agent AI with NICE MAX Desktop.</p>
 <ul>
-<li><a href="#nice-cx-integration-hubs--add-agent-assist-hub">NICE CX Integration Hubs, Add Agent Assist Hub</a></li>
-<li><a href="#nice-cx-studio--import-chat--voice-scripts-and-configure-parameters">NICE CX Studio, Import Chat and Voice Scripts and Configure Parameters</a></li>
-<li><a href="#nice-cx-setup--attach-point-of-contact-with-chatvoice-script">NICE CX Setup, Attach Point of Contact with Chat/Voice Script</a></li>
+<li><a href="#nice-cx-integration-hubs-add-agent-assist-hub">NICE CX Integration Hubs, Add Agent Assist Hub</a></li>
+<li><a href="#nice-cx-studio-import-chat-voice-scripts-and-configure-parameters">NICE CX Studio, Import Chat and Voice Scripts and Configure Parameters</a></li>
+<li><a href="#nice-cx-setup-attach-point-of-contact-with-chatvoice-script">NICE CX Setup, Attach Point of Contact with Chat/Voice Script</a></li>
 <li><a href="#access-custom-data-in-agent-ai-bot">Access Data in Agent AI Bot</a></li>
 <li><a href="#chat-simulation">Chat Simulation</a></li>
 <li><a href="#voice-simulation">Voice Simulation</a></li>
@@ -15372,7 +15372,7 @@ For on-prem, refer to corresponding host<strong> </strong>
 <p>Audio Relay Endpoint: {<a href="#bookmark=id.9f7bsfi49d8y">Kore Voice Gateway(KVG)</a>}/audiosocket/nice?sipuri=&lt;Bot SIP URI&gt;&lt;DNS&gt;&amp;token=&lt;Token&gt;&amp;botId=&lt;Bot ID&gt;&amp;accountId=&lt;Account ID&gt;&amp;agentassist=true</p>
 <ul>
 <li>
-<p>Bot SIP URI : <strong>Channels &gt; Voice</strong> section of the <strong><a href="https://agentassist.kore.ai">Agent AI</a></strong> configuration portal.<br />
+<p>Bot SIP URI : <strong>Channels &gt; Voice</strong> section of the <strong><a href="https://agentassist.kore.ai" target="_blank">Agent AI</a></strong> configuration portal.<br />
 <a class="glightbox" href="../nice-max-images/sip-id-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../nice-max-images/sip-id-6.png" alt="sip-id" title="sip-id" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 <li>
@@ -15420,20 +15420,24 @@ For on-prem, refer to corresponding host<strong> </strong>
 </li>
 <li>Custom Data: The “customdata” object in the script can be used to pass information to the Agent AI Bot. During runtime, this customdata will be accessible in the UserContext of the bot. Refer to <a href="#access-custom-data-in-agent-ai-bot">Access Custom Data in Agent AI Bot</a> for instructions on how to access customdata in the bot. </li>
 </ol>
-</li>
-</ol>
-<p>Include your data in the customdata object (one key-value pair per line). For example:
-1. <code>customdata.agentName="Agent"</code>
-2. <code>customdata.agentID="1234"</code>
-    3. NICE CX Credentials: Base region URL is the Host URL of the login page. If the URL for ACD is <strong><a href="https://home-abc.nice-incontact.com">https://home-abc.nice-incontact.com</a></strong>, then the API URL would be <strong><a href="https://api-abc.nice-incontact.com">https://api-abc.nice-incontact.com</a></strong>. Also, it is necessary to use the URLs without the trailing slash.
-        5. NICE CX API Access Key
-        6. NICE CX API Access Key Secret
-        7. NICE CX API URL
-        8. NICE CX Base Region URL</p>
-<div class="language-text highlight"><pre><span></span><code>    !!! note
-        Refer to [https://help.nice-incontact.com/content/admin/security/manageaccesskeys.htm](https://help.nice-incontact.com/content/admin/security/manageaccesskeys.htm){:target=&quot;_blank&quot;} to create NICE CX API Access Key and NICE CX API Access Key Secret.
+<p>Include your data in the customdata object (one key-value pair per line). For example: 
+    1. <code>customdata.agentName="Agent"</code></p>
+<div class="language-text highlight"><pre><span></span><code>2. `customdata.agentID=&quot;1234&quot;`
 </code></pre></div>
 <ol>
+<li>NICE CX Credentials: Base region URL is the Host URL of the login page. If the URL for ACD is <strong><a href="https://home-abc.nice-incontact.com">https://home-abc.nice-incontact.com</a></strong>, then the API URL would be <strong><a href="https://api-abc.nice-incontact.com">https://api-abc.nice-incontact.com</a></strong>. Also, it is necessary to use the URLs without the trailing slash.<ol>
+<li>NICE CX API Access Key</li>
+<li>NICE CX API Access Key Secret</li>
+<li>NICE CX API URL</li>
+<li>NICE CX Base Region URL</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to <a href="https://help.nice-incontact.com/content/admin/security/manageaccesskeys.htm" target="_blank">https://help.nice-incontact.com/content/admin/security/manageaccesskeys.htm</a> to create NICE CX API Access Key and NICE CX API Access Key Secret. </p>
+</div>
+</li>
+</ol>
+</li>
 <li>
 <p>Double-click the <strong>Agent Assist</strong> tile.<br />
 <a class="glightbox" href="../nice-max-images/agent-assist-tile-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../nice-max-images/agent-assist-tile-11.png" alt="agent-assist-tile" title="agent-assist-tile" style="border: 1px solid gray; zoom:80%;"></a></p>
@@ -15473,7 +15477,7 @@ For on-prem, refer to corresponding host<strong> </strong>
 <p><strong>Welcome Events:</strong><br />
 <a class="glightbox" href="../nice-max-images/welcome-events-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../nice-max-images/welcome-events-14.png" alt="free text" title="free text" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p><strong>Dialog Tasks:</strong></p>
-<p>In the <strong>Dialog Task</strong>, open a <strong>Message</strong> node**,** and click <strong>MANAGE RESPONSES</strong>.<br />
+<p>In the <strong>Dialog Task</strong>, open a <strong>Message</strong> node, and click <strong>MANAGE RESPONSES</strong>.<br />
 <a class="glightbox" href="../nice-max-images/manage-responses-15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../nice-max-images/manage-responses-15.png" alt="manage-responses" title="manage-responses" style="border: 1px solid gray; zoom:80%;"></a>  </p>
 <p><a class="glightbox" href="../nice-max-images/plain-responses-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../nice-max-images/plain-responses-16.png" alt="plain-responses" title="plain-responses" style="border: 1px solid gray; zoom:80%;"></a></p>
 <p><a class="glightbox" href="../nice-max-images/java-script-response-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../nice-max-images/java-script-response-17.png" alt="java-script-response" title="java-script-response" style="border: 1px solid gray; zoom:80%;"></a></p>
