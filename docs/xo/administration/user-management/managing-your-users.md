@@ -115,13 +115,13 @@ You can use the Kill Session button to end a mobile or desktop session for the u
 
 The platform manages user sessions at the platform level rather than the workspace level. When users log in, a single session is created that works across all workspaces. This enables administrators to monitor active sessions for their users across all workspaces and terminate any user session, regardless of workspace.
 
-#### Security & Privacy Considerations
+#### Security and Privacy Considerations
 
-**Privacy**: Users should be aware that their sessions in one workspace might be visible to administrators of other workspaces they are part of.
+* **Privacy**: Users should be aware that their sessions in one workspace might be visible to administrators of other workspaces they are part of.
 
-Enhanced **Security**: Cross-workspace monitoring helps detect suspicious activities.
+* Enhanced **Security**: Cross-workspace monitoring helps detect suspicious activities.
 
-**Session Management**: Users may be logged out if an administrator from any workspace terminates their session.
+* **Session Management**: Users may be logged out if an administrator from any workspace terminates their session.
 
 #### Best Practices
 
