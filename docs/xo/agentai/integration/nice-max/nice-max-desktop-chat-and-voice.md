@@ -46,9 +46,9 @@ This document provides detailed instructions on the integration process of the K
    <td>
 <ul>
 
-<li>If it is legacy Agent AI, URL is <a href="https://agentassist.kore.ai">https://agentassist.kore.ai</a></li>
+<li>If it is legacy Agent AI, URL is <a href="https://agentassist.kore.ai">https://agentassist.kore.ai{:target="_blank"}</a></li>
 
-<li>If it is UXO, URL is <a href="https://platform.kore.ai">https://platform.kore.ai</a></li>
+<li>If it is UXO, URL is <a href="https://platform.kore.ai">https://platform.kore.ai{:target="_blank"}</a></li>
 
 <li>If it is on-prem, the URL is the origin where your Agent AI is hosted.</li>
 </ul>
@@ -63,7 +63,7 @@ This document provides detailed instructions on the integration process of the K
 <p>
 For example, https://agentassist.kore.ai/koreagentassist-sdk-v3/UI/agentassist-iframe.html
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">{:target="_blank"}Agent AI</a></strong> configuration portal.
    </td>
   </tr>
   <tr>
@@ -77,7 +77,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>A unique identifier assigned to a bot.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">{:target="_blank"}Agent AI</a></strong> configuration portal.
    </td>
   </tr>
   <tr>
@@ -91,7 +91,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>An identifier provided to a client application.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">{:target="_blank"}Agent AI</a></strong> configuration portal.
    </td>
   </tr>
   <tr>
