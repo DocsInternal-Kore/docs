@@ -57,10 +57,12 @@ Steps to enable the Script Adherence Configuration:
 
 <img src="../images/script-adherence.png" alt="Script Adherence Toggle" title="Script Adherence Toggle" style="border: 1px solid gray; zoom:60%;">
 
-2. Define the scripts for the below attributes to check the agent adherence. 
+2. Define the scripts for the following attributes to check the agent adherence. 
 
 * **Attribute**: Shows script steps like Greeting, Branding, and so on, where custom messages can be added.
+
 * **Message**: Shows the custom messages that are already configured.
+
 * **Action**: Enables you to enter messages for the agent by toggling the action button.
 
     By default, the action button is disabled but the user can enter the custom message for any of the desired attributes.
