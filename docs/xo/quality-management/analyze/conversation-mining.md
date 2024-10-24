@@ -179,25 +179,27 @@ Note that the customer churn is calculated once per interaction. Customer churn 
 
 #### Filter by Behavior
 
-**Empathy Score**
+**Empathy Score** 
+
 This measures the level of understanding and compassion shown by the agent towards the customer situation. Provides the extent of empathy like frustration or displeasure that a customer has shown (negative sentiment). A higher score indicates a more empathetic interaction.  
-<img src="./conversation-mining/images/filter-by-behaviour-empathy.png" alt="Empathy Score" title="Empathy Score" style="border: 1px solid gray; zoom:80%;">
+<img src="../conversation-mining/images/filter-by-behaviour-empathy.png" alt="Empathy Score" title="Empathy Score" style="border: 1px solid gray; zoom:80%;">
 
 **Crutch Word Score**
+
 This indicates the extent of filler words (for example, umm, uh, and so on) which is used by the agent. Higher score indicates the higher usage of crutch words.  
 <img src="../conversation-mining/images/filter-by-behaviour-crutch-word.png" alt="Crutch Word Score" title="Crutch Word Score" style="border: 1px solid gray; zoom:80%;">
 
 **Agent Playbook Adherence**
+
 This indicates the adherence percentage to the Agent AI playbook assigned to that interaction.  
 <img src="../conversation-mining/images/filter-by-behaviour-agent-playbook.png" alt="Agent Playbook Adherence" title="Agent Playbook Adherence" style="border: 1px solid gray; zoom:80%;">
 
 **Kore Evaluation Score**
+
 This indicates the automated QA score associated with an interaction based on the evaluation form assigned to an interactions’s queue.  
 <img src="../conversation-mining/images/filter-by-behaviour-agent-kore-evaluation.png" alt="Kore Evaluation Score" title="Kore Evaluation Score" style="border: 1px solid gray; zoom:80%;">
 
 Once you Save Filter, you will get the following filters options to:  
-<img src="../conversation-mining/images/conversation-interaction-saved-filters.png" alt="Saved Filters" title="Saved Filters" style="border: 1px solid gray; zoom:80%;">
-
 * **Copy**
 
     Allows the user to create another saved copy of the filter.
@@ -213,6 +215,8 @@ Once you Save Filter, you will get the following filters options to:
 * **Delete Filter**
 
     Allows the user to delete the saved filter.
+
+    <img src="../conversation-mining/images/conversation-interaction-saved-filters.png" alt="Saved Filters" title="Saved Filters" style="border: 1px solid gray; zoom:80%;">
 
 ## Audit Allocations
 
@@ -258,24 +262,23 @@ Steps to Add New Audit Allocation in Allocation:
     2. Custom allocation allows users to select saved filters from Conversation Mining to be assigned for audit allowing focused evaluations.
 2. By default, the **Random** radio button is selected. If you choose **Random**, then select a **Date range**.
 3. Select the **Channel** to enable **Voice** toggle button, and specify the % Interactions per agent  that you want to assign for audit. Based on the input, a random set of interactions is getting selected among the selected agents, and the selected queue (based on the form selection).
-    3. The no. of interactions per agent count below the input box displays the average no. of interactions across the selected agents, which is being taken based on the % interactions per agent allocation user input.
+    3. The number of interactions per agent count below the input box displays the average number of interactions across the selected agents, which is being taken based on the % interactions per agent allocation user input.
     4. The total interactions count at the bottom of the slideout displays the total interactions, which is being selected based on random sampling and the user input across date range selection. The % interactions per agent input across channels and the count of the interactions will be assigned for this audit if needed, and this can be adjusted by altering the user input across the fields mentioned.
 4. If you choose **Custom**, then the following screen appears to select a saved filter for **Custom Allocation** to assign those interactions for audits.  
     <img src="../conversation-mining/images/add-new-audit-allocation.png" alt="Allocation" title="Allocation" style="border: 1px solid gray; zoom:70%;">
 
 5. Select a required Filter option from the above search filter for audit.
-    5. The total interactions count displays the total no. of interactions that is being assigned for this audit based on the evaluation form (queue), agent group selection and the filter selection
+    5. The total interactions count displays the total number of interactions that is being assigned for this audit based on the evaluation form (queue), agent group selection and the filter selection
 6. Click **Next** to move to **Assignment** section.
 
 ### Assignment
 
 Steps to **Add New Audit Allocation** in Assignment:  
-<img src="../conversation-mining/images/new-audit-allocat-assignment.png" alt="Assignment" title="Assignment" style="border: 1px solid gray; zoom:60%;">
-
 1. Select the **Auditors** from the Search filter that you want to assign interactions for manual evaluation.  
-    <img src="../conversation-mining/images/audit-allocation-search-filter.png" alt="Audit Allocation Search Filter" title="Audit Allocation Search Filter" style="border: 1px solid gray; zoom:60%;">
+    <img src="../conversation-mining/images/new-audit-allocat-assignment.png" alt="Assignment" title="Assignment" style="border: 1px solid gray; zoom:60%;">    
 2. Enter the % allocation of interactions that you want to allocate for each selected auditor.
-    1. The interactions column displays the number of interactions that will be assigned for each auditor based on the allocation % input that allows you to adjust the input based on your preferences.
+    1. The interactions column displays the number of interactions that will be assigned for each auditor based on the allocation % input that allows you to adjust the input based on your preferences.  
+    <img src="../conversation-mining/images/audit-allocation-search-filter.png" alt="Audit Allocation Search Filter" title="Audit Allocation Search Filter" style="border: 1px solid gray; zoom:60%;">
 3. The total allocation percentage across all auditors must sum to 100% to enable the **Create** button.
 
     !!! Note
