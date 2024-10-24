@@ -41,7 +41,7 @@ This document provides detailed instructions on the integration process of the K
    </td>
    <td>Agent AI URL
    </td>
-   <td>The domain of the Agent AI.
+   <td><p><span id="adn">The domain of the Agent AI.</span></p>
    </td>
    <td>
 <ul>
@@ -91,7 +91,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>An identifier provided to a client application.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong>[Agent AI](https://agentassist.kore.ai){:target="_blank"}</strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong><a>[Agent AI](https://agentassist.kore.ai){:target="_blank"}</a></strong> configuration portal.
    </td>
   </tr>
   <tr>
@@ -197,7 +197,7 @@ This section explains the configuration steps needed to integrate Kore Agent AI 
 
 4. Add the following settings with config parameters:
     1. Agent UI Option: Available by default 
-    2. App URL: {[Agent AI URL](#bookmark=id.dcytkvp7isjs)}/integrations/nice/iframe/?params={scriptparams}
+    2. App URL: <p>Take me to <a href ="#adn">Agent AI URL</a></p>/integrations/nice/iframe/?params={scriptparams}
     3. App Title: Kore Agent AI (change as needed)
     4. Participants: Both
     5. Text Relay Endpoint:{[Agent AI URL](#bookmark=id.dcytkvp7isjs)}/integrations/nice/relay/toKore  
@@ -238,10 +238,11 @@ This section explains the configuration steps needed to integrate Kore Agent AI 
         4. Agent AI Widget URL
     2. Custom Data: The “customdata” object in the script can be used to pass information to the Agent AI Bot. During runtime, this customdata will be accessible in the UserContext of the bot. Refer to [Access Custom Data in Agent AI Bot](#access-custom-data-in-agent-ai-bot) for instructions on how to access customdata in the bot. 
  
-    Include your data in the customdata object (one key-value pair per line). For example: 
-        1. `customdata.agentName="Agent"`
+        Include your data in the customdata object (one key-value pair per line). For example: 
 
-        2. `customdata.agentID="1234"`
+            1. `customdata.agentName="Agent"`
+
+            2. `customdata.agentID="1234"`
 
     3. NICE CX Credentials: Base region URL is the Host URL of the login page. If the URL for ACD is **https://home-abc.nice-incontact.com**, then the API URL would be **https://api-abc.nice-incontact.com**. Also, it is necessary to use the URLs without the trailing slash.
         1. NICE CX API Access Key
