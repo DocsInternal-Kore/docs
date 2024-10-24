@@ -37,13 +37,15 @@ For more information on plans, features, and pricing, visit our [Plan Comparison
 To access the **Plan and Usage**, follow the steps below:
 
 1. Log in to the XO Platform and select the app to see its **Plan and Usage**.
-2. Navigate to **Product Switcher > Billing > Manage > Plan and Usage**.
-
-
-    ![alt_text](images/up(27).png "image_tooltip")
+2. Navigate to **Product Switcher > Billing > Manage > Plan and Usage**.  
+<img src="../images/navigating-to-plan-and-usage.gif" alt="Navigating to Plan and Usage" title="Navigating to Plan and Usage" style="border: 1px solid gray;"/>
 
 ### Plan Information
-Here, you can find detailed information about your current plan and product usage. You can also modify or upgrade your plan directly from here.
+Here, you can find detailed information about your current plan and product usage. You can also modify or upgrade your plan directly from here.  
+<img src="../images/plan-information.png" alt="Nplan-information" title="plan-information" style="border: 1px solid gray;"/>
+
+### Usage Trends
+Here, you can monitor the usage patterns of your App Interactions with customers.
 
 ## Payment Methods
 
