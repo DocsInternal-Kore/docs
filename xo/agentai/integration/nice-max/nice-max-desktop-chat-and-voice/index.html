@@ -15249,7 +15249,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>An identifier provided to a client application.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a>[Agent AI](https://agentassist.kore.ai){:target="_blank"}</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the [Agent AI](https://agentassist.kore.ai){:target="_blank"} configuration portal.
    </td>
   </tr>
   <tr>
@@ -15263,7 +15263,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>A secret key or password associated with the ClientId.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai" target="_blank">Agent AI</a></strong> configuration portal.
    </td>
   </tr>
   <tr>
@@ -15281,7 +15281,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>Kore Voice Gateway(KVG)
    </td>
-   <td>For Saas in US region, value is wss://savg-webserver.kore.ai
+   <td><p><span id="kvg">For Saas in US region, value is wss://savg-webserver.kore.ai</span></p>
 <p>
 For on-prem, refer to corresponding host<strong> </strong>
    </td>
@@ -15361,15 +15361,15 @@ For on-prem, refer to corresponding host<strong> </strong>
 <p>Add the following settings with config parameters:</p>
 <ol>
 <li>Agent UI Option: Available by default </li>
-<li>App URL: <p><a href="#adn">Agent AI URL</a></p>/integrations/nice/iframe/?params={scriptparams}</li>
+<li>App URL: {<a href="#adn">Agent AI URL</a>}/integrations/nice/iframe/?params={scriptparams}</li>
 <li>App Title: Kore Agent AI (change as needed)</li>
 <li>Participants: Both</li>
 <li>
-<p>Text Relay Endpoint:{<a href="#bookmark=id.dcytkvp7isjs">Agent AI URL</a>}/integrations/nice/relay/toKore<br />
+<p>Text Relay Endpoint:{<a href="#adn">Agent AI URL</a>}/integrations/nice/relay/toKore<br />
 <a class="glightbox" href="../nice-max-images/configuration-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../nice-max-images/configuration-5.png" alt="configuration" title="configuration" style="border: 1px solid gray; zoom:80%;"></a></p>
 </li>
 <li>
-<p>Audio Relay Endpoint: {<a href="#bookmark=id.9f7bsfi49d8y">Kore Voice Gateway(KVG)</a>}/audiosocket/nice?sipuri=&lt;Bot SIP URI&gt;&lt;DNS&gt;&amp;token=&lt;Token&gt;&amp;botId=&lt;Bot ID&gt;&amp;accountId=&lt;Account ID&gt;&amp;agentassist=true</p>
+<p>Audio Relay Endpoint: {<a href="#kvg">Kore Voice Gateway(KVG)</a>}/audiosocket/nice?sipuri=&lt;Bot SIP URI&gt;&lt;DNS&gt;&amp;token=&lt;Token&gt;&amp;botId=&lt;Bot ID&gt;&amp;accountId=&lt;Account ID&gt;&amp;agentassist=true</p>
 <ul>
 <li>
 <p>Bot SIP URI : <strong>Channels &gt; Voice</strong> section of the <strong><a href="https://agentassist.kore.ai" target="_blank">Agent AI</a></strong> configuration portal.<br />
