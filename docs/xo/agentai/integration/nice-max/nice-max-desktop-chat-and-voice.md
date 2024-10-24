@@ -46,9 +46,9 @@ This document provides detailed instructions on the integration process of the K
    <td>
 <ul>
 
-<li>If it is legacy Agent AI, URL is <a href="https://agentassist.kore.ai">https://agentassist.kore.ai</a></li>
+<li>If it is legacy Agent AI, URL is <a href="https://agentassist.kore.ai" target=" blank">https://agentassist.kore.ai</a></li>
 
-<li>If it is UXO, URL is <a href="https://platform.kore.ai">https://platform.kore.ai</a></li>
+<li>If it is UXO, URL is <a href="https://platform.kore.ai" target=" blank">https://platform.kore.ai</a></li>
 
 <li>If it is on-prem, the URL is the origin where your Agent AI is hosted.</li>
 </ul>
@@ -63,7 +63,7 @@ This document provides detailed instructions on the integration process of the K
 <p>
 For example, https://agentassist.kore.ai/koreagentassist-sdk-v3/UI/agentassist-iframe.html
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <a href="https://agentassist.kore.ai" target=" blank">Agent AI</a> configuration portal.
    </td>
   </tr>
   <tr>
@@ -77,7 +77,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>A unique identifier assigned to a bot.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <a href="https://agentassist.kore.ai" target=" blank">Agent AI</a> configuration portal.
    </td>
   </tr>
   <tr>
@@ -91,7 +91,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>An identifier provided to a client application.
    </td>
-   <td><strong>Channels > Chat</strong> section of the [Agent AI](https://agentassist.kore.ai){:target="_blank"} configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <a href="https://agentassist.kore.ai" target="_blank">Agent AI</a> configuration portal.
    </td>
   </tr>
   <tr>
@@ -105,7 +105,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>A secret key or password associated with the ClientId.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai" target="_blank">Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <a href="https://agentassist.kore.ai" target="_blank">Agent AI</a> configuration portal.
    </td>
   </tr>
   <tr>
@@ -115,7 +115,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>A unique identifier assigned to an account.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong><a href="https://agentassist.kore.ai">Agent AI</a></strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <a href="https://agentassist.kore.ai" target=" blank">Agent AI</a> configuration portal.
    </td>
   </tr>
   <tr>
@@ -148,7 +148,7 @@ For on-prem, refer to corresponding host<strong> </strong>
   <tr>
    <td>US
    </td>
-   <td><a href="https://agentassist.kore.ai">https://agentassist.kore.ai</a>
+   <td><a href="https://agentassist.kore.ai" target=" blank">https://agentassist.kore.ai</a>
    </td>
    <td>wss://savg-webserver.kore.ai
    </td>
@@ -158,7 +158,7 @@ For on-prem, refer to corresponding host<strong> </strong>
   <tr>
    <td>JP
    </td>
-   <td><a href="https://agentassist-jp.kore.ai">https://agentassist-jp.kore.ai</a>
+   <td><a href="https://agentassist-jp.kore.ai" target=" blank">https://agentassist-jp.kore.ai</a>
    </td>
    <td>wss://jp-savg-audiosocket.kore.ai
    </td>
@@ -221,7 +221,7 @@ This section explains the configuration steps needed to integrate Kore Agent AI 
 
 ## **NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters**
 
-1. Download the [script for chat](https://bitbucket.org/koreteam1/integration_sharedresources/src/main/nicecx/kore.ai%20-%20nice_agentassistchat.xml) / [script for voice](https://bitbucket.org/koreteam1/integration_sharedresources/src/main/nicecx/kore.ai%20-%20nice_agentassistvoice.xml) from the **Kore.ai Nice integration** repository.
+1. Download the [script for chat](https://bitbucket.org/koreteam1/integration_sharedresources/src/main/nicecx/kore.ai%20-%20nice_agentassistchat.xml){:target="_blank"} / [script for voice](https://bitbucket.org/koreteam1/integration_sharedresources/src/main/nicecx/kore.ai%20-%20nice_agentassistvoice.xml){:target="_blank"} from the **Kore.ai Nice integration** repository.
 2. Open the **NICE CX Studio** app from your desktop.
 3. Click **File** > **Import from File**.
 4. Select the **downloaded script** for chat / voice.
