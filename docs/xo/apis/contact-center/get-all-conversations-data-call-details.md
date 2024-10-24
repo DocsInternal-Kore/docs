@@ -23,7 +23,7 @@ To retrieve the raw data for all conversations in a very detailed view. The days
 | limit | The number of conversations to be displayed in the response. The default value is 100. For example, 50 | integer, optional |
 | offset | The number of responses the documents need to Skip. The default value is 0. For example, 10 | integer, optional |
 
-## Sample Requests
+## Sample Request
 
 ```
 curl --location 'https://{{host}}/agentassist/api/public/analytics/account/66050d249f946671f64axxxx/v2/calldetails?offset=0' \
