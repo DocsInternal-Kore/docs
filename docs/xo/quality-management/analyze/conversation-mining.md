@@ -262,13 +262,13 @@ Steps to Add New Audit Allocation in Allocation:
     2. Custom allocation allows users to select saved filters from Conversation Mining to be assigned for audit allowing focused evaluations.
 2. By default, the **Random** radio button is selected. If you choose **Random**, then select a **Date range**.
 3. Select the **Channel** to enable **Voice** toggle button, and specify the % Interactions per agent  that you want to assign for audit. Based on the input, a random set of interactions is getting selected among the selected agents, and the selected queue (based on the form selection).
-    3. The no. of interactions per agent count below the input box displays the average no. of interactions across the selected agents, which is being taken based on the % interactions per agent allocation user input.
+    3. The number of interactions per agent count below the input box displays the average number of interactions across the selected agents, which is being taken based on the % interactions per agent allocation user input.
     4. The total interactions count at the bottom of the slideout displays the total interactions, which is being selected based on random sampling and the user input across date range selection. The % interactions per agent input across channels and the count of the interactions will be assigned for this audit if needed, and this can be adjusted by altering the user input across the fields mentioned.
 4. If you choose **Custom**, then the following screen appears to select a saved filter for **Custom Allocation** to assign those interactions for audits.  
     <img src="../conversation-mining/images/add-new-audit-allocation.png" alt="Allocation" title="Allocation" style="border: 1px solid gray; zoom:70%;">
 
 5. Select a required Filter option from the above search filter for audit.
-    5. The total interactions count displays the total no. of interactions that is being assigned for this audit based on the evaluation form (queue), agent group selection and the filter selection
+    5. The total interactions count displays the total number of interactions that is being assigned for this audit based on the evaluation form (queue), agent group selection and the filter selection
 6. Click **Next** to move to **Assignment** section.
 
 ### Assignment
