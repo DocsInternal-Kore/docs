@@ -134,7 +134,7 @@ This provides an operational view of areas of interest where there is greater po
 
 #### Filter by Experience
 
-**Avg. Waiting Time**
+##### Avg. Waiting Time
 
 This provides the following filter drop down range selection conditions in seconds:
 
@@ -145,56 +145,58 @@ This provides the following filter drop down range selection conditions in secon
 * Less than  
 <img src="../conversation-mining/images/filter-by-experience-avg-waiting-time.png" alt="Average Waiting Time" title="Average Waiting Time" style="border: 1px solid gray; zoom:80%;">  
 
-**Sentiment Score**
+##### Sentiment Score
 
 This indicates the positive sentiment score (higher) and negative sentiment score (lower) interactions.  
 <img src="../conversation-mining/images/by-experience-sentiment-score.png" alt="Sentiment Score" title="Sentiment Score" style="border: 1px solid gray; zoom:80%;">  
 
 Provides a slider bar to move the minimum and maximum range of interactions.
 
-**CSAT**
+##### CSAT
 
 This shows the distribution interactions across the score range that the customer has responded to the feedback service and drilled down accordingly.  
 <img src="../conversation-mining/images/by-experience-csat-intent-topic-churn.png" alt="CSAT" title="CSAT" style="border: 1px solid gray; zoom:80%;">  
 
-**Intent**
+##### Intent
 
 This indicates the underlying cause and customer intent that the conversation pertains to.
 
-**Topic**
+##### Topic
 
 This indicates the subject that a conversation pertains to.
 
-**Churn Monitor**
+#### Churn Monitor
 
 This provides the underlying cause and need that a conversation relates to. It indicates the loss of customers over a specific period.
 
 This has the following two options to churn the monitor:
 
-**Churn Risk:** Provides the extent of customer churn in a given conversation. In this, the Supervisor can view the churn risk % for a given time period.
+##### Churn Risk
+Provides the extent of customer churn in a given conversation. In this, the Supervisor can view the churn risk % for a given time period.
 
 Note that the customer churn is calculated once per interaction. Customer churn is not to be calculated as a score.
 
-**Escalation**: This detects the number of escalations raised to the Supervisor by a customer.
+##### Escalation
+This detects the number of escalations raised to the Supervisor by a customer.
 
 #### Filter by Behavior
 
-**Empathy Score** 
+##### Empathy Score
 
 This measures the level of understanding and compassion shown by the agent towards the customer situation. Provides the extent of empathy like frustration or displeasure that a customer has shown (negative sentiment). A higher score indicates a more empathetic interaction.  
 <img src="../conversation-mining/images/filter-by-behaviour-empathy.png" alt="Empathy Score" title="Empathy Score" style="border: 1px solid gray; zoom:80%;">
 
-**Crutch Word Score**
+##### Crutch Word Score
 
 This indicates the extent of filler words (for example, umm, uh, and so on) which is used by the agent. Higher score indicates the higher usage of crutch words.  
 <img src="../conversation-mining/images/filter-by-behaviour-crutch-word.png" alt="Crutch Word Score" title="Crutch Word Score" style="border: 1px solid gray; zoom:80%;">
 
-**Agent Playbook Adherence**
+##### Agent Playbook Adherence
 
 This indicates the adherence percentage to the Agent AI playbook assigned to that interaction.  
 <img src="../conversation-mining/images/filter-by-behaviour-agent-playbook.png" alt="Agent Playbook Adherence" title="Agent Playbook Adherence" style="border: 1px solid gray; zoom:80%;">
 
-**Kore Evaluation Score**
+##### Kore Evaluation Score
 
 This indicates the automated QA score associated with an interaction based on the evaluation form assigned to an interactions’s queue.  
 <img src="../conversation-mining/images/filter-by-behaviour-agent-kore-evaluation.png" alt="Kore Evaluation Score" title="Kore Evaluation Score" style="border: 1px solid gray; zoom:80%;">
@@ -237,11 +239,11 @@ The Audit Allocations has the following options:
 * **Filters**: Shows the filter options to search and add the filters.
 * **New Audit Allocation**: Allows to create and assign the interactions for a new audit allocation. 
 
-## Add New Audit Allocation
+## New Audit Allocation
 
 ### Settings
 
-Steps to Add New Audit Allocation in Settings:
+Steps to add New Audit Allocation in Settings:
 
 1. Click the **New Audit Allocation** button. The following **Settings** screen appears to assign the interactions for a new audit allocation.  
     <img src="../conversation-mining/images/conversation-mining-add-new-audit-allocations.png" alt="Add New Audit Allocations" title="Add New Audit Allocations" style="border: 1px solid gray; zoom:80%;">
@@ -262,8 +264,10 @@ Steps to Add New Audit Allocation in Allocation:
     2. Custom allocation allows users to select saved filters from Conversation Mining to be assigned for audit allowing focused evaluations.
 2. By default, the **Random** radio button is selected. If you choose **Random**, then select a **Date range**.
 3. Select the **Channel** to enable **Voice** toggle button, and specify the % Interactions per agent  that you want to assign for audit. Based on the input, a random set of interactions is getting selected among the selected agents, and the selected queue (based on the form selection).
-    3. The number of interactions per agent count below the input box displays the average number of interactions across the selected agents, which is being taken based on the % interactions per agent allocation user input.
-    4. The total interactions count at the bottom of the slideout displays the total interactions, which is being selected based on random sampling and the user input across date range selection. The % interactions per agent input across channels and the count of the interactions will be assigned for this audit if needed, and this can be adjusted by altering the user input across the fields mentioned.
+
+    a. The number of interactions per agent count below the input box displays the average number of interactions across the selected agents, which is being taken based on the % interactions per agent allocation user input.
+
+    b. The total interactions count at the bottom of the slideout displays the total interactions, which is being selected based on random sampling and the user input across date range selection. The % interactions per agent input across channels and the count of the interactions will be assigned for this audit if needed, and this can be adjusted by altering the user input across the fields mentioned.
 4. If you choose **Custom**, then the following screen appears to select a saved filter for **Custom Allocation** to assign those interactions for audits.  
     <img src="../conversation-mining/images/add-new-audit-allocation.png" alt="Allocation" title="Allocation" style="border: 1px solid gray; zoom:70%;">
 
@@ -287,5 +291,7 @@ Steps to **Add New Audit Allocation** in Assignment:
 
 4. Click **Create** to assign the interactions for evaluation to the selected auditors
 5. The interactions that users see listed in the audit **Allocation** tab are the interactions that have been assigned to them for audit.
-    2. If this page is empty, it implies that no interactions are there to assign them for evaluation.
+
+    Note that if this page is empty, it implies that no interactions are there to assign for evaluation.
+
 6. Upon completion of evaluation for each interaction, the pertaining interaction will be removed from the audit allocation page.
