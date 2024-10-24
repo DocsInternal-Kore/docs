@@ -40,7 +40,7 @@ The Conversation Mining Interactions has the following key Items:
 
     !!! Note
 
-        Bookmarks have to be created first from settings. For more information, see [Settings](./con) for more information. 
+        Bookmarks have to be created first from settings. For more information, see [Settings](../configure/settings.md) for more information. 
 
 * **Queues**: Shows the queue in which the interaction was terminated.
 
