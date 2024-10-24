@@ -15199,7 +15199,7 @@
    </td>
    <td>Agent AI URL
    </td>
-   <td>The domain of the Agent AI.
+   <td><p><span id="adn">The domain of the Agent AI.</span></p>
    </td>
    <td>
 <ul>
@@ -15249,7 +15249,7 @@ NICE CX Studio > Import Chat & Voice Scripts and Configure Parameters
    </td>
    <td>An identifier provided to a client application.
    </td>
-   <td><strong>Channels > Chat</strong> section of the <strong>[Agent AI](https://agentassist.kore.ai){:target="_blank"}</strong> configuration portal.
+   <td><strong>Channels > Chat</strong> section of the <strong><a>[Agent AI](https://agentassist.kore.ai){:target="_blank"}</a></strong> configuration portal.
    </td>
   </tr>
   <tr>
@@ -15361,7 +15361,7 @@ For on-prem, refer to corresponding host<strong> </strong>
 <p>Add the following settings with config parameters:</p>
 <ol>
 <li>Agent UI Option: Available by default </li>
-<li>App URL: {<a href="#bookmark=id.dcytkvp7isjs">Agent AI URL</a>}/integrations/nice/iframe/?params={scriptparams}</li>
+<li>App URL: <p>Take me to <a href ="#adn">Agent AI URL</a></p>/integrations/nice/iframe/?params={scriptparams}</li>
 <li>App Title: Kore Agent AI (change as needed)</li>
 <li>Participants: Both</li>
 <li>
@@ -15418,14 +15418,17 @@ For on-prem, refer to corresponding host<strong> </strong>
 <li>Agent AI Widget URL</li>
 </ol>
 </li>
-<li>Custom Data: The “customdata” object in the script can be used to pass information to the Agent AI Bot. During runtime, this customdata will be accessible in the UserContext of the bot. Refer to <a href="#access-custom-data-in-agent-ai-bot">Access Custom Data in Agent AI Bot</a> for instructions on how to access customdata in the bot. </li>
-</ol>
-<p>Include your data in the customdata object (one key-value pair per line). For example: 
-    1. <code>customdata.agentName="Agent"</code></p>
-<div class="language-text highlight"><pre><span></span><code>2. `customdata.agentID=&quot;1234&quot;`
+<li>
+<p>Custom Data: The “customdata” object in the script can be used to pass information to the Agent AI Bot. During runtime, this customdata will be accessible in the UserContext of the bot. Refer to <a href="#access-custom-data-in-agent-ai-bot">Access Custom Data in Agent AI Bot</a> for instructions on how to access customdata in the bot. </p>
+<p>Include your data in the customdata object (one key-value pair per line). For example: </p>
+<div class="language-text highlight"><pre><span></span><code>1. `customdata.agentName=&quot;Agent&quot;`
+
+2. `customdata.agentID=&quot;1234&quot;`
 </code></pre></div>
+</li>
+<li>
+<p>NICE CX Credentials: Base region URL is the Host URL of the login page. If the URL for ACD is <strong><a href="https://home-abc.nice-incontact.com">https://home-abc.nice-incontact.com</a></strong>, then the API URL would be <strong><a href="https://api-abc.nice-incontact.com">https://api-abc.nice-incontact.com</a></strong>. Also, it is necessary to use the URLs without the trailing slash.</p>
 <ol>
-<li>NICE CX Credentials: Base region URL is the Host URL of the login page. If the URL for ACD is <strong><a href="https://home-abc.nice-incontact.com">https://home-abc.nice-incontact.com</a></strong>, then the API URL would be <strong><a href="https://api-abc.nice-incontact.com">https://api-abc.nice-incontact.com</a></strong>. Also, it is necessary to use the URLs without the trailing slash.<ol>
 <li>NICE CX API Access Key</li>
 <li>NICE CX API Access Key Secret</li>
 <li>NICE CX API URL</li>
