@@ -493,6 +493,58 @@ Apart from generic parameters like `ttsLanguage` and `voiceName`, which are comm
 
 These parameters provide additional flexibility for developers to fine-tune the audio output to meet their specific needs. Set all these parameters inside ttsOptions. [Learn more](https://developers.deepgram.com/docs/tts-rest).
 
+### Deepgram Flux ASR
+
+The Deepgram Flux model is a real-time speech-to-text model optimized for low-latency conversational voice AI.
+
+It improves response time in voice interactions by detecting when a speaker finishes speaking and enabling the system to respond faster.
+
+**Key Benefits**
+
+* Smart turn detection-Identifies when the speaker finishes speaking
+* Ultra-low latency-~260ms end-of-turn detection
+* Faster responses-Enables quicker AI agent replies
+* Clean transcripts-Turn-based conversation structure
+* Natural interruptions-Supports barge-in scenarios
+* High accuracy-Built on Deepgram Nova-3 transcription engine
+
+[Deepgram Documentation](https://developers.deepgram.com/docs/flux/quickstart)
+
+**How to Configure Flux**
+
+Customers can enable Flux using the following Call Control Parameters.
+
+1. Select **Deepgram ASR ** from the ASR provider list.
+2. Configure Call Control Parameters
+
+  `sttProvider: deepgramflux`
+  `sttLanguage: en`
+  `deepgramEotThreshold: 0.8`
+  `deepgramEotTimeoutMs: 3000`
+
+  **Parameter Details**
+
+  | Parameter | Range | Default | Description |
+|-----------|-------|---------|-------------|
+| `deepgramEotThreshold` | 0.5-0.9 | 0.7 | Confidence required to trigger EndOfTurn detection. Lower values detect turns faster. |
+| `deepgramEotTimeoutMs` | 500-10000 ms | 5000 | Maximum silence before forcing EndOfTurn detection. |
+
+**Recommended Configuration**
+
+For most conversational AI use cases:
+
+| Parameter | Recommended Value |
+|-----------|-------------------|
+| `deepgramEotThreshold` | 0.7 |
+| `deepgramEotTimeoutMs` | 3000 |
+
+This provides a good balance between speed and reliability.
+
+**Limitations**
+
+* Flux doesn't support smart formatting for numbers.
+* `eager_eot_threshold` isn't yet supported on the platform.
+
 #### AWS
 
 Apart from generic parameters like `ttsLanguage` and `voiceName`, which are common across most TTS engines, Aws offers a few additional parameters that enhance customization, like `ttsEnhanceVoice`, also known as an engine.

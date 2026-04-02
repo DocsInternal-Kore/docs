@@ -837,56 +837,68 @@ The interface displays IP connection information in expandable rows, showing sou
 
 The bottom bar chart visualizes call metrics over time. The x-axis shows timestamps (2024-04-15), and the y-axis represents metric values from 0 to 100.
 
-### Agents
+### Agent Participation and Call Diagnostics
 
-The Agents tab provides a per-agent view of participation and call quality metrics for a specific interaction. It helps you identify which agents joined the interaction, view their join and exit timestamps, understand how the call ended, and analyze call quality for each agent.
-<img src="../images/agents-tab.png" alt="Agents Tab" title="Agents Tab" style="border: 1px solid gray; zoom:70%;">  
+The Agents tab provides a per-agent view of participation and call quality metrics for a specific interaction.
 
-Each section represents one agent join event.
+It helps to:
 
-The system creates a record only when an agent accepts a call invitation (inbound or consult) or joins the interaction, including supervisor join.
+* Identify which agents joined the interaction
+* View join and exit timestamps
+* Understand how the call ended
+* Analyze call quality per agent  
+    <img src="../images/agent-diagnostics.png" alt="Agents Tab" title="Agents Tab" style="border: 1px solid gray; zoom:70%;">  
 
-The system doesn't create a record for routing attempts, ringing duration, rejected invitations, or supervisor listen or whisper sessions.
+**What Each Section Represents**
 
-If an agent leaves and rejoins, the system creates multiple rows, one for each join instance.
+Each section represents a single agent join event.
 
-#### Field Descriptions
+The system creates a record only when an agent:
 
-Agent Details
+* Accepts a call invitation (inbound or consult)
+* Joins the interaction (including supervisor join)
 
-| Field             | Description                                              |
-| :---------------- | :------------------------------------------------------- |
-| Agent Name        | Identifies the agent who participated in the interaction |
-| Status            | Indicates whether the agent left the interaction         |
-| Start Time        | Shows when the agent accepted and joined the call        |
-| End Time          | Shows when the agent exited the call                     |
+A record isn't created for:
 
-The time between Start and End reflects the agent’s actual call handling duration.
+* Routing attempts
+* Ringing duration
+* Rejected invitations
+* Supervisor listen/whisper sessions
 
-Call Exit Details
+If an agent leaves and rejoins, multiple rows appear-one per join instance.
 
-| Field                 | Description                                                                |
-| :-------------------- | :------------------------------------------------------------------------- |
-| Call Exit Reason      | High-level termination status (for example, Terminated)                    |
-| Call Exit Description | Specific termination reason (for example, Agent Hangup or Customer Hangup) |
+**Field Descriptions**
 
-Use these fields to determine how the agent session ended.
+**Agent Details**
 
-Call Quality Metrics (Per Agent session)
+* Agent Name-The participating agent
+* Status-Indicates whether the agent has left the interaction
+* Start Time-When the agent accepted and joined the call
+* End Time-When the agent exited the call
 
-The system calculates quality metrics separately for each agent participation instance.
+The time between Start and End reflects the agent's actual handling duration.
 
-| Metric                       | Description                                                                  |
-| :--------------------------- | :--------------------------------------------------------------------------- |
-| MOS (Min, Max, Avg)          | Indicates perceived audio quality. Scale: 1 = Poor, 5 = Excellent.           |
-| Jitter (Min, Max, Avg)       | Measures variation in packet timing. Higher values can affect audio clarity. |
-| Packets Lost (Min, Max, Avg) | Indicates the number of audio packets lost during the session.               |
+**Call Exit Information**
 
-These metrics reflect only the agent’s session duration and not the entire call.
+* Call Exit Reason-High-level termination status (for example, Terminated).
+* Call Exit Description-Specific reason (for example, Agent Hangup, Customer Hangup).
 
-!!! note "Session Visibility and Join Behavior"
- 
-    The view displays only actual joined sessions and excludes routing attempts. If an agent appears multiple times, it indicates multiple join instances.
+These fields help determine how the agent session ended.
+
+**Call Quality Metrics (Per Agent Session)**
+
+Quality metrics are calculated separately for each agent's participation instance:
+
+* **MOS (Min, Max, Avg)**-Indicates perceived audio quality (1 = poor, 5 = excellent).
+* **Jitter (Min, Max, Avg)**-Measures variation in packet timing (higher values may affect audio clarity).
+* **Packets Lost (Min, Max, Avg)**-Indicates lost audio packets during the session.
+
+These metrics reflect only the agent's session duration, not the entire call.
+
+!!! note 
+
+    * The view reflects actual joined sessions only, not routing attempts.
+    * If an agent appears multiple times, it indicates multiple join instances. 
 
 ### Export
 
