@@ -671,6 +671,46 @@ The multi-lingual behavior is also achieved with **Automatic Language Detection*
 
 #### Audio Tags (ElevenLabs v3)
 
+**Setting the ElevenLabs v3 Model**
+
+To use ElevenLabs v3 and its audio tags feature, you must first set the `model_id` to `eleven_v3` using the `ttsOptions` call control parameter. You can do this at two levels:
+
+* **Channel level**-Applies the v3 model globally to all calls on the channel. See[ Channel Level Call Control](./speech-customization.md#channel-level-call-control).
+* **Node level**-Applies the v3 model at a specific point in the conversation flow (for example, in a Script Node or Script Task). See[ Node Level Call Control](./speech-customization.md#node-level-call-control).
+
+**Example: Setting the model via a Script Node**
+
+In a Script Node (Dialog Task) or Script Task (Experience Flow), add the following code to switch to the ElevenLabs v3 model:
+
+```javascript
+
+userSessionUtils.setCallControlParam("ttsOptions", {
+    model_id: "eleven_v3",
+});
+
+```
+
+This sets the TTS model to ElevenLabs v3 for all subsequent TTS responses in the current call session.
+
+**Example: Setting the model at the Channel level**
+
+1. Go to **Flows & Channels** > **Channels** > **Voice Gateway**.
+2. Navigate to the **SIP Trunk** tab and select your SIP trunk configuration.
+3. Under **Call control parameters**, select **Add Parameter**.
+4. Set the **Parameter Name** to `ttsOptions` and the **Value** to:
+
+    ```json
+
+    {"model_id": "eleven_v3"}
+
+    ```
+
+5. Select **Save**.
+
+    !!! Note
+    
+        Audio tags (for example, `[excited]`, `[whispers]`) are only supported with the `eleven_v3` model. Ensure the model is set before using audio tags in your prompts. For more details on `ttsOptions`, see [Structure of ttsOptions > ElevenLabs](./speech-customization.md#elevenlabs).
+
 The ElevenLabs V3 model supports Audio Tags, which are short text commands enclosed in square brackets (for example, `[excited]`, `[whispers]`). The TTS engine interprets these tags as stage directions and adjusts emotional tone, delivery style, and non-verbal cues in the generated audio.
 
 This capability is available only with the ElevenLabs v3 (`eleven_v3`) model.

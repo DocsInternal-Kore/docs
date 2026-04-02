@@ -81,9 +81,7 @@ TTS services also use a selected voice (for example, female or male) to respond.
 
 **Examples**
 
-**JSON**
-
-```
+```json
 {
   "sttProvider": "google",
   "sttLanguage": "en-IN",
@@ -184,9 +182,7 @@ Label-Assign/Create a label only if you need to create multiple speech services 
 
 Examples:
 
-**JSON**
-
-```
+```json
 {
   "sttProvider": "google",
   "sttLanguage": "en-US",
@@ -440,6 +436,51 @@ The `ttsOptions` object contains provider-specific settings in a key-value forma
 * `optimize_streaming_latency`: Adjusts the latency during streaming.
 * `voice_settings`: Includes various voice customization options like `stability`, `similarity_boost`, and `use_speaker_boost`. [Learn more](https://elevenlabs.io/docs/creative-platform/playground/text-to-speech#voice-settings).
 * `speed`: Controls the speed of the generated speech. The default value is 1, and the allowable values are >=0.7 and <=1.2. Values less < 1 slow down the speech, while values > 1 speed it up. [Learn more](https://elevenlabs.io/docs/conversational-ai/customization/voice/speed-control).
+
+**Setting the ElevenLabs v3 Model via ttsOptions**
+
+In addition to the voice customization parameters listed above, you can use `ttsOptions` to select a specific ElevenLabs model. To use the ElevenLabs v3 (`eleven_v3`) model-which is required for features such as[ audio tags](./configure-voice-gateway.md#audio-tags-elevenlabs-v3)-pass the `model_id` parameter inside `ttsOptions`.
+
+**Parameter**
+
+| Key | Value | Description |
+|-----|-------|-------------|
+| `model_id` | `eleven_v3` | Selects the ElevenLabs v3 TTS model for the session. Required for audio tags support. |
+
+
+**Example: Setting the model in a Script Node**
+
+```javascript
+
+userSessionUtils.setCallControlParam("ttsOptions", {
+    model_id: "eleven_v3",
+});
+
+```
+
+**Example: Combining model selection with other ElevenLabs options**
+
+You can pass `model_id` alongside other ElevenLabs-specific parameters in a single `ttsOptions` object:
+
+```javascript
+
+userSessionUtils.setCallControlParam("ttsOptions", {
+    model_id: "eleven_v3",
+    optimize_streaming_latency: 2,
+    voice_settings: {
+        stability: 0.5,
+        similarity_boost: 0.8,
+    },
+});
+
+```
+
+**Example: Setting at Channel level**
+
+When configuring call control parameters at the channel level (for example, in SIP Trunk settings), set:
+
+* **Parameter Name:** `ttsOptions`
+* **Value:** `{"model_id": "eleven_v3"}`
 
 #### Deepgram
 
