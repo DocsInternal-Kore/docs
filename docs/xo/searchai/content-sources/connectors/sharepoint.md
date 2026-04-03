@@ -15,7 +15,7 @@ Configure the SharePoint connector if you're using SharePoint to manage your con
   <tr>
    <td>Supported Content Type
    </td>
-   <td>Articles(.aspx) and Pages in the following formats: .doc, .docx, .ppt, .pptx, .html, .xhtml, .txt, .pdf
+   <td>All, Articles(.aspx) and Pages in the following formats: .doc, .docx, .ppt, .pptx, .html, .xhtml, .txt, .pdf
    </td>
   </tr>
   <tr>
@@ -191,10 +191,10 @@ Click **Sync Now** to start ingestion immediately. Alternatively, set up automat
 
 ## Advanced Content Filtering
 
-In addition to choosing one or more sites for content ingestion, Search AI provides the flexibility to selectively ingest content by allowing you to apply custom filtering rules. These rules help control which content is ingested, improving relevance and efficiency. To do this, navigate to the **Advanced Filter** tab. Here, you can define your filtering rules using the fields provided.
+In addition to selecting sites, Search AI allows you to apply custom filtering rules to selectively ingest content. To configure filters, navigate to the Advanced Filter tab and define your rules using the following fields.
 
-* **Site**: Select the site on which filtering is to be done. 
-* **Content-Type**: Select the type of content from the site, such as articles or files.  
+* **Site**: Select the site on which filtering is to be applied. 
+* **Content-Type**: Select the type of content: All, Articles, or Files. 
 
 Use the following fields to set up conditions for the filtering rules. 
 
@@ -217,9 +217,24 @@ Note:
 
 ![Example](images/sharepoint/filters/example3.png "Example")
 
+**Supported Parameters for Files**
+
+When Content Type is set to Files, the following folder-related parameters are available in addition to the standard file parameters.
+
+| Parameter    | Description                       | Supported Operators |
+|--------------|-----------------------------------|---------------------|
+| Folder Path  | Path of the folder from the drive | In                  |
+
+Use these parameters to target content within a specific folder or folder path in a SharePoint site.
+
+**Filter Rule Behavior**
+
+* Multiple rules — Content that satisfies any one of the defined rules is selected for ingestion (logical OR between rules).
+* Multiple conditions within a rule — All conditions in a rule must be satisfied for the content to be selected (logical AND within a rule).
+
+For example, to ingest files from a specific folder by name, set up a filter with Content Type = Files, Parameter = FolderName, Operator = Equals, and Value = <folder name>.
 
 ## Access Control
-
 
 ### Understanding Permissions in SharePoint
 

@@ -23,15 +23,11 @@ Search AI now supports ingestion of .xlsx and .csv files. It converts spreadshee
 
 <font size="4">Connector Enhancements</font>
 
-**New Connector for Bigtincan**
-
-Search AI now supports Bigtincan connector that lets you ingest training and sales content, including documents and presentations. This expands the supported content ecosystem and improves the discoverability of sales knowledge.
-
-[Learn more :octicons-arrow-right-24:](./../../searchai/content-sources/connectors/bigtincan.md)
-
 **SharePoint Enhancements**
 
 Search AI now supports folder-level syncing in the SharePoint connector. A new All option, introduced in the Advanced Filters, lets you apply a single filter rule across multiple objects, allowing for granular content ingestion.
+
+[Learn more :octicons-arrow-right-24:](./../../searchai/content-sources/connectors/sharepoint.md)
 
 <hr>
 
