@@ -66,7 +66,6 @@ Automation with the customer inputs feature introduces the capability where agen
 * Run button: For Dialog Tasks. Click to run a configured Dialog Task.
 * Click the ellipsis, and click **Run with agent’s input**. The automation starts on the **My AI Agent (Bot)** tab. The automation is a parallel session dedicated to the agent and won’t impact customer interaction.
 
-The **Run with Agent’s input** feature allows an agent to run automation independently and helps agents retrieve information directly and give the final result to the customer, thereby decreasing the AHT drastically.  
-<img src="../bot-override-and-automation-images/run-with-agent&apos;s-input-6.png" alt="run-with-agent&apos;s-input" title="run-with-agent&apos;s-input" style="border: 1px solid gray; zoom:80%;">
+The **Run with Agent’s input** feature allows an agent to run automation independently and helps agents retrieve information directly and give the final result to the customer, thereby decreasing the AHT drastically.
 
 
